@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import './App.css';
-import * as userActions from './modules/user/actions';
+import * as userActions from '../modules/user/actions';
+import NavBar from '../components/navbar/NavBar';
+import './home.css';
+import { Link } from 'react-router'
 
-class App extends Component {
+class Home extends Component {
   getName = () => {
     return 'Jasper Vercammen';
   };
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome {this.props.username}</h2>
-        </div>
-        <p className="App-intro">
+      <div className='app'>
+        <NavBar username={this.props.username} />
+        <p className='app-intro'>
           Please type in your name:
           <input type='text' onChange={(e) => this.props.dispatchers.setUsername(e.target.value)}/>
+        </p>
+        <p className='app-link'>
+          {this.props.username.length >= 3 && <Link to='/jokes'>Let's laugh</Link>}
         </p>
       </div>
     );
@@ -38,4 +39,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
