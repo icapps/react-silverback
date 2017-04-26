@@ -16,7 +16,7 @@ class Home extends Component {
       <div className='app'>
         <NavBar username={this.props.username} />
         <p className='app-intro'>
-          Please type in your name:
+          Please type in your name:&nbsp;&nbsp;&nbsp;
           <input type='text' onChange={(e) => this.props.dispatchers.setUsername(e.target.value)}/>
         </p>
         <p className='app-link'>

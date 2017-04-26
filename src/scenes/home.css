@@ -6,3 +6,11 @@
   font-size: large;
   padding: 2rem 0;
 }
+
+.app input {
+  padding: 1rem;
+  border-radius: .2rem;
+  border: 1px solid #bbb;
+  outline: none;
+  color: #333;
+}
