@@ -4,19 +4,3 @@ html, body {
   font-family: sans-serif;
   font-size: 10px;
 }
-
-
-a, button {
-  padding: 1rem;
-  background-color: cornflowerblue;
-  border-radius: .5rem;
-  color: aliceblue;
-  font-size: 1.4rem;
-  text-decoration: none;
-  transition: .2s;
-  border: initial;
-}
-
-a:hover, button:hover {
-  background-color: cadetblue;
-}

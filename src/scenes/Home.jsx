@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as userActions from '../modules/user/actions';
 import NavBar from '../components/navbar/NavBar';
+import Button from '../components/button/Button';
 import './home.css';
-import { Link } from 'react-router'
 
 class Home extends Component {
   getName = () => {
@@ -20,7 +20,7 @@ class Home extends Component {
           <input type='text' onChange={(e) => this.props.dispatchers.setUsername(e.target.value)}/>
         </p>
         <p className='app-link'>
-          {this.props.username.length >= 3 && <Link to='/jokes'>Let's laugh</Link>}
+          {this.props.username.length >= 3 && <Button link='/jokes'>Let's laugh</Button>}
         </p>
       </div>
     );

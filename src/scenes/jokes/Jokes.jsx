@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import * as jokesActions from '../../modules/jokes/actions';
 import NavBar from '../../components/navbar/NavBar';
+import Button from '../../components/button/Button';
 
 import './jokes.css';
 
@@ -13,11 +13,11 @@ class Jokes extends Component {
         <NavBar username={this.props.username} />
 
         <p className="app-jokes">
-          <button onClick={this.props.dispatchers.getJoke}>Tell me a joke!</button>
+          <Button theme='secondary' onClickCallback={this.props.dispatchers.getJoke}>Tell me a joke!</Button>
         </p>
-        {this.props.joke && (
+        {!this.props.error && (
         <p className="app-joke">
-          {this.props.joke}
+          {this.props.joke || 'Waiting for a joke 💩'}
         </p>)}
 
         {this.props.error && (
@@ -25,8 +25,8 @@ class Jokes extends Component {
             {this.props.errorMsg}
           </p>)}
 
-          <p>
-            <Link to='/'>Take me home</Link>
+          <p className='back-home'>
+            <Button link='/'>Take me home</Button>
           </p>
       </div>
     );
