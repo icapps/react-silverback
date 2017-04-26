@@ -13,7 +13,7 @@ class Jokes extends Component {
         <NavBar username={this.props.username} />
 
         <p className="app-jokes">
-          <button onClick={this.props.dispatchers.getJoke}>Tell me a joke!</button>
+          <button onClick={() => this.props.dispatchers.getJoke('NmbFtH69hFd')}>Tell me a joke!</button>
         </p>
         {this.props.joke && (
         <p className="app-joke">
@@ -45,7 +45,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     dispatchers: {
-      getJoke: () => dispatch(jokesActions.getJoke())
+      getJoke: (a) => dispatch(jokesActions.getJoke(a))
     }
   };
 }
