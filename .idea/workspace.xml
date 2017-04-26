@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51c0bd1f-8091-4c61-9898-ff13b03fbf09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button/Button.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button/button.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/Home.jsx" afterPath="$PROJECT_DIR$/src/scenes/Home.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/jokes/reducers.js" afterPath="$PROJECT_DIR$/src/modules/jokes/reducers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/jokes/Jokes.jsx" afterPath="$PROJECT_DIR$/src/scenes/jokes/Jokes.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/jokes/jokes.css" afterPath="$PROJECT_DIR$/src/scenes/jokes/jokes.css" />
     </list>
@@ -62,11 +58,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="reducers.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="reducers.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/modules/jokes/reducers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+                <state relative-caret-position="667">
+                  <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -84,11 +80,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Jokes.jsx" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Jokes.jsx" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/scenes/jokes/Jokes.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+                <state relative-caret-position="368">
+                  <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -125,14 +121,14 @@
           <file leaf-file-name="jokes.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/scenes/jokes/jokes.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="667">
-                  <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+                <state relative-caret-position="414">
+                  <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="button.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="button.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/button/button.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="437">
@@ -142,11 +138,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/modules/jokes/actions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="92">
-                  <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+                <state relative-caret-position="161">
+                  <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -204,16 +200,16 @@
         <option value="$PROJECT_DIR$/src/scenes/home.css" />
         <option value="$PROJECT_DIR$/src/components/navbar/navbar.css" />
         <option value="$PROJECT_DIR$/src/modules/user/reducers.js" />
-        <option value="$PROJECT_DIR$/src/modules/jokes/reducers.js" />
         <option value="$PROJECT_DIR$/src/modules/asyncActionHandler.js" />
         <option value="$PROJECT_DIR$/src/modules/jokes/constants.js" />
-        <option value="$PROJECT_DIR$/src/modules/jokes/actions.js" />
         <option value="$PROJECT_DIR$/src/scenes/Home.jsx" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/button/Button.jsx" />
-        <option value="$PROJECT_DIR$/src/scenes/jokes/jokes.css" />
         <option value="$PROJECT_DIR$/src/components/button/button.css" />
         <option value="$PROJECT_DIR$/src/scenes/jokes/Jokes.jsx" />
+        <option value="$PROJECT_DIR$/src/modules/jokes/reducers.js" />
+        <option value="$PROJECT_DIR$/src/scenes/jokes/jokes.css" />
+        <option value="$PROJECT_DIR$/src/modules/jokes/actions.js" />
       </list>
     </option>
   </component>
@@ -523,12 +519,12 @@
       <workItem from="1492587237768" duration="200000" />
       <workItem from="1492587510065" duration="1236000" />
       <workItem from="1492606528328" duration="6607000" />
-      <workItem from="1493193035328" duration="14287000" />
+      <workItem from="1493193035328" duration="14637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22330000" />
+    <option name="totallyTimeSpent" value="22680000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,31 +880,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/createStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/jokes/constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/jokes/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/jokes/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -961,14 +929,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/jokes/jokes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,10 +942,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/jokes/Jokes.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="368">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/createStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/jokes/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/jokes/jokes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/jokes/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

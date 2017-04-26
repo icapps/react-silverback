@@ -8,7 +8,8 @@ const initialState = {
 };
 
 const jokes = (state = initialState, action = {}) => {
-  const payload = action.payload;
+  const payload = action.payload,
+        error = action.error;
 
   switch (action.type) {
     case constants.GET_JOKE_REQUEST:
@@ -19,14 +20,14 @@ const jokes = (state = initialState, action = {}) => {
       };
 
     case constants.GET_JOKE_FAILED:
-      const {error} = payload;
+      const {message} = error;
 
       return {
         ...state,
         loading: false,
         joke: '',
         error: true,
-        errorMsg: error
+        errorMsg: message
       };
 
     case constants.GET_JOKE_LOADED:
