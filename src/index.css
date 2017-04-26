@@ -6,7 +6,7 @@ html, body {
 }
 
 
-a {
+a, button {
   padding: 1rem;
   background-color: cornflowerblue;
   border-radius: .5rem;
@@ -14,8 +14,9 @@ a {
   font-size: 1.4rem;
   text-decoration: none;
   transition: .2s;
+  border: initial;
 }
 
-a:hover {
+a:hover, button:hover {
   background-color: cadetblue;
 }

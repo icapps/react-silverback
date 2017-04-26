@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import * as jokesActions from '../../modules/jokes/actions';
 import NavBar from '../../components/navbar/NavBar';
 
@@ -23,6 +24,10 @@ class Jokes extends Component {
           <p className="app-joke-error">
             {this.props.errorMsg}
           </p>)}
+
+          <p>
+            <Link to='/'>Take me home</Link>
+          </p>
       </div>
     );
   }
