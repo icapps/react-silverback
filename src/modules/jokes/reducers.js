@@ -3,10 +3,11 @@ import constants from './constants';
 const initialState = {
   joke: '',
   loading: false,
-  error: false
+  error: false,
+  errorMsg: ''
 };
 
-const user = (state = initialState, action = {}) => {
+const jokes = (state = initialState, action = {}) => {
   const payload = action.payload;
 
   switch (action.type) {
@@ -18,11 +19,14 @@ const user = (state = initialState, action = {}) => {
       };
 
     case constants.GET_JOKE_FAILED:
+      const {error} = payload;
+
       return {
         ...state,
-        loading: true,
+        loading: false,
         joke: '',
-        error: false
+        error: true,
+        errorMsg: error
       };
 
     case constants.GET_JOKE_LOADED:
@@ -38,4 +42,4 @@ const user = (state = initialState, action = {}) => {
   }
 };
 
-export default user;
+export default jokes;

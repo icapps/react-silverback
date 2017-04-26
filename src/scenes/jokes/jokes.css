@@ -1,3 +1,27 @@
 .app-jokes {
     font-size: 1.5rem;
 }
+
+.app-joke {
+    text-align: center;
+    padding: 2rem;
+    background-color: lightsteelblue;
+    color: aliceblue;
+    font-size: 3rem;
+    border: 2px solid darkslategrey;
+    max-width: 40rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.app-joke-error {
+    text-align: center;
+    padding: 2rem;
+    background-color: indianred;
+    color: aliceblue;
+    font-size: 1.5rem;
+    border: 2px solid darkred;
+    max-width: 40rem;
+    border-radius: 1rem;
+    display: inline-block;
+}

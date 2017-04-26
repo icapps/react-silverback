@@ -17,7 +17,8 @@ const user = (state = initialState, action = {}) => {
         ...state,
         username,
       };
-    default:
+
+   default:
       return state;
   }
 };

@@ -14,6 +14,15 @@ class Jokes extends Component {
         <p className="app-jokes">
           <button onClick={this.props.dispatchers.getJoke}>Tell me a joke!</button>
         </p>
+        {this.props.joke && (
+        <p className="app-joke">
+          {this.props.joke}
+        </p>)}
+
+        {this.props.error && (
+          <p className="app-joke-error">
+            {this.props.errorMsg}
+          </p>)}
       </div>
     );
   }
@@ -21,7 +30,10 @@ class Jokes extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    username: state.user.username
+    username: state.user.username,
+    joke: state.jokes.joke,
+    error: state.jokes.error,
+    errorMsg: state.jokes.errorMsg
   };
 };
 
