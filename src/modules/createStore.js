@@ -8,7 +8,8 @@ const logger = createLogger({
   logger: console
 });
 
-const devTools = typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f;
+// If you want devTools, change undefined in object
+const devTools = typeof window === 'undefined' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f;
 
 const createStoreWithMiddleware = compose(applyMiddleware(
   thunkMiddleware,
