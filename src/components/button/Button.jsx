@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
 import {Link} from 'react-router';
+import './button.scss';
 
 const THEMES = ['primary', 'secondary', 'inverse'];
 
@@ -11,10 +11,10 @@ const Button = (props) => {
       return <Link className='btn-label' to={props.link}>{props.children}</Link>;
     } else if (props.ahref) {
       return <a href={props.ahref} className='btn-label'>{props.children}</a>;
-    } else {
-      return <button onClick={props.onClickCallback} className='btn-label'>{props.children}</button>;
     }
-  }
+    return <button onClick={props.onClickCallback} className='btn-label'>{props.children}</button>;
+  };
+
   const theme = THEMES.includes(props.theme) ? props.theme : THEMES[0];
   return (
     <span className={`btn btn-${theme}`}>

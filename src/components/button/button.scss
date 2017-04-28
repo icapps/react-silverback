@@ -1,0 +1,121 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.btn-label {
+  font-size: 1.6rem;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  padding: 3rem;
+  color: #333333;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  float: left;
+  font-weight: 400;
+  line-height: 2rem;
+  outline: none;
+}
+
+.btn-corners {
+  position: absolute;
+  display: block;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-color: #838383;
+    border-style: solid;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  &:before {
+   left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+  &.top {
+    top: 0;
+    &:before {
+      border-width: 1px 0 0 1px;
+    }
+    &:after {
+      border-width: 1px 1px 0 0;
+    }
+  }
+  &.bottom {
+    bottom: .7rem;
+    &:before {
+      border-width: 0 0 1px 1px;
+    }
+    &:after {
+      border-width: 0 1px 1px 0;
+    }
+  }
+}
+
+.btn:hover .btn-corners {
+  &:before {
+    left: 2rem;
+  }
+  &:after {
+    right: 2rem;
+  }
+  &.top {
+    top: 2rem;
+  }
+  &.bottom {
+    bottom: 2.7rem;
+  }
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+// STYLING OF THE BUTTON ACCORDING TO DIFFERENT THEME
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+.btn-primary {
+  .btn-label {
+    color: #333;
+  }
+  .btn-corners {
+    &:before, &:after {
+      border-color: #838383;
+    }
+  }
+}
+
+.btn-secondary {
+  .btn-label {
+    color: #dd483f;
+  }
+  .btn-corners {
+    &:before, &:after {
+      border-color: #838383;
+      border-color: #dd483f;
+    }
+  }
+}
+
+.btn-inverse {
+  .btn-label {
+    color: #fff;
+  }
+  .btn-corners {
+    &:before, &:after {
+      border-color: #fff;
+      border-color: #fff;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import * as jokesActions from '../../modules/jokes/actions';
 import NavBar from '../../components/navbar/NavBar';
 import Button from '../../components/button/Button';
 
-import './jokes.css';
+import './jokes.scss';
 
 class Jokes extends Component {
   render() {
@@ -48,6 +48,6 @@ const mapDispatchToProps = (dispatch) => {
       getJoke: () => dispatch(jokesActions.getJoke())
     }
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Jokes);

@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <Router history={browserHistory}>
         {/* Each route is defined with Route */}
-        <Route path="/" component={Home}/>
-        <Route path="/jokes" component={Jokes}/>
+        <Route path='/' component={Home} />
+        <Route path='/jokes' component={Jokes} />
       </Router>
     );
   }
