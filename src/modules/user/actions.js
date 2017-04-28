@@ -5,4 +5,4 @@ export const setUsername = (username) => {
     type: constants.SET_USERNAME,
     payload: {username}
   };
-}
+};

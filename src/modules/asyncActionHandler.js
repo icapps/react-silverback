@@ -6,8 +6,8 @@ const makeActionCreator = (type, argument) => {
     return ({
       type,
       [argument]: args
-    })
-  }
+    });
+  };
 };
 
 const asyncActionHandler = (actionName, asyncAction) => {
@@ -21,10 +21,10 @@ const asyncActionHandler = (actionName, asyncAction) => {
     return dispatch => {
       const executedAction = asyncAction(...args);
 
-      dispatch(requestAction(args))
+      dispatch(requestAction(args));
       return executedAction
         .then(data => dispatch(loadedAction(data)))
-        .catch(error => dispatch(errorAction(error)))
+        .catch(error => dispatch(errorAction(error)));
     };
   };
 };

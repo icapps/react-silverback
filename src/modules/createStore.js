@@ -14,17 +14,17 @@ const devTools = typeof window === 'undefined' && typeof window.devToolsExtensio
 const createStoreWithMiddleware = compose(applyMiddleware(
   thunkMiddleware,
   logger
-), devTools)(createStore)
+), devTools)(createStore);
 
 export default function configureStore(initialState = {}) {
-  const store = createStoreWithMiddleware(rootReducer, initialState)
+  const store = createStoreWithMiddleware(rootReducer, initialState);
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('./rootReducer', () => {
       const nextRootReducer = require('./rootReducer');
       store.replaceReducer(nextRootReducer);
-    })
+    });
   }
 
   return store;
