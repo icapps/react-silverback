@@ -183,6 +183,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 This project supports a superset of the latest JavaScript standard.<br>
 In addition to [ES6](https://github.com/lukehoban/es6features) syntax features, it also supports:
 
+For deployment, we used: https://blog.heroku.com/deploying-react-with-zero-configuration#growing-up-from-zero-config
+
 * [Exponentiation Operator](https://github.com/rwaldron/exponentiation-operator) (ES2016).
 * [Async/await](https://github.com/tc39/ecmascript-asyncawait) (ES2017).
 * [Object Rest/Spread Properties](https://github.com/sebmarkbage/ecmascript-rest-spread) (stage 3 proposal).
