@@ -1,4 +1,130 @@
-exports[`test should render a 'a' link 1`] = `
+exports[`Button Component Render it as a button 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <span
+    className="btn btn-primary">
+    <button
+        className="btn-label"
+        onClick={[Function]}>
+        This is a Button
+    </button>
+    <span
+        className="btn-corners top" />
+    <span
+        className="btn-corners bottom" />
+</span>,
+  "nodes": Array [
+    <span
+      className="btn btn-primary">
+      <button
+            className="btn-label"
+            onClick={[Function]}>
+            This is a Button
+      </button>
+      <span
+            className="btn-corners top" />
+      <span
+            className="btn-corners bottom" />
+</span>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <Button
+        ahref=""
+        link=""
+        onClickCallback={[Function]}
+        theme="primary">
+        This is a Button
+</Button>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "ahref": "",
+          "children": "This is a Button",
+          "link": "",
+          "onClickCallback": [Function],
+          "theme": "primary",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <span
+          className="btn btn-primary">
+          <button
+                    className="btn-label"
+                    onClick={[Function]}>
+                    This is a Button
+          </button>
+          <span
+                    className="btn-corners top" />
+          <span
+                    className="btn-corners bottom" />
+</span>,
+        "_debugID": 2,
+        "_renderedOutput": <span
+          className="btn btn-primary">
+          <button
+                    className="btn-label"
+                    onClick={[Function]}>
+                    This is a Button
+          </button>
+          <span
+                    className="btn-corners top" />
+          <span
+                    className="btn-corners bottom" />
+</span>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Button
+    ahref=""
+    link=""
+    onClickCallback={[Function]}
+    theme="primary">
+    This is a Button
+</Button>,
+}
+`;
+
+exports[`Button Component should render a 'a' link 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -127,133 +253,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`test should render a button 1`] = `
-ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
-  "length": 1,
-  "node": <span
-    className="btn btn-primary">
-    <button
-        className="btn-label"
-        onClick={[Function]}>
-        This is a Button
-    </button>
-    <span
-        className="btn-corners top" />
-    <span
-        className="btn-corners bottom" />
-</span>,
-  "nodes": Array [
-    <span
-      className="btn btn-primary">
-      <button
-            className="btn-label"
-            onClick={[Function]}>
-            This is a Button
-      </button>
-      <span
-            className="btn-corners top" />
-      <span
-            className="btn-corners bottom" />
-</span>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
-      "_context": Object {},
-      "_currentElement": <Button
-        ahref=""
-        link=""
-        onClickCallback={[Function]}
-        theme="primary">
-        This is a Button
-</Button>,
-      "_debugID": 1,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": StatelessComponent {
-        "_reactInternalInstance": [Circular],
-        "context": Object {},
-        "props": Object {
-          "ahref": "",
-          "children": "This is a Button",
-          "link": "",
-          "onClickCallback": [Function],
-          "theme": "primary",
-        },
-        "refs": Object {},
-        "state": null,
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-      },
-      "_mountOrder": 1,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <span
-          className="btn btn-primary">
-          <button
-                    className="btn-label"
-                    onClick={[Function]}>
-                    This is a Button
-          </button>
-          <span
-                    className="btn-corners top" />
-          <span
-                    className="btn-corners bottom" />
-</span>,
-        "_debugID": 2,
-        "_renderedOutput": <span
-          className="btn btn-primary">
-          <button
-                    className="btn-label"
-                    onClick={[Function]}>
-                    This is a Button
-          </button>
-          <span
-                    className="btn-corners top" />
-          <span
-                    className="btn-corners bottom" />
-</span>,
-      },
-      "_renderedNodeType": 0,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <Button
-    ahref=""
-    link=""
-    onClickCallback={[Function]}
-    theme="primary">
-    This is a Button
-</Button>,
-}
-`;
-
-exports[`test should render a react router Link 1`] = `
+exports[`Button Component should render a react router Link 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
