@@ -20,7 +20,9 @@ function getClientEnvironment(publicUrl) {
       // For example, <img src={process.env.PUBLIC_URL + '/img/logo.png'} />.
       // This should only be used as an escape hatch. Normally you would put
       // images into the `src` and `import` them in code to get their paths.
-      'PUBLIC_URL': publicUrl
+      'PUBLIC_URL': publicUrl,
+      // The host for the API endpoint
+      'API_HOST': getAPIHost(process.env.NODE_ENV)
     });
   // Stringify all values so we can feed into Webpack DefinePlugin
   var stringified = {
@@ -32,7 +34,19 @@ function getClientEnvironment(publicUrl) {
       }, {})
   };
 
-  return { raw, stringified };
+  return {raw, stringified};
 }
 
 module.exports = getClientEnvironment;
+
+function getAPIHost(env) {
+  switch (env) {
+    case 'production':
+      return 'https://icanhazdadjoke.com/';
+    case 'staging':
+      return 'https://icanhazdadjoke.com/';
+    case 'development':
+    default:
+      return 'https://icanhazdadjoke.be/';
+  }
+}
