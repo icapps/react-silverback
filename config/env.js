@@ -47,6 +47,6 @@ function getAPIHost(env) {
       return 'https://icanhazdadjoke.com/';
     case 'development':
     default:
-      return 'https://icanhazdadjoke.be/';
+      return 'https://icanhazdadjoke.com/';
   }
 }
