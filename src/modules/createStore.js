@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
   middleware.push(logger);
 }
 
-// If you want devTools, change undefined in object
+// If you want devTools, change 'window=undefined' in 'window=object'
 const devTools = typeof window === 'undefined' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f;
 
 const createStoreWithMiddleware = compose(

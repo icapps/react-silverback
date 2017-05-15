@@ -37,7 +37,7 @@
     "object-curly-spacing": 0,
     "object-property-newline": 0,
     "object-shorthand": 1,
-    "padded-blocks": [2, {
+    "padded-blocks": ["error", {
       "blocks": "never",
       "classes": "never",
       "switches": "never"
