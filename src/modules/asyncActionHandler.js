@@ -18,13 +18,14 @@ const asyncActionHandler = (actionName, asyncAction) => {
   const errorAction = makeActionCreator(`${name}_FAILED`, 'error');
 
   return (...args) => {
-    return dispatch => {
-      const executedAction = asyncAction(...args);
-
+    return async (dispatch) => {
       dispatch(requestAction(args));
-      return executedAction
-        .then(data => dispatch(loadedAction(data)))
-        .catch(error => dispatch(errorAction(error)));
+      try {
+        const data = await asyncAction(...args);
+        dispatch(loadedAction(data));
+      } catch (error) {
+        dispatch(errorAction(error));
+      }
     };
   };
 };

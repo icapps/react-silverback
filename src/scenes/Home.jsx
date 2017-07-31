@@ -13,17 +13,21 @@ class Home extends Component {
         <NavBar username={this.props.username} />
         <p className='app-intro'>
           Please type in your name:&nbsp;&nbsp;&nbsp;
-          <input type='text' onChange={(e) => this.props.dispatchers.setUsername(e.target.value)} />
+          <input
+            type='text'
+            onChange={e => this.props.dispatchers.setUsername(e.target.value)}
+          />
         </p>
         <p className='app-link'>
-          {this.props.username.length >= 3 && <Button link='/jokes'>Let me laugh</Button>}
+          {this.props.username.length >= 3 &&
+            <Button link='/jokes'>Let me laugh</Button>}
         </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     username: state.user.username
   };
