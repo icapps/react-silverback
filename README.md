@@ -4,13 +4,8 @@
 
 ### Get started
 
-#### 1. Run the setup script
 Install dependencies
-- installs node modules through yarn
-
-```bash
-$ yarn
-```
+- `yarn` or `npm install`
 
 ### Npm scripts
 
