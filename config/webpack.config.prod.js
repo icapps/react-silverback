@@ -6,9 +6,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ManifestPlugin = require('webpack-manifest-plugin');
 var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+var LicenseWebpackPlugin = require('license-webpack-plugin');
 var paths = require('./paths');
 var getClientEnvironment = require('./env');
-
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -239,6 +239,13 @@ module.exports = {
     // having to parse `index.html`.
     new ManifestPlugin({
       fileName: 'asset-manifest.json'
+    }),
+
+    // Should fetch all the licenses from modules that are used in this project
+    new LicenseWebpackPlugin({
+      pattern: /^(MIT|ISC|BSD.*)$/,
+      unacceptablePattern: /GPL/,
+      abortOnUnacceptableLicense: true
     })
   ],
   // Some libraries import Node modules but don't use them in the browser.
