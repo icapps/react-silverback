@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import {Router, Route, browserHistory} from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './scenes/Home';
 import Jokes from './scenes/jokes/Jokes';
+import {Navbar} from './components';
 
 class App extends Component {
   render() {
     return (
-      <Router history={browserHistory}>
-        {/* Each route is defined with Route */}
-        <Route path='/' component={Home} />
-        <Route path='/jokes' component={Jokes} />
-      </Router>
+      <BrowserRouter>
+        <div>
+        <Navbar />
+        <Route path='/' exact component={Home} />
+        <Route path='/jokes' exact component={Jokes} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

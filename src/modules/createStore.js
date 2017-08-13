@@ -7,7 +7,7 @@ const middleware = [thunkMiddleware];
 
 if (process.env.NODE_ENV !== 'production') {
   const logger = createLogger({
-    collapsed: true,
+    collapsed: false,
     logger: console
   });
   middleware.push(logger);

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router';
-import './button.scss';
+import {Link} from 'react-router-dom';
+import './button.css';
 
 const THEMES = ['primary', 'secondary', 'inverse'];
 
