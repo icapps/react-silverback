@@ -1,9 +1,9 @@
 import constants from './constants';
 
 const initialState = {
-  username: 'jasper',
+  username: '',
   email: '',
-  isLoggedIn: true,
+  isLoggedIn: false,
   pending: false,
   error: false,
   errorMsg: '',
