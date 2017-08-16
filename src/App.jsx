@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './scenes/Home';
-import Jokes from './scenes/jokes/Jokes';
-import { Navbar } from './components';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import AuthorizedRoute from './routes/AuthorizedRoute';
+import AuthorizedLayout from './routes/AuthorizedLayout';
+import UnauthorizedLayout from './routes/UnauthorizedLayout';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <Navbar />
-          <Route path="/" exact component={Home} />
-          <Route path="/jokes" exact component={Jokes} />
-        </div>
+        <Switch>
+          <Route path='/auth' component={UnauthorizedLayout} />
+          <AuthorizedRoute path='/' component={AuthorizedLayout} />
+        </Switch>
       </BrowserRouter>
     );
   }

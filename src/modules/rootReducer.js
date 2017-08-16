@@ -4,7 +4,7 @@ import jokes from './jokes/reducers';
 
 const rootReducer = combineReducers({
   user,
-  jokes
+  jokes,
 });
 
 export default rootReducer;

@@ -1,9 +1,12 @@
 import constants from './constants';
 
 const initialState = {
-  username: '',
+  username: 'jasper',
   email: '',
-  loggedIn: false
+  isLoggedIn: true,
+  pending: false,
+  error: false,
+  errorMsg: '',
 };
 
 const user = (state = initialState, action = {}) => {
@@ -11,14 +14,23 @@ const user = (state = initialState, action = {}) => {
 
   switch (action.type) {
     case constants.SET_USERNAME:
-      const {username} = payload;
+      const { username } = payload;
 
       return {
         ...state,
         username,
       };
 
-   default:
+    case constants.LOGIN_USER:
+      return {
+        ...state,
+        isLoggedIn: true,
+      };
+
+    case constants.LOGOUT_USER:
+      return initialState;
+
+    default:
       return state;
   }
 };
