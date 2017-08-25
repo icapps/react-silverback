@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import {Router, Route, browserHistory} from 'react-router';
-import Home from './scenes/Home';
-import Jokes from './scenes/jokes/Jokes';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import AuthorizedRoute from './routes/AuthorizedRoute';
+import AuthorizedLayout from './routes/AuthorizedLayout';
+import UnauthorizedLayout from './routes/UnauthorizedLayout';
 
 class App extends Component {
   render() {
     return (
-      <Router history={browserHistory}>
-        {/* Each route is defined with Route */}
-        <Route path='/' component={Home} />
-        <Route path='/jokes' component={Jokes} />
-      </Router>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/auth' component={UnauthorizedLayout} />
+          <AuthorizedRoute path='/' component={AuthorizedLayout} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

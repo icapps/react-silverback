@@ -1,41 +1,43 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as userActions from '../modules/user/actions';
-import NavBar from '../components/navbar/NavBar';
+import { setUsername, logoutUser } from '../modules/user/actions';
 import Button from '../components/button/Button';
-import './home.scss';
+import './home.css';
 
 class Home extends Component {
+  logout = (e) => {
+    this.props.logout(e.target.value);
+    this.props.history.replace('/auth');
+  };
+
   render() {
     return (
       <div className='app'>
-        <NavBar username={this.props.username} />
         <p className='app-intro'>
-          Please type in your name:&nbsp;&nbsp;&nbsp;
-          <input
-            type='text'
-            onChange={e => this.props.dispatchers.setUsername(e.target.value)}
-          />
+          Do you want to change your username:&nbsp;&nbsp;&nbsp;
+          <input type='text' onChange={(e) => this.props.changeUsername(e.target.value)} value={this.props.username} />
         </p>
+        <p className='app-link'>{this.props.username.length >= 3 && <Button link='/jokes'>Let me laugh</Button>}</p>
         <p className='app-link'>
-          {this.props.username.length >= 3 &&
-            <Button link='/jokes'>Let me laugh</Button>}
+          <Button theme='secondary' onClickCallback={this.logout}>
+            Logout
+          </Button>
         </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    username: state.user.username
+    username: state.user.username,
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatchers: bindActionCreators(userActions, dispatch)
+    changeUsername: (value) => dispatch(setUsername(value)),
+    logout: () => dispatch(logoutUser()),
   };
 }
 

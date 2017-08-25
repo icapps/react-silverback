@@ -1,6 +1,13 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   font-size: 10px;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 1.4rem;
 }
