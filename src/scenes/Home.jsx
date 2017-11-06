@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setUsername, logoutUser } from '../modules/user/actions';
-import Button from '../components/button/Button';
+import { setUsername, logoutUser } from '../redux/user/actions';
+import { Button } from '../components';
 import './home.css';
 
 class Home extends Component {
-  logout = (e) => {
+  constructor(props) {
+    super(props);
+    this.state = { errors: [] };
+  }
+
+  logout = e => {
     this.props.logout(e.target.value);
     this.props.history.replace('/auth');
   };
@@ -15,7 +20,7 @@ class Home extends Component {
       <div className='app'>
         <p className='app-intro'>
           Do you want to change your username:&nbsp;&nbsp;&nbsp;
-          <input type='text' onChange={(e) => this.props.changeUsername(e.target.value)} value={this.props.username} />
+          <input type='text' onChange={e => this.props.changeUsername(e.target.value)} value={this.props.username} />
         </p>
         <p className='app-link'>{this.props.username.length >= 3 && <Button link='/jokes'>Let me laugh</Button>}</p>
         <p className='app-link'>
@@ -28,16 +33,16 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    username: state.user.username,
+    username : state.user.username,
   };
 };
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeUsername: (value) => dispatch(setUsername(value)),
-    logout: () => dispatch(logoutUser()),
+    changeUsername : value => dispatch(setUsername(value)),
+    logout         : () => dispatch(logoutUser()),
   };
 }
 
