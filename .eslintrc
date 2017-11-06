@@ -1,22 +1,27 @@
 {
-	"root": true,
-	"env": {
-		"browser": true,
-		"es6": true,
-		"node": true,
-		"jest": true
-	},
-	"extends": "react-app",
-	"rules": {
-		"comma-dangle": ["error", {
-      "arrays": "always",
-      "objects": "always",
-      "imports": "never",
-      "exports": "never",
-      "functions": "ignore"
-    }],
-		"padded-blocks": [ "error", "never" ],
-		"no-console": "warn",
-		"semi": [ "error", "always" ]
-	}
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": "react-app",
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore"
+      }
+    ],
+
+    "padded-blocks": ["error", "never"],
+    "no-console": "warn",
+    "semi": ["error", "always"]
+  }
 }

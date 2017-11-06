@@ -1,44 +1,44 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as jokesActions from '../../modules/jokes/actions';
+import * as jokesActions from '../../redux/jokes/actions';
 import Button from '../../components/button/Button';
 
 import './jokes.css';
 
-class Jokes extends Component {
+export class Jokes extends Component {
   render() {
     return (
-      <div className="app">
-        <p className="app-jokes">
-          <Button theme="secondary" onClickCallback={this.props.dispatchers.getJoke}>
+      <div className='app'>
+        <p className='app-jokes'>
+          <Button theme='secondary' onClickCallback={this.props.dispatchers.getJoke}>
             Tell me a joke!
           </Button>
         </p>
-        {!this.props.error && <p className="app-joke">{this.props.joke || 'Waiting for a joke 💩'}</p>}
+        {!this.props.error && <p className='app-joke'>{this.props.joke || 'Waiting for a joke 💩'}</p>}
 
-        {this.props.error && <p className="app-joke-error">{this.props.errorMsg}</p>}
+        {this.props.error && <p className='app-joke-error'>{this.props.errorMsg}</p>}
 
-        <p className="back-home">
-          <Button link="/">Take me home</Button>
+        <p className='back-home'>
+          <Button link='/'>Take me home</Button>
         </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    username: state.user.username,
-    joke: state.jokes.joke,
-    error: state.jokes.error,
-    errorMsg: state.jokes.errorMsg,
+    username : state.user.username,
+    joke     : state.jokes.joke,
+    error    : state.jokes.error,
+    errorMsg : state.jokes.errorMsg,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    dispatchers: {
-      getJoke: () => dispatch(jokesActions.getJoke()),
+    dispatchers : {
+      getJoke : () => dispatch(jokesActions.getJoke()),
     },
   };
 };

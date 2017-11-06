@@ -1,10 +1,10 @@
 import constants from './constants';
 
 const initialState = {
-  joke: '',
-  loading: false,
-  error: false,
-  errorMsg: ''
+  joke     : '',
+  loading  : false,
+  error    : false,
+  errorMsg : '',
 };
 
 const jokes = (state = initialState, action = {}) => {
@@ -15,28 +15,28 @@ const jokes = (state = initialState, action = {}) => {
     case constants.GET_JOKE_REQUEST:
       return {
         ...state,
-        loading: true,
-        error: false
+        loading : true,
+        error   : false,
       };
 
-    case constants.GET_JOKE_FAILED:
-      const {message} = error;
+    case constants.GET_JOKE_REJECTED:
+      const { message } = error;
 
       return {
         ...state,
-        loading: false,
-        joke: '',
-        error: true,
-        errorMsg: message
+        loading  : false,
+        joke     : '',
+        error    : true,
+        errorMsg : message,
       };
 
-    case constants.GET_JOKE_LOADED:
-      const {joke} = payload;
+    case constants.GET_JOKE_FULFILLED:
+      const { joke } = payload;
 
       return {
         ...state,
-        loading: false,
-        joke
+        loading : false,
+        joke,
       };
     default:
       return state;
