@@ -1,0 +1,5 @@
+replacementQuestions:
+  - name: NAME
+    message: Name
+  - name:   DESCRIPTION
+    message: Description

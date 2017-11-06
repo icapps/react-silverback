@@ -1,5 +1,6 @@
 {
-  "name": "react-boilerplate-thunk",
+  "name": "_OLLIE_NAME_",
+  "description": "_OLLIE_DESCRIPTION_",
   "version": "0.1.0",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
