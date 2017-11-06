@@ -2,6 +2,7 @@
   "name": "react-boilerplate-thunk",
   "version": "0.1.0",
   "dependencies": {
+    "axios": "^0.17.0",
     "isomorphic-fetch": "^2.2.1",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
