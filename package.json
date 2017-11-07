@@ -1,5 +1,5 @@
 {
-  "name": "_OLLIE_NAME_",
+  "name": "_OLLIE_NAME_KEBAB_CASE_",
   "description": "_OLLIE_DESCRIPTION_",
   "version": "0.1.0",
   "dependencies": {
