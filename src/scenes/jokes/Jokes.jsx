@@ -10,7 +10,7 @@ export class Jokes extends Component {
     return (
       <div className='app'>
         <p className='app-jokes'>
-          <Button theme='secondary' onClickCallback={this.props.dispatchers.getJoke}>
+          <Button theme='secondary' onClickCallback={this.props.getJoke}>
             Tell me a joke!
           </Button>
         </p>
@@ -37,9 +37,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    dispatchers : {
-      getJoke : () => dispatch(jokesActions.getJoke()),
-    },
+    getJoke : () => dispatch(jokesActions.getJoke()),
   };
 };
 

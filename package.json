@@ -7,13 +7,13 @@
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.11",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
     "redux": "^3.7.2",
-    "redux-logger": "3.0.1",
+    "redux-logger": "3.0.6",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
@@ -26,14 +26,14 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-eslint": "7.2.3",
-    "enzyme": "^2.9.1",
-    "eslint": "4.5.0",
-    "eslint-config-react-app": "^2.0.0",
+    "babel-eslint": "^8.0.2",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "eslint": "4.10.0",
+    "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "2.33.0",
-    "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "5.0.1",
-    "eslint-plugin-react": "7.0.1",
-    "react-test-renderer": "^15.6.1"
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-react": "7.4.0",
+    "react-test-renderer": "^16.0.0"
   }
 }
