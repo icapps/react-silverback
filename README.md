@@ -1,5 +1,7 @@
 # _OLLIE_NAME_START_CASE_
 
+[![Build Status](https://travis-ci.org/icapps/react-thunk-template.svg?branch=master)](https://travis-ci.org/icapps/react-thunk-template)
+
 ## Development
 
 ### Get started
