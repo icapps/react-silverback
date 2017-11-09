@@ -23,6 +23,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx src",
+    "validate": "yarn lint && yarn test",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
