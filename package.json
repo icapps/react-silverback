@@ -3,7 +3,7 @@
   "description": "_OLLIE_DESCRIPTION_",
   "version": "0.1.0",
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
+    "axios": "^0.17.0",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "prop-types": "^15.5.10",

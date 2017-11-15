@@ -20,8 +20,9 @@
       }
     ],
 
-    "padded-blocks": ["error", "never"],
+    "padded-blocks": [ "error", "never" ],
     "no-console": "warn",
-    "semi": ["error", "always"]
+    "no-throw-literal": 0,
+    "semi": [ "error", "always" ]
   }
 }
