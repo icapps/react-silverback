@@ -1,6 +1,13 @@
 import axios from 'axios';
 
 class Network {
+  static getUrl(route) {
+    if (route.indexOf('http://') === 0 || route.indexOf('https://') === 0 || route.indexOf('www.') === 0) {
+      return route;
+    }
+    return `${process.env.REACT_APP_API_HOST}${route}`;
+  }
+
   static async basicHeaders() {
     const headers = {};
 
@@ -35,25 +42,25 @@ class Network {
 
   static async get(route) {
     const headers = await this.basicHeaders();
-    const result = await axios.get(`${process.env.REACT_APP_API_HOST}${route}`, { headers });
+    const result = await axios.get(this.getUrl(route), { headers });
     return result.data;
   }
 
   static async put(route, body = {}) {
     const headers = await this.basicHeaders();
-    const result = await axios.put(`${process.env.REACT_APP_API_HOST}${route}`, body, { headers });
+    const result = await axios.put(this.getUrl(route), body, { headers });
     return result.data;
   }
 
   static async post(route, body = {}) {
     const headers = await this.basicHeaders();
-    const result = await axios.post(`${process.env.REACT_APP_API_HOST}${route}`, body, { headers });
+    const result = await axios.post(this.getUrl(route), body, { headers });
     return result.data;
   }
 
   static async delete(route) {
     const headers = await this.basicHeaders();
-    const result = await axios.delete(`${process.env.REACT_APP_API_HOST}${route}`, { headers });
+    const result = await axios.delete(this.getUrl(route), { headers });
     return result.data || true;
   }
 }
