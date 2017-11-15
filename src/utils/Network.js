@@ -8,11 +8,11 @@ class Network {
     return `${process.env.REACT_APP_API_HOST}${route}`;
   }
 
-  static async basicHeaders() {
+  static basicHeaders() {
     const headers = {};
 
     // ONLY USE THIS IF YOU WORK IN A BROWSER
-    const token = await window.localStorage.getItem('ACCESS_TOKEN');
+    const token = window.localStorage.getItem('ACCESS_TOKEN');
     if (token) {
       headers.authorization = `Bearer ${token}`;
     }
@@ -25,7 +25,7 @@ class Network {
   static async errorHandler(error) {
     if (error.response) {
       throw {
-        errors : error.response.data.errors,
+        errors : (error.response.data && error.response.data.errors) || [ { code: '0', status: 500, title: 'Unknown error', meta: error.response } ],
       };
     } else if (error.request) {
       // The request was made but no response was received
@@ -41,27 +41,43 @@ class Network {
   }
 
   static async get(route) {
-    const headers = await this.basicHeaders();
-    const result = await axios.get(this.getUrl(route), { headers });
-    return result.data;
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.get(this.getUrl(route), { headers });
+      return result.data;
+    } catch (err) {
+      this.errorHandler(err);
+    }
   }
 
   static async put(route, body = {}) {
-    const headers = await this.basicHeaders();
-    const result = await axios.put(this.getUrl(route), body, { headers });
-    return result.data;
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.put(this.getUrl(route), body, { headers });
+      return result.data;
+    } catch (err) {
+      this.errorHandler(err);
+    }
   }
 
   static async post(route, body = {}) {
-    const headers = await this.basicHeaders();
-    const result = await axios.post(this.getUrl(route), body, { headers });
-    return result.data;
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.post(this.getUrl(route), body, { headers });
+      return result.data;
+    } catch (err) {
+      this.errorHandler(err);
+    }
   }
 
   static async delete(route) {
-    const headers = await this.basicHeaders();
-    const result = await axios.delete(this.getUrl(route), { headers });
-    return result.data || true;
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.delete(this.getUrl(route), { headers });
+      return result.data || true;
+    } catch (err) {
+      this.errorHandler(err);
+    }
   }
 }
 
