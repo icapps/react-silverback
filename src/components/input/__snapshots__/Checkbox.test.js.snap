@@ -25,19 +25,19 @@ ShallowWrapper {
       "children": Array [
         <input
           checked={true}
-          class="form-check-input"
+          className="form-check-input"
           id="test"
           onChange={[Function]}
           type="checkbox"
 />,
         <label
-          class="form-check-label"
-          for="test"
+          className="form-check-label"
+          htmlFor="test"
 >
           This is a checkbox
 </label>,
       ],
-      "class": "form-check",
+      "className": "form-check",
     },
     "ref": null,
     "rendered": Array [
@@ -47,7 +47,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "checked": true,
-          "class": "form-check-input",
+          "className": "form-check-input",
           "id": "test",
           "onChange": [Function],
           "type": "checkbox",
@@ -62,8 +62,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "This is a checkbox",
-          "class": "form-check-label",
-          "for": "test",
+          "className": "form-check-label",
+          "htmlFor": "test",
         },
         "ref": null,
         "rendered": "This is a checkbox",
@@ -81,19 +81,19 @@ ShallowWrapper {
         "children": Array [
           <input
             checked={true}
-            class="form-check-input"
+            className="form-check-input"
             id="test"
             onChange={[Function]}
             type="checkbox"
 />,
           <label
-            class="form-check-label"
-            for="test"
+            className="form-check-label"
+            htmlFor="test"
 >
             This is a checkbox
 </label>,
         ],
-        "class": "form-check",
+        "className": "form-check",
       },
       "ref": null,
       "rendered": Array [
@@ -103,7 +103,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "checked": true,
-            "class": "form-check-input",
+            "className": "form-check-input",
             "id": "test",
             "onChange": [Function],
             "type": "checkbox",
@@ -118,8 +118,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "This is a checkbox",
-            "class": "form-check-label",
-            "for": "test",
+            "className": "form-check-label",
+            "htmlFor": "test",
           },
           "ref": null,
           "rendered": "This is a checkbox",

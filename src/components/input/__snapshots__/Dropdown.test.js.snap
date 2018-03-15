@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select Component should render a Select component 1`] = `
+exports[`Dropdown Component should render a Dropdown component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Select
+  Symbol(enzyme.__unrendered__): <Dropdown
     handleChange={[Function]}
     id="test"
-    label="This is a select input"
+    label="This is a dropdown"
     options={
         Array [
             "test",
@@ -31,12 +31,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <label
-          for="test"
+          htmlFor="test"
 >
-          This is a select input
+          This is a dropdown
 </label>,
         <select
-          class="form-control"
+          className="form-control"
           id="test"
           onChange={[Function]}
           value="test"
@@ -58,7 +58,7 @@ ShallowWrapper {
           </option>
 </select>,
       ],
-      "class": "form-group",
+      "className": "form-group",
     },
     "ref": null,
     "rendered": Array [
@@ -67,11 +67,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "This is a select input",
-          "for": "test",
+          "children": "This is a dropdown",
+          "htmlFor": "test",
         },
         "ref": null,
-        "rendered": "This is a select input",
+        "rendered": "This is a dropdown",
         "type": "label",
       },
       Object {
@@ -96,7 +96,7 @@ ShallowWrapper {
               test3
 </option>,
           ],
-          "class": "form-control",
+          "className": "form-control",
           "id": "test",
           "onChange": [Function],
           "value": "test",
@@ -153,12 +153,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <label
-            for="test"
+            htmlFor="test"
 >
-            This is a select input
+            This is a dropdown
 </label>,
           <select
-            class="form-control"
+            className="form-control"
             id="test"
             onChange={[Function]}
             value="test"
@@ -180,7 +180,7 @@ ShallowWrapper {
             </option>
 </select>,
         ],
-        "class": "form-group",
+        "className": "form-group",
       },
       "ref": null,
       "rendered": Array [
@@ -189,11 +189,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "This is a select input",
-            "for": "test",
+            "children": "This is a dropdown",
+            "htmlFor": "test",
           },
           "ref": null,
-          "rendered": "This is a select input",
+          "rendered": "This is a dropdown",
           "type": "label",
         },
         Object {
@@ -218,7 +218,7 @@ ShallowWrapper {
                 test3
 </option>,
             ],
-            "class": "form-control",
+            "className": "form-control",
             "id": "test",
             "onChange": [Function],
             "value": "test",

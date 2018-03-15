@@ -26,12 +26,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <label
-          for="test"
+          htmlFor="test"
 >
           Text
 </label>,
         <input
-          class="form-control"
+          className="form-control"
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -39,7 +39,7 @@ ShallowWrapper {
           value="test"
 />,
       ],
-      "class": "form-group",
+      "className": "form-group",
     },
     "ref": null,
     "rendered": Array [
@@ -49,7 +49,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Text",
-          "for": "test",
+          "htmlFor": "test",
         },
         "ref": null,
         "rendered": "Text",
@@ -60,7 +60,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "class": "form-control",
+          "className": "form-control",
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -82,12 +82,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <label
-            for="test"
+            htmlFor="test"
 >
             Text
 </label>,
           <input
-            class="form-control"
+            className="form-control"
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -95,7 +95,7 @@ ShallowWrapper {
             value="test"
 />,
         ],
-        "class": "form-group",
+        "className": "form-group",
       },
       "ref": null,
       "rendered": Array [
@@ -105,7 +105,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Text",
-            "for": "test",
+            "htmlFor": "test",
           },
           "ref": null,
           "rendered": "Text",
@@ -116,7 +116,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "class": "form-control",
+            "className": "form-control",
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
@@ -167,12 +167,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <label
-          for="test"
+          htmlFor="test"
 >
           Text with placeholder
 </label>,
         <input
-          class="form-control"
+          className="form-control"
           id="test"
           onChange={[Function]}
           placeholder="placeholder"
@@ -180,7 +180,7 @@ ShallowWrapper {
           value=""
 />,
       ],
-      "class": "form-group",
+      "className": "form-group",
     },
     "ref": null,
     "rendered": Array [
@@ -190,7 +190,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Text with placeholder",
-          "for": "test",
+          "htmlFor": "test",
         },
         "ref": null,
         "rendered": "Text with placeholder",
@@ -201,7 +201,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "class": "form-control",
+          "className": "form-control",
           "id": "test",
           "onChange": [Function],
           "placeholder": "placeholder",
@@ -223,12 +223,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <label
-            for="test"
+            htmlFor="test"
 >
             Text with placeholder
 </label>,
           <input
-            class="form-control"
+            className="form-control"
             id="test"
             onChange={[Function]}
             placeholder="placeholder"
@@ -236,7 +236,7 @@ ShallowWrapper {
             value=""
 />,
         ],
-        "class": "form-group",
+        "className": "form-group",
       },
       "ref": null,
       "rendered": Array [
@@ -246,7 +246,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Text with placeholder",
-            "for": "test",
+            "htmlFor": "test",
           },
           "ref": null,
           "rendered": "Text with placeholder",
@@ -257,7 +257,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "class": "form-control",
+            "className": "form-control",
             "id": "test",
             "onChange": [Function],
             "placeholder": "placeholder",
@@ -308,12 +308,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <label
-          for="test"
+          htmlFor="test"
 >
           Number
 </label>,
         <input
-          class="form-control"
+          className="form-control"
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -321,7 +321,7 @@ ShallowWrapper {
           value={123}
 />,
       ],
-      "class": "form-group",
+      "className": "form-group",
     },
     "ref": null,
     "rendered": Array [
@@ -331,7 +331,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Number",
-          "for": "test",
+          "htmlFor": "test",
         },
         "ref": null,
         "rendered": "Number",
@@ -342,7 +342,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "class": "form-control",
+          "className": "form-control",
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -364,12 +364,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <label
-            for="test"
+            htmlFor="test"
 >
             Number
 </label>,
           <input
-            class="form-control"
+            className="form-control"
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -377,7 +377,7 @@ ShallowWrapper {
             value={123}
 />,
         ],
-        "class": "form-group",
+        "className": "form-group",
       },
       "ref": null,
       "rendered": Array [
@@ -387,7 +387,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Number",
-            "for": "test",
+            "htmlFor": "test",
           },
           "ref": null,
           "rendered": "Number",
@@ -398,7 +398,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "class": "form-control",
+            "className": "form-control",
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
@@ -449,12 +449,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <label
-          for="test"
+          htmlFor="test"
 >
           Password
 </label>,
         <input
-          class="form-control"
+          className="form-control"
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -462,7 +462,7 @@ ShallowWrapper {
           value="password"
 />,
       ],
-      "class": "form-group",
+      "className": "form-group",
     },
     "ref": null,
     "rendered": Array [
@@ -472,7 +472,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Password",
-          "for": "test",
+          "htmlFor": "test",
         },
         "ref": null,
         "rendered": "Password",
@@ -483,7 +483,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "class": "form-control",
+          "className": "form-control",
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -505,12 +505,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <label
-            for="test"
+            htmlFor="test"
 >
             Password
 </label>,
           <input
-            class="form-control"
+            className="form-control"
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -518,7 +518,7 @@ ShallowWrapper {
             value="password"
 />,
         ],
-        "class": "form-group",
+        "className": "form-group",
       },
       "ref": null,
       "rendered": Array [
@@ -528,7 +528,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Password",
-            "for": "test",
+            "htmlFor": "test",
           },
           "ref": null,
           "rendered": "Password",
@@ -539,7 +539,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "class": "form-control",
+            "className": "form-control",
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
