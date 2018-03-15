@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TextInput = props => (
-  <div class="form-group">
-    <label for={props.id}>{props.label}</label>
-    <input type={props.type} class="form-control" id={props.id} placeholder={props.placeholder} value={props.value} onChange={props.handleChange} />
+  <div className="form-group">
+    <label htmlFor={props.id}>{props.label}</label>
+    <input type={props.type} className="form-control" id={props.id} placeholder={props.placeholder} value={props.value} onChange={props.handleChange} />
   </div>
 );
 

@@ -28,5 +28,5 @@ storiesOf('Checkbox', module)
 
 storiesOf('Dropdown', module)
   .add('dropdown', () => (
-    <Dropdown id="test" label="This is a dropdown" value="test" handleChange={action('handleSelect')} options={['test', 'test2', 'test3']} />
+    <Dropdown id="test" label="This is a dropdown" value="test" handleChange={action('handleDropdown')} options={['test', 'test2', 'test3']} />
   ));
