@@ -6,7 +6,11 @@
   bottom: 0;
   left: 0;
   z-index: 99;
-  padding: 20px;
+  padding: 20px 0;
   background: $white;
   border-right: 1px solid $light-grey;
+
+  .nav-pills .active {
+    border-radius: 0;
+  }
 }

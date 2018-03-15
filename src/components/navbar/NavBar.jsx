@@ -1,13 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './navbar.css';
 
 const Navbar = props => (
   <aside className="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
     <ul className="nav nav-pills flex-column">
-      {props.links.map(link => <li className="nav-item"><Link to={link.path} class="nav-link">{link.name}</Link></li>)}
+      {props.links.map(link => <li key={link.name} className="nav-item"><Link to={link.path} className={`nav-link ${window.location.pathname === link.path && 'active'}`}>{link.name}</Link></li>)}
     </ul>
   </aside>
 );
+
+Navbar.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      path: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default Navbar;
