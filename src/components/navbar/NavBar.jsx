@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './navbar.css';
 
 const Navbar = props => (
-  <aside className={`${!props.isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-faded sidebar`}>
+  <aside className={`${!props.isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-light sidebar`}>
     <ul className="nav nav-pills flex-column">
       {props.links.map(link => (
         <li key={link.name} className="nav-item" onClick={props.toggleNavigation}>
