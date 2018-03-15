@@ -1,0 +1,18 @@
+@import '../../utils/_colors.scss';
+
+header {
+  background: $primary;
+  padding: 1rem;
+  z-index: 100;
+
+  a {
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 0;
+    color: $white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

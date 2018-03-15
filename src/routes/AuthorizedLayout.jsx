@@ -1,22 +1,28 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Home from '../scenes/Home';
-import Jokes from '../scenes/jokes/Jokes';
-import { Navbar } from '../components';
+import UserOverview from '../scenes/users/UserOverview';
+import DatatypeOverview from '../scenes/dataType/DataTypeOverview';
+import { Header, Navbar } from '../components';
 
 const AuthorizedLayout = (props) => {
   return (
-    <div className='auth-layout'>
-      <Navbar username={props.username} />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/jokes' component={Jokes} />
-
-        <Redirect to='/' />
-      </Switch>
-    </div>
+    <React.Fragment>
+      <Header />
+      <div className="container-fluid">
+        <div className="row">
+          <Navbar links={[
+            { name: 'Users', path: '/users' },
+            { name: 'Datatype', path: '/datatype' },
+          ]} />
+          <Switch>
+            <Route path='/users' exact component={UserOverview} />
+            <Route path='/datatype' exact component={DatatypeOverview} />
+            <Redirect to='/users' />
+          </Switch>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
-export default connect((state) => ({ username: state.user.username }))(AuthorizedLayout);
+export default AuthorizedLayout;

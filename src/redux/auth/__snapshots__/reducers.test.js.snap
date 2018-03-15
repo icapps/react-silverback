@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auth reducer should LOGIN_USER_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": true,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should LOGIN_USER_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPending": true,
+}
+`;
+
+exports[`auth reducer should LOGOUT_USER 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should return the initial state 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;

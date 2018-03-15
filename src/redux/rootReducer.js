@@ -1,10 +1,8 @@
-import {combineReducers} from 'redux';
-import user from './user/reducers';
-import jokes from './jokes/reducers';
+import { combineReducers } from 'redux';
+import auth from './auth/reducers';
 
 const rootReducer = combineReducers({
-  user,
-  jokes,
+  auth,
 });
 
 export default rootReducer;

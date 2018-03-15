@@ -1,4 +1,7 @@
-import Button from './button/Button';
-import Navbar from './navbar/NavBar';
+import Header from './header/Header';
+import Navbar from './navbar/Navbar';
 
-export { Button, Navbar };
+export {
+  Header,
+  Navbar,
+};

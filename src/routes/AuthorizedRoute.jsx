@@ -3,27 +3,23 @@ import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class AuthorizedRoute extends Component {
-  componentWillMount() {
-    // getLoggedUser();
-  }
-
   render() {
-    const { component: Component, pending, logged, ...otherProps } = this.props;
+    const { component: Component, isPending, isLoggedIn, ...otherProps } = this.props;
     return (
       <Route
         {...otherProps}
         render={props => {
-          if (pending) return <div>Loading...</div>;
-          return logged ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
+          if (isPending) return <div>Loading...</div>;
+          return isLoggedIn ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
         }}
       />
     );
   }
 }
 
-const mapStateToProps = ({ user: userState }) => ({
-  pending : userState.pending,
-  logged  : userState.isLoggedIn,
+const mapStateToProps = state => ({
+  isPending: state.auth.isPending,
+  isLoggedIn: state.auth.isLoggedIn,
 });
 
 export default connect(mapStateToProps)(AuthorizedRoute);
