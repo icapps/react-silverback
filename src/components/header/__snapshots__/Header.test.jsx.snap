@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render a Header component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    toggleNavigation={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          className="navbar-brand"
+          replace={false}
+          to="/"
+>
+          Silverback
+</Link>,
+        <span
+          className="navbar-toggler-icon"
+          onClick={[Function]}
+/>,
+      ],
+      "className": "navbar navbar-dark bg-dark fixed-top",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Silverback",
+          "className": "navbar-brand",
+          "replace": false,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "Silverback",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "navbar-toggler-icon",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "span",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            className="navbar-brand"
+            replace={false}
+            to="/"
+>
+            Silverback
+</Link>,
+          <span
+            className="navbar-toggler-icon"
+            onClick={[Function]}
+/>,
+        ],
+        "className": "navbar navbar-dark bg-dark fixed-top",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Silverback",
+            "className": "navbar-brand",
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Silverback",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "navbar-toggler-icon",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "span",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

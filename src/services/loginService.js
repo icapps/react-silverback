@@ -1,5 +1,3 @@
-const login = (email, password) => {
-  return null;
+export const login = (email, password) => {
+  return true;
 };
-
-export default login;

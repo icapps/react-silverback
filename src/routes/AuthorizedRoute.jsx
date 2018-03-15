@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toggleNavigation } from '../redux/navigation/actions';
 
 class AuthorizedRoute extends Component {
   render() {
@@ -20,6 +21,11 @@ class AuthorizedRoute extends Component {
 const mapStateToProps = state => ({
   isPending: state.auth.isPending,
   isLoggedIn: state.auth.isLoggedIn,
+  isNavigationShown: state.navigation.isNavigationShown,
 });
 
-export default connect(mapStateToProps)(AuthorizedRoute);
+const mapDispatchToProps = dispatch => ({
+  toggleNavigation: () => dispatch(toggleNavigation()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthorizedRoute);

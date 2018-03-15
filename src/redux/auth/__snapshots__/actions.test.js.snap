@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`auth actions loginUser 1`] = `
+Array [
+  Object {
+    "payload": true,
+    "type": "LOGIN_USER",
+  },
+]
+`;
+
 exports[`auth actions logoutUser 1`] = `
 Array [
   Object {

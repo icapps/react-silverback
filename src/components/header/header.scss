@@ -1,0 +1,7 @@
+header {
+  .navbar-toggler-icon {
+    @media screen and (min-width: 576px) {
+      display: none;
+    }
+  }
+}

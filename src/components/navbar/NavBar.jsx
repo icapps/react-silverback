@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 import './navbar.css';
 
 const Navbar = props => (
-  <aside className="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+  <aside className={`${!props.isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-faded sidebar`}>
     <ul className="nav nav-pills flex-column">
-      {props.links.map(link => <li key={link.name} className="nav-item"><Link to={link.path} className={`nav-link ${window.location.pathname === link.path && 'active'}`}>{link.name}</Link></li>)}
+      {props.links.map(link => (
+        <li key={link.name} className="nav-item" onClick={props.toggleNavigation}>
+          <Link to={link.path} className={`nav-link ${window.location.pathname === link.path ? 'active' : ''}`}>{link.name}</Link>
+        </li>
+      ))}
     </ul>
   </aside>
 );
@@ -18,6 +22,8 @@ Navbar.propTypes = {
       path: PropTypes.string,
     })
   ).isRequired,
+  isNavigationShown: PropTypes.bool.isRequired,
+  toggleNavigation: PropTypes.func.isRequired,
 };
 
 export default Navbar;
