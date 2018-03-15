@@ -1,0 +1,565 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicInput Component should render a BasicInput component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextInput
+    handleChange={[Function]}
+    id="test"
+    label="Text"
+    placeholder=""
+    type="text"
+    value="test"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          for="test"
+>
+          Text
+</label>,
+        <input
+          class="form-control"
+          id="test"
+          onChange={[Function]}
+          placeholder=""
+          type="text"
+          value="test"
+/>,
+      ],
+      "class": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Text",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "Text",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "class": "form-control",
+          "id": "test",
+          "onChange": [Function],
+          "placeholder": "",
+          "type": "text",
+          "value": "test",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            for="test"
+>
+            Text
+</label>,
+          <input
+            class="form-control"
+            id="test"
+            onChange={[Function]}
+            placeholder=""
+            type="text"
+            value="test"
+/>,
+        ],
+        "class": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Text",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "Text",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "class": "form-control",
+            "id": "test",
+            "onChange": [Function],
+            "placeholder": "",
+            "type": "text",
+            "value": "test",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`BasicInput Component should render a BasicInput component with a placeholder 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextInput
+    handleChange={[Function]}
+    id="test"
+    label="Text with placeholder"
+    placeholder="placeholder"
+    type="text"
+    value=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          for="test"
+>
+          Text with placeholder
+</label>,
+        <input
+          class="form-control"
+          id="test"
+          onChange={[Function]}
+          placeholder="placeholder"
+          type="text"
+          value=""
+/>,
+      ],
+      "class": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Text with placeholder",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "Text with placeholder",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "class": "form-control",
+          "id": "test",
+          "onChange": [Function],
+          "placeholder": "placeholder",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            for="test"
+>
+            Text with placeholder
+</label>,
+          <input
+            class="form-control"
+            id="test"
+            onChange={[Function]}
+            placeholder="placeholder"
+            type="text"
+            value=""
+/>,
+        ],
+        "class": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Text with placeholder",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "Text with placeholder",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "class": "form-control",
+            "id": "test",
+            "onChange": [Function],
+            "placeholder": "placeholder",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`BasicInput Component should render a BasicInput component with a type of number 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextInput
+    handleChange={[Function]}
+    id="test"
+    label="Number"
+    placeholder=""
+    type="number"
+    value={123}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          for="test"
+>
+          Number
+</label>,
+        <input
+          class="form-control"
+          id="test"
+          onChange={[Function]}
+          placeholder=""
+          type="number"
+          value={123}
+/>,
+      ],
+      "class": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Number",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "Number",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "class": "form-control",
+          "id": "test",
+          "onChange": [Function],
+          "placeholder": "",
+          "type": "number",
+          "value": 123,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            for="test"
+>
+            Number
+</label>,
+          <input
+            class="form-control"
+            id="test"
+            onChange={[Function]}
+            placeholder=""
+            type="number"
+            value={123}
+/>,
+        ],
+        "class": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Number",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "Number",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "class": "form-control",
+            "id": "test",
+            "onChange": [Function],
+            "placeholder": "",
+            "type": "number",
+            "value": 123,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`BasicInput Component should render a BasicInput component with a type of password 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextInput
+    handleChange={[Function]}
+    id="test"
+    label="Password"
+    placeholder=""
+    type="password"
+    value="password"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          for="test"
+>
+          Password
+</label>,
+        <input
+          class="form-control"
+          id="test"
+          onChange={[Function]}
+          placeholder=""
+          type="password"
+          value="password"
+/>,
+      ],
+      "class": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Password",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "Password",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "class": "form-control",
+          "id": "test",
+          "onChange": [Function],
+          "placeholder": "",
+          "type": "password",
+          "value": "password",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            for="test"
+>
+            Password
+</label>,
+          <input
+            class="form-control"
+            id="test"
+            onChange={[Function]}
+            placeholder=""
+            type="password"
+            value="password"
+/>,
+        ],
+        "class": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Password",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "Password",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "class": "form-control",
+            "id": "test",
+            "onChange": [Function],
+            "placeholder": "",
+            "type": "password",
+            "value": "password",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Component should render a Select component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Select
+    handleChange={[Function]}
+    id="test"
+    label="This is a select input"
+    options={
+        Array [
+            "test",
+            "test2",
+            "test3",
+          ]
+    }
+    value="test"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          for="test"
+>
+          This is a select input
+</label>,
+        <select
+          class="form-control"
+          id="test"
+          onChange={[Function]}
+          value="test"
+>
+          <option
+                    value="test"
+          >
+                    test
+          </option>
+          <option
+                    value="test2"
+          >
+                    test2
+          </option>
+          <option
+                    value="test3"
+          >
+                    test3
+          </option>
+</select>,
+      ],
+      "class": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "This is a select input",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "This is a select input",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <option
+              value="test"
+>
+              test
+</option>,
+            <option
+              value="test2"
+>
+              test2
+</option>,
+            <option
+              value="test3"
+>
+              test3
+</option>,
+          ],
+          "class": "form-control",
+          "id": "test",
+          "onChange": [Function],
+          "value": "test",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "test",
+            "nodeType": "host",
+            "props": Object {
+              "children": "test",
+              "value": "test",
+            },
+            "ref": null,
+            "rendered": "test",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "test2",
+            "nodeType": "host",
+            "props": Object {
+              "children": "test2",
+              "value": "test2",
+            },
+            "ref": null,
+            "rendered": "test2",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "test3",
+            "nodeType": "host",
+            "props": Object {
+              "children": "test3",
+              "value": "test3",
+            },
+            "ref": null,
+            "rendered": "test3",
+            "type": "option",
+          },
+        ],
+        "type": "select",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            for="test"
+>
+            This is a select input
+</label>,
+          <select
+            class="form-control"
+            id="test"
+            onChange={[Function]}
+            value="test"
+>
+            <option
+                        value="test"
+            >
+                        test
+            </option>
+            <option
+                        value="test2"
+            >
+                        test2
+            </option>
+            <option
+                        value="test3"
+            >
+                        test3
+            </option>
+</select>,
+        ],
+        "class": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is a select input",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "This is a select input",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value="test"
+>
+                test
+</option>,
+              <option
+                value="test2"
+>
+                test2
+</option>,
+              <option
+                value="test3"
+>
+                test3
+</option>,
+            ],
+            "class": "form-control",
+            "id": "test",
+            "onChange": [Function],
+            "value": "test",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "test",
+              "nodeType": "host",
+              "props": Object {
+                "children": "test",
+                "value": "test",
+              },
+              "ref": null,
+              "rendered": "test",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": "test2",
+              "nodeType": "host",
+              "props": Object {
+                "children": "test2",
+                "value": "test2",
+              },
+              "ref": null,
+              "rendered": "test2",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": "test3",
+              "nodeType": "host",
+              "props": Object {
+                "children": "test3",
+                "value": "test3",
+              },
+              "ref": null,
+              "rendered": "test3",
+              "type": "option",
+            },
+          ],
+          "type": "select",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

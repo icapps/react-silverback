@@ -60,7 +60,7 @@ ShallowWrapper {
                 </Link>
         </li>
 </ul>,
-      "className": " col-sm-3 col-md-2 bg-faded sidebar",
+      "className": " col-sm-3 col-md-2 bg-light sidebar",
     },
     "ref": null,
     "rendered": Object {
@@ -201,7 +201,7 @@ ShallowWrapper {
                     </Link>
           </li>
 </ul>,
-        "className": " col-sm-3 col-md-2 bg-faded sidebar",
+        "className": " col-sm-3 col-md-2 bg-light sidebar",
       },
       "ref": null,
       "rendered": Object {
@@ -379,7 +379,7 @@ ShallowWrapper {
                 </Link>
         </li>
 </ul>,
-      "className": " col-sm-3 col-md-2 bg-faded sidebar",
+      "className": " col-sm-3 col-md-2 bg-light sidebar",
     },
     "ref": null,
     "rendered": Object {
@@ -520,7 +520,7 @@ ShallowWrapper {
                     </Link>
           </li>
 </ul>,
-        "className": " col-sm-3 col-md-2 bg-faded sidebar",
+        "className": " col-sm-3 col-md-2 bg-light sidebar",
       },
       "ref": null,
       "rendered": Object {

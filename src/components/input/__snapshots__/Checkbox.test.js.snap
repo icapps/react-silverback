@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasicInput Component should render a BasicInput component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Checkbox
+    handleChange={[Function]}
+    id="test"
+    text="This is a checkbox"
+    value={true}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <input
+          checked={true}
+          class="form-check-input"
+          id="test"
+          onChange={[Function]}
+          type="checkbox"
+/>,
+        <label
+          class="form-check-label"
+          for="test"
+>
+          This is a checkbox
+</label>,
+      ],
+      "class": "form-check",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "checked": true,
+          "class": "form-check-input",
+          "id": "test",
+          "onChange": [Function],
+          "type": "checkbox",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "This is a checkbox",
+          "class": "form-check-label",
+          "for": "test",
+        },
+        "ref": null,
+        "rendered": "This is a checkbox",
+        "type": "label",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            checked={true}
+            class="form-check-input"
+            id="test"
+            onChange={[Function]}
+            type="checkbox"
+/>,
+          <label
+            class="form-check-label"
+            for="test"
+>
+            This is a checkbox
+</label>,
+        ],
+        "class": "form-check",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "checked": true,
+            "class": "form-check-input",
+            "id": "test",
+            "onChange": [Function],
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is a checkbox",
+            "class": "form-check-label",
+            "for": "test",
+          },
+          "ref": null,
+          "rendered": "This is a checkbox",
+          "type": "label",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
