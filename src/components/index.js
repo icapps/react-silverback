@@ -1,5 +1,5 @@
 import Header from './header/Header';
-import Navbar from './navbar/Navbar';
+import Navbar from './navbar/NavBar';
 
 export {
   Header,
