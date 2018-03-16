@@ -3,6 +3,7 @@
   "description": "_OLLIE_DESCRIPTION_",
   "version": "0.1.0",
   "dependencies": {
+    "@storybook/react": "^3.3.15",
     "axios": "~0.18.0",
     "bootstrap": "^4.0.0",
     "node-sass-chokidar": "~0.0.3",
@@ -16,7 +17,8 @@
     "redux": "~3.7.2",
     "redux-logger": "~3.0.6",
     "redux-mock-store": "^1.5.1",
-    "redux-thunk": "~2.2.0"
+    "redux-thunk": "~2.2.0",
+    "storybook": "^1.0.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -27,7 +29,8 @@
     "test": "react-scripts test --env=jsdom",
     "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
     "validate": "yarn lint && yarn test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
