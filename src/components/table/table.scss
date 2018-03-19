@@ -1,0 +1,60 @@
+@import '../../utils/_colors.scss';
+
+@mixin triangle(){
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.remove-list-item{
+  width: 25px;
+
+  img{
+    opacity: 0.3;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+td {
+  cursor: pointer;
+}
+.key {
+  cursor: pointer;
+
+  .sort {
+    padding-left: 8px;
+    vertical-align: middle;
+    position: relative;
+
+    &:before{
+      @include triangle();
+      top: 0;
+      border-bottom: 5px solid $grey;
+    }
+    &:after{
+      @include triangle();
+      top: 8px;
+      border-top: 5px solid $grey;
+    }
+
+    &.sort-asc{
+      &:before{
+        border-bottom-color: $black;
+      }
+    }
+
+    &.sort-desc{
+      &:after{
+        border-top-color: $black;
+      }
+    }
+  }
+}
+
+
