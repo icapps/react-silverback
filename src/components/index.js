@@ -4,5 +4,8 @@ import BasicInput from './input/BasicInput';
 import Checkbox from './input/Checkbox';
 import Dropdown from './input/Dropdown';
 import Table from './table/Table';
+import Button from './button/Button';
+import Modal from './modal/Modal';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table };
+export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal };
+

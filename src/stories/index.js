@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { BasicInput, Checkbox, Dropdown, Table } from '../components';
+import { BasicInput, Checkbox, Dropdown, Table, Button, Modal } from '../components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('BasicInput', module)
@@ -63,4 +63,55 @@ storiesOf('Table', module)
       handleRemoveItem={action('handle remove item')}
       handleSort={action('handle sort')}
     />
+  ));
+
+storiesOf('Button', module)
+  .add('default', () => (
+    <Button text="Button" handleClick={action('handleButton')} />
+  ))
+  .add('button with styling', () => (
+    <Button text="Button" handleClick={action('handleButton')} className="btn-primary" />
+  ));
+
+storiesOf('Modal', module)
+  .add('default', () => (
+    <Modal
+      id="testModal"
+      modalButtonText="Modal"
+      handleSecondaryButton={action('handleSecondaryButton')}
+      secondaryButtonText="Secondary"
+      handlePrimaryButton={action('handlePrimaryButton')}
+      primaryButtonText="Primary"
+    >
+      <p>test</p>
+    </Modal>
+  ))
+  .add('Modal with styled buttons', () => (
+    <Modal
+      id="testModal2"
+      modalButtonText="Modal"
+      handleSecondaryButton={action('handleSecondaryButton')}
+      secondaryButtonText="Secondary"
+      handlePrimaryButton={action('handlePrimaryButton')}
+      primaryButtonText="Primary"
+      modalButtonClassName="btn-primary"
+      secondaryButtonClassName="btn-secondary"
+      primaryButtonClassName="btn-primary"
+    >
+      <p>test</p>
+    </Modal>
+  ))
+  .add('Modal with header', () => (
+    <Modal
+      id="testModal3"
+      modalButtonText="Modal"
+      handleSecondaryButton={action('handleSecondaryButton')}
+      secondaryButtonText="Secondary"
+      handlePrimaryButton={action('handlePrimaryButton')}
+      primaryButtonText="Primary"
+      hasHeader={true}
+      title="Header title"
+    >
+      <p>test</p>
+    </Modal>
   ));
