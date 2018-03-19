@@ -16,6 +16,9 @@ storiesOf('BasicInput', module)
   ))
   .add('type: number', () => (
     <BasicInput id="test" label="Number" value={123} handleChange={action('handle TextInput')} type="number" />
+  ))
+  .add('error', () => (
+    <BasicInput id="test" label="Text with error" value="test" handleChange={action('handle TextInput')} isValid={false} errorMessage="Input has an error" />
   ));
 
 storiesOf('Checkbox', module)
@@ -31,41 +34,8 @@ storiesOf('Dropdown', module)
     <Dropdown id="test" label="This is a dropdown" value="test" handleChange={action('handle Dropdown')} options={['test', 'test2', 'test3']} />
   ));
 
-storiesOf('Table', module)
-  .add('default', () => (
-    <Table
-      keys={['key', 'key1', 'key2', 'key3']}
-      listItems={[
-        { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-        { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-        { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-        { id: 'id4', key: "test 4", key2: false },
-        { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
-      ]}
-      handleRowClick={action('handle Tablerow click')}
-      handleRemoveItem={action('handle remove item')}
-      handleSort={action('handle sort')}
-    />
-  ))
-  .add('custom date format', () => (
-    <Table
-      keys={['key', 'key1', 'key2', 'key3']}
-      listItems={
-        [
-          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-          { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-          { id: 'id4', key: "test 4", key2: false },
-          { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
-        ]}
-      dateFormat="dddd D MMMM"
-      handleRowClick={action('handle Tablerow click')}
-      handleRemoveItem={action('handle remove item')}
-      handleSort={action('handle sort')}
-    />
-  ));
 
-storiesOf('Button', module)
+  storiesOf('Button', module)
   .add('default', () => (
     <Button text="Button" handleClick={action('handleButton')} />
   ))
@@ -114,6 +84,40 @@ storiesOf('Modal', module)
     >
       <p>test</p>
     </Modal>
+  ));
+
+storiesOf('Table', module)
+  .add('default', () => (
+    <Table
+      keys={['key', 'key1', 'key2', 'key3']}
+      listItems={[
+        { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
+        { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
+        { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
+        { id: 'id4', key: "test 4", key2: false },
+        { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
+      ]}
+      handleRowClick={action('handle Tablerow click')}
+      handleRemoveItem={action('handle remove item')}
+      handleSort={action('handle sort')}
+    />
+  ))
+  .add('custom date format', () => (
+    <Table
+      keys={['key', 'key1', 'key2', 'key3']}
+      listItems={
+        [
+          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
+          { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
+          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
+          { id: 'id4', key: "test 4", key2: false },
+          { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
+        ]}
+      dateFormat="dddd D MMMM"
+      handleRowClick={action('handle Tablerow click')}
+      handleRemoveItem={action('handle remove item')}
+      handleSort={action('handle sort')}
+    />
   ));
 
 storiesOf('Pagination', module)
