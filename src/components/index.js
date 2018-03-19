@@ -6,6 +6,7 @@ import Dropdown from './input/Dropdown';
 import Table from './table/Table';
 import Button from './button/Button';
 import Modal from './modal/Modal';
+import Pagination from './pagination/Pagination';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal };
+export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination };
 

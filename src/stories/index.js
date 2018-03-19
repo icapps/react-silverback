@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { BasicInput, Checkbox, Dropdown, Table, Button, Modal } from '../components';
+import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination } from '../components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('BasicInput', module)
@@ -114,4 +114,9 @@ storiesOf('Modal', module)
     >
       <p>test</p>
     </Modal>
+  ));
+
+storiesOf('Pagination', module)
+  .add('default', () => (
+    <Pagination pageCount={5} handleClick={action('handle Pagination')} />
   ));
