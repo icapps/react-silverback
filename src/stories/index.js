@@ -58,7 +58,7 @@ storiesOf('Table', module)
           { id: 'id4', key: "test 4", key2: false },
           { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
         ]}
-      dateFormat="MM/DD/YYYY"
+      dateFormat="dddd D MMMM"
       handleRowClick={action('handle Tablerow click')}
       handleRemoveItem={action('handle remove item')}
       handleSort={action('handle sort')}

@@ -71,7 +71,7 @@ Table.propTypes = {
 };
 
 Table.defaultProps = {
-  dateFormat: null,
+  dateFormat: 'MM/DD/YYYY',
 };
 
 export default Table;
