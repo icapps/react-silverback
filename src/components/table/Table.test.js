@@ -12,11 +12,11 @@ describe('Table Component', () => {
       <Table
         keys={['key', 'key1', 'key2', 'key3']}
         listItems={[
-          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date('December 17, 1995 03:24:00') },
-          { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date('December 17, 1995 03:24:00') },
-          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date('December 17, 1995 03:24:00') },
+          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date(1521448332271) },
+          { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date(1521448332271) },
+          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date(1521448332271) },
           { id: 'id4', key: "test 4", key2: false },
-          { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date('December 17, 1995 03:24:00') },
+          { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date(1521448332271) },
         ]}
         handleRowClick={() => { }}
         handleRemoveItem={() => { }}
@@ -31,11 +31,11 @@ describe('Table Component', () => {
         keys={['key', 'key1', 'key2', 'key3']}
         listItems={
           [
-            { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date('December 17, 1995 03:24:00') },
-            { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date('December 17, 1995 03:24:00') },
-            { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date('December 17, 1995 03:24:00') },
+            { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date(1521448332271) },
+            { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date(1521448332271) },
+            { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date(1521448332271) },
             { id: 'id4', key: "test 4", key2: false },
-            { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date('December 17, 1995 03:24:00') },
+            { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date(1521448332271) },
           ]}
         dateFormat="MM/DD/YYYY"
         handleRowClick={() => { }}
