@@ -35,12 +35,12 @@ td {
     &:before{
       @include triangle();
       top: 0;
-      border-bottom: 5px solid $grey;
+      border-bottom: 5px solid $table;
     }
     &:after{
       @include triangle();
       top: 8px;
-      border-top: 5px solid $grey;
+      border-top: 5px solid $table;
     }
 
     &.sort-asc{
