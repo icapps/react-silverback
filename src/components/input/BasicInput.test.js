@@ -26,4 +26,8 @@ describe('BasicInput Component', () => {
     const wrapper = shallow(<BasicInput id="test" label="Number" value={123} handleChange={() => { }} type="number" />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render a BasicInput component with error handling', () => {
+    const wrapper = shallow(<BasicInput id="test" label="Text with errorhandling" value="test" handleChange={() => { }} isValid={false} errorMessage="This is an error message" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
