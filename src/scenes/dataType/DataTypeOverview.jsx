@@ -12,7 +12,7 @@ class DataTypeOverview extends Component {
     return (
       <Overview
         title={labels.DATATYPES}
-        keys={['id', 'type', 'price', 'edible', 'bestBefore', 'weight', 'description']}
+        keys={[labels.ID, labels.PRICE, labels.EDIBLE, labels.BEST_BEFORE, labels.WEIGHT, labels.DESCRIPTION]}
         listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
         removeItem={() => { }}
         history={this.props.history}
