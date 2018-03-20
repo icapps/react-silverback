@@ -21,4 +21,11 @@ describe('Navbar Component', () => {
     ]} toggleNavigation={() => { }} isNavigationShown />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render a hidden Navbar component', () => {
+    const wrapper = shallow(<Navbar links={[
+      { name: 'test1', path: '/test1' },
+      { name: 'test2', path: '/test2' },
+    ]} toggleNavigation={() => { }} isNavigationShown={false} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

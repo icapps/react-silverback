@@ -37,27 +37,29 @@ class Table extends React.Component {
   render() {
     const { props } = this;
     return (
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th></th>
-            {props.keys.map(key => (
-              <th scope="col" key={key}>
-                <span className="key" onClick={() => this.sortItem(key)}>{key}
-                  <span className={`sort ${this.state.sortedItem === key ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />
-                </span>
-              </th>))}
-          </tr>
-        </thead>
-        <tbody>
-          {props.listItems.map((listItem, index) => (
-            <tr key={listItem.id}>
-              <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
-              {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key])}</td>)}
+      <div className="table-responsive">
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              {props.keys.map(key => (
+                <th scope="col" key={key}>
+                  <span className="key" onClick={() => this.sortItem(key)}>{key}
+                    <span className={`sort ${this.state.sortedItem === key ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />
+                  </span>
+                </th>))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {props.listItems.map((listItem, index) => (
+              <tr key={listItem.id}>
+                <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
+                {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key])}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }

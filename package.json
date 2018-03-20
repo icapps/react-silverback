@@ -29,7 +29,8 @@
     "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
     "validate": "yarn lint && yarn test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "coverage": "react-scripts test --env=jsdom --coverage"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

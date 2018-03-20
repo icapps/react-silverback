@@ -1,0 +1,34 @@
+import React from 'react';
+import { shallow, configure } from 'enzyme';
+import Overview from './Overview';
+import Adapter from 'enzyme-adapter-react-16';
+
+
+configure({ adapter: new Adapter() });
+
+describe('Overview Component', () => {
+  it('should render a Overview component', () => {
+    const wrapper = shallow(<Overview
+      title="DataTypes"
+      keys={['id', 'type', 'price']}
+      listItems={[{ id: '1', type: 'B', price: 88.9 }, { id: '2', type: 'C', price: 45.2 }, { id: '1', type: 'D', price: 56.5 }]}
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should render a Overview component with custom date format', () => {
+    const wrapper = shallow(<Overview
+      title="DataTypes"
+      keys={['id', 'type', 'date']}
+      listItems={[{ id: '1', type: 'B', date: new Date(Date.UTC(1995, 4, 23)) }, { id: '2', type: 'C', date: new Date(Date.UTC(1995, 4, 23)) }, { id: '1', type: 'D', date: new Date(Date.UTC(1995, 4, 23)) }]}
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('should render a Overview component with no listItems', () => {
+    const wrapper = shallow(<Overview
+      title="DataTypes"
+      keys={['id', 'type', 'price']}
+      listItems={[]}
+    />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});

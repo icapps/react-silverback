@@ -1,0 +1,14 @@
+@import '../../utils/_colors.scss';
+
+main{
+  h2 {
+    margin: 1rem 0 3rem 0;
+  }
+
+  .empty-overview {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: $dark-grey;
+  }
+}

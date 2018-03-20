@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
-import './dataTypeOverview.css';
+import { connect } from 'react-redux';
+import { Overview } from '../../components';
+import {getDataType} from '../../redux/datatype/actions';
 
 class DataTypeOverview extends Component {
+  componentDidMount(){
+    this.props.getDataType();
+  }
   render() {
     return (
-      <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        <p>DataTypeOverview</p>
-      </main>
+      <Overview
+        title="DataTypes"
+        keys={['id', 'type', 'price', 'edible', 'best before', 'weight']}
+        listItems={this.props.datatypes}
+      />
     );
   }
 }
 
-export default DataTypeOverview;
+const mapStateToProps = state => ({
+  datatypes: state.dataType.dataTypes,
+});
+
+const mapDispatchToProps = {
+  getDataType,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DataTypeOverview);
