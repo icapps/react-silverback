@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './dataTypeOverview.css';
 
 class DataTypeOverview extends Component {
   render() {
