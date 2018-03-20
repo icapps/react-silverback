@@ -1,9 +1,9 @@
 import constants from './constants';
-import {dataTypeService} from '../../services';
+import { dataTypeService } from '../../services';
 
 export const getDataType = () => {
   return {
     type: constants.GET_DATA_TYPE,
-    payload: dataTypeService.getDataTypes(),
+    payload: dataTypeService.get(),
   };
 };

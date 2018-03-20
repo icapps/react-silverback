@@ -1,11 +1,10 @@
 import dataType from './reducers';
 import constants from './constants';
+import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   dataTypes: [],
-  isPending: false,
-  isError: false,
-  errorMessage: '',
+  ...defaultInitialState,
 };
 
 describe('datatype reducer', () => {

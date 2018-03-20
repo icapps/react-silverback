@@ -1,10 +1,9 @@
 import constants from './constants';
+import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   dataTypes: [],
-  isPending: false,
-  isError: false,
-  errorMessage: '',
+  ...defaultInitialState,
 };
 
 const dataType = (state = initialState, action = {}) => {

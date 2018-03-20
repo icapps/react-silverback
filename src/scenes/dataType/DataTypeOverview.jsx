@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getDataType } from '../../redux/datatype/actions';
+import { labels } from '../../utils';
 
 class DataTypeOverview extends Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class DataTypeOverview extends Component {
   render() {
     return (
       <Overview
-        title="DataTypes"
+        title={labels.DATATYPES}
         keys={['id', 'type', 'price', 'edible', 'bestBefore', 'weight', 'description']}
         listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
         removeItem={() => { }}

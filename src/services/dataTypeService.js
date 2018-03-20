@@ -1,6 +1,6 @@
 const datatypes = require('../mock/datatype.json');
 
-export const getDataTypes = async () => {
+export const get = async () => {
   const data = await datatypes.data;
   return data;
 };

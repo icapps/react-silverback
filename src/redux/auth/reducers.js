@@ -1,10 +1,9 @@
 import constants from './constants';
+import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   isLoggedIn: true,
-  isPending: false,
-  isError: false,
-  errorMessage: '',
+  ...defaultInitialState,
 };
 
 const auth = (state = initialState, action = {}) => {

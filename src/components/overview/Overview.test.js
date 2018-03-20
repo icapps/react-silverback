@@ -7,7 +7,7 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 describe('Overview Component', () => {
-  it('should render a Overview component', () => {
+  it('should render an Overview component', () => {
     const wrapper = shallow(<Overview
       title="DataTypes"
       keys={['id', 'type', 'price']}
@@ -17,7 +17,7 @@ describe('Overview Component', () => {
     />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('should render a Overview component with custom date format', () => {
+  it('should render an Overview component with custom date format', () => {
     const wrapper = shallow(<Overview
       title="DataTypes"
       keys={['id', 'type', 'date']}
@@ -27,7 +27,7 @@ describe('Overview Component', () => {
     />);
     expect(wrapper).toMatchSnapshot();
   });
-  it('should render a Overview component with no listItems', () => {
+  it('should render an Overview component with no listItems', () => {
     const wrapper = shallow(<Overview
       title="DataTypes"
       keys={['id', 'type', 'price']}

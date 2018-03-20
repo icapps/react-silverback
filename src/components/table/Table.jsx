@@ -66,8 +66,8 @@ class Table extends React.Component {
 }
 
 Table.propTypes = {
-  keys: PropTypes.array.isRequired,
-  listItems: PropTypes.array.isRequired,
+  keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
   dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
