@@ -2,41 +2,37 @@ import constants from './constants';
 import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
-  isLoggedIn: true,
+  dataTypes: [],
   ...defaultInitialState,
 };
 
-const auth = (state = initialState, action = {}) => {
-  const error = action.error;
+const dataType = (state = initialState, action = {}) => {
+  const { error, payload } = action;
 
   switch (action.type) {
-    case constants.LOGIN_USER_FULFILLED:
+    case constants.GET_DATA_TYPE_FULFILLED:
       return {
         ...state,
-        isLoggedIn: true,
+        dataTypes: payload,
         isPending: false,
       };
-      case constants.LOGIN_USER_PENDING:
+    case constants.GET_DATA_TYPE_PENDING:
       return {
         ...state,
-        isLoggedIn: false,
         isPending: true,
         isError: false,
         errorMessage: '',
       };
-    case constants.LOGIN_USER_REJECTED:
+    case constants.GET_DATA_TYPE_REJECTED:
       return {
         ...state,
         isPending: false,
         isError: true,
         errorMessage: error.message,
       };
-
-    case constants.LOGOUT_USER:
-      return initialState;
     default:
       return state;
   }
 };
 
-export default auth;
+export default dataType;

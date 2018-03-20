@@ -30,6 +30,7 @@ class Table extends React.Component {
   renderData = data => {
     switch (typeof data) {
       case 'object': return isDate(data) ? format(data, this.props.dateFormat) : data.toString();
+      case 'string': return data.length < this.props.maxTextLength ? data : `${data.substring(0, this.props.maxTextLength)}...`;
       case 'boolean': return <img src={data ? checkIcon : crossIcon} alt={`${data}`} />;
       default: return data;
     }
@@ -37,41 +38,45 @@ class Table extends React.Component {
   render() {
     const { props } = this;
     return (
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th></th>
-            {props.keys.map(key => (
-              <th scope="col" key={key}>
-                <span className="key" onClick={() => this.sortItem(key)}>{key}
-                  <span className={`sort ${this.state.sortedItem === key ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />
-                </span>
-              </th>))}
-          </tr>
-        </thead>
-        <tbody>
-          {props.listItems.map((listItem, index) => (
-            <tr key={listItem.id}>
-              <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
-              {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key])}</td>)}
+      <div className="table-responsive">
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              {props.keys.map(key => (
+                <th scope="col" key={key}>
+                  <span className="key" onClick={() => this.sortItem(key)}>{key}
+                    <span className={`sort ${this.state.sortedItem === key ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />
+                  </span>
+                </th>))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {props.listItems.map((listItem, index) => (
+              <tr key={listItem.id}>
+                <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
+                {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key])}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
 
 Table.propTypes = {
-  keys: PropTypes.array.isRequired,
-  listItems: PropTypes.array.isRequired,
+  keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
   dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
+  maxTextLength: PropTypes.number,
 };
 
 Table.defaultProps = {
-  dateFormat: 'MM/DD/YYYY',
+  dateFormat: 'DD/MM/YYYY',
+  maxTextLength: 50,
 };
 
 export default Table;

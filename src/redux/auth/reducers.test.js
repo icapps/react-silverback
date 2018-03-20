@@ -1,11 +1,10 @@
 import auth from './reducers';
 import constants from './constants';
+import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   isLoggedIn: false,
-  isPending: false,
-  isError: false,
-  errorMessage: '',
+  ...defaultInitialState,
 };
 
 describe('auth reducer', () => {

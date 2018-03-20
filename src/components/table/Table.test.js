@@ -45,4 +45,22 @@ describe('Table Component', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+  it('should render a Table component with custom maximum text length', () => {
+    const wrapper = shallow(
+      <Table
+        keys={['key', 'key1', 'key2', 'key3']}
+        listItems={
+          [
+            { id: 'id1', key: "test 1", key1: 1, key2: false, key3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet nisl ac nibh aliquet, id placerat massa bibendum. Ut erat mauris, pulvinar vestibulum augue sollicitudin, rutrum eleifend leo. Proin malesuada nisl nec ornare fringilla. Nam vel rutrum mi. Etiam porta tempus blandit. Nunc et odio rhoncus, eleifend nisi ac, tempus urna. Pellentesque justo tellus, cursus id mi molestie, condimentum mattis ante. Sed suscipit nibh libero, at tincidunt enim pulvinar nec. Fusce sit amet leo vitae quam rutrum mattis eu a leo. Sed et nisl sit amet ipsum eleifend dignissim a sit amet metus. Nullam porta eros eget dolor ornare, vitae porttitor diam vehicula. Cras vel augue vestibulum, pellentesque nulla sed, blandit dui. Vivamus eu urna a tortor tempor elementum sed eu nibh. In id pellentesque eros.            ' },
+            { id: 'id2', key: "test 2", key1: 2, key2: true },
+          ]}
+        dateFormat="dddd D MMM"
+        handleRowClick={() => { }}
+        handleRemoveItem={() => { }}
+        handleSort={() => { }}
+        maxTextLength={30}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
