@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import {getDataType} from '../../redux/datatype/actions';
+import { getDataType } from '../../redux/datatype/actions';
 
 class DataTypeOverview extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.getDataType();
   }
   render() {
     return (
       <Overview
         title="DataTypes"
-        keys={['id', 'type', 'price', 'edible', 'best before', 'weight']}
-        listItems={this.props.datatypes}
+        keys={['id', 'type', 'price', 'edible', 'bestBefore', 'weight', 'description']}
+        listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
+        removeItem={() => { }}
+        history={this.props.history}
       />
     );
   }

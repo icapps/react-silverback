@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import UserOverview from '../scenes/users/UserOverview';
 import DatatypeOverview from '../scenes/dataType/DataTypeOverview';
 import { Header, Navbar } from '../components';
+import DataTypeDetail from '../scenes/dataType/DataTypeDetail';
 
 const AuthorizedLayout = props => {
   return (
@@ -17,6 +18,7 @@ const AuthorizedLayout = props => {
           <Switch>
             <Route path='/users' exact component={UserOverview} />
             <Route path='/datatype' exact component={DatatypeOverview} />
+            <Route path='/datatype/:id' exact component={DataTypeDetail} />
             <Redirect to='/users' />
           </Switch>
         </div>

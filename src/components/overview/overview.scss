@@ -1,14 +1,24 @@
 @import '../../utils/_colors.scss';
 
-main{
+.overview{
   h2 {
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 1rem 0;
   }
 
-  .empty-overview {
-    display: block;
-    margin: auto;
-    text-align: center;
-    color: $dark-grey;
+  .overview-settings{
+    margin: 1.5rem 0;
+  }
+
+  .jumbotron {
+    margin-top: 2rem;
+    background: $light-grey;
+    border: 1px solid $light-border;
+
+    .empty-overview {
+      display: block;
+      margin: auto;
+      text-align: center;
+      color: $dark-grey;
+    }
   }
 }

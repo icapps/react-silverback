@@ -30,6 +30,7 @@ class Table extends React.Component {
   renderData = data => {
     switch (typeof data) {
       case 'object': return isDate(data) ? format(data, this.props.dateFormat) : data.toString();
+      case 'string': return data.length < this.props.maxTextLength ? data : `${data.substring(0, this.props.maxTextLength)}...`;
       case 'boolean': return <img src={data ? checkIcon : crossIcon} alt={`${data}`} />;
       default: return data;
     }
@@ -70,10 +71,12 @@ Table.propTypes = {
   dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,
   handleRemoveItem: PropTypes.func.isRequired,
+  maxTextLength: PropTypes.number,
 };
 
 Table.defaultProps = {
-  dateFormat: 'MM/DD/YYYY',
+  dateFormat: 'DD/MM/YYYY',
+  maxTextLength: 50,
 };
 
 export default Table;
