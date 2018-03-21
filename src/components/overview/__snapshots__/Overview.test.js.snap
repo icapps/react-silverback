@@ -8,9 +8,21 @@ ShallowWrapper {
     history={Object {}}
     keys={
         Array [
-            "id",
-            "type",
-            "price",
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "price",
+              "isSortable": false,
+              "value": "price",
+            },
           ]
     }
     listItems={
@@ -33,6 +45,7 @@ ShallowWrapper {
           ]
     }
     removeItem={[Function]}
+    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -69,9 +82,21 @@ ShallowWrapper {
                 handleSort={[Function]}
                 keys={
                         Array [
-                                "id",
-                                "type",
-                                "price",
+                                Object {
+                                  "id": "id",
+                                  "isSortable": true,
+                                  "value": "id",
+                                },
+                                Object {
+                                  "id": "type",
+                                  "isSortable": true,
+                                  "value": "type",
+                                },
+                                Object {
+                                  "id": "price",
+                                  "isSortable": false,
+                                  "value": "price",
+                                },
                               ]
                 }
                 listItems={
@@ -124,9 +149,21 @@ ShallowWrapper {
             handleSort={[Function]}
             keys={
                         Array [
-                                    "id",
-                                    "type",
-                                    "price",
+                                    Object {
+                                      "id": "id",
+                                      "isSortable": true,
+                                      "value": "id",
+                                    },
+                                    Object {
+                                      "id": "type",
+                                      "isSortable": true,
+                                      "value": "type",
+                                    },
+                                    Object {
+                                      "id": "price",
+                                      "isSortable": false,
+                                      "value": "price",
+                                    },
                                   ]
             }
             listItems={
@@ -160,10 +197,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "DataTypes",
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
           },
           "ref": null,
-          "rendered": "DataTypes",
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
           "type": "h2",
         },
         Object {
@@ -204,9 +247,21 @@ ShallowWrapper {
             "handleRowClick": [Function],
             "handleSort": [Function],
             "keys": Array [
-              "id",
-              "type",
-              "price",
+              Object {
+                "id": "id",
+                "isSortable": true,
+                "value": "id",
+              },
+              Object {
+                "id": "type",
+                "isSortable": true,
+                "value": "type",
+              },
+              Object {
+                "id": "price",
+                "isSortable": false,
+                "value": "price",
+              },
             ],
             "listItems": Array [
               Object {
@@ -264,9 +319,21 @@ ShallowWrapper {
                     handleSort={[Function]}
                     keys={
                               Array [
-                                        "id",
-                                        "type",
-                                        "price",
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "price",
+                                          "isSortable": false,
+                                          "value": "price",
+                                        },
                                       ]
                     }
                     listItems={
@@ -319,9 +386,21 @@ ShallowWrapper {
               handleSort={[Function]}
               keys={
                             Array [
-                                          "id",
-                                          "type",
-                                          "price",
+                                          Object {
+                                            "id": "id",
+                                            "isSortable": true,
+                                            "value": "id",
+                                          },
+                                          Object {
+                                            "id": "type",
+                                            "isSortable": true,
+                                            "value": "type",
+                                          },
+                                          Object {
+                                            "id": "price",
+                                            "isSortable": false,
+                                            "value": "price",
+                                          },
                                         ]
               }
               listItems={
@@ -355,10 +434,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "DataTypes",
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
             },
             "ref": null,
-            "rendered": "DataTypes",
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
             "type": "h2",
           },
           Object {
@@ -399,9 +484,21 @@ ShallowWrapper {
               "handleRowClick": [Function],
               "handleSort": [Function],
               "keys": Array [
-                "id",
-                "type",
-                "price",
+                Object {
+                  "id": "id",
+                  "isSortable": true,
+                  "value": "id",
+                },
+                Object {
+                  "id": "type",
+                  "isSortable": true,
+                  "value": "type",
+                },
+                Object {
+                  "id": "price",
+                  "isSortable": false,
+                  "value": "price",
+                },
               ],
               "listItems": Array [
                 Object {
@@ -450,9 +547,21 @@ ShallowWrapper {
     history={Object {}}
     keys={
         Array [
-            "id",
-            "type",
-            "date",
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "date",
+              "isSortable": false,
+              "value": "date",
+            },
           ]
     }
     listItems={
@@ -475,6 +584,7 @@ ShallowWrapper {
           ]
     }
     removeItem={[Function]}
+    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -511,9 +621,21 @@ ShallowWrapper {
                 handleSort={[Function]}
                 keys={
                         Array [
-                                "id",
-                                "type",
-                                "date",
+                                Object {
+                                  "id": "id",
+                                  "isSortable": true,
+                                  "value": "id",
+                                },
+                                Object {
+                                  "id": "type",
+                                  "isSortable": true,
+                                  "value": "type",
+                                },
+                                Object {
+                                  "id": "date",
+                                  "isSortable": false,
+                                  "value": "date",
+                                },
                               ]
                 }
                 listItems={
@@ -566,9 +688,21 @@ ShallowWrapper {
             handleSort={[Function]}
             keys={
                         Array [
-                                    "id",
-                                    "type",
-                                    "date",
+                                    Object {
+                                      "id": "id",
+                                      "isSortable": true,
+                                      "value": "id",
+                                    },
+                                    Object {
+                                      "id": "type",
+                                      "isSortable": true,
+                                      "value": "type",
+                                    },
+                                    Object {
+                                      "id": "date",
+                                      "isSortable": false,
+                                      "value": "date",
+                                    },
                                   ]
             }
             listItems={
@@ -602,10 +736,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "DataTypes",
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
           },
           "ref": null,
-          "rendered": "DataTypes",
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
           "type": "h2",
         },
         Object {
@@ -646,9 +786,21 @@ ShallowWrapper {
             "handleRowClick": [Function],
             "handleSort": [Function],
             "keys": Array [
-              "id",
-              "type",
-              "date",
+              Object {
+                "id": "id",
+                "isSortable": true,
+                "value": "id",
+              },
+              Object {
+                "id": "type",
+                "isSortable": true,
+                "value": "type",
+              },
+              Object {
+                "id": "date",
+                "isSortable": false,
+                "value": "date",
+              },
             ],
             "listItems": Array [
               Object {
@@ -706,9 +858,21 @@ ShallowWrapper {
                     handleSort={[Function]}
                     keys={
                               Array [
-                                        "id",
-                                        "type",
-                                        "date",
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "date",
+                                          "isSortable": false,
+                                          "value": "date",
+                                        },
                                       ]
                     }
                     listItems={
@@ -761,9 +925,21 @@ ShallowWrapper {
               handleSort={[Function]}
               keys={
                             Array [
-                                          "id",
-                                          "type",
-                                          "date",
+                                          Object {
+                                            "id": "id",
+                                            "isSortable": true,
+                                            "value": "id",
+                                          },
+                                          Object {
+                                            "id": "type",
+                                            "isSortable": true,
+                                            "value": "type",
+                                          },
+                                          Object {
+                                            "id": "date",
+                                            "isSortable": false,
+                                            "value": "date",
+                                          },
                                         ]
               }
               listItems={
@@ -797,10 +973,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "DataTypes",
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
             },
             "ref": null,
-            "rendered": "DataTypes",
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
             "type": "h2",
           },
           Object {
@@ -841,9 +1023,21 @@ ShallowWrapper {
               "handleRowClick": [Function],
               "handleSort": [Function],
               "keys": Array [
-                "id",
-                "type",
-                "date",
+                Object {
+                  "id": "id",
+                  "isSortable": true,
+                  "value": "id",
+                },
+                Object {
+                  "id": "type",
+                  "isSortable": true,
+                  "value": "type",
+                },
+                Object {
+                  "id": "date",
+                  "isSortable": false,
+                  "value": "date",
+                },
               ],
               "listItems": Array [
                 Object {
@@ -892,13 +1086,26 @@ ShallowWrapper {
     history={Object {}}
     keys={
         Array [
-            "id",
-            "type",
-            "price",
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "price",
+              "isSortable": false,
+              "value": "price",
+            },
           ]
     }
     listItems={Array []}
     removeItem={[Function]}
+    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -980,10 +1187,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "DataTypes",
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
           },
           "ref": null,
-          "rendered": "DataTypes",
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
           "type": "h2",
         },
         Object {
@@ -1120,10 +1333,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "DataTypes",
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
             },
             "ref": null,
-            "rendered": "DataTypes",
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
             "type": "h2",
           },
           Object {

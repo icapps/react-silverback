@@ -3,6 +3,13 @@
 .overview{
   h2 {
     margin: 1rem 0 1rem 0;
+
+    .sort-label {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-left: 0.5rem;
+      color: $dark-grey;
+    }
   }
 
   .overview-settings{

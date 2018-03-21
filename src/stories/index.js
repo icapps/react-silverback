@@ -89,7 +89,12 @@ storiesOf('Modal', module)
 storiesOf('Table', module)
   .add('default', () => (
     <Table
-      keys={['key', 'key1', 'key2', 'key3']}
+      keys={[
+        { id: 'key', value: 'key', isSortable: true },
+        { id: 'key1', value: 'key1', isSortable: false },
+        { id: 'key2', value: 'key2', isSortable: true },
+        { id: 'key3', value: 'key3', isSortable: false },
+      ]}
       listItems={[
         { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
         { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
@@ -104,7 +109,12 @@ storiesOf('Table', module)
   ))
   .add('custom date format', () => (
     <Table
-      keys={['key', 'key1', 'key2', 'key3']}
+      keys={[
+        { id: 'key', value: 'key', isSortable: true },
+        { id: 'key1', value: 'key1', isSortable: false },
+        { id: 'key2', value: 'key2', isSortable: true },
+        { id: 'key3', value: 'key3', isSortable: false },
+      ]}
       listItems={
         [
           { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
@@ -121,7 +131,12 @@ storiesOf('Table', module)
   ))
   .add('maximum text length', () => (
     <Table
-      keys={['key', 'key1', 'key2', 'key3']}
+      keys={[
+        { id: 'key', value: 'key', isSortable: true },
+        { id: 'key1', value: 'key1', isSortable: false },
+        { id: 'key2', value: 'key2', isSortable: true },
+        { id: 'key3', value: 'key3', isSortable: false },
+      ]}
       listItems={
         [
           { id: 'id1', key: "test 1", key1: 1, key2: false, key3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet nisl ac nibh aliquet, id placerat massa bibendum. Ut erat mauris, pulvinar vestibulum augue sollicitudin, rutrum eleifend leo. Proin malesuada nisl nec ornare fringilla. Nam vel rutrum mi. Etiam porta tempus blandit. Nunc et odio rhoncus, eleifend nisi ac, tempus urna. Pellentesque justo tellus, cursus id mi molestie, condimentum mattis ante. Sed suscipit nibh libero, at tincidunt enim pulvinar nec. Fusce sit amet leo vitae quam rutrum mattis eu a leo. Sed et nisl sit amet ipsum eleifend dignissim a sit amet metus. Nullam porta eros eget dolor ornare, vitae porttitor diam vehicula. Cras vel augue vestibulum, pellentesque nulla sed, blandit dui. Vivamus eu urna a tortor tempor elementum sed eu nibh. In id pellentesque eros.' },
@@ -143,23 +158,37 @@ storiesOf('Pagination', module)
 storiesOf('Overview', module)
   .add('default', () => (
     <Overview
-    title="DataTypes"
-    keys={['id', 'key', 'key1', 'key2', 'key3']}
-    listItems={[
-      { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-      { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-      { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-      { id: 'id4', key: "test 4", key2: false },
-      { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
-    ]}
-    history={{}}
-  />
+      title="DataTypes"
+      keys={[
+        { id: 'key', value: 'key', isSortable: true },
+        { id: 'key1', value: 'key1', isSortable: false },
+        { id: 'key2', value: 'key2', isSortable: true },
+        { id: 'key3', value: 'key3', isSortable: false },
+      ]}
+      listItems={[
+        { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
+        { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
+        { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
+        { id: 'id4', key: "test 4", key2: false },
+        { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
+      ]}
+      removeItem={() => { }}
+      sortItems={() => { }}
+      history={{}}
+    />
   ))
   .add('empty state', () => (
     <Overview
-    title="DataTypes"
-    keys={['id', 'type', 'price', 'edible', 'bestBefore', 'weight', 'description']}
-    listItems={[]}
-    history={{}}
-  />
+      title="DataTypes"
+      keys={[
+        { id: 'key', value: 'key', isSortable: true },
+        { id: 'key1', value: 'key1', isSortable: false },
+        { id: 'key2', value: 'key2', isSortable: true },
+        { id: 'key3', value: 'key3', isSortable: false },
+      ]}
+      listItems={[]}
+      removeItem={() => { }}
+      sortItems={() => { }}
+      history={{}}
+    />
   ));

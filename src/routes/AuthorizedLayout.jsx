@@ -20,7 +20,7 @@ const AuthorizedLayout = props => {
             <Route path='/users' exact component={UserOverview} />
             <Route path='/datatype' exact component={DatatypeOverview} />
             <Route path='/datatype/:id' exact component={DataTypeDetail} />
-            <Redirect to='/users' />
+            <Redirect to='/datatype' />
           </Switch>
         </div>
       </div>

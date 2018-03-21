@@ -1,12 +1,44 @@
 @import '../../utils/_colors.scss';
 
-@mixin triangle(){
+@mixin arrow(){
   position: absolute;
   content: "";
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+}
+
+@mixin sortArrows($asc, $desc){
+  &:before{
+    @include arrow();
+    top: 0;
+    border-bottom: 5px solid $asc;
+  }
+  &:after{
+    @include arrow();
+    top: 8px;
+    border-top: 5px solid $desc;
+  }
+}
+
+@mixin sort($startColor){
+  .sort {
+    padding-left: 8px;
+    vertical-align: middle;
+    position: relative;
+
+    @include sortArrows($startColor, $startColor);
+
+    &.sort-asc{
+      @include sortArrows($black, $dark-grey);
+
+    }
+
+    &.sort-desc{
+      @include sortArrows($dark-grey, $black);
+    }
+  }
 }
 
 /* */
@@ -28,41 +60,28 @@
 td {
   cursor: pointer;
 }
+
 .key {
+  color: $dark-grey;
+}
+
+.sortable-key {
   cursor: pointer;
 
-  .sort {
-    padding-left: 8px;
-    vertical-align: middle;
-    position: relative;
+  @include sort(transparent);
 
-    &:before{
-      @include triangle();
-      top: 0;
-      border-bottom: 5px solid $table;
-    }
-    &:after{
-      @include triangle();
-      top: 8px;
-      border-top: 5px solid $table;
-    }
-
-    &.sort-asc{
-      &:before{
-        border-bottom-color: $black;
-      }
-    }
-
-    &.sort-desc{
-      &:after{
-        border-top-color: $black;
-      }
-    }
+  &:hover{
+    color: $black;
+    @include sort($dark-grey);
   }
 }
 
 .table thead tr th {
   border-top: none;
+}
+
+.active-key {
+  color: $black;
 }
 
 

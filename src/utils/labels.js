@@ -11,6 +11,9 @@ const labels = {
   WEIGHT: 'weight',
   DESCRIPTION: 'description',
   USERS: 'Users',
+  SORTED_BY: 'sorted by',
+  ASCENDING: 'ascending',
+  DESCENDING: 'descending',
 };
 
 export default labels;
