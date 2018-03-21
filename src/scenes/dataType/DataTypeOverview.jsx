@@ -10,7 +10,7 @@ class DataTypeOverview extends Component {
   }
 
   sortItems = (sortField, sortOrder) => {
-    this.props.getDataType(sortField, sortOrder ? 'desc' : 'asc');
+    this.props.getDataType(sortField, sortOrder);
   }
   render() {
     return (

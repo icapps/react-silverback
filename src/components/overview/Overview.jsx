@@ -18,7 +18,7 @@ class Overview extends React.Component {
 
   sortItems = (sortField, sortOrder) => {
     this.setState({ sortField, sortOrder });
-    this.props.sortItems(sortField, sortOrder);
+    this.props.sortItems(sortField, sortOrder ? labels.DESC : labels.ASC);
   }
 
   render() {

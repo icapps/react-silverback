@@ -14,6 +14,8 @@ const labels = {
   SORTED_BY: 'sorted by',
   ASCENDING: 'ascending',
   DESCENDING: 'descending',
+  ASC: 'asc',
+  DESC: 'desc',
 };
 
 export default labels;
