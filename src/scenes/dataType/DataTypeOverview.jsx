@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getDataType } from '../../redux/datatype/actions';
-import { labels } from '../../utils';
+import { strings } from '../../utils';
 
 class DataTypeOverview extends Component {
   componentDidMount() {
@@ -15,15 +15,15 @@ class DataTypeOverview extends Component {
   render() {
     return (
       <Overview
-        title={labels.DATATYPES}
+        title={strings.DATATYPES}
         keys={[
-          { id: labels.ID, value: labels.ID, isSortable: true },
-          { id: labels.TYPE, value: labels.TYPE, isSortable: true },
-          { id: labels.PRICE, value: labels.PRICE, isSortable: true },
-          { id: labels.EDIBLE, value: labels.EDIBLE, isSortable: false },
-          { id: labels.BEST_BEFORE, value: labels.BEST_BEFORE, isSortable: false },
-          { id: labels.WEIGHT, value: labels.WEIGHT, isSortable: true },
-          { id: labels.DESCRIPTION, value: labels.DESCRIPTION, isSortable: false },
+          { id: strings.ID, value: strings.ID, isSortable: true },
+          { id: strings.TYPE, value: strings.TYPE, isSortable: true },
+          { id: strings.PRICE, value: strings.PRICE, isSortable: true },
+          { id: strings.EDIBLE, value: strings.EDIBLE, isSortable: false },
+          { id: strings.BEST_BEFORE, value: strings.BEST_BEFORE, isSortable: false },
+          { id: strings.WEIGHT, value: strings.WEIGHT, isSortable: true },
+          { id: strings.DESCRIPTION, value: strings.DESCRIPTION, isSortable: false },
         ]}
         listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
         removeItem={() => { }}

@@ -1,4 +1,4 @@
 import Network from './Network';
-import labels from './labels';
+import strings from './localization';
 
-export { Network, labels };
+export { Network, strings };
