@@ -12,7 +12,7 @@ class Network {
     const headers = {};
 
     // ONLY USE THIS IF YOU WORK IN A BROWSER
-    const token = window.localStorage.getItem('ACCESS_TOKEN');
+    const token = localStorage.getItem('ACCESS_TOKEN');
     if (token) {
       headers.authorization = `Bearer ${token}`;
     }

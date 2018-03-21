@@ -11,10 +11,26 @@ ShallowWrapper {
     handleSort={[Function]}
     keys={
         Array [
-            "key",
-            "key1",
-            "key2",
-            "key3",
+            Object {
+              "id": "key",
+              "isSortable": true,
+              "value": "key",
+            },
+            Object {
+              "id": "key1",
+              "isSortable": false,
+              "value": "key1",
+            },
+            Object {
+              "id": "key2",
+              "isSortable": true,
+              "value": "key2",
+            },
+            Object {
+              "id": "key3",
+              "isSortable": false,
+              "value": "key3",
+            },
           ]
     }
     listItems={
@@ -78,7 +94,7 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key
@@ -91,20 +107,17 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key1
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                         <th
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key2
@@ -117,13 +130,10 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key3
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                 </tr>
@@ -313,7 +323,7 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key
@@ -326,20 +336,17 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key1
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
                         <th
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key2
@@ -352,13 +359,10 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key3
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
             </tr>
@@ -547,7 +551,7 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key
@@ -560,20 +564,17 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key1
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
               <th
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key2
@@ -586,13 +587,10 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key3
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
 </tr>,
@@ -610,7 +608,7 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key
@@ -623,20 +621,17 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key1
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                   <th
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key2
@@ -649,13 +644,10 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key3
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                 ],
@@ -678,7 +670,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key
@@ -700,7 +692,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -728,13 +720,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key1
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -746,27 +735,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key1",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key1",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -778,7 +755,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key2
@@ -800,7 +777,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -828,13 +805,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key3
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -846,27 +820,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key3",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key3",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -1758,7 +1720,7 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key
@@ -1771,20 +1733,17 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key1
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                               <th
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key2
@@ -1797,13 +1756,10 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key3
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                     </tr>
@@ -1993,7 +1949,7 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key
@@ -2006,20 +1962,17 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key1
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
                             <th
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key2
@@ -2032,13 +1985,10 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key3
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
               </tr>
@@ -2227,7 +2177,7 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key
@@ -2240,20 +2190,17 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key1
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
                 <th
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key2
@@ -2266,13 +2213,10 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key3
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
 </tr>,
@@ -2290,7 +2234,7 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key
@@ -2303,20 +2247,17 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key1
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                     <th
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key2
@@ -2329,13 +2270,10 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key3
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                   ],
@@ -2358,7 +2296,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key
@@ -2380,7 +2318,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -2408,13 +2346,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key1
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -2426,27 +2361,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key1",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key1",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },
@@ -2458,7 +2381,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key2
@@ -2480,7 +2403,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -2508,13 +2431,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key3
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -2526,27 +2446,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key3",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key3",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },
@@ -3444,10 +3352,26 @@ ShallowWrapper {
     handleSort={[Function]}
     keys={
         Array [
-            "key",
-            "key1",
-            "key2",
-            "key3",
+            Object {
+              "id": "key",
+              "isSortable": true,
+              "value": "key",
+            },
+            Object {
+              "id": "key1",
+              "isSortable": false,
+              "value": "key1",
+            },
+            Object {
+              "id": "key2",
+              "isSortable": true,
+              "value": "key2",
+            },
+            Object {
+              "id": "key3",
+              "isSortable": false,
+              "value": "key3",
+            },
           ]
     }
     listItems={
@@ -3511,7 +3435,7 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key
@@ -3524,20 +3448,17 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key1
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                         <th
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key2
@@ -3550,13 +3471,10 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key3
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                 </tr>
@@ -3746,7 +3664,7 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key
@@ -3759,20 +3677,17 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key1
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
                         <th
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key2
@@ -3785,13 +3700,10 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key3
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
             </tr>
@@ -3980,7 +3892,7 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key
@@ -3993,20 +3905,17 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key1
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
               <th
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key2
@@ -4019,13 +3928,10 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key3
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
 </tr>,
@@ -4043,7 +3949,7 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key
@@ -4056,20 +3962,17 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key1
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                   <th
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key2
@@ -4082,13 +3985,10 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key3
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                 ],
@@ -4111,7 +4011,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key
@@ -4133,7 +4033,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -4161,13 +4061,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key1
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -4179,27 +4076,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key1",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key1",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -4211,7 +4096,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key2
@@ -4233,7 +4118,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -4261,13 +4146,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key3
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -4279,27 +4161,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key3",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key3",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -5191,7 +5061,7 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key
@@ -5204,20 +5074,17 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key1
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                               <th
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key2
@@ -5230,13 +5097,10 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key3
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                     </tr>
@@ -5426,7 +5290,7 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key
@@ -5439,20 +5303,17 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key1
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
                             <th
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key2
@@ -5465,13 +5326,10 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key3
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
               </tr>
@@ -5660,7 +5518,7 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key
@@ -5673,20 +5531,17 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key1
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
                 <th
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key2
@@ -5699,13 +5554,10 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key3
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
 </tr>,
@@ -5723,7 +5575,7 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key
@@ -5736,20 +5588,17 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key1
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                     <th
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key2
@@ -5762,13 +5611,10 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key3
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                   ],
@@ -5791,7 +5637,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key
@@ -5813,7 +5659,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -5841,13 +5687,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key1
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -5859,27 +5702,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key1",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key1",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },
@@ -5891,7 +5722,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key2
@@ -5913,7 +5744,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -5941,13 +5772,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key3
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -5959,27 +5787,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key3",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key3",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },
@@ -6877,10 +6693,26 @@ ShallowWrapper {
     handleSort={[Function]}
     keys={
         Array [
-            "key",
-            "key1",
-            "key2",
-            "key3",
+            Object {
+              "id": "key",
+              "isSortable": true,
+              "value": "key",
+            },
+            Object {
+              "id": "key1",
+              "isSortable": false,
+              "value": "key1",
+            },
+            Object {
+              "id": "key2",
+              "isSortable": true,
+              "value": "key2",
+            },
+            Object {
+              "id": "key3",
+              "isSortable": false,
+              "value": "key3",
+            },
           ]
     }
     listItems={
@@ -6924,7 +6756,7 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key
@@ -6937,20 +6769,17 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key1
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                         <th
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                                 >
                                         key2
@@ -6963,13 +6792,10 @@ ShallowWrapper {
                                 scope="col"
                         >
                                 <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                                 >
                                         key3
-                                        <span
-                                                className="sort "
-                                        />
                                 </span>
                         </th>
                 </tr>
@@ -7059,7 +6885,7 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key
@@ -7072,20 +6898,17 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key1
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
                         <th
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                     >
                                                 key2
@@ -7098,13 +6921,10 @@ ShallowWrapper {
                                     scope="col"
                         >
                                     <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                     >
                                                 key3
-                                                <span
-                                                            className="sort "
-                                                />
                                     </span>
                         </th>
             </tr>
@@ -7193,7 +7013,7 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key
@@ -7206,20 +7026,17 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key1
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
               <th
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key sortable-key "
                                           onClick={[Function]}
                             >
                                           key2
@@ -7232,13 +7049,10 @@ ShallowWrapper {
                             scope="col"
               >
                             <span
-                                          className="key"
+                                          className="key  "
                                           onClick={[Function]}
                             >
                                           key3
-                                          <span
-                                                        className="sort "
-                                          />
                             </span>
               </th>
 </tr>,
@@ -7256,7 +7070,7 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key
@@ -7269,20 +7083,17 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key1
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                   <th
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key sortable-key "
                                         onClick={[Function]}
                     >
                                         key2
@@ -7295,13 +7106,10 @@ ShallowWrapper {
                     scope="col"
 >
                     <span
-                                        className="key"
+                                        className="key  "
                                         onClick={[Function]}
                     >
                                         key3
-                                        <span
-                                                            className="sort "
-                                        />
                     </span>
 </th>,
                 ],
@@ -7324,7 +7132,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key
@@ -7346,7 +7154,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -7374,13 +7182,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key1
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -7392,27 +7197,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key1",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key1",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -7424,7 +7217,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key sortable-key "
                     onClick={[Function]}
 >
                     key2
@@ -7446,7 +7239,7 @@ ShallowWrapper {
                         className="sort "
 />,
                     ],
-                    "className": "key",
+                    "className": "key sortable-key ",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -7474,13 +7267,10 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <span
-                    className="key"
+                    className="key  "
                     onClick={[Function]}
 >
                     key3
-                    <span
-                                        className="sort "
-                    />
 </span>,
                   "scope": "col",
                 },
@@ -7492,27 +7282,15 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "key3",
-                      <span
-                        className="sort "
-/>,
+                      false,
                     ],
-                    "className": "key",
+                    "className": "key  ",
                     "onClick": [Function],
                   },
                   "ref": null,
                   "rendered": Array [
                     "key3",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "sort ",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "span",
-                    },
+                    false,
                   ],
                   "type": "span",
                 },
@@ -7895,7 +7673,7 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key
@@ -7908,20 +7686,17 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key1
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                               <th
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key sortable-key "
                                                   onClick={[Function]}
                                         >
                                                   key2
@@ -7934,13 +7709,10 @@ ShallowWrapper {
                                         scope="col"
                               >
                                         <span
-                                                  className="key"
+                                                  className="key  "
                                                   onClick={[Function]}
                                         >
                                                   key3
-                                                  <span
-                                                            className="sort "
-                                                  />
                                         </span>
                               </th>
                     </tr>
@@ -8030,7 +7802,7 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key
@@ -8043,20 +7815,17 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key1
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
                             <th
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key sortable-key "
                                                         onClick={[Function]}
                                           >
                                                         key2
@@ -8069,13 +7838,10 @@ ShallowWrapper {
                                           scope="col"
                             >
                                           <span
-                                                        className="key"
+                                                        className="key  "
                                                         onClick={[Function]}
                                           >
                                                         key3
-                                                        <span
-                                                                      className="sort "
-                                                        />
                                           </span>
                             </th>
               </tr>
@@ -8164,7 +7930,7 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key
@@ -8177,20 +7943,17 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key1
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
                 <th
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key sortable-key "
                                                 onClick={[Function]}
                                 >
                                                 key2
@@ -8203,13 +7966,10 @@ ShallowWrapper {
                                 scope="col"
                 >
                                 <span
-                                                className="key"
+                                                className="key  "
                                                 onClick={[Function]}
                                 >
                                                 key3
-                                                <span
-                                                                className="sort "
-                                                />
                                 </span>
                 </th>
 </tr>,
@@ -8227,7 +7987,7 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key
@@ -8240,20 +8000,17 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key1
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                     <th
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key sortable-key "
                                             onClick={[Function]}
                       >
                                             key2
@@ -8266,13 +8023,10 @@ ShallowWrapper {
                       scope="col"
 >
                       <span
-                                            className="key"
+                                            className="key  "
                                             onClick={[Function]}
                       >
                                             key3
-                                            <span
-                                                                  className="sort "
-                                            />
                       </span>
 </th>,
                   ],
@@ -8295,7 +8049,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key
@@ -8317,7 +8071,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -8345,13 +8099,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key1
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -8363,27 +8114,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key1",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key1",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },
@@ -8395,7 +8134,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key sortable-key "
                       onClick={[Function]}
 >
                       key2
@@ -8417,7 +8156,7 @@ ShallowWrapper {
                           className="sort "
 />,
                       ],
-                      "className": "key",
+                      "className": "key sortable-key ",
                       "onClick": [Function],
                     },
                     "ref": null,
@@ -8445,13 +8184,10 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <span
-                      className="key"
+                      className="key  "
                       onClick={[Function]}
 >
                       key3
-                      <span
-                                            className="sort "
-                      />
 </span>,
                     "scope": "col",
                   },
@@ -8463,27 +8199,15 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "key3",
-                        <span
-                          className="sort "
-/>,
+                        false,
                       ],
-                      "className": "key",
+                      "className": "key  ",
                       "onClick": [Function],
                     },
                     "ref": null,
                     "rendered": Array [
                       "key3",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "className": "sort ",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "span",
-                      },
+                      false,
                     ],
                     "type": "span",
                   },

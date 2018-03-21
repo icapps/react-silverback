@@ -17,14 +17,15 @@ class Table extends React.Component {
     };
   }
 
-  sortItem = sortedItem => {
+  sortItem = (sortedItem, isSortable) => {
     const isDescending = this.state.sortedItem === sortedItem ? !this.state.isDescending : true;
-
-    this.setState({
-      sortedItem,
-      isDescending,
-    });
-    this.props.handleSort(sortedItem, isDescending);
+    if (isSortable) {
+      this.setState({
+        sortedItem,
+        isDescending,
+      });
+      this.props.handleSort(sortedItem, isDescending);
+    }
   }
 
   renderData = data => {
@@ -44,9 +45,10 @@ class Table extends React.Component {
             <tr>
               <th></th>
               {props.keys.map(key => (
-                <th scope="col" key={key}>
-                  <span className="key" onClick={() => this.sortItem(key)}>{key}
-                    <span className={`sort ${this.state.sortedItem === key ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />
+                <th scope="col" key={key.id}>
+                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${this.state.sortedItem === key.id ? 'active-key' : ''}`} onClick={() => this.sortItem(key.id, key.isSortable)}>
+                    {key.value}
+                    {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
                   </span>
                 </th>))}
             </tr>
@@ -55,7 +57,7 @@ class Table extends React.Component {
             {props.listItems.map((listItem, index) => (
               <tr key={listItem.id}>
                 <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
-                {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key])}</td>)}
+                {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
               </tr>
             ))}
           </tbody>
@@ -66,7 +68,11 @@ class Table extends React.Component {
 }
 
 Table.propTypes = {
-  keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  keys: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    value: PropTypes.string,
+    isSortable: PropTypes.bool,
+  })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
   dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,

@@ -1,6 +1,8 @@
-const datatypes = require('../mock/datatype.json');
+import { Network } from '../utils';
 
-export const get = async () => {
-  const data = await datatypes.data;
-  return data;
+export const get = async (sortField, sortOrder) => {
+  const sort = (sortField && sortField !== '') ? `?sortField=${sortField}&sortOrder=${sortOrder}` : '';
+  const result = await Network.get(`/datatype${sort}`);
+  return result.data;
 };
+
