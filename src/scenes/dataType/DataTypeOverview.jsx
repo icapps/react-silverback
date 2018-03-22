@@ -29,6 +29,7 @@ class DataTypeOverview extends Component {
         removeItem={() => { }}
         sortItems={this.sortItems}
         history={this.props.history}
+        paginationConfig={{ pageLimit: this.props.pageLimit, totalCount: this.props.dataTypesCount }}
       />
     );
   }
@@ -36,6 +37,7 @@ class DataTypeOverview extends Component {
 
 const mapStateToProps = state => ({
   datatypes: state.dataType.dataTypes,
+  dataTypesCount: state.dataType.dataTypesCount,
 });
 
 const mapDispatchToProps = {

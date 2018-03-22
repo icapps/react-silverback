@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table, Button } from '../index';
+import { Pagination, Table, Button } from '../index';
 import { labels } from '../../utils';
 import './overview.css';
 
@@ -33,6 +33,7 @@ class Overview extends React.Component {
           <div className="overview-settings">
             <Button text={`${labels.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" />
           </div>
+          <Pagination totalCount={props.paginationConfig.totalCount} handleClick={() => { }} />
           {props.listItems.length > 0 ? (
             <Table
               keys={props.keys}
@@ -62,6 +63,9 @@ Overview.propTypes = {
   removeItem: PropTypes.func.isRequired,
   sortItems: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  paginationConfig: PropTypes.shape({
+    totalCount: PropTypes.number,
+  }).isRequired,
 };
 
 export default Overview;

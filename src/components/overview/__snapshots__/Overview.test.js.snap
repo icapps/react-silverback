@@ -44,6 +44,12 @@ ShallowWrapper {
             },
           ]
     }
+    paginationConfig={
+        Object {
+            "pageLimit": 10,
+            "totalCount": 100,
+          }
+    }
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -75,6 +81,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
                 />
         </div>
+        <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+        />
         <Table
                 dateFormat="DD/MM/YYYY"
                 handleRemoveItem={[Function]}
@@ -142,6 +152,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
             />
 </div>,
+          <Pagination
+            handleClick={[Function]}
+            totalCount={100}
+/>,
           <Table
             dateFormat="DD/MM/YYYY"
             handleRemoveItem={[Function]}
@@ -242,6 +256,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "handleClick": [Function],
+            "totalCount": 100,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "dateFormat": "DD/MM/YYYY",
             "handleRemoveItem": [Function],
             "handleRowClick": [Function],
@@ -312,6 +338,10 @@ ShallowWrapper {
                               text="+ Create DataTypes"
                     />
           </div>
+          <Pagination
+                    handleClick={[Function]}
+                    totalCount={100}
+          />
           <Table
                     dateFormat="DD/MM/YYYY"
                     handleRemoveItem={[Function]}
@@ -379,6 +409,10 @@ ShallowWrapper {
                             text="+ Create DataTypes"
               />
 </div>,
+            <Pagination
+              handleClick={[Function]}
+              totalCount={100}
+/>,
             <Table
               dateFormat="DD/MM/YYYY"
               handleRemoveItem={[Function]}
@@ -473,6 +507,18 @@ ShallowWrapper {
               "type": [Function],
             },
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "handleClick": [Function],
+              "totalCount": 100,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,
@@ -583,6 +629,12 @@ ShallowWrapper {
             },
           ]
     }
+    paginationConfig={
+        Object {
+            "pageLimit": 10,
+            "totalCount": 100,
+          }
+    }
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -614,6 +666,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
                 />
         </div>
+        <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+        />
         <Table
                 dateFormat="DD/MM/YYYY"
                 handleRemoveItem={[Function]}
@@ -681,6 +737,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
             />
 </div>,
+          <Pagination
+            handleClick={[Function]}
+            totalCount={100}
+/>,
           <Table
             dateFormat="DD/MM/YYYY"
             handleRemoveItem={[Function]}
@@ -781,6 +841,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "handleClick": [Function],
+            "totalCount": 100,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "dateFormat": "DD/MM/YYYY",
             "handleRemoveItem": [Function],
             "handleRowClick": [Function],
@@ -851,6 +923,10 @@ ShallowWrapper {
                               text="+ Create DataTypes"
                     />
           </div>
+          <Pagination
+                    handleClick={[Function]}
+                    totalCount={100}
+          />
           <Table
                     dateFormat="DD/MM/YYYY"
                     handleRemoveItem={[Function]}
@@ -918,6 +994,10 @@ ShallowWrapper {
                             text="+ Create DataTypes"
               />
 </div>,
+            <Pagination
+              handleClick={[Function]}
+              totalCount={100}
+/>,
             <Table
               dateFormat="DD/MM/YYYY"
               handleRemoveItem={[Function]}
@@ -1018,6 +1098,18 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "handleClick": [Function],
+              "totalCount": 100,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
               "dateFormat": "DD/MM/YYYY",
               "handleRemoveItem": [Function],
               "handleRowClick": [Function],
@@ -1104,6 +1196,12 @@ ShallowWrapper {
           ]
     }
     listItems={Array []}
+    paginationConfig={
+        Object {
+            "pageLimit": 10,
+            "totalCount": 100,
+          }
+    }
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -1135,6 +1233,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
                 />
         </div>
+        <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+        />
         <div
                 className="jumbotron"
                 role="alert"
@@ -1167,6 +1269,10 @@ ShallowWrapper {
                         text="+ Create DataTypes"
             />
 </div>,
+          <Pagination
+            handleClick={[Function]}
+            totalCount={100}
+/>,
           <div
             className="jumbotron"
             role="alert"
@@ -1230,6 +1336,18 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "handleClick": [Function],
+            "totalCount": 100,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "host",
           "props": Object {
             "children": <span
@@ -1281,6 +1399,10 @@ ShallowWrapper {
                               text="+ Create DataTypes"
                     />
           </div>
+          <Pagination
+                    handleClick={[Function]}
+                    totalCount={100}
+          />
           <div
                     className="jumbotron"
                     role="alert"
@@ -1313,6 +1435,10 @@ ShallowWrapper {
                             text="+ Create DataTypes"
               />
 </div>,
+            <Pagination
+              handleClick={[Function]}
+              totalCount={100}
+/>,
             <div
               className="jumbotron"
               role="alert"
@@ -1372,6 +1498,18 @@ ShallowWrapper {
               "type": [Function],
             },
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "handleClick": [Function],
+              "totalCount": 100,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
           Object {
             "instance": null,

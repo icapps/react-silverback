@@ -152,7 +152,7 @@ storiesOf('Table', module)
 
 storiesOf('Pagination', module)
   .add('default', () => (
-    <Pagination pageCount={5} handleClick={action('handle Pagination')} />
+    <Pagination totalCount={97} handleClick={action('handle Pagination')} />
   ));
 
 storiesOf('Overview', module)

@@ -1,0 +1,27 @@
+.pagination-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .pagination-group{
+    display: flex;
+    align-items: center;
+  }
+
+  .pagination-label {
+    margin-right: 1rem;
+  }
+
+  .pagination{
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    margin-left: 2rem;
+  }
+
+  .page-limit-label {
+    margin-left: 0.5rem;
+  }
+}
