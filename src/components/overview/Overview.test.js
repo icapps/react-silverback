@@ -16,6 +16,7 @@ describe('Overview Component', () => {
       sortItems={() => { }}
       history={{}}
       paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -28,6 +29,7 @@ describe('Overview Component', () => {
       sortItems={() => { }}
       history={{}}
       paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -40,6 +42,7 @@ describe('Overview Component', () => {
       sortItems={() => { }}
       history={{}}
       paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });

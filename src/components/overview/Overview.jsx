@@ -33,7 +33,7 @@ class Overview extends React.Component {
           <div className="overview-settings">
             <Button text={`${labels.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" />
           </div>
-          <Pagination totalCount={props.paginationConfig.totalCount} handleClick={() => { }} />
+          <Pagination totalCount={props.paginationConfig.totalCount} handleClick={this.props.handlePagination} />
           {props.listItems.length > 0 ? (
             <Table
               keys={props.keys}
@@ -66,6 +66,7 @@ Overview.propTypes = {
   paginationConfig: PropTypes.shape({
     totalCount: PropTypes.number,
   }).isRequired,
+  handlePagination: PropTypes.func.isRequired,
 };
 
 export default Overview;

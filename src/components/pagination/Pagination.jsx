@@ -20,7 +20,9 @@ class Pagination extends React.Component {
   }
 
   handlePageLimitChange = event => {
-    this.setState({ pageLimit: event.target.value, activePage: 0 });
+    const pageLimit = parseInt(event.target.value, 10);
+    this.setState({ pageLimit, activePage: 0 });
+    this.props.handleClick(this.state.activePage, pageLimit);
   }
 
   renderPages = nrOfPages => {
