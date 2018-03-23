@@ -72,7 +72,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <Table
@@ -139,7 +140,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <Table
@@ -217,7 +219,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -229,7 +232,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -309,7 +313,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <Table
@@ -376,7 +381,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <Table
@@ -454,7 +460,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -466,7 +473,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -611,7 +619,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <Table
@@ -678,7 +687,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <Table
@@ -756,7 +766,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -768,7 +779,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -848,7 +860,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <Table
@@ -915,7 +928,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <Table
@@ -993,7 +1007,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1005,7 +1020,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -1132,7 +1148,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <div
@@ -1166,7 +1183,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <div
@@ -1211,7 +1229,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -1223,7 +1242,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -1292,7 +1312,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <div
@@ -1326,7 +1347,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <div
@@ -1371,7 +1393,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1383,7 +1406,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,

@@ -1,6 +1,6 @@
 {
   "HEADER_TITLE": "Silverback",
-  "CREATE": "+ Create",
+  "CREATE": "Create",
   "NO_RESULTS_FOUND": "No {result} found ...",
   "DATATYPES": "Datatypes",
   "ID": "id",

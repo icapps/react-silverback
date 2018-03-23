@@ -4,6 +4,8 @@ import { Table, Button } from '../index';
 import { strings } from '../../utils';
 import './overview.css';
 
+const plus = require('../../assets/images/plus.svg');
+
 class Overview extends React.Component {
   constructor() {
     super();
@@ -31,7 +33,7 @@ class Overview extends React.Component {
             {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
-            <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" />
+            <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" icon={plus} />
           </div>
           {props.listItems.length > 0 ? (
             <Table
