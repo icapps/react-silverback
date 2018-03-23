@@ -175,6 +175,8 @@ storiesOf('Overview', module)
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
+      paginationTotalCount={100}
+      handlePagination={action('handle pagination')}
     />
   ))
   .add('empty state', () => (
@@ -190,5 +192,7 @@ storiesOf('Overview', module)
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
+      paginationTotalCount={100}
+      handlePagination={action('handle pagination')}
     />
   ));

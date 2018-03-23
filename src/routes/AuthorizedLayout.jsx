@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import UserOverview from '../scenes/users/UserOverview';
 import DatatypeOverview from '../scenes/dataType/DataTypeOverview';
 import { Header, Navbar } from '../components';
-import { labels } from '../utils';
+import { strings } from '../utils';
 import DataTypeDetail from '../scenes/dataType/DataTypeDetail';
 
 const AuthorizedLayout = props => {
@@ -13,8 +13,8 @@ const AuthorizedLayout = props => {
       <div className="container-fluid">
         <div className="row">
           <Navbar links={[
-            { name: labels.USERS, path: '/users' },
-            { name: labels.DATATYPES, path: '/datatype' },
+            { name: strings.USERS, path: '/users' },
+            { name: strings.DATATYPES, path: '/datatype' },
           ]} isNavigationShown={props.isNavigationShown} toggleNavigation={props.toggleNavigation} />
           <Switch>
             <Route path='/users' exact component={UserOverview} />

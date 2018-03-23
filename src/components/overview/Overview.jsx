@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination, Table, Button } from '../index';
-import { labels } from '../../utils';
+import { strings } from '../../utils';
 import './overview.css';
+
+const plus = require('../../assets/images/plus.svg');
 
 class Overview extends React.Component {
   constructor() {
@@ -18,7 +20,7 @@ class Overview extends React.Component {
 
   sortItems = (sortField, sortOrder) => {
     this.setState({ sortField, sortOrder });
-    this.props.sortItems(sortField, sortOrder ? labels.DESC : labels.ASC);
+    this.props.sortItems(sortField, sortOrder ? strings.DESC : strings.ASC);
   }
 
   render() {
@@ -28,12 +30,12 @@ class Overview extends React.Component {
         <div className="container">
           <h2>
             {props.title}
-            {this.state.sortField && <span className="sort-label">{`${labels.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? labels.DESCENDING : labels.ASCENDING})`}</span>}
+            {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
-            <Button text={`${labels.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" />
+            <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" icon={plus} />
           </div>
-          <Pagination totalCount={props.paginationConfig.totalCount} handleClick={this.props.handlePagination} />
+          <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
           {props.listItems.length > 0 ? (
             <Table
               keys={props.keys}
@@ -43,7 +45,7 @@ class Overview extends React.Component {
               handleRemoveItem={this.props.removeItem}
               handleSort={this.sortItems}
             />
-          ) : <div className="jumbotron" role="alert"><span className="empty-overview">{labels.NO_RESULTS_FOUND.replace('RESULT', props.title)}</span></div>
+          ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
           }
         </div>
       </main>
@@ -63,9 +65,7 @@ Overview.propTypes = {
   removeItem: PropTypes.func.isRequired,
   sortItems: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
-  paginationConfig: PropTypes.shape({
-    totalCount: PropTypes.number,
-  }).isRequired,
+  paginationTotalCount: PropTypes.number.isRequired,
   handlePagination: PropTypes.func.isRequired,
 };
 

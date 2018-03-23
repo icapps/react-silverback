@@ -15,7 +15,7 @@ describe('Overview Component', () => {
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
-      paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      paginationTotalCount={100}
       handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
@@ -28,7 +28,7 @@ describe('Overview Component', () => {
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
-      paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      paginationTotalCount={100}
       handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('Overview Component', () => {
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
-      paginationConfig={{ pageLimit: 10, totalCount: 100 }}
+      paginationTotalCount={100}
       handlePagination={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();

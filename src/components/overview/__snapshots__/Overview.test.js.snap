@@ -45,12 +45,7 @@ ShallowWrapper {
             },
           ]
     }
-    paginationConfig={
-        Object {
-            "pageLimit": 10,
-            "totalCount": 100,
-          }
-    }
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -79,7 +74,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <Pagination
@@ -150,7 +146,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <Pagination
@@ -232,7 +229,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -244,7 +242,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -336,7 +335,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <Pagination
@@ -407,7 +407,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <Pagination
@@ -489,7 +490,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -501,7 +503,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -631,12 +634,7 @@ ShallowWrapper {
             },
           ]
     }
-    paginationConfig={
-        Object {
-            "pageLimit": 10,
-            "totalCount": 100,
-          }
-    }
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -665,7 +663,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <Pagination
@@ -736,7 +735,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <Pagination
@@ -818,7 +818,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -830,7 +831,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -922,7 +924,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <Pagination
@@ -993,7 +996,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <Pagination
@@ -1075,7 +1079,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1087,7 +1092,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -1199,12 +1205,7 @@ ShallowWrapper {
           ]
     }
     listItems={Array []}
-    paginationConfig={
-        Object {
-            "pageLimit": 10,
-            "totalCount": 100,
-          }
-    }
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -1233,7 +1234,8 @@ ShallowWrapper {
                 <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
                 />
         </div>
         <Pagination
@@ -1247,7 +1249,9 @@ ShallowWrapper {
                 <span
                         className="empty-overview"
                 >
-                        No DataTypes found ...
+                        No 
+                        DataTypes
+                         found ...
                 </span>
         </div>
 </div>,
@@ -1269,7 +1273,8 @@ ShallowWrapper {
             <Button
                         className="btn-success"
                         handleClick={[Function]}
-                        text="+ Create DataTypes"
+                        icon="plus.svg"
+                        text="Create DataTypes"
             />
 </div>,
           <Pagination
@@ -1283,7 +1288,9 @@ ShallowWrapper {
             <span
                         className="empty-overview"
             >
-                        No DataTypes found ...
+                        No 
+                        DataTypes
+                         found ...
             </span>
 </div>,
         ],
@@ -1316,7 +1323,8 @@ ShallowWrapper {
             "children": <Button
               className="btn-success"
               handleClick={[Function]}
-              text="+ Create DataTypes"
+              icon="plus.svg"
+              text="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -1328,7 +1336,8 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-success",
               "handleClick": [Function],
-              "text": "+ Create DataTypes",
+              "icon": "plus.svg",
+              "text": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -1356,7 +1365,9 @@ ShallowWrapper {
             "children": <span
               className="empty-overview"
 >
-              No DataTypes found ...
+              No 
+              DataTypes
+               found ...
 </span>,
             "className": "jumbotron",
             "role": "alert",
@@ -1367,11 +1378,19 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "No DataTypes found ...",
+              "children": Array [
+                "No ",
+                "DataTypes",
+                " found ...",
+              ],
               "className": "empty-overview",
             },
             "ref": null,
-            "rendered": "No DataTypes found ...",
+            "rendered": Array [
+              "No ",
+              "DataTypes",
+              " found ...",
+            ],
             "type": "span",
           },
           "type": "div",
@@ -1399,7 +1418,8 @@ ShallowWrapper {
                     <Button
                               className="btn-success"
                               handleClick={[Function]}
-                              text="+ Create DataTypes"
+                              icon="plus.svg"
+                              text="Create DataTypes"
                     />
           </div>
           <Pagination
@@ -1413,7 +1433,9 @@ ShallowWrapper {
                     <span
                               className="empty-overview"
                     >
-                              No DataTypes found ...
+                              No 
+                              DataTypes
+                               found ...
                     </span>
           </div>
 </div>,
@@ -1435,7 +1457,8 @@ ShallowWrapper {
               <Button
                             className="btn-success"
                             handleClick={[Function]}
-                            text="+ Create DataTypes"
+                            icon="plus.svg"
+                            text="Create DataTypes"
               />
 </div>,
             <Pagination
@@ -1449,7 +1472,9 @@ ShallowWrapper {
               <span
                             className="empty-overview"
               >
-                            No DataTypes found ...
+                            No 
+                            DataTypes
+                             found ...
               </span>
 </div>,
           ],
@@ -1482,7 +1507,8 @@ ShallowWrapper {
               "children": <Button
                 className="btn-success"
                 handleClick={[Function]}
-                text="+ Create DataTypes"
+                icon="plus.svg"
+                text="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1494,7 +1520,8 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-success",
                 "handleClick": [Function],
-                "text": "+ Create DataTypes",
+                "icon": "plus.svg",
+                "text": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -1522,7 +1549,9 @@ ShallowWrapper {
               "children": <span
                 className="empty-overview"
 >
-                No DataTypes found ...
+                No 
+                DataTypes
+                 found ...
 </span>,
               "className": "jumbotron",
               "role": "alert",
@@ -1533,11 +1562,19 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "No DataTypes found ...",
+                "children": Array [
+                  "No ",
+                  "DataTypes",
+                  " found ...",
+                ],
                 "className": "empty-overview",
               },
               "ref": null,
-              "rendered": "No DataTypes found ...",
+              "rendered": Array [
+                "No ",
+                "DataTypes",
+                " found ...",
+              ],
               "type": "span",
             },
             "type": "div",
