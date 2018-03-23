@@ -43,7 +43,6 @@ class Table extends React.Component {
         <table className="table table-hover">
           <thead>
             <tr>
-              <th></th>
               {props.keys.map(key => (
                 <th scope="col" key={key.id}>
                   <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${this.state.sortedItem === key.id ? 'active-key' : ''}`} onClick={() => this.sortItem(key.id, key.isSortable)}>
@@ -51,13 +50,14 @@ class Table extends React.Component {
                     {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
                   </span>
                 </th>))}
+                <th></th>
             </tr>
           </thead>
           <tbody>
             {props.listItems.map((listItem, index) => (
               <tr key={listItem.id}>
-                <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
                 {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
+                <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
               </tr>
             ))}
           </tbody>
