@@ -14,6 +14,16 @@
 
   .overview-settings{
     margin: 1.5rem 0;
+
+    .btn {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-top: -1px;
+        margin-left: 0.3rem;
+      }
+    }
   }
 
   .jumbotron {
