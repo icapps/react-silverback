@@ -1,9 +1,9 @@
 import constants from './constants';
 import { userService } from '../../services';
 
-export const getUsers = (sortField, sortOrder) => {
+export const getUsers = (page, limit, sortField, sortOrder) => {
   return {
     type: constants.GET_USERS,
-    payload: userService.get(sortField, sortOrder),
+    payload: userService.get(page, limit, sortField, sortOrder),
   };
 };

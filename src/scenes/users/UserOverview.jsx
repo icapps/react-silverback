@@ -5,13 +5,31 @@ import { getUsers } from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserOverview extends Component {
+  constructor() {
+    super();
+    this.state = {
+      page: 0,
+      limit: 10,
+      sortField: null,
+      sortOrder: null,
+    };
+  }
   componentDidMount() {
-    this.props.getUsers();
+    console.log('CDM');
+    this.props.getUsers(this.state.page, this.state.limit);
   }
 
   sortItems = (sortField, sortOrder) => {
-    this.props.getUsers(sortField, sortOrder);
+    console.log('sort');
+    this.props.getUsers(this.state.page, this.state.limit, sortField, sortOrder);
+    this.setState({ sortField, sortOrder });
   }
+
+  handlePagination = (page, limit) => {
+    console.log('pagination');
+    this.props.getUsers(page, limit, this.state.sortField, this.state.sortOrder);
+    this.setState({ page, limit });
+  };
 
   render() {
     return (
@@ -28,6 +46,8 @@ class UserOverview extends Component {
         removeItem={() => { }}
         sortItems={this.sortItems}
         history={this.props.history}
+        paginationTotalCount={this.props.usersCount}
+        handlePagination={this.handlePagination}
       />
     );
   }
@@ -35,6 +55,7 @@ class UserOverview extends Component {
 
 const mapStateToProps = state => ({
   users: state.users.userList,
+  usersCount: state.users.usersCount,
 });
 
 const mapDispatchToProps = {

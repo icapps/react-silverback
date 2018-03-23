@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Dropdown
     handleChange={[Function]}
     id="test"
+    isLabelShown={true}
     label="This is a dropdown"
     options={
         Array [

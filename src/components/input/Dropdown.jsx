@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Dropdown = props => (
   <div className="form-group">
-    <label htmlFor={props.id}>{props.label}</label>
+    {props.isLabelShown && <label htmlFor={props.id}>{props.label}</label>}
     <select className="form-control" id={props.id} value={props.value} onChange={props.handleChange}>
       {props.options.map(option => <option key={option} value={option}>{option}</option>)}
     </select>
@@ -12,10 +12,16 @@ const Dropdown = props => (
 
 Dropdown.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   handleChange: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  options: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
+  isLabelShown: PropTypes.bool,
+};
+
+Dropdown.defaultProps = {
+  label: '',
+  isLabelShown: true,
 };
 
 export default Dropdown;

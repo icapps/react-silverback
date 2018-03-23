@@ -4,6 +4,7 @@ import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   dataTypes: [],
+  dataTypesCount: 0,
   ...defaultInitialState,
 };
 
@@ -16,6 +17,7 @@ describe('datatype reducer', () => {
     expect(
       dataType(initialState, {
         type: constants.GET_DATA_TYPE_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 100 } },
       })
     ).toMatchSnapshot();
   });

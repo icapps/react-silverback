@@ -5,13 +5,29 @@ import { getDataType } from '../../redux/datatype/actions';
 import { strings } from '../../utils';
 
 class DataTypeOverview extends Component {
+  constructor() {
+    super();
+    this.state = {
+      page: 0,
+      limit: 10,
+      sortField: null,
+      sortOrder: null,
+    };
+  }
   componentDidMount() {
-    this.props.getDataType();
+    this.props.getDataType(this.state.page, this.state.limit);
   }
 
   sortItems = (sortField, sortOrder) => {
-    this.props.getDataType(sortField, sortOrder);
+    this.props.getDataType(this.state.page, this.state.limit, sortField, sortOrder);
+    this.setState({ sortField, sortOrder });
   }
+
+  handlePagination = (page, limit) => {
+    this.props.getDataType(page, limit, this.state.sortField, this.state.sortOrder);
+    this.setState({ page, limit });
+  };
+
   render() {
     return (
       <Overview
@@ -29,6 +45,8 @@ class DataTypeOverview extends Component {
         removeItem={() => { }}
         sortItems={this.sortItems}
         history={this.props.history}
+        paginationTotalCount={this.props.dataTypesCount}
+        handlePagination={this.handlePagination}
       />
     );
   }
@@ -36,6 +54,7 @@ class DataTypeOverview extends Component {
 
 const mapStateToProps = state => ({
   datatypes: state.dataType.dataTypes,
+  dataTypesCount: state.dataType.dataTypesCount,
 });
 
 const mapDispatchToProps = {
