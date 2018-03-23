@@ -35,16 +35,18 @@ class Overview extends React.Component {
           <div className="overview-settings">
             <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" icon={plus} />
           </div>
-          <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
           {props.listItems.length > 0 ? (
-            <Table
-              keys={props.keys}
-              listItems={props.listItems}
-              dateFormat={props.dateFormat}
-              handleRowClick={this.showDetailScreen}
-              handleRemoveItem={this.props.removeItem}
-              handleSort={this.sortItems}
-            />
+            <React.Fragment>
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
+              <Table
+                keys={props.keys}
+                listItems={props.listItems}
+                dateFormat={props.dateFormat}
+                handleRowClick={this.showDetailScreen}
+                handleRemoveItem={this.props.removeItem}
+                handleSort={this.sortItems}
+              />
+            </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
           }
         </div>
