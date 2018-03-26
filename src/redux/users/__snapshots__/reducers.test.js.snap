@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`users reducer should GET_USERS_FULFILLED 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "userList": undefined,
+}
+`;
+
+exports[`users reducer should GET_USERS_PENDING 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`users reducer should return the initial state 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "userList": Array [],
+}
+`;
