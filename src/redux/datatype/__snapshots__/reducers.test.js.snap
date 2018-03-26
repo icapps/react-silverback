@@ -2,7 +2,8 @@
 
 exports[`datatype reducer should GET_DATA_TYPE_FULFILLED 1`] = `
 Object {
-  "dataTypes": undefined,
+  "dataTypes": Object {},
+  "dataTypesCount": 100,
   "errorMessage": "",
   "isError": false,
   "isPending": false,
@@ -12,6 +13,7 @@ Object {
 exports[`datatype reducer should GET_DATA_TYPE_PENDING 1`] = `
 Object {
   "dataTypes": Array [],
+  "dataTypesCount": 0,
   "errorMessage": "",
   "isError": false,
   "isPending": true,
@@ -21,6 +23,7 @@ Object {
 exports[`datatype reducer should return the initial state 1`] = `
 Object {
   "dataTypes": Array [],
+  "dataTypesCount": 0,
   "errorMessage": "",
   "isError": false,
   "isPending": false,

@@ -3,6 +3,7 @@ import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   dataTypes: [],
+  dataTypesCount: 0,
   ...defaultInitialState,
 };
 
@@ -13,7 +14,8 @@ const dataType = (state = initialState, action = {}) => {
     case constants.GET_DATA_TYPE_FULFILLED:
       return {
         ...state,
-        dataTypes: payload,
+        dataTypes: payload.data,
+        dataTypesCount: payload.meta.totalCount,
         isPending: false,
       };
     case constants.GET_DATA_TYPE_PENDING:

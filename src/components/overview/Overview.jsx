@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table, Button } from '../index';
+import { Pagination, Table, Button } from '../index';
 import { strings } from '../../utils';
 import './overview.css';
 
@@ -36,14 +36,17 @@ class Overview extends React.Component {
             <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" icon={plus} />
           </div>
           {props.listItems.length > 0 ? (
-            <Table
-              keys={props.keys}
-              listItems={props.listItems}
-              dateFormat={props.dateFormat}
-              handleRowClick={this.showDetailScreen}
-              handleRemoveItem={this.props.removeItem}
-              handleSort={this.sortItems}
-            />
+            <React.Fragment>
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
+              <Table
+                keys={props.keys}
+                listItems={props.listItems}
+                dateFormat={props.dateFormat}
+                handleRowClick={this.showDetailScreen}
+                handleRemoveItem={this.props.removeItem}
+                handleSort={this.sortItems}
+              />
+            </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
           }
         </div>
@@ -64,6 +67,8 @@ Overview.propTypes = {
   removeItem: PropTypes.func.isRequired,
   sortItems: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  paginationTotalCount: PropTypes.number.isRequired,
+  handlePagination: PropTypes.func.isRequired,
 };
 
 export default Overview;

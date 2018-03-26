@@ -152,7 +152,7 @@ storiesOf('Table', module)
 
 storiesOf('Pagination', module)
   .add('default', () => (
-    <Pagination pageCount={5} handleClick={action('handle Pagination')} />
+    <Pagination totalCount={97} handleClick={action('handle Pagination')} />
   ));
 
 storiesOf('Overview', module)
@@ -175,6 +175,8 @@ storiesOf('Overview', module)
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
+      paginationTotalCount={100}
+      handlePagination={action('handle pagination')}
     />
   ))
   .add('empty state', () => (
@@ -190,5 +192,7 @@ storiesOf('Overview', module)
       removeItem={() => { }}
       sortItems={() => { }}
       history={{}}
+      paginationTotalCount={100}
+      handlePagination={action('handle pagination')}
     />
   ));

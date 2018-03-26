@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    handlePagination={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -44,6 +45,7 @@ ShallowWrapper {
             },
           ]
     }
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -76,51 +78,57 @@ ShallowWrapper {
                         text="Create DataTypes"
                 />
         </div>
-        <Table
-                dateFormat="DD/MM/YYYY"
-                handleRemoveItem={[Function]}
-                handleRowClick={[Function]}
-                handleSort={[Function]}
-                keys={
-                        Array [
-                                Object {
-                                  "id": "id",
-                                  "isSortable": true,
-                                  "value": "id",
-                                },
-                                Object {
-                                  "id": "type",
-                                  "isSortable": true,
-                                  "value": "type",
-                                },
-                                Object {
-                                  "id": "price",
-                                  "isSortable": false,
-                                  "value": "price",
-                                },
-                              ]
-                }
-                listItems={
-                        Array [
-                                Object {
-                                  "id": "1",
-                                  "price": 88.9,
-                                  "type": "B",
-                                },
-                                Object {
-                                  "id": "2",
-                                  "price": 45.2,
-                                  "type": "C",
-                                },
-                                Object {
-                                  "id": "1",
-                                  "price": 56.5,
-                                  "type": "D",
-                                },
-                              ]
-                }
-                maxTextLength={50}
-        />
+        <Unknown>
+                <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+                />
+                <Table
+                        dateFormat="DD/MM/YYYY"
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                Array [
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "price",
+                                          "isSortable": false,
+                                          "value": "price",
+                                        },
+                                      ]
+                        }
+                        listItems={
+                                Array [
+                                        Object {
+                                          "id": "1",
+                                          "price": 88.9,
+                                          "type": "B",
+                                        },
+                                        Object {
+                                          "id": "2",
+                                          "price": 45.2,
+                                          "type": "C",
+                                        },
+                                        Object {
+                                          "id": "1",
+                                          "price": 56.5,
+                                          "type": "D",
+                                        },
+                                      ]
+                        }
+                        maxTextLength={50}
+                />
+        </Unknown>
 </div>,
       "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
     },
@@ -144,51 +152,57 @@ ShallowWrapper {
                         text="Create DataTypes"
             />
 </div>,
-          <Table
-            dateFormat="DD/MM/YYYY"
-            handleRemoveItem={[Function]}
-            handleRowClick={[Function]}
-            handleSort={[Function]}
-            keys={
-                        Array [
-                                    Object {
-                                      "id": "id",
-                                      "isSortable": true,
-                                      "value": "id",
-                                    },
-                                    Object {
-                                      "id": "type",
-                                      "isSortable": true,
-                                      "value": "type",
-                                    },
-                                    Object {
-                                      "id": "price",
-                                      "isSortable": false,
-                                      "value": "price",
-                                    },
-                                  ]
-            }
-            listItems={
-                        Array [
-                                    Object {
-                                      "id": "1",
-                                      "price": 88.9,
-                                      "type": "B",
-                                    },
-                                    Object {
-                                      "id": "2",
-                                      "price": 45.2,
-                                      "type": "C",
-                                    },
-                                    Object {
-                                      "id": "1",
-                                      "price": 56.5,
-                                      "type": "D",
-                                    },
-                                  ]
-            }
-            maxTextLength={50}
-/>,
+          <Unknown>
+            <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+            />
+            <Table
+                        dateFormat="DD/MM/YYYY"
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                    Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "price",
+                                                  "isSortable": false,
+                                                  "value": "price",
+                                                },
+                                              ]
+                        }
+                        listItems={
+                                    Array [
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 88.9,
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "id": "2",
+                                                  "price": 45.2,
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 56.5,
+                                                  "type": "D",
+                                                },
+                                              ]
+                        }
+                        maxTextLength={50}
+            />
+</Unknown>,
         ],
         "className": "container",
       },
@@ -244,51 +258,125 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "dateFormat": "DD/MM/YYYY",
-            "handleRemoveItem": [Function],
-            "handleRowClick": [Function],
-            "handleSort": [Function],
-            "keys": Array [
-              Object {
-                "id": "id",
-                "isSortable": true,
-                "value": "id",
-              },
-              Object {
-                "id": "type",
-                "isSortable": true,
-                "value": "type",
-              },
-              Object {
-                "id": "price",
-                "isSortable": false,
-                "value": "price",
-              },
+            "children": Array [
+              <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+/>,
+              <Table
+                dateFormat="DD/MM/YYYY"
+                handleRemoveItem={[Function]}
+                handleRowClick={[Function]}
+                handleSort={[Function]}
+                keys={
+                                Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "price",
+                                                  "isSortable": false,
+                                                  "value": "price",
+                                                },
+                                              ]
+                }
+                listItems={
+                                Array [
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 88.9,
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "id": "2",
+                                                  "price": 45.2,
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 56.5,
+                                                  "type": "D",
+                                                },
+                                              ]
+                }
+                maxTextLength={50}
+/>,
             ],
-            "listItems": Array [
-              Object {
-                "id": "1",
-                "price": 88.9,
-                "type": "B",
-              },
-              Object {
-                "id": "2",
-                "price": 45.2,
-                "type": "C",
-              },
-              Object {
-                "id": "1",
-                "price": 56.5,
-                "type": "D",
-              },
-            ],
-            "maxTextLength": 50,
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleClick": [Function],
+                "totalCount": 100,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "dateFormat": "DD/MM/YYYY",
+                "handleRemoveItem": [Function],
+                "handleRowClick": [Function],
+                "handleSort": [Function],
+                "keys": Array [
+                  Object {
+                    "id": "id",
+                    "isSortable": true,
+                    "value": "id",
+                  },
+                  Object {
+                    "id": "type",
+                    "isSortable": true,
+                    "value": "type",
+                  },
+                  Object {
+                    "id": "price",
+                    "isSortable": false,
+                    "value": "price",
+                  },
+                ],
+                "listItems": Array [
+                  Object {
+                    "id": "1",
+                    "price": 88.9,
+                    "type": "B",
+                  },
+                  Object {
+                    "id": "2",
+                    "price": 45.2,
+                    "type": "C",
+                  },
+                  Object {
+                    "id": "1",
+                    "price": 56.5,
+                    "type": "D",
+                  },
+                ],
+                "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
         },
       ],
       "type": "div",
@@ -317,51 +405,57 @@ ShallowWrapper {
                               text="Create DataTypes"
                     />
           </div>
-          <Table
-                    dateFormat="DD/MM/YYYY"
-                    handleRemoveItem={[Function]}
-                    handleRowClick={[Function]}
-                    handleSort={[Function]}
-                    keys={
-                              Array [
-                                        Object {
-                                          "id": "id",
-                                          "isSortable": true,
-                                          "value": "id",
-                                        },
-                                        Object {
-                                          "id": "type",
-                                          "isSortable": true,
-                                          "value": "type",
-                                        },
-                                        Object {
-                                          "id": "price",
-                                          "isSortable": false,
-                                          "value": "price",
-                                        },
-                                      ]
-                    }
-                    listItems={
-                              Array [
-                                        Object {
-                                          "id": "1",
-                                          "price": 88.9,
-                                          "type": "B",
-                                        },
-                                        Object {
-                                          "id": "2",
-                                          "price": 45.2,
-                                          "type": "C",
-                                        },
-                                        Object {
-                                          "id": "1",
-                                          "price": 56.5,
-                                          "type": "D",
-                                        },
-                                      ]
-                    }
-                    maxTextLength={50}
-          />
+          <Unknown>
+                    <Pagination
+                              handleClick={[Function]}
+                              totalCount={100}
+                    />
+                    <Table
+                              dateFormat="DD/MM/YYYY"
+                              handleRemoveItem={[Function]}
+                              handleRowClick={[Function]}
+                              handleSort={[Function]}
+                              keys={
+                                        Array [
+                                                  Object {
+                                                    "id": "id",
+                                                    "isSortable": true,
+                                                    "value": "id",
+                                                  },
+                                                  Object {
+                                                    "id": "type",
+                                                    "isSortable": true,
+                                                    "value": "type",
+                                                  },
+                                                  Object {
+                                                    "id": "price",
+                                                    "isSortable": false,
+                                                    "value": "price",
+                                                  },
+                                                ]
+                              }
+                              listItems={
+                                        Array [
+                                                  Object {
+                                                    "id": "1",
+                                                    "price": 88.9,
+                                                    "type": "B",
+                                                  },
+                                                  Object {
+                                                    "id": "2",
+                                                    "price": 45.2,
+                                                    "type": "C",
+                                                  },
+                                                  Object {
+                                                    "id": "1",
+                                                    "price": 56.5,
+                                                    "type": "D",
+                                                  },
+                                                ]
+                              }
+                              maxTextLength={50}
+                    />
+          </Unknown>
 </div>,
         "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
       },
@@ -385,51 +479,57 @@ ShallowWrapper {
                             text="Create DataTypes"
               />
 </div>,
-            <Table
-              dateFormat="DD/MM/YYYY"
-              handleRemoveItem={[Function]}
-              handleRowClick={[Function]}
-              handleSort={[Function]}
-              keys={
-                            Array [
-                                          Object {
-                                            "id": "id",
-                                            "isSortable": true,
-                                            "value": "id",
-                                          },
-                                          Object {
-                                            "id": "type",
-                                            "isSortable": true,
-                                            "value": "type",
-                                          },
-                                          Object {
-                                            "id": "price",
-                                            "isSortable": false,
-                                            "value": "price",
-                                          },
-                                        ]
-              }
-              listItems={
-                            Array [
-                                          Object {
-                                            "id": "1",
-                                            "price": 88.9,
-                                            "type": "B",
-                                          },
-                                          Object {
-                                            "id": "2",
-                                            "price": 45.2,
-                                            "type": "C",
-                                          },
-                                          Object {
-                                            "id": "1",
-                                            "price": 56.5,
-                                            "type": "D",
-                                          },
-                                        ]
-              }
-              maxTextLength={50}
-/>,
+            <Unknown>
+              <Pagination
+                            handleClick={[Function]}
+                            totalCount={100}
+              />
+              <Table
+                            dateFormat="DD/MM/YYYY"
+                            handleRemoveItem={[Function]}
+                            handleRowClick={[Function]}
+                            handleSort={[Function]}
+                            keys={
+                                          Array [
+                                                        Object {
+                                                          "id": "id",
+                                                          "isSortable": true,
+                                                          "value": "id",
+                                                        },
+                                                        Object {
+                                                          "id": "type",
+                                                          "isSortable": true,
+                                                          "value": "type",
+                                                        },
+                                                        Object {
+                                                          "id": "price",
+                                                          "isSortable": false,
+                                                          "value": "price",
+                                                        },
+                                                      ]
+                            }
+                            listItems={
+                                          Array [
+                                                        Object {
+                                                          "id": "1",
+                                                          "price": 88.9,
+                                                          "type": "B",
+                                                        },
+                                                        Object {
+                                                          "id": "2",
+                                                          "price": 45.2,
+                                                          "type": "C",
+                                                        },
+                                                        Object {
+                                                          "id": "1",
+                                                          "price": 56.5,
+                                                          "type": "D",
+                                                        },
+                                                      ]
+                            }
+                            maxTextLength={50}
+              />
+</Unknown>,
           ],
           "className": "container",
         },
@@ -485,51 +585,125 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "dateFormat": "DD/MM/YYYY",
-              "handleRemoveItem": [Function],
-              "handleRowClick": [Function],
-              "handleSort": [Function],
-              "keys": Array [
-                Object {
-                  "id": "id",
-                  "isSortable": true,
-                  "value": "id",
-                },
-                Object {
-                  "id": "type",
-                  "isSortable": true,
-                  "value": "type",
-                },
-                Object {
-                  "id": "price",
-                  "isSortable": false,
-                  "value": "price",
-                },
+              "children": Array [
+                <Pagination
+                  handleClick={[Function]}
+                  totalCount={100}
+/>,
+                <Table
+                  dateFormat="DD/MM/YYYY"
+                  handleRemoveItem={[Function]}
+                  handleRowClick={[Function]}
+                  handleSort={[Function]}
+                  keys={
+                                    Array [
+                                                      Object {
+                                                        "id": "id",
+                                                        "isSortable": true,
+                                                        "value": "id",
+                                                      },
+                                                      Object {
+                                                        "id": "type",
+                                                        "isSortable": true,
+                                                        "value": "type",
+                                                      },
+                                                      Object {
+                                                        "id": "price",
+                                                        "isSortable": false,
+                                                        "value": "price",
+                                                      },
+                                                    ]
+                  }
+                  listItems={
+                                    Array [
+                                                      Object {
+                                                        "id": "1",
+                                                        "price": 88.9,
+                                                        "type": "B",
+                                                      },
+                                                      Object {
+                                                        "id": "2",
+                                                        "price": 45.2,
+                                                        "type": "C",
+                                                      },
+                                                      Object {
+                                                        "id": "1",
+                                                        "price": 56.5,
+                                                        "type": "D",
+                                                      },
+                                                    ]
+                  }
+                  maxTextLength={50}
+/>,
               ],
-              "listItems": Array [
-                Object {
-                  "id": "1",
-                  "price": 88.9,
-                  "type": "B",
-                },
-                Object {
-                  "id": "2",
-                  "price": 45.2,
-                  "type": "C",
-                },
-                Object {
-                  "id": "1",
-                  "price": 56.5,
-                  "type": "D",
-                },
-              ],
-              "maxTextLength": 50,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleClick": [Function],
+                  "totalCount": 100,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "dateFormat": "DD/MM/YYYY",
+                  "handleRemoveItem": [Function],
+                  "handleRowClick": [Function],
+                  "handleSort": [Function],
+                  "keys": Array [
+                    Object {
+                      "id": "id",
+                      "isSortable": true,
+                      "value": "id",
+                    },
+                    Object {
+                      "id": "type",
+                      "isSortable": true,
+                      "value": "type",
+                    },
+                    Object {
+                      "id": "price",
+                      "isSortable": false,
+                      "value": "price",
+                    },
+                  ],
+                  "listItems": Array [
+                    Object {
+                      "id": "1",
+                      "price": 88.9,
+                      "type": "B",
+                    },
+                    Object {
+                      "id": "2",
+                      "price": 45.2,
+                      "type": "C",
+                    },
+                    Object {
+                      "id": "1",
+                      "price": 56.5,
+                      "type": "D",
+                    },
+                  ],
+                  "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
           },
         ],
         "type": "div",
@@ -552,6 +726,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    handlePagination={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -591,6 +766,7 @@ ShallowWrapper {
             },
           ]
     }
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"
@@ -623,51 +799,57 @@ ShallowWrapper {
                         text="Create DataTypes"
                 />
         </div>
-        <Table
-                dateFormat="DD/MM/YYYY"
-                handleRemoveItem={[Function]}
-                handleRowClick={[Function]}
-                handleSort={[Function]}
-                keys={
-                        Array [
-                                Object {
-                                  "id": "id",
-                                  "isSortable": true,
-                                  "value": "id",
-                                },
-                                Object {
-                                  "id": "type",
-                                  "isSortable": true,
-                                  "value": "type",
-                                },
-                                Object {
-                                  "id": "date",
-                                  "isSortable": false,
-                                  "value": "date",
-                                },
-                              ]
-                }
-                listItems={
-                        Array [
-                                Object {
-                                  "date": 1995-05-23T00:00:00.000Z,
-                                  "id": "1",
-                                  "type": "B",
-                                },
-                                Object {
-                                  "date": 1995-05-23T00:00:00.000Z,
-                                  "id": "2",
-                                  "type": "C",
-                                },
-                                Object {
-                                  "date": 1995-05-23T00:00:00.000Z,
-                                  "id": "1",
-                                  "type": "D",
-                                },
-                              ]
-                }
-                maxTextLength={50}
-        />
+        <Unknown>
+                <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+                />
+                <Table
+                        dateFormat="DD/MM/YYYY"
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                Array [
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "date",
+                                          "isSortable": false,
+                                          "value": "date",
+                                        },
+                                      ]
+                        }
+                        listItems={
+                                Array [
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "1",
+                                          "type": "B",
+                                        },
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "2",
+                                          "type": "C",
+                                        },
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "1",
+                                          "type": "D",
+                                        },
+                                      ]
+                        }
+                        maxTextLength={50}
+                />
+        </Unknown>
 </div>,
       "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
     },
@@ -691,51 +873,57 @@ ShallowWrapper {
                         text="Create DataTypes"
             />
 </div>,
-          <Table
-            dateFormat="DD/MM/YYYY"
-            handleRemoveItem={[Function]}
-            handleRowClick={[Function]}
-            handleSort={[Function]}
-            keys={
-                        Array [
-                                    Object {
-                                      "id": "id",
-                                      "isSortable": true,
-                                      "value": "id",
-                                    },
-                                    Object {
-                                      "id": "type",
-                                      "isSortable": true,
-                                      "value": "type",
-                                    },
-                                    Object {
-                                      "id": "date",
-                                      "isSortable": false,
-                                      "value": "date",
-                                    },
-                                  ]
-            }
-            listItems={
-                        Array [
-                                    Object {
-                                      "date": 1995-05-23T00:00:00.000Z,
-                                      "id": "1",
-                                      "type": "B",
-                                    },
-                                    Object {
-                                      "date": 1995-05-23T00:00:00.000Z,
-                                      "id": "2",
-                                      "type": "C",
-                                    },
-                                    Object {
-                                      "date": 1995-05-23T00:00:00.000Z,
-                                      "id": "1",
-                                      "type": "D",
-                                    },
-                                  ]
-            }
-            maxTextLength={50}
-/>,
+          <Unknown>
+            <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+            />
+            <Table
+                        dateFormat="DD/MM/YYYY"
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                    Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "date",
+                                                  "isSortable": false,
+                                                  "value": "date",
+                                                },
+                                              ]
+                        }
+                        listItems={
+                                    Array [
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "2",
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "D",
+                                                },
+                                              ]
+                        }
+                        maxTextLength={50}
+            />
+</Unknown>,
         ],
         "className": "container",
       },
@@ -791,51 +979,125 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "dateFormat": "DD/MM/YYYY",
-            "handleRemoveItem": [Function],
-            "handleRowClick": [Function],
-            "handleSort": [Function],
-            "keys": Array [
-              Object {
-                "id": "id",
-                "isSortable": true,
-                "value": "id",
-              },
-              Object {
-                "id": "type",
-                "isSortable": true,
-                "value": "type",
-              },
-              Object {
-                "id": "date",
-                "isSortable": false,
-                "value": "date",
-              },
+            "children": Array [
+              <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+/>,
+              <Table
+                dateFormat="DD/MM/YYYY"
+                handleRemoveItem={[Function]}
+                handleRowClick={[Function]}
+                handleSort={[Function]}
+                keys={
+                                Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "date",
+                                                  "isSortable": false,
+                                                  "value": "date",
+                                                },
+                                              ]
+                }
+                listItems={
+                                Array [
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "2",
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "D",
+                                                },
+                                              ]
+                }
+                maxTextLength={50}
+/>,
             ],
-            "listItems": Array [
-              Object {
-                "date": 1995-05-23T00:00:00.000Z,
-                "id": "1",
-                "type": "B",
-              },
-              Object {
-                "date": 1995-05-23T00:00:00.000Z,
-                "id": "2",
-                "type": "C",
-              },
-              Object {
-                "date": 1995-05-23T00:00:00.000Z,
-                "id": "1",
-                "type": "D",
-              },
-            ],
-            "maxTextLength": 50,
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleClick": [Function],
+                "totalCount": 100,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "dateFormat": "DD/MM/YYYY",
+                "handleRemoveItem": [Function],
+                "handleRowClick": [Function],
+                "handleSort": [Function],
+                "keys": Array [
+                  Object {
+                    "id": "id",
+                    "isSortable": true,
+                    "value": "id",
+                  },
+                  Object {
+                    "id": "type",
+                    "isSortable": true,
+                    "value": "type",
+                  },
+                  Object {
+                    "id": "date",
+                    "isSortable": false,
+                    "value": "date",
+                  },
+                ],
+                "listItems": Array [
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "1",
+                    "type": "B",
+                  },
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "2",
+                    "type": "C",
+                  },
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "1",
+                    "type": "D",
+                  },
+                ],
+                "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
         },
       ],
       "type": "div",
@@ -864,51 +1126,57 @@ ShallowWrapper {
                               text="Create DataTypes"
                     />
           </div>
-          <Table
-                    dateFormat="DD/MM/YYYY"
-                    handleRemoveItem={[Function]}
-                    handleRowClick={[Function]}
-                    handleSort={[Function]}
-                    keys={
-                              Array [
-                                        Object {
-                                          "id": "id",
-                                          "isSortable": true,
-                                          "value": "id",
-                                        },
-                                        Object {
-                                          "id": "type",
-                                          "isSortable": true,
-                                          "value": "type",
-                                        },
-                                        Object {
-                                          "id": "date",
-                                          "isSortable": false,
-                                          "value": "date",
-                                        },
-                                      ]
-                    }
-                    listItems={
-                              Array [
-                                        Object {
-                                          "date": 1995-05-23T00:00:00.000Z,
-                                          "id": "1",
-                                          "type": "B",
-                                        },
-                                        Object {
-                                          "date": 1995-05-23T00:00:00.000Z,
-                                          "id": "2",
-                                          "type": "C",
-                                        },
-                                        Object {
-                                          "date": 1995-05-23T00:00:00.000Z,
-                                          "id": "1",
-                                          "type": "D",
-                                        },
-                                      ]
-                    }
-                    maxTextLength={50}
-          />
+          <Unknown>
+                    <Pagination
+                              handleClick={[Function]}
+                              totalCount={100}
+                    />
+                    <Table
+                              dateFormat="DD/MM/YYYY"
+                              handleRemoveItem={[Function]}
+                              handleRowClick={[Function]}
+                              handleSort={[Function]}
+                              keys={
+                                        Array [
+                                                  Object {
+                                                    "id": "id",
+                                                    "isSortable": true,
+                                                    "value": "id",
+                                                  },
+                                                  Object {
+                                                    "id": "type",
+                                                    "isSortable": true,
+                                                    "value": "type",
+                                                  },
+                                                  Object {
+                                                    "id": "date",
+                                                    "isSortable": false,
+                                                    "value": "date",
+                                                  },
+                                                ]
+                              }
+                              listItems={
+                                        Array [
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "1",
+                                                    "type": "B",
+                                                  },
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "2",
+                                                    "type": "C",
+                                                  },
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "1",
+                                                    "type": "D",
+                                                  },
+                                                ]
+                              }
+                              maxTextLength={50}
+                    />
+          </Unknown>
 </div>,
         "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
       },
@@ -932,51 +1200,57 @@ ShallowWrapper {
                             text="Create DataTypes"
               />
 </div>,
-            <Table
-              dateFormat="DD/MM/YYYY"
-              handleRemoveItem={[Function]}
-              handleRowClick={[Function]}
-              handleSort={[Function]}
-              keys={
-                            Array [
-                                          Object {
-                                            "id": "id",
-                                            "isSortable": true,
-                                            "value": "id",
-                                          },
-                                          Object {
-                                            "id": "type",
-                                            "isSortable": true,
-                                            "value": "type",
-                                          },
-                                          Object {
-                                            "id": "date",
-                                            "isSortable": false,
-                                            "value": "date",
-                                          },
-                                        ]
-              }
-              listItems={
-                            Array [
-                                          Object {
-                                            "date": 1995-05-23T00:00:00.000Z,
-                                            "id": "1",
-                                            "type": "B",
-                                          },
-                                          Object {
-                                            "date": 1995-05-23T00:00:00.000Z,
-                                            "id": "2",
-                                            "type": "C",
-                                          },
-                                          Object {
-                                            "date": 1995-05-23T00:00:00.000Z,
-                                            "id": "1",
-                                            "type": "D",
-                                          },
-                                        ]
-              }
-              maxTextLength={50}
-/>,
+            <Unknown>
+              <Pagination
+                            handleClick={[Function]}
+                            totalCount={100}
+              />
+              <Table
+                            dateFormat="DD/MM/YYYY"
+                            handleRemoveItem={[Function]}
+                            handleRowClick={[Function]}
+                            handleSort={[Function]}
+                            keys={
+                                          Array [
+                                                        Object {
+                                                          "id": "id",
+                                                          "isSortable": true,
+                                                          "value": "id",
+                                                        },
+                                                        Object {
+                                                          "id": "type",
+                                                          "isSortable": true,
+                                                          "value": "type",
+                                                        },
+                                                        Object {
+                                                          "id": "date",
+                                                          "isSortable": false,
+                                                          "value": "date",
+                                                        },
+                                                      ]
+                            }
+                            listItems={
+                                          Array [
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "1",
+                                                          "type": "B",
+                                                        },
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "2",
+                                                          "type": "C",
+                                                        },
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "1",
+                                                          "type": "D",
+                                                        },
+                                                      ]
+                            }
+                            maxTextLength={50}
+              />
+</Unknown>,
           ],
           "className": "container",
         },
@@ -1032,51 +1306,125 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "dateFormat": "DD/MM/YYYY",
-              "handleRemoveItem": [Function],
-              "handleRowClick": [Function],
-              "handleSort": [Function],
-              "keys": Array [
-                Object {
-                  "id": "id",
-                  "isSortable": true,
-                  "value": "id",
-                },
-                Object {
-                  "id": "type",
-                  "isSortable": true,
-                  "value": "type",
-                },
-                Object {
-                  "id": "date",
-                  "isSortable": false,
-                  "value": "date",
-                },
+              "children": Array [
+                <Pagination
+                  handleClick={[Function]}
+                  totalCount={100}
+/>,
+                <Table
+                  dateFormat="DD/MM/YYYY"
+                  handleRemoveItem={[Function]}
+                  handleRowClick={[Function]}
+                  handleSort={[Function]}
+                  keys={
+                                    Array [
+                                                      Object {
+                                                        "id": "id",
+                                                        "isSortable": true,
+                                                        "value": "id",
+                                                      },
+                                                      Object {
+                                                        "id": "type",
+                                                        "isSortable": true,
+                                                        "value": "type",
+                                                      },
+                                                      Object {
+                                                        "id": "date",
+                                                        "isSortable": false,
+                                                        "value": "date",
+                                                      },
+                                                    ]
+                  }
+                  listItems={
+                                    Array [
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "1",
+                                                        "type": "B",
+                                                      },
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "2",
+                                                        "type": "C",
+                                                      },
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "1",
+                                                        "type": "D",
+                                                      },
+                                                    ]
+                  }
+                  maxTextLength={50}
+/>,
               ],
-              "listItems": Array [
-                Object {
-                  "date": 1995-05-23T00:00:00.000Z,
-                  "id": "1",
-                  "type": "B",
-                },
-                Object {
-                  "date": 1995-05-23T00:00:00.000Z,
-                  "id": "2",
-                  "type": "C",
-                },
-                Object {
-                  "date": 1995-05-23T00:00:00.000Z,
-                  "id": "1",
-                  "type": "D",
-                },
-              ],
-              "maxTextLength": 50,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleClick": [Function],
+                  "totalCount": 100,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "dateFormat": "DD/MM/YYYY",
+                  "handleRemoveItem": [Function],
+                  "handleRowClick": [Function],
+                  "handleSort": [Function],
+                  "keys": Array [
+                    Object {
+                      "id": "id",
+                      "isSortable": true,
+                      "value": "id",
+                    },
+                    Object {
+                      "id": "type",
+                      "isSortable": true,
+                      "value": "type",
+                    },
+                    Object {
+                      "id": "date",
+                      "isSortable": false,
+                      "value": "date",
+                    },
+                  ],
+                  "listItems": Array [
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "1",
+                      "type": "B",
+                    },
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "2",
+                      "type": "C",
+                    },
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "1",
+                      "type": "D",
+                    },
+                  ],
+                  "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
           },
         ],
         "type": "div",
@@ -1099,6 +1447,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    handlePagination={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -1120,6 +1469,7 @@ ShallowWrapper {
           ]
     }
     listItems={Array []}
+    paginationTotalCount={100}
     removeItem={[Function]}
     sortItems={[Function]}
     title="DataTypes"

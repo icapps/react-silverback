@@ -16,6 +16,7 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
       })
     ).toMatchSnapshot();
   });

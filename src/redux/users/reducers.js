@@ -3,6 +3,7 @@ import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
   userList: [],
+  usersCount: 0,
   ...defaultInitialState,
 };
 
@@ -13,7 +14,8 @@ const users = (state = initialState, action = {}) => {
     case constants.GET_USERS_FULFILLED:
       return {
         ...state,
-        userList: payload,
+        userList: payload.data,
+        usersCount: payload.meta.totalCount,
         isPending: false,
       };
     case constants.GET_USERS_PENDING:
