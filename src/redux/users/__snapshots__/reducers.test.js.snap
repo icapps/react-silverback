@@ -6,7 +6,8 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isPending": false,
-  "userList": undefined,
+  "userList": Object {},
+  "usersCount": 10,
 }
 `;
 
@@ -25,5 +26,6 @@ Object {
   "isError": false,
   "isPending": false,
   "userList": Array [],
+  "usersCount": 0,
 }
 `;

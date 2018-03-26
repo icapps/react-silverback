@@ -5,6 +5,7 @@ import DatatypeOverview from '../scenes/dataType/DataTypeOverview';
 import { Header, Navbar } from '../components';
 import { strings } from '../utils';
 import DataTypeDetail from '../scenes/dataType/DataTypeDetail';
+import UserDetail from '../scenes/users/UserDetail';
 
 const AuthorizedLayout = props => {
   return (
@@ -18,6 +19,7 @@ const AuthorizedLayout = props => {
           ]} isNavigationShown={props.isNavigationShown} toggleNavigation={props.toggleNavigation} />
           <Switch>
             <Route path='/users' exact component={UserOverview} />
+            <Route path='/users/:id' exact component={UserDetail} />
             <Route path='/datatype' exact component={DatatypeOverview} />
             <Route path='/datatype/:id' exact component={DataTypeDetail} />
             <Redirect to='/datatype' />
