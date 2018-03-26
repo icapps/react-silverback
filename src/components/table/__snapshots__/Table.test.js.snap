@@ -89,7 +89,6 @@ ShallowWrapper {
 >
         <thead>
                 <tr>
-                        <th />
                         <th
                                 scope="col"
                         >
@@ -136,19 +135,11 @@ ShallowWrapper {
                                         key3
                                 </span>
                         </th>
+                        <th />
                 </tr>
         </thead>
         <tbody>
                 <tr>
-                        <td
-                                className="remove-list-item"
-                        >
-                                <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                                />
-                        </td>
                         <td
                                 onClick={[Function]}
                         >
@@ -172,8 +163,6 @@ ShallowWrapper {
                         >
                                 23/05/1995
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -183,6 +172,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -206,8 +197,6 @@ ShallowWrapper {
                         >
                                 23/05/1995
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -217,6 +206,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -240,8 +231,6 @@ ShallowWrapper {
                         >
                                 23/05/1995
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -251,6 +240,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -270,8 +261,6 @@ ShallowWrapper {
                         <td
                                 onClick={[Function]}
                         />
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -281,6 +270,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -304,6 +295,15 @@ ShallowWrapper {
                         >
                                 23/05/1995
                         </td>
+                        <td
+                                className="remove-list-item"
+                        >
+                                <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                                />
+                        </td>
                 </tr>
         </tbody>
 </table>,
@@ -318,7 +318,6 @@ ShallowWrapper {
         "children": Array [
           <thead>
             <tr>
-                        <th />
                         <th
                                     scope="col"
                         >
@@ -365,19 +364,11 @@ ShallowWrapper {
                                                 key3
                                     </span>
                         </th>
+                        <th />
             </tr>
 </thead>,
           <tbody>
             <tr>
-                        <td
-                                    className="remove-list-item"
-                        >
-                                    <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                    />
-                        </td>
                         <td
                                     onClick={[Function]}
                         >
@@ -401,8 +392,6 @@ ShallowWrapper {
                         >
                                     23/05/1995
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -412,6 +401,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -435,8 +426,6 @@ ShallowWrapper {
                         >
                                     23/05/1995
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -446,6 +435,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -469,8 +460,6 @@ ShallowWrapper {
                         >
                                     23/05/1995
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -480,6 +469,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -499,8 +490,6 @@ ShallowWrapper {
                         <td
                                     onClick={[Function]}
                         />
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -510,6 +499,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -533,6 +524,15 @@ ShallowWrapper {
                         >
                                     23/05/1995
                         </td>
+                        <td
+                                    className="remove-list-item"
+                        >
+                                    <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                    />
+                        </td>
             </tr>
 </tbody>,
         ],
@@ -546,7 +546,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <tr>
-              <th />
               <th
                             scope="col"
               >
@@ -593,6 +592,7 @@ ShallowWrapper {
                                           key3
                             </span>
               </th>
+              <th />
 </tr>,
           },
           "ref": null,
@@ -602,7 +602,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <th />,
                 Array [
                   <th
                     scope="col"
@@ -651,19 +650,11 @@ ShallowWrapper {
                     </span>
 </th>,
                 ],
+                <th />,
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": "th",
-              },
               Object {
                 "instance": null,
                 "key": "key",
@@ -834,6 +825,15 @@ ShallowWrapper {
                 },
                 "type": "th",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "th",
+              },
             ],
             "type": "tr",
           },
@@ -846,15 +846,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <tr>
-                <td
-                                className="remove-list-item"
-                >
-                                <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                />
-                </td>
                 <td
                                 onClick={[Function]}
                 >
@@ -878,8 +869,6 @@ ShallowWrapper {
                 >
                                 23/05/1995
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -889,6 +878,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -912,8 +903,6 @@ ShallowWrapper {
                 >
                                 23/05/1995
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -923,6 +912,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -946,8 +937,6 @@ ShallowWrapper {
                 >
                                 23/05/1995
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -957,6 +946,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -976,8 +967,6 @@ ShallowWrapper {
                 <td
                                 onClick={[Function]}
                 />
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -987,6 +976,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -1010,6 +1001,15 @@ ShallowWrapper {
                 >
                                 23/05/1995
                 </td>
+                <td
+                                className="remove-list-item"
+                >
+                                <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                />
+                </td>
 </tr>,
             ],
           },
@@ -1021,15 +1021,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
                   Array [
                     <td
                       onClick={[Function]}
@@ -1055,38 +1046,19 @@ ShallowWrapper {
                       23/05/1995
 </td>,
                   ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <img
-                      alt="delete"
-                      onClick={[Function]}
-                      src="delete.svg"
-/>,
-                    "className": "remove-list-item",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "delete",
-                      "onClick": [Function],
-                      "src": "delete.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  "type": "td",
-                },
                 Object {
                   "instance": null,
                   "key": "td-0-0",
@@ -1149,53 +1121,6 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id2",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      23/05/1995
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1224,6 +1149,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      23/05/1995
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-1-0",
@@ -1286,53 +1258,6 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id3",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 3
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      3
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      23/05/1995
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1361,6 +1286,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 3
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      3
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      23/05/1995
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-2-0",
@@ -1423,49 +1395,6 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id4",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 4
-</td>,
-                    <td
-                      onClick={[Function]}
-/>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="false"
-                                            src="cross.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
-/>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1494,6 +1423,49 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id4",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 4
+</td>,
+                    <td
+                      onClick={[Function]}
+/>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="false"
+                                            src="cross.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+/>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-3-0",
@@ -1556,53 +1528,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id5",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 5
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      4
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      23/05/1995
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1631,6 +1556,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id5",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 5
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      4
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      23/05/1995
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-4-0",
@@ -1693,6 +1665,34 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="delete"
+                      onClick={[Function]}
+                      src="delete.svg"
+/>,
+                    "className": "remove-list-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "delete",
+                      "onClick": [Function],
+                      "src": "delete.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
               ],
               "type": "tr",
             },
@@ -1715,7 +1715,6 @@ ShallowWrapper {
 >
           <thead>
                     <tr>
-                              <th />
                               <th
                                         scope="col"
                               >
@@ -1762,19 +1761,11 @@ ShallowWrapper {
                                                   key3
                                         </span>
                               </th>
+                              <th />
                     </tr>
           </thead>
           <tbody>
                     <tr>
-                              <td
-                                        className="remove-list-item"
-                              >
-                                        <img
-                                                  alt="delete"
-                                                  onClick={[Function]}
-                                                  src="delete.svg"
-                                        />
-                              </td>
                               <td
                                         onClick={[Function]}
                               >
@@ -1798,8 +1789,6 @@ ShallowWrapper {
                               >
                                         23/05/1995
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -1809,6 +1798,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -1832,8 +1823,6 @@ ShallowWrapper {
                               >
                                         23/05/1995
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -1843,6 +1832,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -1866,8 +1857,6 @@ ShallowWrapper {
                               >
                                         23/05/1995
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -1877,6 +1866,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -1896,8 +1887,6 @@ ShallowWrapper {
                               <td
                                         onClick={[Function]}
                               />
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -1907,6 +1896,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -1930,6 +1921,15 @@ ShallowWrapper {
                               >
                                         23/05/1995
                               </td>
+                              <td
+                                        className="remove-list-item"
+                              >
+                                        <img
+                                                  alt="delete"
+                                                  onClick={[Function]}
+                                                  src="delete.svg"
+                                        />
+                              </td>
                     </tr>
           </tbody>
 </table>,
@@ -1944,7 +1944,6 @@ ShallowWrapper {
           "children": Array [
             <thead>
               <tr>
-                            <th />
                             <th
                                           scope="col"
                             >
@@ -1991,19 +1990,11 @@ ShallowWrapper {
                                                         key3
                                           </span>
                             </th>
+                            <th />
               </tr>
 </thead>,
             <tbody>
               <tr>
-                            <td
-                                          className="remove-list-item"
-                            >
-                                          <img
-                                                        alt="delete"
-                                                        onClick={[Function]}
-                                                        src="delete.svg"
-                                          />
-                            </td>
                             <td
                                           onClick={[Function]}
                             >
@@ -2027,8 +2018,6 @@ ShallowWrapper {
                             >
                                           23/05/1995
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -2038,6 +2027,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -2061,8 +2052,6 @@ ShallowWrapper {
                             >
                                           23/05/1995
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -2072,6 +2061,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -2095,8 +2086,6 @@ ShallowWrapper {
                             >
                                           23/05/1995
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -2106,6 +2095,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -2125,8 +2116,6 @@ ShallowWrapper {
                             <td
                                           onClick={[Function]}
                             />
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -2136,6 +2125,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -2159,6 +2150,15 @@ ShallowWrapper {
                             >
                                           23/05/1995
                             </td>
+                            <td
+                                          className="remove-list-item"
+                            >
+                                          <img
+                                                        alt="delete"
+                                                        onClick={[Function]}
+                                                        src="delete.svg"
+                                          />
+                            </td>
               </tr>
 </tbody>,
           ],
@@ -2172,7 +2172,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <tr>
-                <th />
                 <th
                                 scope="col"
                 >
@@ -2219,6 +2218,7 @@ ShallowWrapper {
                                                 key3
                                 </span>
                 </th>
+                <th />
 </tr>,
             },
             "ref": null,
@@ -2228,7 +2228,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <th />,
                   Array [
                     <th
                       scope="col"
@@ -2277,19 +2276,11 @@ ShallowWrapper {
                       </span>
 </th>,
                   ],
+                  <th />,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": "th",
-                },
                 Object {
                   "instance": null,
                   "key": "key",
@@ -2460,6 +2451,15 @@ ShallowWrapper {
                   },
                   "type": "th",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "th",
+                },
               ],
               "type": "tr",
             },
@@ -2472,15 +2472,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <tr>
-                  <td
-                                    className="remove-list-item"
-                  >
-                                    <img
-                                                      alt="delete"
-                                                      onClick={[Function]}
-                                                      src="delete.svg"
-                                    />
-                  </td>
                   <td
                                     onClick={[Function]}
                   >
@@ -2504,8 +2495,6 @@ ShallowWrapper {
                   >
                                     23/05/1995
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -2515,6 +2504,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -2538,8 +2529,6 @@ ShallowWrapper {
                   >
                                     23/05/1995
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -2549,6 +2538,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -2572,8 +2563,6 @@ ShallowWrapper {
                   >
                                     23/05/1995
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -2583,6 +2572,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -2602,8 +2593,6 @@ ShallowWrapper {
                   <td
                                     onClick={[Function]}
                   />
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -2613,6 +2602,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -2636,6 +2627,15 @@ ShallowWrapper {
                   >
                                     23/05/1995
                   </td>
+                  <td
+                                    className="remove-list-item"
+                  >
+                                    <img
+                                                      alt="delete"
+                                                      onClick={[Function]}
+                                                      src="delete.svg"
+                                    />
+                  </td>
 </tr>,
               ],
             },
@@ -2647,15 +2647,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
                     Array [
                       <td
                         onClick={[Function]}
@@ -2681,38 +2672,19 @@ ShallowWrapper {
                         23/05/1995
 </td>,
                     ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <img
-                        alt="delete"
-                        onClick={[Function]}
-                        src="delete.svg"
-/>,
-                      "className": "remove-list-item",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "delete",
-                        "onClick": [Function],
-                        "src": "delete.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    "type": "td",
-                  },
                   Object {
                     "instance": null,
                     "key": "td-0-0",
@@ -2775,53 +2747,6 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id2",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        23/05/1995
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -2850,6 +2775,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        23/05/1995
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-1-0",
@@ -2912,53 +2884,6 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id3",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 3
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        3
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        23/05/1995
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -2987,6 +2912,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 3
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        3
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        23/05/1995
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-2-0",
@@ -3049,49 +3021,6 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id4",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 4
-</td>,
-                      <td
-                        onClick={[Function]}
-/>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="false"
-                                                src="cross.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
-/>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -3120,6 +3049,49 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id4",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 4
+</td>,
+                      <td
+                        onClick={[Function]}
+/>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="false"
+                                                src="cross.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+/>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-3-0",
@@ -3182,53 +3154,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id5",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 5
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        4
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        23/05/1995
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -3257,6 +3182,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id5",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 5
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        4
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        23/05/1995
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-4-0",
@@ -3317,6 +3289,34 @@ ShallowWrapper {
                     },
                     "ref": null,
                     "rendered": "23/05/1995",
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="delete"
+                        onClick={[Function]}
+                        src="delete.svg"
+/>,
+                      "className": "remove-list-item",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "delete",
+                        "onClick": [Function],
+                        "src": "delete.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
                     "type": "td",
                   },
                 ],
@@ -3430,7 +3430,6 @@ ShallowWrapper {
 >
         <thead>
                 <tr>
-                        <th />
                         <th
                                 scope="col"
                         >
@@ -3477,19 +3476,11 @@ ShallowWrapper {
                                         key3
                                 </span>
                         </th>
+                        <th />
                 </tr>
         </thead>
         <tbody>
                 <tr>
-                        <td
-                                className="remove-list-item"
-                        >
-                                <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                                />
-                        </td>
                         <td
                                 onClick={[Function]}
                         >
@@ -3513,8 +3504,6 @@ ShallowWrapper {
                         >
                                 Tuesday 23 May
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -3524,6 +3513,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -3547,8 +3538,6 @@ ShallowWrapper {
                         >
                                 Tuesday 23 May
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -3558,6 +3547,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -3581,8 +3572,6 @@ ShallowWrapper {
                         >
                                 Tuesday 23 May
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -3592,6 +3581,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -3611,8 +3602,6 @@ ShallowWrapper {
                         <td
                                 onClick={[Function]}
                         />
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -3622,6 +3611,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -3645,6 +3636,15 @@ ShallowWrapper {
                         >
                                 Tuesday 23 May
                         </td>
+                        <td
+                                className="remove-list-item"
+                        >
+                                <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                                />
+                        </td>
                 </tr>
         </tbody>
 </table>,
@@ -3659,7 +3659,6 @@ ShallowWrapper {
         "children": Array [
           <thead>
             <tr>
-                        <th />
                         <th
                                     scope="col"
                         >
@@ -3706,19 +3705,11 @@ ShallowWrapper {
                                                 key3
                                     </span>
                         </th>
+                        <th />
             </tr>
 </thead>,
           <tbody>
             <tr>
-                        <td
-                                    className="remove-list-item"
-                        >
-                                    <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                    />
-                        </td>
                         <td
                                     onClick={[Function]}
                         >
@@ -3742,8 +3733,6 @@ ShallowWrapper {
                         >
                                     Tuesday 23 May
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -3753,6 +3742,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -3776,8 +3767,6 @@ ShallowWrapper {
                         >
                                     Tuesday 23 May
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -3787,6 +3776,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -3810,8 +3801,6 @@ ShallowWrapper {
                         >
                                     Tuesday 23 May
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -3821,6 +3810,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -3840,8 +3831,6 @@ ShallowWrapper {
                         <td
                                     onClick={[Function]}
                         />
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -3851,6 +3840,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -3874,6 +3865,15 @@ ShallowWrapper {
                         >
                                     Tuesday 23 May
                         </td>
+                        <td
+                                    className="remove-list-item"
+                        >
+                                    <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                    />
+                        </td>
             </tr>
 </tbody>,
         ],
@@ -3887,7 +3887,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <tr>
-              <th />
               <th
                             scope="col"
               >
@@ -3934,6 +3933,7 @@ ShallowWrapper {
                                           key3
                             </span>
               </th>
+              <th />
 </tr>,
           },
           "ref": null,
@@ -3943,7 +3943,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <th />,
                 Array [
                   <th
                     scope="col"
@@ -3992,19 +3991,11 @@ ShallowWrapper {
                     </span>
 </th>,
                 ],
+                <th />,
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": "th",
-              },
               Object {
                 "instance": null,
                 "key": "key",
@@ -4175,6 +4166,15 @@ ShallowWrapper {
                 },
                 "type": "th",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "th",
+              },
             ],
             "type": "tr",
           },
@@ -4187,15 +4187,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <tr>
-                <td
-                                className="remove-list-item"
-                >
-                                <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                />
-                </td>
                 <td
                                 onClick={[Function]}
                 >
@@ -4219,8 +4210,6 @@ ShallowWrapper {
                 >
                                 Tuesday 23 May
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -4230,6 +4219,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -4253,8 +4244,6 @@ ShallowWrapper {
                 >
                                 Tuesday 23 May
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -4264,6 +4253,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -4287,8 +4278,6 @@ ShallowWrapper {
                 >
                                 Tuesday 23 May
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -4298,6 +4287,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -4317,8 +4308,6 @@ ShallowWrapper {
                 <td
                                 onClick={[Function]}
                 />
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -4328,6 +4317,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -4351,6 +4342,15 @@ ShallowWrapper {
                 >
                                 Tuesday 23 May
                 </td>
+                <td
+                                className="remove-list-item"
+                >
+                                <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                />
+                </td>
 </tr>,
             ],
           },
@@ -4362,15 +4362,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
                   Array [
                     <td
                       onClick={[Function]}
@@ -4396,38 +4387,19 @@ ShallowWrapper {
                       Tuesday 23 May
 </td>,
                   ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <img
-                      alt="delete"
-                      onClick={[Function]}
-                      src="delete.svg"
-/>,
-                    "className": "remove-list-item",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "delete",
-                      "onClick": [Function],
-                      "src": "delete.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  "type": "td",
-                },
                 Object {
                   "instance": null,
                   "key": "td-0-0",
@@ -4490,53 +4462,6 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id2",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      Tuesday 23 May
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4565,6 +4490,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      Tuesday 23 May
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-1-0",
@@ -4627,53 +4599,6 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id3",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 3
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      3
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      Tuesday 23 May
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4702,6 +4627,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 3
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      3
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      Tuesday 23 May
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-2-0",
@@ -4764,49 +4736,6 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id4",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 4
-</td>,
-                    <td
-                      onClick={[Function]}
-/>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="false"
-                                            src="cross.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
-/>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4835,6 +4764,49 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id4",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 4
+</td>,
+                    <td
+                      onClick={[Function]}
+/>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="false"
+                                            src="cross.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+/>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-3-0",
@@ -4897,53 +4869,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id5",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 5
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      4
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      Tuesday 23 May
-</td>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -4972,6 +4897,53 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id5",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 5
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      4
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      Tuesday 23 May
+</td>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-4-0",
@@ -5034,6 +5006,34 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="delete"
+                      onClick={[Function]}
+                      src="delete.svg"
+/>,
+                    "className": "remove-list-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "delete",
+                      "onClick": [Function],
+                      "src": "delete.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
               ],
               "type": "tr",
             },
@@ -5056,7 +5056,6 @@ ShallowWrapper {
 >
           <thead>
                     <tr>
-                              <th />
                               <th
                                         scope="col"
                               >
@@ -5103,19 +5102,11 @@ ShallowWrapper {
                                                   key3
                                         </span>
                               </th>
+                              <th />
                     </tr>
           </thead>
           <tbody>
                     <tr>
-                              <td
-                                        className="remove-list-item"
-                              >
-                                        <img
-                                                  alt="delete"
-                                                  onClick={[Function]}
-                                                  src="delete.svg"
-                                        />
-                              </td>
                               <td
                                         onClick={[Function]}
                               >
@@ -5139,8 +5130,6 @@ ShallowWrapper {
                               >
                                         Tuesday 23 May
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -5150,6 +5139,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -5173,8 +5164,6 @@ ShallowWrapper {
                               >
                                         Tuesday 23 May
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -5184,6 +5173,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -5207,8 +5198,6 @@ ShallowWrapper {
                               >
                                         Tuesday 23 May
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -5218,6 +5207,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -5237,8 +5228,6 @@ ShallowWrapper {
                               <td
                                         onClick={[Function]}
                               />
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -5248,6 +5237,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -5271,6 +5262,15 @@ ShallowWrapper {
                               >
                                         Tuesday 23 May
                               </td>
+                              <td
+                                        className="remove-list-item"
+                              >
+                                        <img
+                                                  alt="delete"
+                                                  onClick={[Function]}
+                                                  src="delete.svg"
+                                        />
+                              </td>
                     </tr>
           </tbody>
 </table>,
@@ -5285,7 +5285,6 @@ ShallowWrapper {
           "children": Array [
             <thead>
               <tr>
-                            <th />
                             <th
                                           scope="col"
                             >
@@ -5332,19 +5331,11 @@ ShallowWrapper {
                                                         key3
                                           </span>
                             </th>
+                            <th />
               </tr>
 </thead>,
             <tbody>
               <tr>
-                            <td
-                                          className="remove-list-item"
-                            >
-                                          <img
-                                                        alt="delete"
-                                                        onClick={[Function]}
-                                                        src="delete.svg"
-                                          />
-                            </td>
                             <td
                                           onClick={[Function]}
                             >
@@ -5368,8 +5359,6 @@ ShallowWrapper {
                             >
                                           Tuesday 23 May
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -5379,6 +5368,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -5402,8 +5393,6 @@ ShallowWrapper {
                             >
                                           Tuesday 23 May
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -5413,6 +5402,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -5436,8 +5427,6 @@ ShallowWrapper {
                             >
                                           Tuesday 23 May
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -5447,6 +5436,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -5466,8 +5457,6 @@ ShallowWrapper {
                             <td
                                           onClick={[Function]}
                             />
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -5477,6 +5466,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -5500,6 +5491,15 @@ ShallowWrapper {
                             >
                                           Tuesday 23 May
                             </td>
+                            <td
+                                          className="remove-list-item"
+                            >
+                                          <img
+                                                        alt="delete"
+                                                        onClick={[Function]}
+                                                        src="delete.svg"
+                                          />
+                            </td>
               </tr>
 </tbody>,
           ],
@@ -5513,7 +5513,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <tr>
-                <th />
                 <th
                                 scope="col"
                 >
@@ -5560,6 +5559,7 @@ ShallowWrapper {
                                                 key3
                                 </span>
                 </th>
+                <th />
 </tr>,
             },
             "ref": null,
@@ -5569,7 +5569,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <th />,
                   Array [
                     <th
                       scope="col"
@@ -5618,19 +5617,11 @@ ShallowWrapper {
                       </span>
 </th>,
                   ],
+                  <th />,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": "th",
-                },
                 Object {
                   "instance": null,
                   "key": "key",
@@ -5801,6 +5792,15 @@ ShallowWrapper {
                   },
                   "type": "th",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "th",
+                },
               ],
               "type": "tr",
             },
@@ -5813,15 +5813,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <tr>
-                  <td
-                                    className="remove-list-item"
-                  >
-                                    <img
-                                                      alt="delete"
-                                                      onClick={[Function]}
-                                                      src="delete.svg"
-                                    />
-                  </td>
                   <td
                                     onClick={[Function]}
                   >
@@ -5845,8 +5836,6 @@ ShallowWrapper {
                   >
                                     Tuesday 23 May
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -5856,6 +5845,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -5879,8 +5870,6 @@ ShallowWrapper {
                   >
                                     Tuesday 23 May
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -5890,6 +5879,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -5913,8 +5904,6 @@ ShallowWrapper {
                   >
                                     Tuesday 23 May
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -5924,6 +5913,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -5943,8 +5934,6 @@ ShallowWrapper {
                   <td
                                     onClick={[Function]}
                   />
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -5954,6 +5943,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -5977,6 +5968,15 @@ ShallowWrapper {
                   >
                                     Tuesday 23 May
                   </td>
+                  <td
+                                    className="remove-list-item"
+                  >
+                                    <img
+                                                      alt="delete"
+                                                      onClick={[Function]}
+                                                      src="delete.svg"
+                                    />
+                  </td>
 </tr>,
               ],
             },
@@ -5988,15 +5988,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
                     Array [
                       <td
                         onClick={[Function]}
@@ -6022,38 +6013,19 @@ ShallowWrapper {
                         Tuesday 23 May
 </td>,
                     ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <img
-                        alt="delete"
-                        onClick={[Function]}
-                        src="delete.svg"
-/>,
-                      "className": "remove-list-item",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "delete",
-                        "onClick": [Function],
-                        "src": "delete.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    "type": "td",
-                  },
                   Object {
                     "instance": null,
                     "key": "td-0-0",
@@ -6116,53 +6088,6 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id2",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        Tuesday 23 May
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -6191,6 +6116,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        Tuesday 23 May
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-1-0",
@@ -6253,53 +6225,6 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id3",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 3
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        3
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        Tuesday 23 May
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -6328,6 +6253,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 3
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        3
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        Tuesday 23 May
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-2-0",
@@ -6390,49 +6362,6 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id4",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 4
-</td>,
-                      <td
-                        onClick={[Function]}
-/>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="false"
-                                                src="cross.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
-/>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -6461,6 +6390,49 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id4",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 4
+</td>,
+                      <td
+                        onClick={[Function]}
+/>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="false"
+                                                src="cross.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+/>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-3-0",
@@ -6523,53 +6495,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id5",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 5
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        4
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        Tuesday 23 May
-</td>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -6598,6 +6523,53 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id5",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 5
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        4
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        Tuesday 23 May
+</td>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-4-0",
@@ -6658,6 +6630,34 @@ ShallowWrapper {
                     },
                     "ref": null,
                     "rendered": "Tuesday 23 May",
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="delete"
+                        onClick={[Function]}
+                        src="delete.svg"
+/>,
+                      "className": "remove-list-item",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "delete",
+                        "onClick": [Function],
+                        "src": "delete.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
                     "type": "td",
                   },
                 ],
@@ -6751,7 +6751,6 @@ ShallowWrapper {
 >
         <thead>
                 <tr>
-                        <th />
                         <th
                                 scope="col"
                         >
@@ -6798,19 +6797,11 @@ ShallowWrapper {
                                         key3
                                 </span>
                         </th>
+                        <th />
                 </tr>
         </thead>
         <tbody>
                 <tr>
-                        <td
-                                className="remove-list-item"
-                        >
-                                <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                                />
-                        </td>
                         <td
                                 onClick={[Function]}
                         >
@@ -6834,8 +6825,6 @@ ShallowWrapper {
                         >
                                 Lorem ipsum dolor sit amet, co...
                         </td>
-                </tr>
-                <tr>
                         <td
                                 className="remove-list-item"
                         >
@@ -6845,6 +6834,8 @@ ShallowWrapper {
                                         src="delete.svg"
                                 />
                         </td>
+                </tr>
+                <tr>
                         <td
                                 onClick={[Function]}
                         >
@@ -6866,6 +6857,15 @@ ShallowWrapper {
                         <td
                                 onClick={[Function]}
                         />
+                        <td
+                                className="remove-list-item"
+                        >
+                                <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                                />
+                        </td>
                 </tr>
         </tbody>
 </table>,
@@ -6880,7 +6880,6 @@ ShallowWrapper {
         "children": Array [
           <thead>
             <tr>
-                        <th />
                         <th
                                     scope="col"
                         >
@@ -6927,19 +6926,11 @@ ShallowWrapper {
                                                 key3
                                     </span>
                         </th>
+                        <th />
             </tr>
 </thead>,
           <tbody>
             <tr>
-                        <td
-                                    className="remove-list-item"
-                        >
-                                    <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                    />
-                        </td>
                         <td
                                     onClick={[Function]}
                         >
@@ -6963,8 +6954,6 @@ ShallowWrapper {
                         >
                                     Lorem ipsum dolor sit amet, co...
                         </td>
-            </tr>
-            <tr>
                         <td
                                     className="remove-list-item"
                         >
@@ -6974,6 +6963,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                     />
                         </td>
+            </tr>
+            <tr>
                         <td
                                     onClick={[Function]}
                         >
@@ -6995,6 +6986,15 @@ ShallowWrapper {
                         <td
                                     onClick={[Function]}
                         />
+                        <td
+                                    className="remove-list-item"
+                        >
+                                    <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                    />
+                        </td>
             </tr>
 </tbody>,
         ],
@@ -7008,7 +7008,6 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <tr>
-              <th />
               <th
                             scope="col"
               >
@@ -7055,6 +7054,7 @@ ShallowWrapper {
                                           key3
                             </span>
               </th>
+              <th />
 </tr>,
           },
           "ref": null,
@@ -7064,7 +7064,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <th />,
                 Array [
                   <th
                     scope="col"
@@ -7113,19 +7112,11 @@ ShallowWrapper {
                     </span>
 </th>,
                 ],
+                <th />,
               ],
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {},
-                "ref": null,
-                "rendered": null,
-                "type": "th",
-              },
               Object {
                 "instance": null,
                 "key": "key",
@@ -7296,6 +7287,15 @@ ShallowWrapper {
                 },
                 "type": "th",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "th",
+              },
             ],
             "type": "tr",
           },
@@ -7308,15 +7308,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <tr>
-                <td
-                                className="remove-list-item"
-                >
-                                <img
-                                                alt="delete"
-                                                onClick={[Function]}
-                                                src="delete.svg"
-                                />
-                </td>
                 <td
                                 onClick={[Function]}
                 >
@@ -7340,8 +7331,6 @@ ShallowWrapper {
                 >
                                 Lorem ipsum dolor sit amet, co...
                 </td>
-</tr>,
-              <tr>
                 <td
                                 className="remove-list-item"
                 >
@@ -7351,6 +7340,8 @@ ShallowWrapper {
                                                 src="delete.svg"
                                 />
                 </td>
+</tr>,
+              <tr>
                 <td
                                 onClick={[Function]}
                 >
@@ -7372,6 +7363,15 @@ ShallowWrapper {
                 <td
                                 onClick={[Function]}
                 />
+                <td
+                                className="remove-list-item"
+                >
+                                <img
+                                                alt="delete"
+                                                onClick={[Function]}
+                                                src="delete.svg"
+                                />
+                </td>
 </tr>,
             ],
           },
@@ -7383,15 +7383,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
                   Array [
                     <td
                       onClick={[Function]}
@@ -7417,38 +7408,19 @@ ShallowWrapper {
                       Lorem ipsum dolor sit amet, co...
 </td>,
                   ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <img
-                      alt="delete"
-                      onClick={[Function]}
-                      src="delete.svg"
-/>,
-                    "className": "remove-list-item",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "alt": "delete",
-                      "onClick": [Function],
-                      "src": "delete.svg",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "img",
-                  },
-                  "type": "td",
-                },
                 Object {
                   "instance": null,
                   "key": "td-0-0",
@@ -7511,51 +7483,6 @@ ShallowWrapper {
                   "rendered": "Lorem ipsum dolor sit amet, co...",
                   "type": "td",
                 },
-              ],
-              "type": "tr",
-            },
-            Object {
-              "instance": null,
-              "key": "id2",
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <td
-                    className="remove-list-item"
->
-                    <img
-                                        alt="delete"
-                                        onClick={[Function]}
-                                        src="delete.svg"
-                    />
-</td>,
-                  Array [
-                    <td
-                      onClick={[Function]}
->
-                      test 2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      2
-</td>,
-                    <td
-                      onClick={[Function]}
->
-                      <img
-                                            alt="true"
-                                            src="check.svg"
-                      />
-</td>,
-                    <td
-                      onClick={[Function]}
-/>,
-                  ],
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -7584,6 +7511,51 @@ ShallowWrapper {
                   },
                   "type": "td",
                 },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      onClick={[Function]}
+>
+                      test 2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      2
+</td>,
+                    <td
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      onClick={[Function]}
+/>,
+                  ],
+                  <td
+                    className="remove-list-item"
+>
+                    <img
+                                        alt="delete"
+                                        onClick={[Function]}
+                                        src="delete.svg"
+                    />
+</td>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
                 Object {
                   "instance": null,
                   "key": "td-1-0",
@@ -7646,6 +7618,34 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="delete"
+                      onClick={[Function]}
+                      src="delete.svg"
+/>,
+                    "className": "remove-list-item",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "delete",
+                      "onClick": [Function],
+                      "src": "delete.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
               ],
               "type": "tr",
             },
@@ -7668,7 +7668,6 @@ ShallowWrapper {
 >
           <thead>
                     <tr>
-                              <th />
                               <th
                                         scope="col"
                               >
@@ -7715,19 +7714,11 @@ ShallowWrapper {
                                                   key3
                                         </span>
                               </th>
+                              <th />
                     </tr>
           </thead>
           <tbody>
                     <tr>
-                              <td
-                                        className="remove-list-item"
-                              >
-                                        <img
-                                                  alt="delete"
-                                                  onClick={[Function]}
-                                                  src="delete.svg"
-                                        />
-                              </td>
                               <td
                                         onClick={[Function]}
                               >
@@ -7751,8 +7742,6 @@ ShallowWrapper {
                               >
                                         Lorem ipsum dolor sit amet, co...
                               </td>
-                    </tr>
-                    <tr>
                               <td
                                         className="remove-list-item"
                               >
@@ -7762,6 +7751,8 @@ ShallowWrapper {
                                                   src="delete.svg"
                                         />
                               </td>
+                    </tr>
+                    <tr>
                               <td
                                         onClick={[Function]}
                               >
@@ -7783,6 +7774,15 @@ ShallowWrapper {
                               <td
                                         onClick={[Function]}
                               />
+                              <td
+                                        className="remove-list-item"
+                              >
+                                        <img
+                                                  alt="delete"
+                                                  onClick={[Function]}
+                                                  src="delete.svg"
+                                        />
+                              </td>
                     </tr>
           </tbody>
 </table>,
@@ -7797,7 +7797,6 @@ ShallowWrapper {
           "children": Array [
             <thead>
               <tr>
-                            <th />
                             <th
                                           scope="col"
                             >
@@ -7844,19 +7843,11 @@ ShallowWrapper {
                                                         key3
                                           </span>
                             </th>
+                            <th />
               </tr>
 </thead>,
             <tbody>
               <tr>
-                            <td
-                                          className="remove-list-item"
-                            >
-                                          <img
-                                                        alt="delete"
-                                                        onClick={[Function]}
-                                                        src="delete.svg"
-                                          />
-                            </td>
                             <td
                                           onClick={[Function]}
                             >
@@ -7880,8 +7871,6 @@ ShallowWrapper {
                             >
                                           Lorem ipsum dolor sit amet, co...
                             </td>
-              </tr>
-              <tr>
                             <td
                                           className="remove-list-item"
                             >
@@ -7891,6 +7880,8 @@ ShallowWrapper {
                                                         src="delete.svg"
                                           />
                             </td>
+              </tr>
+              <tr>
                             <td
                                           onClick={[Function]}
                             >
@@ -7912,6 +7903,15 @@ ShallowWrapper {
                             <td
                                           onClick={[Function]}
                             />
+                            <td
+                                          className="remove-list-item"
+                            >
+                                          <img
+                                                        alt="delete"
+                                                        onClick={[Function]}
+                                                        src="delete.svg"
+                                          />
+                            </td>
               </tr>
 </tbody>,
           ],
@@ -7925,7 +7925,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <tr>
-                <th />
                 <th
                                 scope="col"
                 >
@@ -7972,6 +7971,7 @@ ShallowWrapper {
                                                 key3
                                 </span>
                 </th>
+                <th />
 </tr>,
             },
             "ref": null,
@@ -7981,7 +7981,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <th />,
                   Array [
                     <th
                       scope="col"
@@ -8030,19 +8029,11 @@ ShallowWrapper {
                       </span>
 </th>,
                   ],
+                  <th />,
                 ],
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {},
-                  "ref": null,
-                  "rendered": null,
-                  "type": "th",
-                },
                 Object {
                   "instance": null,
                   "key": "key",
@@ -8213,6 +8204,15 @@ ShallowWrapper {
                   },
                   "type": "th",
                 },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "th",
+                },
               ],
               "type": "tr",
             },
@@ -8225,15 +8225,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <tr>
-                  <td
-                                    className="remove-list-item"
-                  >
-                                    <img
-                                                      alt="delete"
-                                                      onClick={[Function]}
-                                                      src="delete.svg"
-                                    />
-                  </td>
                   <td
                                     onClick={[Function]}
                   >
@@ -8257,8 +8248,6 @@ ShallowWrapper {
                   >
                                     Lorem ipsum dolor sit amet, co...
                   </td>
-</tr>,
-                <tr>
                   <td
                                     className="remove-list-item"
                   >
@@ -8268,6 +8257,8 @@ ShallowWrapper {
                                                       src="delete.svg"
                                     />
                   </td>
+</tr>,
+                <tr>
                   <td
                                     onClick={[Function]}
                   >
@@ -8289,6 +8280,15 @@ ShallowWrapper {
                   <td
                                     onClick={[Function]}
                   />
+                  <td
+                                    className="remove-list-item"
+                  >
+                                    <img
+                                                      alt="delete"
+                                                      onClick={[Function]}
+                                                      src="delete.svg"
+                                    />
+                  </td>
 </tr>,
               ],
             },
@@ -8300,15 +8300,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
                     Array [
                       <td
                         onClick={[Function]}
@@ -8334,38 +8325,19 @@ ShallowWrapper {
                         Lorem ipsum dolor sit amet, co...
 </td>,
                     ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <img
-                        alt="delete"
-                        onClick={[Function]}
-                        src="delete.svg"
-/>,
-                      "className": "remove-list-item",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "alt": "delete",
-                        "onClick": [Function],
-                        "src": "delete.svg",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "img",
-                    },
-                    "type": "td",
-                  },
                   Object {
                     "instance": null,
                     "key": "td-0-0",
@@ -8428,51 +8400,6 @@ ShallowWrapper {
                     "rendered": "Lorem ipsum dolor sit amet, co...",
                     "type": "td",
                   },
-                ],
-                "type": "tr",
-              },
-              Object {
-                "instance": null,
-                "key": "id2",
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <td
-                      className="remove-list-item"
->
-                      <img
-                                            alt="delete"
-                                            onClick={[Function]}
-                                            src="delete.svg"
-                      />
-</td>,
-                    Array [
-                      <td
-                        onClick={[Function]}
->
-                        test 2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        2
-</td>,
-                      <td
-                        onClick={[Function]}
->
-                        <img
-                                                alt="true"
-                                                src="check.svg"
-                        />
-</td>,
-                      <td
-                        onClick={[Function]}
-/>,
-                    ],
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -8501,6 +8428,51 @@ ShallowWrapper {
                     },
                     "type": "td",
                   },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        onClick={[Function]}
+>
+                        test 2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        2
+</td>,
+                      <td
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        onClick={[Function]}
+/>,
+                    ],
+                    <td
+                      className="remove-list-item"
+>
+                      <img
+                                            alt="delete"
+                                            onClick={[Function]}
+                                            src="delete.svg"
+                      />
+</td>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
                   Object {
                     "instance": null,
                     "key": "td-1-0",
@@ -8561,6 +8533,34 @@ ShallowWrapper {
                     },
                     "ref": null,
                     "rendered": null,
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="delete"
+                        onClick={[Function]}
+                        src="delete.svg"
+/>,
+                      "className": "remove-list-item",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "delete",
+                        "onClick": [Function],
+                        "src": "delete.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
                     "type": "td",
                   },
                 ],

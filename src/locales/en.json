@@ -21,5 +21,10 @@
   "ELLIPSIS": "...",
   "NEXT": "Next",
   "PREVIOUS": "Previous",
-  "CURRENT": "Current"
+  "CURRENT": "Current",
+  "EMAIL": "email",
+  "FIRST_NAME": "firstName",
+  "LAST_NAME": "lastName",
+  "HAS_ACCESS": "hasAccess",
+  "ROLE": "role"
 }
