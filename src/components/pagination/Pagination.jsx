@@ -67,7 +67,7 @@ class Pagination extends React.Component {
                   <span className="sr-only">{strings.PREVIOUS}</span>
                 </span>
               </li>
-              {this.state.minPage > 1 && (
+              {state.minPage > 1 && (
                 <React.Fragment>
                   <li className="page-item" onClick={() => this.changePage(0)}>
                     <span className="page-link">1</span>
@@ -78,7 +78,7 @@ class Pagination extends React.Component {
                 </React.Fragment>
               )}
               {this.renderPages(nrOfPages)}
-              {this.state.maxPage < nrOfPages && (
+              {state.maxPage < nrOfPages && (
                 <React.Fragment>
                   <li className="page-item disabled ellipsis">
                     <span className="page-link">{strings.ELLIPSIS}</span>
