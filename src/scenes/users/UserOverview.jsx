@@ -15,18 +15,15 @@ class UserOverview extends Component {
     };
   }
   componentDidMount() {
-    console.log('CDM');
     this.props.getUsers(this.state.page, this.state.limit);
   }
 
   sortItems = (sortField, sortOrder) => {
-    console.log('sort');
     this.props.getUsers(this.state.page, this.state.limit, sortField, sortOrder);
     this.setState({ sortField, sortOrder });
   }
 
   handlePagination = (page, limit) => {
-    console.log('pagination');
     this.props.getUsers(page, limit, this.state.sortField, this.state.sortOrder);
     this.setState({ page, limit });
   };
