@@ -16,6 +16,7 @@ describe('auth reducer', () => {
     expect(
       auth(initialState, {
         type: constants.LOGIN_USER_FULFILLED,
+        payload: {data: {}, meta: {}},
       })
     ).toMatchSnapshot();
   });

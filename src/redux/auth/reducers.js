@@ -2,21 +2,23 @@ import constants from './constants';
 import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   ...defaultInitialState,
 };
 
 const auth = (state = initialState, action = {}) => {
-  const error = action.error;
+  const { payload } = action;
 
   switch (action.type) {
     case constants.LOGIN_USER_FULFILLED:
+      localStorage.setItem('ACCESS_TOKEN', payload.data.accessToken);
+      localStorage.setItem('REFRESH_TOKEN', payload.data.refreshToken);
       return {
         ...state,
         isLoggedIn: true,
         isPending: false,
       };
-      case constants.LOGIN_USER_PENDING:
+    case constants.LOGIN_USER_PENDING:
       return {
         ...state,
         isLoggedIn: false,
@@ -29,7 +31,7 @@ const auth = (state = initialState, action = {}) => {
         ...state,
         isPending: false,
         isError: true,
-        errorMessage: error.message,
+        errorMessage: payload.errors[0].detail,
       };
 
     case constants.LOGOUT_USER:

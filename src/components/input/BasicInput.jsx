@@ -5,7 +5,7 @@ const TextInput = props => (
   <div className="form-group">
     <label htmlFor={props.id}>{props.label}</label>
     <input type={props.type} className={`form-control ${!props.isValid ? 'is-invalid' : ''}`} id={props.id} placeholder={props.placeholder} value={props.value} onChange={props.handleChange} />
-    {!props.isValid && <div class="invalid-feedback">{props.errorMessage}</div>}
+    {!props.isValid && <div className="invalid-feedback">{props.errorMessage}</div>}
   </div>
 );
 
