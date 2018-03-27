@@ -22,7 +22,7 @@ exports[`auth reducer should LOGOUT_USER 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
-  "isLoggedIn": true,
+  "isLoggedIn": false,
   "isPending": false,
 }
 `;
@@ -31,7 +31,7 @@ exports[`auth reducer should return the initial state 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
-  "isLoggedIn": true,
+  "isLoggedIn": false,
   "isPending": false,
 }
 `;

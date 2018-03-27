@@ -629,7 +629,7 @@ ShallowWrapper {
           value="test"
 />,
         <div
-          class="invalid-feedback"
+          className="invalid-feedback"
 >
           This is an error message
 </div>,
@@ -672,7 +672,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "This is an error message",
-          "class": "invalid-feedback",
+          "className": "invalid-feedback",
         },
         "ref": null,
         "rendered": "This is an error message",
@@ -702,7 +702,7 @@ ShallowWrapper {
             value="test"
 />,
           <div
-            class="invalid-feedback"
+            className="invalid-feedback"
 >
             This is an error message
 </div>,
@@ -745,7 +745,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "This is an error message",
-            "class": "invalid-feedback",
+            "className": "invalid-feedback",
           },
           "ref": null,
           "rendered": "This is an error message",

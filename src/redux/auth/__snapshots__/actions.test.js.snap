@@ -3,7 +3,7 @@
 exports[`auth actions loginUser 1`] = `
 Array [
   Object {
-    "payload": true,
+    "payload": Promise {},
     "type": "LOGIN_USER",
   },
 ]

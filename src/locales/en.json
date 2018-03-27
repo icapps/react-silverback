@@ -26,5 +26,10 @@
   "ELLIPSIS": "...",
   "NEXT": "Next",
   "PREVIOUS": "Previous",
-  "CURRENT": "Current"
+  "CURRENT": "Current",
+  "LOGIN": "Sign in",
+  "PASSWORD": "Password",
+  "LOGIN_ERROR": "The email and/or password you entered are not valid.",
+  "LOGIN_EMAIL_REQUIRED":"Email is required",
+  "LOGIN_PASSWORD_REQUIRED":"Password is required"
 }
