@@ -204,16 +204,28 @@ storiesOf('Detail', module)
       title="Detail page"
       id="11111"
       inputItems={[
-        { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test2', label: "test2", type: "text" },
-        { id: 'key3', value: 123, label: "test3", type: "number" },
-        { id: 'key4', value: false, label: "test4", type: "boolean" },
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
       ]}
       history={{ goBack: () => { } }}
     />
   ));
 
+const plus = require('../assets/images/plus.svg');
 storiesOf('CreateModal', module)
   .add('default', () => (
-    <CreateModal/>
+    <CreateModal
+      primaryButtonText="Add item"
+      title="Add an item"
+      icon={plus}
+      createParameters={[
+        { id: 'key1', value: 'test', label: "test", type: "text" },
+        { id: 'key2', value: 'test2', label: "test2", type: "text" },
+        { id: 'key3', value: 123, label: "test3", type: "number" },
+        { id: 'key4', value: false, label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
+    />
   ));

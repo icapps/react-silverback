@@ -52,7 +52,6 @@ class Detail extends React.Component {
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
-                  handleSecondaryButton={() => { }}
                   handlePrimaryButton={this.setInputItems}
                   primaryButtonText={strings.RESET}
                   secondaryButtonText={strings.CANCEL}
@@ -66,7 +65,6 @@ class Detail extends React.Component {
               <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
-                handleSecondaryButton={() => { }}
                 handlePrimaryButton={this.setInputItems}
                 primaryButtonText={strings.DELETE}
                 secondaryButtonText={strings.CANCEL}
