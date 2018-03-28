@@ -1,0 +1,11 @@
+.detail-empty{
+  .back{
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .title {
+    padding-top: 2rem;
+  }
+}

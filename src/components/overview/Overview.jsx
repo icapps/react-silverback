@@ -15,7 +15,7 @@ class Overview extends React.Component {
     };
   }
   showDetailScreen = id => {
-    this.props.history.push(`${window.location.pathname}/${id}`);
+    this.props.history.push(`${window.location.pathname}/${id}`, id);
   };
 
   sortItems = (sortField, sortOrder) => {

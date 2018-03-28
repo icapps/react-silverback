@@ -1,8 +1,8 @@
 .modal.fade.show {
   display: block;
   opacity: 1;
-  -webkit-animation: fadeIn 0.7s;
-  animation: fadeIn 0.7s;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -16,8 +16,8 @@
 
 .modal-backdrop.fade.show{
   opacity: 0.5;
-  -webkit-animation: fadeInBackdrop 0.7s;
-  animation: fadeInBackdrop 0.7s;
+  -webkit-animation: fadeInBackdrop 0.5s;
+  animation: fadeInBackdrop 0.5s;
 }
 
 @-webkit-keyframes fadeInBackdrop {

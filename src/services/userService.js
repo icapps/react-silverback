@@ -7,3 +7,7 @@ export const get = async (page, limit, sortField, sortOrder) => {
   return result;
 };
 
+export const getById = async id => {
+  const result = await Network.get(`/users/${id}`);
+  return result;
+};
