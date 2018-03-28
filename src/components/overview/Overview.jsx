@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Pagination, Table, Button } from '../index';
+import { Pagination, Table, CreateModal } from '../index';
 import { strings } from '../../utils';
 import './overview.css';
-
-const plus = require('../../assets/images/plus.svg');
 
 class Overview extends React.Component {
   constructor() {
@@ -33,7 +31,12 @@ class Overview extends React.Component {
             {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
-            <Button text={`${strings.CREATE} ${props.title}`} handleClick={() => { }} className="btn-success" icon={plus} />
+            <CreateModal
+              primaryButtonText={`${strings.CREATE} ${props.title}`}
+              title={`${strings.CREATE} ${props.title}`}
+              createParameters={this.props.createParameters}
+              create={this.props.create}
+            />
           </div>
           {props.listItems.length > 0 ? (
             <React.Fragment>
@@ -69,6 +72,8 @@ Overview.propTypes = {
   history: PropTypes.object.isRequired,
   paginationTotalCount: PropTypes.number.isRequired,
   handlePagination: PropTypes.func.isRequired,
+  createParameters: PropTypes.array.isRequired,
+  create: PropTypes.func.isRequired,
 };
 
 export default Overview;

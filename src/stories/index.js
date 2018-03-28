@@ -177,6 +177,13 @@ storiesOf('Overview', module)
       history={{}}
       paginationTotalCount={100}
       handlePagination={action('handle pagination')}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
     />
   ))
   .add('empty state', () => (
@@ -194,6 +201,13 @@ storiesOf('Overview', module)
       history={{}}
       paginationTotalCount={100}
       handlePagination={action('handle pagination')}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
     />
   ));
 
@@ -204,12 +218,19 @@ storiesOf('Detail', module)
       title="Detail page"
       id="11111"
       inputItems={[
+        { id: 'key1', value: 'test', label: "test", type: "text" },
+        { id: 'key2', value: 'test', label: "test2", type: "text" },
+        { id: 'key3', value: 123, label: "test3", type: "number" },
+        { id: 'key4', value: false, label: "test4", type: "boolean" },
+      ]}
+      history={{ goBack: () => { } }}
+      createParameters={[
         { id: 'key1', label: "test", type: "text" },
         { id: 'key2', label: "test2", type: "text" },
         { id: 'key3', label: "test3", type: "number" },
         { id: 'key4', label: "test4", type: "boolean" },
       ]}
-      history={{ goBack: () => { } }}
+      create={action('create')}
     />
   ));
 

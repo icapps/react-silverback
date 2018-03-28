@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal } from '../index';
+import { BasicInput, Button, Checkbox, Modal, CreateModal } from '../index';
 import { strings } from '../../utils';
 import './detail.css';
 
-const plus = require('../../assets/images/plus.svg');
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
 class Detail extends React.Component {
@@ -39,7 +38,12 @@ class Detail extends React.Component {
           <div className="container">
             <div className="detail-header">
               <div className="back text-primary" onClick={this.props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
-              <Button text={`${strings.CREATE} ${this.props.dataType}`} handleClick={() => { }} className="btn-success" icon={plus} />
+              <CreateModal
+                primaryButtonText={`${strings.CREATE} ${this.props.dataType}`}
+                title={`${strings.CREATE} ${this.props.dataType}`}
+                createParameters={this.props.createParameters}
+                create={this.props.create}
+              />
             </div>
             <h3>{this.props.title}</h3>
             <span className="text-primary">{`${strings.ID}: ${this.props.id}`}</span>
@@ -88,6 +92,8 @@ Detail.propTypes = {
   id: PropTypes.string.isRequired,
   inputItems: PropTypes.array.isRequired,
   history: PropTypes.object.isRequired,
+  createParameters: PropTypes.array.isRequired,
+  create: PropTypes.func.isRequired,
 };
 
 export default Detail;
