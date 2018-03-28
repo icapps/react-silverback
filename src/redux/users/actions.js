@@ -14,3 +14,10 @@ export const getUsersById = id => {
     payload: userService.getById(id),
   };
 };
+
+export const updateUser = (id, user) => {
+  return {
+    type: constants.UPDATE_USER,
+    payload: userService.update(id, user),
+  };
+};

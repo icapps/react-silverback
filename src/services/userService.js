@@ -11,3 +11,8 @@ export const getById = async id => {
   const result = await Network.get(`/users/${id}`);
   return result;
 };
+
+export const update = async (id, user) => {
+  const result = await Network.patch(`/users/${id}`, user);
+  return result;
+};

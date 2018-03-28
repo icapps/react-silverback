@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail } from '../../components';
-import { getUsersById } from '../../redux/users/actions';
+import { getUsersById, updateUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserDetail extends Component {
   componentDidMount() {
     this.props.getUsersById(window.location.pathname.split('/')[2]);
+  }
+
+  updateUser = (id, user) => {
+    this.props.updateUser(id, user);
   }
 
   render() {
@@ -21,16 +25,24 @@ class UserDetail extends Component {
         { id: strings.HAS_ACCESS_ID, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean" },
       ]}
       history={this.props.history}
+      update={this.updateUser}
+      isUpdated={this.props.isUserUpdated}
+      isError={this.props.isError}
+      errorMessage={this.props.errorMessage}
     /> : <EmptyDetail history={this.props.history} />;
   }
 }
 
 const mapStateToProps = state => ({
   user: state.users.user,
+  isUserUpdated: state.users.isUserUpdated,
+  isError: state.users.isError,
+  errorMessage: state.users.errorMessage,
 });
 
 const mapDispatchToProps = {
   getUsersById,
+  updateUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

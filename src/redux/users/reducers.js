@@ -5,11 +5,12 @@ const initialState = {
   userList: [],
   user: null,
   usersCount: 0,
+  isUserUpdated: false,
   ...defaultInitialState,
 };
 
 const users = (state = initialState, action = {}) => {
-  const { error, payload } = action;
+  const { payload } = action;
 
   switch (action.type) {
     case constants.GET_USERS_FULFILLED:
@@ -31,7 +32,7 @@ const users = (state = initialState, action = {}) => {
         ...state,
         isPending: false,
         isError: true,
-        errorMessage: error.message,
+        errorMessage: payload.errors[0].detail,
       };
     case constants.GET_USERS_BY_ID_FULFILLED:
       return {
@@ -51,7 +52,29 @@ const users = (state = initialState, action = {}) => {
         ...state,
         isPending: false,
         isError: true,
-        errorMessage: error.message,
+        errorMessage: payload.errors[0].detail,
+      };
+    case constants.UPDATE_USER_FULFILLED:
+      return {
+        ...state,
+        user: payload.data,
+        isUserUpdated: true,
+        isPending: false,
+      };
+    case constants.UPDATE_USER_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        isUserUpdated: false,
+        errorMessage: '',
+      };
+    case constants.UPDATE_USER_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: payload.errors[0].detail,
       };
     default:
       return state;
