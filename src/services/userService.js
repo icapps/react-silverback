@@ -11,3 +11,8 @@ export const getById = async id => {
   const result = await Network.get(`/users/${id}`);
   return result;
 };
+
+export const remove = async id => {
+  const result = await Network.delete(`/users/${id}`);
+  return result;
+};

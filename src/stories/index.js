@@ -172,7 +172,7 @@ storiesOf('Overview', module)
         { id: 'id4', key: "test 4", key2: false },
         { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
       ]}
-      removeItem={() => { }}
+      removeItem={action('remove item')}
       sortItems={() => { }}
       history={{}}
       paginationTotalCount={100}
@@ -189,7 +189,7 @@ storiesOf('Overview', module)
         { id: 'key3', value: 'key3', isSortable: false },
       ]}
       listItems={[]}
-      removeItem={() => { }}
+      removeItem={action('remove item')}
       sortItems={() => { }}
       history={{}}
       paginationTotalCount={100}
@@ -209,6 +209,7 @@ storiesOf('Detail', module)
         { id: 'key3', value: 123, label: "test3", type: "number" },
         { id: 'key4', value: false, label: "test4", type: "boolean" },
       ]}
+      remove={action('remove detail')}
       history={{ goBack: () => { } }}
     />
   ));
