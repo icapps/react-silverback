@@ -23,11 +23,12 @@ class Detail extends React.Component {
   };
 
   renderInput = item => {
-    switch (item.type) {
-      case 'boolean': return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
-      default: return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
+    if (item.type === 'boolean') {
+      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
     }
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
   }
+
 
   render() {
     const overview = window.location.pathname.split('/')[1];
