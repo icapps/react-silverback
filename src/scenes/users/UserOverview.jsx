@@ -33,11 +33,11 @@ class UserOverview extends Component {
       <Overview
         title={strings.USERS}
         keys={[
-          { id: strings.EMAIL, value: strings.EMAIL, isSortable: true },
-          { id: strings.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
-          { id: strings.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
-          { id: strings.HAS_ACCESS, value: strings.HAS_ACCESS, isSortable: false },
-          { id: strings.ROLE, value: strings.ROLE, isSortable: false },
+          { id: strings.EMAIL_ID, value: strings.EMAIL, isSortable: true },
+          { id: strings.FIRST_NAME_ID, value: strings.FIRST_NAME, isSortable: true },
+          { id: strings.LAST_NAME_ID, value: strings.LAST_NAME, isSortable: true },
+          { id: strings.HAS_ACCESS_ID, value: strings.HAS_ACCESS, isSortable: false },
+          { id: strings.ROLE_ID, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
         removeItem={() => { }}

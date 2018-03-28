@@ -7,3 +7,10 @@ export const getUsers = (page, limit, sortField, sortOrder) => {
     payload: userService.get(page, limit, sortField, sortOrder),
   };
 };
+
+export const getUsersById = id => {
+  return {
+    type: constants.GET_USERS_BY_ID,
+    payload: userService.getById(id),
+  };
+};

@@ -8,6 +8,8 @@ import Button from './button/Button';
 import Modal from './modal/Modal';
 import Pagination from './pagination/Pagination';
 import Overview from './overview/Overview';
+import Detail from './detail/Detail';
+import EmptyDetail from './detail/EmptyDetail';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview };
+export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail };
 
