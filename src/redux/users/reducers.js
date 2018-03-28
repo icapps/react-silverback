@@ -53,6 +53,26 @@ const users = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: error.message,
       };
+    case constants.CREATE_USER_FULFILLED:
+      return {
+        ...state,
+        user: payload.data,
+        isPending: false,
+      };
+    case constants.CREATE_USER_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.CREATE_USER_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: payload.errors[0].detail,
+      };
     default:
       return state;
   }

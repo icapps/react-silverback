@@ -14,3 +14,10 @@ export const getUsersById = id => {
     payload: userService.getById(id),
   };
 };
+
+export const createUser = (id, user) => {
+  return {
+    type: constants.CREATE_USER,
+    payload: userService.create(id, user),
+  };
+};

@@ -11,3 +11,8 @@ export const getById = async id => {
   const result = await Network.get(`/users/${id}`);
   return result;
 };
+
+export const create = async (id, user) => {
+  const result = await Network.post('/users', user);
+  return result;
+};
