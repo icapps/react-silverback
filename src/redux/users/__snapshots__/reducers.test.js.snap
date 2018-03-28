@@ -45,6 +45,7 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isPending": true,
+  "user": null,
 }
 `;
 
