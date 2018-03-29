@@ -29,7 +29,7 @@ describe('user actions', () => {
 
   it('createUser', () => {
     const store = mockStore({});
-    store.dispatch(createUser('123', { username: 'test' }));
+    store.dispatch(createUser({ username: 'test' }));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });

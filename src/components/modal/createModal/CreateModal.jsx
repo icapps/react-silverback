@@ -17,20 +17,20 @@ class CreateModal extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value });
+    this.setState({ [event.target.id.replace('modal-','')]: event.target.type === 'checkbox' ? event.target.checked : event.target.value });
   };
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
   }
 
   render() {
     return (
       <Modal
-        id="testModal"
+        id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
         handleSecondaryButton={() => { }}
         secondaryButtonText={strings.CANCEL}

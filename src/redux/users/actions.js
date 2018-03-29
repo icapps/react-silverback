@@ -15,9 +15,9 @@ export const getUsersById = id => {
   };
 };
 
-export const createUser = (id, user) => {
+export const createUser = (user) => {
   return {
     type: constants.CREATE_USER,
-    payload: userService.create(id, user),
+    payload: userService.create(user),
   };
 };
