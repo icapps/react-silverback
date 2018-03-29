@@ -26,6 +26,13 @@ class UserOverview extends Component {
     }
   }
 
+  removeUser = async user => {
+    const result = await this.props.removeUser(user);
+    if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+      this.props.getUsers(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+    }
+  }
+
   sortItems = (sortField, sortOrder) => {
     this.props.getUsers(this.state.page, this.state.limit, sortField, sortOrder);
     this.setState({ sortField, sortOrder });
@@ -61,7 +68,9 @@ class UserOverview extends Component {
           { id: strings.HAS_ACCESS_ID, label: strings.HAS_ACCESS, type: "boolean" },
         ]}
         create={this.createUser}
-        removeItem={this.props.removeUser}
+        removeItem={this.removeUser}
+        isError={this.props.isError}
+        errorMessage={this.props.errorMessage}
       />
     );
   }
@@ -71,6 +80,8 @@ const mapStateToProps = state => ({
   users: state.users.userList,
   usersCount: state.users.usersCount,
   user: state.users.user,
+  isError: state.users.isError,
+  errorMessage: state.users.errorMessage,
 });
 
 const mapDispatchToProps = {
