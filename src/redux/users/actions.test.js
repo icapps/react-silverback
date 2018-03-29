@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { getUsers, getUsersById, createUser, removeUser } from './actions';
+import { getUsers, getUsersById, createUser, removeUser, updateUser } from './actions';
 import { Network } from '../../utils/index';
 
 const middlewares = [thunk];
@@ -12,6 +12,7 @@ describe('user actions', () => {
     Network.get = jest.fn(() => mockUsers);
     Network.post = jest.fn(() => { });
     Network.delete = jest.fn(() => { });
+    Network.patch = jest.fn(() => { });
   });
 
   it('getUsers', () => {
@@ -38,6 +39,13 @@ describe('user actions', () => {
   it('createUser', () => {
     const store = mockStore({});
     store.dispatch(createUser({ username: 'test' }));
+    const expectedActions = store.getActions();
+    expect(expectedActions).toMatchSnapshot();
+  });
+
+  it('updateUser', () => {
+    const store = mockStore({});
+    store.dispatch(updateUser('123', {}));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });

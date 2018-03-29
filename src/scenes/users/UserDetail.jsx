@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail } from '../../components';
-import { getUsersById, createUser, removeUser } from '../../redux/users/actions';
+import { getUsersById, createUser, removeUser, updateUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserDetail extends Component {
@@ -11,6 +11,9 @@ class UserDetail extends Component {
 
   createUser = user => {
     this.props.createUser(user);
+  }
+  updateUser = (id, user) => {
+    this.props.updateUser(id, user);
   }
 
   render() {
@@ -36,18 +39,26 @@ class UserDetail extends Component {
       ]}
       create={this.createUser}
       remove={this.props.removeUser}
+      update={this.updateUser}
+      isUpdated={this.props.isUserUpdated}
+      isError={this.props.isError}
+      errorMessage={this.props.errorMessage}
     /> : <EmptyDetail history={this.props.history} />;
   }
 }
 
 const mapStateToProps = state => ({
   user: state.users.user,
+  isUserUpdated: state.users.isUserUpdated,
+  isError: state.users.isError,
+  errorMessage: state.users.errorMessage,
 });
 
 const mapDispatchToProps = {
   getUsersById,
   createUser,
   removeUser,
+  updateUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);
