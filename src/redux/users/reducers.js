@@ -73,6 +73,26 @@ const users = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: payload.errors[0].detail,
       };
+    case constants.REMOVE_USER_FULFILLED:
+      return {
+        ...state,
+        user: null,
+        isPending: false,
+      };
+    case constants.REMOVE_USER_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.REMOVE_USER_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: payload.errors[0].detail,
+      };
     default:
       return state;
   }

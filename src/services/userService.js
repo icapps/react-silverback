@@ -16,3 +16,8 @@ export const create = async (user) => {
   const result = await Network.post('/users', user);
   return result;
 };
+
+export const remove = async id => {
+  const result = await Network.delete(`/users/${id}`);
+  return result;
+};
