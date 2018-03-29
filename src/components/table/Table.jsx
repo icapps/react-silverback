@@ -50,7 +50,7 @@ class Table extends React.Component {
                     {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
                   </span>
                 </th>))}
-                <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>

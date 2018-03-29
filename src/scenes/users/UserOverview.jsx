@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getUsers, createUser, removeUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
+import constants from '../../redux/users/constants';
 
 class UserOverview extends Component {
   constructor() {
@@ -18,8 +19,11 @@ class UserOverview extends Component {
     this.props.getUsers(this.state.page, this.state.limit);
   }
 
-  createUser = user => {
-    this.props.createUser(user);
+  createUser = async user => {
+    const result = await this.props.createUser(user);
+    if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
+      this.props.history.push(`${window.location.pathname}/${this.props.user.id}`, this.props.user.id);
+    }
   }
 
   sortItems = (sortField, sortOrder) => {
@@ -66,6 +70,7 @@ class UserOverview extends Component {
 const mapStateToProps = state => ({
   users: state.users.userList,
   usersCount: state.users.usersCount,
+  user: state.users.user,
 });
 
 const mapDispatchToProps = {
