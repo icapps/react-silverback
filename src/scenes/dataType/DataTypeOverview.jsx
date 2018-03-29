@@ -52,7 +52,7 @@ class DataTypeOverview extends Component {
           { id: strings.EDIBLE, label: strings.EDIBLE, type: "boolean" },
           { id: strings.BEST_BEFORE, label: strings.BEST_BEFORE, type: "text" },
           { id: strings.WEIGHT, label: strings.WEIGHT, type: "number" },
-          { id: strings.DESCRIPTION, label: strings.DESCRIPTION, type: "string" },
+          { id: strings.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
         ]}
         create={() => { }}
         removeItem={() => { }}
