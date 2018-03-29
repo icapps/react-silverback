@@ -102,7 +102,7 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.REMOVE_USER_REJECTED,
-        error: {message: ''},
+        payload: { errors: [{ detail: 'errorMessage' }] },
       })
     ).toMatchSnapshot();
   });

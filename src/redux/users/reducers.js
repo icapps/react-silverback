@@ -25,6 +25,7 @@ const users = (state = initialState, action = {}) => {
         isPending: true,
         isError: false,
         errorMessage: '',
+        user: null,
       };
     case constants.GET_USERS_REJECTED:
       return {
