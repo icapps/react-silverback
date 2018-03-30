@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal } from '../index';
+import { BasicInput, Button, Checkbox, Modal, CreateModal } from '../index';
 import { strings } from '../../utils';
 import './detail.css';
 
-const plus = require('../../assets/images/plus.svg');
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
 class Detail extends React.Component {
@@ -43,7 +42,12 @@ class Detail extends React.Component {
           <div className="container">
             <div className="detail-header">
               <div className="back text-primary" onClick={this.props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
-              <Button text={`${strings.CREATE} ${this.props.dataType}`} handleClick={() => { }} className="btn-success" icon={plus} />
+              <CreateModal
+                primaryButtonText={`${strings.CREATE} ${this.props.dataType}`}
+                title={`${strings.CREATE} ${this.props.dataType}`}
+                createParameters={this.props.createParameters}
+                create={this.props.create}
+              />
             </div>
             {this.props.isUpdated && <div class="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {this.props.isError && <div class="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
@@ -58,7 +62,6 @@ class Detail extends React.Component {
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
-                  handleSecondaryButton={() => { }}
                   handlePrimaryButton={this.setInputItems}
                   primaryButtonText={strings.RESET}
                   secondaryButtonText={strings.CANCEL}
@@ -72,7 +75,6 @@ class Detail extends React.Component {
               <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
-                handleSecondaryButton={() => { }}
                 handlePrimaryButton={() => this.props.remove(this.props.id)}
                 primaryButtonText={strings.DELETE}
                 secondaryButtonText={strings.CANCEL}
@@ -97,6 +99,8 @@ Detail.propTypes = {
   inputItems: PropTypes.array.isRequired,
   remove: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  createParameters: PropTypes.array.isRequired,
+  create: PropTypes.func.isRequired,
   update: PropTypes.func.isRequired,
   isUpdated: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,

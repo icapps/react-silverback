@@ -1,39 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`users reducer should CREATE_USER_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "user": Object {
+    "user": "test",
+  },
+  "userList": Array [],
+  "usersCount": 0,
+}
+`;
+
+exports[`users reducer should CREATE_USER_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
+}
+`;
+
+exports[`users reducer should CREATE_USER_REJECTED 1`] = `
+Object {
+  "errorMessage": "ErrorMessage",
+  "isError": true,
+  "isPending": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
+}
+`;
+
 exports[`users reducer should GET_USERS_BY_ID_FULFILLED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": false,
   "user": Object {},
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should GET_USERS_BY_ID_PENDING 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": true,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should GET_USERS_BY_ID_REJECTED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should GET_USERS_FULFILLED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": false,
+  "user": null,
   "userList": Object {},
   "usersCount": 10,
 }
@@ -41,78 +81,91 @@ Object {
 
 exports[`users reducer should GET_USERS_PENDING 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": true,
   "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should GET_USERS_REJECTED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should REMOVE_USER_FULFILLED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": false,
   "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should REMOVE_USER_PENDING 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": true,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should REMOVE_USER_REJECTED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should UPDATE_USER_FULFILLED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": false,
   "isUserUpdated": true,
   "user": Object {},
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should UPDATE_USER_PENDING 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "",
   "isError": false,
   "isPending": true,
   "isUserUpdated": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 
 exports[`users reducer should UPDATE_USER_REJECTED 1`] = `
 Object {
-  "dataTypes": Array [],
   "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
 }
 `;
 

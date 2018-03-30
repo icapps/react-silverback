@@ -5,6 +5,31 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
     handlePagination={[Function]}
     history={Object {}}
     keys={
@@ -71,11 +96,34 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
-                <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
                 />
         </div>
         <Unknown>
@@ -145,11 +193,34 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
-            <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
             />
 </div>,
           <Unknown>
@@ -230,11 +301,34 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Button
-              className="btn-success"
-              handleClick={[Function]}
-              icon="plus.svg"
-              text="Create DataTypes"
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              primaryButtonText="Create DataTypes"
+              title="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -242,12 +336,33 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "className": "btn-success",
-              "handleClick": [Function],
-              "icon": "plus.svg",
-              "text": "Create DataTypes",
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "primaryButtonText": "Create DataTypes",
+              "title": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -398,11 +513,34 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
-                    <Button
-                              className="btn-success"
-                              handleClick={[Function]}
-                              icon="plus.svg"
-                              text="Create DataTypes"
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              primaryButtonText="Create DataTypes"
+                              title="Create DataTypes"
                     />
           </div>
           <Unknown>
@@ -472,11 +610,34 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
-              <Button
-                            className="btn-success"
-                            handleClick={[Function]}
-                            icon="plus.svg"
-                            text="Create DataTypes"
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            primaryButtonText="Create DataTypes"
+                            title="Create DataTypes"
               />
 </div>,
             <Unknown>
@@ -557,11 +718,34 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Button
-                className="btn-success"
-                handleClick={[Function]}
-                icon="plus.svg"
-                text="Create DataTypes"
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                primaryButtonText="Create DataTypes"
+                title="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -569,12 +753,33 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "className": "btn-success",
-                "handleClick": [Function],
-                "icon": "plus.svg",
-                "text": "Create DataTypes",
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "primaryButtonText": "Create DataTypes",
+                "title": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -726,6 +931,31 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
     handlePagination={[Function]}
     history={Object {}}
     keys={
@@ -792,11 +1022,34 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
-                <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
                 />
         </div>
         <Unknown>
@@ -866,11 +1119,34 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
-            <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
             />
 </div>,
           <Unknown>
@@ -951,11 +1227,34 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Button
-              className="btn-success"
-              handleClick={[Function]}
-              icon="plus.svg"
-              text="Create DataTypes"
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              primaryButtonText="Create DataTypes"
+              title="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -963,12 +1262,33 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "className": "btn-success",
-              "handleClick": [Function],
-              "icon": "plus.svg",
-              "text": "Create DataTypes",
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "primaryButtonText": "Create DataTypes",
+              "title": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -1119,11 +1439,34 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
-                    <Button
-                              className="btn-success"
-                              handleClick={[Function]}
-                              icon="plus.svg"
-                              text="Create DataTypes"
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              primaryButtonText="Create DataTypes"
+                              title="Create DataTypes"
                     />
           </div>
           <Unknown>
@@ -1193,11 +1536,34 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
-              <Button
-                            className="btn-success"
-                            handleClick={[Function]}
-                            icon="plus.svg"
-                            text="Create DataTypes"
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            primaryButtonText="Create DataTypes"
+                            title="Create DataTypes"
               />
 </div>,
             <Unknown>
@@ -1278,11 +1644,34 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Button
-                className="btn-success"
-                handleClick={[Function]}
-                icon="plus.svg"
-                text="Create DataTypes"
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                primaryButtonText="Create DataTypes"
+                title="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1290,12 +1679,33 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "className": "btn-success",
-                "handleClick": [Function],
-                "icon": "plus.svg",
-                "text": "Create DataTypes",
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "primaryButtonText": "Create DataTypes",
+                "title": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,
@@ -1447,6 +1857,31 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
     handlePagination={[Function]}
     history={Object {}}
     keys={
@@ -1495,11 +1930,34 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
-                <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
                 />
         </div>
         <div
@@ -1530,11 +1988,34 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
-            <Button
-                        className="btn-success"
-                        handleClick={[Function]}
-                        icon="plus.svg"
-                        text="Create DataTypes"
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        primaryButtonText="Create DataTypes"
+                        title="Create DataTypes"
             />
 </div>,
           <div
@@ -1576,11 +2057,34 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Button
-              className="btn-success"
-              handleClick={[Function]}
-              icon="plus.svg"
-              text="Create DataTypes"
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              primaryButtonText="Create DataTypes"
+              title="Create DataTypes"
 />,
             "className": "overview-settings",
           },
@@ -1588,12 +2092,33 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "className": "btn-success",
-              "handleClick": [Function],
-              "icon": "plus.svg",
-              "text": "Create DataTypes",
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "primaryButtonText": "Create DataTypes",
+              "title": "Create DataTypes",
             },
             "ref": null,
             "rendered": null,
@@ -1659,11 +2184,34 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
-                    <Button
-                              className="btn-success"
-                              handleClick={[Function]}
-                              icon="plus.svg"
-                              text="Create DataTypes"
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              primaryButtonText="Create DataTypes"
+                              title="Create DataTypes"
                     />
           </div>
           <div
@@ -1694,11 +2242,34 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
-              <Button
-                            className="btn-success"
-                            handleClick={[Function]}
-                            icon="plus.svg"
-                            text="Create DataTypes"
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            primaryButtonText="Create DataTypes"
+                            title="Create DataTypes"
               />
 </div>,
             <div
@@ -1740,11 +2311,34 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Button
-                className="btn-success"
-                handleClick={[Function]}
-                icon="plus.svg"
-                text="Create DataTypes"
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                primaryButtonText="Create DataTypes"
+                title="Create DataTypes"
 />,
               "className": "overview-settings",
             },
@@ -1752,12 +2346,33 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
-                "className": "btn-success",
-                "handleClick": [Function],
-                "icon": "plus.svg",
-                "text": "Create DataTypes",
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "primaryButtonText": "Create DataTypes",
+                "title": "Create DataTypes",
               },
               "ref": null,
               "rendered": null,

@@ -15,6 +15,13 @@ export const getUsersById = id => {
   };
 };
 
+export const createUser = (user) => {
+  return {
+    type: constants.CREATE_USER,
+    payload: userService.create(user),
+  };
+};
+
 export const updateUser = (id, user) => {
   return {
     type: constants.UPDATE_USER,

@@ -5,9 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Modal
+    handleModalButton={[Function]}
     handlePrimaryButton={[Function]}
     handleSecondaryButton={[Function]}
     hasHeader={false}
+    icon={null}
     id="testModal"
     modalButtonClassName="btn-light"
     modalButtonText="Modal"
@@ -98,7 +100,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Modal",
+          "children": Array [
+            null,
+            "Modal",
+          ],
           "className": "btn btn-light",
           "data-target": "#testModal",
           "data-toggle": "modal",
@@ -106,7 +111,10 @@ ShallowWrapper {
           "type": "button",
         },
         "ref": null,
-        "rendered": "Modal",
+        "rendered": Array [
+          null,
+          "Modal",
+        ],
         "type": "button",
       },
       Object {
@@ -404,7 +412,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Modal",
+            "children": Array [
+              null,
+              "Modal",
+            ],
             "className": "btn btn-light",
             "data-target": "#testModal",
             "data-toggle": "modal",
@@ -412,7 +423,10 @@ ShallowWrapper {
             "type": "button",
           },
           "ref": null,
-          "rendered": "Modal",
+          "rendered": Array [
+            null,
+            "Modal",
+          ],
           "type": "button",
         },
         Object {
@@ -655,9 +669,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Modal
+    handleModalButton={[Function]}
     handlePrimaryButton={[Function]}
     handleSecondaryButton={[Function]}
     hasHeader={true}
+    icon={null}
     id="testModal3"
     modalButtonClassName="btn-light"
     modalButtonText="Modal"
@@ -770,7 +786,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Modal",
+          "children": Array [
+            null,
+            "Modal",
+          ],
           "className": "btn btn-light",
           "data-target": "#testModal3",
           "data-toggle": "modal",
@@ -778,7 +797,10 @@ ShallowWrapper {
           "type": "button",
         },
         "ref": null,
-        "rendered": "Modal",
+        "rendered": Array [
+          null,
+          "Modal",
+        ],
         "type": "button",
       },
       Object {
@@ -1237,7 +1259,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Modal",
+            "children": Array [
+              null,
+              "Modal",
+            ],
             "className": "btn btn-light",
             "data-target": "#testModal3",
             "data-toggle": "modal",
@@ -1245,7 +1270,10 @@ ShallowWrapper {
             "type": "button",
           },
           "ref": null,
-          "rendered": "Modal",
+          "rendered": Array [
+            null,
+            "Modal",
+          ],
           "type": "button",
         },
         Object {
@@ -1627,9 +1655,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Modal
+    handleModalButton={[Function]}
     handlePrimaryButton={[Function]}
     handleSecondaryButton={[Function]}
     hasHeader={false}
+    icon={null}
     id="testModal2"
     modalButtonClassName="btn-primary"
     modalButtonText="Modal"
@@ -1720,7 +1750,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Modal",
+          "children": Array [
+            null,
+            "Modal",
+          ],
           "className": "btn btn-primary",
           "data-target": "#testModal2",
           "data-toggle": "modal",
@@ -1728,7 +1761,10 @@ ShallowWrapper {
           "type": "button",
         },
         "ref": null,
-        "rendered": "Modal",
+        "rendered": Array [
+          null,
+          "Modal",
+        ],
         "type": "button",
       },
       Object {
@@ -2026,7 +2062,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Modal",
+            "children": Array [
+              null,
+              "Modal",
+            ],
             "className": "btn btn-primary",
             "data-target": "#testModal2",
             "data-toggle": "modal",
@@ -2034,7 +2073,10 @@ ShallowWrapper {
             "type": "button",
           },
           "ref": null,
-          "rendered": "Modal",
+          "rendered": Array [
+            null,
+            "Modal",
+          ],
           "type": "button",
         },
         Object {

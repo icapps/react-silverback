@@ -12,6 +12,11 @@ export const getById = async id => {
   return result;
 };
 
+export const create = async (user) => {
+  const result = await Network.post('/users', user);
+  return result;
+};
+
 export const update = async (id, user) => {
   const result = await Network.patch(`/users/${id}`, user);
   return result;

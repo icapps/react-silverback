@@ -3,7 +3,9 @@ import constants from './constants';
 import defaultInitialState from '../defaultInitialState';
 
 const initialState = {
-  dataTypes: [],
+  userList: [],
+  user: null,
+  usersCount: 0,
   ...defaultInitialState,
 };
 
@@ -55,6 +57,30 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_BY_ID_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
+  //CREATE_USER
+  it('should CREATE_USER_FULFILLED', () => {
+    expect(
+      users(initialState, {
+        type: constants.CREATE_USER_FULFILLED,
+        payload: { data: { user: 'test' }, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CREATE_USER_PENDING', () => {
+    expect(
+      users(initialState, {
+        type: constants.CREATE_USER_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CREATE_USER_REJECTED', () => {
+    expect(
+      users(initialState, {
+        type: constants.CREATE_USER_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();

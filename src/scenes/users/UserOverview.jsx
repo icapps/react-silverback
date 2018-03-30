@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers , removeUser} from '../../redux/users/actions';
+import { getUsers, createUser, removeUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserOverview extends Component {
@@ -16,6 +16,10 @@ class UserOverview extends Component {
   }
   componentDidMount() {
     this.props.getUsers(this.state.page, this.state.limit);
+  }
+
+  createUser = user => {
+    this.props.createUser(user);
   }
 
   sortItems = (sortField, sortOrder) => {
@@ -44,6 +48,15 @@ class UserOverview extends Component {
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
         handlePagination={this.handlePagination}
+        createParameters={[
+          { id: strings.EMAIL_ID, label: strings.EMAIL, type: "text" },
+          { id: strings.FIRST_NAME_ID, label: strings.FIRST_NAME, type: "text" },
+          { id: strings.LAST_NAME_ID, label: strings.LAST_NAME, type: "text" },
+          { id: strings.PASSWORD_ID, label: strings.PASSWORD, type: "password" },
+          { id: strings.ROLE_ID, label: strings.ROLE, type: "text" },
+          { id: strings.HAS_ACCESS_ID, label: strings.HAS_ACCESS, type: "boolean" },
+        ]}
+        create={this.createUser}
         removeItem={this.props.removeUser}
       />
     );
@@ -57,6 +70,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getUsers,
+  createUser,
   removeUser,
 };
 

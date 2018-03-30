@@ -17,6 +17,13 @@ describe('Overview Component', () => {
       history={{}}
       paginationTotalCount={100}
       handlePagination={() => { }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -30,6 +37,13 @@ describe('Overview Component', () => {
       history={{}}
       paginationTotalCount={100}
       handlePagination={() => { }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -43,6 +57,13 @@ describe('Overview Component', () => {
       history={{}}
       paginationTotalCount={100}
       handlePagination={() => { }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });

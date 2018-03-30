@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail } from '../components';
+import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal } from '../components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('BasicInput', module)
@@ -177,6 +177,13 @@ storiesOf('Overview', module)
       history={{}}
       paginationTotalCount={100}
       handlePagination={action('handle pagination')}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
     />
   ))
   .add('empty state', () => (
@@ -194,6 +201,13 @@ storiesOf('Overview', module)
       history={{}}
       paginationTotalCount={100}
       handlePagination={action('handle pagination')}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
     />
   ));
 
@@ -205,12 +219,19 @@ storiesOf('Detail', module)
       id="11111"
       inputItems={[
         { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test2', label: "test2", type: "text" },
+        { id: 'key2', value: 'test', label: "test2", type: "text" },
         { id: 'key3', value: 123, label: "test3", type: "number" },
         { id: 'key4', value: false, label: "test4", type: "boolean" },
       ]}
       remove={action('remove detail')}
       history={{ goBack: () => { } }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
       update={action('update detail')}
       isUpdated={false}
       isError={false}
@@ -229,6 +250,13 @@ storiesOf('Detail', module)
         { id: 'key4', value: false, label: "test4", type: "boolean" },
       ]}
       history={{ goBack: () => { } }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
       update={action('update detail')}
       isUpdated={true}
       isError={false}
@@ -246,13 +274,37 @@ storiesOf('Detail', module)
         { id: 'key4', value: false, label: "test4", type: "boolean" },
       ]}
       history={{ goBack: () => { } }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
       update={action('update detail')}
       isUpdated={false}
       isError={true}
       errorMessage="An error has occurred" />
   ));
 
-  storiesOf('EmptyDetail', module)
+const plus = require('../assets/images/plus.svg');
+storiesOf('CreateModal', module)
   .add('default', () => (
-    <EmptyDetail history={{ goBack: () => { } }}/>
+    <CreateModal
+      primaryButtonText="Add item"
+      title="Add an item"
+      icon={plus}
+      createParameters={[
+        { id: 'key1', value: 'test', label: "test", type: "text" },
+        { id: 'key2', value: 'test2', label: "test2", type: "text" },
+        { id: 'key3', value: 123, label: "test3", type: "number" },
+        { id: 'key4', value: false, label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
+    />
+  ));
+
+storiesOf('EmptyDetail', module)
+  .add('default', () => (
+    <EmptyDetail history={{ goBack: () => { } }} />
   ));

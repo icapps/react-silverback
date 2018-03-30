@@ -14,6 +14,11 @@ class Modal extends React.Component {
     this.setState({ showModal: !this.state.showModal });
   }
 
+  handleModalButton = () => {
+    this.props.handleModalButton();
+    this.toggleModal();
+  }
+
   handleClosingButton = () => {
     this.toggleModal();
   }
@@ -33,7 +38,8 @@ class Modal extends React.Component {
 
     return (
       <React.Fragment>
-        <button type="button" className={`btn ${props.modalButtonClassName}`} data-toggle="modal" data-target={`#${props.id}`} onClick={this.toggleModal}>
+        <button type="button" className={`btn ${props.modalButtonClassName}`} data-toggle="modal" data-target={`#${props.id}`} onClick={this.handleModalButton}>
+          {props.icon && <img src={props.icon} alt="" />}
           {props.modalButtonText}
         </button>
 
@@ -66,17 +72,19 @@ class Modal extends React.Component {
 
 Modal.propTypes = {
   id: PropTypes.string.isRequired,
-  modalButtonClassName: PropTypes.string,
-  modalButtonText: PropTypes.string.isRequired,
   hasHeader: PropTypes.bool,
   title: PropTypes.string,
+  modalButtonClassName: PropTypes.string,
+  modalButtonText: PropTypes.string.isRequired,
+  handleModalButton: PropTypes.func,
   secondaryButtonClassName: PropTypes.string,
-  handleSecondaryButton: PropTypes.func.isRequired,
   secondaryButtonText: PropTypes.string.isRequired,
+  handleSecondaryButton: PropTypes.func,
   primaryButtonClassName: PropTypes.string,
-  handlePrimaryButton: PropTypes.func.isRequired,
   primaryButtonText: PropTypes.string.isRequired,
+  handlePrimaryButton: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  icon: PropTypes.string,
 };
 
 Modal.defaultProps = {
@@ -85,6 +93,9 @@ Modal.defaultProps = {
   title: '',
   secondaryButtonClassName: 'btn-light',
   primaryButtonClassName: 'btn-light',
+  icon: null,
+  handleModalButton: () => { },
+  handleSecondaryButton: () => { },
 };
 
 export default Modal;

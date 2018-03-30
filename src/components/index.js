@@ -10,6 +10,7 @@ import Pagination from './pagination/Pagination';
 import Overview from './overview/Overview';
 import Detail from './detail/Detail';
 import EmptyDetail from './detail/EmptyDetail';
+import CreateModal from './modal/createModal/CreateModal';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail };
+export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal };
 
