@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, CreateModal } from '../components';
+import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal } from '../components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('BasicInput', module)
@@ -232,7 +232,59 @@ storiesOf('Detail', module)
         { id: 'key4', label: "test4", type: "boolean" },
       ]}
       create={action('create')}
+      update={action('update detail')}
+      isUpdated={false}
+      isError={false}
+      errorMessage=""
     />
+  ))
+  .add('updated', () => (
+    <Detail
+      dataType="user"
+      title="Detail page"
+      id="11111"
+      inputItems={[
+        { id: 'key1', value: 'test', label: "test", type: "text" },
+        { id: 'key2', value: 'test2', label: "test2", type: "text" },
+        { id: 'key3', value: 123, label: "test3", type: "number" },
+        { id: 'key4', value: false, label: "test4", type: "boolean" },
+      ]}
+      history={{ goBack: () => { } }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
+      update={action('update detail')}
+      isUpdated={true}
+      isError={false}
+      errorMessage="" />
+  ))
+  .add('error', () => (
+    <Detail
+      dataType="user"
+      title="Detail page"
+      id="11111"
+      inputItems={[
+        { id: 'key1', value: 'test', label: "test", type: "text" },
+        { id: 'key2', value: 'test2', label: "test2", type: "text" },
+        { id: 'key3', value: 123, label: "test3", type: "number" },
+        { id: 'key4', value: false, label: "test4", type: "boolean" },
+      ]}
+      history={{ goBack: () => { } }}
+      createParameters={[
+        { id: 'key1', label: "test", type: "text" },
+        { id: 'key2', label: "test2", type: "text" },
+        { id: 'key3', label: "test3", type: "number" },
+        { id: 'key4', label: "test4", type: "boolean" },
+      ]}
+      create={action('create')}
+      update={action('update detail')}
+      isUpdated={false}
+      isError={true}
+      errorMessage="An error has occurred" />
   ));
 
 const plus = require('../assets/images/plus.svg');
@@ -250,4 +302,9 @@ storiesOf('CreateModal', module)
       ]}
       create={action('create')}
     />
+  ));
+
+storiesOf('EmptyDetail', module)
+  .add('default', () => (
+    <EmptyDetail history={{ goBack: () => { } }} />
   ));

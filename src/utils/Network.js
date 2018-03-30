@@ -60,6 +60,16 @@ class Network {
     }
   }
 
+  static async patch(route, body = {}) {
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.patch(this.getUrl(route), body, { headers });
+      return result.data;
+    } catch (err) {
+      this.errorHandler(err);
+    }
+  }
+
   static async post(route, body = {}) {
     try {
       const headers = this.basicHeaders();
