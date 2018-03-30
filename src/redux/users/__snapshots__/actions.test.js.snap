@@ -17,3 +17,12 @@ Array [
   },
 ]
 `;
+
+exports[`user actions removeUser 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "REMOVE_USER",
+  },
+]
+`;

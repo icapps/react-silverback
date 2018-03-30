@@ -57,6 +57,34 @@ Object {
 }
 `;
 
+exports[`users reducer should REMOVE_USER_FULFILLED 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "user": null,
+}
+`;
+
+exports[`users reducer should REMOVE_USER_PENDING 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`users reducer should REMOVE_USER_REJECTED 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": true,
+  "isPending": false,
+}
+`;
+
 exports[`users reducer should return the initial state 1`] = `
 Object {
   "errorMessage": "",

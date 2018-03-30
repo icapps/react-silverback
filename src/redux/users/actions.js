@@ -14,3 +14,10 @@ export const getUsersById = id => {
     payload: userService.getById(id),
   };
 };
+
+export const removeUser = id => {
+  return {
+    type: constants.REMOVE_USER,
+    payload: userService.remove(id),
+  };
+};

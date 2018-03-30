@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail } from '../../components';
-import { getUsersById } from '../../redux/users/actions';
+import { getUsersById , removeUser} from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserDetail extends Component {
@@ -21,6 +21,7 @@ class UserDetail extends Component {
         { id: strings.HAS_ACCESS_ID, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean" },
       ]}
       history={this.props.history}
+      remove={this.props.removeUser}
     /> : <EmptyDetail history={this.props.history} />;
   }
 }
@@ -31,6 +32,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getUsersById,
+  removeUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

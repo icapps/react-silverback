@@ -58,4 +58,26 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+  it('should REMOVE_USER_FULFILLED', () => {
+    expect(
+      users(initialState, {
+        type: constants.REMOVE_USER_FULFILLED,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should REMOVE_USER_PENDING', () => {
+    expect(
+      users(initialState, {
+        type: constants.REMOVE_USER_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should REMOVE_USER_REJECTED', () => {
+    expect(
+      users(initialState, {
+        type: constants.REMOVE_USER_REJECTED,
+        error: {message: ''},
+      })
+    ).toMatchSnapshot();
+  });
 });

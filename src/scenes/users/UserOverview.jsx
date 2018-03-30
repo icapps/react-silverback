@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers } from '../../redux/users/actions';
+import { getUsers , removeUser} from '../../redux/users/actions';
 import { strings } from '../../utils';
 
 class UserOverview extends Component {
@@ -40,11 +40,11 @@ class UserOverview extends Component {
           { id: strings.ROLE_ID, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
-        removeItem={() => { }}
         sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
         handlePagination={this.handlePagination}
+        removeItem={this.props.removeUser}
       />
     );
   }
@@ -57,6 +57,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   getUsers,
+  removeUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);
