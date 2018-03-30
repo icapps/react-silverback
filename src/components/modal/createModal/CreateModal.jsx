@@ -11,20 +11,20 @@ class CreateModal extends React.Component {
   }
 
   setCreateParameters = () => {
-    let inputState = {};
-    this.props.createParameters.forEach(item => inputState[item.id] = item.type === 'boolean' ? false : '');
-    this.setState(inputState);
+    let createParametersState = {};
+    this.props.createParameters.forEach(item => createParametersState[item.id] = item.type === 'boolean' ? false : '');
+    this.setState({ createParametersState });
   }
 
   handleChange = event => {
-    this.setState({ [event.target.id.replace('modal-','')]: event.target.type === 'checkbox' ? event.target.checked : event.target.value });
+    this.setState({ createParametersState: { ...this.state.createParametersState, [event.target.id.replace('modal-', '')]: event.target.type === 'checkbox' ? event.target.checked : event.target.value } });
   };
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} />;
     }
-    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} />;
   }
 
   render() {
@@ -32,9 +32,8 @@ class CreateModal extends React.Component {
       <Modal
         id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
-        handleSecondaryButton={() => { }}
         secondaryButtonText={strings.CANCEL}
-        handlePrimaryButton={() => this.props.create(this.state)}
+        handlePrimaryButton={() => this.props.create(this.state.createParametersState)}
         primaryButtonText={this.props.primaryButtonText}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success"
