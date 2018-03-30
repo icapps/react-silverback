@@ -26,7 +26,7 @@ Object {
 
 exports[`users reducer should CREATE_USER_REJECTED 1`] = `
 Object {
-  "errorMessage": "errorMessage",
+  "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
   "user": null,
@@ -59,7 +59,7 @@ Object {
 
 exports[`users reducer should GET_USERS_BY_ID_REJECTED 1`] = `
 Object {
-  "errorMessage": "errorMessage",
+  "errorMessage": "ErrorMessage",
   "isError": true,
   "isPending": false,
   "user": null,

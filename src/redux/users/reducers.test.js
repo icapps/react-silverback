@@ -58,7 +58,7 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_BY_ID_REJECTED,
-        payload: { errors: [{ detail: 'errorMessage' }] },
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();
   });
@@ -83,7 +83,31 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.CREATE_USER_REJECTED,
-        payload: { errors: [{ detail: 'errorMessage' }] },
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
+  // UPDATE_USER
+  it('should UPDATE_USER_FULFILLED', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UPDATE_USER_PENDING', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UPDATE_USER_REJECTED', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();
   });
@@ -107,31 +131,6 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.REMOVE_USER_REJECTED,
-        payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
-    ).toMatchSnapshot();
-  });
-
-  // UPDATE_USER
-  it('should UPDATE_USER_FULFILLED', () => {
-    expect(
-      users(initialState, {
-        type: constants.UPDATE_USER_FULFILLED,
-        payload: { data: {}, meta: { totalCount: 10 } },
-      })
-    ).toMatchSnapshot();
-  });
-  it('should UPDATE_USER_PENDING', () => {
-    expect(
-      users(initialState, {
-        type: constants.UPDATE_USER_PENDING,
-      })
-    ).toMatchSnapshot();
-  });
-  it('should UPDATE_USER_REJECTED', () => {
-    expect(
-      users(initialState, {
-        type: constants.UPDATE_USER_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();

@@ -69,8 +69,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   getUsersById,
   createUser,
-  removeUser,
   updateUser,
+  removeUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

@@ -12,17 +12,17 @@ class Detail extends React.Component {
   }
 
   setInputItems = () => {
-    let inputState = {};
-    this.props.inputItems.forEach(item => inputState[item.id] = item.value);
-    this.setState(inputState);
+    let inputItemState = {};
+    this.props.inputItems.forEach(item => inputItemState[item.id] = item.value);
+    this.setState({ inputItemState });
   }
 
   handleChange = event => {
-    this.setState({ [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value });
+    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value } });
   };
 
   save = () => {
-    this.props.update(this.props.id, this.state);
+    this.props.update(this.props.id, this.state.inputItemState);
   }
 
   delete = () => {
@@ -32,9 +32,9 @@ class Detail extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} type={item.type} />;
   }
 
 
