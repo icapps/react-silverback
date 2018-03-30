@@ -25,6 +25,11 @@ class Detail extends React.Component {
     this.props.update(this.props.id, this.state.inputItemState);
   }
 
+  delete = () => {
+    this.props.remove(this.props.id);
+    this.props.history.goBack();
+  }
+
   renderInput = item => {
     if (item.type === 'boolean') {
       return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} />;
@@ -49,8 +54,8 @@ class Detail extends React.Component {
                 create={this.props.create}
               />
             </div>
-            {this.props.isUpdated && <div class="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
-            {this.props.isError && <div class="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
+            {this.props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
+            {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
             <h3>{this.props.title}</h3>
             <span className="text-primary">{`${strings.ID}: ${this.props.id}`}</span>
             <div className="input-fields">
@@ -75,7 +80,7 @@ class Detail extends React.Component {
               <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
-                handlePrimaryButton={() => this.props.remove(this.props.id)}
+                handlePrimaryButton={this.delete}
                 primaryButtonText={strings.DELETE}
                 secondaryButtonText={strings.CANCEL}
                 modalButtonClassName="btn-danger"

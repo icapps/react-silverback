@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import format from 'date-fns/format';
 import isDate from 'date-fns/is_date';
+import { strings } from '../../utils';
+import { Modal } from '../index';
 import './table.css';
 
 const checkIcon = require('../../assets/images/check.svg');
@@ -50,14 +52,27 @@ class Table extends React.Component {
                     {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
                   </span>
                 </th>))}
-                <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             {props.listItems.map((listItem, index) => (
               <tr key={listItem.id}>
-                {props.keys.map((key, i) => <td key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
-                <td className="remove-list-item"><img src={deleteIcon} onClick={() => props.handleRemoveItem(listItem.id)} alt="delete" /></td>
+                {props.keys.map((key, i) => <td className="table-data" key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
+                <td className="remove-list-item table-data">
+                  <Modal
+                    id="delete"
+                    icon={deleteIcon}
+                    modalButtonText=""
+                    handlePrimaryButton={() => props.handleRemoveItem(listItem.id)}
+                    primaryButtonText={strings.DELETE}
+                    secondaryButtonText={strings.CANCEL}
+                    secondaryButtonClassName="btn-light"
+                    primaryButtonClassName="btn-danger"
+                  >
+                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
+                  </Modal>
+                </td>
               </tr>
             ))}
           </tbody>

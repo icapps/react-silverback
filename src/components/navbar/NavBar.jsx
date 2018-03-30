@@ -8,7 +8,7 @@ const Navbar = props => (
     <ul className="nav nav-pills flex-column">
       {props.links.map(link => (
         <li key={link.name} className="nav-item" onClick={props.toggleNavigation}>
-          <Link to={link.path} className={`nav-link ${window.location.pathname === link.path ? 'active' : ''}`}>{link.name}</Link>
+          <Link to={link.path} className={`nav-link ${window.location.pathname.includes(link.path) ? 'active' : ''}`}>{link.name}</Link>
         </li>
       ))}
     </ul>

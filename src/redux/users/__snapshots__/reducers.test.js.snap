@@ -84,6 +84,7 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isPending": true,
+  "isUserUpdated": false,
   "user": null,
   "userList": Array [],
   "usersCount": 0,

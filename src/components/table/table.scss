@@ -46,19 +46,25 @@
 .remove-list-item{
   width: 25px;
 
-  img{
-    filter: grayscale(100%);
-    opacity: 0.3;
+  button{
+    img{
+      filter: grayscale(100%);
+      opacity: 0.3;
+    }
 
     &:hover{
-      filter: none;
-      opacity: 1;
+      img{
+        filter: none;
+        opacity: 1;
+      }
     }
   }
 }
 
-td {
+.table .table-data {
   cursor: pointer;
+  vertical-align: middle;
+
 }
 
 .key {

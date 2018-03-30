@@ -42,11 +42,22 @@ class DataTypeOverview extends Component {
           { id: strings.DESCRIPTION, value: strings.DESCRIPTION, isSortable: false },
         ]}
         listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
-        removeItem={() => { }}
         sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.dataTypesCount}
         handlePagination={this.handlePagination}
+        createParameters={[
+          { id: strings.TYPE, label: strings.TYPE, type: "text" },
+          { id: strings.PRICE, label: strings.PRICE, type: "number" },
+          { id: strings.EDIBLE, label: strings.EDIBLE, type: "boolean" },
+          { id: strings.BEST_BEFORE, label: strings.BEST_BEFORE, type: "text" },
+          { id: strings.WEIGHT, label: strings.WEIGHT, type: "number" },
+          { id: strings.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
+        ]}
+        create={() => { }}
+        removeItem={() => { }}
+        isError={false}
+        errorMessage={''}
       />
     );
   }
@@ -62,3 +73,4 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DataTypeOverview);
+

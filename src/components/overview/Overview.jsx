@@ -26,6 +26,7 @@ class Overview extends React.Component {
     return (
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
+          {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
           <h2>
             {props.title}
             {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}

@@ -37,6 +37,7 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
   // GET_USERS_BY_ID
   it('should GET_USERS_BY_ID_FULFILLED', () => {
     expect(
@@ -61,6 +62,7 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
   //CREATE_USER
   it('should CREATE_USER_FULFILLED', () => {
     expect(
@@ -109,6 +111,8 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  //REMOVE_USER
   it('should REMOVE_USER_FULFILLED', () => {
     expect(
       users(initialState, {
