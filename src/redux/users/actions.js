@@ -15,6 +15,13 @@ export const getUsersById = id => {
   };
 };
 
+export const updateUser = (id, user) => {
+  return {
+    type: constants.UPDATE_USER,
+    payload: userService.update(id, user),
+  };
+};
+
 export const removeUser = id => {
   return {
     type: constants.REMOVE_USER,

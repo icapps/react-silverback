@@ -13,20 +13,24 @@ class Detail extends React.Component {
   }
 
   setInputItems = () => {
-    let inputState = {};
-    this.props.inputItems.forEach(item => inputState[item.id] = item.value);
-    this.setState(inputState);
+    let inputItemState = {};
+    this.props.inputItems.forEach(item => inputItemState[item.id] = item.value);
+    this.setState({ inputItemState });
   }
 
   handleChange = event => {
-    this.setState({ [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value });
+    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value } });
   };
+
+  save = () => {
+    this.props.update(this.props.id, this.state.inputItemState);
+  }
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} type={item.type} />;
   }
 
 
@@ -41,6 +45,8 @@ class Detail extends React.Component {
               <div className="back text-primary" onClick={this.props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
               <Button text={`${strings.CREATE} ${this.props.dataType}`} handleClick={() => { }} className="btn-success" icon={plus} />
             </div>
+            {this.props.isUpdated && <div class="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
+            {this.props.isError && <div class="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
             <h3>{this.props.title}</h3>
             <span className="text-primary">{`${strings.ID}: ${this.props.id}`}</span>
             <div className="input-fields">
@@ -48,7 +54,7 @@ class Detail extends React.Component {
             </div>
             <div className="detail-actions">
               <div className="update-actions">
-                <Button text={strings.SAVE} handleClick={() => { }} className="btn-primary" />
+                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" />
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
@@ -91,6 +97,10 @@ Detail.propTypes = {
   inputItems: PropTypes.array.isRequired,
   remove: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  update: PropTypes.func.isRequired,
+  isUpdated: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
 };
 
 export default Detail;

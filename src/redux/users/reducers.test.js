@@ -31,10 +31,11 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_REJECTED,
-        error: {message: ''},
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();
   });
+  // GET_USERS_BY_ID
   it('should GET_USERS_BY_ID_FULFILLED', () => {
     expect(
       users(initialState, {
@@ -54,7 +55,31 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_BY_ID_REJECTED,
-        error: {message: ''},
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
+  // UPDATE_USER
+  it('should UPDATE_USER_FULFILLED', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UPDATE_USER_PENDING', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UPDATE_USER_REJECTED', () => {
+    expect(
+      users(initialState, {
+        type: constants.UPDATE_USER_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();
   });
@@ -76,7 +101,7 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.REMOVE_USER_REJECTED,
-        error: {message: ''},
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
       })
     ).toMatchSnapshot();
   });
