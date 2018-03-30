@@ -21,3 +21,10 @@ export const updateUser = (id, user) => {
     payload: userService.update(id, user),
   };
 };
+
+export const removeUser = id => {
+  return {
+    type: constants.REMOVE_USER,
+    payload: userService.remove(id),
+  };
+};

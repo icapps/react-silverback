@@ -16,3 +16,8 @@ export const update = async (id, user) => {
   const result = await Network.patch(`/users/${id}`, user);
   return result;
 };
+
+export const remove = async id => {
+  const result = await Network.delete(`/users/${id}`);
+  return result;
+};

@@ -73,7 +73,7 @@ class Detail extends React.Component {
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
                 handleSecondaryButton={() => { }}
-                handlePrimaryButton={this.setInputItems}
+                handlePrimaryButton={() => this.props.remove(this.props.id)}
                 primaryButtonText={strings.DELETE}
                 secondaryButtonText={strings.CANCEL}
                 modalButtonClassName="btn-danger"
@@ -95,6 +95,7 @@ Detail.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   inputItems: PropTypes.array.isRequired,
+  remove: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   update: PropTypes.func.isRequired,
   isUpdated: PropTypes.bool.isRequired,
