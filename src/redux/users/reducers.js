@@ -25,6 +25,7 @@ const users = (state = initialState, action = {}) => {
         isPending: true,
         isError: false,
         errorMessage: '',
+        user: null,
       };
     case constants.GET_USERS_REJECTED:
       return {
@@ -67,6 +68,26 @@ const users = (state = initialState, action = {}) => {
         errorMessage: '',
       };
     case constants.CREATE_USER_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: payload.errors[0].detail,
+      };
+    case constants.REMOVE_USER_FULFILLED:
+      return {
+        ...state,
+        user: null,
+        isPending: false,
+      };
+    case constants.REMOVE_USER_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.REMOVE_USER_REJECTED:
       return {
         ...state,
         isPending: false,

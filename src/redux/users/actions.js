@@ -21,3 +21,10 @@ export const createUser = (user) => {
     payload: userService.create(user),
   };
 };
+
+export const removeUser = id => {
+  return {
+    type: constants.REMOVE_USER,
+    payload: userService.remove(id),
+  };
+};

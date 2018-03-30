@@ -85,8 +85,11 @@ Object {
   "isError": false,
   "isPending": true,
   "user": null,
+<<<<<<< HEAD
   "userList": Array [],
   "usersCount": 0,
+=======
+>>>>>>> 4231ed0c4979b0ba4ab4563ac634b38ac1b8f391
 }
 `;
 
@@ -98,6 +101,34 @@ Object {
   "user": null,
   "userList": Array [],
   "usersCount": 0,
+}
+`;
+
+exports[`users reducer should REMOVE_USER_FULFILLED 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "user": null,
+}
+`;
+
+exports[`users reducer should REMOVE_USER_PENDING 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`users reducer should REMOVE_USER_REJECTED 1`] = `
+Object {
+  "dataTypes": Array [],
+  "errorMessage": "",
+  "isError": true,
+  "isPending": false,
 }
 `;
 
