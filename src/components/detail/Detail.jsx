@@ -102,17 +102,21 @@ Detail.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   inputItems: PropTypes.array.isRequired,
-  remove: PropTypes.func,
   history: PropTypes.object.isRequired,
-  createParameters: PropTypes.array,
-  create: PropTypes.func,
-  update: PropTypes.func,
-  isUpdated: PropTypes.bool,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
+  create: PropTypes.func,
+  createParameters: PropTypes.array,
+  remove: PropTypes.func,
+  update: PropTypes.func,
+  isUpdated: PropTypes.bool,
 };
 
 Detail.defaultProps = {
+  create: null,
+  createParameters: [],
+  remove: null,
+  update: null,
   isUpdated: false,
 };
 
