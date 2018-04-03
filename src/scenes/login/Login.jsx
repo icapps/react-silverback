@@ -27,15 +27,18 @@ class Login extends Component {
       await this.props.loginUser(this.state.email.value, this.state.password.value);
       if (this.props.isLoggedIn) {
         this.props.history.push('/');
+      } else {
+        this.setState({ password: { value: '' } });
       }
     }
   }
 
   render() {
     const { props, state } = this;
+    const showErrorMessage = state.email.isValid && state.password.isValid;
     return (
       <div className="login-container container">
-        {props.isError && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
+        {(props.isError && showErrorMessage) && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
         <main className="login">
           <div className="row">
             <div className="col-12 col-md-5 branding">
