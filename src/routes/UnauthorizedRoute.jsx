@@ -11,7 +11,7 @@ class AuthorizedRoute extends Component {
         {...otherProps}
         render={props => {
           if (isPending) return <div>Loading...</div>;
-        return localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
+          return !localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/' />;
         }}
       />
     );

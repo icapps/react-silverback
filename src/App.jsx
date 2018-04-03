@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import AuthorizedRoute from './routes/AuthorizedRoute';
 import AuthorizedLayout from './routes/AuthorizedLayout';
+import UnauthorizedRoute from './routes/UnauthorizedRoute';
 import UnauthorizedLayout from './routes/UnauthorizedLayout';
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path='/auth' component={UnauthorizedLayout} />
+          <UnauthorizedRoute path='/auth' component={UnauthorizedLayout} />
           <AuthorizedRoute path='/' component={AuthorizedLayout} />
         </Switch>
       </BrowserRouter>
