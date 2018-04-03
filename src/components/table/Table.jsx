@@ -15,12 +15,12 @@ class Table extends React.Component {
     super();
     this.state = {
       sortedItem: '',
-      isDescending: true,
+      isDescending: false,
     };
   }
 
   sortItem = (sortedItem, isSortable) => {
-    const isDescending = this.state.sortedItem === sortedItem ? !this.state.isDescending : true;
+    const isDescending = this.state.sortedItem === sortedItem && !this.state.isDescending;
     if (isSortable) {
       this.setState({
         sortedItem,
