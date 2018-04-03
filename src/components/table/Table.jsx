@@ -89,14 +89,15 @@ Table.propTypes = {
     isSortable: PropTypes.bool,
   })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
-  dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,
+  dateFormat: PropTypes.string,
   handleRemoveItem: PropTypes.func,
   maxTextLength: PropTypes.number,
 };
 
 Table.defaultProps = {
   dateFormat: 'DD/MM/YYYY',
+  handleRemoveItem: null,
   maxTextLength: 50,
 };
 
