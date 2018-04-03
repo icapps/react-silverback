@@ -50,5 +50,7 @@
   "CODES": "Codes",
   "CODE": "Code",
   "CODE_TYPES": "Codetypes",
-  "CODE_TYPE": "Codetype"
+  "CODE_TYPE": "Codetype",
+  "FRONTEND": "Frontend",
+  "BACKEND": "Backend"
 }

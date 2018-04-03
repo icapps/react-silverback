@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { strings } from '../../utils';
 import './navbar.css';
 
 const Navbar = props => (
@@ -12,6 +13,10 @@ const Navbar = props => (
         </li>
       ))}
     </ul>
+    <div className="versioning nav flex-column">
+      <span className="nav-item">{`${strings.FRONTEND}: ${process.env.REACT_APP_VERSION_NR}.${process.env.REACT_APP_BUILD_NR}`}</span>
+      <span className="nav-item">{`${strings.BACKEND}: ${0}`}</span>
+    </div>
   </aside>
 );
 
