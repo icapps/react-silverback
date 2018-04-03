@@ -46,5 +46,9 @@
   "DELETE": "Delete",
   "DELETE_CONFIRMATION": "Are you sure you want to delete {item}?",
   "GENERAL_ERROR": "Something went wrong!",
-  "UPDATE_SUCCESS": "Your changes have been saved successfully"
+  "UPDATE_SUCCESS": "Your changes have been saved successfully",
+  "CODES": "Codes",
+  "CODE": "Code",
+  "CODE_TYPES": "Codetypes",
+  "CODE_TYPE": "Codetype"
 }

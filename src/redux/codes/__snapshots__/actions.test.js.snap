@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user actions getCodeTypes 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_CODE_TYPES",
+  },
+]
+`;
+
+exports[`user actions getCodes 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_CODES",
+  },
+]
+`;

@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`codes reducer should GET_CODE_TYPES_FULFILLED 1`] = `
+Object {
+  "codeTypeCount": 10,
+  "codeTypes": Object {},
+  "codes": Array [],
+  "codesCount": 0,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+}
+`;
+
+exports[`codes reducer should GET_CODE_TYPES_PENDING 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codes": Array [],
+  "codesCount": 0,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`codes reducer should GET_CODE_TYPES_REJECTED 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codes": Array [],
+  "codesCount": 0,
+  "errorMessage": "ErrorMessage",
+  "isError": true,
+  "isPending": false,
+}
+`;
+
+exports[`codes reducer should GET_CODES_FULFILLED 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codes": Array [],
+  "codesCount": 10,
+  "codesList": Object {},
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+}
+`;
+
+exports[`codes reducer should GET_CODES_PENDING 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codes": Array [],
+  "codesCount": 0,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`codes reducer should GET_CODES_REJECTED 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codes": Array [],
+  "codesCount": 0,
+  "errorMessage": "ErrorMessage",
+  "isError": true,
+  "isPending": false,
+}
+`;
+
+exports[`codes reducer should return the initial state 1`] = `
+Object {
+  "codeTypeCount": 0,
+  "codeTypes": Array [],
+  "codesCount": 0,
+  "codesList": Array [],
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+}
+`;

@@ -32,12 +32,12 @@ class Overview extends React.Component {
             {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
-            <CreateModal
+            {props.create && <CreateModal
               primaryButtonText={`${strings.CREATE} ${props.title}`}
               title={`${strings.CREATE} ${props.title}`}
               createParameters={this.props.createParameters}
               create={this.props.create}
-            />
+            />}
           </div>
           {props.listItems.length > 0 ? (
             <React.Fragment>
@@ -68,13 +68,13 @@ Overview.propTypes = {
   })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
   dateFormat: PropTypes.string,
-  removeItem: PropTypes.func.isRequired,
+  removeItem: PropTypes.func,
   sortItems: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   paginationTotalCount: PropTypes.number.isRequired,
   handlePagination: PropTypes.func.isRequired,
-  createParameters: PropTypes.array.isRequired,
-  create: PropTypes.func.isRequired,
+  createParameters: PropTypes.array,
+  create: PropTypes.func,
 };
 
 export default Overview;
