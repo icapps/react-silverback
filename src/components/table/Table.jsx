@@ -52,7 +52,7 @@ class Table extends React.Component {
                     {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
                   </span>
                 </th>))}
-              <th></th>
+              {props.handleRemoveItem && <th></th>}
             </tr>
           </thead>
           <tbody>
@@ -60,7 +60,7 @@ class Table extends React.Component {
               <tr key={listItem.id}>
                 {props.keys.map((key, i) => <td className="table-data" key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
                 <td className="remove-list-item table-data">
-                  <Modal
+                  {props.handleRemoveItem && <Modal
                     id="delete"
                     icon={deleteIcon}
                     modalButtonText=""
@@ -71,7 +71,7 @@ class Table extends React.Component {
                     primaryButtonClassName="btn-danger"
                   >
                     <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
-                  </Modal>
+                  </Modal>}
                 </td>
               </tr>
             ))}
@@ -89,14 +89,15 @@ Table.propTypes = {
     isSortable: PropTypes.bool,
   })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
-  dateFormat: PropTypes.string,
   handleRowClick: PropTypes.func.isRequired,
-  handleRemoveItem: PropTypes.func.isRequired,
+  dateFormat: PropTypes.string,
+  handleRemoveItem: PropTypes.func,
   maxTextLength: PropTypes.number,
 };
 
 Table.defaultProps = {
   dateFormat: 'DD/MM/YYYY',
+  handleRemoveItem: null,
   maxTextLength: 50,
 };
 

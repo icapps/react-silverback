@@ -47,12 +47,12 @@ class Detail extends React.Component {
           <div className="container">
             <div className="detail-header">
               <div className="back text-primary" onClick={this.props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
-              <CreateModal
+              {this.props.create && <CreateModal
                 primaryButtonText={`${strings.CREATE} ${this.props.dataType}`}
                 title={`${strings.CREATE} ${this.props.dataType}`}
                 createParameters={this.props.createParameters}
                 create={this.props.create}
-              />
+              />}
             </div>
             {this.props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
@@ -62,7 +62,7 @@ class Detail extends React.Component {
               {this.state && this.props.inputItems.map(item => this.renderInput(item))}
             </div>
             <div className="detail-actions">
-              <div className="update-actions">
+              {this.props.update && <div className="update-actions">
                 <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" />
                 <Modal
                   id="reset-changes"
@@ -76,8 +76,8 @@ class Detail extends React.Component {
                 >
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
-              </div>
-              <Modal
+              </div>}
+              {this.props.remove && <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
                 handlePrimaryButton={this.delete}
@@ -88,7 +88,7 @@ class Detail extends React.Component {
                 primaryButtonClassName="btn-danger"
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
-              </Modal>
+              </Modal>}
             </div>
           </div>
         )}
@@ -102,14 +102,22 @@ Detail.propTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   inputItems: PropTypes.array.isRequired,
-  remove: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
-  createParameters: PropTypes.array.isRequired,
-  create: PropTypes.func.isRequired,
-  update: PropTypes.func.isRequired,
-  isUpdated: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
+  create: PropTypes.func,
+  createParameters: PropTypes.array,
+  remove: PropTypes.func,
+  update: PropTypes.func,
+  isUpdated: PropTypes.bool,
+};
+
+Detail.defaultProps = {
+  create: null,
+  createParameters: [],
+  remove: null,
+  update: null,
+  isUpdated: false,
 };
 
 export default Detail;

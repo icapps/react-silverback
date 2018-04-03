@@ -20,6 +20,7 @@ class AuthorizedRoute extends Component {
 
 const mapStateToProps = state => ({
   isPending: state.auth.isPending,
+  isNavigationShown: state.navigation.isNavigationShown,
 });
 
 const mapDispatchToProps = dispatch => ({
