@@ -10,8 +10,8 @@ class AuthorizedRoute extends Component {
       <Route
         {...otherProps}
         render={props => {
-          if (isPending) return <div>Loading...</div>;
-        return localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
+          if (isPending) return <div className="spinner-container"><div className="spinner" /></div>;
+          return localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
         }}
       />
     );
