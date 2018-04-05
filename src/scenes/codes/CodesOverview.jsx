@@ -5,29 +5,6 @@ import { strings } from '../../utils';
 import { getCodes } from '../../redux/codes/actions';
 
 class CodesOverview extends Component {
-  constructor() {
-    super();
-    this.state = {
-      page: 0,
-      limit: 10,
-      sortField: null,
-      sortOrder: null,
-    };
-  }
-  componentDidMount() {
-    this.props.getCodes(this.state.page, this.state.limit);
-  }
-
-  sortItems = (sortField, sortOrder) => {
-    this.props.getCodes(this.state.page, this.state.limit, sortField, sortOrder);
-    this.setState({ sortField, sortOrder });
-  }
-
-  handlePagination = (page, limit) => {
-    this.props.getCodes(page, limit, this.state.sortField, this.state.sortOrder);
-    this.setState({ page, limit });
-  };
-
   render() {
     return (
       <Overview
@@ -39,7 +16,7 @@ class CodesOverview extends Component {
         sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.codesCount}
-        handlePagination={this.handlePagination}
+        get={this.props.getCodes}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
       />

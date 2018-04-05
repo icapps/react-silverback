@@ -31,7 +31,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
-    handlePagination={[Function]}
+    get={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -73,7 +73,6 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
-    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -962,7 +961,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
-    handlePagination={[Function]}
+    get={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -1004,7 +1003,6 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
-    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1893,7 +1891,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
-    handlePagination={[Function]}
+    get={[Function]}
     history={Object {}}
     keys={
         Array [
@@ -1917,7 +1915,6 @@ ShallowWrapper {
     listItems={Array []}
     paginationTotalCount={100}
     removeItem={[Function]}
-    sortItems={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
