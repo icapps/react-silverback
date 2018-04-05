@@ -13,7 +13,6 @@ class CodesOverview extends Component {
           { id: 'value', value: strings.CODE, isSortable: true },
         ]}
         listItems={this.props.codes}
-        sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.codesCount}
         get={this.props.getCodes}
