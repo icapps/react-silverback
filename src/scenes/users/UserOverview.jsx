@@ -55,7 +55,7 @@ class UserOverview extends Component {
 }
 
 UserOverview.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
   usersCount: PropTypes.number.isRequired,
   users: PropTypes.arrayOf(PropTypes.object).isRequired,
   isError: PropTypes.bool.isRequired,

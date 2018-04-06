@@ -10,7 +10,7 @@ const initialState = {
   ...defaultInitialState,
 };
 
-const errorMessageHandling = payload => payload.errors[0].detail || payload.errors[0].title || strings.GENERAL_ERROR;
+const errorMessageHandling = payload => payload.errors[0].title || strings.GENERAL_ERROR;
 
 const users = (state = initialState, action = {}) => {
   const { payload } = action;

@@ -58,7 +58,7 @@ class UserDetail extends Component {
 }
 
 UserDetail.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
   isUserUpdated: PropTypes.bool.isRequired,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
