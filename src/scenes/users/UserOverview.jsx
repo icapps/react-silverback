@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getUsers, createUser, removeUser } from '../../redux/users/actions';
@@ -7,19 +8,6 @@ import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 
 class UserOverview extends Component {
-  constructor() {
-    super();
-    this.state = {
-      page: 0,
-      limit: 10,
-      sortField: null,
-      sortOrder: null,
-    };
-  }
-  componentDidMount() {
-    this.props.getUsers(this.state.page, this.state.limit);
-  }
-
   createUser = async user => {
     const result = await this.props.createUser(user);
     if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
@@ -34,16 +22,6 @@ class UserOverview extends Component {
     }
   }
 
-  sortItems = (sortField, sortOrder) => {
-    this.props.getUsers(this.state.page, this.state.limit, sortField, sortOrder);
-    this.setState({ sortField, sortOrder });
-  }
-
-  handlePagination = (page, limit) => {
-    this.props.getUsers(page, limit, this.state.sortField, this.state.sortOrder);
-    this.setState({ page, limit });
-  };
-
   render() {
     return (
       <Overview
@@ -56,10 +34,8 @@ class UserOverview extends Component {
           { id: identifiers.ROLE, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
-        sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
-        handlePagination={this.handlePagination}
         createParameters={[
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
@@ -71,11 +47,23 @@ class UserOverview extends Component {
         create={this.createUser}
         removeItem={this.removeUser}
         isError={this.props.isError}
+        get={this.props.getUsers}
         errorMessage={this.props.errorMessage}
       />
     );
   }
 }
+
+UserOverview.propTypes = {
+  user: PropTypes.object.isRequired,
+  usersCount: PropTypes.number.isRequired,
+  users: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  getUsers: PropTypes.func.isRequired,
+  createUser: PropTypes.func.isRequired,
+  removeUser: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   users: state.users.userList,

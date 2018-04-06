@@ -173,10 +173,9 @@ storiesOf('Overview', module)
         { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
       ]}
       removeItem={action('remove item')}
-      sortItems={() => { }}
+      get={() => { }}
       history={{}}
       paginationTotalCount={100}
-      handlePagination={action('handle pagination')}
       createParameters={[
         { id: 'key1', label: "test", type: "text" },
         { id: 'key2', label: "test2", type: "text" },
@@ -197,10 +196,9 @@ storiesOf('Overview', module)
       ]}
       listItems={[]}
       removeItem={action('remove item')}
-      sortItems={() => { }}
+      get={() => { }}
       history={{}}
       paginationTotalCount={100}
-      handlePagination={action('handle pagination')}
       createParameters={[
         { id: 'key1', label: "test", type: "text" },
         { id: 'key2', label: "test2", type: "text" },

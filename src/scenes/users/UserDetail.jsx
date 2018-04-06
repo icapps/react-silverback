@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser } from '../../redux/users/actions';
@@ -55,6 +56,18 @@ class UserDetail extends Component {
     return <EmptyDetail history={this.props.history} />;
   }
 }
+
+UserDetail.propTypes = {
+  user: PropTypes.object.isRequired,
+  isUserUpdated: PropTypes.bool.isRequired,
+  isPending: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  getUsersById: PropTypes.func.isRequired,
+  createUser: PropTypes.func.isRequired,
+  updateUser: PropTypes.func.isRequired,
+  removeUser: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   user: state.users.user,

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
@@ -25,6 +26,14 @@ class CodeDetail extends Component {
     return <EmptyDetail history={this.props.history} />;
   }
 }
+
+CodeDetail.propTypes = {
+  codeTypes: PropTypes.object.isRequired,
+  isPending: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  getCodes: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   codes: state.codes.codesList,

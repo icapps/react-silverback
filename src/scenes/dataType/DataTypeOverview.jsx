@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getDataType } from '../../redux/datatype/actions';
@@ -6,29 +7,6 @@ import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 
 class DataTypeOverview extends Component {
-  constructor() {
-    super();
-    this.state = {
-      page: 0,
-      limit: 10,
-      sortField: null,
-      sortOrder: null,
-    };
-  }
-  componentDidMount() {
-    this.props.getDataType(this.state.page, this.state.limit);
-  }
-
-  sortItems = (sortField, sortOrder) => {
-    this.props.getDataType(this.state.page, this.state.limit, sortField, sortOrder);
-    this.setState({ sortField, sortOrder });
-  }
-
-  handlePagination = (page, limit) => {
-    this.props.getDataType(page, limit, this.state.sortField, this.state.sortOrder);
-    this.setState({ page, limit });
-  };
-
   render() {
     return (
       <Overview
@@ -43,10 +21,9 @@ class DataTypeOverview extends Component {
           { id: identifiers.DESCRIPTION, value: strings.DESCRIPTION, isSortable: false },
         ]}
         listItems={this.props.datatypes.map(item => { return { ...item, bestBefore: item.bestBefore && new Date(item.bestBefore) }; })}
-        sortItems={this.sortItems}
         history={this.props.history}
         paginationTotalCount={this.props.dataTypesCount}
-        handlePagination={this.handlePagination}
+        get={this.props.getDataType}
         createParameters={[
           { id: identifiers.TYPE, label: strings.TYPE, type: "text" },
           { id: identifiers.PRICE, label: strings.PRICE, type: "number" },
@@ -63,6 +40,12 @@ class DataTypeOverview extends Component {
     );
   }
 }
+
+DataTypeOverview.propTypes = {
+  datatypes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dataTypesCount: PropTypes.number.isRequired,
+  getDataType: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   datatypes: state.dataType.dataTypes,
