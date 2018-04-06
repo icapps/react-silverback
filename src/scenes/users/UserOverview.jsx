@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getUsers, createUser, removeUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 
 class UserOverview extends Component {
@@ -48,11 +49,11 @@ class UserOverview extends Component {
       <Overview
         title={strings.USERS}
         keys={[
-          { id: strings.EMAIL_ID, value: strings.EMAIL, isSortable: true },
-          { id: strings.FIRST_NAME_ID, value: strings.FIRST_NAME, isSortable: true },
-          { id: strings.LAST_NAME_ID, value: strings.LAST_NAME, isSortable: true },
-          { id: strings.HAS_ACCESS_ID, value: strings.HAS_ACCESS, isSortable: false },
-          { id: strings.ROLE_ID, value: strings.ROLE, isSortable: false },
+          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true },
+          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
+          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
+          { id: identifiers.HAS_ACCESS, value: strings.HAS_ACCESS, isSortable: false },
+          { id: identifiers.ROLE, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
         sortItems={this.sortItems}
@@ -60,12 +61,12 @@ class UserOverview extends Component {
         paginationTotalCount={this.props.usersCount}
         handlePagination={this.handlePagination}
         createParameters={[
-          { id: strings.EMAIL_ID, label: strings.EMAIL, type: "text" },
-          { id: strings.FIRST_NAME_ID, label: strings.FIRST_NAME, type: "text" },
-          { id: strings.LAST_NAME_ID, label: strings.LAST_NAME, type: "text" },
-          { id: strings.PASSWORD_ID, label: strings.PASSWORD, type: "password" },
-          { id: strings.ROLE_ID, label: strings.ROLE, type: "text" },
-          { id: strings.HAS_ACCESS_ID, label: strings.HAS_ACCESS, type: "boolean" },
+          { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
+          { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
+          { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
+          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
+          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean" },
         ]}
         create={this.createUser}
         removeItem={this.removeUser}

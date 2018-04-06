@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Detail, EmptyDetail } from '../../components';
+import { Detail, EmptyDetail, Spinner } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 
 class UserDetail extends Component {
@@ -22,30 +23,27 @@ class UserDetail extends Component {
   }
 
   render() {
-    if (this.props.isPending) return (
-      <main className="spinner-container col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        <div className="spinner" />
-      </main>);
+    if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     if (this.props.user) return (
       <Detail
         dataType={strings.USERS}
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
-          { id: strings.EMAIL_ID, value: this.props.user.email, label: strings.EMAIL, type: "text" },
-          { id: strings.FIRST_NAME_ID, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text" },
-          { id: strings.LAST_NAME_ID, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text" },
-          { id: strings.ROLE_ID, value: this.props.user.role, label: strings.ROLE, type: "text" },
-          { id: strings.HAS_ACCESS_ID, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean" },
+          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text" },
+          { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text" },
+          { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text" },
+          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "text" },
+          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean" },
         ]}
         history={this.props.history}
         createParameters={[
-          { id: strings.EMAIL_ID, label: strings.EMAIL, type: "text" },
-          { id: strings.FIRST_NAME_ID, label: strings.FIRST_NAME, type: "text" },
-          { id: strings.LAST_NAME_ID, label: strings.LAST_NAME, type: "text" },
-          { id: strings.PASSWORD_ID, label: strings.PASSWORD, type: "password" },
-          { id: strings.ROLE_ID, label: strings.ROLE, type: "text" },
-          { id: strings.HAS_ACCESS_ID, label: strings.HAS_ACCESS, type: "boolean" },
+          { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
+          { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
+          { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
+          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
+          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean" },
         ]}
         create={this.createUser}
         remove={this.props.removeUser}
