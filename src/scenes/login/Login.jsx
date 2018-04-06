@@ -49,7 +49,7 @@ class Login extends Component {
     return (
       <div className="login-container container">
         {(props.isError && showErrorMessage) && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
-        <main className={`login ${props.isError ? 'login-fail' : ''}`}>
+        <main className='login'>
           <div className="row">
             <div className="col-12 col-md-5 branding">
               <h2>{strings.HEADER_TITLE}</h2>
