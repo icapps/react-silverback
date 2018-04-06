@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { strings } from '../../utils';
 import { Button, BasicInput } from '../../components/index';
@@ -55,6 +56,13 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  loginUser: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   isLoggedIn: state.auth.isLoggedIn,
