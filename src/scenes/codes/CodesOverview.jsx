@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 import { getCodes } from '../../redux/codes/actions';
 
 class CodesOverview extends Component {
@@ -11,7 +12,7 @@ class CodesOverview extends Component {
       <Overview
         title={strings.CODES}
         keys={[
-          { id: 'value', value: strings.CODE, isSortable: true },
+          { id: identifiers.VALUE, value: strings.CODE, isSortable: true },
         ]}
         listItems={this.props.codes}
         history={this.props.history}
