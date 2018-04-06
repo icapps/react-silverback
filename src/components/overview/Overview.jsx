@@ -10,18 +10,29 @@ class Overview extends React.Component {
   constructor() {
     super();
     this.state = {
+      page: 0,
+      limit: 10,
       sortField: null,
       sortOrder: null,
     };
   }
+  componentDidMount() {
+    this.props.get(this.state.page, this.state.limit);
+  }
+
   showDetailScreen = id => {
     this.props.history.push(`${window.location.pathname}/${id}`, id);
   };
 
   sortItems = (sortField, sortOrder) => {
+    this.props.get(this.state.page, this.state.limit, sortField, sortOrder);
     this.setState({ sortField, sortOrder });
-    this.props.sortItems(sortField, sortOrder);
   }
+
+  handlePagination = (page, limit) => {
+    this.props.get(page, limit, this.state.sortField, this.state.sortOrder);
+    this.setState({ page, limit });
+  };
 
   render() {
     const { props, state } = this;
@@ -43,7 +54,7 @@ class Overview extends React.Component {
           </div>
           {props.listItems.length > 0 ? (
             <React.Fragment>
-              <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} />
               <Table
                 keys={props.keys}
                 listItems={props.listItems}
@@ -69,10 +80,9 @@ Overview.propTypes = {
     isSortable: PropTypes.bool,
   })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
-  sortItems: PropTypes.func.isRequired,
+  get: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   paginationTotalCount: PropTypes.number.isRequired,
-  handlePagination: PropTypes.func.isRequired,
   create: PropTypes.func,
   createParameters: PropTypes.array,
   dateFormat: PropTypes.string,

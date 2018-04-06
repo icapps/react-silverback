@@ -1,0 +1,23 @@
+@import '../../utils/_colors.scss';
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.spinner {
+  display: block;
+  border: 6px solid $light-border;
+  border-left-color: $dark-grey;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin:auto;
+  animation: spin 1.2s linear infinite;
+}
+
+main.spinner-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
