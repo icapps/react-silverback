@@ -18,14 +18,14 @@ class Pagination extends React.Component {
     };
   }
 
-  changePage = (pageNumber, pageLimit = this.state.pageLimit) => {
-    let maxPage = 1;
-    do {
-      maxPage += (visiblePages - 1);
-    } while (pageNumber >= (maxPage - 1));
-    const minPage = maxPage - (visiblePages - 1);
-    this.setState({ activePage: pageNumber, minPage, maxPage });
+  changePage = async (pageNumber, pageLimit = this.state.pageLimit) => {
+    await this.setState({
+      activePage: pageNumber,
+      minPage: pageNumber < 4 ? 1 : pageNumber - 1,
+      maxPage: pageNumber < 4 ? visiblePages : pageNumber + 3,
+    });
     this.props.handleClick(pageNumber, pageLimit);
+    console.log(this.state, pageNumber);
   }
 
   changePageLimit = event => {
@@ -72,17 +72,21 @@ class Pagination extends React.Component {
                   <li className="page-item" onClick={() => this.changePage(0)}>
                     <span className="page-link">1</span>
                   </li>
-                  <li className="page-item disabled ellipsis">
-                    <span className="page-link">{strings.ELLIPSIS}</span>
-                  </li>
+                  {state.minPage - 1 !== 1 &&
+                    <li className="page-item disabled ellipsis">
+                      <span className="page-link">{strings.ELLIPSIS}</span>
+                    </li>
+                  }
                 </React.Fragment>
               )}
               {this.renderPages(nrOfPages)}
               {state.maxPage < nrOfPages && (
                 <React.Fragment>
-                  <li className="page-item disabled ellipsis">
-                    <span className="page-link">{strings.ELLIPSIS}</span>
-                  </li>
+                  {state.maxPage + 1 !== nrOfPages &&
+                    <li className="page-item disabled ellipsis">
+                      <span className="page-link">{strings.ELLIPSIS}</span>
+                    </li>
+                  }
                   <li className="page-item" onClick={() => this.changePage(nrOfPages - 1)}>
                     <span className="page-link">{nrOfPages}</span>
                   </li>
