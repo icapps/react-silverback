@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getDataType } from '../../redux/datatype/actions';
@@ -38,6 +39,12 @@ class DataTypeOverview extends Component {
     );
   }
 }
+
+DataTypeOverview.propTypes = {
+  datatypes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  dataTypesCount: PropTypes.number.isRequired,
+  getDataType: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   datatypes: state.dataType.dataTypes,

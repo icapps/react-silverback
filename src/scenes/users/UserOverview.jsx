@@ -36,7 +36,7 @@ class UserOverview extends Component {
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
         createParameters={[
-          { id: strings.EMAIL_ID, label: strings.EMAIL, type: "text" },
+          { id: 'email', label: strings.EMAIL, type: "text" },
           { id: strings.FIRST_NAME_ID, label: strings.FIRST_NAME, type: "text" },
           { id: strings.LAST_NAME_ID, label: strings.LAST_NAME, type: "text" },
           { id: strings.PASSWORD_ID, label: strings.PASSWORD, type: "password" },
@@ -54,7 +54,7 @@ class UserOverview extends Component {
 }
 
 UserOverview.propTypes = {
-  user: PropTypes.object,
+  user: PropTypes.object.isRequired,
   usersCount: PropTypes.number.isRequired,
   users: PropTypes.arrayOf(PropTypes.object).isRequired,
   isError: PropTypes.bool.isRequired,

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
@@ -22,6 +23,15 @@ class CodeTypeOverview extends Component {
     );
   }
 }
+
+CodeTypeOverview.propTypes = {
+  codeTypes: PropTypes.object.isRequired,
+  codeTypeCount: PropTypes.number.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  getCodeTypes: PropTypes.func.isRequired,
+};
+
 
 const mapStateToProps = state => ({
   codeTypes: state.codes.codeTypes,
