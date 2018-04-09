@@ -9,6 +9,7 @@
   "CODE_TYPE": "Codetype",
   "CREATE": "Create",
   "CURRENT": "Current",
+  "DATATYPE": "Datatype",
   "DATATYPES": "Datatypes",
   "DELETE": "Delete",
   "DELETE_CONFIRMATION": "Are you sure you want to delete {item}?",
@@ -42,8 +43,10 @@
   "SAVE": "Save",
   "SHOWING_X_OF_X": "Showing {startOfRange} to {endOfRange} of {totalCount}",
   "SORTED_BY": "sorted by",
+  "SUBMIT": "Submit",
   "TYPE": "type",
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
+  "USER": "User",
   "USERS": "Users",
   "WEIGHT": "Weight"
 }
