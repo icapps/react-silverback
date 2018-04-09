@@ -53,6 +53,7 @@ ShallowWrapper {
             },
           ]
     }
+    keyword=""
     listItems={
         Array [
             Object {
@@ -123,8 +124,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
                 />
         </div>
         <Unknown>
@@ -222,8 +223,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
             />
 </div>,
           <Unknown>
@@ -332,8 +333,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              primaryButtonText="Create DataTypes"
-              title="Create DataTypes"
+              primaryButtonText="Create "
+              title="Create "
 />,
             "className": "overview-settings",
           },
@@ -366,8 +367,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
-              "primaryButtonText": "Create DataTypes",
-              "title": "Create DataTypes",
+              "primaryButtonText": "Create ",
+              "title": "Create ",
             },
             "ref": null,
             "rendered": null,
@@ -546,8 +547,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
-                              primaryButtonText="Create DataTypes"
-                              title="Create DataTypes"
+                              primaryButtonText="Create "
+                              title="Create "
                     />
           </div>
           <Unknown>
@@ -645,8 +646,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
-                            primaryButtonText="Create DataTypes"
-                            title="Create DataTypes"
+                            primaryButtonText="Create "
+                            title="Create "
               />
 </div>,
             <Unknown>
@@ -755,8 +756,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                primaryButtonText="Create DataTypes"
-                title="Create DataTypes"
+                primaryButtonText="Create "
+                title="Create "
 />,
               "className": "overview-settings",
             },
@@ -789,8 +790,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
-                "primaryButtonText": "Create DataTypes",
-                "title": "Create DataTypes",
+                "primaryButtonText": "Create ",
+                "title": "Create ",
               },
               "ref": null,
               "rendered": null,
@@ -992,6 +993,7 @@ ShallowWrapper {
             },
           ]
     }
+    keyword=""
     listItems={
         Array [
             Object {
@@ -1062,8 +1064,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
                 />
         </div>
         <Unknown>
@@ -1161,8 +1163,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
             />
 </div>,
           <Unknown>
@@ -1271,8 +1273,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              primaryButtonText="Create DataTypes"
-              title="Create DataTypes"
+              primaryButtonText="Create "
+              title="Create "
 />,
             "className": "overview-settings",
           },
@@ -1305,8 +1307,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
-              "primaryButtonText": "Create DataTypes",
-              "title": "Create DataTypes",
+              "primaryButtonText": "Create ",
+              "title": "Create ",
             },
             "ref": null,
             "rendered": null,
@@ -1485,8 +1487,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
-                              primaryButtonText="Create DataTypes"
-                              title="Create DataTypes"
+                              primaryButtonText="Create "
+                              title="Create "
                     />
           </div>
           <Unknown>
@@ -1584,8 +1586,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
-                            primaryButtonText="Create DataTypes"
-                            title="Create DataTypes"
+                            primaryButtonText="Create "
+                            title="Create "
               />
 </div>,
             <Unknown>
@@ -1694,8 +1696,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                primaryButtonText="Create DataTypes"
-                title="Create DataTypes"
+                primaryButtonText="Create "
+                title="Create "
 />,
               "className": "overview-settings",
             },
@@ -1728,8 +1730,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
-                "primaryButtonText": "Create DataTypes",
-                "title": "Create DataTypes",
+                "primaryButtonText": "Create ",
+                "title": "Create ",
               },
               "ref": null,
               "rendered": null,
@@ -1931,6 +1933,7 @@ ShallowWrapper {
             },
           ]
     }
+    keyword=""
     listItems={Array []}
     paginationTotalCount={100}
     removeItem={[Function]}
@@ -1983,8 +1986,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
                 />
         </div>
         <div
@@ -2042,8 +2045,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        primaryButtonText="Create DataTypes"
-                        title="Create DataTypes"
+                        primaryButtonText="Create "
+                        title="Create "
             />
 </div>,
           <div
@@ -2112,8 +2115,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              primaryButtonText="Create DataTypes"
-              title="Create DataTypes"
+              primaryButtonText="Create "
+              title="Create "
 />,
             "className": "overview-settings",
           },
@@ -2146,8 +2149,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
-              "primaryButtonText": "Create DataTypes",
-              "title": "Create DataTypes",
+              "primaryButtonText": "Create ",
+              "title": "Create ",
             },
             "ref": null,
             "rendered": null,
@@ -2239,8 +2242,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
-                              primaryButtonText="Create DataTypes"
-                              title="Create DataTypes"
+                              primaryButtonText="Create "
+                              title="Create "
                     />
           </div>
           <div
@@ -2298,8 +2301,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
-                            primaryButtonText="Create DataTypes"
-                            title="Create DataTypes"
+                            primaryButtonText="Create "
+                            title="Create "
               />
 </div>,
             <div
@@ -2368,8 +2371,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
-                primaryButtonText="Create DataTypes"
-                title="Create DataTypes"
+                primaryButtonText="Create "
+                title="Create "
 />,
               "className": "overview-settings",
             },
@@ -2402,8 +2405,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
-                "primaryButtonText": "Create DataTypes",
-                "title": "Create DataTypes",
+                "primaryButtonText": "Create ",
+                "title": "Create ",
               },
               "ref": null,
               "rendered": null,

@@ -26,6 +26,7 @@ class UserOverview extends Component {
     return (
       <Overview
         title={strings.USERS}
+        keyword={strings.USER}
         keys={[
           { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true },
           { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
@@ -56,7 +57,7 @@ class UserOverview extends Component {
 }
 
 UserOverview.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
   usersCount: PropTypes.number.isRequired,
   users: PropTypes.arrayOf(PropTypes.object).isRequired,
   isError: PropTypes.bool.isRequired,
