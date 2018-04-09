@@ -62,6 +62,7 @@ class Overview extends React.Component {
                 handleRowClick={this.showDetailScreen}
                 handleRemoveItem={this.props.removeItem}
                 handleSort={this.sortItems}
+                deleteIdentifier={props.deleteIdentifier}
               />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
@@ -88,6 +89,7 @@ Overview.propTypes = {
   createParameters: PropTypes.array,
   dateFormat: PropTypes.string,
   removeItem: PropTypes.func,
+  deleteIdentifier: PropTypes.string,
 };
 
 Overview.defaultProps = {
@@ -95,6 +97,7 @@ Overview.defaultProps = {
   createParameters: [],
   dateFormat: null,
   removeItem: null,
+  deleteIdentifier: '',
   keyword: '',
 };
 

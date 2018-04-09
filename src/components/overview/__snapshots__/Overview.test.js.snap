@@ -31,6 +31,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
+    deleteIdentifier=""
     get={[Function]}
     history={Object {}}
     keys={
@@ -134,6 +135,7 @@ ShallowWrapper {
                 />
                 <Table
                         dateFormat={null}
+                        deleteIdentifier=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -232,6 +234,7 @@ ShallowWrapper {
             />
             <Table
                         dateFormat={null}
+                        deleteIdentifier=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -385,6 +388,7 @@ ShallowWrapper {
 />,
               <Table
                 dateFormat={null}
+                deleteIdentifier=""
                 handleRemoveItem={[Function]}
                 handleRowClick={[Function]}
                 handleSort={[Function]}
@@ -450,6 +454,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "dateFormat": null,
+                "deleteIdentifier": "",
                 "handleRemoveItem": [Function],
                 "handleRowClick": [Function],
                 "handleSort": [Function],
@@ -553,6 +558,7 @@ ShallowWrapper {
                     />
                     <Table
                               dateFormat={null}
+                              deleteIdentifier=""
                               handleRemoveItem={[Function]}
                               handleRowClick={[Function]}
                               handleSort={[Function]}
@@ -651,6 +657,7 @@ ShallowWrapper {
               />
               <Table
                             dateFormat={null}
+                            deleteIdentifier=""
                             handleRemoveItem={[Function]}
                             handleRowClick={[Function]}
                             handleSort={[Function]}
@@ -804,6 +811,7 @@ ShallowWrapper {
 />,
                 <Table
                   dateFormat={null}
+                  deleteIdentifier=""
                   handleRemoveItem={[Function]}
                   handleRowClick={[Function]}
                   handleSort={[Function]}
@@ -869,6 +877,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "dateFormat": null,
+                  "deleteIdentifier": "",
                   "handleRemoveItem": [Function],
                   "handleRowClick": [Function],
                   "handleSort": [Function],
@@ -962,6 +971,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
+    deleteIdentifier=""
     get={[Function]}
     history={Object {}}
     keys={
@@ -1065,6 +1075,7 @@ ShallowWrapper {
                 />
                 <Table
                         dateFormat={null}
+                        deleteIdentifier=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -1163,6 +1174,7 @@ ShallowWrapper {
             />
             <Table
                         dateFormat={null}
+                        deleteIdentifier=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -1316,6 +1328,7 @@ ShallowWrapper {
 />,
               <Table
                 dateFormat={null}
+                deleteIdentifier=""
                 handleRemoveItem={[Function]}
                 handleRowClick={[Function]}
                 handleSort={[Function]}
@@ -1381,6 +1394,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "dateFormat": null,
+                "deleteIdentifier": "",
                 "handleRemoveItem": [Function],
                 "handleRowClick": [Function],
                 "handleSort": [Function],
@@ -1484,6 +1498,7 @@ ShallowWrapper {
                     />
                     <Table
                               dateFormat={null}
+                              deleteIdentifier=""
                               handleRemoveItem={[Function]}
                               handleRowClick={[Function]}
                               handleSort={[Function]}
@@ -1582,6 +1597,7 @@ ShallowWrapper {
               />
               <Table
                             dateFormat={null}
+                            deleteIdentifier=""
                             handleRemoveItem={[Function]}
                             handleRowClick={[Function]}
                             handleSort={[Function]}
@@ -1735,6 +1751,7 @@ ShallowWrapper {
 />,
                 <Table
                   dateFormat={null}
+                  deleteIdentifier=""
                   handleRemoveItem={[Function]}
                   handleRowClick={[Function]}
                   handleSort={[Function]}
@@ -1800,6 +1817,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "dateFormat": null,
+                  "deleteIdentifier": "",
                   "handleRemoveItem": [Function],
                   "handleRowClick": [Function],
                   "handleSort": [Function],
@@ -1893,6 +1911,7 @@ ShallowWrapper {
           ]
     }
     dateFormat={null}
+    deleteIdentifier=""
     get={[Function]}
     history={Object {}}
     keys={

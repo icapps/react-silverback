@@ -50,6 +50,7 @@ class UserOverview extends Component {
         isError={this.props.isError}
         get={this.props.getUsers}
         errorMessage={this.props.errorMessage}
+        deleteIdentifier={identifiers.EMAIL}
       />
     );
   }
