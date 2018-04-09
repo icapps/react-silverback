@@ -73,7 +73,7 @@ class Table extends React.Component {
                     secondaryButtonClassName="btn-light"
                     primaryButtonClassName="btn-danger"
                   >
-                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
+                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
                   </Modal>}
                 </td>
               </tr>
@@ -96,12 +96,14 @@ Table.propTypes = {
   dateFormat: PropTypes.string,
   handleRemoveItem: PropTypes.func,
   maxTextLength: PropTypes.number,
+  deleteIdentifier: PropTypes.string,
 };
 
 Table.defaultProps = {
   dateFormat: 'DD/MM/YYYY',
   handleRemoveItem: null,
   maxTextLength: 50,
+  deleteIdentifier: '',
 };
 
 export default Table;
