@@ -30,7 +30,7 @@ Object {
 
 exports[`users reducer should CREATE_USER_REJECTED 1`] = `
 Object {
-  "errorMessage": "ErrorMessage",
+  "errorMessage": "Something went wrong!",
   "isError": true,
   "isPending": false,
   "isUpdatePending": false,
@@ -69,7 +69,7 @@ Object {
 
 exports[`users reducer should GET_USERS_BY_ID_REJECTED 1`] = `
 Object {
-  "errorMessage": "ErrorMessage",
+  "errorMessage": "Something went wrong!",
   "isError": true,
   "isPending": false,
   "isUpdatePending": false,
@@ -108,7 +108,7 @@ Object {
 
 exports[`users reducer should GET_USERS_REJECTED 1`] = `
 Object {
-  "errorMessage": "ErrorMessage",
+  "errorMessage": "Something went wrong!",
   "isError": true,
   "isPending": false,
   "isUpdatePending": false,
@@ -147,7 +147,7 @@ Object {
 
 exports[`users reducer should REMOVE_USER_REJECTED 1`] = `
 Object {
-  "errorMessage": "ErrorMessage",
+  "errorMessage": "Something went wrong!",
   "isError": true,
   "isPending": false,
   "isUpdatePending": false,
@@ -186,7 +186,7 @@ Object {
 
 exports[`users reducer should UPDATE_USER_REJECTED 1`] = `
 Object {
-  "errorMessage": "ErrorMessage",
+  "errorMessage": "Something went wrong!",
   "isError": true,
   "isPending": false,
   "isUpdatePending": false,

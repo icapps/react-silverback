@@ -26,7 +26,7 @@ class CodesOverview extends Component {
 }
 
 CodesOverview.propTypes = {
-  codes: PropTypes.object.isRequired,
+  codes: PropTypes.array.isRequired,
   codesCount: PropTypes.number.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,

@@ -46,8 +46,8 @@ class Overview extends React.Component {
           </h2>
           <div className="overview-settings">
             {props.create && <CreateModal
-              primaryButtonText={`${strings.CREATE} ${props.title}`}
-              title={`${strings.CREATE} ${props.title}`}
+              primaryButtonText={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
+              title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               createParameters={this.props.createParameters}
               create={this.props.create}
             />}
@@ -74,6 +74,7 @@ class Overview extends React.Component {
 
 Overview.propTypes = {
   title: PropTypes.string.isRequired,
+  keyword: PropTypes.string,
   keys: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     value: PropTypes.string,
@@ -94,6 +95,7 @@ Overview.defaultProps = {
   createParameters: [],
   dateFormat: null,
   removeItem: null,
+  keyword: '',
 };
 
 export default Overview;

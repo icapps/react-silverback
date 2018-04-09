@@ -34,7 +34,7 @@ class CreateModal extends React.Component {
         modalButtonText={this.props.primaryButtonText}
         secondaryButtonText={strings.CANCEL}
         handlePrimaryButton={() => this.props.create(this.state.createParametersState)}
-        primaryButtonText={this.props.primaryButtonText}
+        primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success"
         icon={plus}

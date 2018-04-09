@@ -11,6 +11,7 @@ class DataTypeOverview extends Component {
     return (
       <Overview
         title={strings.DATATYPES}
+        keyword={strings.DATATYPE}
         keys={[
           { id: identifiers.ID, value: strings.ID, isSortable: true },
           { id: identifiers.TYPE, value: strings.TYPE, isSortable: true },

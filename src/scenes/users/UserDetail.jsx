@@ -28,6 +28,7 @@ class UserDetail extends Component {
     if (this.props.user) return (
       <Detail
         dataType={strings.USERS}
+        keyword={strings.USER}
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
@@ -59,7 +60,7 @@ class UserDetail extends Component {
 }
 
 UserDetail.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
   isUserUpdated: PropTypes.bool.isRequired,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,

@@ -28,7 +28,7 @@ class CodeTypeDetail extends Component {
 }
 
 CodeTypeDetail.propTypes = {
-  codeTypes: PropTypes.object.isRequired,
+  codeTypes: PropTypes.array.isRequired,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,

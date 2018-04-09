@@ -39,30 +39,31 @@ class Detail extends React.Component {
 
 
   render() {
+    const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        {this.props.inputItems && (
+        {props.inputItems && (
           <div className="container">
             <div className="detail-header">
-              <div className="back text-primary" onClick={this.props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
-              {this.props.create && <CreateModal
-                primaryButtonText={`${strings.CREATE} ${this.props.dataType}`}
-                title={`${strings.CREATE} ${this.props.dataType}`}
-                createParameters={this.props.createParameters}
-                create={this.props.create}
+              <div className="back text-primary" onClick={props.history.goBack}><img src={arrowLeft} alt={strings.PREVIOUS} /><span>{`${overview.charAt(0).toUpperCase()}${overview.slice(1)}`}</span></div>
+              {props.create && <CreateModal
+                primaryButtonText={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
+                title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
+                createParameters={props.createParameters}
+                create={props.create}
               />}
             </div>
-            {this.props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
-            {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
-            <h3>{this.props.title}</h3>
-            <span className="text-primary">{`${strings.ID}: ${this.props.id}`}</span>
+            {props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
+            {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
+            <h3>{props.title}</h3>
+            <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
-              {this.state && this.props.inputItems.map(item => this.renderInput(item))}
+              {state && props.inputItems.map(item => this.renderInput(item))}
             </div>
             <div className="detail-actions">
-              {this.props.update && <div className="update-actions">
+              {props.update && <div className="update-actions">
                 <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
                 <Modal
                   id="reset-changes"
@@ -77,9 +78,9 @@ class Detail extends React.Component {
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
               </div>}
-              {this.props.remove && <Modal
+              {props.remove && <Modal
                 id="delete"
-                modalButtonText={`${strings.DELETE} ${this.props.dataType}`}
+                modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={this.delete}
                 primaryButtonText={strings.DELETE}
                 secondaryButtonText={strings.CANCEL}
@@ -87,7 +88,7 @@ class Detail extends React.Component {
                 secondaryButtonClassName="btn-light"
                 primaryButtonClassName="btn-danger"
               >
-                <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
+                <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
             </div>
           </div>
@@ -99,6 +100,7 @@ class Detail extends React.Component {
 
 Detail.propTypes = {
   dataType: PropTypes.string.isRequired,
+  keyword: PropTypes.string,
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   inputItems: PropTypes.array.isRequired,
@@ -118,6 +120,7 @@ Detail.defaultProps = {
   remove: null,
   update: null,
   isUpdated: false,
+  keyword: '',
 };
 
 export default Detail;
