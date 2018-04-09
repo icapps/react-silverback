@@ -18,13 +18,14 @@ class Pagination extends React.Component {
     };
   }
 
-  changePage = (pageNumber, pageLimit = this.state.pageLimit) => {
-    let maxPage = 1;
-    do {
-      maxPage += (visiblePages - 1);
-    } while (pageNumber >= (maxPage - 1));
-    const minPage = maxPage - (visiblePages - 1);
-    this.setState({ activePage: pageNumber, minPage, maxPage });
+  changePage = async (pageNumber, pageLimit = this.state.pageLimit) => {
+    const nrOfPages = Math.ceil(this.props.totalCount / this.state.pageLimit);
+    const maxPage = pageNumber <= 2 ? visiblePages : (pageNumber + 3 > nrOfPages ? nrOfPages : pageNumber + 3);
+    await this.setState({
+      activePage: pageNumber,
+      minPage: maxPage - 4,
+      maxPage,
+    });
     this.props.handleClick(pageNumber, pageLimit);
   }
 
@@ -61,37 +62,29 @@ class Pagination extends React.Component {
           <span className="pagination-label">{strings.formatString(strings.SHOWING_X_OF_X, { startOfRange, endOfRange: endOfRange > props.totalCount ? props.totalCount : endOfRange, totalCount: props.totalCount })}</span>
           <nav aria-label="Pagination">
             <ul className="pagination">
+              <li className={`page-item ${state.activePage === 0 ? 'disabled' : ''}`} onClick={() => state.activePage !== 0 && this.changePage(0)}>
+                <span className="page-link" aria-label={strings.FIRST}>
+                  <span aria-hidden="true">&laquo;</span>
+                  <span className="sr-only">{strings.FIRST}</span>
+                </span>
+              </li>
               <li className={`page-item ${state.activePage === 0 ? 'disabled' : ''}`} onClick={() => state.activePage !== 0 && this.changePage(state.activePage - 1)}>
                 <span className="page-link" aria-label={strings.PREVIOUS}>
-                  <span aria-hidden="true">&laquo;</span>
+                  <span aria-hidden="true">&lsaquo;</span>
                   <span className="sr-only">{strings.PREVIOUS}</span>
                 </span>
               </li>
-              {state.minPage > 1 && (
-                <React.Fragment>
-                  <li className="page-item" onClick={() => this.changePage(0)}>
-                    <span className="page-link">1</span>
-                  </li>
-                  <li className="page-item disabled ellipsis">
-                    <span className="page-link">{strings.ELLIPSIS}</span>
-                  </li>
-                </React.Fragment>
-              )}
               {this.renderPages(nrOfPages)}
-              {state.maxPage < nrOfPages && (
-                <React.Fragment>
-                  <li className="page-item disabled ellipsis">
-                    <span className="page-link">{strings.ELLIPSIS}</span>
-                  </li>
-                  <li className="page-item" onClick={() => this.changePage(nrOfPages - 1)}>
-                    <span className="page-link">{nrOfPages}</span>
-                  </li>
-                </React.Fragment>
-              )}
               <li className={`page-item ${state.activePage === nrOfPages - 1 ? 'disabled' : ''}`} onClick={() => state.activePage !== nrOfPages - 1 && this.changePage(state.activePage + 1)}>
                 <span className="page-link" aria-label={strings.NEXT}>
-                  <span aria-hidden="true">&raquo;</span>
+                  <span aria-hidden="true">&rsaquo;</span>
                   <span className="sr-only">{strings.NEXT}</span>
+                </span>
+              </li>
+              <li className={`page-item ${state.activePage === nrOfPages - 1 ? 'disabled' : ''}`} onClick={() => state.activePage !== nrOfPages - 1 && this.changePage(nrOfPages - 1)}>
+                <span className="page-link" aria-label={strings.LAST}>
+                  <span aria-hidden="true">&raquo;</span>
+                  <span className="sr-only">{strings.LAST}</span>
                 </span>
               </li>
             </ul>
