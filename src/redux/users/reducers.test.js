@@ -6,6 +6,8 @@ const initialState = {
   userList: [],
   user: null,
   usersCount: 0,
+  isUpdatePending: false,
+  isUserUpdated: false,
   ...defaultInitialState,
 };
 

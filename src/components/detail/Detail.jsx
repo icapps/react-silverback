@@ -32,9 +32,9 @@ class Detail extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} isDisabled={this.props.isUpdatePending} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isUpdatePending} />;
   }
 
 
@@ -64,7 +64,7 @@ class Detail extends React.Component {
             </div>
             <div className="detail-actions">
               {props.update && <div className="update-actions">
-                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" />
+                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}

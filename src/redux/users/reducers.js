@@ -6,6 +6,7 @@ const initialState = {
   userList: [],
   user: null,
   usersCount: 0,
+  isUpdatePending: false,
   isUserUpdated: false,
   ...defaultInitialState,
 };
@@ -71,11 +72,12 @@ const users = (state = initialState, action = {}) => {
         user: payload.data,
         isUserUpdated: true,
         isPending: false,
+        isUpdatePending: false,
       };
     case constants.UPDATE_USER_PENDING:
       return {
         ...state,
-        isPending: true,
+        isUpdatePending: true,
         isError: false,
         isUserUpdated: false,
         errorMessage: '',
@@ -86,6 +88,7 @@ const users = (state = initialState, action = {}) => {
         isPending: false,
         isError: true,
         errorMessage: errorMessageHandling(payload),
+        isUpdatePending: false,
       };
 
     //CREATE_USER

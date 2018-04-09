@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Checkbox
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     text="This is a checkbox"
     value={true}
 />,
@@ -26,6 +27,7 @@ ShallowWrapper {
         <input
           checked={true}
           className="form-check-input"
+          disabled={false}
           id="test"
           onChange={[Function]}
           type="checkbox"
@@ -48,6 +50,7 @@ ShallowWrapper {
         "props": Object {
           "checked": true,
           "className": "form-check-input",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "type": "checkbox",
@@ -82,6 +85,7 @@ ShallowWrapper {
           <input
             checked={true}
             className="form-check-input"
+            disabled={false}
             id="test"
             onChange={[Function]}
             type="checkbox"
@@ -104,6 +108,7 @@ ShallowWrapper {
           "props": Object {
             "checked": true,
             "className": "form-check-input",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "type": "checkbox",
