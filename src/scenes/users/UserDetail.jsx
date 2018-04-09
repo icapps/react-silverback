@@ -49,6 +49,7 @@ class UserDetail extends Component {
         create={this.createUser}
         remove={this.props.removeUser}
         update={this.updateUser}
+        isUpdatePending={this.props.isUpdatePending}
         isUpdated={this.props.isUserUpdated}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
@@ -63,6 +64,7 @@ UserDetail.propTypes = {
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
+  isUpdatePending: PropTypes.bool.isRequired,
   getUsersById: PropTypes.func.isRequired,
   createUser: PropTypes.func.isRequired,
   updateUser: PropTypes.func.isRequired,
@@ -75,6 +77,7 @@ const mapStateToProps = state => ({
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
   isPending: state.users.isPending,
+  isUpdatePending: state.users.isUpdatePending,
 });
 
 const mapDispatchToProps = {
