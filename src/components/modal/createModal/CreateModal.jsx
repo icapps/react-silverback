@@ -6,6 +6,11 @@ import { strings } from '../../../utils';
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
+  constructor() {
+    super();
+    this.state = { createParametersState: {}, showError: false };
+  }
+
   componentDidMount() {
     this.setCreateParameters();
   }
@@ -13,7 +18,12 @@ class CreateModal extends React.Component {
   setCreateParameters = () => {
     let createParametersState = {};
     this.props.createParameters.forEach(item => createParametersState[item.id] = item.type === 'boolean' ? false : '');
-    this.setState({ createParametersState });
+    this.setState({ createParametersState, showError: false });
+  }
+
+  create = async () => {
+    this.setState({ showError: true });
+    return this.props.create(this.state.createParametersState);
   }
 
   handleChange = event => {
@@ -33,7 +43,7 @@ class CreateModal extends React.Component {
         id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
         secondaryButtonText={strings.CANCEL}
-        handlePrimaryButton={() => this.props.create(this.state.createParametersState)}
+        handlePrimaryButton={this.create}
         primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success"
@@ -42,6 +52,7 @@ class CreateModal extends React.Component {
         hasHeader
         handleModalButton={this.setCreateParameters}
       >
+        {this.props.isError && this.state.showError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div>{this.state && this.props.createParameters.map(item => this.renderInput(item))}</div>
       </Modal>
     );
@@ -53,6 +64,8 @@ CreateModal.propTypes = {
   title: PropTypes.string.isRequired,
   createParameters: PropTypes.array.isRequired,
   create: PropTypes.func.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
 };
 
 export default CreateModal;

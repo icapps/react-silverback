@@ -9,17 +9,14 @@ import constants from '../../redux/users/constants';
 
 class UserOverview extends Component {
   createUser = async user => {
-    const result = await this.props.createUser(user);
-    if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
-      this.props.history.push(`${window.location.pathname}/${this.props.user.id}`, this.props.user.id);
-    }
-  }
-
-  removeUser = async user => {
-    const result = await this.props.removeUser(user);
-    if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-      this.props.getUsers(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
-    }
+    return new Promise(async resolve => {
+      const result = await this.props.createUser(user);
+      if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
+        this.props.history.push(`${window.location.pathname}/${this.props.user.id}`, this.props.user.id);
+        resolve(true);
+      }
+      resolve(false);
+    });
   }
 
   render() {
@@ -46,11 +43,12 @@ class UserOverview extends Component {
           { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean" },
         ]}
         create={this.createUser}
-        removeItem={this.removeUser}
+        removeItem={this.props.removeUser}
         isError={this.props.isError}
         get={this.props.getUsers}
         errorMessage={this.props.errorMessage}
         deleteIdentifier={identifiers.EMAIL}
+        isCreateError={this.props.isCreateError}
       />
     );
   }
@@ -65,12 +63,14 @@ UserOverview.propTypes = {
   getUsers: PropTypes.func.isRequired,
   createUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
+  isCreateError: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   users: state.users.userList,
   usersCount: state.users.usersCount,
   user: state.users.user,
+  isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
 });

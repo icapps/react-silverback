@@ -32,8 +32,11 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    errorMessage="test"
     get={[Function]}
     history={Object {}}
+    isCreateError={false}
+    isError={false}
     keys={
         Array [
             Object {
@@ -124,6 +127,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -190,7 +195,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -223,6 +228,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -284,7 +291,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        undefined,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -333,6 +340,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              errorMessage="test"
+              isError={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -367,6 +376,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
+              "errorMessage": "test",
+              "isError": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -547,6 +558,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              errorMessage="test"
+                              isError={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -613,7 +626,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -646,6 +659,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            errorMessage="test"
+                            isError={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -707,7 +722,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -756,6 +771,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                errorMessage="test"
+                isError={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -790,6 +807,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
+                "errorMessage": "test",
+                "isError": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },
@@ -972,8 +991,11 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    errorMessage="test"
     get={[Function]}
     history={Object {}}
+    isCreateError={false}
+    isError={false}
     keys={
         Array [
             Object {
@@ -1064,6 +1086,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -1130,7 +1154,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -1163,6 +1187,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -1224,7 +1250,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        undefined,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -1273,6 +1299,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              errorMessage="test"
+              isError={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -1307,6 +1335,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
+              "errorMessage": "test",
+              "isError": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -1487,6 +1517,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              errorMessage="test"
+                              isError={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -1553,7 +1585,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -1586,6 +1618,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            errorMessage="test"
+                            isError={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -1647,7 +1681,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -1696,6 +1730,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                errorMessage="test"
+                isError={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -1730,6 +1766,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
+                "errorMessage": "test",
+                "isError": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },
@@ -1912,8 +1950,11 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    errorMessage="test"
     get={[Function]}
     history={Object {}}
+    isCreateError={false}
+    isError={false}
     keys={
         Array [
             Object {
@@ -1986,6 +2027,8 @@ ShallowWrapper {
                                         },
                                       ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -2012,7 +2055,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -2045,6 +2088,8 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        errorMessage="test"
+                        isError={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -2066,7 +2111,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        undefined,
+        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -2115,6 +2160,8 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              errorMessage="test"
+              isError={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -2149,6 +2196,8 @@ ShallowWrapper {
                   "type": "boolean",
                 },
               ],
+              "errorMessage": "test",
+              "isError": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -2242,6 +2291,8 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              errorMessage="test"
+                              isError={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -2268,7 +2319,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -2301,6 +2352,8 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            errorMessage="test"
+                            isError={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -2322,7 +2375,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -2371,6 +2424,8 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                errorMessage="test"
+                isError={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -2405,6 +2460,8 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                 ],
+                "errorMessage": "test",
+                "isError": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },

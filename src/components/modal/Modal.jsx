@@ -23,9 +23,11 @@ class Modal extends React.Component {
     this.toggleModal();
   }
 
-  handlePrimaryButton = () => {
-    this.props.handlePrimaryButton();
-    this.toggleModal();
+  handlePrimaryButton = async () => {
+    const result = await this.props.handlePrimaryButton();
+    if (result) {
+      this.toggleModal();
+    }
   }
 
   handleSecondaryButton = () => {

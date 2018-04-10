@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination, Table, CreateModal } from '../index';
 import { strings } from '../../utils';
+import constants from '../../redux/users/constants';
 import './overview.css';
 
 const SORT_DESC = 'desc';
@@ -18,6 +19,13 @@ class Overview extends React.Component {
   }
   componentDidMount() {
     this.props.get(this.state.page, this.state.limit);
+  }
+
+  remove = async user => {
+    const result = await this.props.removeItem(user);
+    if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+      this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+    }
   }
 
   showDetailScreen = id => {
@@ -39,7 +47,7 @@ class Overview extends React.Component {
     return (
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
-          {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
+          {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
           <h2>
             {props.title}
             {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
@@ -50,6 +58,8 @@ class Overview extends React.Component {
               title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               createParameters={this.props.createParameters}
               create={this.props.create}
+              isError={props.isCreateError}
+              errorMessage={props.errorMessage}
             />}
           </div>
           {props.listItems.length > 0 ? (
@@ -60,7 +70,7 @@ class Overview extends React.Component {
                 listItems={props.listItems}
                 dateFormat={props.dateFormat}
                 handleRowClick={this.showDetailScreen}
-                handleRemoveItem={this.props.removeItem}
+                handleRemoveItem={this.remove}
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
               />
@@ -90,6 +100,9 @@ Overview.propTypes = {
   dateFormat: PropTypes.string,
   removeItem: PropTypes.func,
   deleteIdentifier: PropTypes.string,
+  isError: PropTypes.bool.isRequired,
+  isCreateError: PropTypes.bool,
+  errorMessage: PropTypes.string.isRequired,
 };
 
 Overview.defaultProps = {
@@ -99,6 +112,7 @@ Overview.defaultProps = {
   removeItem: null,
   deleteIdentifier: '',
   keyword: '',
+  isCreateError: false,
 };
 
 export default Overview;
