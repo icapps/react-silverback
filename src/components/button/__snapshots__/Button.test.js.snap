@@ -8,6 +8,8 @@ ShallowWrapper {
     className=""
     handleClick={[Function]}
     icon={undefined}
+    isDisabled={false}
+    isPending={false}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -29,6 +31,7 @@ ShallowWrapper {
 </span>,
       ],
       "className": "btn ",
+      "disabled": false,
       "onClick": [Function],
       "type": "button",
     },
@@ -62,6 +65,7 @@ ShallowWrapper {
 </span>,
         ],
         "className": "btn ",
+        "disabled": false,
         "onClick": [Function],
         "type": "button",
       },
@@ -101,6 +105,8 @@ ShallowWrapper {
     className="btn-primary"
     handleClick={[Function]}
     icon={undefined}
+    isDisabled={false}
+    isPending={false}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -122,6 +128,7 @@ ShallowWrapper {
 </span>,
       ],
       "className": "btn btn-primary",
+      "disabled": false,
       "onClick": [Function],
       "type": "button",
     },
@@ -155,6 +162,7 @@ ShallowWrapper {
 </span>,
         ],
         "className": "btn btn-primary",
+        "disabled": false,
         "onClick": [Function],
         "type": "button",
       },
@@ -194,6 +202,8 @@ ShallowWrapper {
     className="btn-primary"
     handleClick={[Function]}
     icon="plus.svg"
+    isDisabled={false}
+    isPending={false}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -218,6 +228,7 @@ ShallowWrapper {
 </span>,
       ],
       "className": "btn btn-primary",
+      "disabled": false,
       "onClick": [Function],
       "type": "button",
     },
@@ -265,6 +276,7 @@ ShallowWrapper {
 </span>,
         ],
         "className": "btn btn-primary",
+        "disabled": false,
         "onClick": [Function],
         "type": "button",
       },

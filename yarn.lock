@@ -4611,6 +4611,12 @@ he@1.1.x:
   version "1.1.1"
   resolved "https://npm.icapps.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+heroku-dyno-metadata@^1.2.0:
+  version "1.2.0"
+  resolved "https://npm.icapps.com/heroku-dyno-metadata/-/heroku-dyno-metadata-1.2.0.tgz#1e0f2a673b5306ba314b3294bd4a6f5796e66690"
+  dependencies:
+    lodash "4.12.0"
+
 history@^4.7.2:
   version "4.7.2"
   resolved "https://npm.icapps.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
@@ -6057,6 +6063,10 @@ lodash.templatesettings@^4.0.0:
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://npm.icapps.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
+
+lodash@4.12.0:
+  version "4.12.0"
+  resolved "https://npm.icapps.com/lodash/-/lodash-4.12.0.tgz#2bd6dc46a040f59e686c972ed21d93dc59053258"
 
 "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@~4.17.4:
   version "4.17.5"

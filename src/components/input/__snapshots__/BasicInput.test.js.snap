@@ -8,6 +8,7 @@ ShallowWrapper {
     errorMessage=""
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     isValid={true}
     label="Text"
     placeholder=""
@@ -34,6 +35,7 @@ ShallowWrapper {
 </label>,
         <input
           className="form-control "
+          disabled={false}
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -64,6 +66,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control ",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -92,6 +95,7 @@ ShallowWrapper {
 </label>,
           <input
             className="form-control "
+            disabled={false}
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -122,6 +126,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control ",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
@@ -155,6 +160,7 @@ ShallowWrapper {
     errorMessage=""
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     isValid={true}
     label="Text with placeholder"
     placeholder="placeholder"
@@ -181,6 +187,7 @@ ShallowWrapper {
 </label>,
         <input
           className="form-control "
+          disabled={false}
           id="test"
           onChange={[Function]}
           placeholder="placeholder"
@@ -211,6 +218,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control ",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "placeholder": "placeholder",
@@ -239,6 +247,7 @@ ShallowWrapper {
 </label>,
           <input
             className="form-control "
+            disabled={false}
             id="test"
             onChange={[Function]}
             placeholder="placeholder"
@@ -269,6 +278,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control ",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "placeholder": "placeholder",
@@ -302,6 +312,7 @@ ShallowWrapper {
     errorMessage=""
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     isValid={true}
     label="Number"
     placeholder=""
@@ -328,6 +339,7 @@ ShallowWrapper {
 </label>,
         <input
           className="form-control "
+          disabled={false}
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -358,6 +370,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control ",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -386,6 +399,7 @@ ShallowWrapper {
 </label>,
           <input
             className="form-control "
+            disabled={false}
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -416,6 +430,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control ",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
@@ -449,6 +464,7 @@ ShallowWrapper {
     errorMessage=""
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     isValid={true}
     label="Password"
     placeholder=""
@@ -475,6 +491,7 @@ ShallowWrapper {
 </label>,
         <input
           className="form-control "
+          disabled={false}
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -505,6 +522,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control ",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -533,6 +551,7 @@ ShallowWrapper {
 </label>,
           <input
             className="form-control "
+            disabled={false}
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -563,6 +582,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control ",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "placeholder": "",
@@ -596,6 +616,7 @@ ShallowWrapper {
     errorMessage="This is an error message"
     handleChange={[Function]}
     id="test"
+    isDisabled={false}
     isValid={false}
     label="Text with errorhandling"
     placeholder=""
@@ -622,6 +643,7 @@ ShallowWrapper {
 </label>,
         <input
           className="form-control is-invalid"
+          disabled={false}
           id="test"
           onChange={[Function]}
           placeholder=""
@@ -656,6 +678,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "className": "form-control is-invalid",
+          "disabled": false,
           "id": "test",
           "onChange": [Function],
           "placeholder": "",
@@ -695,6 +718,7 @@ ShallowWrapper {
 </label>,
           <input
             className="form-control is-invalid"
+            disabled={false}
             id="test"
             onChange={[Function]}
             placeholder=""
@@ -729,6 +753,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "form-control is-invalid",
+            "disabled": false,
             "id": "test",
             "onChange": [Function],
             "placeholder": "",

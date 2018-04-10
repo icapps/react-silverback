@@ -10,23 +10,26 @@ const checkIcon = require('../../assets/images/check.svg');
 const crossIcon = require('../../assets/images/cross.svg');
 const deleteIcon = require('../../assets/images/delete.svg');
 
+const SORT_ASC = 'asc';
+const SORT_DESC = 'desc';
+
 class Table extends React.Component {
   constructor() {
     super();
     this.state = {
-      sortedItem: '',
-      isDescending: true,
+      sortField: '',
+      sortOrder: SORT_ASC,
     };
   }
 
-  sortItem = (sortedItem, isSortable) => {
-    const isDescending = this.state.sortedItem === sortedItem ? !this.state.isDescending : true;
+  sort = (sortField, isSortable) => {
     if (isSortable) {
+      const sortOrder = (this.state.sortField === sortField) ? (this.state.sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
       this.setState({
-        sortedItem,
-        isDescending,
+        sortField,
+        sortOrder,
       });
-      this.props.handleSort(sortedItem, isDescending);
+      this.props.handleSort(sortField, sortOrder);
     }
   }
 
@@ -39,7 +42,7 @@ class Table extends React.Component {
     }
   }
   render() {
-    const { props } = this;
+    const { props, state } = this;
     return (
       <div className="table-responsive">
         <table className="table table-hover">
@@ -47,9 +50,9 @@ class Table extends React.Component {
             <tr>
               {props.keys.map(key => (
                 <th scope="col" key={key.id}>
-                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${this.state.sortedItem === key.id ? 'active-key' : ''}`} onClick={() => this.sortItem(key.id, key.isSortable)}>
+                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${state.sortField === key.id ? 'active-key' : ''}`} onClick={() => this.sort(key.id, key.isSortable)}>
                     {key.value}
-                    {key.isSortable && <span className={`sort ${this.state.sortedItem === key.id ? (this.state.isDescending ? 'sort-desc' : 'sort-asc') : ''}`} />}
+                    {key.isSortable && <span className={`sort ${state.sortField === key.id ? state.sortOrder : ''}`} />}
                   </span>
                 </th>))}
               {props.handleRemoveItem && <th></th>}
@@ -70,7 +73,7 @@ class Table extends React.Component {
                     secondaryButtonClassName="btn-light"
                     primaryButtonClassName="btn-danger"
                   >
-                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{this.props.title}</span> })}</p>
+                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
                   </Modal>}
                 </td>
               </tr>
@@ -93,12 +96,14 @@ Table.propTypes = {
   dateFormat: PropTypes.string,
   handleRemoveItem: PropTypes.func,
   maxTextLength: PropTypes.number,
+  deleteIdentifier: PropTypes.string,
 };
 
 Table.defaultProps = {
   dateFormat: 'DD/MM/YYYY',
   handleRemoveItem: null,
   maxTextLength: 50,
+  deleteIdentifier: '',
 };
 
 export default Table;

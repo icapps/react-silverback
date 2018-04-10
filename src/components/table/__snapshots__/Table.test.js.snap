@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="DD/MM/YYYY"
+    deleteIdentifier=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}
@@ -4947,6 +4948,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="dddd D MMM"
+    deleteIdentifier=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}
@@ -9888,6 +9890,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="dddd D MMM"
+    deleteIdentifier=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}

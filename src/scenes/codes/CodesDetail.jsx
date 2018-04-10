@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Detail, EmptyDetail } from '../../components';
+import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
 import { getCodes } from '../../redux/codes/actions';
 
@@ -11,10 +12,7 @@ class CodeDetail extends Component {
 
   render() {
     const code = this.props.codes.find(code => code.id === window.location.pathname.split('/')[2]);
-    if (this.props.isPending) return (
-      <main className="spinner-container col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        <div className="spinner" />
-      </main>);
+    if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     if (code) return (
       <Detail
         dataType={strings.CODE}
@@ -28,6 +26,14 @@ class CodeDetail extends Component {
     return <EmptyDetail history={this.props.history} />;
   }
 }
+
+CodeDetail.propTypes = {
+  codeTypes: PropTypes.object,
+  isPending: PropTypes.bool.isRequired,
+  isError: PropTypes.bool.isRequired,
+  errorMessage: PropTypes.string.isRequired,
+  getCodes: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   codes: state.codes.codesList,

@@ -1,4 +1,5 @@
 import React from 'react';
+import metadata from 'heroku-dyno-metadata';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { strings } from '../../utils';
@@ -14,8 +15,12 @@ const Navbar = props => (
       ))}
     </ul>
     <div className="versioning nav flex-column">
-      <span className="nav-item">{`${strings.FRONTEND}: ${process.env.REACT_APP_VERSION_NR}.${process.env.REACT_APP_BUILD_NR}`}</span>
-      <span className="nav-item">{`${strings.BACKEND}: ${0}`}</span>
+      <span className="nav-item version-platform">{strings.FRONTEND}</span>
+      <span className="nav-item">{`${strings.VERSION}: ${process.env.REACT_APP_VERSION_NR}`}</span>
+      <span className="nav-item">{`${strings.BUILD}: ${metadata.releaseVersion}`}</span>
+      <span className="nav-item version-platform">{strings.BACKEND}</span>
+      <span className="nav-item">{`${strings.VERSION}: ${props.version}`}</span>
+      <span className="nav-item">{`${strings.BUILD}: ${props.build}`}</span>
     </div>
   </aside>
 );
@@ -29,6 +34,8 @@ Navbar.propTypes = {
   ).isRequired,
   isNavigationShown: PropTypes.bool.isRequired,
   toggleNavigation: PropTypes.func.isRequired,
+  version: PropTypes.string.isRequired,
+  build: PropTypes.string.isRequired,
 };
 
 export default Navbar;

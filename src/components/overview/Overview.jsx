@@ -4,44 +4,57 @@ import { Pagination, Table, CreateModal } from '../index';
 import { strings } from '../../utils';
 import './overview.css';
 
+const SORT_DESC = 'desc';
+
 class Overview extends React.Component {
   constructor() {
     super();
     this.state = {
+      page: 0,
+      limit: 10,
       sortField: null,
       sortOrder: null,
     };
   }
+  componentDidMount() {
+    this.props.get(this.state.page, this.state.limit);
+  }
+
   showDetailScreen = id => {
     this.props.history.push(`${window.location.pathname}/${id}`, id);
   };
 
   sortItems = (sortField, sortOrder) => {
+    this.props.get(this.state.page, this.state.limit, sortField, sortOrder);
     this.setState({ sortField, sortOrder });
-    this.props.sortItems(sortField, sortOrder ? strings.DESC : strings.ASC);
   }
 
+  handlePagination = (page, limit) => {
+    this.props.get(page, limit, this.state.sortField, this.state.sortOrder);
+    this.setState({ page, limit });
+  };
+
   render() {
-    const { props } = this;
+    const { props, state } = this;
     return (
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
           {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
           <h2>
             {props.title}
-            {this.state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${this.state.sortField} (${this.state.sortOrder ? strings.DESCENDING : strings.ASCENDING})`}</span>}
+            {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
             {props.create && <CreateModal
-              primaryButtonText={`${strings.CREATE} ${props.title}`}
-              title={`${strings.CREATE} ${props.title}`}
+              primaryButtonText={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
+              title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               createParameters={this.props.createParameters}
               create={this.props.create}
             />}
           </div>
           {props.listItems.length > 0 ? (
             <React.Fragment>
-              <Pagination totalCount={props.paginationTotalCount} handleClick={this.props.handlePagination} />
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} />
               <Table
                 keys={props.keys}
                 listItems={props.listItems}
@@ -49,6 +62,7 @@ class Overview extends React.Component {
                 handleRowClick={this.showDetailScreen}
                 handleRemoveItem={this.props.removeItem}
                 handleSort={this.sortItems}
+                deleteIdentifier={props.deleteIdentifier}
               />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
@@ -61,20 +75,21 @@ class Overview extends React.Component {
 
 Overview.propTypes = {
   title: PropTypes.string.isRequired,
+  keyword: PropTypes.string,
   keys: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     value: PropTypes.string,
     isSortable: PropTypes.bool,
   })).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool, PropTypes.object])).isRequired,
-  sortItems: PropTypes.func.isRequired,
+  get: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   paginationTotalCount: PropTypes.number.isRequired,
-  handlePagination: PropTypes.func.isRequired,
   create: PropTypes.func,
   createParameters: PropTypes.array,
   dateFormat: PropTypes.string,
   removeItem: PropTypes.func,
+  deleteIdentifier: PropTypes.string,
 };
 
 Overview.defaultProps = {
@@ -82,6 +97,8 @@ Overview.defaultProps = {
   createParameters: [],
   dateFormat: null,
   removeItem: null,
+  deleteIdentifier: '',
+  keyword: '',
 };
 
 export default Overview;

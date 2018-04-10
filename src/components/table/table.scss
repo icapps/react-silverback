@@ -30,12 +30,12 @@
 
     @include sortArrows($startColor, $startColor);
 
-    &.sort-asc{
+    &.asc{
       @include sortArrows($black, $dark-grey);
 
     }
 
-    &.sort-desc{
+    &.desc{
       @include sortArrows($dark-grey, $black);
     }
   }
