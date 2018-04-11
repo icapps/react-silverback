@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "coverage": "react-scripts test --env=jsdom --coverage",
-    "preinstall": "heroku config:set REACT_APP_BUILD_NR=$(heroku config:get HEROKU_RELEASE_VERSION)"
+    "prestart": "heroku config:set REACT_APP_BUILD_NR=$(heroku config:get HEROKU_RELEASE_VERSION)"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.15",
