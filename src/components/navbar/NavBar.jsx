@@ -20,7 +20,6 @@ const Navbar = props => (
       <span className="nav-item version-platform">{strings.BACKEND}</span>
       <span className="nav-item">{`${strings.VERSION}: ${props.version}`}</span>
       <span className="nav-item">{`${strings.BUILD}: ${props.build}`}</span>
-      {console.log(process.env)}
     </div>
   </aside>
 );
