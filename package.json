@@ -7,7 +7,6 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0",
     "date-fns": "^1.29.0",
-    "heroku-dyno-metadata": "^1.2.0",
     "node-sass-chokidar": "~0.0.3",
     "npm-run-all": "~4.1.2",
     "prop-types": "~15.6.0",
@@ -27,13 +26,14 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "npm run build-css && yarn set-release-version && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
     "validate": "yarn lint && yarn test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "coverage": "react-scripts test --env=jsdom --coverage"
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "set-release-version": "REACT_APP_BUILD_NR= heroku config:get HEROKU_RELEASE_VERSION"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.15",
