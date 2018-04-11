@@ -25,7 +25,7 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "yarn set-release-version && npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && yarn set-release-version && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
