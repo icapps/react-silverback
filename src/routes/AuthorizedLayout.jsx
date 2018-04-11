@@ -17,12 +17,18 @@ const AuthorizedLayout = props => {
       <Header toggleNavigation={props.toggleNavigation} />
       <div className="container-fluid">
         <div className="row">
-          <Navbar links={[
-            { name: strings.USERS, path: '/users' },
-            { name: strings.DATATYPES, path: '/datatype' },
-            { name: strings.CODES, path: '/codes' },
-            { name: strings.CODE_TYPES, path: '/code-types' },
-          ]} isNavigationShown={props.isNavigationShown} toggleNavigation={props.toggleNavigation} />
+          <Navbar
+            links={[
+              { name: strings.USERS, path: '/users' },
+              { name: strings.DATATYPES, path: '/datatype' },
+              { name: strings.CODES, path: '/codes' },
+              { name: strings.CODE_TYPES, path: '/code-types' },
+            ]}
+            isNavigationShown={props.isNavigationShown}
+            toggleNavigation={props.toggleNavigation}
+            build={props.build}
+            version={props.version}
+          />
           <Switch>
             <Route path='/users' exact component={UserOverview} />
             <Route path='/users/:id' exact component={UserDetail} />
