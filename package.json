@@ -24,7 +24,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
+    "start-js": "yarn set-build-nr react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "coverage": "react-scripts test --env=jsdom --coverage",
-    "set-build-nr": "heroku config:set REACT_APP_BUILD_NR=$(heroku config:get HEROKU_RELEASE_VERSION)"
+    "set-build-nr": "REACT_APP_BUILD_NR=$(printenv HEROKU_RELEASE_VERSION)"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.15",

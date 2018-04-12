@@ -21,6 +21,7 @@ const Navbar = props => (
       <span className="nav-item">{`${strings.VERSION}: ${props.version}`}</span>
       <span className="nav-item">{`${strings.BUILD}: ${props.build}`}</span>
     </div>
+    {console.log(process.env)}
   </aside>
 );
 
