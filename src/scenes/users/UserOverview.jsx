@@ -48,6 +48,7 @@ class UserOverview extends Component {
         get={this.props.getUsers}
         errorMessage={this.props.errorMessage}
         deleteIdentifier={identifiers.EMAIL}
+        isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
       />
     );
@@ -64,12 +65,14 @@ UserOverview.propTypes = {
   createUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
+  isCreatePending: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   users: state.users.userList,
   usersCount: state.users.usersCount,
   user: state.users.user,
+  isCreatePending: state.users.isCreatePending,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,

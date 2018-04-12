@@ -54,6 +54,7 @@ class Detail extends React.Component {
                 createParameters={props.createParameters}
                 create={props.create}
                 isError={props.isCreateError}
+                isPending={props.isCreatePending}
                 errorMessage={props.errorMessage}
               />}
             </div>
@@ -114,6 +115,7 @@ Detail.propTypes = {
   remove: PropTypes.func,
   update: PropTypes.func,
   isUpdated: PropTypes.bool,
+  isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
 };
 
@@ -124,6 +126,7 @@ Detail.defaultProps = {
   update: null,
   isUpdated: false,
   keyword: '',
+  isCreatePending: false,
   isCreateError: false,
 };
 

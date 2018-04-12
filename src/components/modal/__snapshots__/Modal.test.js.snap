@@ -11,6 +11,7 @@ ShallowWrapper {
     hasHeader={false}
     icon={null}
     id="testModal"
+    isPending={false}
     modalButtonClassName="btn-light"
     modalButtonText="Modal"
     primaryButtonClassName="btn-light"
@@ -81,6 +82,7 @@ ShallowWrapper {
                                         <button
                                                   className="btn btn-light"
                                                   data-dismiss="modal"
+                                                  disabled={false}
                                                   onClick={[Function]}
                                                   type="button"
                                         >
@@ -152,6 +154,7 @@ ShallowWrapper {
                                     <button
                                                 className="btn btn-light"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                     >
@@ -195,6 +198,7 @@ ShallowWrapper {
                             <button
                                           className="btn btn-light"
                                           data-dismiss="modal"
+                                          disabled={false}
                                           onClick={[Function]}
                                           type="button"
                             >
@@ -234,6 +238,7 @@ ShallowWrapper {
                   <button
                                     className="btn btn-light"
                                     data-dismiss="modal"
+                                    disabled={false}
                                     onClick={[Function]}
                                     type="button"
                   >
@@ -287,6 +292,7 @@ ShallowWrapper {
                     <button
                       className="btn btn-light"
                       data-dismiss="modal"
+                      disabled={false}
                       onClick={[Function]}
                       type="button"
 >
@@ -320,6 +326,7 @@ ShallowWrapper {
                       "children": "Primary",
                       "className": "btn btn-light",
                       "data-dismiss": "modal",
+                      "disabled": false,
                       "onClick": [Function],
                       "type": "button",
                     },
@@ -393,6 +400,7 @@ ShallowWrapper {
                                                 <button
                                                             className="btn btn-light"
                                                             data-dismiss="modal"
+                                                            disabled={false}
                                                             onClick={[Function]}
                                                             type="button"
                                                 >
@@ -464,6 +472,7 @@ ShallowWrapper {
                                           <button
                                                         className="btn btn-light"
                                                         data-dismiss="modal"
+                                                        disabled={false}
                                                         onClick={[Function]}
                                                         type="button"
                                           >
@@ -507,6 +516,7 @@ ShallowWrapper {
                                 <button
                                                 className="btn btn-light"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                 >
@@ -546,6 +556,7 @@ ShallowWrapper {
                     <button
                                         className="btn btn-light"
                                         data-dismiss="modal"
+                                        disabled={false}
                                         onClick={[Function]}
                                         type="button"
                     >
@@ -599,6 +610,7 @@ ShallowWrapper {
                       <button
                         className="btn btn-light"
                         data-dismiss="modal"
+                        disabled={false}
                         onClick={[Function]}
                         type="button"
 >
@@ -632,6 +644,7 @@ ShallowWrapper {
                         "children": "Primary",
                         "className": "btn btn-light",
                         "data-dismiss": "modal",
+                        "disabled": false,
                         "onClick": [Function],
                         "type": "button",
                       },
@@ -675,6 +688,7 @@ ShallowWrapper {
     hasHeader={true}
     icon={null}
     id="testModal3"
+    isPending={false}
     modalButtonClassName="btn-light"
     modalButtonText="Modal"
     primaryButtonClassName="btn-light"
@@ -767,6 +781,7 @@ ShallowWrapper {
                                         <button
                                                   className="btn btn-light"
                                                   data-dismiss="modal"
+                                                  disabled={false}
                                                   onClick={[Function]}
                                                   type="button"
                                         >
@@ -860,6 +875,7 @@ ShallowWrapper {
                                     <button
                                                 className="btn btn-light"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                     >
@@ -925,6 +941,7 @@ ShallowWrapper {
                             <button
                                           className="btn btn-light"
                                           data-dismiss="modal"
+                                          disabled={false}
                                           onClick={[Function]}
                                           type="button"
                             >
@@ -985,6 +1002,7 @@ ShallowWrapper {
                   <button
                                     className="btn btn-light"
                                     data-dismiss="modal"
+                                    disabled={false}
                                     onClick={[Function]}
                                     type="button"
                   >
@@ -1112,6 +1130,7 @@ ShallowWrapper {
                     <button
                       className="btn btn-light"
                       data-dismiss="modal"
+                      disabled={false}
                       onClick={[Function]}
                       type="button"
 >
@@ -1145,6 +1164,7 @@ ShallowWrapper {
                       "children": "Primary",
                       "className": "btn btn-light",
                       "data-dismiss": "modal",
+                      "disabled": false,
                       "onClick": [Function],
                       "type": "button",
                     },
@@ -1240,6 +1260,7 @@ ShallowWrapper {
                                                 <button
                                                             className="btn btn-light"
                                                             data-dismiss="modal"
+                                                            disabled={false}
                                                             onClick={[Function]}
                                                             type="button"
                                                 >
@@ -1333,6 +1354,7 @@ ShallowWrapper {
                                           <button
                                                         className="btn btn-light"
                                                         data-dismiss="modal"
+                                                        disabled={false}
                                                         onClick={[Function]}
                                                         type="button"
                                           >
@@ -1398,6 +1420,7 @@ ShallowWrapper {
                                 <button
                                                 className="btn btn-light"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                 >
@@ -1458,6 +1481,7 @@ ShallowWrapper {
                     <button
                                         className="btn btn-light"
                                         data-dismiss="modal"
+                                        disabled={false}
                                         onClick={[Function]}
                                         type="button"
                     >
@@ -1585,6 +1609,7 @@ ShallowWrapper {
                       <button
                         className="btn btn-light"
                         data-dismiss="modal"
+                        disabled={false}
                         onClick={[Function]}
                         type="button"
 >
@@ -1618,6 +1643,7 @@ ShallowWrapper {
                         "children": "Primary",
                         "className": "btn btn-light",
                         "data-dismiss": "modal",
+                        "disabled": false,
                         "onClick": [Function],
                         "type": "button",
                       },
@@ -1661,6 +1687,7 @@ ShallowWrapper {
     hasHeader={false}
     icon={null}
     id="testModal2"
+    isPending={false}
     modalButtonClassName="btn-primary"
     modalButtonText="Modal"
     primaryButtonClassName="btn-primary"
@@ -1731,6 +1758,7 @@ ShallowWrapper {
                                         <button
                                                   className="btn btn-primary"
                                                   data-dismiss="modal"
+                                                  disabled={false}
                                                   onClick={[Function]}
                                                   type="button"
                                         >
@@ -1802,6 +1830,7 @@ ShallowWrapper {
                                     <button
                                                 className="btn btn-primary"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                     >
@@ -1845,6 +1874,7 @@ ShallowWrapper {
                             <button
                                           className="btn btn-primary"
                                           data-dismiss="modal"
+                                          disabled={false}
                                           onClick={[Function]}
                                           type="button"
                             >
@@ -1884,6 +1914,7 @@ ShallowWrapper {
                   <button
                                     className="btn btn-primary"
                                     data-dismiss="modal"
+                                    disabled={false}
                                     onClick={[Function]}
                                     type="button"
                   >
@@ -1937,6 +1968,7 @@ ShallowWrapper {
                     <button
                       className="btn btn-primary"
                       data-dismiss="modal"
+                      disabled={false}
                       onClick={[Function]}
                       type="button"
 >
@@ -1970,6 +2002,7 @@ ShallowWrapper {
                       "children": "Primary",
                       "className": "btn btn-primary",
                       "data-dismiss": "modal",
+                      "disabled": false,
                       "onClick": [Function],
                       "type": "button",
                     },
@@ -2043,6 +2076,7 @@ ShallowWrapper {
                                                 <button
                                                             className="btn btn-primary"
                                                             data-dismiss="modal"
+                                                            disabled={false}
                                                             onClick={[Function]}
                                                             type="button"
                                                 >
@@ -2114,6 +2148,7 @@ ShallowWrapper {
                                           <button
                                                         className="btn btn-primary"
                                                         data-dismiss="modal"
+                                                        disabled={false}
                                                         onClick={[Function]}
                                                         type="button"
                                           >
@@ -2157,6 +2192,7 @@ ShallowWrapper {
                                 <button
                                                 className="btn btn-primary"
                                                 data-dismiss="modal"
+                                                disabled={false}
                                                 onClick={[Function]}
                                                 type="button"
                                 >
@@ -2196,6 +2232,7 @@ ShallowWrapper {
                     <button
                                         className="btn btn-primary"
                                         data-dismiss="modal"
+                                        disabled={false}
                                         onClick={[Function]}
                                         type="button"
                     >
@@ -2249,6 +2286,7 @@ ShallowWrapper {
                       <button
                         className="btn btn-primary"
                         data-dismiss="modal"
+                        disabled={false}
                         onClick={[Function]}
                         type="button"
 >
@@ -2282,6 +2320,7 @@ ShallowWrapper {
                         "children": "Primary",
                         "className": "btn btn-primary",
                         "data-dismiss": "modal",
+                        "disabled": false,
                         "onClick": [Function],
                         "type": "button",
                       },

@@ -6,11 +6,6 @@ import { strings } from '../../../utils';
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
-  constructor() {
-    super();
-    this.state = { createParametersState: {}, showError: false };
-  }
-
   componentDidMount() {
     this.setCreateParameters();
   }
@@ -32,9 +27,9 @@ class CreateModal extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} isDisabled={this.props.isPending} />;
     }
-    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending} />;
   }
 
   render() {
@@ -50,6 +45,7 @@ class CreateModal extends React.Component {
         icon={plus}
         title={this.props.title}
         hasHeader
+        isPending={this.props.isPending}
         handleModalButton={this.setCreateParameters}
       >
         {this.props.isError && this.state.showError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
@@ -64,8 +60,15 @@ CreateModal.propTypes = {
   title: PropTypes.string.isRequired,
   createParameters: PropTypes.array.isRequired,
   create: PropTypes.func.isRequired,
-  isError: PropTypes.bool.isRequired,
-  errorMessage: PropTypes.string.isRequired,
+  isPending: PropTypes.bool,
+  isError: PropTypes.bool,
+  errorMessage: PropTypes.string,
+};
+
+CreateModal.defaultProps = {
+  isPending: false,
+  isError: false,
+  errorMessage: '',
 };
 
 export default CreateModal;

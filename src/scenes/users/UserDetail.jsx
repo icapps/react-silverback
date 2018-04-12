@@ -58,6 +58,7 @@ class UserDetail extends Component {
         isUpdated={this.props.isUserUpdated}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
+        isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
       />);
     return <EmptyDetail history={this.props.history} />;
@@ -76,6 +77,7 @@ UserDetail.propTypes = {
   updateUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
+  isCreatePending: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -85,6 +87,7 @@ const mapStateToProps = state => ({
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
   isPending: state.users.isPending,
+  isCreatePending: state.users.isCreatePending,
   isUpdatePending: state.users.isUpdatePending,
 });
 

@@ -36,6 +36,7 @@ ShallowWrapper {
     get={[Function]}
     history={Object {}}
     isCreateError={false}
+    isCreatePending={false}
     isError={false}
     keys={
         Array [
@@ -129,6 +130,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -230,6 +232,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -342,6 +345,7 @@ ShallowWrapper {
               }
               errorMessage="test"
               isError={false}
+              isPending={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -378,6 +382,7 @@ ShallowWrapper {
               ],
               "errorMessage": "test",
               "isError": false,
+              "isPending": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -560,6 +565,7 @@ ShallowWrapper {
                               }
                               errorMessage="test"
                               isError={false}
+                              isPending={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -661,6 +667,7 @@ ShallowWrapper {
                             }
                             errorMessage="test"
                             isError={false}
+                            isPending={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -773,6 +780,7 @@ ShallowWrapper {
                 }
                 errorMessage="test"
                 isError={false}
+                isPending={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -809,6 +817,7 @@ ShallowWrapper {
                 ],
                 "errorMessage": "test",
                 "isError": false,
+                "isPending": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },
@@ -995,6 +1004,7 @@ ShallowWrapper {
     get={[Function]}
     history={Object {}}
     isCreateError={false}
+    isCreatePending={false}
     isError={false}
     keys={
         Array [
@@ -1088,6 +1098,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -1189,6 +1200,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -1301,6 +1313,7 @@ ShallowWrapper {
               }
               errorMessage="test"
               isError={false}
+              isPending={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -1337,6 +1350,7 @@ ShallowWrapper {
               ],
               "errorMessage": "test",
               "isError": false,
+              "isPending": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -1519,6 +1533,7 @@ ShallowWrapper {
                               }
                               errorMessage="test"
                               isError={false}
+                              isPending={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -1620,6 +1635,7 @@ ShallowWrapper {
                             }
                             errorMessage="test"
                             isError={false}
+                            isPending={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -1732,6 +1748,7 @@ ShallowWrapper {
                 }
                 errorMessage="test"
                 isError={false}
+                isPending={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -1768,6 +1785,7 @@ ShallowWrapper {
                 ],
                 "errorMessage": "test",
                 "isError": false,
+                "isPending": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },
@@ -1954,6 +1972,7 @@ ShallowWrapper {
     get={[Function]}
     history={Object {}}
     isCreateError={false}
+    isCreatePending={false}
     isError={false}
     keys={
         Array [
@@ -2029,6 +2048,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
                 />
@@ -2090,6 +2110,7 @@ ShallowWrapper {
                         }
                         errorMessage="test"
                         isError={false}
+                        isPending={false}
                         primaryButtonText="Create "
                         title="Create "
             />
@@ -2162,6 +2183,7 @@ ShallowWrapper {
               }
               errorMessage="test"
               isError={false}
+              isPending={false}
               primaryButtonText="Create "
               title="Create "
 />,
@@ -2198,6 +2220,7 @@ ShallowWrapper {
               ],
               "errorMessage": "test",
               "isError": false,
+              "isPending": false,
               "primaryButtonText": "Create ",
               "title": "Create ",
             },
@@ -2293,6 +2316,7 @@ ShallowWrapper {
                               }
                               errorMessage="test"
                               isError={false}
+                              isPending={false}
                               primaryButtonText="Create "
                               title="Create "
                     />
@@ -2354,6 +2378,7 @@ ShallowWrapper {
                             }
                             errorMessage="test"
                             isError={false}
+                            isPending={false}
                             primaryButtonText="Create "
                             title="Create "
               />
@@ -2426,6 +2451,7 @@ ShallowWrapper {
                 }
                 errorMessage="test"
                 isError={false}
+                isPending={false}
                 primaryButtonText="Create "
                 title="Create "
 />,
@@ -2462,6 +2488,7 @@ ShallowWrapper {
                 ],
                 "errorMessage": "test",
                 "isError": false,
+                "isPending": false,
                 "primaryButtonText": "Create ",
                 "title": "Create ",
               },

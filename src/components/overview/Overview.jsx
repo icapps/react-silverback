@@ -59,6 +59,7 @@ class Overview extends React.Component {
               createParameters={this.props.createParameters}
               create={this.props.create}
               isError={props.isCreateError}
+              isPending={props.isCreatePending}
               errorMessage={props.errorMessage}
             />}
           </div>
@@ -101,6 +102,7 @@ Overview.propTypes = {
   removeItem: PropTypes.func,
   deleteIdentifier: PropTypes.string,
   isError: PropTypes.bool.isRequired,
+  isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   errorMessage: PropTypes.string.isRequired,
 };
@@ -112,6 +114,7 @@ Overview.defaultProps = {
   removeItem: null,
   deleteIdentifier: '',
   keyword: '',
+  isCreatePending: false,
   isCreateError: false,
 };
 
