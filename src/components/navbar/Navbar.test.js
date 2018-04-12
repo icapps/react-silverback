@@ -8,24 +8,45 @@ configure({ adapter: new Adapter() });
 
 describe('Navbar Component', () => {
   it('should render a Navbar component', () => {
-    const wrapper = shallow(<Navbar links={[
+    const wrapper = shallow(
+    <Navbar
+    links={[
       { name: 'test1', path: '/test1' },
       { name: 'test2', path: '/test2' },
-    ]} toggleNavigation={() => { }} isNavigationShown={true} />);
+    ]}
+    toggleNavigation={() => { }}
+    isNavigationShown={true}
+    build="V1"
+    version="1.0.0"
+    />);
     expect(wrapper).toMatchSnapshot();
   });
   it('should render a Navbar component with navigation shown', () => {
-    const wrapper = shallow(<Navbar links={[
+    const wrapper = shallow(
+    <Navbar
+    links={[
       { name: 'test1', path: '/test1' },
       { name: 'test2', path: '/test2' },
-    ]} toggleNavigation={() => { }} isNavigationShown />);
+    ]}
+    toggleNavigation={() => { }}
+    isNavigationShown
+    build="V1"
+    version="1.0.0"
+    />);
     expect(wrapper).toMatchSnapshot();
   });
   it('should render a hidden Navbar component', () => {
-    const wrapper = shallow(<Navbar links={[
+    const wrapper = shallow(
+    <Navbar
+    links={[
       { name: 'test1', path: '/test1' },
       { name: 'test2', path: '/test2' },
-    ]} toggleNavigation={() => { }} isNavigationShown={false} />);
+    ]}
+    toggleNavigation={() => { }}
+    isNavigationShown={false}
+    build="V1"
+    version="1.0.0"
+    />);
     expect(wrapper).toMatchSnapshot();
   });
 });

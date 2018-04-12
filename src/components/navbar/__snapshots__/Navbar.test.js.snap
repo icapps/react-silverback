@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Navbar
+    build="V1"
     isNavigationShown={true}
     links={
         Array [
@@ -19,6 +20,7 @@ ShallowWrapper {
           ]
     }
     toggleNavigation={[Function]}
+    version="1.0.0"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -72,7 +74,7 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: 0
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
@@ -87,12 +89,12 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: undefined
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
           >
-                    Build: undefined
+                    Build: V1
           </span>
 </div>,
       ],
@@ -216,7 +218,7 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: 0
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
@@ -231,12 +233,12 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: undefined
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
 >
-              Build: undefined
+              Build: V1
 </span>,
           ],
           "className": "versioning nav flex-column",
@@ -260,11 +262,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: 0",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: 0",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -296,11 +298,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: undefined",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: undefined",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -308,11 +310,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Build: undefined",
+              "children": "Build: V1",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Build: undefined",
+            "rendered": "Build: V1",
             "type": "span",
           },
         ],
@@ -367,7 +369,7 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: 0
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
@@ -382,12 +384,12 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: undefined
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
             >
-                        Build: undefined
+                        Build: V1
             </span>
 </div>,
         ],
@@ -511,7 +513,7 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: 0
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
@@ -526,12 +528,12 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: undefined
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
 >
-                Build: undefined
+                Build: V1
 </span>,
             ],
             "className": "versioning nav flex-column",
@@ -555,11 +557,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: 0",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: 0",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -591,11 +593,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: undefined",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: undefined",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -603,11 +605,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Build: undefined",
+                "children": "Build: V1",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Build: undefined",
+              "rendered": "Build: V1",
               "type": "span",
             },
           ],
@@ -632,6 +634,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Navbar
+    build="V1"
     isNavigationShown={true}
     links={
         Array [
@@ -646,6 +649,7 @@ ShallowWrapper {
           ]
     }
     toggleNavigation={[Function]}
+    version="1.0.0"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -699,7 +703,7 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: 0
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
@@ -714,12 +718,12 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: undefined
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
           >
-                    Build: undefined
+                    Build: V1
           </span>
 </div>,
       ],
@@ -843,7 +847,7 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: 0
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
@@ -858,12 +862,12 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: undefined
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
 >
-              Build: undefined
+              Build: V1
 </span>,
           ],
           "className": "versioning nav flex-column",
@@ -887,11 +891,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: 0",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: 0",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -923,11 +927,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: undefined",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: undefined",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -935,11 +939,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Build: undefined",
+              "children": "Build: V1",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Build: undefined",
+            "rendered": "Build: V1",
             "type": "span",
           },
         ],
@@ -994,7 +998,7 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: 0
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
@@ -1009,12 +1013,12 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: undefined
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
             >
-                        Build: undefined
+                        Build: V1
             </span>
 </div>,
         ],
@@ -1138,7 +1142,7 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: 0
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
@@ -1153,12 +1157,12 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: undefined
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
 >
-                Build: undefined
+                Build: V1
 </span>,
             ],
             "className": "versioning nav flex-column",
@@ -1182,11 +1186,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: 0",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: 0",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -1218,11 +1222,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: undefined",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: undefined",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -1230,11 +1234,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Build: undefined",
+                "children": "Build: V1",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Build: undefined",
+              "rendered": "Build: V1",
               "type": "span",
             },
           ],
@@ -1259,6 +1263,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Navbar
+    build="V1"
     isNavigationShown={false}
     links={
         Array [
@@ -1273,6 +1278,7 @@ ShallowWrapper {
           ]
     }
     toggleNavigation={[Function]}
+    version="1.0.0"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1326,7 +1332,7 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: 0
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
@@ -1341,12 +1347,12 @@ ShallowWrapper {
           <span
                     className="nav-item"
           >
-                    Version: undefined
+                    Version: 1.0.0
           </span>
           <span
                     className="nav-item"
           >
-                    Build: undefined
+                    Build: V1
           </span>
 </div>,
       ],
@@ -1470,7 +1476,7 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: 0
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
@@ -1485,12 +1491,12 @@ ShallowWrapper {
             <span
               className="nav-item"
 >
-              Version: undefined
+              Version: 1.0.0
 </span>,
             <span
               className="nav-item"
 >
-              Build: undefined
+              Build: V1
 </span>,
           ],
           "className": "versioning nav flex-column",
@@ -1514,11 +1520,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: 0",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: 0",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -1550,11 +1556,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Version: undefined",
+              "children": "Version: 1.0.0",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Version: undefined",
+            "rendered": "Version: 1.0.0",
             "type": "span",
           },
           Object {
@@ -1562,11 +1568,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Build: undefined",
+              "children": "Build: V1",
               "className": "nav-item",
             },
             "ref": null,
-            "rendered": "Build: undefined",
+            "rendered": "Build: V1",
             "type": "span",
           },
         ],
@@ -1621,7 +1627,7 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: 0
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
@@ -1636,12 +1642,12 @@ ShallowWrapper {
             <span
                         className="nav-item"
             >
-                        Version: undefined
+                        Version: 1.0.0
             </span>
             <span
                         className="nav-item"
             >
-                        Build: undefined
+                        Build: V1
             </span>
 </div>,
         ],
@@ -1765,7 +1771,7 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: 0
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
@@ -1780,12 +1786,12 @@ ShallowWrapper {
               <span
                 className="nav-item"
 >
-                Version: undefined
+                Version: 1.0.0
 </span>,
               <span
                 className="nav-item"
 >
-                Build: undefined
+                Build: V1
 </span>,
             ],
             "className": "versioning nav flex-column",
@@ -1809,11 +1815,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: 0",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: 0",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -1845,11 +1851,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Version: undefined",
+                "children": "Version: 1.0.0",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Version: undefined",
+              "rendered": "Version: 1.0.0",
               "type": "span",
             },
             Object {
@@ -1857,11 +1863,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Build: undefined",
+                "children": "Build: V1",
                 "className": "nav-item",
               },
               "ref": null,
-              "rendered": "Build: undefined",
+              "rendered": "Build: V1",
               "type": "span",
             },
           ],
