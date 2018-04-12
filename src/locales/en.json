@@ -1,10 +1,12 @@
 {
   "ASC": "asc",
   "ASCENDING": "ascending",
+  "BACKEND": "Backend",
   "BEST_BEFORE": "best Before",
+  "BUILD": "Build",
   "CANCEL": "Cancel",
-  "CODES": "Codes",
   "CODE": "Code",
+  "CODES": "Codes",
   "CODE_TYPES": "Codetypes",
   "CODE_TYPE": "Codetype",
   "CREATE": "Create",
@@ -21,6 +23,7 @@
   "EMAIL": "Email",
   "FIRST": "First",
   "FIRST_NAME": "First name",
+  "FRONTEND": "Frontend",
   "GENERAL_ERROR": "Something went wrong!",
   "HAS_ACCESS": "Has access",
   "HEADER_TITLE": "Silverback",
@@ -50,5 +53,6 @@
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
   "USER": "User",
   "USERS": "Users",
+  "VERSION": "Version",
   "WEIGHT": "Weight"
 }
