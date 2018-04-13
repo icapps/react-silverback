@@ -6,6 +6,13 @@ import { strings } from '../../../utils';
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      createParametersState: null,
+      showError: false,
+    };
+  }
   componentDidMount() {
     this.setCreateParameters();
   }
@@ -49,7 +56,7 @@ class CreateModal extends React.Component {
         handleModalButton={this.setCreateParameters}
       >
         {this.props.isError && this.state.showError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
-        <div>{this.state && this.props.createParameters.map(item => this.renderInput(item))}</div>
+        <div>{this.state.createParametersState && this.props.createParameters.map(item => this.renderInput(item))}</div>
       </Modal>
     );
   }
