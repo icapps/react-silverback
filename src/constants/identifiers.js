@@ -10,6 +10,7 @@ export const identifiers = {
   LAST_NAME: 'lastName',
   PASSWORD: 'password',
   PRICE: 'price',
+  REPEAT_PASSWORD: 'repeatPassword',
   ROLE: 'role',
   TYPE: 'type',
   VALUE: 'value',

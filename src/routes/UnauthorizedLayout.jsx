@@ -8,7 +8,7 @@ const UnauthorizedLayout = (props) => {
     <div className='unauth-layout'>
         <Switch>
           <Route path='/auth/login' exact component={Login} />
-          <Route path='/auth/forgot-password/:id' exact component={ForgotPassword} />
+          <Route path='/forgot-password/:id' exact component={ForgotPassword} />
           <Redirect to='/auth/login' />
         </Switch>
     </div>
