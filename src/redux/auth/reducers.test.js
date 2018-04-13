@@ -16,7 +16,7 @@ describe('auth reducer', () => {
     expect(
       auth(initialState, {
         type: constants.LOGIN_USER_FULFILLED,
-        payload: {data: {}, meta: {}},
+        payload: { data: {}, meta: {} },
       })
     ).toMatchSnapshot();
   });
@@ -27,6 +27,55 @@ describe('auth reducer', () => {
       })
     ).toMatchSnapshot();
   });
+  //VERIFY_FORGOT_PASSWORD
+  it('should VERIFY_FORGOT_PASSWORD_FULFILLED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.VERIFY_FORGOT_PASSWORD_FULFILLED,
+        payload: { data: {}, meta: {} },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should VERIFY_FORGOT_PASSWORD_PENDING', () => {
+    expect(
+      auth(initialState, {
+        type: constants.VERIFY_FORGOT_PASSWORD_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should VERIFY_FORGOT_PASSWORD_REJECTED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.VERIFY_FORGOT_PASSWORD_REJECTED,
+        payload: { errors: [{ title: "error" }] },
+      })
+    ).toMatchSnapshot();
+  });
+  //CONFIRM_FORGOT_PASSWORD
+  it('should CONFIRM_FORGOT_PASSWORD_FULFILLED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.CONFIRM_FORGOT_PASSWORD_FULFILLED,
+        payload: { data: {}, meta: {} },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CONFIRM_FORGOT_PASSWORD_PENDING', () => {
+    expect(
+      auth(initialState, {
+        type: constants.CONFIRM_FORGOT_PASSWORD_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CONFIRM_FORGOT_PASSWORD_REJECTED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.CONFIRM_FORGOT_PASSWORD_REJECTED,
+        payload: { errors: [{ title: "error" }] },
+      })
+    ).toMatchSnapshot();
+  });
+  //LOGOUT_USER
   it('should LOGOUT_USER', () => {
     expect(
       auth(initialState, {

@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`auth reducer should CONFIRM_FORGOT_PASSWORD_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPasswordConfirmed": true,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should CONFIRM_FORGOT_PASSWORD_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPasswordConfirmed": false,
+  "isPending": true,
+}
+`;
+
+exports[`auth reducer should CONFIRM_FORGOT_PASSWORD_REJECTED 1`] = `
+Object {
+  "errorMessage": "error",
+  "isError": true,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;
+
 exports[`auth reducer should LOGIN_USER_FULFILLED 1`] = `
 Object {
   "errorMessage": "",
@@ -23,6 +52,37 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isLoggedIn": false,
+  "isPasswordConfirmed": false,
+  "isPasswordVerified": false,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should VERIFY_FORGOT_PASSWORD_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPasswordVerified": true,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should VERIFY_FORGOT_PASSWORD_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPasswordVerified": false,
+  "isPending": true,
+}
+`;
+
+exports[`auth reducer should VERIFY_FORGOT_PASSWORD_REJECTED 1`] = `
+Object {
+  "errorMessage": "error",
+  "isError": true,
+  "isLoggedIn": false,
   "isPending": false,
 }
 `;
@@ -32,6 +92,8 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isLoggedIn": false,
+  "isPasswordConfirmed": false,
+  "isPasswordVerified": false,
   "isPending": false,
 }
 `;
