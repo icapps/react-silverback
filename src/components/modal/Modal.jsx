@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Spinner } from '../index';
 import './modal.css';
 
 class Modal extends React.Component {
@@ -23,9 +24,11 @@ class Modal extends React.Component {
     this.toggleModal();
   }
 
-  handlePrimaryButton = () => {
-    this.props.handlePrimaryButton();
-    this.toggleModal();
+  handlePrimaryButton = async () => {
+    const result = await this.props.handlePrimaryButton();
+    if (result) {
+      this.toggleModal();
+    }
   }
 
   handleSecondaryButton = () => {
@@ -58,8 +61,12 @@ class Modal extends React.Component {
                 {props.children}
               </div>
               <div className="modal-footer">
-                <button type="button" className={`btn ${props.secondaryButtonClassName}`} data-dismiss="modal" onClick={this.handleSecondaryButton}>{props.secondaryButtonText}</button>
-                <button type="button" className={`btn ${props.primaryButtonClassName}`} data-dismiss="modal" onClick={this.handlePrimaryButton}>{props.primaryButtonText}</button>
+                <button type="button" className={`btn ${props.secondaryButtonClassName}`} data-dismiss="modal" onClick={this.handleSecondaryButton}>
+                  {props.secondaryButtonText}
+                </button>
+                <button type="button" className={`btn ${props.primaryButtonClassName}`} data-dismiss="modal" onClick={this.handlePrimaryButton}  disabled={props.isPending}>
+                {props.isPending ? <Spinner hasContainer={false} spinnerClassName={'button-spinner'} /> : props.primaryButtonText}
+                </button>
               </div>
             </div>
           </div>
@@ -69,6 +76,13 @@ class Modal extends React.Component {
     );
   }
 };
+
+/*
+  <button type="button" className={`btn ${props.className}`} onClick={props.handleClick} disabled={props.isDisabled || props.isPending}>
+    {props.icon && <img src={props.icon} alt="+" />}
+    {props.isPending ? <Spinner hasContainer={false} spinnerClassName={'button-spinner'} /> : <span>{props.text}</span>}
+  </button>
+*/
 
 Modal.propTypes = {
   id: PropTypes.string.isRequired,
@@ -85,6 +99,7 @@ Modal.propTypes = {
   handlePrimaryButton: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   icon: PropTypes.string,
+  isPending: PropTypes.bool,
 };
 
 Modal.defaultProps = {
@@ -94,6 +109,7 @@ Modal.defaultProps = {
   secondaryButtonClassName: 'btn-light',
   primaryButtonClassName: 'btn-light',
   icon: null,
+  isPending: false,
   handleModalButton: () => { },
   handleSecondaryButton: () => { },
 };

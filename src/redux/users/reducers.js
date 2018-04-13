@@ -6,8 +6,10 @@ const initialState = {
   userList: [],
   user: null,
   usersCount: 0,
+  isCreatePending: false,
   isUpdatePending: false,
   isUserUpdated: false,
+  isCreateError: false,
   ...defaultInitialState,
 };
 
@@ -30,6 +32,7 @@ const users = (state = initialState, action = {}) => {
         ...state,
         isPending: true,
         isError: false,
+        isCreateError: false,
         errorMessage: '',
         user: null,
         isUserUpdated: false,
@@ -54,6 +57,7 @@ const users = (state = initialState, action = {}) => {
         ...state,
         isPending: true,
         isError: false,
+        isCreateError: false,
         errorMessage: '',
       };
     case constants.GET_USERS_BY_ID_REJECTED:
@@ -96,20 +100,22 @@ const users = (state = initialState, action = {}) => {
       return {
         ...state,
         user: payload.data,
+        isCreateError: false,
+        isCreatePending: false,
         isPending: false,
       };
     case constants.CREATE_USER_PENDING:
       return {
         ...state,
-        isPending: true,
-        isError: false,
+        isCreateError: false,
+        isCreatePending: true,
         errorMessage: '',
       };
     case constants.CREATE_USER_REJECTED:
       return {
         ...state,
-        isPending: false,
-        isError: true,
+        isCreateError: true,
+        isCreatePending: false,
         errorMessage: errorMessageHandling(payload),
       };
 
