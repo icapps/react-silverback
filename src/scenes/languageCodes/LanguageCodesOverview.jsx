@@ -4,20 +4,20 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import { getCodes } from '../../redux/codes/actions';
+import { getLanguageCodes } from '../../redux/codes/actions';
 
-class CodesOverview extends Component {
+class LanguageCodesOverview extends Component {
   render() {
     return (
       <Overview
-        title={strings.CODES}
+        title={strings.LANGUAGE_CODES}
         keys={[
           { id: identifiers.VALUE, value: strings.CODE, isSortable: true },
         ]}
-        listItems={this.props.codes}
+        listItems={this.props.languageCode}
         history={this.props.history}
-        paginationTotalCount={this.props.codesCount}
-        get={this.props.getCodes}
+        paginationTotalCount={this.props.languageCodeCount}
+        get={this.props.getLanguageCodes}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
       />
@@ -25,23 +25,23 @@ class CodesOverview extends Component {
   }
 }
 
-CodesOverview.propTypes = {
-  codes: PropTypes.array.isRequired,
-  codesCount: PropTypes.number.isRequired,
+LanguageCodesOverview.propTypes = {
+  languageCode: PropTypes.array.isRequired,
+  languageCodeCount: PropTypes.number.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
-  getCodes: PropTypes.func.isRequired,
+  getLanguageCodes: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-  codes: state.codes.codesList,
-  codesCount: state.codes.codesCount,
+  languageCode: state.codes.languageCodeList,
+  languageCodeCount: state.codes.languageCodeCount,
   isError: state.codes.isError,
   errorMessage: state.users.errorMessage,
 });
 
 const mapDispatchToProps = {
-  getCodes,
+  getLanguageCodes,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CodesOverview);
+export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodesOverview);
