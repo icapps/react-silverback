@@ -37,40 +37,46 @@ class ForgotPassword extends React.Component {
       password: { ...this.state.password, isValid: this.state.password.value !== '' },
       repeatPassword: { ...this.state.repeatPassword, isValid: this.state.password.value === this.state.repeatPassword.value && this.state.repeatPassword.value !== '' },
     },
-    () => {
-      if(this.state.password.isValid && this.state.repeatPassword.isValid) {
-        this.props.confirmForgotPassword(this.token, this.state.password.value);
-      }
-    });
+      () => {
+        if (this.state.password.isValid && this.state.repeatPassword.isValid) {
+          this.props.confirmForgotPassword(this.token, this.state.password.value);
+        }
+      });
   }
 
   render() {
-    if (this.props.isPending) return <Spinner hasContainer={false} />;
-    if(this.props.isPasswordConfirmed) return (
-      <div className="forgot-password-container container">
-        <main className="forgot-password forgot-password-succes">
-          <h3>{strings.FORGOT_PASSWORD_SUCCES}</h3>
-          <p>{strings.FORGOT_PASSWORD_SUCCES_TEXT}</p>
-        </main>
-      </div>
-    );
-    if(this.props.isError) return (
-      <div className="forgot-password-container container">
-        <main className="forgot-password forgot-password-failed">
-          <h3 className="text-danger">{strings.FORGOT_PASSWORD}</h3>
-          <p>{strings.FORGOT_PASSWORD_ERROR}</p>
-        </main>
-      </div>
-    );
+    const { props, state } = this;
+
+    if (props.isPending) { return <Spinner hasContainer={false} />; };
+    if (props.isPasswordConfirmed) {
+      return (
+        <div className="forgot-password-container container">
+          <main className="forgot-password forgot-password-succes">
+            <h3>{strings.FORGOT_PASSWORD_SUCCES}</h3>
+            <p>{strings.FORGOT_PASSWORD_SUCCES_TEXT}</p>
+          </main>
+        </div>
+      );
+    };
+    if (props.isError) {
+      return (
+        <div className="forgot-password-container container">
+          <main className="forgot-password forgot-password-failed">
+            <h3 className="text-danger">{strings.FORGOT_PASSWORD}</h3>
+            <p>{strings.FORGOT_PASSWORD_ERROR}</p>
+          </main>
+        </div>
+      );
+    };
     return (
       <div className="forgot-password-container container">
         <main className="forgot-password">
           <h3>{strings.FORGOT_PASSWORD}</h3>
           <div className="password-input">
-            <BasicInput id={identifiers.PASSWORD} label={strings.NEW_PASSWORD} value={this.state.password.value} handleChange={this.handleChange} type="password" isValid={this.state.password.isValid} errorMessage={this.state.password.errorMessage} />
-            <BasicInput id={identifiers.REPEAT_PASSWORD} label={strings.REPEAT_NEW_PASSWORD} value={this.state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={this.state.repeatPassword.isValid} errorMessage={this.state.repeatPassword.errorMessage} />
+            <BasicInput id={identifiers.PASSWORD} label={strings.NEW_PASSWORD} value={state.password.value} handleChange={this.handleChange} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
+            <BasicInput id={identifiers.REPEAT_PASSWORD} label={strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} />
           </div>
-          <Button className="btn-primary" text={strings.FORGOT_PASSWORD_BUTTON} handleClick={this.handleClick}  />
+          <Button className="btn-primary" text={strings.FORGOT_PASSWORD_BUTTON} handleClick={this.handleClick} />
         </main>
       </div>
     );

@@ -31,7 +31,7 @@ class Overview extends React.Component {
 
   handlePagination = (page, limit) => {
     this.props.get(page, limit, this.state.sortField, this.state.sortOrder);
-    this.setState({page, limit });
+    this.setState({ page, limit });
   };
 
   render() {
