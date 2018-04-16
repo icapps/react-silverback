@@ -53,6 +53,9 @@ class Detail extends React.Component {
                 title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
                 createParameters={props.createParameters}
                 create={props.create}
+                isError={props.isCreateError}
+                isPending={props.isCreatePending}
+                errorMessage={props.errorMessage}
               />}
             </div>
             {props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
@@ -112,6 +115,8 @@ Detail.propTypes = {
   remove: PropTypes.func,
   update: PropTypes.func,
   isUpdated: PropTypes.bool,
+  isCreatePending: PropTypes.bool,
+  isCreateError: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -121,6 +126,8 @@ Detail.defaultProps = {
   update: null,
   isUpdated: false,
   keyword: '',
+  isCreatePending: false,
+  isCreateError: false,
 };
 
 export default Detail;

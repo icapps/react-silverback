@@ -13,10 +13,14 @@ class UserDetail extends Component {
   }
 
   createUser = async user => {
-    const result = await this.props.createUser(user);
-    if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
-      this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
-    }
+    return new Promise(async resolve => {
+      const result = await this.props.createUser(user);
+      if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
+        this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
+        resolve(true);
+      }
+      resolve(false);
+    });
   }
 
   updateUser = (id, user) => {
@@ -54,6 +58,8 @@ class UserDetail extends Component {
         isUpdated={this.props.isUserUpdated}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
+        isCreatePending={this.props.isCreatePending}
+        isCreateError={this.props.isCreateError}
       />);
     return <EmptyDetail history={this.props.history} />;
   }
@@ -70,14 +76,18 @@ UserDetail.propTypes = {
   createUser: PropTypes.func.isRequired,
   updateUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
+  isCreateError: PropTypes.bool.isRequired,
+  isCreatePending: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   user: state.users.user,
   isUserUpdated: state.users.isUserUpdated,
+  isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
   isPending: state.users.isPending,
+  isCreatePending: state.users.isCreatePending,
   isUpdatePending: state.users.isUpdatePending,
 });
 

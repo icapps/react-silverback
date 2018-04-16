@@ -23,6 +23,8 @@ describe('Overview Component', () => {
         { id: 'key4', label: "test4", type: "boolean" },
       ]}
       create={() => { }}
+      isError={false}
+      errorMessage="test"
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -42,6 +44,8 @@ describe('Overview Component', () => {
         { id: 'key4', label: "test4", type: "boolean" },
       ]}
       create={() => { }}
+      isError={false}
+      errorMessage="test"
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -61,6 +65,8 @@ describe('Overview Component', () => {
         { id: 'key4', label: "test4", type: "boolean" },
       ]}
       create={() => { }}
+      isError={false}
+      errorMessage="test"
     />);
     expect(wrapper).toMatchSnapshot();
   });

@@ -13,7 +13,12 @@ class CreateModal extends React.Component {
   setCreateParameters = () => {
     let createParametersState = {};
     this.props.createParameters.forEach(item => createParametersState[item.id] = item.type === 'boolean' ? false : '');
-    this.setState({ createParametersState });
+    this.setState({ createParametersState, showError: false });
+  }
+
+  create = async () => {
+    this.setState({ showError: true });
+    return this.props.create(this.state.createParametersState);
   }
 
   handleChange = event => {
@@ -22,9 +27,9 @@ class CreateModal extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} />;
+      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} isDisabled={this.props.isPending} />;
     }
-    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} />;
+    return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending} />;
   }
 
   render() {
@@ -33,15 +38,17 @@ class CreateModal extends React.Component {
         id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
         secondaryButtonText={strings.CANCEL}
-        handlePrimaryButton={() => this.props.create(this.state.createParametersState)}
+        handlePrimaryButton={this.create}
         primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success"
         icon={plus}
         title={this.props.title}
         hasHeader
+        isPending={this.props.isPending}
         handleModalButton={this.setCreateParameters}
       >
+        {this.props.isError && this.state.showError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div>{this.state && this.props.createParameters.map(item => this.renderInput(item))}</div>
       </Modal>
     );
@@ -53,6 +60,15 @@ CreateModal.propTypes = {
   title: PropTypes.string.isRequired,
   createParameters: PropTypes.array.isRequired,
   create: PropTypes.func.isRequired,
+  isPending: PropTypes.bool,
+  isError: PropTypes.bool,
+  errorMessage: PropTypes.string,
+};
+
+CreateModal.defaultProps = {
+  isPending: false,
+  isError: false,
+  errorMessage: '',
 };
 
 export default CreateModal;
