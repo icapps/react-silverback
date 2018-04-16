@@ -21,7 +21,7 @@ class ForgotPassword extends React.Component {
     this.props.verifyForgotPassword(this.token);
   }
 
-  token = window.location.pathname.split('/')[3];
+  token = window.location.search.split('=')[1];
 
   handleChange = event => {
     if (event.target.id === identifiers.PASSWORD) {
