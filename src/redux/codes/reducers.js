@@ -3,10 +3,8 @@ import defaultInitialState from '../defaultInitialState';
 import { strings } from '../../utils/index';
 
 const initialState = {
-  codesList: [],
-  codesCount: 0,
-  codeTypes: [],
-  codeTypeCount: 0,
+  languageCodeList: [],
+  languageCodeCount: 0,
   ...defaultInitialState,
 };
 
@@ -16,44 +14,21 @@ const codes = (state = initialState, action = {}) => {
   const { payload } = action;
 
   switch (action.type) {
-    //GET_CODE_TYPES
-    case constants.GET_CODE_TYPES_FULFILLED:
+    case constants.GET_LANGUAGE_CODES_FULFILLED:
       return {
         ...state,
-        codeTypes: payload.data,
-        codeTypeCount: payload.meta.totalCount,
+        languageCodeList: payload.data,
+        languageCodeCount: payload.meta.totalCount,
         isPending: false,
       };
-    case constants.GET_CODE_TYPES_PENDING:
+    case constants.GET_LANGUAGE_CODES_PENDING:
       return {
         ...state,
         isPending: true,
         isError: false,
         errorMessage: '',
       };
-    case constants.GET_CODE_TYPES_REJECTED:
-      return {
-        ...state,
-        isPending: false,
-        isError: true,
-        errorMessage: errorMessageHandling(payload),
-      };
-    //GET_CODES
-    case constants.GET_CODES_FULFILLED:
-      return {
-        ...state,
-        codesList: payload.data,
-        codesCount: payload.meta.totalCount,
-        isPending: false,
-      };
-    case constants.GET_CODES_PENDING:
-      return {
-        ...state,
-        isPending: true,
-        isError: false,
-        errorMessage: '',
-      };
-    case constants.GET_CODES_REJECTED:
+    case constants.GET_LANGUAGE_CODES_REJECTED:
       return {
         ...state,
         isPending: false,
