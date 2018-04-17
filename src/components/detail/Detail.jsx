@@ -21,9 +21,11 @@ class Detail extends React.Component {
     this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value }, isSaved: false });
   };
 
-  save = () => {
-    this.setState({ isSaved: true });
-    this.props.update(this.props.id, this.state.inputItemState);
+  save = async () => {
+    const result = await this.props.update(this.props.id, this.state.inputItemState);
+    if (result.action.type.includes('FULFILLED')) {
+      this.setState({ isSaved: true });
+    }
   }
 
   delete = () => {
