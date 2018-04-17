@@ -26,7 +26,7 @@ class Pagination extends React.Component {
       minPage: maxPage - 4,
       maxPage,
     });
-    this.props.handleClick(pageNumber, pageLimit);
+    this.props.handleClick(pageNumber * pageLimit, pageLimit);
   }
 
   changePageLimit = event => {
