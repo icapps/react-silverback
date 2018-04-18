@@ -21,10 +21,12 @@ class Overview extends React.Component {
     this.props.get(this.state.page, this.state.limit);
   }
 
-  remove = async user => {
-    const result = await this.props.removeItem(user);
-    if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-      this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+  remove = async item => {
+    if (this.props.removeItem) {
+      const result = await this.props.removeItem(item);
+      if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+        this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+      }
     }
   }
 
@@ -71,7 +73,7 @@ class Overview extends React.Component {
                 listItems={props.listItems}
                 dateFormat={props.dateFormat}
                 handleRowClick={this.showDetailScreen}
-                handleRemoveItem={this.remove}
+                handleRemoveItem={this.props.removeItem && this.remove}
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
               />

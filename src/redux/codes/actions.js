@@ -15,3 +15,10 @@ export const createLanguageCode = languageCode => {
   };
 };
 
+export const deprecateLanguageCode = languageCodeId => {
+  return {
+    type: constants.DEPRECATE_LANGUAGE_CODE,
+    payload: codesService.deprecateLanguageCode(languageCodeId),
+  };
+};
+

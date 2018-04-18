@@ -12,7 +12,7 @@ class LanguageCodesOverview extends Component {
     return new Promise(async resolve => {
       const result = await this.props.createLanguageCode(languageCode);
       if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
-        this.props.history.push(`${window.location.pathname}/${this.props.languageCode.id}`, this.props.languageCode.id);
+        this.props.history.push(`${window.location.pathname}/${this.props.languageCode}`, this.props.languageCode);
         resolve(true);
       }
       resolve(false);
@@ -48,14 +48,19 @@ class LanguageCodesOverview extends Component {
 }
 
 LanguageCodesOverview.propTypes = {
+  languageCode: PropTypes.string,
   languageCodes: PropTypes.array.isRequired,
   languageCodeCount: PropTypes.number.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
   getLanguageCodes: PropTypes.func.isRequired,
+  isCreatePending: PropTypes.bool.isRequired,
+  isCreateError: PropTypes.bool.isRequired,
+  createLanguageCode: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
+  languageCode: state.codes.languageCode,
   languageCodes: state.codes.languageCodeList,
   languageCodeCount: state.codes.languageCodeCount,
   isError: state.codes.isError,

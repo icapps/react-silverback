@@ -3,6 +3,7 @@ import defaultInitialState from '../defaultInitialState';
 import { strings } from '../../utils/index';
 
 const initialState = {
+  languageCode: null,
   languageCodeList: [],
   languageCodeCount: 0,
   isCreatePending: false,
@@ -42,6 +43,7 @@ const codes = (state = initialState, action = {}) => {
       return {
         ...state,
         isCreatePending: false,
+        languageCode: payload.data.id,
       };
     case constants.CREATE_LANGUAGE_CODE_PENDING:
       return {
@@ -55,6 +57,26 @@ const codes = (state = initialState, action = {}) => {
         ...state,
         isCreatePending: false,
         isCreateError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
+    case constants.DEPRECATE_LANGUAGE_CODE_FULFILLED:
+      return {
+        ...state,
+        isPending: false,
+      };
+    case constants.DEPRECATE_LANGUAGE_CODE_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.DEPRECATE_LANGUAGE_CODE_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
         errorMessage: errorMessageHandling(payload),
       };
     default:

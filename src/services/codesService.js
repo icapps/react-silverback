@@ -11,3 +11,8 @@ export const createLanguageCode = async (languageCode) => {
   const result = await Network.post(`/meta/codes/languages`, languageCode);
   return result;
 };
+
+export const deprecateLanguageCode = async (languageCodeId) => {
+  const result = await Network.post(`/meta/codes/${languageCodeId}/deprecate`);
+  return result;
+};

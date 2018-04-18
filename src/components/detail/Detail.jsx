@@ -102,7 +102,6 @@ class Detail extends React.Component {
 }
 
 Detail.propTypes = {
-  dataType: PropTypes.string.isRequired,
   keyword: PropTypes.string,
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
