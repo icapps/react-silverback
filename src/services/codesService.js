@@ -6,3 +6,8 @@ export const getLanguageCodes = async (page, limit, sortField, sortOrder) => {
   const result = await Network.get(`/meta/codes/languages${pagination}${sort}`);
   return result;
 };
+
+export const createLanguageCode = async (languageCode) => {
+  const result = await Network.post(`/meta/codes/languages`, languageCode);
+  return result;
+};

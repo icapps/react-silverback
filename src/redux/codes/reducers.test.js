@@ -35,4 +35,27 @@ describe('codes reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  it('should CREATE_LANGUAGE_CODE_FULFILLED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.CREATE_LANGUAGE_CODE_FULFILLED,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CREATE_LANGUAGE_CODE_PENDING', () => {
+    expect(
+      codes(initialState, {
+        type: constants.CREATE_LANGUAGE_CODE_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should CREATE_LANGUAGE_CODE_REJECTED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.CREATE_LANGUAGE_CODE_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
 });

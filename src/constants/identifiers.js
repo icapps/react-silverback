@@ -8,6 +8,7 @@ export const identifiers = {
   HAS_ACCESS: 'hasAccess',
   ID: 'id',
   LAST_NAME: 'lastName',
+  NAME: 'name',
   PASSWORD: 'password',
   PRICE: 'price',
   REPEAT_PASSWORD: 'repeatPassword',

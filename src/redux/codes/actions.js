@@ -8,3 +8,10 @@ export const getLanguageCodes = (page, limit, sortField, sortOrder) => {
   };
 };
 
+export const createLanguageCode = languageCode => {
+  return {
+    type: constants.CREATE_LANGUAGE_CODE,
+    payload: codesService.createLanguageCode(languageCode),
+  };
+};
+

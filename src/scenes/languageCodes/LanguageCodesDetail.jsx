@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 import { getLanguageCodes } from '../../redux/codes/actions';
 
 class LanguageCodeDetail extends Component {
@@ -16,9 +17,12 @@ class LanguageCodeDetail extends Component {
     if (code) return (
       <Detail
         dataType={strings.CODE}
-        title={code.value}
+        title={code.name}
         id={code.id}
-        inputItems={[]}
+        inputItems={[
+          { id: identifiers.CODE, label: strings.CODE, value: code.code },
+          { id: identifiers.NAME, label: strings.NAME, value: code.name },
+        ]}
         history={this.props.history}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
