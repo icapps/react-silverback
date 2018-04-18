@@ -40,6 +40,7 @@ describe('codes reducer', () => {
     expect(
       codes(initialState, {
         type: constants.CREATE_LANGUAGE_CODE_FULFILLED,
+        payload: { data: { id: 'id' } },
       })
     ).toMatchSnapshot();
   });

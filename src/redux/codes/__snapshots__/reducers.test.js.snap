@@ -6,6 +6,7 @@ Object {
   "isCreatePending": false,
   "isError": false,
   "isPending": false,
+  "languageCode": "id",
   "languageCodeCount": 0,
   "languageCodeList": Array [],
 }
@@ -72,6 +73,7 @@ Object {
   "isCreatePending": false,
   "isError": false,
   "isPending": false,
+  "languageCode": null,
   "languageCodeCount": 0,
   "languageCodeList": Array [],
 }

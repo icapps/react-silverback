@@ -4,7 +4,7 @@ import './pagination.css';
 import { Dropdown } from '../index';
 import { strings } from '../../utils';
 
-const pageLimitOptions = [5, 10, 25, 50, 100];
+const pageLimitOptions = [10, 25, 50, 100];
 const visiblePages = 5;
 
 class Pagination extends React.Component {
@@ -12,7 +12,7 @@ class Pagination extends React.Component {
     super();
     this.state = {
       activePage: 0,
-      pageLimit: 10,
+      pageLimit: 25,
       minPage: 1,
       maxPage: visiblePages,
     };

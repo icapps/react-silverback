@@ -12,7 +12,7 @@ class Overview extends React.Component {
     super();
     this.state = {
       page: 0,
-      limit: 10,
+      limit: 25,
       sortField: null,
       sortOrder: null,
     };
