@@ -49,7 +49,7 @@ class UserDetail extends Component {
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
-          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean" },
+          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
         remove={this.props.removeUser}
