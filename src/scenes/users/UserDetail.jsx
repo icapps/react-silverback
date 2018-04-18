@@ -23,8 +23,8 @@ class UserDetail extends Component {
     });
   }
 
-  updateUser = (id, user) => {
-    this.props.updateUser(id, user);
+  updateUser = async (id, user) => {
+    return this.props.updateUser(id, user);
   }
 
   render() {
