@@ -11,10 +11,12 @@ class LanguageCodesOverview extends Component {
     return (
       <Overview
         title={strings.LANGUAGE_CODES}
+        keyword={strings.LANGUAGE_CODE}
         keys={[
-          { id: identifiers.VALUE, value: strings.CODE, isSortable: true },
+          { id: identifiers.CODE, value: strings.CODE, isSortable: true },
+          { id: identifiers.NAME, value: strings.NAME, isSortable: true },
         ]}
-        listItems={this.props.languageCode}
+        listItems={this.props.languageCodes}
         history={this.props.history}
         paginationTotalCount={this.props.languageCodeCount}
         get={this.props.getLanguageCodes}
@@ -26,7 +28,7 @@ class LanguageCodesOverview extends Component {
 }
 
 LanguageCodesOverview.propTypes = {
-  languageCode: PropTypes.array.isRequired,
+  languageCodes: PropTypes.array.isRequired,
   languageCodeCount: PropTypes.number.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
@@ -34,7 +36,7 @@ LanguageCodesOverview.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  languageCode: state.codes.languageCodeList,
+  languageCodes: state.codes.languageCodeList,
   languageCodeCount: state.codes.languageCodeCount,
   isError: state.codes.isError,
   errorMessage: state.users.errorMessage,
