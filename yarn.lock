@@ -3538,7 +3538,7 @@ eslint-plugin-import@^2.8.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-jsx-a11y@5.1.1:
+eslint-plugin-jsx-a11y@5.1.1, eslint-plugin-jsx-a11y@^5.0.0:
   version "5.1.1"
   resolved "https://npm.icapps.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-5.1.1.tgz#5c96bb5186ca14e94db1095ff59b3e2bd94069b1"
   dependencies:
