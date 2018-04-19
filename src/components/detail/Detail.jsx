@@ -18,11 +18,14 @@ class Detail extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value } });
+    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value }, isSaved: false });
   };
 
-  save = () => {
-    this.props.update(this.props.id, this.state.inputItemState);
+  save = async () => {
+    const result = await this.props.update(this.props.id, this.state.inputItemState);
+    if (result.action.type.includes('FULFILLED')) {
+      this.setState({ isSaved: true });
+    }
   }
 
   delete = () => {
@@ -58,7 +61,7 @@ class Detail extends React.Component {
                 errorMessage={props.errorMessage}
               />}
             </div>
-            {props.isUpdated && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
+            {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
             <h3>{props.title}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>

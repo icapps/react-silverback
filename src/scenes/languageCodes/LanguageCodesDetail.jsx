@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
 import { getLanguageCodes } from '../../redux/codes/actions';
+import {identifiers} from '../../constants';
 
 class LanguageCodeDetail extends Component {
   componentDidMount() {
@@ -15,11 +16,13 @@ class LanguageCodeDetail extends Component {
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     if (code) return (
       <Detail
-        dataType={strings.CODE}
-        title={code.value}
+        title={code.name}
+        keyword={strings.LANGUAGE_CODE}
         id={code.id}
-        inputItems={[]}
-        history={this.props.history}
+        inputItems={[
+          { id: identifiers.CODE, label: strings.CODE, value: code.code },
+          { id: identifiers.NAME, label: strings.NAME, value: code.name },
+        ]} history={this.props.history}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
       />);
