@@ -26,6 +26,18 @@ Build the app for production. This generates a build folder with optimised files
 #### `yarn run test`
 Start the test watcher for developing tests. Follow instructions on the screen to write and develop tests.
 
-## Deployment
+## Bugs
 
-Deployment to Heroku with a build pack for create-react-app. Use the following steps for the setup with the buildpack [https://github.com/mars/create-react-app-buildpack#quick-start]()
+When you find issues, please report them:
+
+- web: [https://github.com/icapps/react-silverback/issues](https://github.com/icapps/react-silverback/issues)
+
+Be sure to include all of the output from the npm command that didn't work as expected. The npm-debug.log file is also helpful to provide.
+
+## Authors
+
+See the list of [contributors](https://github.com/icapps/react-silverback/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details
