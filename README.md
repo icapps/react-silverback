@@ -1,6 +1,7 @@
 # Silverback
 
-[![Build Status](https://travis-ci.org/icapps/react-thunk-template.svg?branch=master)](https://travis-ci.org/icapps/react-thunk-template)
+[![Dependencies](https://david-dm.org/icapps/react-silverback.svg)](https://david-dm.org/icapps/react-silverback.svg)
+[![Build Status](https://travis-ci.org/icapps/react-silverback.svg?branch=master)](https://travis-ci.org/icapps/react-silverback)
 
 ## Development
 
