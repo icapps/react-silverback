@@ -13,7 +13,7 @@ export const getById = async id => {
 };
 
 export const create = async (user) => {
-  const result = await Network.post('/users', user);
+  const result = await Network.post('/users?changePassword=true', user);
   return result;
 };
 
