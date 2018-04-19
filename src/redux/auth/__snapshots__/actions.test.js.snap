@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`auth actions confirmForgotPassword 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "CONFIRM_FORGOT_PASSWORD",
+  },
+]
+`;
+
 exports[`auth actions loginUser 1`] = `
 Array [
   Object {
-    "payload": true,
+    "payload": Promise {},
     "type": "LOGIN_USER",
   },
 ]
@@ -13,6 +22,15 @@ exports[`auth actions logoutUser 1`] = `
 Array [
   Object {
     "type": "LOGOUT_USER",
+  },
+]
+`;
+
+exports[`auth actions verifyForgotPassword 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "VERIFY_FORGOT_PASSWORD",
   },
 ]
 `;

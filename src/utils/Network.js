@@ -12,7 +12,7 @@ class Network {
     const headers = {};
 
     // ONLY USE THIS IF YOU WORK IN A BROWSER
-    const token = window.localStorage.getItem('ACCESS_TOKEN');
+    const token = localStorage.getItem('ACCESS_TOKEN');
     if (token) {
       headers.authorization = `Bearer ${token}`;
     }
@@ -54,6 +54,16 @@ class Network {
     try {
       const headers = this.basicHeaders();
       const result = await axios.put(this.getUrl(route), body, { headers });
+      return result.data;
+    } catch (err) {
+      this.errorHandler(err);
+    }
+  }
+
+  static async patch(route, body = {}) {
+    try {
+      const headers = this.basicHeaders();
+      const result = await axios.patch(this.getUrl(route), body, { headers });
       return result.data;
     } catch (err) {
       this.errorHandler(err);

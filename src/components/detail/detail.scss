@@ -1,0 +1,42 @@
+@import '../../utils/_colors.scss';
+
+.detail {
+  .detail-header {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .back{
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-top: -1px;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+
+  .input-fields {
+    margin-top: 2rem;
+  }
+  .detail-actions{
+    border-top: 1px solid $dark-grey;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    .btn.btn-primary{
+      margin-right: 1rem;
+    }
+  }
+}

@@ -1,6 +1,8 @@
+@import './utils/_colors.scss';
+
 html,
 body {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -9,4 +11,11 @@ body {
 
 main {
   margin-top:56px;
+}
+
+.unauth-layout {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: $light-grey;
 }

@@ -3,6 +3,11 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import UserOverview from '../scenes/users/UserOverview';
 import DatatypeOverview from '../scenes/dataType/DataTypeOverview';
 import { Header, Navbar } from '../components';
+import { strings } from '../utils';
+import DataTypeDetail from '../scenes/dataType/DataTypeDetail';
+import UserDetail from '../scenes/users/UserDetail';
+import LanguageCodesOverview from '../scenes/languageCodes/LanguageCodesOverview';
+import LanguageCodesDetail from '../scenes/languageCodes/LanguageCodesDetail';
 
 const AuthorizedLayout = props => {
   return (
@@ -10,13 +15,24 @@ const AuthorizedLayout = props => {
       <Header toggleNavigation={props.toggleNavigation} />
       <div className="container-fluid">
         <div className="row">
-          <Navbar links={[
-            { name: 'Users', path: '/users' },
-            { name: 'Datatype', path: '/datatype' },
-          ]} isNavigationShown={props.isNavigationShown} toggleNavigation={props.toggleNavigation} />
+          <Navbar
+            links={[
+              { name: strings.USERS, path: '/users' },
+              { name: strings.DATATYPES, path: '/datatype' },
+              { name: strings.LANGUAGE_CODES, path: '/language-codes' },
+            ]}
+            isNavigationShown={props.isNavigationShown}
+            toggleNavigation={props.toggleNavigation}
+            build={props.build}
+            version={props.version}
+          />
           <Switch>
             <Route path='/users' exact component={UserOverview} />
+            <Route path='/users/:id' exact component={UserDetail} />
             <Route path='/datatype' exact component={DatatypeOverview} />
+            <Route path='/datatype/:id' exact component={DataTypeDetail} />
+            <Route path='/language-codes' exact component={LanguageCodesOverview} />
+            <Route path='/language-codes/:id' exact component={LanguageCodesDetail} />
             <Redirect to='/users' />
           </Switch>
         </div>

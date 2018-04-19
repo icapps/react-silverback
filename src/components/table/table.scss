@@ -1,0 +1,93 @@
+@import '../../utils/_colors.scss';
+
+@mixin arrow(){
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+@mixin sortArrows($asc, $desc){
+  &:before{
+    @include arrow();
+    top: 0;
+    border-bottom: 5px solid $asc;
+  }
+  &:after{
+    @include arrow();
+    top: 8px;
+    border-top: 5px solid $desc;
+  }
+}
+
+@mixin sort($startColor){
+  .sort {
+    padding-left: 8px;
+    vertical-align: middle;
+    position: relative;
+
+    @include sortArrows($startColor, $startColor);
+
+    &.asc{
+      @include sortArrows($black, $dark-grey);
+
+    }
+
+    &.desc{
+      @include sortArrows($dark-grey, $black);
+    }
+  }
+}
+
+/* */
+
+.remove-list-item{
+  width: 25px;
+
+  button{
+    img{
+      filter: grayscale(100%);
+      opacity: 0.3;
+    }
+
+    &:hover{
+      img{
+        filter: none;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.table .table-data {
+  cursor: pointer;
+  vertical-align: middle;
+
+}
+
+.key {
+  color: $dark-grey;
+}
+
+.sortable-key {
+  cursor: pointer;
+
+  @include sort(transparent);
+
+  &:hover{
+    color: $black;
+    @include sort($dark-grey);
+  }
+}
+
+.table thead tr th {
+  border-top: none;
+}
+
+.active-key {
+  color: $black;
+}
+
+

@@ -1,10 +1,18 @@
 language: node_js
-cache: yarn
+
+sudo: false
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
 node_js:
-  - "node"
-  - "8"
   - "6"
+  - "8"
+
 before_script:
   - yarn build-css
+
 script:
   - yarn validate

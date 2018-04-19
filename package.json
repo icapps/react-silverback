@@ -4,12 +4,15 @@
   "version": "0.1.0",
   "dependencies": {
     "axios": "~0.18.0",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0",
+    "date-fns": "^1.29.0",
     "node-sass-chokidar": "~0.0.3",
     "npm-run-all": "~4.1.2",
     "prop-types": "~15.6.0",
     "react": "~16.2.0",
     "react-dom": "~16.2.0",
+    "react-localization": "^1.0.4",
     "react-redux": "~5.0.6",
     "react-router-dom": "~4.2.2",
     "react-scripts": "~1.1.1",
@@ -21,15 +24,19 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
+    "start-js": "yarn set-build-nr react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
     "validate": "yarn lint && yarn test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "set-build-nr": "REACT_APP_BUILD_NR=$(printenv HEROKU_RELEASE_VERSION)"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.15",
     "babel-eslint": "^8.2.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.0",
@@ -37,7 +44,15 @@
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-react": "^7.4.0",
-    "react-test-renderer": "^16.2.0"
-  }
+    "react-test-renderer": "^16.2.0",
+    "storybook": "^1.0.0"
+  },
+  "author": "iCapps <info@icapps.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icapps/react-silverback/issues"
+  },
+  "homepage": "https://github.com/icapps/react-silverback#readme"
 }

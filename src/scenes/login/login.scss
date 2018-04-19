@@ -1,0 +1,28 @@
+@import '../../utils/_colors.scss';
+
+.login-container.container{
+  max-width: 600px;
+
+  .login {
+    padding: 2rem;
+    margin: 0;
+    background: $white;
+    border: 1px solid $light-border;
+    border-radius: 5px;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    .branding{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid $light-border;
+
+      @media screen and (max-width: 576px) {
+        border-right: none;
+        border-bottom: 1px solid $light-border;
+      }
+    }
+  }
+}

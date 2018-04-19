@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user actions createUser 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "CREATE_USER",
+  },
+]
+`;
+
+exports[`user actions getUsers 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_USERS",
+  },
+]
+`;
+
+exports[`user actions getUsersById 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_USERS_BY_ID",
+  },
+]
+`;
+
+exports[`user actions removeUser 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "REMOVE_USER",
+  },
+]
+`;
+
+exports[`user actions updateUser 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "UPDATE_USER",
+  },
+]
+`;

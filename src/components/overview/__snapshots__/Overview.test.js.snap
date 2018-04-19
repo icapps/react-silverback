@@ -1,0 +1,2553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overview Component should render an Overview component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
+    dateFormat={null}
+    deleteIdentifier=""
+    errorMessage="test"
+    get={[Function]}
+    history={Object {}}
+    isCreateError={false}
+    isCreatePending={false}
+    isError={false}
+    keys={
+        Array [
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "price",
+              "isSortable": false,
+              "value": "price",
+            },
+          ]
+    }
+    keyword=""
+    listItems={
+        Array [
+            Object {
+              "id": "1",
+              "price": 88.9,
+              "type": "B",
+            },
+            Object {
+              "id": "2",
+              "price": 45.2,
+              "type": "C",
+            },
+            Object {
+              "id": "1",
+              "price": 56.5,
+              "type": "D",
+            },
+          ]
+    }
+    paginationTotalCount={100}
+    removeItem={[Function]}
+    title="DataTypes"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container"
+>
+        <h2>
+                DataTypes
+        </h2>
+        <div
+                className="overview-settings"
+        >
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+                />
+        </div>
+        <Unknown>
+                <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+                />
+                <Table
+                        dateFormat={null}
+                        deleteIdentifier=""
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                Array [
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "price",
+                                          "isSortable": false,
+                                          "value": "price",
+                                        },
+                                      ]
+                        }
+                        listItems={
+                                Array [
+                                        Object {
+                                          "id": "1",
+                                          "price": 88.9,
+                                          "type": "B",
+                                        },
+                                        Object {
+                                          "id": "2",
+                                          "price": 45.2,
+                                          "type": "C",
+                                        },
+                                        Object {
+                                          "id": "1",
+                                          "price": 56.5,
+                                          "type": "D",
+                                        },
+                                      ]
+                        }
+                        maxTextLength={50}
+                />
+        </Unknown>
+</div>,
+      "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <h2>
+            DataTypes
+</h2>,
+          <div
+            className="overview-settings"
+>
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+            />
+</div>,
+          <Unknown>
+            <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+            />
+            <Table
+                        dateFormat={null}
+                        deleteIdentifier=""
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                    Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "price",
+                                                  "isSortable": false,
+                                                  "value": "price",
+                                                },
+                                              ]
+                        }
+                        listItems={
+                                    Array [
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 88.9,
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "id": "2",
+                                                  "price": 45.2,
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 56.5,
+                                                  "type": "D",
+                                                },
+                                              ]
+                        }
+                        maxTextLength={50}
+            />
+</Unknown>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              errorMessage="test"
+              isError={false}
+              isPending={false}
+              primaryButtonText="Create "
+              title="Create "
+/>,
+            "className": "overview-settings",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "errorMessage": "test",
+              "isError": false,
+              "isPending": false,
+              "primaryButtonText": "Create ",
+              "title": "Create ",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+/>,
+              <Table
+                dateFormat={null}
+                deleteIdentifier=""
+                handleRemoveItem={[Function]}
+                handleRowClick={[Function]}
+                handleSort={[Function]}
+                keys={
+                                Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "price",
+                                                  "isSortable": false,
+                                                  "value": "price",
+                                                },
+                                              ]
+                }
+                listItems={
+                                Array [
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 88.9,
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "id": "2",
+                                                  "price": 45.2,
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "id": "1",
+                                                  "price": 56.5,
+                                                  "type": "D",
+                                                },
+                                              ]
+                }
+                maxTextLength={50}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleClick": [Function],
+                "totalCount": 100,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "dateFormat": null,
+                "deleteIdentifier": "",
+                "handleRemoveItem": [Function],
+                "handleRowClick": [Function],
+                "handleSort": [Function],
+                "keys": Array [
+                  Object {
+                    "id": "id",
+                    "isSortable": true,
+                    "value": "id",
+                  },
+                  Object {
+                    "id": "type",
+                    "isSortable": true,
+                    "value": "type",
+                  },
+                  Object {
+                    "id": "price",
+                    "isSortable": false,
+                    "value": "price",
+                  },
+                ],
+                "listItems": Array [
+                  Object {
+                    "id": "1",
+                    "price": 88.9,
+                    "type": "B",
+                  },
+                  Object {
+                    "id": "2",
+                    "price": 45.2,
+                    "type": "C",
+                  },
+                  Object {
+                    "id": "1",
+                    "price": 56.5,
+                    "type": "D",
+                  },
+                ],
+                "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+      ],
+      "type": "div",
+    },
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+>
+          <h2>
+                    DataTypes
+          </h2>
+          <div
+                    className="overview-settings"
+          >
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              errorMessage="test"
+                              isError={false}
+                              isPending={false}
+                              primaryButtonText="Create "
+                              title="Create "
+                    />
+          </div>
+          <Unknown>
+                    <Pagination
+                              handleClick={[Function]}
+                              totalCount={100}
+                    />
+                    <Table
+                              dateFormat={null}
+                              deleteIdentifier=""
+                              handleRemoveItem={[Function]}
+                              handleRowClick={[Function]}
+                              handleSort={[Function]}
+                              keys={
+                                        Array [
+                                                  Object {
+                                                    "id": "id",
+                                                    "isSortable": true,
+                                                    "value": "id",
+                                                  },
+                                                  Object {
+                                                    "id": "type",
+                                                    "isSortable": true,
+                                                    "value": "type",
+                                                  },
+                                                  Object {
+                                                    "id": "price",
+                                                    "isSortable": false,
+                                                    "value": "price",
+                                                  },
+                                                ]
+                              }
+                              listItems={
+                                        Array [
+                                                  Object {
+                                                    "id": "1",
+                                                    "price": 88.9,
+                                                    "type": "B",
+                                                  },
+                                                  Object {
+                                                    "id": "2",
+                                                    "price": 45.2,
+                                                    "type": "C",
+                                                  },
+                                                  Object {
+                                                    "id": "1",
+                                                    "price": 56.5,
+                                                    "type": "D",
+                                                  },
+                                                ]
+                              }
+                              maxTextLength={50}
+                    />
+          </Unknown>
+</div>,
+        "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            false,
+            <h2>
+              DataTypes
+</h2>,
+            <div
+              className="overview-settings"
+>
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            errorMessage="test"
+                            isError={false}
+                            isPending={false}
+                            primaryButtonText="Create "
+                            title="Create "
+              />
+</div>,
+            <Unknown>
+              <Pagination
+                            handleClick={[Function]}
+                            totalCount={100}
+              />
+              <Table
+                            dateFormat={null}
+                            deleteIdentifier=""
+                            handleRemoveItem={[Function]}
+                            handleRowClick={[Function]}
+                            handleSort={[Function]}
+                            keys={
+                                          Array [
+                                                        Object {
+                                                          "id": "id",
+                                                          "isSortable": true,
+                                                          "value": "id",
+                                                        },
+                                                        Object {
+                                                          "id": "type",
+                                                          "isSortable": true,
+                                                          "value": "type",
+                                                        },
+                                                        Object {
+                                                          "id": "price",
+                                                          "isSortable": false,
+                                                          "value": "price",
+                                                        },
+                                                      ]
+                            }
+                            listItems={
+                                          Array [
+                                                        Object {
+                                                          "id": "1",
+                                                          "price": 88.9,
+                                                          "type": "B",
+                                                        },
+                                                        Object {
+                                                          "id": "2",
+                                                          "price": 45.2,
+                                                          "type": "C",
+                                                        },
+                                                        Object {
+                                                          "id": "1",
+                                                          "price": 56.5,
+                                                          "type": "D",
+                                                        },
+                                                      ]
+                            }
+                            maxTextLength={50}
+              />
+</Unknown>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+              "className": "overview-settings",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Pagination
+                  handleClick={[Function]}
+                  totalCount={100}
+/>,
+                <Table
+                  dateFormat={null}
+                  deleteIdentifier=""
+                  handleRemoveItem={[Function]}
+                  handleRowClick={[Function]}
+                  handleSort={[Function]}
+                  keys={
+                                    Array [
+                                                      Object {
+                                                        "id": "id",
+                                                        "isSortable": true,
+                                                        "value": "id",
+                                                      },
+                                                      Object {
+                                                        "id": "type",
+                                                        "isSortable": true,
+                                                        "value": "type",
+                                                      },
+                                                      Object {
+                                                        "id": "price",
+                                                        "isSortable": false,
+                                                        "value": "price",
+                                                      },
+                                                    ]
+                  }
+                  listItems={
+                                    Array [
+                                                      Object {
+                                                        "id": "1",
+                                                        "price": 88.9,
+                                                        "type": "B",
+                                                      },
+                                                      Object {
+                                                        "id": "2",
+                                                        "price": 45.2,
+                                                        "type": "C",
+                                                      },
+                                                      Object {
+                                                        "id": "1",
+                                                        "price": 56.5,
+                                                        "type": "D",
+                                                      },
+                                                    ]
+                  }
+                  maxTextLength={50}
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleClick": [Function],
+                  "totalCount": 100,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "dateFormat": null,
+                  "deleteIdentifier": "",
+                  "handleRemoveItem": [Function],
+                  "handleRowClick": [Function],
+                  "handleSort": [Function],
+                  "keys": Array [
+                    Object {
+                      "id": "id",
+                      "isSortable": true,
+                      "value": "id",
+                    },
+                    Object {
+                      "id": "type",
+                      "isSortable": true,
+                      "value": "type",
+                    },
+                    Object {
+                      "id": "price",
+                      "isSortable": false,
+                      "value": "price",
+                    },
+                  ],
+                  "listItems": Array [
+                    Object {
+                      "id": "1",
+                      "price": 88.9,
+                      "type": "B",
+                    },
+                    Object {
+                      "id": "2",
+                      "price": 45.2,
+                      "type": "C",
+                    },
+                    Object {
+                      "id": "1",
+                      "price": 56.5,
+                      "type": "D",
+                    },
+                  ],
+                  "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+        ],
+        "type": "div",
+      },
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Overview Component should render an Overview component with custom date format 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
+    dateFormat={null}
+    deleteIdentifier=""
+    errorMessage="test"
+    get={[Function]}
+    history={Object {}}
+    isCreateError={false}
+    isCreatePending={false}
+    isError={false}
+    keys={
+        Array [
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "date",
+              "isSortable": false,
+              "value": "date",
+            },
+          ]
+    }
+    keyword=""
+    listItems={
+        Array [
+            Object {
+              "date": 1995-05-23T00:00:00.000Z,
+              "id": "1",
+              "type": "B",
+            },
+            Object {
+              "date": 1995-05-23T00:00:00.000Z,
+              "id": "2",
+              "type": "C",
+            },
+            Object {
+              "date": 1995-05-23T00:00:00.000Z,
+              "id": "1",
+              "type": "D",
+            },
+          ]
+    }
+    paginationTotalCount={100}
+    removeItem={[Function]}
+    title="DataTypes"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container"
+>
+        <h2>
+                DataTypes
+        </h2>
+        <div
+                className="overview-settings"
+        >
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+                />
+        </div>
+        <Unknown>
+                <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+                />
+                <Table
+                        dateFormat={null}
+                        deleteIdentifier=""
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                Array [
+                                        Object {
+                                          "id": "id",
+                                          "isSortable": true,
+                                          "value": "id",
+                                        },
+                                        Object {
+                                          "id": "type",
+                                          "isSortable": true,
+                                          "value": "type",
+                                        },
+                                        Object {
+                                          "id": "date",
+                                          "isSortable": false,
+                                          "value": "date",
+                                        },
+                                      ]
+                        }
+                        listItems={
+                                Array [
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "1",
+                                          "type": "B",
+                                        },
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "2",
+                                          "type": "C",
+                                        },
+                                        Object {
+                                          "date": 1995-05-23T00:00:00.000Z,
+                                          "id": "1",
+                                          "type": "D",
+                                        },
+                                      ]
+                        }
+                        maxTextLength={50}
+                />
+        </Unknown>
+</div>,
+      "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <h2>
+            DataTypes
+</h2>,
+          <div
+            className="overview-settings"
+>
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+            />
+</div>,
+          <Unknown>
+            <Pagination
+                        handleClick={[Function]}
+                        totalCount={100}
+            />
+            <Table
+                        dateFormat={null}
+                        deleteIdentifier=""
+                        handleRemoveItem={[Function]}
+                        handleRowClick={[Function]}
+                        handleSort={[Function]}
+                        keys={
+                                    Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "date",
+                                                  "isSortable": false,
+                                                  "value": "date",
+                                                },
+                                              ]
+                        }
+                        listItems={
+                                    Array [
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "2",
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "D",
+                                                },
+                                              ]
+                        }
+                        maxTextLength={50}
+            />
+</Unknown>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              errorMessage="test"
+              isError={false}
+              isPending={false}
+              primaryButtonText="Create "
+              title="Create "
+/>,
+            "className": "overview-settings",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "errorMessage": "test",
+              "isError": false,
+              "isPending": false,
+              "primaryButtonText": "Create ",
+              "title": "Create ",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Pagination
+                handleClick={[Function]}
+                totalCount={100}
+/>,
+              <Table
+                dateFormat={null}
+                deleteIdentifier=""
+                handleRemoveItem={[Function]}
+                handleRowClick={[Function]}
+                handleSort={[Function]}
+                keys={
+                                Array [
+                                                Object {
+                                                  "id": "id",
+                                                  "isSortable": true,
+                                                  "value": "id",
+                                                },
+                                                Object {
+                                                  "id": "type",
+                                                  "isSortable": true,
+                                                  "value": "type",
+                                                },
+                                                Object {
+                                                  "id": "date",
+                                                  "isSortable": false,
+                                                  "value": "date",
+                                                },
+                                              ]
+                }
+                listItems={
+                                Array [
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "B",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "2",
+                                                  "type": "C",
+                                                },
+                                                Object {
+                                                  "date": 1995-05-23T00:00:00.000Z,
+                                                  "id": "1",
+                                                  "type": "D",
+                                                },
+                                              ]
+                }
+                maxTextLength={50}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleClick": [Function],
+                "totalCount": 100,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "dateFormat": null,
+                "deleteIdentifier": "",
+                "handleRemoveItem": [Function],
+                "handleRowClick": [Function],
+                "handleSort": [Function],
+                "keys": Array [
+                  Object {
+                    "id": "id",
+                    "isSortable": true,
+                    "value": "id",
+                  },
+                  Object {
+                    "id": "type",
+                    "isSortable": true,
+                    "value": "type",
+                  },
+                  Object {
+                    "id": "date",
+                    "isSortable": false,
+                    "value": "date",
+                  },
+                ],
+                "listItems": Array [
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "1",
+                    "type": "B",
+                  },
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "2",
+                    "type": "C",
+                  },
+                  Object {
+                    "date": 1995-05-23T00:00:00.000Z,
+                    "id": "1",
+                    "type": "D",
+                  },
+                ],
+                "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+      ],
+      "type": "div",
+    },
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+>
+          <h2>
+                    DataTypes
+          </h2>
+          <div
+                    className="overview-settings"
+          >
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              errorMessage="test"
+                              isError={false}
+                              isPending={false}
+                              primaryButtonText="Create "
+                              title="Create "
+                    />
+          </div>
+          <Unknown>
+                    <Pagination
+                              handleClick={[Function]}
+                              totalCount={100}
+                    />
+                    <Table
+                              dateFormat={null}
+                              deleteIdentifier=""
+                              handleRemoveItem={[Function]}
+                              handleRowClick={[Function]}
+                              handleSort={[Function]}
+                              keys={
+                                        Array [
+                                                  Object {
+                                                    "id": "id",
+                                                    "isSortable": true,
+                                                    "value": "id",
+                                                  },
+                                                  Object {
+                                                    "id": "type",
+                                                    "isSortable": true,
+                                                    "value": "type",
+                                                  },
+                                                  Object {
+                                                    "id": "date",
+                                                    "isSortable": false,
+                                                    "value": "date",
+                                                  },
+                                                ]
+                              }
+                              listItems={
+                                        Array [
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "1",
+                                                    "type": "B",
+                                                  },
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "2",
+                                                    "type": "C",
+                                                  },
+                                                  Object {
+                                                    "date": 1995-05-23T00:00:00.000Z,
+                                                    "id": "1",
+                                                    "type": "D",
+                                                  },
+                                                ]
+                              }
+                              maxTextLength={50}
+                    />
+          </Unknown>
+</div>,
+        "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            false,
+            <h2>
+              DataTypes
+</h2>,
+            <div
+              className="overview-settings"
+>
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            errorMessage="test"
+                            isError={false}
+                            isPending={false}
+                            primaryButtonText="Create "
+                            title="Create "
+              />
+</div>,
+            <Unknown>
+              <Pagination
+                            handleClick={[Function]}
+                            totalCount={100}
+              />
+              <Table
+                            dateFormat={null}
+                            deleteIdentifier=""
+                            handleRemoveItem={[Function]}
+                            handleRowClick={[Function]}
+                            handleSort={[Function]}
+                            keys={
+                                          Array [
+                                                        Object {
+                                                          "id": "id",
+                                                          "isSortable": true,
+                                                          "value": "id",
+                                                        },
+                                                        Object {
+                                                          "id": "type",
+                                                          "isSortable": true,
+                                                          "value": "type",
+                                                        },
+                                                        Object {
+                                                          "id": "date",
+                                                          "isSortable": false,
+                                                          "value": "date",
+                                                        },
+                                                      ]
+                            }
+                            listItems={
+                                          Array [
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "1",
+                                                          "type": "B",
+                                                        },
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "2",
+                                                          "type": "C",
+                                                        },
+                                                        Object {
+                                                          "date": 1995-05-23T00:00:00.000Z,
+                                                          "id": "1",
+                                                          "type": "D",
+                                                        },
+                                                      ]
+                            }
+                            maxTextLength={50}
+              />
+</Unknown>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+              "className": "overview-settings",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Pagination
+                  handleClick={[Function]}
+                  totalCount={100}
+/>,
+                <Table
+                  dateFormat={null}
+                  deleteIdentifier=""
+                  handleRemoveItem={[Function]}
+                  handleRowClick={[Function]}
+                  handleSort={[Function]}
+                  keys={
+                                    Array [
+                                                      Object {
+                                                        "id": "id",
+                                                        "isSortable": true,
+                                                        "value": "id",
+                                                      },
+                                                      Object {
+                                                        "id": "type",
+                                                        "isSortable": true,
+                                                        "value": "type",
+                                                      },
+                                                      Object {
+                                                        "id": "date",
+                                                        "isSortable": false,
+                                                        "value": "date",
+                                                      },
+                                                    ]
+                  }
+                  listItems={
+                                    Array [
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "1",
+                                                        "type": "B",
+                                                      },
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "2",
+                                                        "type": "C",
+                                                      },
+                                                      Object {
+                                                        "date": 1995-05-23T00:00:00.000Z,
+                                                        "id": "1",
+                                                        "type": "D",
+                                                      },
+                                                    ]
+                  }
+                  maxTextLength={50}
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleClick": [Function],
+                  "totalCount": 100,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "dateFormat": null,
+                  "deleteIdentifier": "",
+                  "handleRemoveItem": [Function],
+                  "handleRowClick": [Function],
+                  "handleSort": [Function],
+                  "keys": Array [
+                    Object {
+                      "id": "id",
+                      "isSortable": true,
+                      "value": "id",
+                    },
+                    Object {
+                      "id": "type",
+                      "isSortable": true,
+                      "value": "type",
+                    },
+                    Object {
+                      "id": "date",
+                      "isSortable": false,
+                      "value": "date",
+                    },
+                  ],
+                  "listItems": Array [
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "1",
+                      "type": "B",
+                    },
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "2",
+                      "type": "C",
+                    },
+                    Object {
+                      "date": 1995-05-23T00:00:00.000Z,
+                      "id": "1",
+                      "type": "D",
+                    },
+                  ],
+                  "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+        ],
+        "type": "div",
+      },
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Overview Component should render an Overview component with no listItems 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Overview
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "key1",
+              "label": "test",
+              "type": "text",
+            },
+            Object {
+              "id": "key2",
+              "label": "test2",
+              "type": "text",
+            },
+            Object {
+              "id": "key3",
+              "label": "test3",
+              "type": "number",
+            },
+            Object {
+              "id": "key4",
+              "label": "test4",
+              "type": "boolean",
+            },
+          ]
+    }
+    dateFormat={null}
+    deleteIdentifier=""
+    errorMessage="test"
+    get={[Function]}
+    history={Object {}}
+    isCreateError={false}
+    isCreatePending={false}
+    isError={false}
+    keys={
+        Array [
+            Object {
+              "id": "id",
+              "isSortable": true,
+              "value": "id",
+            },
+            Object {
+              "id": "type",
+              "isSortable": true,
+              "value": "type",
+            },
+            Object {
+              "id": "price",
+              "isSortable": false,
+              "value": "price",
+            },
+          ]
+    }
+    keyword=""
+    listItems={Array []}
+    paginationTotalCount={100}
+    removeItem={[Function]}
+    title="DataTypes"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container"
+>
+        <h2>
+                DataTypes
+        </h2>
+        <div
+                className="overview-settings"
+        >
+                <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                Array [
+                                        Object {
+                                          "id": "key1",
+                                          "label": "test",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key2",
+                                          "label": "test2",
+                                          "type": "text",
+                                        },
+                                        Object {
+                                          "id": "key3",
+                                          "label": "test3",
+                                          "type": "number",
+                                        },
+                                        Object {
+                                          "id": "key4",
+                                          "label": "test4",
+                                          "type": "boolean",
+                                        },
+                                      ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+                />
+        </div>
+        <div
+                className="jumbotron"
+                role="alert"
+        >
+                <span
+                        className="empty-overview"
+                >
+                        No 
+                        DataTypes
+                         found ...
+                </span>
+        </div>
+</div>,
+      "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <h2>
+            DataTypes
+</h2>,
+          <div
+            className="overview-settings"
+>
+            <CreateModal
+                        create={[Function]}
+                        createParameters={
+                                    Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                        }
+                        errorMessage="test"
+                        isError={false}
+                        isPending={false}
+                        primaryButtonText="Create "
+                        title="Create "
+            />
+</div>,
+          <div
+            className="jumbotron"
+            role="alert"
+>
+            <span
+                        className="empty-overview"
+            >
+                        No 
+                        DataTypes
+                         found ...
+            </span>
+</div>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "DataTypes",
+              null,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "DataTypes",
+            null,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <CreateModal
+              create={[Function]}
+              createParameters={
+                            Array [
+                                          Object {
+                                            "id": "key1",
+                                            "label": "test",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key2",
+                                            "label": "test2",
+                                            "type": "text",
+                                          },
+                                          Object {
+                                            "id": "key3",
+                                            "label": "test3",
+                                            "type": "number",
+                                          },
+                                          Object {
+                                            "id": "key4",
+                                            "label": "test4",
+                                            "type": "boolean",
+                                          },
+                                        ]
+              }
+              errorMessage="test"
+              isError={false}
+              isPending={false}
+              primaryButtonText="Create "
+              title="Create "
+/>,
+            "className": "overview-settings",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "create": [Function],
+              "createParameters": Array [
+                Object {
+                  "id": "key1",
+                  "label": "test",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key2",
+                  "label": "test2",
+                  "type": "text",
+                },
+                Object {
+                  "id": "key3",
+                  "label": "test3",
+                  "type": "number",
+                },
+                Object {
+                  "id": "key4",
+                  "label": "test4",
+                  "type": "boolean",
+                },
+              ],
+              "errorMessage": "test",
+              "isError": false,
+              "isPending": false,
+              "primaryButtonText": "Create ",
+              "title": "Create ",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span
+              className="empty-overview"
+>
+              No 
+              DataTypes
+               found ...
+</span>,
+            "className": "jumbotron",
+            "role": "alert",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "No ",
+                "DataTypes",
+                " found ...",
+              ],
+              "className": "empty-overview",
+            },
+            "ref": null,
+            "rendered": Array [
+              "No ",
+              "DataTypes",
+              " found ...",
+            ],
+            "type": "span",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+>
+          <h2>
+                    DataTypes
+          </h2>
+          <div
+                    className="overview-settings"
+          >
+                    <CreateModal
+                              create={[Function]}
+                              createParameters={
+                                        Array [
+                                                  Object {
+                                                    "id": "key1",
+                                                    "label": "test",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key2",
+                                                    "label": "test2",
+                                                    "type": "text",
+                                                  },
+                                                  Object {
+                                                    "id": "key3",
+                                                    "label": "test3",
+                                                    "type": "number",
+                                                  },
+                                                  Object {
+                                                    "id": "key4",
+                                                    "label": "test4",
+                                                    "type": "boolean",
+                                                  },
+                                                ]
+                              }
+                              errorMessage="test"
+                              isError={false}
+                              isPending={false}
+                              primaryButtonText="Create "
+                              title="Create "
+                    />
+          </div>
+          <div
+                    className="jumbotron"
+                    role="alert"
+          >
+                    <span
+                              className="empty-overview"
+                    >
+                              No 
+                              DataTypes
+                               found ...
+                    </span>
+          </div>
+</div>,
+        "className": "overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            false,
+            <h2>
+              DataTypes
+</h2>,
+            <div
+              className="overview-settings"
+>
+              <CreateModal
+                            create={[Function]}
+                            createParameters={
+                                          Array [
+                                                        Object {
+                                                          "id": "key1",
+                                                          "label": "test",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key2",
+                                                          "label": "test2",
+                                                          "type": "text",
+                                                        },
+                                                        Object {
+                                                          "id": "key3",
+                                                          "label": "test3",
+                                                          "type": "number",
+                                                        },
+                                                        Object {
+                                                          "id": "key4",
+                                                          "label": "test4",
+                                                          "type": "boolean",
+                                                        },
+                                                      ]
+                            }
+                            errorMessage="test"
+                            isError={false}
+                            isPending={false}
+                            primaryButtonText="Create "
+                            title="Create "
+              />
+</div>,
+            <div
+              className="jumbotron"
+              role="alert"
+>
+              <span
+                            className="empty-overview"
+              >
+                            No 
+                            DataTypes
+                             found ...
+              </span>
+</div>,
+          ],
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "DataTypes",
+                null,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "DataTypes",
+              null,
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+              "className": "overview-settings",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="empty-overview"
+>
+                No 
+                DataTypes
+                 found ...
+</span>,
+              "className": "jumbotron",
+              "role": "alert",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "No ",
+                  "DataTypes",
+                  " found ...",
+                ],
+                "className": "empty-overview",
+              },
+              "ref": null,
+              "rendered": Array [
+                "No ",
+                "DataTypes",
+                " found ...",
+              ],
+              "type": "span",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

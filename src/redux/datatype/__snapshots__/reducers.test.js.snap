@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`datatype reducer should GET_DATA_TYPE_FULFILLED 1`] = `
+Object {
+  "dataTypes": Object {},
+  "dataTypesCount": 100,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+}
+`;
+
+exports[`datatype reducer should GET_DATA_TYPE_PENDING 1`] = `
+Object {
+  "dataTypes": Array [],
+  "dataTypesCount": 0,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+}
+`;
+
+exports[`datatype reducer should return the initial state 1`] = `
+Object {
+  "dataTypes": Array [],
+  "dataTypesCount": 0,
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+}
+`;
