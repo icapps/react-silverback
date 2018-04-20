@@ -32,8 +32,10 @@ class LanguageCodeDetail extends Component {
         keyword={strings.LANGUAGE_CODE}
         id={code.id}
         inputItems={[
-          { id: identifiers.CODE, label: strings.CODE, value: code.code },
-          { id: identifiers.NAME, label: strings.NAME, value: code.name },
+          { id: identifiers.CODE, label: strings.CODE, value: code.code, isEditable: false },
+          { id: identifiers.NAME, label: strings.NAME, value: code.name, isEditable: false },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: code.description, isEditable: false  },
+          { id: identifiers.DEPRECATED, label: strings.DEPRECATED, value: code.deprecated, isEditable: false  },
         ]}
         history={this.props.history}
         isError={this.props.isError}
@@ -41,8 +43,8 @@ class LanguageCodeDetail extends Component {
         create={this.createLanguageCode}
         createParameters={[
           { id: identifiers.NAME, label: strings.NAME, type: "text" },
-          { id: identifiers.CODE, label: strings.CODE, type: "text" },
-          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
+          { id: identifiers.CODE, label: strings.CODE, type: "text"  },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text"  },
         ]}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}

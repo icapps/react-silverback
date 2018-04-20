@@ -1,6 +1,7 @@
 export const identifiers = {
   BEST_BEFORE: 'bestBefore',
   CODE: 'code',
+  DEPRECATED: 'deprecated',
   DESCRIPTION: 'description',
   EDIBLE: 'edible',
   EMAIL: 'email',

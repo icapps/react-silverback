@@ -13,6 +13,7 @@
   "DATATYPES": "Datatypes",
   "DELETE": "Delete",
   "DELETE_CONFIRMATION": "Are you sure you want to delete {item}?",
+  "DEPRECATED": "Deprecated",
   "DESC": "desc",
   "DESCENDING": "descending",
   "DESCRIPTION": "Description",
