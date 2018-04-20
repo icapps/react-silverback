@@ -12,6 +12,7 @@ class App extends Component {
         <Switch>
           <UnauthorizedRoute path='/auth' component={UnauthorizedLayout} />
           <UnauthorizedRoute path='/forgot-password' component={UnauthorizedLayout} />
+          <UnauthorizedRoute path='/choose-password' component={UnauthorizedLayout} />
           <AuthorizedRoute path='/' component={AuthorizedLayout} />
         </Switch>
       </BrowserRouter>
