@@ -44,8 +44,15 @@
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
     "eslint-plugin-react": "^7.4.0",
     "react-test-renderer": "^16.2.0",
     "storybook": "^1.0.0"
-  }
+  },
+  "author": "iCapps <info@icapps.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icapps/react-silverback/issues"
+  },
+  "homepage": "https://github.com/icapps/react-silverback#readme"
 }
