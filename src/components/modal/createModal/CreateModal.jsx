@@ -19,7 +19,13 @@ class CreateModal extends React.Component {
 
   setCreateParameters = () => {
     let createParametersState = {};
-    this.props.createParameters.forEach(item => createParametersState[item.id] = item.type === 'boolean' ? false : '');
+    this.props.createParameters.forEach(item => {
+      if (item.defaultValue) {
+        createParametersState[item.id] = item.defaultValue;
+      } else {
+        createParametersState[item.id] = item.type === 'boolean' ? false : '';
+      }
+    });
     this.setState({ createParametersState, showError: false });
   }
 
