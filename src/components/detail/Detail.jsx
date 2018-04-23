@@ -17,6 +17,11 @@ class Detail extends React.Component {
 
   componentDidMount() {
     this.setInputItems();
+    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
+  }
+
+  componentDidUpdate() {
+    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
   }
   setInputItems = () => {
     let inputItemState = {};
@@ -107,7 +112,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!isDeprecated && props.deprecate && <Modal
+              {!state.isDeprecated && props.deprecate && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
