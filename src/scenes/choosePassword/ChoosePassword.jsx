@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { verifyForgotPassword, confirmForgotPassword } from '../../redux/auth/actions';
 import { Spinner, BasicInput, Button } from '../../components';
-import './forgotPassword.css';
+import './choosePassword.css';
 import { identifiers } from '../../constants/index';
 import { strings } from '../../utils/index';
 
-class ForgotPassword extends React.Component {
+class ChoosePassword extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -46,35 +46,36 @@ class ForgotPassword extends React.Component {
 
   render() {
     const { props, state } = this;
+    const isGettingStartedScreen = window.location.pathname === '/choose-password';
 
     if (props.isPending) { return <Spinner hasContainer={false} />; };
     if (props.isPasswordConfirmed) {
       return (
-        <div className="forgot-password-container container">
-          <main className="forgot-password forgot-password-succes">
-            <h3>{strings.FORGOT_PASSWORD_SUCCES}</h3>
-            <p>{strings.FORGOT_PASSWORD_SUCCES_TEXT}</p>
+        <div className="choose-password-container container">
+          <main className="choose-password choose-password-succes">
+            <h3>{isGettingStartedScreen ? strings.GETTING_STARTED_SUCCES : strings.FORGOT_PASSWORD_SUCCES}</h3>
+            <p>{isGettingStartedScreen ? strings.GETTING_STARTED_SUCCES_TEXT : strings.FORGOT_PASSWORD_SUCCES_TEXT}</p>
           </main>
         </div>
       );
     };
     if (props.isError) {
       return (
-        <div className="forgot-password-container container">
-          <main className="forgot-password forgot-password-failed">
-            <h3 className="text-danger">{strings.FORGOT_PASSWORD}</h3>
-            <p>{strings.FORGOT_PASSWORD_ERROR}</p>
+        <div className="choose-password-container container">
+          <main className="choose-password choose-password-failed">
+            <h3 className="text-danger">{isGettingStartedScreen ? strings.GETTING_STARTED : strings.FORGOT_PASSWORD}</h3>
+            <p>{isGettingStartedScreen ? strings.GETTING_STARTED_ERROR : strings.FORGOT_PASSWORD_ERROR}</p>
           </main>
         </div>
       );
     };
     return (
-      <div className="forgot-password-container container">
-        <main className="forgot-password">
-          <h3>{strings.FORGOT_PASSWORD}</h3>
+      <div className="choose-password-container container">
+        <main className="choose-password">
+          <h3>{isGettingStartedScreen ? strings.GETTING_STARTED : strings.FORGOT_PASSWORD}</h3>
           <div className="password-input">
-            <BasicInput id={identifiers.PASSWORD} label={strings.NEW_PASSWORD} value={state.password.value} handleChange={this.handleChange} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
-            <BasicInput id={identifiers.REPEAT_PASSWORD} label={strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} />
+            <BasicInput id={identifiers.PASSWORD} label={isGettingStartedScreen ? strings.PASSWORD : strings.NEW_PASSWORD} value={state.password.value} handleChange={this.handleChange} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
+            <BasicInput id={identifiers.REPEAT_PASSWORD} label={isGettingStartedScreen ? strings.REPEAT_PASSWORD : strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} />
           </div>
           <Button className="btn-primary" text={strings.FORGOT_PASSWORD_BUTTON} handleClick={this.handleClick} />
         </main>
@@ -83,7 +84,7 @@ class ForgotPassword extends React.Component {
   }
 }
 
-ForgotPassword.propTypes = {
+ChoosePassword.propTypes = {
   isPending: PropTypes.bool.isRequired,
   verifyForgotPassword: PropTypes.func.isRequired,
   confirmForgotPassword: PropTypes.func.isRequired,
@@ -102,4 +103,4 @@ const mapDispatchToProps = {
   confirmForgotPassword,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ForgotPassword);
+export default connect(mapStateToProps, mapDispatchToProps)(ChoosePassword);

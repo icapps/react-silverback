@@ -16,6 +16,7 @@ class Detail extends React.Component {
     let inputItemState = {};
     this.props.inputItems.forEach(item => inputItemState[item.id] = item.value);
     this.setState({ inputItemState });
+    return true;
   }
 
   handleChange = event => {
@@ -24,7 +25,7 @@ class Detail extends React.Component {
 
   save = async () => {
     const result = await this.props.update(this.props.id, this.state.inputItemState);
-    if (result.action.type.includes('FULFILLED')) {
+    if (result.action && result.action.type.includes('FULFILLED')) {
       this.setState({ isSaved: true });
     }
   }
