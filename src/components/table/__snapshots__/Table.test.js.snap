@@ -140,7 +140,9 @@ ShallowWrapper {
                 </tr>
         </thead>
         <tbody>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -197,7 +199,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -254,7 +258,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -311,7 +317,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -364,7 +372,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -484,7 +494,9 @@ ShallowWrapper {
             </tr>
 </thead>,
           <tbody>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -541,7 +553,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -598,7 +612,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -655,7 +671,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -708,7 +726,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -882,6 +902,7 @@ ShallowWrapper {
 </th>,
                 ],
                 <th />,
+                undefined,
               ],
             },
             "ref": null,
@@ -1065,6 +1086,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "th",
               },
+              undefined,
             ],
             "type": "tr",
           },
@@ -1076,7 +1098,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -1133,7 +1157,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -1190,7 +1216,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -1247,7 +1275,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -1300,7 +1330,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -1396,6 +1428,7 @@ ShallowWrapper {
                       23/05/1995
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -1425,12 +1458,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-0-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 1",
@@ -1443,7 +1477,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 1,
@@ -1456,7 +1490,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -1483,7 +1517,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "23/05/1995",
@@ -1494,6 +1528,7 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1630,6 +1665,7 @@ ShallowWrapper {
                       23/05/1995
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -1659,12 +1695,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-1-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 2",
@@ -1677,7 +1714,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 2,
@@ -1690,7 +1727,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -1717,7 +1754,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "23/05/1995",
@@ -1728,6 +1765,7 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1864,6 +1902,7 @@ ShallowWrapper {
                       23/05/1995
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -1893,12 +1932,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-2-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 3",
@@ -1911,7 +1951,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 3,
@@ -1924,7 +1964,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -1951,7 +1991,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "23/05/1995",
@@ -1962,6 +2002,7 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -2094,6 +2135,7 @@ ShallowWrapper {
                       onClick={[Function]}
 />,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -2123,12 +2165,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-3-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 4",
@@ -2141,7 +2184,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
@@ -2154,7 +2197,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -2181,7 +2224,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
@@ -2192,6 +2235,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -2328,6 +2372,7 @@ ShallowWrapper {
                       23/05/1995
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -2357,12 +2402,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-4-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 5",
@@ -2375,7 +2421,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 4,
@@ -2388,7 +2434,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -2415,7 +2461,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "23/05/1995",
@@ -2426,6 +2472,7 @@ ShallowWrapper {
                   "rendered": "23/05/1995",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -2596,7 +2643,9 @@ ShallowWrapper {
                     </tr>
           </thead>
           <tbody>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -2653,7 +2702,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -2710,7 +2761,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -2767,7 +2820,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -2820,7 +2875,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -2940,7 +2997,9 @@ ShallowWrapper {
               </tr>
 </thead>,
             <tbody>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -2997,7 +3056,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -3054,7 +3115,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -3111,7 +3174,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -3164,7 +3229,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -3338,6 +3405,7 @@ ShallowWrapper {
 </th>,
                   ],
                   <th />,
+                  undefined,
                 ],
               },
               "ref": null,
@@ -3521,6 +3589,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "th",
                 },
+                undefined,
               ],
               "type": "tr",
             },
@@ -3532,7 +3601,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -3589,7 +3660,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -3646,7 +3719,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -3703,7 +3778,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -3756,7 +3833,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -3852,6 +3931,7 @@ ShallowWrapper {
                         23/05/1995
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -3881,12 +3961,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-0-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 1",
@@ -3899,7 +3980,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 1,
@@ -3912,7 +3993,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -3939,7 +4020,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "23/05/1995",
@@ -3950,6 +4031,7 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -4086,6 +4168,7 @@ ShallowWrapper {
                         23/05/1995
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -4115,12 +4198,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-1-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 2",
@@ -4133,7 +4217,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 2,
@@ -4146,7 +4230,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -4173,7 +4257,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "23/05/1995",
@@ -4184,6 +4268,7 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -4320,6 +4405,7 @@ ShallowWrapper {
                         23/05/1995
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -4349,12 +4435,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-2-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 3",
@@ -4367,7 +4454,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 3,
@@ -4380,7 +4467,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -4407,7 +4494,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "23/05/1995",
@@ -4418,6 +4505,7 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -4550,6 +4638,7 @@ ShallowWrapper {
                         onClick={[Function]}
 />,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -4579,12 +4668,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-3-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 4",
@@ -4597,7 +4687,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": undefined,
@@ -4610,7 +4700,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -4637,7 +4727,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": undefined,
@@ -4648,6 +4738,7 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -4784,6 +4875,7 @@ ShallowWrapper {
                         23/05/1995
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -4813,12 +4905,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-4-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 5",
@@ -4831,7 +4924,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 4,
@@ -4844,7 +4937,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -4871,7 +4964,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "23/05/1995",
@@ -4882,6 +4975,7 @@ ShallowWrapper {
                     "rendered": "23/05/1995",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -5142,7 +5236,9 @@ ShallowWrapper {
                 </tr>
         </thead>
         <tbody>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -5199,7 +5295,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -5256,7 +5354,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -5313,7 +5413,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -5366,7 +5468,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -5486,7 +5590,9 @@ ShallowWrapper {
             </tr>
 </thead>,
           <tbody>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -5543,7 +5649,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -5600,7 +5708,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -5657,7 +5767,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -5710,7 +5822,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -5884,6 +5998,7 @@ ShallowWrapper {
 </th>,
                 ],
                 <th />,
+                undefined,
               ],
             },
             "ref": null,
@@ -6067,6 +6182,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "th",
               },
+              undefined,
             ],
             "type": "tr",
           },
@@ -6078,7 +6194,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -6135,7 +6253,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -6192,7 +6312,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -6249,7 +6371,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -6302,7 +6426,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -6398,6 +6524,7 @@ ShallowWrapper {
                       Tuesday 23 May
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -6427,12 +6554,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-0-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 1",
@@ -6445,7 +6573,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 1,
@@ -6458,7 +6586,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -6485,7 +6613,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Tuesday 23 May",
@@ -6496,6 +6624,7 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -6632,6 +6761,7 @@ ShallowWrapper {
                       Tuesday 23 May
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -6661,12 +6791,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-1-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 2",
@@ -6679,7 +6810,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 2,
@@ -6692,7 +6823,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -6719,7 +6850,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Tuesday 23 May",
@@ -6730,6 +6861,7 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -6866,6 +6998,7 @@ ShallowWrapper {
                       Tuesday 23 May
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -6895,12 +7028,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-2-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 3",
@@ -6913,7 +7047,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 3,
@@ -6926,7 +7060,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -6953,7 +7087,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-2-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Tuesday 23 May",
@@ -6964,6 +7098,7 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -7096,6 +7231,7 @@ ShallowWrapper {
                       onClick={[Function]}
 />,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -7125,12 +7261,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-3-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 4",
@@ -7143,7 +7280,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
@@ -7156,7 +7293,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -7183,7 +7320,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-3-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
@@ -7194,6 +7331,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -7330,6 +7468,7 @@ ShallowWrapper {
                       Tuesday 23 May
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -7359,12 +7498,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-4-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 5",
@@ -7377,7 +7517,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 4,
@@ -7390,7 +7530,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -7417,7 +7557,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-4-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Tuesday 23 May",
@@ -7428,6 +7568,7 @@ ShallowWrapper {
                   "rendered": "Tuesday 23 May",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -7598,7 +7739,9 @@ ShallowWrapper {
                     </tr>
           </thead>
           <tbody>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -7655,7 +7798,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -7712,7 +7857,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -7769,7 +7916,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -7822,7 +7971,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -7942,7 +8093,9 @@ ShallowWrapper {
               </tr>
 </thead>,
             <tbody>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -7999,7 +8152,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -8056,7 +8211,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -8113,7 +8270,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -8166,7 +8325,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -8340,6 +8501,7 @@ ShallowWrapper {
 </th>,
                   ],
                   <th />,
+                  undefined,
                 ],
               },
               "ref": null,
@@ -8523,6 +8685,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "th",
                 },
+                undefined,
               ],
               "type": "tr",
             },
@@ -8534,7 +8697,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -8591,7 +8756,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -8648,7 +8815,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -8705,7 +8874,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -8758,7 +8929,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -8854,6 +9027,7 @@ ShallowWrapper {
                         Tuesday 23 May
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -8883,12 +9057,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-0-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 1",
@@ -8901,7 +9076,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 1,
@@ -8914,7 +9089,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -8941,7 +9116,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Tuesday 23 May",
@@ -8952,6 +9127,7 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -9088,6 +9264,7 @@ ShallowWrapper {
                         Tuesday 23 May
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -9117,12 +9294,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-1-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 2",
@@ -9135,7 +9313,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 2,
@@ -9148,7 +9326,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -9175,7 +9353,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Tuesday 23 May",
@@ -9186,6 +9364,7 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -9322,6 +9501,7 @@ ShallowWrapper {
                         Tuesday 23 May
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -9351,12 +9531,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-2-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 3",
@@ -9369,7 +9550,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 3,
@@ -9382,7 +9563,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -9409,7 +9590,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-2-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Tuesday 23 May",
@@ -9420,6 +9601,7 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -9552,6 +9734,7 @@ ShallowWrapper {
                         onClick={[Function]}
 />,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -9581,12 +9764,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-3-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 4",
@@ -9599,7 +9783,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": undefined,
@@ -9612,7 +9796,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -9639,7 +9823,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-3-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": undefined,
@@ -9650,6 +9834,7 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -9786,6 +9971,7 @@ ShallowWrapper {
                         Tuesday 23 May
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -9815,12 +10001,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-4-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 5",
@@ -9833,7 +10020,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 4,
@@ -9846,7 +10033,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -9873,7 +10060,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-4-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Tuesday 23 May",
@@ -9884,6 +10071,7 @@ ShallowWrapper {
                     "rendered": "Tuesday 23 May",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -10124,7 +10312,9 @@ ShallowWrapper {
                 </tr>
         </thead>
         <tbody>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -10181,7 +10371,9 @@ ShallowWrapper {
                                 </Modal>
                         </td>
                 </tr>
-                <tr>
+                <tr
+                        className=""
+                >
                         <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -10299,7 +10491,9 @@ ShallowWrapper {
             </tr>
 </thead>,
           <tbody>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -10356,7 +10550,9 @@ ShallowWrapper {
                                     </Modal>
                         </td>
             </tr>
-            <tr>
+            <tr
+                        className=""
+            >
                         <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -10528,6 +10724,7 @@ ShallowWrapper {
 </th>,
                 ],
                 <th />,
+                undefined,
               ],
             },
             "ref": null,
@@ -10711,6 +10908,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "th",
               },
+              undefined,
             ],
             "type": "tr",
           },
@@ -10722,7 +10920,9 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -10779,7 +10979,9 @@ ShallowWrapper {
                                 </Modal>
                 </td>
 </tr>,
-              <tr>
+              <tr
+                className=""
+>
                 <td
                                 className="table-data"
                                 onClick={[Function]}
@@ -10873,6 +11075,7 @@ ShallowWrapper {
                       Lorem ipsum dolor sit amet, co...
 </td>,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -10902,12 +11105,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-0-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 1",
@@ -10920,7 +11124,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 1,
@@ -10933,7 +11137,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -10960,7 +11164,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-0-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": "Lorem ipsum dolor sit amet, co...",
@@ -10971,6 +11175,7 @@ ShallowWrapper {
                   "rendered": "Lorem ipsum dolor sit amet, co...",
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -11105,6 +11310,7 @@ ShallowWrapper {
                       onClick={[Function]}
 />,
                   ],
+                  undefined,
                   <td
                     className="remove-list-item table-data"
 >
@@ -11134,12 +11340,13 @@ ShallowWrapper {
                     </Modal>
 </td>,
                 ],
+                "className": "",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "td-1-0",
+                  "key": "td-key",
                   "nodeType": "host",
                   "props": Object {
                     "children": "test 2",
@@ -11152,7 +11359,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-1",
+                  "key": "td-key1",
                   "nodeType": "host",
                   "props": Object {
                     "children": 2,
@@ -11165,7 +11372,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-2",
+                  "key": "td-key2",
                   "nodeType": "host",
                   "props": Object {
                     "children": <img
@@ -11192,7 +11399,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "td-1-3",
+                  "key": "td-key3",
                   "nodeType": "host",
                   "props": Object {
                     "children": undefined,
@@ -11203,6 +11410,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "td",
                 },
+                undefined,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -11373,7 +11581,9 @@ ShallowWrapper {
                     </tr>
           </thead>
           <tbody>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -11430,7 +11640,9 @@ ShallowWrapper {
                                         </Modal>
                               </td>
                     </tr>
-                    <tr>
+                    <tr
+                              className=""
+                    >
                               <td
                                         className="table-data"
                                         onClick={[Function]}
@@ -11548,7 +11760,9 @@ ShallowWrapper {
               </tr>
 </thead>,
             <tbody>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -11605,7 +11819,9 @@ ShallowWrapper {
                                           </Modal>
                             </td>
               </tr>
-              <tr>
+              <tr
+                            className=""
+              >
                             <td
                                           className="table-data"
                                           onClick={[Function]}
@@ -11777,6 +11993,7 @@ ShallowWrapper {
 </th>,
                   ],
                   <th />,
+                  undefined,
                 ],
               },
               "ref": null,
@@ -11960,6 +12177,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "th",
                 },
+                undefined,
               ],
               "type": "tr",
             },
@@ -11971,7 +12189,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -12028,7 +12248,9 @@ ShallowWrapper {
                                     </Modal>
                   </td>
 </tr>,
-                <tr>
+                <tr
+                  className=""
+>
                   <td
                                     className="table-data"
                                     onClick={[Function]}
@@ -12122,6 +12344,7 @@ ShallowWrapper {
                         Lorem ipsum dolor sit amet, co...
 </td>,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -12151,12 +12374,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-0-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 1",
@@ -12169,7 +12393,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 1,
@@ -12182,7 +12406,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -12209,7 +12433,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-0-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": "Lorem ipsum dolor sit amet, co...",
@@ -12220,6 +12444,7 @@ ShallowWrapper {
                     "rendered": "Lorem ipsum dolor sit amet, co...",
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -12354,6 +12579,7 @@ ShallowWrapper {
                         onClick={[Function]}
 />,
                     ],
+                    undefined,
                     <td
                       className="remove-list-item table-data"
 >
@@ -12383,12 +12609,13 @@ ShallowWrapper {
                       </Modal>
 </td>,
                   ],
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": "td-1-0",
+                    "key": "td-key",
                     "nodeType": "host",
                     "props": Object {
                       "children": "test 2",
@@ -12401,7 +12628,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-1",
+                    "key": "td-key1",
                     "nodeType": "host",
                     "props": Object {
                       "children": 2,
@@ -12414,7 +12641,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-2",
+                    "key": "td-key2",
                     "nodeType": "host",
                     "props": Object {
                       "children": <img
@@ -12441,7 +12668,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": "td-1-3",
+                    "key": "td-key3",
                     "nodeType": "host",
                     "props": Object {
                       "children": undefined,
@@ -12452,6 +12679,7 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "td",
                   },
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,

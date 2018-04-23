@@ -1,6 +1,7 @@
 export const identifiers = {
   BEST_BEFORE: 'bestBefore',
   CODE: 'code',
+  DEPRECATED: 'deprecated',
   DESCRIPTION: 'description',
   EDIBLE: 'edible',
   EMAIL: 'email',
@@ -8,6 +9,7 @@ export const identifiers = {
   HAS_ACCESS: 'hasAccess',
   ID: 'id',
   LAST_NAME: 'lastName',
+  NAME: 'name',
   PASSWORD: 'password',
   PRICE: 'price',
   REPEAT_PASSWORD: 'repeatPassword',

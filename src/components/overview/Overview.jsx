@@ -21,11 +21,24 @@ class Overview extends React.Component {
     this.props.get(this.state.page, this.state.limit);
   }
 
-  remove = async user => {
-    const result = await this.props.removeItem(user);
-    if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-      this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+  remove = async item => {
+    if (this.props.removeItem) {
+      const result = await this.props.removeItem(item);
+      if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+        this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+      }
     }
+  }
+
+  setActions = actions => {
+    return actions.map(action => {
+      return {
+        ...action, handleAction: async id => {
+          await action.handleAction(id);
+          await this.props.get(this.state.page, this.state.limit);
+        },
+      };
+    });
   }
 
   showDetailScreen = id => {
@@ -71,9 +84,10 @@ class Overview extends React.Component {
                 listItems={props.listItems}
                 dateFormat={props.dateFormat}
                 handleRowClick={this.showDetailScreen}
-                handleRemoveItem={this.remove}
+                handleRemoveItem={this.props.removeItem && this.remove}
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
+                actions={this.setActions(this.props.actions)}
               />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
@@ -105,6 +119,12 @@ Overview.propTypes = {
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   errorMessage: PropTypes.string.isRequired,
+  actions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    handleAction: PropTypes.func,
+    primaryButtonText: PropTypes.string,
+  })),
 };
 
 Overview.defaultProps = {
@@ -116,6 +136,7 @@ Overview.defaultProps = {
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
+  actions: [],
 };
 
 export default Overview;

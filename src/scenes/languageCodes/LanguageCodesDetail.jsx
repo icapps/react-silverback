@@ -3,12 +3,31 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
-import { getLanguageCodes } from '../../redux/codes/actions';
-import {identifiers} from '../../constants';
+import { identifiers } from '../../constants';
+import constants from '../../redux/codes/constants';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
 
 class LanguageCodeDetail extends Component {
   componentDidMount() {
     this.props.getLanguageCodes(0, 100);
+  }
+
+  createLanguageCode = async languageCode => {
+    return new Promise(async resolve => {
+      const result = await this.props.createLanguageCode(languageCode);
+      if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
+        this.props.history.replace(`${window.location.pathname}/${this.props.languageCode}`, this.props.languageCode);
+        resolve(true);
+      }
+      resolve(false);
+    });
+  }
+
+  deprecateLanguageCode = async id => {
+    const result = await this.props.deprecateLanguageCode(id);
+    if (result.action && result.action.type === constants.DEPRECATE_LANGUAGE_CODE_FULFILLED) {
+      this.props.getLanguageCodes(0, 100);
+    }
   }
 
   render() {
@@ -20,11 +39,23 @@ class LanguageCodeDetail extends Component {
         keyword={strings.LANGUAGE_CODE}
         id={code.id}
         inputItems={[
-          { id: identifiers.CODE, label: strings.CODE, value: code.code },
-          { id: identifiers.NAME, label: strings.NAME, value: code.name },
-        ]} history={this.props.history}
+          { id: identifiers.CODE, label: strings.CODE, value: code.code, isEditable: false },
+          { id: identifiers.NAME, label: strings.NAME, value: code.name, isEditable: false },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: code.description, isEditable: false },
+          { id: identifiers.DEPRECATED, label: strings.DEPRECATED, value: code.deprecated, type: "boolean", isEditable: false },
+        ]}
+        history={this.props.history}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
+        create={this.createLanguageCode}
+        createParameters={[
+          { id: identifiers.NAME, label: strings.NAME, type: "text" },
+          { id: identifiers.CODE, label: strings.CODE, type: "text" },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
+        ]}
+        isCreatePending={this.props.isCreatePending}
+        isCreateError={this.props.isCreateError}
+        deprecate={this.deprecateLanguageCode}
       />);
     return <EmptyDetail history={this.props.history} />;
   }
@@ -36,6 +67,10 @@ LanguageCodeDetail.propTypes = {
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
   getLanguageCodes: PropTypes.func.isRequired,
+  isCreatePending: PropTypes.bool.isRequired,
+  isCreateError: PropTypes.bool.isRequired,
+  createLanguageCode: PropTypes.func.isRequired,
+  deprecateLanguageCode: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -43,10 +78,14 @@ const mapStateToProps = state => ({
   isError: state.codes.isError,
   errorMessage: state.users.errorMessage,
   isPending: state.codes.isPending,
+  isCreatePending: state.codes.isCreatePending,
+  isCreateError: state.codes.isCreateError,
 });
 
 const mapDispatchToProps = {
   getLanguageCodes,
+  createLanguageCode,
+  deprecateLanguageCode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodeDetail);

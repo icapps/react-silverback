@@ -61,6 +61,15 @@
   }
 }
 
+.deprecated {
+  font-style: italic;
+  color: $dark-grey;
+
+  & td img {
+    opacity: 0.3;
+  }
+}
+
 .table .table-data {
   cursor: pointer;
   vertical-align: middle;
