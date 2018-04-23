@@ -17,12 +17,8 @@ class Detail extends React.Component {
 
   componentDidMount() {
     this.setInputItems();
-    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
   }
 
-  componentDidUpdate() {
-    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
-  }
   setInputItems = () => {
     let inputItemState = {};
     this.props.inputItems.forEach(item => inputItemState[item.id] = item.value);
