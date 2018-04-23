@@ -2,16 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal } from '../index';
 import { strings } from '../../utils';
-import './detail.css';
 import { identifiers } from '../../constants/index';
+import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
 class Detail extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      inputItemState: null,
+    };
+  }
+
   componentDidMount() {
     this.setInputItems();
   }
-
   setInputItems = () => {
     let inputItemState = {};
     this.props.inputItems.forEach(item => inputItemState[item.id] = item.value);
@@ -46,7 +52,9 @@ class Detail extends React.Component {
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
-    const isDeprecated = props.inputItems.find(item => item.id === identifiers.DEPRECATED) && props.inputItems.find(item => item.id === identifiers.DEPRECATED).value;
+    const canDeprecate = this.props.inputItems.find(item => item.id === identifiers.DEPRECATED);
+    const isDeprecated = canDeprecate && canDeprecate.value;
+
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
@@ -66,10 +74,10 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            <h3>{props.title}{isDeprecated ? <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span> : ''}</h3>
+            <h3>{props.title}{isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
-              {state && props.inputItems.map(item => this.renderInput(item))}
+              {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
             </div>
             <div className="detail-actions">
               {props.update && <div className="update-actions">
