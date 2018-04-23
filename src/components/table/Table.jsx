@@ -56,14 +56,32 @@ class Table extends React.Component {
                   </span>
                 </th>))}
               {props.handleRemoveItem && <th></th>}
+              {props.actions && props.actions.length > 0 && <th></th>}
             </tr>
           </thead>
           <tbody>
-            {props.listItems.map((listItem, index) => (
-              <tr key={listItem.id}>
-                {props.keys.map((key, i) => <td className="table-data" key={`td-${index}-${i}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
-                <td className="remove-list-item table-data">
-                  {props.handleRemoveItem && <Modal
+            {props.listItems.map(listItem => (
+              <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
+                {props.keys.map(key => <td className={"table-data"} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
+                {props.actions && props.actions.length > 0 && (listItem.deprecated ? <td /> :
+                  <td className="remove-list-item table-data">
+                    {props.actions.map(action => <Modal
+                      key={action.id}
+                      id={action.id}
+                      modalButtonClassName={action.buttonClass}
+                      modalButtonText={action.label}
+                      handlePrimaryButton={() => action.handleAction(listItem.id)}
+                      primaryButtonText={action.primaryButtonText}
+                      secondaryButtonText={strings.CANCEL}
+                      secondaryButtonClassName="btn-light"
+                      primaryButtonClassName={action.buttonClass}
+                    >
+                      <p>{strings.formatString(action.text, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
+                    </Modal>)}
+                  </td>
+                )}
+                {props.handleRemoveItem && <td className="remove-list-item table-data">
+                  <Modal
                     id="delete"
                     icon={deleteIcon}
                     modalButtonText=""
@@ -74,8 +92,8 @@ class Table extends React.Component {
                     primaryButtonClassName="btn-danger"
                   >
                     <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
-                  </Modal>}
-                </td>
+                  </Modal>
+                </td>}
               </tr>
             ))}
           </tbody>

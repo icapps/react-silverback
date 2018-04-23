@@ -76,6 +76,7 @@ class Overview extends React.Component {
                 handleRemoveItem={this.props.removeItem && this.remove}
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
+                actions={props.actions}
               />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
@@ -107,6 +108,12 @@ Overview.propTypes = {
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   errorMessage: PropTypes.string.isRequired,
+  actions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    handleAction: PropTypes.func,
+    primaryButtonText: PropTypes.string,
+  })),
 };
 
 Overview.defaultProps = {
@@ -118,6 +125,7 @@ Overview.defaultProps = {
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
+  actions: [],
 };
 
 export default Overview;

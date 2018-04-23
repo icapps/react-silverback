@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    actions={Array []}
     create={[Function]}
     createParameters={
         Array [
@@ -141,6 +142,7 @@ ShallowWrapper {
                         totalCount={100}
                 />
                 <Table
+                        actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
                         handleRemoveItem={[Function]}
@@ -243,6 +245,7 @@ ShallowWrapper {
                         totalCount={100}
             />
             <Table
+                        actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
                         handleRemoveItem={[Function]}
@@ -403,6 +406,7 @@ ShallowWrapper {
                 totalCount={100}
 />,
               <Table
+                actions={Array []}
                 dateFormat={null}
                 deleteIdentifier=""
                 handleRemoveItem={[Function]}
@@ -469,6 +473,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "actions": Array [],
                 "dateFormat": null,
                 "deleteIdentifier": "",
                 "handleRemoveItem": [Function],
@@ -576,6 +581,7 @@ ShallowWrapper {
                               totalCount={100}
                     />
                     <Table
+                              actions={Array []}
                               dateFormat={null}
                               deleteIdentifier=""
                               handleRemoveItem={[Function]}
@@ -678,6 +684,7 @@ ShallowWrapper {
                             totalCount={100}
               />
               <Table
+                            actions={Array []}
                             dateFormat={null}
                             deleteIdentifier=""
                             handleRemoveItem={[Function]}
@@ -838,6 +845,7 @@ ShallowWrapper {
                   totalCount={100}
 />,
                 <Table
+                  actions={Array []}
                   dateFormat={null}
                   deleteIdentifier=""
                   handleRemoveItem={[Function]}
@@ -904,6 +912,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "actions": Array [],
                   "dateFormat": null,
                   "deleteIdentifier": "",
                   "handleRemoveItem": [Function],
@@ -973,6 +982,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    actions={Array []}
     create={[Function]}
     createParameters={
         Array [
@@ -1109,6 +1119,7 @@ ShallowWrapper {
                         totalCount={100}
                 />
                 <Table
+                        actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
                         handleRemoveItem={[Function]}
@@ -1211,6 +1222,7 @@ ShallowWrapper {
                         totalCount={100}
             />
             <Table
+                        actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
                         handleRemoveItem={[Function]}
@@ -1371,6 +1383,7 @@ ShallowWrapper {
                 totalCount={100}
 />,
               <Table
+                actions={Array []}
                 dateFormat={null}
                 deleteIdentifier=""
                 handleRemoveItem={[Function]}
@@ -1437,6 +1450,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "actions": Array [],
                 "dateFormat": null,
                 "deleteIdentifier": "",
                 "handleRemoveItem": [Function],
@@ -1544,6 +1558,7 @@ ShallowWrapper {
                               totalCount={100}
                     />
                     <Table
+                              actions={Array []}
                               dateFormat={null}
                               deleteIdentifier=""
                               handleRemoveItem={[Function]}
@@ -1646,6 +1661,7 @@ ShallowWrapper {
                             totalCount={100}
               />
               <Table
+                            actions={Array []}
                             dateFormat={null}
                             deleteIdentifier=""
                             handleRemoveItem={[Function]}
@@ -1806,6 +1822,7 @@ ShallowWrapper {
                   totalCount={100}
 />,
                 <Table
+                  actions={Array []}
                   dateFormat={null}
                   deleteIdentifier=""
                   handleRemoveItem={[Function]}
@@ -1872,6 +1889,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "actions": Array [],
                   "dateFormat": null,
                   "deleteIdentifier": "",
                   "handleRemoveItem": [Function],
@@ -1941,6 +1959,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Overview
+    actions={Array []}
     create={[Function]}
     createParameters={
         Array [

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import { getLanguageCodes, createLanguageCode } from '../../redux/codes/actions';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
 import constants from '../../redux/codes/constants';
 
 class LanguageCodesOverview extends Component {
@@ -27,8 +27,9 @@ class LanguageCodesOverview extends Component {
         keys={[
           { id: identifiers.CODE, value: strings.CODE, isSortable: true },
           { id: identifiers.NAME, value: strings.NAME, isSortable: true },
+          { id: identifiers.DEPRECATED, value: strings.DEPRECATED },
         ]}
-        listItems={this.props.languageCodes}
+        listItems={this.props.languageCodes.map(languageCode => { return { ...languageCode, deprecated: !!languageCode.deprecated }; })}
         history={this.props.history}
         paginationTotalCount={this.props.languageCodeCount}
         get={this.props.getLanguageCodes}
@@ -42,6 +43,15 @@ class LanguageCodesOverview extends Component {
         errorMessage={this.props.errorMessage}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
+        actions={[{
+          id: identifiers.DEPRECATED,
+          label: strings.DEPRECATE,
+          handleAction: this.props.deprecateLanguageCode,
+          primaryButtonText: strings.DEPRECATE,
+          buttonClass: 'btn-danger',
+          text: strings.DEPRECATE_TEXT,
+        }]}
+        deleteIdentifier={identifiers.NAME}
       />
     );
   }
@@ -57,6 +67,7 @@ LanguageCodesOverview.propTypes = {
   isCreatePending: PropTypes.bool.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   createLanguageCode: PropTypes.func.isRequired,
+  deprecateLanguageCode: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -72,6 +83,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   getLanguageCodes,
   createLanguageCode,
+  deprecateLanguageCode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodesOverview);
