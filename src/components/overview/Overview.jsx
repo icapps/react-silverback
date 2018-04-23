@@ -30,6 +30,17 @@ class Overview extends React.Component {
     }
   }
 
+  setActions = actions => {
+    return actions.map(action => {
+      return {
+        ...action, handleAction: async id => {
+          await action.handleAction(id);
+          await this.props.get(this.state.page, this.state.limit);
+        },
+      };
+    });
+  }
+
   showDetailScreen = id => {
     this.props.history.push(`${window.location.pathname}/${id}`, id);
   };
@@ -76,7 +87,7 @@ class Overview extends React.Component {
                 handleRemoveItem={this.props.removeItem && this.remove}
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
-                actions={props.actions}
+                actions={this.setActions(this.props.actions)}
               />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
