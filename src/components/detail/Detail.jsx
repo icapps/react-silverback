@@ -2,14 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal } from '../index';
 import { strings } from '../../utils';
-import './detail.css';
 import { identifiers } from '../../constants/index';
+import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
 class Detail extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      inputItemState: null,
+      isDeprecated: false,
+    };
+  }
+
   componentDidMount() {
     this.setInputItems();
+    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
+  }
+
+  componentDidUpdate() {
+    this.setState({ isDeprecated: this.props.inputItems.find(item => item.id === identifiers.DEPRECATED) && this.props.inputItems.find(item => item.id === identifiers.DEPRECATED).value });
   }
 
   setInputItems = () => {
@@ -46,7 +59,6 @@ class Detail extends React.Component {
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
-    const isDeprecated = props.inputItems.find(item => item.id === identifiers.DEPRECATED) && props.inputItems.find(item => item.id === identifiers.DEPRECATED).value;
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
@@ -66,10 +78,10 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            <h3>{props.title}{isDeprecated ? <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span> : ''}</h3>
+            <h3>{props.title}{state.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
-              {state && props.inputItems.map(item => this.renderInput(item))}
+              {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
             </div>
             <div className="detail-actions">
               {props.update && <div className="update-actions">
@@ -99,7 +111,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!isDeprecated && props.deprecate && <Modal
+              {!state.isDeprecated && props.deprecate && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
