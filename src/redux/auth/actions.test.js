@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { loginUser, logoutUser, verifyForgotPassword, confirmForgotPassword } from './actions';
+import { loginUser, logoutUser, verifyForgotPassword, confirmForgotPassword , forgotPassword} from './actions';
 import { Network } from '../../utils/index';
 
 const middlewares = [thunk];
@@ -22,6 +22,12 @@ describe('auth actions', () => {
   it('logoutUser', () => {
     const store = mockStore({});
     store.dispatch(logoutUser());
+    const expectedActions = store.getActions();
+    expect(expectedActions).toMatchSnapshot();
+  });
+  it('forgotPassword', () => {
+    const store = mockStore({});
+    store.dispatch(forgotPassword('test@test.test'));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });
