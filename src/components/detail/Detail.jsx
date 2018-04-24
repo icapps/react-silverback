@@ -55,8 +55,6 @@ class Detail extends React.Component {
     const overview = window.location.pathname.split('/')[1];
     const canDeprecate = this.props.inputItems.find(item => item.id === identifiers.DEPRECATED);
     const isDeprecated = canDeprecate && canDeprecate.value;
-    console.log(canDeprecate, isDeprecated);
-
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
