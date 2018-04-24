@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Pagination, Table, CreateModal } from '../index';
+import { Pagination, Table, CreateModal, Filter } from '../index';
 import { strings } from '../../utils';
 import constants from '../../redux/users/constants';
 import './overview.css';
@@ -16,6 +16,7 @@ class Overview extends React.Component {
       sortField: null,
       sortOrder: null,
     };
+    this.timer = null;
   }
   componentDidMount() {
     this.props.get(this.state.page, this.state.limit);
@@ -55,6 +56,11 @@ class Overview extends React.Component {
     this.setState({ page, limit });
   };
 
+  handleFilter = filterValue => {
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder, filterValue), 700);
+  }
+
   render() {
     const { props, state } = this;
     return (
@@ -66,6 +72,7 @@ class Overview extends React.Component {
             {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
+            <Filter handleFilter={this.handleFilter} />
             {props.create && <CreateModal
               primaryButtonText={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
