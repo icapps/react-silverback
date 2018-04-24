@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('Header Component', () => {
   it('should render a Header component', () => {
-    const wrapper = shallow(<Header toggleNavigation={() => { }} />);
+    const wrapper = shallow(<Header toggleNavigation={() => { }} logout={() => { }} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

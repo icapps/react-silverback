@@ -52,8 +52,6 @@ Object {
   "errorMessage": "",
   "isError": false,
   "isLoggedIn": false,
-  "isPasswordConfirmed": false,
-  "isPasswordVerified": false,
   "isPending": false,
 }
 `;
