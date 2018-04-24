@@ -57,7 +57,7 @@ class ForgotPassword extends React.Component {
         <main className='forgot-password'>
           <h2>{strings.FORGOT_PASSWORD_QUESTION}</h2>
           <p>{strings.FORGOT_PASSWORD_TEXT}</p>
-          <BasicInput id="email" label={strings.EMAIL} value={state.email.value} handleChange={this.handleChange} isValid={state.email.isValid} errorMessage={state.email.errorMessage} />
+          <BasicInput id="email" label={strings.EMAIL} value={state.email.value} handleChange={this.handleChange} isValid={state.email.isValid} errorMessage={state.email.errorMessage} handleEnter={this.handleForgotPassword}  />
           <Button className="btn-primary" text={strings.RETRIEVE_PASSWORD} handleClick={this.handleForgotPassword} />
         </main>
       </div>
