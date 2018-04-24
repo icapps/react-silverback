@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { toggleNavigation } from '../redux/navigation/actions';
 import { Spinner } from '../components';
 import { getVersion } from '../redux/versionControl/actions';
+import { logoutUser } from '../redux/auth/actions';
 
 class AuthorizedRoute extends Component {
   componentDidMount() {
@@ -34,6 +35,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggleNavigation: () => dispatch(toggleNavigation()),
   getVersion: () => dispatch(getVersion()),
+  logout: () => dispatch(logoutUser()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthorizedRoute);

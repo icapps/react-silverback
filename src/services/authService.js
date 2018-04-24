@@ -22,3 +22,8 @@ export const confirmForgotPassword = async (token, password) => {
   const result = await Network.put(`/forgot-password/confirm?token=${token}`, { password });
   return result;
 };
+
+export const logout = async () => {
+  const result = await Network.post('/auth/logout');
+  return result;
+};
