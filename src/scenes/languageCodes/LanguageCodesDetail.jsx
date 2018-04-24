@@ -49,8 +49,8 @@ class LanguageCodeDetail extends Component {
         errorMessage={this.props.errorMessage}
         create={this.createLanguageCode}
         createParameters={[
-          { id: identifiers.NAME, label: strings.NAME, type: "text" },
           { id: identifiers.CODE, label: strings.CODE, type: "text" },
+          { id: identifiers.NAME, label: strings.NAME, type: "text" },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
         ]}
         isCreatePending={this.props.isCreatePending}
