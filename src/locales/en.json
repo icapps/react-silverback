@@ -65,6 +65,7 @@
   "RESET_CONFIRMATION": "Are you sure you want to reset your changes?",
   "ROLE": "Role",
   "SAVE": "Save",
+  "SEARCH": "Search",
   "SHOWING_X_OF_X": "Showing {startOfRange} to {endOfRange} of {totalCount}",
   "SORTED_BY": "sorted by",
   "SUBMIT": "Submit",
