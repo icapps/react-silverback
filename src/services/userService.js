@@ -1,9 +1,10 @@
 import { Network } from '../utils';
 
-export const get = async (page, limit, sortField, sortOrder) => {
+export const get = async (page, limit, sortField, sortOrder, search = '') => {
   const pagination = `?offset=${page}&limit=${limit}`;
   const sort = (sortField && sortField !== '') ? `&sortField=${sortField}&sortOrder=${sortOrder}` : '';
-  const result = await Network.get(`/users${pagination}${sort}`);
+  const filter = (search !== '') ? `&search=${search}` : '';
+  const result = await Network.get(`/users${pagination}${sort}${filter}`);
   return result;
 };
 

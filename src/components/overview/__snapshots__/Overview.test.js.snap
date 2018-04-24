@@ -103,6 +103,9 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
+                <Filter
+                        handleFilter={[Function]}
+                />
                 <CreateModal
                         create={[Function]}
                         createParameters={
@@ -206,6 +209,9 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
+            <Filter
+                        handleFilter={[Function]}
+            />
             <CreateModal
                         create={[Function]}
                         createParameters={
@@ -320,79 +326,97 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <CreateModal
-              create={[Function]}
-              createParameters={
-                            Array [
-                                          Object {
-                                            "id": "key1",
-                                            "label": "test",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key2",
-                                            "label": "test2",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key3",
-                                            "label": "test3",
-                                            "type": "number",
-                                          },
-                                          Object {
-                                            "id": "key4",
-                                            "label": "test4",
-                                            "type": "boolean",
-                                          },
-                                        ]
-              }
-              errorMessage="test"
-              isError={false}
-              isPending={false}
-              primaryButtonText="Create "
-              title="Create "
+            "children": Array [
+              <Filter
+                handleFilter={[Function]}
 />,
+              <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+            ],
             "className": "overview-settings",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "create": [Function],
-              "createParameters": Array [
-                Object {
-                  "id": "key1",
-                  "label": "test",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key2",
-                  "label": "test2",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key3",
-                  "label": "test3",
-                  "type": "number",
-                },
-                Object {
-                  "id": "key4",
-                  "label": "test4",
-                  "type": "boolean",
-                },
-              ],
-              "errorMessage": "test",
-              "isError": false,
-              "isPending": false,
-              "primaryButtonText": "Create ",
-              "title": "Create ",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleFilter": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -542,6 +566,9 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
+                    <Filter
+                              handleFilter={[Function]}
+                    />
                     <CreateModal
                               create={[Function]}
                               createParameters={
@@ -645,6 +672,9 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
+              <Filter
+                            handleFilter={[Function]}
+              />
               <CreateModal
                             create={[Function]}
                             createParameters={
@@ -759,79 +789,97 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <CreateModal
-                create={[Function]}
-                createParameters={
-                                Array [
-                                                Object {
-                                                  "id": "key1",
-                                                  "label": "test",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key2",
-                                                  "label": "test2",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key3",
-                                                  "label": "test3",
-                                                  "type": "number",
-                                                },
-                                                Object {
-                                                  "id": "key4",
-                                                  "label": "test4",
-                                                  "type": "boolean",
-                                                },
-                                              ]
-                }
-                errorMessage="test"
-                isError={false}
-                isPending={false}
-                primaryButtonText="Create "
-                title="Create "
+              "children": Array [
+                <Filter
+                  handleFilter={[Function]}
 />,
+                <CreateModal
+                  create={[Function]}
+                  createParameters={
+                                    Array [
+                                                      Object {
+                                                        "id": "key1",
+                                                        "label": "test",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key2",
+                                                        "label": "test2",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key3",
+                                                        "label": "test3",
+                                                        "type": "number",
+                                                      },
+                                                      Object {
+                                                        "id": "key4",
+                                                        "label": "test4",
+                                                        "type": "boolean",
+                                                      },
+                                                    ]
+                  }
+                  errorMessage="test"
+                  isError={false}
+                  isPending={false}
+                  primaryButtonText="Create "
+                  title="Create "
+/>,
+              ],
               "className": "overview-settings",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "create": [Function],
-                "createParameters": Array [
-                  Object {
-                    "id": "key1",
-                    "label": "test",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key2",
-                    "label": "test2",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key3",
-                    "label": "test3",
-                    "type": "number",
-                  },
-                  Object {
-                    "id": "key4",
-                    "label": "test4",
-                    "type": "boolean",
-                  },
-                ],
-                "errorMessage": "test",
-                "isError": false,
-                "isPending": false,
-                "primaryButtonText": "Create ",
-                "title": "Create ",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleFilter": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "create": [Function],
+                  "createParameters": Array [
+                    Object {
+                      "id": "key1",
+                      "label": "test",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key2",
+                      "label": "test2",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key3",
+                      "label": "test3",
+                      "type": "number",
+                    },
+                    Object {
+                      "id": "key4",
+                      "label": "test4",
+                      "type": "boolean",
+                    },
+                  ],
+                  "errorMessage": "test",
+                  "isError": false,
+                  "isPending": false,
+                  "primaryButtonText": "Create ",
+                  "title": "Create ",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
           Object {
@@ -1080,6 +1128,9 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
+                <Filter
+                        handleFilter={[Function]}
+                />
                 <CreateModal
                         create={[Function]}
                         createParameters={
@@ -1183,6 +1234,9 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
+            <Filter
+                        handleFilter={[Function]}
+            />
             <CreateModal
                         create={[Function]}
                         createParameters={
@@ -1297,79 +1351,97 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <CreateModal
-              create={[Function]}
-              createParameters={
-                            Array [
-                                          Object {
-                                            "id": "key1",
-                                            "label": "test",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key2",
-                                            "label": "test2",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key3",
-                                            "label": "test3",
-                                            "type": "number",
-                                          },
-                                          Object {
-                                            "id": "key4",
-                                            "label": "test4",
-                                            "type": "boolean",
-                                          },
-                                        ]
-              }
-              errorMessage="test"
-              isError={false}
-              isPending={false}
-              primaryButtonText="Create "
-              title="Create "
+            "children": Array [
+              <Filter
+                handleFilter={[Function]}
 />,
+              <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+            ],
             "className": "overview-settings",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "create": [Function],
-              "createParameters": Array [
-                Object {
-                  "id": "key1",
-                  "label": "test",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key2",
-                  "label": "test2",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key3",
-                  "label": "test3",
-                  "type": "number",
-                },
-                Object {
-                  "id": "key4",
-                  "label": "test4",
-                  "type": "boolean",
-                },
-              ],
-              "errorMessage": "test",
-              "isError": false,
-              "isPending": false,
-              "primaryButtonText": "Create ",
-              "title": "Create ",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleFilter": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -1519,6 +1591,9 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
+                    <Filter
+                              handleFilter={[Function]}
+                    />
                     <CreateModal
                               create={[Function]}
                               createParameters={
@@ -1622,6 +1697,9 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
+              <Filter
+                            handleFilter={[Function]}
+              />
               <CreateModal
                             create={[Function]}
                             createParameters={
@@ -1736,79 +1814,97 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <CreateModal
-                create={[Function]}
-                createParameters={
-                                Array [
-                                                Object {
-                                                  "id": "key1",
-                                                  "label": "test",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key2",
-                                                  "label": "test2",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key3",
-                                                  "label": "test3",
-                                                  "type": "number",
-                                                },
-                                                Object {
-                                                  "id": "key4",
-                                                  "label": "test4",
-                                                  "type": "boolean",
-                                                },
-                                              ]
-                }
-                errorMessage="test"
-                isError={false}
-                isPending={false}
-                primaryButtonText="Create "
-                title="Create "
+              "children": Array [
+                <Filter
+                  handleFilter={[Function]}
 />,
+                <CreateModal
+                  create={[Function]}
+                  createParameters={
+                                    Array [
+                                                      Object {
+                                                        "id": "key1",
+                                                        "label": "test",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key2",
+                                                        "label": "test2",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key3",
+                                                        "label": "test3",
+                                                        "type": "number",
+                                                      },
+                                                      Object {
+                                                        "id": "key4",
+                                                        "label": "test4",
+                                                        "type": "boolean",
+                                                      },
+                                                    ]
+                  }
+                  errorMessage="test"
+                  isError={false}
+                  isPending={false}
+                  primaryButtonText="Create "
+                  title="Create "
+/>,
+              ],
               "className": "overview-settings",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "create": [Function],
-                "createParameters": Array [
-                  Object {
-                    "id": "key1",
-                    "label": "test",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key2",
-                    "label": "test2",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key3",
-                    "label": "test3",
-                    "type": "number",
-                  },
-                  Object {
-                    "id": "key4",
-                    "label": "test4",
-                    "type": "boolean",
-                  },
-                ],
-                "errorMessage": "test",
-                "isError": false,
-                "isPending": false,
-                "primaryButtonText": "Create ",
-                "title": "Create ",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleFilter": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "create": [Function],
+                  "createParameters": Array [
+                    Object {
+                      "id": "key1",
+                      "label": "test",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key2",
+                      "label": "test2",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key3",
+                      "label": "test3",
+                      "type": "number",
+                    },
+                    Object {
+                      "id": "key4",
+                      "label": "test4",
+                      "type": "boolean",
+                    },
+                  ],
+                  "errorMessage": "test",
+                  "isError": false,
+                  "isPending": false,
+                  "primaryButtonText": "Create ",
+                  "title": "Create ",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
           Object {
@@ -2039,6 +2135,9 @@ ShallowWrapper {
         <div
                 className="overview-settings"
         >
+                <Filter
+                        handleFilter={[Function]}
+                />
                 <CreateModal
                         create={[Function]}
                         createParameters={
@@ -2101,6 +2200,9 @@ ShallowWrapper {
           <div
             className="overview-settings"
 >
+            <Filter
+                        handleFilter={[Function]}
+            />
             <CreateModal
                         create={[Function]}
                         createParameters={
@@ -2174,79 +2276,97 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <CreateModal
-              create={[Function]}
-              createParameters={
-                            Array [
-                                          Object {
-                                            "id": "key1",
-                                            "label": "test",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key2",
-                                            "label": "test2",
-                                            "type": "text",
-                                          },
-                                          Object {
-                                            "id": "key3",
-                                            "label": "test3",
-                                            "type": "number",
-                                          },
-                                          Object {
-                                            "id": "key4",
-                                            "label": "test4",
-                                            "type": "boolean",
-                                          },
-                                        ]
-              }
-              errorMessage="test"
-              isError={false}
-              isPending={false}
-              primaryButtonText="Create "
-              title="Create "
+            "children": Array [
+              <Filter
+                handleFilter={[Function]}
 />,
+              <CreateModal
+                create={[Function]}
+                createParameters={
+                                Array [
+                                                Object {
+                                                  "id": "key1",
+                                                  "label": "test",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key2",
+                                                  "label": "test2",
+                                                  "type": "text",
+                                                },
+                                                Object {
+                                                  "id": "key3",
+                                                  "label": "test3",
+                                                  "type": "number",
+                                                },
+                                                Object {
+                                                  "id": "key4",
+                                                  "label": "test4",
+                                                  "type": "boolean",
+                                                },
+                                              ]
+                }
+                errorMessage="test"
+                isError={false}
+                isPending={false}
+                primaryButtonText="Create "
+                title="Create "
+/>,
+            ],
             "className": "overview-settings",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "create": [Function],
-              "createParameters": Array [
-                Object {
-                  "id": "key1",
-                  "label": "test",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key2",
-                  "label": "test2",
-                  "type": "text",
-                },
-                Object {
-                  "id": "key3",
-                  "label": "test3",
-                  "type": "number",
-                },
-                Object {
-                  "id": "key4",
-                  "label": "test4",
-                  "type": "boolean",
-                },
-              ],
-              "errorMessage": "test",
-              "isError": false,
-              "isPending": false,
-              "primaryButtonText": "Create ",
-              "title": "Create ",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "handleFilter": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "create": [Function],
+                "createParameters": Array [
+                  Object {
+                    "id": "key1",
+                    "label": "test",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key2",
+                    "label": "test2",
+                    "type": "text",
+                  },
+                  Object {
+                    "id": "key3",
+                    "label": "test3",
+                    "type": "number",
+                  },
+                  Object {
+                    "id": "key4",
+                    "label": "test4",
+                    "type": "boolean",
+                  },
+                ],
+                "errorMessage": "test",
+                "isError": false,
+                "isPending": false,
+                "primaryButtonText": "Create ",
+                "title": "Create ",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -2307,6 +2427,9 @@ ShallowWrapper {
           <div
                     className="overview-settings"
           >
+                    <Filter
+                              handleFilter={[Function]}
+                    />
                     <CreateModal
                               create={[Function]}
                               createParameters={
@@ -2369,6 +2492,9 @@ ShallowWrapper {
             <div
               className="overview-settings"
 >
+              <Filter
+                            handleFilter={[Function]}
+              />
               <CreateModal
                             create={[Function]}
                             createParameters={
@@ -2442,79 +2568,97 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <CreateModal
-                create={[Function]}
-                createParameters={
-                                Array [
-                                                Object {
-                                                  "id": "key1",
-                                                  "label": "test",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key2",
-                                                  "label": "test2",
-                                                  "type": "text",
-                                                },
-                                                Object {
-                                                  "id": "key3",
-                                                  "label": "test3",
-                                                  "type": "number",
-                                                },
-                                                Object {
-                                                  "id": "key4",
-                                                  "label": "test4",
-                                                  "type": "boolean",
-                                                },
-                                              ]
-                }
-                errorMessage="test"
-                isError={false}
-                isPending={false}
-                primaryButtonText="Create "
-                title="Create "
+              "children": Array [
+                <Filter
+                  handleFilter={[Function]}
 />,
+                <CreateModal
+                  create={[Function]}
+                  createParameters={
+                                    Array [
+                                                      Object {
+                                                        "id": "key1",
+                                                        "label": "test",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key2",
+                                                        "label": "test2",
+                                                        "type": "text",
+                                                      },
+                                                      Object {
+                                                        "id": "key3",
+                                                        "label": "test3",
+                                                        "type": "number",
+                                                      },
+                                                      Object {
+                                                        "id": "key4",
+                                                        "label": "test4",
+                                                        "type": "boolean",
+                                                      },
+                                                    ]
+                  }
+                  errorMessage="test"
+                  isError={false}
+                  isPending={false}
+                  primaryButtonText="Create "
+                  title="Create "
+/>,
+              ],
               "className": "overview-settings",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "create": [Function],
-                "createParameters": Array [
-                  Object {
-                    "id": "key1",
-                    "label": "test",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key2",
-                    "label": "test2",
-                    "type": "text",
-                  },
-                  Object {
-                    "id": "key3",
-                    "label": "test3",
-                    "type": "number",
-                  },
-                  Object {
-                    "id": "key4",
-                    "label": "test4",
-                    "type": "boolean",
-                  },
-                ],
-                "errorMessage": "test",
-                "isError": false,
-                "isPending": false,
-                "primaryButtonText": "Create ",
-                "title": "Create ",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "handleFilter": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "create": [Function],
+                  "createParameters": Array [
+                    Object {
+                      "id": "key1",
+                      "label": "test",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key2",
+                      "label": "test2",
+                      "type": "text",
+                    },
+                    Object {
+                      "id": "key3",
+                      "label": "test3",
+                      "type": "number",
+                    },
+                    Object {
+                      "id": "key4",
+                      "label": "test4",
+                      "type": "boolean",
+                    },
+                  ],
+                  "errorMessage": "test",
+                  "isError": false,
+                  "isPending": false,
+                  "primaryButtonText": "Create ",
+                  "title": "Create ",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
           Object {
