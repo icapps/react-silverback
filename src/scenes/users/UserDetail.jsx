@@ -35,11 +35,11 @@ class UserDetail extends Component {
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
-          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text" },
-          { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text" },
-          { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "text" },
-          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean" },
+          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
+          { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
+          { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
+          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "text", isEditable: true },
+          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean", isEditable: true },
         ]}
         history={this.props.history}
         createParameters={[
