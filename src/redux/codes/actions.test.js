@@ -1,40 +1,38 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode , getLanguageCodeById} from './actions';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, getLanguageCodeById } from './actions';
 import { Network } from '../../utils/index';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
+let store;
 
 describe('user actions', () => {
   beforeEach(() => {
     Network.get = jest.fn(() => { });
     Network.post = jest.fn(() => { });
+    store = mockStore({});
   });
 
   it('getCodes', () => {
-    const store = mockStore({});
     store.dispatch(getLanguageCodes(0, 10));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });
 
   it('createLanguageCode', () => {
-    const store = mockStore({});
     store.dispatch(createLanguageCode({ name: 'test', code: 'T', description: 'test description' }));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });
 
   it('createLanguageCode', () => {
-    const store = mockStore({});
     store.dispatch(deprecateLanguageCode('id'));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });
 
   it('getLanguageCodyId', () => {
-    const store = mockStore({});
     store.dispatch(getLanguageCodeById('id'));
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
