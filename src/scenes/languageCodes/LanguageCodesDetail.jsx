@@ -5,11 +5,11 @@ import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/codes/constants';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
+import { getLanguageCodeById, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
 
 class LanguageCodeDetail extends Component {
   componentDidMount() {
-    this.props.getLanguageCodes(0, 100);
+    this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
   }
 
   createLanguageCode = async languageCode => {
@@ -26,23 +26,22 @@ class LanguageCodeDetail extends Component {
   deprecateLanguageCode = async id => {
     const result = await this.props.deprecateLanguageCode(id);
     if (result.action && result.action.type === constants.DEPRECATE_LANGUAGE_CODE_FULFILLED) {
-      this.props.getLanguageCodes(0, 100);
+      this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
     }
   }
 
   render() {
-    const code = this.props.languageCode.find(code => code.id === window.location.pathname.split('/')[2]);
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
-    if (code) return (
+    if (this.props.code) return (
       <Detail
-        title={code.name}
+        title={this.props.code.name}
         keyword={strings.LANGUAGE_CODE}
-        id={code.id}
+        id={this.props.code.id}
         inputItems={[
-          { id: identifiers.CODE, label: strings.CODE, value: code.code, isEditable: false },
-          { id: identifiers.NAME, label: strings.NAME, value: code.name, isEditable: false },
-          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: code.description, isEditable: false },
-          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !code.deprecated, type: "boolean", isEditable: false },
+          { id: identifiers.CODE, label: strings.CODE, value: this.props.code.code, isEditable: false },
+          { id: identifiers.NAME, label: strings.NAME, value: this.props.code.name, isEditable: false },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: this.props.code.description, isEditable: false },
+          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !this.props.code.deprecated, type: "boolean", isEditable: false },
         ]}
         history={this.props.history}
         isError={this.props.isError}
@@ -74,7 +73,7 @@ LanguageCodeDetail.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  languageCode: state.codes.languageCodeList,
+  code: state.codes.languageCode,
   isError: state.codes.isError,
   errorMessage: state.users.errorMessage,
   isPending: state.codes.isPending,
@@ -83,7 +82,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  getLanguageCodes,
+  getLanguageCodeById,
   createLanguageCode,
   deprecateLanguageCode,
 };

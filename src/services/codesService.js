@@ -4,7 +4,12 @@ export const getLanguageCodes = async (page, limit, sortField, sortOrder, search
   const pagination = `?offset=${page}&limit=${limit}`;
   const sort = (sortField && sortField !== '') ? `&sortField=${sortField}&sortOrder=${sortOrder}` : '';
   const filter = (search !== '') ? `&search=${search}` : '';
-  const result = await Network.get(`/meta/codes/languages${pagination}${sort}${filter}`);
+  const result = await Network.get(`/meta/codesByType/languages/all${pagination}${sort}${filter}`);
+  return result;
+};
+
+export const getLanguageCodeById = async id => {
+  const result = await Network.get(`/meta/codes/${id}`);
   return result;
 };
 
