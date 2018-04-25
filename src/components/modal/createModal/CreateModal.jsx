@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Checkbox, BasicInput } from '../../index';
 import { strings } from '../../../utils';
+import './createModal.css';
 
-const plus = require('../../../assets/images/plus.svg');
+const plus = require('../../../assets/images/plus-xl.svg');
 
 class CreateModal extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       createParametersState: null,
@@ -54,7 +55,7 @@ class CreateModal extends React.Component {
         handlePrimaryButton={this.create}
         primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
-        modalButtonClassName="btn-success"
+        modalButtonClassName="btn-success btn-create"
         icon={plus}
         title={this.props.title}
         hasHeader
