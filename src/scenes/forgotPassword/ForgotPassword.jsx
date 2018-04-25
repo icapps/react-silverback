@@ -23,7 +23,7 @@ class ForgotPassword extends React.Component {
     await this.setState({
       email: {
         ...this.state.email,
-        isValid: this.state.email.value !== '' && regexes.email.test(this.state.email.value),
+        isValid: this.state.email.value !== '' && regexes.EMAIL.test(this.state.email.value),
         errorMessage: this.state.email.value !== '' ? strings.LOGIN_EMAIL_VALIDATION : strings.LOGIN_EMAIL_REQUIRED,
       },
     });
@@ -46,7 +46,7 @@ class ForgotPassword extends React.Component {
         {props.isError && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
         <main className='forgot-password'>
           <h2>{strings.RESET_PASSWORD}</h2>
-          <p className="forgot-password-succes-text">{strings.formatString(strings.RESET_PASSWORD_TEXT, { email: state.email.value !== '' ? <span>state.email.value</span> : 'you' })}</p>
+          <p className="forgot-password-succes-text">{strings.formatString(strings.RESET_PASSWORD_TEXT, { email: state.email.value !== '' ? <span>state.email.value</span> : strings.YOU })}</p>
           <Button className="btn-primary" text={strings.GO_BACK_TO_LOGIN} handleClick={this.goBackToLogin} />
         </main>
       </div>

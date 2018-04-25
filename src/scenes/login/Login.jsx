@@ -27,7 +27,7 @@ class Login extends Component {
     await this.setState({
       email: {
         ...this.state.email,
-        isValid: this.state.email.value !== '' && regexes.email.test(this.state.email.value),
+        isValid: this.state.email.value !== '' && regexes.EMAIL.test(this.state.email.value),
         errorMessage: this.state.email.value !== '' ? strings.LOGIN_EMAIL_VALIDATION : strings.LOGIN_EMAIL_REQUIRED,
       },
       password: {
