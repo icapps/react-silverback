@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal, Checkbox, BasicInput } from '../../index';
+import { Modal, Checkbox, BasicInput, Dropdown } from '../../index';
 import { strings } from '../../../utils';
 
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       createParametersState: null,
@@ -41,6 +41,9 @@ class CreateModal extends React.Component {
   renderInput = item => {
     if (item.type === 'boolean') {
       return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} isDisabled={this.props.isPending} />;
+    }
+    if (item.type === 'select') {
+      return <Dropdown key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} options={item.options} />;
     }
     return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending} />;
   }

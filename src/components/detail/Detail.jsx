@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal, CreateModal } from '../index';
+import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants/index';
 import './detail.css';
@@ -45,6 +45,9 @@ class Detail extends React.Component {
   renderInput = item => {
     if (item.type === 'boolean') {
       return <Checkbox key={item.id} id={item.id} text={item.label} value={this.state.inputItemState[item.id] || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+    }
+    if (item.type === 'select') {
+      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     }
     return <BasicInput key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id] || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
