@@ -31,32 +31,33 @@ class LanguageCodeDetail extends Component {
   }
 
   render() {
+    const { props } = this;
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
-    if (this.props.code) return (
+    if (props.code) return (
       <Detail
-        title={this.props.code.name}
+        title={props.code.name}
         keyword={strings.LANGUAGE_CODE}
-        id={this.props.code.id}
+        id={props.code.id}
         inputItems={[
-          { id: identifiers.CODE, label: strings.CODE, value: this.props.code.code, isEditable: false },
-          { id: identifiers.NAME, label: strings.NAME, value: this.props.code.name, isEditable: false },
-          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: this.props.code.description, isEditable: false },
-          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !this.props.code.deprecated, type: "boolean", isEditable: false },
+          { id: identifiers.CODE, label: strings.CODE, value: props.code.code, isEditable: false },
+          { id: identifiers.NAME, label: strings.NAME, value: props.code.name, isEditable: false },
+          { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: props.code.description, isEditable: false },
+          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !props.code.deprecated, type: "boolean", isEditable: false },
         ]}
-        history={this.props.history}
-        isError={this.props.isError}
-        errorMessage={this.props.errorMessage}
+        history={props.history}
+        isError={props.isError}
+        errorMessage={props.errorMessage}
         create={this.createLanguageCode}
         createParameters={[
           { id: identifiers.CODE, label: strings.CODE, type: "text" },
           { id: identifiers.NAME, label: strings.NAME, type: "text" },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
         ]}
-        isCreatePending={this.props.isCreatePending}
-        isCreateError={this.props.isCreateError}
+        isCreatePending={props.isCreatePending}
+        isCreateError={props.isCreateError}
         deprecate={this.deprecateLanguageCode}
       />);
-    return <EmptyDetail history={this.props.history} />;
+    return <EmptyDetail history={props.history} />;
   }
 }
 
