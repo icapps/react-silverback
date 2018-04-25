@@ -9,7 +9,11 @@ export const getLanguageCodes = async (page, limit, sortField, sortOrder, search
 };
 
 export const createLanguageCode = async (languageCode) => {
-  const result = await Network.post(`/meta/codes/languages`, languageCode);
+  const newLanguageCode = { code: languageCode.code, name: languageCode.name };
+  if (languageCode.description !== '') {
+    newLanguageCode.description = languageCode.description;
+  }
+  const result = await Network.post(`/meta/codes/languages`, newLanguageCode);
   return result;
 };
 

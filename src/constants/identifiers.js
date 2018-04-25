@@ -1,4 +1,5 @@
 export const identifiers = {
+  ACTIVE: 'active',
   BEST_BEFORE: 'bestBefore',
   CODE: 'code',
   DEPRECATED: 'deprecated',
