@@ -1,5 +1,2 @@
-
-<svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg>
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" height="24px" viewBox="0 0 24 24" width="24px" class=""><g transform="matrix(1.71073 0 0 1.71073 -8.5287 -8.5287)"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/></g> </svg>

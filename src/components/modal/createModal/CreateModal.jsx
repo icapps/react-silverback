@@ -4,7 +4,7 @@ import { Modal, Checkbox, BasicInput } from '../../index';
 import { strings } from '../../../utils';
 import './createModal.css';
 
-const plus = require('../../../assets/images/plus-xl.svg');
+const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
   constructor() {
