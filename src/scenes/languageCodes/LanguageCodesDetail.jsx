@@ -42,7 +42,7 @@ class LanguageCodeDetail extends Component {
           { id: identifiers.CODE, label: strings.CODE, value: code.code, isEditable: false },
           { id: identifiers.NAME, label: strings.NAME, value: code.name, isEditable: false },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: code.description, isEditable: false },
-          { id: identifiers.DEPRECATED, label: strings.DEPRECATED, value: code.deprecated, type: "boolean", isEditable: false },
+          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !code.deprecated, type: "boolean", isEditable: false },
         ]}
         history={this.props.history}
         isError={this.props.isError}
