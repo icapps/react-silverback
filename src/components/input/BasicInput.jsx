@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TextInput = props => (
   <div className="form-group">
     <label htmlFor={props.id}>{props.label}</label>
-    <input type={props.type} className={`form-control ${!props.isValid ? 'is-invalid' : ''}`} id={props.id} placeholder={props.placeholder} value={props.value} onChange={props.handleChange} disabled={props.isDisabled}/>
+    <input type={props.type} className={`form-control ${!props.isValid ? 'is-invalid' : ''}`} id={props.id} placeholder={props.placeholder} value={props.value} onChange={props.handleChange} disabled={props.isDisabled} />
     {!props.isValid && <div className="invalid-feedback">{props.errorMessage}</div>}
   </div>
 );
