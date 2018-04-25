@@ -76,14 +76,13 @@ Object {
 
 exports[`users reducer should GET_USER_ROLES_REJECTED 1`] = `
 Object {
-  "errorMessage": "",
-  "isError": false,
+  "errorMessage": "Something went wrong!",
+  "isError": true,
   "isPending": false,
   "isUpdatePending": false,
   "isUserUpdated": false,
   "user": null,
   "userList": Array [],
-  "userRoles": undefined,
   "usersCount": 0,
 }
 `;

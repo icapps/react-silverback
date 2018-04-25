@@ -39,7 +39,7 @@ class UserDetail extends Component {
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
-          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "select", options: this.props.userRoles, isEditable: true },
+          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code), isEditable: true },
           { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean", isEditable: true },
         ]}
         history={this.props.history}
@@ -48,7 +48,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code) },
           { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
