@@ -11,6 +11,7 @@ export const loginUser = (username, password) => {
 export const logoutUser = () => {
   return {
     type: constants.LOGOUT_USER,
+    payload: authService.logout(),
   };
 };
 

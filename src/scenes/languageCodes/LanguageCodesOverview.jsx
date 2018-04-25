@@ -34,8 +34,8 @@ class LanguageCodesOverview extends Component {
         paginationTotalCount={this.props.languageCodeCount}
         get={this.props.getLanguageCodes}
         createParameters={[
-          { id: identifiers.NAME, label: strings.NAME, type: "text" },
           { id: identifiers.CODE, label: strings.CODE, type: "text" },
+          { id: identifiers.NAME, label: strings.NAME, type: "text" },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, type: "text" },
         ]}
         create={this.createLanguageCode}

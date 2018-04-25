@@ -82,7 +82,9 @@ const auth = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
     // LOGOUT_USER
-    case constants.LOGOUT_USER:
+    case constants.LOGOUT_USER_FULFILLED:
+      localStorage.removeItem('ACCESS_TOKEN');
+      localStorage.removeItem('REFRESH_TOKEN');
       return initialState;
     default:
       return state;
