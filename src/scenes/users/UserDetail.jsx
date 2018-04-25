@@ -39,7 +39,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
           { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "text", isEditable: true },
-          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean", isEditable: true },
+          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true },
         ]}
         history={this.props.history}
         createParameters={[
@@ -48,7 +48,7 @@ class UserDetail extends Component {
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
-          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean", defaultValue: true },
+          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
         remove={this.props.removeUser}
