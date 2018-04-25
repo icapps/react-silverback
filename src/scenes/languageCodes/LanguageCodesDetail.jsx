@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import format from 'date-fns/format';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
@@ -39,6 +40,8 @@ class LanguageCodeDetail extends Component {
         keyword={strings.LANGUAGE_CODE}
         id={props.code.id}
         inputItems={[
+          { id: identifiers.CREATED_AT, label: strings.CREATED_AT, value: format(new Date(props.code.createdAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
+          { id: identifiers.UPDATED_AT, label: strings.UPDATED_AT, value: format(new Date(props.code.updatedAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
           { id: identifiers.CODE, label: strings.CODE, value: props.code.code, isEditable: false },
           { id: identifiers.NAME, label: strings.NAME, value: props.code.name, isEditable: false },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: props.code.description, isEditable: false },
