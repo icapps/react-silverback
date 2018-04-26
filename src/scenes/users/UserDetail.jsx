@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import format from 'date-fns/format';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
@@ -35,6 +36,8 @@ class UserDetail extends Component {
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
+          { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY'), label: strings.CREATED_AT, type: "text", isEditable: false },
+          { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "text", isEditable: false },
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
