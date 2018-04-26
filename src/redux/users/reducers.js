@@ -1,11 +1,12 @@
 import constants from './constants';
 import defaultInitialState from '../defaultInitialState';
-import {strings} from '../../utils/index';
+import { strings } from '../../utils/index';
 
 const initialState = {
   userList: [],
   user: null,
   usersCount: 0,
+  userRoles: [],
   isCreatePending: false,
   isUpdatePending: false,
   isUserUpdated: false,
@@ -140,6 +141,29 @@ const users = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
+
+    //GET_USER_ROLES
+    case constants.GET_USER_ROLES_FULFILLED:
+      return {
+        ...state,
+        userRoles: payload.data,
+        isPending: false,
+      };
+    case constants.GET_USER_ROLES_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.GET_USER_ROLES_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
     default:
       return state;
   }

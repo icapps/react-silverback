@@ -1,4 +1,5 @@
 {
+  "ACTIVE": "Active",
   "ASC": "asc",
   "ASCENDING": "ascending",
   "BACKEND": "Backend",
@@ -8,6 +9,7 @@
   "CODE": "Code",
   "CODES": "Codes",
   "CREATE": "Create",
+  "CREATED_AT": "Created at",
   "CURRENT": "Current",
   "DATATYPE": "Datatype",
   "DATATYPES": "Datatypes",
@@ -29,7 +31,7 @@
   "FORGOT_PASSWORD": "Forgot password",
   "FORGOT_PASSWORD_BUTTON": "Save new password",
   "FORGOT_PASSWORD_ERROR": "The reset token is no longer valid",
-  "FORGOT_PASSWORD_QUESTION": "Forgot password ?",
+  "FORGOT_PASSWORD_QUESTION": "Forgot password?",
   "FORGOT_PASSWORD_SUCCES": "Reset password successful",
   "FORGOT_PASSWORD_SUCCES_TEXT": "Your password has been reset.",
   "FORGOT_PASSWORD_TEXT": "Enter your email address. You will receive an email with a link to reset your password.",
@@ -43,6 +45,7 @@
   "HAS_ACCESS": "Has access",
   "HEADER_TITLE": "Silverback",
   "ID": "Id",
+  "IS_ACTIVE": "Is active",
   "ITEMS_PER_PAGE": "Items per page",
   "LANGUAGE_CODE": "Language-code",
   "LANGUAGE_CODES": "Language-codes",
@@ -77,8 +80,11 @@
   "SUBMIT": "Submit",
   "TYPE": "type",
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
+  "UPDATED_AT": "Updated at",
   "USER": "User",
   "USERS": "Users",
   "VERSION": "Version",
-  "WEIGHT": "Weight"
+  "WEIGHT": "Weight",
+  "YOU": "you"
 }
+

@@ -141,7 +141,9 @@ ShallowWrapper {
         </div>
         <Unknown>
                 <Pagination
+                        activePage={0}
                         handleClick={[Function]}
+                        pageLimit={25}
                         totalCount={100}
                 />
                 <Table
@@ -190,6 +192,12 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                />
+                <Pagination
+                        activePage={0}
+                        handleClick={[Function]}
+                        pageLimit={25}
+                        totalCount={100}
                 />
         </Unknown>
 </div>,
@@ -247,7 +255,9 @@ ShallowWrapper {
 </div>,
           <Unknown>
             <Pagination
+                        activePage={0}
                         handleClick={[Function]}
+                        pageLimit={25}
                         totalCount={100}
             />
             <Table
@@ -296,6 +306,12 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+            />
+            <Pagination
+                        activePage={0}
+                        handleClick={[Function]}
+                        pageLimit={25}
+                        totalCount={100}
             />
 </Unknown>,
         ],
@@ -426,7 +442,9 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Pagination
+                activePage={0}
                 handleClick={[Function]}
+                pageLimit={25}
                 totalCount={100}
 />,
               <Table
@@ -476,6 +494,12 @@ ShallowWrapper {
                 }
                 maxTextLength={50}
 />,
+              <Pagination
+                activePage={0}
+                handleClick={[Function]}
+                pageLimit={25}
+                totalCount={100}
+/>,
             ],
           },
           "ref": null,
@@ -485,7 +509,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "activePage": 0,
                 "handleClick": [Function],
+                "pageLimit": 25,
                 "totalCount": 100,
               },
               "ref": null,
@@ -538,6 +564,20 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activePage": 0,
+                "handleClick": [Function],
+                "pageLimit": 25,
+                "totalCount": 100,
               },
               "ref": null,
               "rendered": null,
@@ -604,7 +644,9 @@ ShallowWrapper {
           </div>
           <Unknown>
                     <Pagination
+                              activePage={0}
                               handleClick={[Function]}
+                              pageLimit={25}
                               totalCount={100}
                     />
                     <Table
@@ -653,6 +695,12 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                    />
+                    <Pagination
+                              activePage={0}
+                              handleClick={[Function]}
+                              pageLimit={25}
+                              totalCount={100}
                     />
           </Unknown>
 </div>,
@@ -710,7 +758,9 @@ ShallowWrapper {
 </div>,
             <Unknown>
               <Pagination
+                            activePage={0}
                             handleClick={[Function]}
+                            pageLimit={25}
                             totalCount={100}
               />
               <Table
@@ -759,6 +809,12 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+              />
+              <Pagination
+                            activePage={0}
+                            handleClick={[Function]}
+                            pageLimit={25}
+                            totalCount={100}
               />
 </Unknown>,
           ],
@@ -889,7 +945,9 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Pagination
+                  activePage={0}
                   handleClick={[Function]}
+                  pageLimit={25}
                   totalCount={100}
 />,
                 <Table
@@ -939,6 +997,12 @@ ShallowWrapper {
                   }
                   maxTextLength={50}
 />,
+                <Pagination
+                  activePage={0}
+                  handleClick={[Function]}
+                  pageLimit={25}
+                  totalCount={100}
+/>,
               ],
             },
             "ref": null,
@@ -948,7 +1012,9 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "activePage": 0,
                   "handleClick": [Function],
+                  "pageLimit": 25,
                   "totalCount": 100,
                 },
                 "ref": null,
@@ -1001,6 +1067,20 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activePage": 0,
+                  "handleClick": [Function],
+                  "pageLimit": 25,
+                  "totalCount": 100,
                 },
                 "ref": null,
                 "rendered": null,
@@ -1166,7 +1246,9 @@ ShallowWrapper {
         </div>
         <Unknown>
                 <Pagination
+                        activePage={0}
                         handleClick={[Function]}
+                        pageLimit={25}
                         totalCount={100}
                 />
                 <Table
@@ -1215,6 +1297,12 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                />
+                <Pagination
+                        activePage={0}
+                        handleClick={[Function]}
+                        pageLimit={25}
+                        totalCount={100}
                 />
         </Unknown>
 </div>,
@@ -1272,7 +1360,9 @@ ShallowWrapper {
 </div>,
           <Unknown>
             <Pagination
+                        activePage={0}
                         handleClick={[Function]}
+                        pageLimit={25}
                         totalCount={100}
             />
             <Table
@@ -1321,6 +1411,12 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+            />
+            <Pagination
+                        activePage={0}
+                        handleClick={[Function]}
+                        pageLimit={25}
+                        totalCount={100}
             />
 </Unknown>,
         ],
@@ -1451,7 +1547,9 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Pagination
+                activePage={0}
                 handleClick={[Function]}
+                pageLimit={25}
                 totalCount={100}
 />,
               <Table
@@ -1501,6 +1599,12 @@ ShallowWrapper {
                 }
                 maxTextLength={50}
 />,
+              <Pagination
+                activePage={0}
+                handleClick={[Function]}
+                pageLimit={25}
+                totalCount={100}
+/>,
             ],
           },
           "ref": null,
@@ -1510,7 +1614,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "activePage": 0,
                 "handleClick": [Function],
+                "pageLimit": 25,
                 "totalCount": 100,
               },
               "ref": null,
@@ -1563,6 +1669,20 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activePage": 0,
+                "handleClick": [Function],
+                "pageLimit": 25,
+                "totalCount": 100,
               },
               "ref": null,
               "rendered": null,
@@ -1629,7 +1749,9 @@ ShallowWrapper {
           </div>
           <Unknown>
                     <Pagination
+                              activePage={0}
                               handleClick={[Function]}
+                              pageLimit={25}
                               totalCount={100}
                     />
                     <Table
@@ -1678,6 +1800,12 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                    />
+                    <Pagination
+                              activePage={0}
+                              handleClick={[Function]}
+                              pageLimit={25}
+                              totalCount={100}
                     />
           </Unknown>
 </div>,
@@ -1735,7 +1863,9 @@ ShallowWrapper {
 </div>,
             <Unknown>
               <Pagination
+                            activePage={0}
                             handleClick={[Function]}
+                            pageLimit={25}
                             totalCount={100}
               />
               <Table
@@ -1784,6 +1914,12 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+              />
+              <Pagination
+                            activePage={0}
+                            handleClick={[Function]}
+                            pageLimit={25}
+                            totalCount={100}
               />
 </Unknown>,
           ],
@@ -1914,7 +2050,9 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Pagination
+                  activePage={0}
                   handleClick={[Function]}
+                  pageLimit={25}
                   totalCount={100}
 />,
                 <Table
@@ -1964,6 +2102,12 @@ ShallowWrapper {
                   }
                   maxTextLength={50}
 />,
+                <Pagination
+                  activePage={0}
+                  handleClick={[Function]}
+                  pageLimit={25}
+                  totalCount={100}
+/>,
               ],
             },
             "ref": null,
@@ -1973,7 +2117,9 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "activePage": 0,
                   "handleClick": [Function],
+                  "pageLimit": 25,
                   "totalCount": 100,
                 },
                 "ref": null,
@@ -2026,6 +2172,20 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "activePage": 0,
+                  "handleClick": [Function],
+                  "pageLimit": 25,
+                  "totalCount": 100,
                 },
                 "ref": null,
                 "rendered": null,

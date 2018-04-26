@@ -137,4 +137,29 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  //
+  it('should GET_USER_ROLES_FULFILLED', () => {
+    expect(
+      users(initialState, {
+        type: constants.GET_USER_ROLES_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_USER_ROLES_PENDING', () => {
+    expect(
+      users(initialState, {
+        type: constants.GET_USER_ROLES_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_USER_ROLES_REJECTED', () => {
+    expect(
+      users(initialState, {
+        type: constants.GET_USER_ROLES_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
 });

@@ -27,3 +27,8 @@ export const remove = async id => {
   const result = await Network.delete(`/users/${id}`);
   return result;
 };
+
+export const getUserRoles = async () => {
+  const result = await Network.get('/users/roles');
+  return result;
+};
