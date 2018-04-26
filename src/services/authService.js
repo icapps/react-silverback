@@ -13,6 +13,11 @@ const getDeviceId = email => {
   return localStorage.getItem('DEVICE_ID');
 };
 
+export const forgotPassword = async email => {
+  const result = await Network.post('/forgot-password/init', { email });
+  return result;
+};
+
 export const verifyForgotPassword = async token => {
   const result = await Network.get(`/forgot-password/verify?token=${token}`);
   return result;
