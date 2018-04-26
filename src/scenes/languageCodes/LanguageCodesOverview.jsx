@@ -27,9 +27,9 @@ class LanguageCodesOverview extends Component {
         keys={[
           { id: identifiers.CODE, value: strings.CODE, isSortable: true },
           { id: identifiers.NAME, value: strings.NAME, isSortable: true },
-          { id: identifiers.DEPRECATED, value: strings.DEPRECATED },
+          { id: identifiers.ACTIVE, value: strings.ACTIVE },
         ]}
-        listItems={this.props.languageCodes.map(languageCode => { return { ...languageCode, deprecated: !!languageCode.deprecated }; })}
+        listItems={this.props.languageCodes.map(languageCode => { return { ...languageCode, deprecated: !!languageCode.deprecated, active: !languageCode.deprecated }; })}
         history={this.props.history}
         paginationTotalCount={this.props.languageCodeCount}
         get={this.props.getLanguageCodes}

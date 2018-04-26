@@ -59,7 +59,6 @@ class Detail extends React.Component {
     const canDeprecate = this.props.inputItems.find(item => item.id === identifiers.DEPRECATED);
     const isDeprecated = canDeprecate && canDeprecate.value;
 
-
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         {props.inputItems && (
@@ -111,7 +110,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!state.isDeprecated && props.deprecate && <Modal
+              {!isDeprecated && props.deprecate && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}

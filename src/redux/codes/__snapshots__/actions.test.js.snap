@@ -26,3 +26,12 @@ Array [
   },
 ]
 `;
+
+exports[`user actions getLanguageCodyId 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_LANGUAGE_CODE_BY_ID",
+  },
+]
+`;

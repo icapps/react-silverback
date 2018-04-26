@@ -60,4 +60,28 @@ describe('codes reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  it('should GET_LANGUAGE_CODE_BY_ID_FULFILLED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_LANGUAGE_CODE_BY_ID_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_LANGUAGE_CODE_BY_ID_PENDING', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_LANGUAGE_CODE_BY_ID_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_LANGUAGE_CODE_BY_ID_REJECTED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_LANGUAGE_CODE_BY_ID_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
 });

@@ -32,7 +32,7 @@ class UserOverview extends Component {
           { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true },
           { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
           { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
-          { id: identifiers.HAS_ACCESS, value: strings.HAS_ACCESS, isSortable: false },
+          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: false },
           { id: identifiers.ROLE, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
@@ -43,7 +43,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code) },
-          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean", defaultValue: true },
+          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
         removeItem={this.props.removeUser}
