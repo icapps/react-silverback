@@ -47,7 +47,7 @@ class Pagination extends React.Component {
   }
 
   render() {
-    const { props, state } = this;
+    const { props } = this;
     const nrOfPages = Math.ceil(props.totalCount / props.pageLimit);
     const startOfRange = props.activePage * props.pageLimit + 1;
     const endOfRange = props.pageLimit * (props.activePage + 1);
