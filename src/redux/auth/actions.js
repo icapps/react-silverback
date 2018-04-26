@@ -15,6 +15,13 @@ export const logoutUser = () => {
   };
 };
 
+export const forgotPassword = email => {
+  return {
+    type: constants.FORGOT_PASSWORD,
+    payload: authService.forgotPassword(email),
+  };
+};
+
 export const verifyForgotPassword = token => {
   return {
     type: constants.VERIFY_FORGOT_PASSWORD,
