@@ -35,3 +35,10 @@ export const removeUser = id => {
     payload: userService.remove(id),
   };
 };
+
+export const getUserRoles = () => {
+  return {
+    type: constants.GET_USER_ROLES,
+    payload: userService.getUserRoles(),
+  };
+};

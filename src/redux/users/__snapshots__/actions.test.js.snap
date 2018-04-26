@@ -9,6 +9,15 @@ Array [
 ]
 `;
 
+exports[`user actions getUserRoles 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "GET_USER_ROLES",
+  },
+]
+`;
+
 exports[`user actions getUsers 1`] = `
 Array [
   Object {
