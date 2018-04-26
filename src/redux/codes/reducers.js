@@ -22,6 +22,7 @@ const codes = (state = initialState, action = {}) => {
         ...state,
         languageCodeList: payload.data,
         languageCodeCount: payload.meta.totalCount,
+        languageCode: null,
         isPending: false,
       };
     case constants.GET_LANGUAGE_CODES_PENDING:
@@ -73,6 +74,27 @@ const codes = (state = initialState, action = {}) => {
         errorMessage: '',
       };
     case constants.DEPRECATE_LANGUAGE_CODE_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
+    case constants.GET_LANGUAGE_CODE_BY_ID_FULFILLED:
+      return {
+        ...state,
+        languageCode: payload.data,
+        isPending: false,
+      };
+    case constants.GET_LANGUAGE_CODE_BY_ID_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.GET_LANGUAGE_CODE_BY_ID_REJECTED:
       return {
         ...state,
         isPending: false,

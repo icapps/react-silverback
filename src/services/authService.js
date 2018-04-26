@@ -1,7 +1,7 @@
 import { Network } from '../utils';
 
 export const login = async (email, password) => {
-  const result = await Network.post('/auth/login', { username: email, password, deviceId: getDeviceId(email) });
+  const result = await Network.post('/auth/login/admin', { username: email, password, deviceId: getDeviceId(email) });
   return result;
 };
 

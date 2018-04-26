@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import format from 'date-fns/format';
 import { Detail, EmptyDetail, Spinner } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
@@ -35,11 +36,13 @@ class UserDetail extends Component {
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
+          { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY'), label: strings.CREATED_AT, type: "text", isEditable: false },
+          { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "text", isEditable: false },
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
           { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "text", isEditable: true },
-          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.HAS_ACCESS, type: "boolean", isEditable: true },
+          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true },
         ]}
         history={this.props.history}
         createParameters={[
@@ -48,7 +51,7 @@ class UserDetail extends Component {
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
-          { id: identifiers.HAS_ACCESS, label: strings.HAS_ACCESS, type: "boolean", defaultValue: true },
+          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
         remove={this.props.removeUser}
