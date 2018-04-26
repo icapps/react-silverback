@@ -26,7 +26,7 @@ class Overview extends React.Component {
     if (this.props.removeItem) {
       const result = await this.props.removeItem(item);
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-        this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder);
+        this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder);
       }
     }
   }
@@ -36,7 +36,7 @@ class Overview extends React.Component {
       return {
         ...action, handleAction: async id => {
           await action.handleAction(id);
-          await this.props.get(this.state.page, this.state.limit);
+          await this.props.get(this.state.page * this.state.limit, this.state.limit);
         },
       };
     });
@@ -47,18 +47,18 @@ class Overview extends React.Component {
   };
 
   sortItems = (sortField, sortOrder) => {
-    this.props.get(this.state.page, this.state.limit, sortField, sortOrder);
+    this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder);
     this.setState({ sortField, sortOrder });
   }
 
   handlePagination = (page, limit) => {
-    this.props.get(page, limit, this.state.sortField, this.state.sortOrder);
+    this.props.get(page * limit, limit, this.state.sortField, this.state.sortOrder);
     this.setState({ page, limit });
   };
 
   handleFilter = filterValue => {
     clearTimeout(this.timer);
-    this.timer = setTimeout(() => this.props.get(this.state.page, this.state.limit, this.state.sortField, this.state.sortOrder, filterValue), 700);
+    this.timer = setTimeout(() => this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder, filterValue), 700);
   }
 
   render() {
@@ -85,7 +85,7 @@ class Overview extends React.Component {
           </div>
           {props.listItems.length > 0 ? (
             <React.Fragment>
-              <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} />
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} activePage={state.page} pageLimit={state.limit} />
               <Table
                 keys={props.keys}
                 listItems={props.listItems}
@@ -96,6 +96,7 @@ class Overview extends React.Component {
                 deleteIdentifier={props.deleteIdentifier}
                 actions={this.setActions(this.props.actions)}
               />
+              <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} activePage={state.page} pageLimit={state.limit} />
             </React.Fragment>
           ) : <div className="jumbotron" role="alert"><span className="empty-overview">{strings.formatString(strings.NO_RESULTS_FOUND, { result: props.title })}</span></div>
           }
