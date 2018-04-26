@@ -29,6 +29,33 @@ Object {
 }
 `;
 
+exports[`auth reducer should FORGOT_PASSWORD_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should FORGOT_PASSWORD_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isLoggedIn": false,
+  "isPending": true,
+}
+`;
+
+exports[`auth reducer should FORGOT_PASSWORD_REJECTED 1`] = `
+Object {
+  "errorMessage": "error",
+  "isError": true,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;
+
 exports[`auth reducer should LOGIN_USER_FULFILLED 1`] = `
 Object {
   "errorMessage": "",

@@ -9,6 +9,15 @@ Array [
 ]
 `;
 
+exports[`auth actions forgotPassword 1`] = `
+Array [
+  Object {
+    "payload": Promise {},
+    "type": "FORGOT_PASSWORD",
+  },
+]
+`;
+
 exports[`auth actions loginUser 1`] = `
 Array [
   Object {

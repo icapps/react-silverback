@@ -31,14 +31,17 @@
   "FORGOT_PASSWORD": "Forgot password",
   "FORGOT_PASSWORD_BUTTON": "Save new password",
   "FORGOT_PASSWORD_ERROR": "The reset token is no longer valid",
+  "FORGOT_PASSWORD_QUESTION": "Forgot password?",
   "FORGOT_PASSWORD_SUCCES": "Reset password successful",
   "FORGOT_PASSWORD_SUCCES_TEXT": "Your password has been reset.",
+  "FORGOT_PASSWORD_TEXT": "Enter your email address. You will receive an email with a link to reset your password.",
   "FRONTEND": "Frontend",
   "GENERAL_ERROR": "Something went wrong!",
   "GETTING_STARTED": "Choose password",
   "GETTING_STARTED_ERROR": "The activation is no longer possible",
   "GETTING_STARTED_SUCCES": "Account activation successful",
   "GETTING_STARTED_SUCCES_TEXT": "Your account has successfully been activated.",
+  "GO_BACK_TO_LOGIN": "Go back to login",
   "HAS_ACCESS": "Has access",
   "HEADER_TITLE": "Silverback",
   "ID": "Id",
@@ -66,6 +69,9 @@
   "RESET": "Reset",
   "RESET_CHANGES": "Reset changes",
   "RESET_CONFIRMATION": "Are you sure you want to reset your changes?",
+  "RESET_PASSWORD": "Reset your password",
+  "RESET_PASSWORD_TEXT": "We have sent a reset password email to {email}. Please click the reset password link to set your new password.",
+  "RETRIEVE_PASSWORD": "Retrieve password",
   "ROLE": "Role",
   "SAVE": "Save",
   "SEARCH": "Search",
@@ -78,5 +84,7 @@
   "USER": "User",
   "USERS": "Users",
   "VERSION": "Version",
-  "WEIGHT": "Weight"
+  "WEIGHT": "Weight",
+  "YOU": "you"
 }
+
