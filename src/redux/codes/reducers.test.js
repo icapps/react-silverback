@@ -51,6 +51,7 @@ describe('codes reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
   it('should CREATE_LANGUAGE_CODE_REJECTED', () => {
     expect(
       codes(initialState, {

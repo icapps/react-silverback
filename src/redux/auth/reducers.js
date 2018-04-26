@@ -37,6 +37,26 @@ const auth = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
+    // FORGOT_PASSWORD
+    case constants.FORGOT_PASSWORD_FULFILLED:
+      return {
+        ...state,
+        isPending: false,
+      };
+    case constants.FORGOT_PASSWORD_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.FORGOT_PASSWORD_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
     // VERIFY_FORGOT_PASSWORD
     case constants.VERIFY_FORGOT_PASSWORD_FULFILLED:
       return {

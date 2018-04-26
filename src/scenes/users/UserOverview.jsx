@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers, createUser, removeUser } from '../../redux/users/actions';
+import { getUsers, createUser, removeUser, getUserRoles } from '../../redux/users/actions';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
@@ -17,6 +17,10 @@ class UserOverview extends Component {
       }
       resolve(false);
     });
+  }
+
+  componentDidMount() {
+    this.props.getUserRoles();
   }
 
   render() {
@@ -38,7 +42,7 @@ class UserOverview extends Component {
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "text" },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code) },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
@@ -71,6 +75,7 @@ const mapStateToProps = state => ({
   users: state.users.userList,
   usersCount: state.users.usersCount,
   user: state.users.user,
+  userRoles: state.users.userRoles,
   isCreatePending: state.users.isCreatePending,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
@@ -81,6 +86,7 @@ const mapDispatchToProps = {
   getUsers,
   createUser,
   removeUser,
+  getUserRoles,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);
