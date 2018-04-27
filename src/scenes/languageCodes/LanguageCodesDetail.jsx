@@ -41,11 +41,9 @@ class LanguageCodeDetail extends Component {
         id={props.code.id}
         inputItems={[
           { id: identifiers.CREATED_AT, label: strings.CREATED_AT, value: format(new Date(props.code.createdAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
-          { id: identifiers.UPDATED_AT, label: strings.UPDATED_AT, value: format(new Date(props.code.updatedAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
           { id: identifiers.CODE, label: strings.CODE, value: props.code.code, isEditable: false },
           { id: identifiers.NAME, label: strings.NAME, value: props.code.name, isEditable: false },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: props.code.description, isEditable: false },
-          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !props.code.deprecated, type: "boolean", isEditable: false },
         ]}
         history={props.history}
         isError={props.isError}
