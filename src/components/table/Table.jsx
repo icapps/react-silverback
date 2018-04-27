@@ -85,7 +85,7 @@ class Table extends React.Component {
                     id="delete"
                     icon={deleteIcon}
                     modalButtonText=""
-                    handlePrimaryButton={() => props.handleRemoveItem(listItem.id)}
+                    handlePrimaryButton={() => props.handleRemoveItem(listItem.id, listItem[props.deleteIdentifier])}
                     primaryButtonText={strings.DELETE}
                     secondaryButtonText={strings.CANCEL}
                     secondaryButtonClassName="btn-light"

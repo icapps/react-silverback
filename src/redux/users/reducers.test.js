@@ -162,4 +162,11 @@ describe('users reducer', () => {
       })
     ).toMatchSnapshot();
   });
+  it('should RESET_DELETED_USER', () => {
+    expect(
+      users(initialState, {
+        type: constants.RESET_DELETED_USER,
+      })
+    ).toMatchSnapshot();
+  });
 });

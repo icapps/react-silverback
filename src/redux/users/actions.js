@@ -42,3 +42,9 @@ export const getUserRoles = () => {
     payload: userService.getUserRoles(),
   };
 };
+
+export const resetDeletedUser = () => {
+  return {
+    type: constants.RESET_DELETED_USER,
+  };
+};

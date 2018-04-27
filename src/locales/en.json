@@ -15,6 +15,7 @@
   "DATATYPES": "Datatypes",
   "DELETE": "Delete",
   "DELETE_CONFIRMATION": "Are you sure you want to delete {item}?",
+  "DELETED_ITEM": "{item} has been deleted",
   "DEPRECATE": "Deprecate",
   "DEPRECATED": "Deprecated",
   "DEPRECATED_ANNOTATION": "(deprecated)",

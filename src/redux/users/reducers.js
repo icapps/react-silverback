@@ -11,6 +11,7 @@ const initialState = {
   isUpdatePending: false,
   isUserUpdated: false,
   isCreateError: false,
+  deletedUser: '',
   ...defaultInitialState,
 };
 
@@ -133,6 +134,7 @@ const users = (state = initialState, action = {}) => {
         isPending: true,
         isError: false,
         errorMessage: '',
+        deletedUser: state.user && state.user.email,
       };
     case constants.REMOVE_USER_REJECTED:
       return {
@@ -164,6 +166,11 @@ const users = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
 
+    case constants.RESET_DELETED_USER:
+      return {
+        ...state,
+        deletedUser: '',
+      };
     default:
       return state;
   }
