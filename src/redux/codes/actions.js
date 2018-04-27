@@ -29,3 +29,10 @@ export const deprecateLanguageCode = languageCodeId => {
   };
 };
 
+export const undeprecateLanguageCode = languageCodeId => {
+  return {
+    type: constants.UNDEPRECATE_LANGUAGE_CODE,
+    payload: codesService.undeprecateLanguageCode(languageCodeId),
+  };
+};
+

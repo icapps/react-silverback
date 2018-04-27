@@ -56,8 +56,8 @@ class Detail extends React.Component {
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
-    const canDeprecate = this.props.inputItems.find(item => item.id === identifiers.DEPRECATED);
-    const isDeprecated = canDeprecate && canDeprecate.value;
+    const active = this.props.inputItems.find(item => item.id === identifiers.ACTIVE);
+    const canDeprecate = active && active.value && props.deprecate;
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
@@ -77,7 +77,7 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            <h3>{props.title}{isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
+            <h3>{props.title}{canDeprecate && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
               {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
@@ -110,7 +110,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!isDeprecated && props.deprecate && <Modal
+              {canDeprecate && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
@@ -119,6 +119,18 @@ class Detail extends React.Component {
                 modalButtonClassName="btn-danger"
                 secondaryButtonClassName="btn-light"
                 primaryButtonClassName="btn-danger"
+              >
+                <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
+              </Modal>}
+              {!canDeprecate && props.undeprecate && <Modal
+                id="undeprecate"
+                modalButtonText={`${strings.UNDEPRECATE} ${props.keyword.toLowerCase()}`}
+                handlePrimaryButton={() => this.props.undeprecate(this.props.id)}
+                primaryButtonText={strings.UNDEPRECATE}
+                secondaryButtonText={strings.CANCEL}
+                modalButtonClassName="btn-info"
+                secondaryButtonClassName="btn-light"
+                primaryButtonClassName="btn-info"
               >
                 <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}

@@ -6,7 +6,7 @@ import { Detail, EmptyDetail, Spinner } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/codes/constants';
-import { getLanguageCodeById, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
+import { getLanguageCodeById, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode } from '../../redux/codes/actions';
 
 class LanguageCodeDetail extends Component {
   componentDidMount() {
@@ -27,6 +27,13 @@ class LanguageCodeDetail extends Component {
   deprecateLanguageCode = async id => {
     const result = await this.props.deprecateLanguageCode(id);
     if (result.action && result.action.type === constants.DEPRECATE_LANGUAGE_CODE_FULFILLED) {
+      this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
+    }
+  }
+
+  undeprecateLanguageCode = async id => {
+    const result = await this.props.undeprecateLanguageCode(id);
+    if (result.action && result.action.type === constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED) {
       this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
     }
   }
@@ -59,6 +66,7 @@ class LanguageCodeDetail extends Component {
         isCreatePending={props.isCreatePending}
         isCreateError={props.isCreateError}
         deprecate={this.deprecateLanguageCode}
+        undeprecate={this.undeprecateLanguageCode}
       />);
     return <EmptyDetail history={props.history} />;
   }
@@ -69,11 +77,12 @@ LanguageCodeDetail.propTypes = {
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
-  getLanguageCodes: PropTypes.func.isRequired,
+  getLanguageCodeById: PropTypes.func.isRequired,
   isCreatePending: PropTypes.bool.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   createLanguageCode: PropTypes.func.isRequired,
   deprecateLanguageCode: PropTypes.func.isRequired,
+  undeprecateLanguageCode: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -89,6 +98,7 @@ const mapDispatchToProps = {
   getLanguageCodeById,
   createLanguageCode,
   deprecateLanguageCode,
+  undeprecateLanguageCode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodeDetail);
