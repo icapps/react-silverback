@@ -41,11 +41,9 @@ class LanguageCodeDetail extends Component {
         id={props.code.id}
         inputItems={[
           { id: identifiers.CREATED_AT, label: strings.CREATED_AT, value: format(new Date(props.code.createdAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
-          { id: identifiers.UPDATED_AT, label: strings.UPDATED_AT, value: format(new Date(props.code.updatedAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
           { id: identifiers.CODE, label: strings.CODE, value: props.code.code, isEditable: false },
           { id: identifiers.NAME, label: strings.NAME, value: props.code.name, isEditable: false },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: props.code.description, isEditable: false },
-          { id: identifiers.ACTIVE, label: strings.ACTIVE, value: !props.code.deprecated, type: "boolean", isEditable: false },
         ]}
         history={props.history}
         isError={props.isError}
@@ -69,7 +67,7 @@ LanguageCodeDetail.propTypes = {
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
-  getLanguageCodes: PropTypes.func.isRequired,
+  getLanguageCodeById: PropTypes.func.isRequired,
   isCreatePending: PropTypes.bool.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   createLanguageCode: PropTypes.func.isRequired,
@@ -79,7 +77,7 @@ LanguageCodeDetail.propTypes = {
 const mapStateToProps = state => ({
   code: state.codes.languageCode,
   isError: state.codes.isError,
-  errorMessage: state.users.errorMessage,
+  errorMessage: state.codes.errorMessage,
   isPending: state.codes.isPending,
   isCreatePending: state.codes.isCreatePending,
   isCreateError: state.codes.isCreateError,
