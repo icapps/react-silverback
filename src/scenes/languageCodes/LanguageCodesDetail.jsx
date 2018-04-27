@@ -69,7 +69,7 @@ LanguageCodeDetail.propTypes = {
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
-  getLanguageCodes: PropTypes.func.isRequired,
+  getLanguageCodeById: PropTypes.func.isRequired,
   isCreatePending: PropTypes.bool.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   createLanguageCode: PropTypes.func.isRequired,
@@ -79,7 +79,7 @@ LanguageCodeDetail.propTypes = {
 const mapStateToProps = state => ({
   code: state.codes.languageCode,
   isError: state.codes.isError,
-  errorMessage: state.users.errorMessage,
+  errorMessage: state.codes.errorMessage,
   isPending: state.codes.isPending,
   isCreatePending: state.codes.isCreatePending,
   isCreateError: state.codes.isCreateError,
