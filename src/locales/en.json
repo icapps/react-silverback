@@ -64,6 +64,7 @@
   "PASSWORD": "Password",
   "PREVIOUS": "Previous",
   "PRICE": "Price",
+  "REGISTRATION_COMPLETED": "Registration completed",
   "REPEAT_NEW_PASSWORD": "Repeat new password",
   "REPEAT_NEW_PASSWORD_ERROR": "The specified passwords do not match",
   "REPEAT_PASSWORD": "Repeat password",

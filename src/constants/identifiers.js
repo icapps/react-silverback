@@ -14,6 +14,7 @@ export const identifiers = {
   NAME: 'name',
   PASSWORD: 'password',
   PRICE: 'price',
+  REGISTRATION_COMPLETED: 'registrationCompleted',
   REPEAT_PASSWORD: 'repeatPassword',
   ROLE: 'role',
   TYPE: 'type',

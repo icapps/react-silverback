@@ -42,15 +42,16 @@ class UserDetail extends Component {
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
+          { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
           { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code), isEditable: true },
           { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true },
+          { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_COMPLETED, type: "boolean", isEditable: false },
         ]}
         history={this.props.history}
         createParameters={[
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => role.code) },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
