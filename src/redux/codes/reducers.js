@@ -81,6 +81,26 @@ const codes = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
 
+    case constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED:
+      return {
+        ...state,
+        isPending: false,
+      };
+    case constants.UNDEPRECATE_LANGUAGE_CODE_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.UNDEPRECATE_LANGUAGE_CODE_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
     case constants.GET_LANGUAGE_CODE_BY_ID_FULFILLED:
       return {
         ...state,

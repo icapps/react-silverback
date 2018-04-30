@@ -80,6 +80,8 @@
   "SORTED_BY": "sorted by",
   "SUBMIT": "Submit",
   "TYPE": "type",
+  "UNDEPRECATE": "Undeprecate",
+  "UNDEPRECATE_TEXT": "Are you sure you want to undeprecate {item}?",
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
   "UPDATED_AT": "Updated at",
   "USER": "User",

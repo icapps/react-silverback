@@ -84,4 +84,50 @@ describe('codes reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  it('should DEPRECATE_LANGUAGE_CODE_FULFILLED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.DEPRECATE_LANGUAGE_CODE_FULFILLED,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should DEPRECATE_LANGUAGE_CODE_PENDING', () => {
+    expect(
+      codes(initialState, {
+        type: constants.DEPRECATE_LANGUAGE_CODE_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should DEPRECATE_LANGUAGE_CODE_REJECTED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.DEPRECATE_LANGUAGE_CODE_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
+
+  it('should UNDEPRECATE_LANGUAGE_CODE_FULFILLED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UNDEPRECATE_LANGUAGE_CODE_PENDING', () => {
+    expect(
+      codes(initialState, {
+        type: constants.UNDEPRECATE_LANGUAGE_CODE_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should UNDEPRECATE_LANGUAGE_CODE_REJECTED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.UNDEPRECATE_LANGUAGE_CODE_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
 });
