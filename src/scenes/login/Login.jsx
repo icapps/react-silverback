@@ -8,7 +8,7 @@ import { loginUser } from '../../redux/auth/actions';
 import { Link } from 'react-router-dom';
 import { regexes } from '../../constants';
 
-const logo = require('../../assets/images/silverback.png');
+const logo = require('../../assets/images/silverback-300.png');
 
 class Login extends Component {
   constructor() {
