@@ -9,7 +9,7 @@ const SORT_DESC = 'desc';
 
 class Overview extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       page: 0,
       limit: 25,
