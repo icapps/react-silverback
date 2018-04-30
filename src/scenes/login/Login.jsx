@@ -59,7 +59,7 @@ class Login extends Component {
             </div>
             <div className="col-12 col-md-7">
               <BasicInput id="email" label={strings.EMAIL} value={state.email.value} handleChange={this.changeInput} isValid={state.email.isValid} errorMessage={state.email.errorMessage} />
-              <BasicInput id="password" label={strings.PASSWORD} value={state.password.value} handleChange={this.changeInput} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
+              <BasicInput id="password" label={strings.PASSWORD} value={state.password.value} handleChange={this.changeInput} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} handleEnter={this.login} />
               <Button text={strings.LOGIN} handleClick={this.login} className="btn-primary" />
               <span className="forgot-password-link" ></span><Link to="/auth/forgot-password">{strings.FORGOT_PASSWORD_QUESTION}</Link>
             </div>

@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TextInput
     errorMessage=""
     handleChange={[Function]}
+    handleEnter={[Function]}
     id="test"
     isDisabled={false}
     isValid={true}
@@ -38,6 +39,7 @@ ShallowWrapper {
           disabled={false}
           id="test"
           onChange={[Function]}
+          onKeyPress={[Function]}
           placeholder=""
           type="text"
           value="test"
@@ -69,6 +71,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test",
           "onChange": [Function],
+          "onKeyPress": [Function],
           "placeholder": "",
           "type": "text",
           "value": "test",
@@ -98,6 +101,7 @@ ShallowWrapper {
             disabled={false}
             id="test"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder=""
             type="text"
             value="test"
@@ -129,6 +133,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test",
             "onChange": [Function],
+            "onKeyPress": [Function],
             "placeholder": "",
             "type": "text",
             "value": "test",
@@ -159,6 +164,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TextInput
     errorMessage=""
     handleChange={[Function]}
+    handleEnter={[Function]}
     id="test"
     isDisabled={false}
     isValid={true}
@@ -190,6 +196,7 @@ ShallowWrapper {
           disabled={false}
           id="test"
           onChange={[Function]}
+          onKeyPress={[Function]}
           placeholder="placeholder"
           type="text"
           value=""
@@ -221,6 +228,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test",
           "onChange": [Function],
+          "onKeyPress": [Function],
           "placeholder": "placeholder",
           "type": "text",
           "value": "",
@@ -250,6 +258,7 @@ ShallowWrapper {
             disabled={false}
             id="test"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder="placeholder"
             type="text"
             value=""
@@ -281,6 +290,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test",
             "onChange": [Function],
+            "onKeyPress": [Function],
             "placeholder": "placeholder",
             "type": "text",
             "value": "",
@@ -311,6 +321,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TextInput
     errorMessage=""
     handleChange={[Function]}
+    handleEnter={[Function]}
     id="test"
     isDisabled={false}
     isValid={true}
@@ -342,6 +353,7 @@ ShallowWrapper {
           disabled={false}
           id="test"
           onChange={[Function]}
+          onKeyPress={[Function]}
           placeholder=""
           type="number"
           value={123}
@@ -373,6 +385,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test",
           "onChange": [Function],
+          "onKeyPress": [Function],
           "placeholder": "",
           "type": "number",
           "value": 123,
@@ -402,6 +415,7 @@ ShallowWrapper {
             disabled={false}
             id="test"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder=""
             type="number"
             value={123}
@@ -433,6 +447,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test",
             "onChange": [Function],
+            "onKeyPress": [Function],
             "placeholder": "",
             "type": "number",
             "value": 123,
@@ -463,6 +478,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TextInput
     errorMessage=""
     handleChange={[Function]}
+    handleEnter={[Function]}
     id="test"
     isDisabled={false}
     isValid={true}
@@ -494,6 +510,7 @@ ShallowWrapper {
           disabled={false}
           id="test"
           onChange={[Function]}
+          onKeyPress={[Function]}
           placeholder=""
           type="password"
           value="password"
@@ -525,6 +542,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test",
           "onChange": [Function],
+          "onKeyPress": [Function],
           "placeholder": "",
           "type": "password",
           "value": "password",
@@ -554,6 +572,7 @@ ShallowWrapper {
             disabled={false}
             id="test"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder=""
             type="password"
             value="password"
@@ -585,6 +604,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test",
             "onChange": [Function],
+            "onKeyPress": [Function],
             "placeholder": "",
             "type": "password",
             "value": "password",
@@ -615,6 +635,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TextInput
     errorMessage="This is an error message"
     handleChange={[Function]}
+    handleEnter={[Function]}
     id="test"
     isDisabled={false}
     isValid={false}
@@ -646,6 +667,7 @@ ShallowWrapper {
           disabled={false}
           id="test"
           onChange={[Function]}
+          onKeyPress={[Function]}
           placeholder=""
           type="text"
           value="test"
@@ -681,6 +703,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test",
           "onChange": [Function],
+          "onKeyPress": [Function],
           "placeholder": "",
           "type": "text",
           "value": "test",
@@ -721,6 +744,7 @@ ShallowWrapper {
             disabled={false}
             id="test"
             onChange={[Function]}
+            onKeyPress={[Function]}
             placeholder=""
             type="text"
             value="test"
@@ -756,6 +780,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test",
             "onChange": [Function],
+            "onKeyPress": [Function],
             "placeholder": "",
             "type": "text",
             "value": "test",
