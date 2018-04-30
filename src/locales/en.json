@@ -85,6 +85,7 @@
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
   "UPDATED_AT": "Updated at",
   "USER": "User",
+  "USER_HAS_TO_SET_PASSWORD": "User has to set the password",
   "USERS": "Users",
   "VERSION": "Version",
   "WEIGHT": "Weight",
