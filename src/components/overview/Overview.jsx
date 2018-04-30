@@ -8,19 +8,18 @@ import './overview.css';
 const SORT_DESC = 'desc';
 
 class Overview extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       page: 0,
       limit: 25,
       sortField: null,
       sortOrder: null,
-      deletedItem: '',
+      deletedItem: props.deletedItem ? props.deletedItem : '',
     };
     this.timer = null;
   }
   componentDidMount() {
-    this.setState({ deletedItem: (this.props.deletedItem) ? this.props.deletedItem : '' });
     this.props.get(this.state.page, this.state.limit);
   }
 
