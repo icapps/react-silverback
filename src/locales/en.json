@@ -3,7 +3,6 @@
   "ASC": "asc",
   "ASCENDING": "ascending",
   "BACKEND": "Backend",
-  "BEST_BEFORE": "best Before",
   "BUILD": "Build",
   "CANCEL": "Cancel",
   "CODE": "Code",
@@ -11,8 +10,6 @@
   "CREATE": "Create",
   "CREATED_AT": "Created at",
   "CURRENT": "Current",
-  "DATATYPE": "Datatype",
-  "DATATYPES": "Datatypes",
   "DELETE": "Delete",
   "DELETE_CONFIRMATION": "Are you sure you want to delete {item}?",
   "DELETED_ITEM": "{item} has been deleted",
@@ -23,7 +20,6 @@
   "DESC": "desc",
   "DESCENDING": "descending",
   "DESCRIPTION": "Description",
-  "EDIBLE": "Edible",
   "ELLIPSIS": "...",
   "EMAIL": "Email",
   "FIELD_REQUIRED": "This field is required",
@@ -63,7 +59,6 @@
   "NO_RESULTS_FOUND": "No {result} found ...",
   "PASSWORD": "Password",
   "PREVIOUS": "Previous",
-  "PRICE": "Price",
   "REPEAT_NEW_PASSWORD": "Repeat new password",
   "REPEAT_NEW_PASSWORD_ERROR": "The specified passwords do not match",
   "REPEAT_PASSWORD": "Repeat password",
@@ -87,7 +82,6 @@
   "USER": "User",
   "USERS": "Users",
   "VERSION": "Version",
-  "WEIGHT": "Weight",
   "YOU": "you"
 }
 
