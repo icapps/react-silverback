@@ -48,7 +48,8 @@ class LanguageCodesOverview extends Component {
           label: strings.DEPRECATE,
           handleAction: this.props.deprecateLanguageCode,
           primaryButtonText: strings.DEPRECATE,
-          buttonClass: 'btn-danger',
+          buttonClass: 'btn-deprecate-list btn-deprecate',
+          primaryButtonClassName: 'btn-danger',
           text: strings.DEPRECATE_TEXT,
         },
         {
@@ -56,7 +57,8 @@ class LanguageCodesOverview extends Component {
           label: strings.UNDEPRECATE,
           handleAction: this.props.undeprecateLanguageCode,
           primaryButtonText: strings.UNDEPRECATE,
-          buttonClass: 'btn-info',
+          buttonClass: 'btn-deprecate-list btn-undeprecate',
+          primaryButtonClassName: 'btn-info',
           text: strings.UNDEPRECATE_TEXT,
         }]}
         deleteIdentifier={identifiers.NAME}

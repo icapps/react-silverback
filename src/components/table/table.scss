@@ -48,7 +48,7 @@
 
   button{
     img{
-      filter: grayscale(100%);
+      filter: greyscale(100%);
       opacity: 0.3;
     }
 
@@ -58,15 +58,6 @@
         opacity: 1;
       }
     }
-  }
-}
-
-.deprecated {
-  font-style: italic;
-  color: $dark-grey;
-
-  & td img {
-    opacity: 0.3;
   }
 }
 
@@ -98,5 +89,43 @@
 .active-key {
   color: $black;
 }
+
+.deprecated {
+  font-style: italic;
+  color: $dark-grey;
+
+  & td img {
+    opacity: 0.3;
+  }
+}
+
+.btn-deprecate-list {
+  background-color: $light-grey;
+  border-color: $light-grey;
+  &:hover {
+    color:white;
+  }
+}
+
+.btn-deprecate {
+  &:hover {
+    background-color: $red;
+    border-color: $red;
+  }
+}
+
+.btn-undeprecate {
+  &:hover {
+    background-color: $blue-green;
+    border-color: $blue-green;
+  }
+}
+
+
+
+
+
+
+
 
 
