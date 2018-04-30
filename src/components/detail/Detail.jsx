@@ -56,8 +56,8 @@ class Detail extends React.Component {
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
-    const canDeprecate = this.props.inputItems.find(item => item.id === identifiers.DEPRECATED);
-    const isDeprecated = canDeprecate && canDeprecate.value;
+    const active = this.props.inputItems.find(item => item.id === identifiers.ACTIVE);
+    const isDeprecated = active && active.value && props.deprecate;
 
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
@@ -110,7 +110,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!isDeprecated && props.deprecate && <Modal
+              {isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
@@ -119,6 +119,18 @@ class Detail extends React.Component {
                 modalButtonClassName="btn-danger"
                 secondaryButtonClassName="btn-light"
                 primaryButtonClassName="btn-danger"
+              >
+                <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
+              </Modal>}
+              {!isDeprecated && props.undeprecate && <Modal
+                id="undeprecate"
+                modalButtonText={`${strings.UNDEPRECATE} ${props.keyword.toLowerCase()}`}
+                handlePrimaryButton={() => this.props.undeprecate(this.props.id)}
+                primaryButtonText={strings.UNDEPRECATE}
+                secondaryButtonText={strings.CANCEL}
+                modalButtonClassName="btn-info"
+                secondaryButtonClassName="btn-light"
+                primaryButtonClassName="btn-info"
               >
                 <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}

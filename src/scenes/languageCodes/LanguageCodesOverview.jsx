@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode } from '../../redux/codes/actions';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode } from '../../redux/codes/actions';
 import constants from '../../redux/codes/constants';
 
 class LanguageCodesOverview extends Component {
@@ -50,6 +50,14 @@ class LanguageCodesOverview extends Component {
           primaryButtonText: strings.DEPRECATE,
           buttonClass: 'btn-danger',
           text: strings.DEPRECATE_TEXT,
+        },
+        {
+          id: identifiers.UNDEPRECATED,
+          label: strings.UNDEPRECATE,
+          handleAction: this.props.undeprecateLanguageCode,
+          primaryButtonText: strings.UNDEPRECATE,
+          buttonClass: 'btn-info',
+          text: strings.UNDEPRECATE_TEXT,
         }]}
         deleteIdentifier={identifiers.NAME}
       />
@@ -58,7 +66,7 @@ class LanguageCodesOverview extends Component {
 }
 
 LanguageCodesOverview.propTypes = {
-  languageCode: PropTypes.string,
+  languageCode: PropTypes.object,
   languageCodes: PropTypes.array.isRequired,
   languageCodeCount: PropTypes.number.isRequired,
   isError: PropTypes.bool.isRequired,
@@ -84,6 +92,7 @@ const mapDispatchToProps = {
   getLanguageCodes,
   createLanguageCode,
   deprecateLanguageCode,
+  undeprecateLanguageCode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodesOverview);

@@ -4,6 +4,7 @@ import format from 'date-fns/format';
 import isDate from 'date-fns/is_date';
 import { strings } from '../../utils';
 import { Modal } from '../index';
+import { identifiers } from '../../constants';
 import './table.css';
 
 const checkIcon = require('../../assets/images/check.svg');
@@ -63,23 +64,29 @@ class Table extends React.Component {
             {props.listItems.map(listItem => (
               <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
                 {props.keys.map(key => <td className={"table-data"} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
-                {props.actions && props.actions.length > 0 && (listItem.deprecated ? <td /> :
-                  <td className="remove-list-item table-data">
-                    {props.actions.map(action => <Modal
-                      key={action.id}
-                      id={action.id}
-                      modalButtonClassName={action.buttonClass}
-                      modalButtonText={action.label}
-                      handlePrimaryButton={() => action.handleAction(listItem.id)}
-                      primaryButtonText={action.primaryButtonText}
-                      secondaryButtonText={strings.CANCEL}
-                      secondaryButtonClassName="btn-light"
-                      primaryButtonClassName={action.buttonClass}
-                    >
-                      <p>{strings.formatString(action.text, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
-                    </Modal>)}
-                  </td>
-                )}
+                {props.actions && props.actions.length > 0 &&
+                  props.actions.map(action => {
+                    const shouldDeprecate = action.id === identifiers.DEPRECATED && !listItem.deprecated;
+                    const shouldUndeprecate = action.id === identifiers.UNDEPRECATED && listItem.deprecated;
+                    if (shouldDeprecate || shouldUndeprecate || (action.id !== identifiers.DEPRECATED && action.id !== identifiers.UNDEPRECATED)) {
+                      return <td className="remove-list-item table-data" key={action.id} >
+                        <Modal
+                          id={action.id}
+                          modalButtonClassName={action.buttonClass}
+                          modalButtonText={action.label}
+                          handlePrimaryButton={() => action.handleAction(listItem.id)}
+                          primaryButtonText={action.primaryButtonText}
+                          secondaryButtonText={strings.CANCEL}
+                          secondaryButtonClassName="btn-light"
+                          primaryButtonClassName={action.buttonClass}
+                        >
+                          <p>{strings.formatString(action.text, { item: <span className={`text-danger`}>{listItem[props.deleteIdentifier]}</span> })}</p>
+                        </Modal>
+                      </td>;
+                    }
+                    return null;
+                  })
+                }
                 {props.handleRemoveItem && <td className="remove-list-item table-data">
                   <Modal
                     id="delete"
