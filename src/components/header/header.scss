@@ -1,9 +1,26 @@
 header {
-  img {
+
+  button {
+    color: white;
+    display: flex;
+    background: transparent;
+    border: none;
     cursor: pointer;
+    padding: .375rem .75rem;
+    img {
+      width: 22px;
+      margin-right: .75rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
   }
 
   .navbar-toggler-icon {
+    cursor: pointer;
+    margin-left: .75rem;
     @media screen and (min-width: 576px) {
       display: none;
     }

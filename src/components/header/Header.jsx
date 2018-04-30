@@ -22,7 +22,10 @@ class Header extends React.Component {
       <header className="navbar navbar-dark bg-dark fixed-top">
         <Link className="navbar-brand" to="/">{strings.HEADER_TITLE}</Link>
         <div>
-          <img onClick={this.handleLogout} src={logout} alt={strings.LOG_OUT} />
+          <button type="button" className="button button-logout" onClick={this.handleLogout}>
+            <img src={logout} alt={strings.LOGOUT} />
+            {strings.LOGOUT}
+          </button>
           <span className="navbar-toggler-icon" onClick={props.toggleNavigation} />
         </div>
       </header>
