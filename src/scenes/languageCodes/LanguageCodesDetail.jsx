@@ -65,6 +65,7 @@ class LanguageCodeDetail extends Component {
         isCreateError={props.isCreateError}
         deprecate={this.deprecateLanguageCode}
         undeprecate={this.undeprecateLanguageCode}
+        isDeprecated={props.code.deprecated}
       />);
     return <EmptyDetail history={props.history} />;
   }
