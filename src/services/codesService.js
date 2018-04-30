@@ -26,3 +26,8 @@ export const deprecateLanguageCode = async (languageCodeId) => {
   const result = await Network.post(`/meta/codes/${languageCodeId}/deprecate`);
   return result;
 };
+
+export const undeprecateLanguageCode = async (languageCodeId) => {
+  const result = await Network.post(`/meta/codes/${languageCodeId}/undeprecate`);
+  return result;
+};

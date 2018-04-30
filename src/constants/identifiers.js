@@ -17,6 +17,7 @@ export const identifiers = {
   REPEAT_PASSWORD: 'repeatPassword',
   ROLE: 'role',
   TYPE: 'type',
+  UNDEPRECATED: 'undeprecated',
   UPDATED_AT: 'updatedAt',
   VALUE: 'value',
   WEIGHT: 'weight',
