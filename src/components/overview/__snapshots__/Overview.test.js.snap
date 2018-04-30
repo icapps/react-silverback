@@ -33,6 +33,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -80,6 +81,7 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
+    resetDeletedItem={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -211,6 +213,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           false,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -319,6 +322,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        false,
         false,
         Object {
           "instance": null,
@@ -714,6 +718,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             false,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -822,6 +827,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          false,
           false,
           Object {
             "instance": null,
@@ -1138,6 +1144,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -1185,6 +1192,7 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
+    resetDeletedItem={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1316,6 +1324,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           false,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -1424,6 +1433,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        false,
         false,
         Object {
           "instance": null,
@@ -1819,6 +1829,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             false,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -1927,6 +1938,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          false,
           false,
           Object {
             "instance": null,
@@ -2243,6 +2255,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -2272,6 +2285,7 @@ ShallowWrapper {
     listItems={Array []}
     paginationTotalCount={100}
     removeItem={[Function]}
+    resetDeletedItem={[Function]}
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -2354,6 +2368,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           false,
+          false,
           <h2>
             DataTypes
 </h2>,
@@ -2413,6 +2428,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        false,
         false,
         Object {
           "instance": null,
@@ -2646,6 +2662,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             false,
+            false,
             <h2>
               DataTypes
 </h2>,
@@ -2705,6 +2722,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          false,
           false,
           Object {
             "instance": null,

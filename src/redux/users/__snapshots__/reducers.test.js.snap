@@ -182,6 +182,7 @@ Object {
 
 exports[`users reducer should REMOVE_USER_PENDING 1`] = `
 Object {
+  "deletedUser": null,
   "errorMessage": "",
   "isError": false,
   "isPending": true,
@@ -197,6 +198,20 @@ exports[`users reducer should REMOVE_USER_REJECTED 1`] = `
 Object {
   "errorMessage": "Something went wrong!",
   "isError": true,
+  "isPending": false,
+  "isUpdatePending": false,
+  "isUserUpdated": false,
+  "user": null,
+  "userList": Array [],
+  "usersCount": 0,
+}
+`;
+
+exports[`users reducer should RESET_DELETED_USER 1`] = `
+Object {
+  "deletedUser": "",
+  "errorMessage": "",
+  "isError": false,
   "isPending": false,
   "isUpdatePending": false,
   "isUserUpdated": false,
@@ -247,6 +262,7 @@ Object {
 
 exports[`users reducer should return the initial state 1`] = `
 Object {
+  "deletedUser": "",
   "errorMessage": "",
   "isCreateError": false,
   "isCreatePending": false,

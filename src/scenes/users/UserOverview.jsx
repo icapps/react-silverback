@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers, createUser, removeUser, getUserRoles } from '../../redux/users/actions';
+import { getUsers, createUser, removeUser, getUserRoles, resetDeletedUser } from '../../redux/users/actions';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
@@ -53,6 +53,8 @@ class UserOverview extends Component {
         deleteIdentifier={identifiers.EMAIL}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
+        deletedItem={this.props.deletedUser}
+        resetDeletedItem={this.props.resetDeletedUser}
       />
     );
   }
@@ -80,6 +82,7 @@ const mapStateToProps = state => ({
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
+  deletedUser: state.users.deletedUser,
 });
 
 const mapDispatchToProps = {
@@ -87,6 +90,7 @@ const mapDispatchToProps = {
   createUser,
   removeUser,
   getUserRoles,
+  resetDeletedUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);

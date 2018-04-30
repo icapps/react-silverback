@@ -8,13 +8,14 @@ import './overview.css';
 const SORT_DESC = 'desc';
 
 class Overview extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       page: 0,
       limit: 25,
       sortField: null,
       sortOrder: null,
+      deletedItem: props.deletedItem ? props.deletedItem : '',
     };
     this.timer = null;
   }
@@ -22,10 +23,15 @@ class Overview extends React.Component {
     this.props.get(this.state.page, this.state.limit);
   }
 
-  remove = async item => {
+  componentWillUnmount() {
+    this.props.resetDeletedItem();
+  }
+
+  remove = async (item, deletedItem) => {
     if (this.props.removeItem) {
       const result = await this.props.removeItem(item);
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+        this.setState({ deletedItem });
         this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder);
       }
     }
@@ -67,6 +73,7 @@ class Overview extends React.Component {
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
           {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
+          {state.deletedItem !== '' && <div className="alert alert-danger" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
           <h2>
             {props.title}
             {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
@@ -133,6 +140,8 @@ Overview.propTypes = {
     handleAction: PropTypes.func,
     primaryButtonText: PropTypes.string,
   })),
+  deletedItem: PropTypes.string,
+  resetDeletedItem: PropTypes.func,
 };
 
 Overview.defaultProps = {
@@ -141,6 +150,8 @@ Overview.defaultProps = {
   dateFormat: null,
   removeItem: null,
   deleteIdentifier: '',
+  deletedItem: '',
+  resetDeletedItem: () => { },
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
