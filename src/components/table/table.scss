@@ -109,15 +109,15 @@
 
 .btn-deprecate {
   &:hover {
-    background-color: $red;
-    border-color: $red;
+    background-color: $warning;
+    border-color: $warning;
   }
 }
 
 .btn-undeprecate {
   &:hover {
-    background-color: $blue-green;
-    border-color: $blue-green;
+    background-color: $info;
+    border-color: $info;
   }
 }
 
