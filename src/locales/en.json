@@ -57,6 +57,7 @@
   "LOGIN_EMAIL_VALIDATION": "Invalid email address",
   "LOGIN_ERROR": "The email and/or password you entered are not valid.",
   "LOGIN_PASSWORD_REQUIRED": "Password is required",
+  "LOGOUT": "Logout",
   "NAME": "Name",
   "NEW_PASSWORD": "New password",
   "NEXT": "Next",
