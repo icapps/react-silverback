@@ -48,7 +48,7 @@
 
   button{
     img{
-      filter: greyscale(100%);
+      filter: grayscale(100%);
       opacity: 0.3;
     }
 
@@ -95,6 +95,11 @@
 
   & td img {
     opacity: 0.3;
+  }
+
+  & .modal {
+    color: $black;
+    font-style: normal;
   }
 }
 

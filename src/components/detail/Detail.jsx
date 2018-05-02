@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
 import { strings } from '../../utils';
-import { identifiers } from '../../constants/index';
 import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
@@ -49,7 +48,7 @@ class Detail extends React.Component {
     if (item.type === 'select') {
       return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={item.isEditable ? (this.state.inputItemState[item.id] || '') : item.value} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
 
 
