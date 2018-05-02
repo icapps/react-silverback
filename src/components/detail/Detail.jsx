@@ -49,7 +49,7 @@ class Detail extends React.Component {
     if (item.type === 'select') {
       return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={item.isEditable ? (this.state.inputItemState[item.id] || '') : item.value} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
 
 

@@ -10,14 +10,20 @@ import { getLanguageCodeById, createLanguageCode, deprecateLanguageCode, undepre
 
 class LanguageCodeDetail extends Component {
   componentDidMount() {
-    this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
+    this.props.getLanguageCodeById(this.props.location.state);
+  }
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.location.state !== this.props.location.state){
+      this.props.getLanguageCodeById(this.props.location.state);
+    }
   }
 
   createLanguageCode = async languageCode => {
     return new Promise(async resolve => {
       const result = await this.props.createLanguageCode(languageCode);
       if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
-        this.props.history.replace(`${window.location.pathname}/${this.props.languageCode}`, this.props.languageCode);
+        this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.code.id}`, this.props.code.id);
         resolve(true);
       }
       resolve(false);
@@ -27,14 +33,14 @@ class LanguageCodeDetail extends Component {
   deprecateLanguageCode = async id => {
     const result = await this.props.deprecateLanguageCode(id);
     if (result.action && result.action.type === constants.DEPRECATE_LANGUAGE_CODE_FULFILLED) {
-      this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
+      this.props.getLanguageCodeById(this.props.location.state);
     }
   }
 
   undeprecateLanguageCode = async id => {
     const result = await this.props.undeprecateLanguageCode(id);
     if (result.action && result.action.type === constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED) {
-      this.props.getLanguageCodeById(window.location.pathname.split('/')[2]);
+      this.props.getLanguageCodeById(this.props.location.state);
     }
   }
 
@@ -71,7 +77,7 @@ class LanguageCodeDetail extends Component {
 }
 
 LanguageCodeDetail.propTypes = {
-  languageCodes: PropTypes.object,
+  code: PropTypes.object,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,

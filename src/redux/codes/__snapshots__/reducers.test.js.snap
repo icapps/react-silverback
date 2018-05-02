@@ -6,7 +6,9 @@ Object {
   "isCreatePending": false,
   "isError": false,
   "isPending": false,
-  "languageCode": "id",
+  "languageCode": Object {
+    "id": "id",
+  },
   "languageCodeCount": 0,
   "languageCodeList": Array [],
 }
