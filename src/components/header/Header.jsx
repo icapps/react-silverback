@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { strings } from '../../utils';
 import './header.css';
 import constants from '../../redux/auth/constants';
+import Button from '../button/Button';
 
 const logout = require('../../assets/images/logout.svg');
 
@@ -22,10 +23,12 @@ class Header extends React.Component {
       <header className="navbar navbar-dark bg-dark fixed-top">
         <Link className="navbar-brand" to="/">{strings.HEADER_TITLE}</Link>
         <div>
-          <button type="button" className="button button-logout" onClick={this.handleLogout}>
-            <img src={logout} alt={strings.LOGOUT} />
-            {strings.LOGOUT}
-          </button>
+          <Button 
+            icon={logout}
+            text={strings.LOGOUT}
+            className='btn-dark btn-logout'
+            handleClick={this.handleLogout}
+          />
           <span className="navbar-toggler-icon" onClick={props.toggleNavigation} />
         </div>
       </header>

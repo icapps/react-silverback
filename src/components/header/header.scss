@@ -1,14 +1,9 @@
 header {
 
-  button {
-    color: white;
+  .btn-logout {
     display: flex;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: .375rem .75rem;
+    align-items: center;
     img {
-      width: 22px;
       margin-right: .75rem;
     }
   }
