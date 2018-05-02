@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
 import { strings } from '../../utils';
-import { identifiers } from '../../constants/index';
 import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
