@@ -78,7 +78,7 @@ class Table extends React.Component {
                           primaryButtonText={action.primaryButtonText}
                           secondaryButtonText={strings.CANCEL}
                           secondaryButtonClassName="btn-light"
-                          primaryButtonClassName={action.buttonClass}
+                          primaryButtonClassName={action.primaryButtonClassName}
                         >
                           <p>{strings.formatString(action.text, { item: <span className={`text-danger`}>{listItem[props.deleteIdentifier]}</span> })}</p>
                         </Modal>
