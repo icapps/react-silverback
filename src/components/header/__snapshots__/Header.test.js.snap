@@ -29,10 +29,13 @@ ShallowWrapper {
           Silverback
 </Link>,
         <div>
-          <img
-                    alt={undefined}
-                    onClick={[Function]}
-                    src="logout.svg"
+          <Button
+                    className="btn-dark btn-logout"
+                    handleClick={[Function]}
+                    icon="logout.svg"
+                    isDisabled={false}
+                    isPending={false}
+                    text="Logout"
           />
           <span
                     className="navbar-toggler-icon"
@@ -64,10 +67,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <img
-              alt={undefined}
-              onClick={[Function]}
-              src="logout.svg"
+            <Button
+              className="btn-dark btn-logout"
+              handleClick={[Function]}
+              icon="logout.svg"
+              isDisabled={false}
+              isPending={false}
+              text="Logout"
 />,
             <span
               className="navbar-toggler-icon"
@@ -80,15 +86,18 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "alt": undefined,
-              "onClick": [Function],
-              "src": "logout.svg",
+              "className": "btn-dark btn-logout",
+              "handleClick": [Function],
+              "icon": "logout.svg",
+              "isDisabled": false,
+              "isPending": false,
+              "text": "Logout",
             },
             "ref": null,
             "rendered": null,
-            "type": "img",
+            "type": [Function],
           },
           Object {
             "instance": null,
@@ -123,10 +132,13 @@ ShallowWrapper {
             Silverback
 </Link>,
           <div>
-            <img
-                        alt={undefined}
-                        onClick={[Function]}
-                        src="logout.svg"
+            <Button
+                        className="btn-dark btn-logout"
+                        handleClick={[Function]}
+                        icon="logout.svg"
+                        isDisabled={false}
+                        isPending={false}
+                        text="Logout"
             />
             <span
                         className="navbar-toggler-icon"
@@ -158,10 +170,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <img
-                alt={undefined}
-                onClick={[Function]}
-                src="logout.svg"
+              <Button
+                className="btn-dark btn-logout"
+                handleClick={[Function]}
+                icon="logout.svg"
+                isDisabled={false}
+                isPending={false}
+                text="Logout"
 />,
               <span
                 className="navbar-toggler-icon"
@@ -174,15 +189,18 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "alt": undefined,
-                "onClick": [Function],
-                "src": "logout.svg",
+                "className": "btn-dark btn-logout",
+                "handleClick": [Function],
+                "icon": "logout.svg",
+                "isDisabled": false,
+                "isPending": false,
+                "text": "Logout",
               },
               "ref": null,
               "rendered": null,
-              "type": "img",
+              "type": [Function],
             },
             Object {
               "instance": null,
