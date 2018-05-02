@@ -30,6 +30,7 @@ class UserDetail extends Component {
   }
 
   render() {
+    const userRolesMapped = this.props.userRoles.map(role => ({key: role.code, text: role.name}));
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     if (this.props.user) return (
       <Detail
@@ -42,7 +43,7 @@ class UserDetail extends Component {
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
-          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({key: role.code, text: role.name})), isEditable: true },
+          { id: identifiers.ROLE, value: this.props.user.role, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
           { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true },
         ]}
         history={this.props.history}
@@ -51,7 +52,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({key: role.code, text: role.name})) },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
         ]}
         create={this.createUser}
