@@ -23,7 +23,7 @@ class Header extends React.Component {
       <header className="navbar navbar-dark bg-dark fixed-top">
         <Link className="navbar-brand" to="/">{strings.HEADER_TITLE}</Link>
         <div>
-          <Button 
+          <Button
             icon={logout}
             text={strings.LOGOUT}
             className='btn-dark btn-logout'
