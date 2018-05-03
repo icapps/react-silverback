@@ -42,6 +42,14 @@ class Table extends React.Component {
       default: return data;
     }
   }
+
+  selectData = (object, path) => {
+    return this.renderData(path.split('.').reduce((obj, prop) => {
+        return obj[prop];
+      }, object
+    ));       
+  }
+
   render() {
     const { props, state } = this;
     return (
@@ -63,7 +71,7 @@ class Table extends React.Component {
           <tbody>
             {props.listItems.map(listItem => (
               <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
-                {props.keys.map(key => <td className={"table-data"} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.renderData(listItem[key.id])}</td>)}
+                {props.keys.map(key => <td className={"table-data"} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.selectData(listItem, key.id)}</td>)}
                 {props.actions && props.actions.length > 0 &&
                   props.actions.map(action => {
                     const shouldDeprecate = action.id === identifiers.DEPRECATED && !listItem.deprecated;
@@ -78,7 +86,7 @@ class Table extends React.Component {
                           primaryButtonText={action.primaryButtonText}
                           secondaryButtonText={strings.CANCEL}
                           secondaryButtonClassName="btn-light"
-                          primaryButtonClassName={action.buttonClass}
+                          primaryButtonClassName={action.primaryButtonClassName}
                         >
                           <p>{strings.formatString(action.text, { item: <span className={`text-danger`}>{listItem[props.deleteIdentifier]}</span> })}</p>
                         </Modal>

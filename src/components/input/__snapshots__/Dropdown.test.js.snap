@@ -43,20 +43,14 @@ ShallowWrapper {
           value="test"
 >
           <option
-                    value="test"
-          >
-                    test
-          </option>
+                    value={undefined}
+          />
           <option
-                    value="test2"
-          >
-                    test2
-          </option>
+                    value={undefined}
+          />
           <option
-                    value="test3"
-          >
-                    test3
-          </option>
+                    value={undefined}
+          />
 </select>,
       ],
       "className": "form-group",
@@ -82,20 +76,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <option
-              value="test"
->
-              test
-</option>,
+              value={undefined}
+/>,
             <option
-              value="test2"
->
-              test2
-</option>,
+              value={undefined}
+/>,
             <option
-              value="test3"
->
-              test3
-</option>,
+              value={undefined}
+/>,
           ],
           "className": "form-control",
           "id": "test",
@@ -106,38 +94,38 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "test",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "test",
-              "value": "test",
+              "children": undefined,
+              "value": undefined,
             },
             "ref": null,
-            "rendered": "test",
+            "rendered": null,
             "type": "option",
           },
           Object {
             "instance": null,
-            "key": "test2",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "test2",
-              "value": "test2",
+              "children": undefined,
+              "value": undefined,
             },
             "ref": null,
-            "rendered": "test2",
+            "rendered": null,
             "type": "option",
           },
           Object {
             "instance": null,
-            "key": "test3",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "test3",
-              "value": "test3",
+              "children": undefined,
+              "value": undefined,
             },
             "ref": null,
-            "rendered": "test3",
+            "rendered": null,
             "type": "option",
           },
         ],
@@ -165,20 +153,14 @@ ShallowWrapper {
             value="test"
 >
             <option
-                        value="test"
-            >
-                        test
-            </option>
+                        value={undefined}
+            />
             <option
-                        value="test2"
-            >
-                        test2
-            </option>
+                        value={undefined}
+            />
             <option
-                        value="test3"
-            >
-                        test3
-            </option>
+                        value={undefined}
+            />
 </select>,
         ],
         "className": "form-group",
@@ -204,20 +186,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <option
-                value="test"
->
-                test
-</option>,
+                value={undefined}
+/>,
               <option
-                value="test2"
->
-                test2
-</option>,
+                value={undefined}
+/>,
               <option
-                value="test3"
->
-                test3
-</option>,
+                value={undefined}
+/>,
             ],
             "className": "form-control",
             "id": "test",
@@ -228,38 +204,38 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "test",
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "test",
-                "value": "test",
+                "children": undefined,
+                "value": undefined,
               },
               "ref": null,
-              "rendered": "test",
+              "rendered": null,
               "type": "option",
             },
             Object {
               "instance": null,
-              "key": "test2",
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "test2",
-                "value": "test2",
+                "children": undefined,
+                "value": undefined,
               },
               "ref": null,
-              "rendered": "test2",
+              "rendered": null,
               "type": "option",
             },
             Object {
               "instance": null,
-              "key": "test3",
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "test3",
-                "value": "test3",
+                "children": undefined,
+                "value": undefined,
               },
               "ref": null,
-              "rendered": "test3",
+              "rendered": null,
               "type": "option",
             },
           ],

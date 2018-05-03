@@ -87,7 +87,7 @@ class Pagination extends React.Component {
           </nav>
         </div>
         <div className="pagination-group">
-          <Dropdown id="pageLimit" value={props.pageLimit} handleChange={this.changePageLimit} options={pageLimitOptions} isLabelShown={false} />
+          <Dropdown id="pageLimit" value={props.pageLimit} handleChange={this.changePageLimit} options={pageLimitOptions.map(option => ({ key: option, text: option }))} isLabelShown={false} />
           <span className="page-limit-label">Items per page</span>
         </div>
       </div>

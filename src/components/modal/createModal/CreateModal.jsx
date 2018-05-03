@@ -24,7 +24,7 @@ class CreateModal extends React.Component {
       if (item.defaultValue) {
         createParametersState[item.id] = item.defaultValue;
       } else if (item.options && item.options.length > 0) {
-        createParametersState[item.id] = item.options[0];
+        createParametersState[item.id] = item.options[0].key;
       }
       else {
         createParametersState[item.id] = item.type === 'boolean' ? false : '';

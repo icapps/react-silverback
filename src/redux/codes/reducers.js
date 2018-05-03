@@ -44,7 +44,7 @@ const codes = (state = initialState, action = {}) => {
       return {
         ...state,
         isCreatePending: false,
-        languageCode: payload.data.id,
+        languageCode: payload.data,
       };
     case constants.CREATE_LANGUAGE_CODE_PENDING:
       return {
