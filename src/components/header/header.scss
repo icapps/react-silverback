@@ -1,9 +1,21 @@
 header {
-  img {
-    cursor: pointer;
+
+  .btn-logout {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: .75rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
   }
 
   .navbar-toggler-icon {
+    cursor: pointer;
+    margin-left: .75rem;
     @media screen and (min-width: 576px) {
       display: none;
     }
