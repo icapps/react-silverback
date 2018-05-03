@@ -1,11 +1,9 @@
 export const identifiers = {
   ACTIVE: 'active',
-  BEST_BEFORE: 'bestBefore',
   CODE: 'code',
   CREATED_AT: 'createdAt',
   DEPRECATED: 'deprecated',
   DESCRIPTION: 'description',
-  EDIBLE: 'edible',
   EMAIL: 'email',
   FIRST_NAME: 'firstName',
   HAS_ACCESS: 'hasAccess',
@@ -13,7 +11,6 @@ export const identifiers = {
   LAST_NAME: 'lastName',
   NAME: 'name',
   PASSWORD: 'password',
-  PRICE: 'price',
   REPEAT_PASSWORD: 'repeatPassword',
   ROLE: 'role',
   TYPE: 'type',
@@ -21,5 +18,4 @@ export const identifiers = {
   UPDATED_AT: 'updatedAt',
   USER_HAS_TO_SET_PASSWORD: 'userHasToSetPassword',
   VALUE: 'value',
-  WEIGHT: 'weight',
 };
