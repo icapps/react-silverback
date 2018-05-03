@@ -13,7 +13,7 @@ export const identifiers = {
   PASSWORD: 'password',
   REGISTRATION_COMPLETED: 'registrationCompleted',
   REPEAT_PASSWORD: 'repeatPassword',
-  ROLE: 'role',
+  ROLE: 'role.name',
   TYPE: 'type',
   UNDEPRECATED: 'undeprecated',
   UPDATED_AT: 'updatedAt',
