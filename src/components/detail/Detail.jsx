@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
 import { strings } from '../../utils';
-import { identifiers } from '../../constants/index';
 import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
@@ -56,9 +55,6 @@ class Detail extends React.Component {
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
-    const active = this.props.inputItems.find(item => item.id === identifiers.ACTIVE);
-    const isDeprecated = active && active.value && props.deprecate;
-
     return (
       <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         {props.inputItems && (
@@ -77,7 +73,7 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            <h3>{props.title}{isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
+            <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
               {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
@@ -110,7 +106,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {isDeprecated && <Modal
+              {!props.isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
@@ -122,7 +118,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!isDeprecated && props.undeprecate && <Modal
+              {props.isDeprecated && <Modal
                 id="undeprecate"
                 modalButtonText={`${strings.UNDEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.undeprecate(this.props.id)}
@@ -157,6 +153,7 @@ Detail.propTypes = {
   isUpdated: PropTypes.bool,
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
+  isDeprecated: PropTypes.bool.isRequired,
 };
 
 Detail.defaultProps = {
