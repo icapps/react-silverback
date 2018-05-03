@@ -106,7 +106,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {!props.isDeprecated && <Modal
+              {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.deprecate(this.props.id)}
@@ -118,7 +118,7 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
-              {props.isDeprecated && <Modal
+              {props.undeprecate && props.isDeprecated && <Modal
                 id="undeprecate"
                 modalButtonText={`${strings.UNDEPRECATE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={() => this.props.undeprecate(this.props.id)}
