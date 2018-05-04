@@ -7,18 +7,15 @@ import './createModal.css';
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      createParametersState: null,
+      createParametersState: this.initializeCreateParameters(),
       showError: false,
     };
   }
-  componentDidMount() {
-    this.setCreateParameters();
-  }
 
-  setCreateParameters = () => {
+  initializeCreateParameters = () => {
     let createParametersState = {};
     this.props.createParameters.forEach(item => {
       if (item.defaultValue) {
@@ -30,7 +27,11 @@ class CreateModal extends React.Component {
         createParametersState[item.id] = item.type === 'boolean' ? false : '';
       }
     });
-    this.setState({ createParametersState, showError: false });
+    return createParametersState;
+  }
+
+  setCreateParameters = () => {
+    this.setState({ createParametersState: this.initializeCreateParameters(), showError: false });
   }
 
   create = async () => {

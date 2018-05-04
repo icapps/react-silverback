@@ -21,6 +21,7 @@ class Overview extends React.Component {
     };
     this.timer = null;
   }
+
   componentDidMount() {
     this.props.get(this.state.page, this.state.limit);
   }
@@ -47,7 +48,7 @@ class Overview extends React.Component {
           if (actionResult.action && actionResult.action.type.includes('FULFILLED')) {
             this.setState({ actionClass: action.actionClassName, actionText: strings.formatString(action.successMessage, { item: <strong>{item[this.props.deleteIdentifier]}</strong> }) });
           }
-          await this.props.get(this.state.page * this.state.limit, this.state.limit);
+          await this.sortItems(this.state.sortField, this.state.sortOrder);
         },
       };
     });
