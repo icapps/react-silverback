@@ -33,7 +33,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
           { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
           { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: false },
-          { id: identifiers.ROLE, value: strings.ROLE, isSortable: false },
+          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
         history={this.props.history}
