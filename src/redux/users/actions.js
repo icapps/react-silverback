@@ -15,10 +15,10 @@ export const getUsersById = id => {
   };
 };
 
-export const createUser = (user) => {
+export const createUser = (user, changePassword) => {
   return {
     type: constants.CREATE_USER,
-    payload: userService.create(user),
+    payload: userService.create(user, changePassword),
   };
 };
 
