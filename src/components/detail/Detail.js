@@ -153,7 +153,7 @@ Detail.propTypes = {
   isUpdated: PropTypes.bool,
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
-  isDeprecated: PropTypes.bool.isRequired,
+  isDeprecated: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -165,6 +165,7 @@ Detail.defaultProps = {
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
+  isDeprecated: false,
 };
 
 export default Detail;
