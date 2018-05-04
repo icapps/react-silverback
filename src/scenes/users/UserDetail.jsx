@@ -21,9 +21,9 @@ class UserDetail extends Component {
     }
   }
 
-  createUser = async user => {
+  createUser = async (user, changePassword) => {
     return new Promise(async resolve => {
-      const result = await this.props.createUser(user);
+      const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
         this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
         resolve(true);
@@ -61,6 +61,7 @@ class UserDetail extends Component {
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
+          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
         remove={this.props.removeUser}

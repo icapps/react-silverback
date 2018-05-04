@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Checkbox, BasicInput, Dropdown } from '../../index';
 import { strings } from '../../../utils';
+import { identifiers } from '../../../constants';
 import './createModal.css';
 
 const plus = require('../../../assets/images/plus.svg');
@@ -12,6 +13,7 @@ class CreateModal extends React.Component {
     this.state = {
       createParametersState: null,
       showError: false,
+      createPassword: true,
     };
   }
   componentDidMount() {
@@ -35,19 +37,32 @@ class CreateModal extends React.Component {
 
   create = async () => {
     this.setState({ showError: true });
-    return this.props.create(this.state.createParametersState);
+    if (this.state.createPassword) {
+      return this.props.create({ ...this.state.createParametersState, password: undefined }, this.state.createPassword);
+    }
+    return this.props.create(this.state.createParametersState, this.state.createPassword);
   }
 
   handleChange = event => {
     this.setState({ createParametersState: { ...this.state.createParametersState, [event.target.id.replace('modal-', '')]: event.target.type === 'checkbox' ? event.target.checked : event.target.value } });
   };
 
+  handleCreatePassword = event => {
+    this.setState({ createPassword: !this.state.createPassword });
+  }
+
   renderInput = item => {
     if (item.type === 'boolean') {
       return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} isDisabled={this.props.isPending} />;
-    }
-    if (item.type === 'select') {
+    } else if (item.type === 'select') {
       return <Dropdown key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} options={item.options} />;
+    } else if (item.type === 'password') {
+      return (
+        <React.Fragment key={item.id}>
+          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
+          <Checkbox id={identifiers.USER_HAS_TO_SET_PASSWORD} text={strings.USER_HAS_TO_SET_PASSWORD} value={this.state.createPassword} handleChange={this.handleCreatePassword} isDisabled={this.props.isPending} />
+        </React.Fragment>
+      );
     }
     return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending} />;
   }
@@ -69,7 +84,9 @@ class CreateModal extends React.Component {
         handleModalButton={this.setCreateParameters}
       >
         {this.props.isError && this.state.showError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
-        <div>{this.state.createParametersState && this.props.createParameters.map(item => this.renderInput(item))}</div>
+        <div className="create-modal-input">
+          {this.state.createParametersState && this.props.createParameters.map(item => this.renderInput(item))}
+        </div>
       </Modal>
     );
   }
