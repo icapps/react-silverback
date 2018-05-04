@@ -10,8 +10,15 @@ import constants from '../../redux/users/constants';
 
 class UserDetail extends Component {
   componentDidMount() {
-    this.props.getUsersById(window.location.pathname.split('/')[2]);
+    this.props.getUsersById(this.props.location.state);
     this.props.getUserRoles();
+  }
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.location.state !== this.props.location.state){
+      this.props.getUsersById(this.props.location.state);
+      this.props.getUserRoles();
+    }
   }
 
   createUser = async (user, changePassword) => {

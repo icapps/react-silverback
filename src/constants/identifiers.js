@@ -12,7 +12,7 @@ export const identifiers = {
   NAME: 'name',
   PASSWORD: 'password',
   REPEAT_PASSWORD: 'repeatPassword',
-  ROLE: 'role',
+  ROLE: 'role.name',
   TYPE: 'type',
   UNDEPRECATED: 'undeprecated',
   UPDATED_AT: 'updatedAt',

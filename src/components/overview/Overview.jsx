@@ -19,6 +19,7 @@ class Overview extends React.Component {
     };
     this.timer = null;
   }
+  
   componentDidMount() {
     this.props.get(this.state.page, this.state.limit);
   }
@@ -42,7 +43,7 @@ class Overview extends React.Component {
       return {
         ...action, handleAction: async id => {
           await action.handleAction(id);
-          await this.props.get(this.state.page * this.state.limit, this.state.limit);
+          await this.sortItems(this.state.sortField, this.state.sortOrder);
         },
       };
     });
