@@ -11,10 +11,12 @@ export const identifiers = {
   LAST_NAME: 'lastName',
   NAME: 'name',
   PASSWORD: 'password',
+  REGISTRATION_COMPLETED: 'registrationCompleted',
   REPEAT_PASSWORD: 'repeatPassword',
   ROLE: 'role.name',
   TYPE: 'type',
   UNDEPRECATED: 'undeprecated',
   UPDATED_AT: 'updatedAt',
+  USER_HAS_TO_SET_PASSWORD: 'userHasToSetPassword',
   VALUE: 'value',
 };
