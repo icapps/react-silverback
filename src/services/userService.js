@@ -13,8 +13,9 @@ export const getById = async id => {
   return result;
 };
 
-export const create = async (user) => {
-  const result = await Network.post('/users?changePassword=true', user);
+export const create = async (user, changePassword) => {
+  const userShouldChangePassword = changePassword ? '?changePassword=true' : '';
+  const result = await Network.post(`/users${userShouldChangePassword}`, user);
   return result;
 };
 

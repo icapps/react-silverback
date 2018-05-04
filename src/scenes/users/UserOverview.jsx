@@ -8,9 +8,9 @@ import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 
 class UserOverview extends Component {
-  createUser = async user => {
+  createUser = async (user, changePassword) => {
     return new Promise(async resolve => {
-      const result = await this.props.createUser(user);
+      const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
         this.props.history.push(`${window.location.pathname}/${this.props.user.id}`, this.props.user.id);
         resolve(true);
@@ -44,6 +44,7 @@ class UserOverview extends Component {
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({key: role.code, text: role.name})) },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
+          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
         removeItem={this.props.removeUser}

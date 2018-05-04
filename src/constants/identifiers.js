@@ -17,5 +17,6 @@ export const identifiers = {
   TYPE: 'type',
   UNDEPRECATED: 'undeprecated',
   UPDATED_AT: 'updatedAt',
+  USER_HAS_TO_SET_PASSWORD: 'userHasToSetPassword',
   VALUE: 'value',
 };
