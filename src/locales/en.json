@@ -60,6 +60,7 @@
   "NO_RESULTS_FOUND": "No {result} found ...",
   "PASSWORD": "Password",
   "PREVIOUS": "Previous",
+  "REGISTRATION_COMPLETED": "Registration completed",
   "REPEAT_NEW_PASSWORD": "Repeat new password",
   "REPEAT_NEW_PASSWORD_ERROR": "The specified passwords do not match",
   "REPEAT_PASSWORD": "Repeat password",
@@ -81,6 +82,7 @@
   "UPDATE_SUCCESS": "Your changes have been saved successfully",
   "UPDATED_AT": "Updated at",
   "USER": "User",
+  "USER_HAS_TO_SET_PASSWORD": "User has to set the password",
   "USERS": "Users",
   "VERSION": "Version",
   "YOU": "you"

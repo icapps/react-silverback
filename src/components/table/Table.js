@@ -45,9 +45,9 @@ class Table extends React.Component {
 
   selectData = (object, path) => {
     return this.renderData(path.split('.').reduce((obj, prop) => {
-        return obj[prop];
-      }, object
-    ));       
+      return obj[prop];
+    }, object
+    ));
   }
 
   render() {
