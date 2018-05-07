@@ -24,7 +24,7 @@ class Header extends React.Component {
         <Link className="navbar-brand" to="/">{strings.HEADER_TITLE}</Link>
         <div>
           <Button
-            icon={logout}
+            rightIcon={logout}
             text={strings.LOGOUT}
             className='btn-dark btn-logout'
             handleClick={this.handleLogout}

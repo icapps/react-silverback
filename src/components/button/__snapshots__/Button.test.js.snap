@@ -10,6 +10,7 @@ ShallowWrapper {
     icon={undefined}
     isDisabled={false}
     isPending={false}
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -29,6 +30,7 @@ ShallowWrapper {
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn ",
       "disabled": false,
@@ -49,6 +51,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -63,6 +66,7 @@ ShallowWrapper {
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn ",
         "disabled": false,
@@ -83,6 +87,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
@@ -107,6 +112,7 @@ ShallowWrapper {
     icon={undefined}
     isDisabled={false}
     isPending={false}
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -126,6 +132,7 @@ ShallowWrapper {
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn btn-primary",
       "disabled": false,
@@ -146,6 +153,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -160,6 +168,7 @@ ShallowWrapper {
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn btn-primary",
         "disabled": false,
@@ -180,6 +189,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
@@ -204,6 +214,7 @@ ShallowWrapper {
     icon="plus.svg"
     isDisabled={false}
     isPending={false}
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -226,6 +237,7 @@ ShallowWrapper {
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn btn-primary",
       "disabled": false,
@@ -257,6 +269,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -274,6 +287,7 @@ ShallowWrapper {
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn btn-primary",
         "disabled": false,
@@ -305,6 +319,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
