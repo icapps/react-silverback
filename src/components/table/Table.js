@@ -82,7 +82,7 @@ class Table extends React.Component {
                           id={action.id}
                           modalButtonClassName={action.buttonClass}
                           modalButtonText={action.label}
-                          handlePrimaryButton={() => action.handleAction(listItem.id)}
+                          handlePrimaryButton={() => action.handleAction(listItem)}
                           primaryButtonText={action.primaryButtonText}
                           secondaryButtonText={strings.CANCEL}
                           secondaryButtonClassName="btn-light"

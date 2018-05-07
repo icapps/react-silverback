@@ -9,12 +9,18 @@ import constants from '../../redux/codes/constants';
 import { getLanguageCodeById, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode } from '../../redux/codes/actions';
 
 class LanguageCodeDetail extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showDeprecationStatus: false,
+    };
+  }
   componentDidMount() {
     this.props.getLanguageCodeById(this.props.location.state);
   }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.location.state !== this.props.location.state){
+    if (prevProps.location.state !== this.props.location.state) {
       this.props.getLanguageCodeById(this.props.location.state);
     }
   }
@@ -34,6 +40,7 @@ class LanguageCodeDetail extends Component {
     const result = await this.props.deprecateLanguageCode(id);
     if (result.action && result.action.type === constants.DEPRECATE_LANGUAGE_CODE_FULFILLED) {
       this.props.getLanguageCodeById(this.props.location.state);
+      this.setState({ showDeprecationStatus: true });
     }
   }
 
@@ -41,6 +48,7 @@ class LanguageCodeDetail extends Component {
     const result = await this.props.undeprecateLanguageCode(id);
     if (result.action && result.action.type === constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED) {
       this.props.getLanguageCodeById(this.props.location.state);
+      this.setState({ showDeprecationStatus: true });
     }
   }
 
@@ -72,6 +80,7 @@ class LanguageCodeDetail extends Component {
         deprecate={this.deprecateLanguageCode}
         undeprecate={this.undeprecateLanguageCode}
         isDeprecated={props.code.deprecated}
+        showDeprecationStatus={this.state.showDeprecationStatus}
       />);
     return <EmptyDetail history={props.history} />;
   }

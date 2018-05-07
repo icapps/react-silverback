@@ -96,6 +96,11 @@
   & td img {
     opacity: 0.3;
   }
+
+  & .modal {
+    color: $black;
+    font-style: normal;
+  }
 }
 
 .btn-deprecate-list {

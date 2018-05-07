@@ -16,10 +16,12 @@ class Overview extends React.Component {
       sortField: null,
       sortOrder: null,
       deletedItem: props.deletedItem ? props.deletedItem : '',
+      actionText: '',
+      actionClass: '',
     };
     this.timer = null;
   }
-  
+
   componentDidMount() {
     this.props.get(this.state.page, this.state.limit);
   }
@@ -41,8 +43,11 @@ class Overview extends React.Component {
   setActions = actions => {
     return actions.map(action => {
       return {
-        ...action, handleAction: async id => {
-          await action.handleAction(id);
+        ...action, handleAction: async item => {
+          const actionResult = await action.handleAction(item.id);
+          if (actionResult.action && actionResult.action.type.includes('FULFILLED')) {
+            this.setState({ actionClass: action.actionClassName, actionText: strings.formatString(action.successMessage, { item: <strong>{item[this.props.deleteIdentifier]}</strong> }) });
+          }
           await this.sortItems(this.state.sortField, this.state.sortOrder);
         },
       };
@@ -74,6 +79,7 @@ class Overview extends React.Component {
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
           {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
+          {state.actionText !== '' && <div className={`alert ${state.actionClass}`} role="alert">{state.actionText}</div>}
           {state.deletedItem !== '' && <div className="alert alert-danger" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
           <h2>
             {props.title}

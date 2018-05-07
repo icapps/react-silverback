@@ -8,19 +8,16 @@ import './createModal.css';
 const plus = require('../../../assets/images/plus.svg');
 
 class CreateModal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      createParametersState: null,
+      createParametersState: this.initializeCreateParameters(),
       showError: false,
       createPassword: true,
     };
   }
-  componentDidMount() {
-    this.setCreateParameters();
-  }
 
-  setCreateParameters = () => {
+  initializeCreateParameters = () => {
     let createParametersState = {};
     this.props.createParameters.forEach(item => {
       if (item.defaultValue) {
@@ -32,7 +29,11 @@ class CreateModal extends React.Component {
         createParametersState[item.id] = item.type === 'boolean' ? false : '';
       }
     });
-    this.setState({ createParametersState, showError: false });
+    return createParametersState;
+  }
+
+  setCreateParameters = () => {
+    this.setState({ createParametersState: this.initializeCreateParameters(), showError: false });
   }
 
   create = async () => {
@@ -59,8 +60,8 @@ class CreateModal extends React.Component {
     } else if (item.type === 'password') {
       return (
         <React.Fragment key={item.id}>
-          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
           <Checkbox id={identifiers.USER_HAS_TO_SET_PASSWORD} text={strings.USER_HAS_TO_SET_PASSWORD} value={this.state.createPassword} handleChange={this.handleCreatePassword} isDisabled={this.props.isPending} />
+          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
         </React.Fragment>
       );
     }

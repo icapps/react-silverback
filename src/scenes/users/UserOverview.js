@@ -42,7 +42,7 @@ class UserOverview extends Component {
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({key: role.code, text: role.name})) },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}

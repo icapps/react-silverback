@@ -7,22 +7,18 @@ import './detail.css';
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
 class Detail extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      inputItemState: null,
+      inputItemState: this.setInputItems(),
+      isSaved: false,
     };
-  }
-
-  componentDidMount() {
-    this.setInputItems();
   }
 
   setInputItems = () => {
     let inputItemState = {};
     this.props.inputItems.forEach(item => { if (item.isEditable) { inputItemState[item.id] = item.value; } });
-    this.setState({ inputItemState });
-    return true;
+    return inputItemState;
   }
 
   handleChange = event => {
@@ -36,9 +32,23 @@ class Detail extends React.Component {
     }
   }
 
+  resetChanges = () => {
+    this.setState({ inputItemState: this.setInputItems() }, this.forceUpdate());
+    return true;
+  }
+
   delete = () => {
     this.props.remove(this.props.id);
     this.props.history.goBack();
+  }
+
+
+  deprecate = () => {
+    this.props.deprecate(this.props.id);
+  }
+
+  undeprecate = () => {
+    this.props.undeprecate(this.props.id);
   }
 
   renderInput = item => {
@@ -56,7 +66,7 @@ class Detail extends React.Component {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
     return (
-      <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+      <main className="detail col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" >
         {props.inputItems && (
           <div className="container">
             <div className="detail-header">
@@ -73,6 +83,8 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
+            {props.showDeprecationStatus && props.isDeprecated && <div className="alert alert-danger" role="alert">{strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
+            {props.showDeprecationStatus && !props.isDeprecated && <div className="alert alert-info" role="alert">{strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
@@ -84,7 +96,7 @@ class Detail extends React.Component {
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
-                  handlePrimaryButton={this.setInputItems}
+                  handlePrimaryButton={this.resetChanges}
                   primaryButtonText={strings.RESET}
                   secondaryButtonText={strings.CANCEL}
                   modalButtonClassName="btn-light"
@@ -109,7 +121,7 @@ class Detail extends React.Component {
               {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
-                handlePrimaryButton={() => this.props.deprecate(this.props.id)}
+                handlePrimaryButton={this.deprecate}
                 primaryButtonText={strings.DEPRECATE}
                 secondaryButtonText={strings.CANCEL}
                 modalButtonClassName="btn-danger"
@@ -121,7 +133,7 @@ class Detail extends React.Component {
               {props.undeprecate && props.isDeprecated && <Modal
                 id="undeprecate"
                 modalButtonText={`${strings.UNDEPRECATE} ${props.keyword.toLowerCase()}`}
-                handlePrimaryButton={() => this.props.undeprecate(this.props.id)}
+                handlePrimaryButton={this.undeprecate}
                 primaryButtonText={strings.UNDEPRECATE}
                 secondaryButtonText={strings.CANCEL}
                 modalButtonClassName="btn-info"
@@ -154,6 +166,7 @@ Detail.propTypes = {
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   isDeprecated: PropTypes.bool,
+  showDeprecationStatus: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -166,6 +179,7 @@ Detail.defaultProps = {
   isCreatePending: false,
   isCreateError: false,
   isDeprecated: false,
+  showDeprecationStatus: false,
 };
 
 export default Detail;
