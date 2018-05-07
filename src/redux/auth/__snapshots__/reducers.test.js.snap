@@ -74,11 +74,22 @@ Object {
 }
 `;
 
-exports[`auth reducer should LOGOUT_USER 1`] = `
+exports[`auth reducer should LOGIN_USER_REJECTED 1`] = `
+Object {
+  "errorMessage": "test",
+  "isError": true,
+  "isLoggedIn": false,
+  "isPending": false,
+}
+`;
+
+exports[`auth reducer should LOGOUT_USER_PENDING 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
   "isLoggedIn": false,
+  "isPasswordConfirmed": false,
+  "isPasswordVerified": false,
   "isPending": false,
 }
 `;
