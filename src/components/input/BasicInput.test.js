@@ -29,6 +29,13 @@ describe('BasicInput Component', () => {
 
   it('should render a BasicInput component with error handling', () => {
     const wrapper = shallow(<BasicInput id="test" label="Text with errorhandling" value="test" handleChange={() => { }}   isValid={false} errorMessage="This is an error message" />);
+    wrapper.find('input').simulate('keypress', {key: 'Test'});
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a BasicInput component that can handle an enter', () => {
+    const wrapper = shallow(<BasicInput id="test" label="Text with errorhandling" value="test" handleChange={() => { }} handleEnter={() => { }}   isValid={false} errorMessage="This is an error message" />);
+    wrapper.find('input').simulate('keypress', {key: 'Enter'});
     expect(wrapper).toMatchSnapshot();
   });
 });

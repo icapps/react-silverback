@@ -11,9 +11,18 @@ ShallowWrapper {
     label="This is a dropdown"
     options={
         Array [
-            "test",
-            "test2",
-            "test3",
+            Object {
+              "key": "test",
+              "text": "test",
+            },
+            Object {
+              "key": "test2",
+              "text": "test2",
+            },
+            Object {
+              "key": "test3",
+              "text": "test3",
+            },
           ]
     }
     value="test"
@@ -43,14 +52,20 @@ ShallowWrapper {
           value="test"
 >
           <option
-                    value={undefined}
-          />
+                    value="test"
+          >
+                    test
+          </option>
           <option
-                    value={undefined}
-          />
+                    value="test2"
+          >
+                    test2
+          </option>
           <option
-                    value={undefined}
-          />
+                    value="test3"
+          >
+                    test3
+          </option>
 </select>,
       ],
       "className": "form-group",
@@ -76,14 +91,20 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <option
-              value={undefined}
-/>,
+              value="test"
+>
+              test
+</option>,
             <option
-              value={undefined}
-/>,
+              value="test2"
+>
+              test2
+</option>,
             <option
-              value={undefined}
-/>,
+              value="test3"
+>
+              test3
+</option>,
           ],
           "className": "form-control",
           "id": "test",
@@ -94,38 +115,38 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "test",
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
-              "value": undefined,
+              "children": "test",
+              "value": "test",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "test",
             "type": "option",
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "test2",
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
-              "value": undefined,
+              "children": "test2",
+              "value": "test2",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "test2",
             "type": "option",
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "test3",
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
-              "value": undefined,
+              "children": "test3",
+              "value": "test3",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "test3",
             "type": "option",
           },
         ],
@@ -153,14 +174,20 @@ ShallowWrapper {
             value="test"
 >
             <option
-                        value={undefined}
-            />
+                        value="test"
+            >
+                        test
+            </option>
             <option
-                        value={undefined}
-            />
+                        value="test2"
+            >
+                        test2
+            </option>
             <option
-                        value={undefined}
-            />
+                        value="test3"
+            >
+                        test3
+            </option>
 </select>,
         ],
         "className": "form-group",
@@ -186,14 +213,20 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <option
-                value={undefined}
-/>,
+                value="test"
+>
+                test
+</option>,
               <option
-                value={undefined}
-/>,
+                value="test2"
+>
+                test2
+</option>,
               <option
-                value={undefined}
-/>,
+                value="test3"
+>
+                test3
+</option>,
             ],
             "className": "form-control",
             "id": "test",
@@ -204,38 +237,38 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "test",
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
-                "value": undefined,
+                "children": "test",
+                "value": "test",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "test",
               "type": "option",
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "test2",
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
-                "value": undefined,
+                "children": "test2",
+                "value": "test2",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "test2",
               "type": "option",
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "test3",
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
-                "value": undefined,
+                "children": "test3",
+                "value": "test3",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "test3",
               "type": "option",
             },
           ],
