@@ -11,6 +11,7 @@ class Detail extends React.Component {
     super(props);
     this.state = {
       inputItemState: this.setInputItems(),
+      isSaved: false,
     };
   }
 
@@ -27,12 +28,12 @@ class Detail extends React.Component {
   save = async () => {
     const result = await this.props.update(this.props.id, this.state.inputItemState);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.setState({ isSaved: true, test });
+      this.setState({ isSaved: true });
     }
   }
 
   resetChanges = () => {
-    this.setState({ inputItemState: this.setInputItems() });
+    this.setState({ inputItemState: this.setInputItems() }, this.forceUpdate());
     return true;
   }
 
@@ -95,7 +96,7 @@ class Detail extends React.Component {
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
-                  handlePrimaryButton={this.setInputItems}
+                  handlePrimaryButton={this.resetChanges}
                   primaryButtonText={strings.RESET}
                   secondaryButtonText={strings.CANCEL}
                   modalButtonClassName="btn-light"

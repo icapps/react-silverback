@@ -33,7 +33,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
           { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
           { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: false },
-          { id: identifiers.ROLE, value: strings.ROLE, isSortable: false },
+          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: false },
         ]}
         listItems={this.props.users}
         history={this.props.history}
@@ -42,7 +42,7 @@ class UserOverview extends Component {
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({key: role.code, text: role.name})) },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
           { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}

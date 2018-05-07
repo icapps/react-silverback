@@ -60,8 +60,8 @@ class CreateModal extends React.Component {
     } else if (item.type === 'password') {
       return (
         <React.Fragment key={item.id}>
-          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
           <Checkbox id={identifiers.USER_HAS_TO_SET_PASSWORD} text={strings.USER_HAS_TO_SET_PASSWORD} value={this.state.createPassword} handleChange={this.handleCreatePassword} isDisabled={this.props.isPending} />
+          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.createParametersState[item.id]} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
         </React.Fragment>
       );
     }
