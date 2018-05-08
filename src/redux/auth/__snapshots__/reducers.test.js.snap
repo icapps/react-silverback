@@ -33,6 +33,7 @@ exports[`auth reducer should FORGOT_PASSWORD_FULFILLED 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
+  "isForgotPasswordPending": false,
   "isLoggedIn": false,
   "isPending": false,
 }
@@ -42,8 +43,9 @@ exports[`auth reducer should FORGOT_PASSWORD_PENDING 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
+  "isForgotPasswordPending": true,
   "isLoggedIn": false,
-  "isPending": true,
+  "isPending": false,
 }
 `;
 
@@ -51,6 +53,7 @@ exports[`auth reducer should FORGOT_PASSWORD_REJECTED 1`] = `
 Object {
   "errorMessage": "error",
   "isError": true,
+  "isForgotPasswordPending": false,
   "isLoggedIn": false,
   "isPending": false,
 }
@@ -116,6 +119,7 @@ exports[`auth reducer should return the initial state 1`] = `
 Object {
   "errorMessage": "",
   "isError": false,
+  "isForgotPasswordPending": false,
   "isLoggedIn": false,
   "isPasswordConfirmed": false,
   "isPasswordVerified": false,

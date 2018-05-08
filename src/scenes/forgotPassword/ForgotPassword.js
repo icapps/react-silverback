@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './forgotPassword.css';
 import { strings } from '../../utils';
-import { BasicInput, Button } from '../../components';
+import { BasicInput, Button, Spinner } from '../../components';
 import { forgotPassword } from '../../redux/auth/actions';
 import constants from '../../redux/auth/constants';
 import { regexes } from '../../constants';
@@ -40,6 +40,7 @@ class ForgotPassword extends React.Component {
 
   render() {
     const { props, state } = this;
+    if (props.isPending) return <Spinner className='forgot-password-spinner' />;
     if (state.isForgotPasswordSent) return (
       <div className="forgot-password-container container">
         {props.isError && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
@@ -73,6 +74,7 @@ ForgotPassword.propTypes = {
 const mapStateToProps = state => ({
   isError: state.auth.isError,
   errorMessage: state.auth.errorMessage,
+  isPending: state.auth.isForgotPasswordPending,
 });
 
 const mapDispatchToProps = {
