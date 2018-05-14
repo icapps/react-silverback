@@ -11,7 +11,7 @@ const logout = require('../../assets/images/logout.svg');
 class Header extends React.Component {
   handleLogout = async () => {
     const result = await this.props.logout();
-    if (result.action && result.action.type === constants.LOGOUT_USER_FULFILLED) {
+    if (result.action && (result.action.type === constants.LOGOUT_USER_FULFILLED || result.action.type === constants.LOGOUT_USER_REJECTED)) {
       window.location.href = '/';
     }
   }
