@@ -7,9 +7,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className=""
     handleClick={[Function]}
-    icon={undefined}
     isDisabled={false}
     isPending={false}
+    leftIcon={undefined}
     rightIcon={undefined}
     text="Button"
 />,
@@ -109,9 +109,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className="btn-primary"
     handleClick={[Function]}
-    icon={undefined}
     isDisabled={false}
     isPending={false}
+    leftIcon={undefined}
     rightIcon={undefined}
     text="Button"
 />,
@@ -211,9 +211,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className="btn-primary"
     handleClick={[Function]}
-    icon="plus.svg"
     isDisabled={false}
     isPending={false}
+    leftIcon="plus.svg"
     rightIcon={undefined}
     text="Button"
 />,
@@ -231,7 +231,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
-          alt="+"
+          alt=""
           src="plus.svg"
 />,
         <span>
@@ -251,7 +251,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "+",
+          "alt": "",
           "src": "plus.svg",
         },
         "ref": null,
@@ -281,7 +281,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
-            alt="+"
+            alt=""
             src="plus.svg"
 />,
           <span>
@@ -301,7 +301,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "+",
+            "alt": "",
             "src": "plus.svg",
           },
           "ref": null,
