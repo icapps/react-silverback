@@ -37,9 +37,11 @@ class Detail extends React.Component {
     return true;
   }
 
-  delete = () => {
-    this.props.remove(this.props.id);
-    this.props.history.goBack();
+  delete = async () => {
+    const result = await this.props.remove(this.props.id);
+    if (result.action && result.action.type.includes('FULFILLED')) {
+      this.props.history.goBack();
+    }
   }
 
 

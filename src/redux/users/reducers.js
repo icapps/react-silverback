@@ -127,6 +127,7 @@ const users = (state = initialState, action = {}) => {
         ...state,
         user: null,
         isPending: false,
+        deletedUser: state.user && state.user.email,
       };
     case constants.REMOVE_USER_PENDING:
       return {
@@ -134,7 +135,6 @@ const users = (state = initialState, action = {}) => {
         isPending: true,
         isError: false,
         errorMessage: '',
-        deletedUser: state.user && state.user.email,
       };
     case constants.REMOVE_USER_REJECTED:
       return {

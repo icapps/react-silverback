@@ -169,6 +169,7 @@ Object {
 
 exports[`users reducer should REMOVE_USER_FULFILLED 1`] = `
 Object {
+  "deletedUser": null,
   "errorMessage": "",
   "isError": false,
   "isPending": false,
@@ -182,7 +183,6 @@ Object {
 
 exports[`users reducer should REMOVE_USER_PENDING 1`] = `
 Object {
-  "deletedUser": null,
   "errorMessage": "",
   "isError": false,
   "isPending": true,
