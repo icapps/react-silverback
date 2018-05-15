@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('Dropdown Component', () => {
   it('should render a Dropdown component', () => {
-    const wrapper = shallow(<Dropdown id="test" label="This is a dropdown" value="test" handleChange={()=>{}} options={['test', 'test2', 'test3']} />);
+    const wrapper = shallow(<Dropdown id="test" label="This is a dropdown" value="test" handleChange={() => { }} options={[{ key: 'test', text: 'test' }, { key: 'test2', text: 'test2' }, { key: 'test3', text: 'test3' }]} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -7,9 +7,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className=""
     handleClick={[Function]}
-    icon={undefined}
     isDisabled={false}
     isPending={false}
+    leftIcon={undefined}
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -29,6 +30,7 @@ ShallowWrapper {
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn ",
       "disabled": false,
@@ -49,6 +51,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -63,6 +66,7 @@ ShallowWrapper {
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn ",
         "disabled": false,
@@ -83,6 +87,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
@@ -104,9 +109,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className="btn-primary"
     handleClick={[Function]}
-    icon={undefined}
     isDisabled={false}
     isPending={false}
+    leftIcon={undefined}
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -126,6 +132,7 @@ ShallowWrapper {
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn btn-primary",
       "disabled": false,
@@ -146,6 +153,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -160,6 +168,7 @@ ShallowWrapper {
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn btn-primary",
         "disabled": false,
@@ -180,6 +189,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
@@ -201,9 +211,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Button
     className="btn-primary"
     handleClick={[Function]}
-    icon="plus.svg"
     isDisabled={false}
     isPending={false}
+    leftIcon="plus.svg"
+    rightIcon={undefined}
     text="Button"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -220,12 +231,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
-          alt="+"
+          alt=""
           src="plus.svg"
 />,
         <span>
           Button
 </span>,
+        undefined,
       ],
       "className": "btn btn-primary",
       "disabled": false,
@@ -239,7 +251,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "+",
+          "alt": "",
           "src": "plus.svg",
         },
         "ref": null,
@@ -257,6 +269,7 @@ ShallowWrapper {
         "rendered": "Button",
         "type": "span",
       },
+      undefined,
     ],
     "type": "button",
   },
@@ -268,12 +281,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
-            alt="+"
+            alt=""
             src="plus.svg"
 />,
           <span>
             Button
 </span>,
+          undefined,
         ],
         "className": "btn btn-primary",
         "disabled": false,
@@ -287,7 +301,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "+",
+            "alt": "",
             "src": "plus.svg",
           },
           "ref": null,
@@ -305,6 +319,7 @@ ShallowWrapper {
           "rendered": "Button",
           "type": "span",
         },
+        undefined,
       ],
       "type": "button",
     },
