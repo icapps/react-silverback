@@ -52,7 +52,7 @@ class LanguageCodesOverview extends Component {
           primaryButtonClassName: 'btn-danger',
           text: strings.DEPRECATE_TEXT,
           successMessage: strings.DEPRECATED_SUCCESS,
-          actionClassName: 'alert-danger',
+          actionClassName: 'alert-success',
         },
         {
           id: identifiers.UNDEPRECATED,
@@ -63,7 +63,7 @@ class LanguageCodesOverview extends Component {
           primaryButtonClassName: 'btn-info',
           text: strings.UNDEPRECATE_TEXT,
           successMessage: strings.UNDEPRECATED_SUCCESS,
-          actionClassName: 'alert-info',
+          actionClassName: 'alert-success',
         }]}
         deleteIdentifier={identifiers.NAME}
       />
