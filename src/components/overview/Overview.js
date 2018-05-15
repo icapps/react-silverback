@@ -80,7 +80,7 @@ class Overview extends React.Component {
         <div className="container">
           {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
           {state.actionText !== '' && <div className={`alert ${state.actionClass}`} role="alert">{state.actionText}</div>}
-          {state.deletedItem !== '' && <div className="alert alert-danger" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
+          {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
           <h2>
             {props.title}
             {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}

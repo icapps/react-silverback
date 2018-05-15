@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import format from 'date-fns/format';
-import { Detail, EmptyDetail, Spinner } from '../../components';
+import { Detail, EmptyDetail, Spinner, Modal } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser, getUserRoles } from '../../redux/users/actions';
+import { forgotPassword } from '../../redux/auth/actions';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
+import './userDetail.css';
 
 class UserDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showForgotPasswordMessage: false,
+    };
+  }
   componentDidMount() {
     this.props.getUsersById(this.props.location.state);
     this.props.getUserRoles();
@@ -36,6 +44,13 @@ class UserDetail extends Component {
     return this.props.updateUser(id, user);
   }
 
+  forgotPassword = async () => {
+    const result = await this.props.forgotPassword(this.props.user.email);
+    if (result.action && result.action.type.includes('FULFILLED')) {
+      this.setState({ showForgotPasswordMessage: true });
+    }
+    return true;
+  }
   render() {
     const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
@@ -73,7 +88,22 @@ class UserDetail extends Component {
         errorMessage={this.props.errorMessage}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
-      />);
+        isForgotPasswordSuccessful={this.state.showForgotPasswordMessage}
+      >
+        <Modal
+          id="reset-password"
+          modalButtonText={strings.RESET_PASSWORD_FOR_THIS_USER}
+          handlePrimaryButton={this.forgotPassword}
+          primaryButtonText={strings.RESET}
+          secondaryButtonText={strings.CANCEL}
+          modalButtonClassName="btn-primary forgot-password-btn"
+          secondaryButtonClassName="btn-light"
+          primaryButtonClassName="btn-primary"
+        >
+          <p>{strings.RESET_PASSWORD_FOR_THIS_USER_TEXT}</p>
+        </Modal>
+      </Detail>
+    );
     return <EmptyDetail history={this.props.history} />;
   }
 }
@@ -91,6 +121,8 @@ UserDetail.propTypes = {
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   isCreatePending: PropTypes.bool.isRequired,
+  forgotPassword: PropTypes.func.isRequired,
+  isForgotPasswordPending: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -103,6 +135,7 @@ const mapStateToProps = state => ({
   isPending: state.users.isPending,
   isCreatePending: state.users.isCreatePending,
   isUpdatePending: state.users.isUpdatePending,
+  isForgotPasswordPending: state.auth.isForgotPasswordPending,
 });
 
 const mapDispatchToProps = {
@@ -111,6 +144,7 @@ const mapDispatchToProps = {
   updateUser,
   removeUser,
   getUserRoles,
+  forgotPassword,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

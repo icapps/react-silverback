@@ -6,6 +6,7 @@ const initialState = {
   isLoggedIn: false,
   isPasswordVerified: false,
   isPasswordConfirmed: false,
+  isForgotPasswordPending: false,
   ...defaultInitialState,
 };
 
@@ -41,19 +42,19 @@ const auth = (state = initialState, action = {}) => {
     case constants.FORGOT_PASSWORD_FULFILLED:
       return {
         ...state,
-        isPending: false,
+        isForgotPasswordPending: false,
       };
     case constants.FORGOT_PASSWORD_PENDING:
       return {
         ...state,
-        isPending: true,
+        isForgotPasswordPending: true,
         isError: false,
         errorMessage: '',
       };
     case constants.FORGOT_PASSWORD_REJECTED:
       return {
         ...state,
-        isPending: false,
+        isForgotPasswordPending: false,
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
