@@ -61,6 +61,13 @@ class Detail extends React.Component {
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
 
+  renderAlert = (text, showAlert, isSuccess = true) => {
+    if (showAlert) {
+      return <div className={`alert alert-${isSuccess ? 'success' : 'danger'}`} role="alert">{text}</div>;
+    }
+    return null;
+  };
+
 
   render() {
     const { state, props } = this;
@@ -81,11 +88,11 @@ class Detail extends React.Component {
                 errorMessage={props.errorMessage}
               />}
             </div>
-            {props.isForgotPasswordSuccessful && <div className="alert alert-success" role="alert">{strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS}</div>}
-            {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
-            {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            {props.showDeprecationStatus && props.isDeprecated && <div className="alert alert-success" role="alert">{strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
-            {props.showDeprecationStatus && !props.isDeprecated && <div className="alert alert-success" role="alert">{strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
+            {this.renderAlert(strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS, props.isForgotPasswordSuccessful)}
+            {this.renderAlert(strings.UPDATE_SUCCESS, props.isUpdated && state.isSaved)}
+            {this.renderAlert(props.errorMessage, props.isError, false)}
+            {this.renderAlert(strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && props.isDeprecated)}
+            {this.renderAlert(strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && !props.isDeprecated)}
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
