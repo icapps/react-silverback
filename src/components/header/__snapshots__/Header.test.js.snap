@@ -32,9 +32,10 @@ ShallowWrapper {
           <Button
                     className="btn-dark btn-logout"
                     handleClick={[Function]}
-                    icon="logout.svg"
                     isDisabled={false}
                     isPending={false}
+                    leftIcon={undefined}
+                    rightIcon="logout.svg"
                     text="Logout"
           />
           <span
@@ -70,9 +71,10 @@ ShallowWrapper {
             <Button
               className="btn-dark btn-logout"
               handleClick={[Function]}
-              icon="logout.svg"
               isDisabled={false}
               isPending={false}
+              leftIcon={undefined}
+              rightIcon="logout.svg"
               text="Logout"
 />,
             <span
@@ -90,9 +92,10 @@ ShallowWrapper {
             "props": Object {
               "className": "btn-dark btn-logout",
               "handleClick": [Function],
-              "icon": "logout.svg",
               "isDisabled": false,
               "isPending": false,
+              "leftIcon": undefined,
+              "rightIcon": "logout.svg",
               "text": "Logout",
             },
             "ref": null,
@@ -135,9 +138,10 @@ ShallowWrapper {
             <Button
                         className="btn-dark btn-logout"
                         handleClick={[Function]}
-                        icon="logout.svg"
                         isDisabled={false}
                         isPending={false}
+                        leftIcon={undefined}
+                        rightIcon="logout.svg"
                         text="Logout"
             />
             <span
@@ -173,9 +177,10 @@ ShallowWrapper {
               <Button
                 className="btn-dark btn-logout"
                 handleClick={[Function]}
-                icon="logout.svg"
                 isDisabled={false}
                 isPending={false}
+                leftIcon={undefined}
+                rightIcon="logout.svg"
                 text="Logout"
 />,
               <span
@@ -193,9 +198,10 @@ ShallowWrapper {
               "props": Object {
                 "className": "btn-dark btn-logout",
                 "handleClick": [Function],
-                "icon": "logout.svg",
                 "isDisabled": false,
                 "isPending": false,
+                "leftIcon": undefined,
+                "rightIcon": "logout.svg",
                 "text": "Logout",
               },
               "ref": null,

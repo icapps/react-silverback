@@ -56,7 +56,7 @@ class Pagination extends React.Component {
       <div className="pagination-container">
         <div className="pagination-group pages">
           <span className="pagination-label">{strings.formatString(strings.SHOWING_X_OF_X, { startOfRange, endOfRange: endOfRange > props.totalCount ? props.totalCount : endOfRange, totalCount: props.totalCount })}</span>
-          <nav aria-label="Pagination">
+          {nrOfPages !== 1 && <nav aria-label="Pagination">
             <ul className="pagination">
               <li className={`page-item ${props.activePage === 0 ? 'disabled' : ''}`} onClick={() => props.activePage !== 0 && this.changePage(0)}>
                 <span className="page-link" aria-label={strings.FIRST}>
@@ -84,7 +84,7 @@ class Pagination extends React.Component {
                 </span>
               </li>
             </ul>
-          </nav>
+          </nav>}
         </div>
         <div className="pagination-group">
           <Dropdown id="pageLimit" value={props.pageLimit} handleChange={this.changePageLimit} options={pageLimitOptions.map(option => ({ key: option, text: option }))} isLabelShown={false} />
