@@ -83,8 +83,8 @@ class Detail extends React.Component {
             </div>
             {props.isUpdated && state.isSaved && <div className="alert alert-success" role="alert">{strings.UPDATE_SUCCESS}</div>}
             {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-            {props.showDeprecationStatus && props.isDeprecated && <div className="alert alert-danger" role="alert">{strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
-            {props.showDeprecationStatus && !props.isDeprecated && <div className="alert alert-info" role="alert">{strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
+            {props.showDeprecationStatus && props.isDeprecated && <div className="alert alert-success" role="alert">{strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
+            {props.showDeprecationStatus && !props.isDeprecated && <div className="alert alert-success" role="alert">{strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> })}</div>}
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
