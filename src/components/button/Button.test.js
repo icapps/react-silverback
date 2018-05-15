@@ -19,7 +19,7 @@ describe('Button Component', () => {
   });
 
   it('should render a Button component with an icon', () => {
-    const wrapper = shallow(<Button text="Button" handleClick={() => { }} className="btn-primary" icon={plus} />);
+    const wrapper = shallow(<Button text="Button" handleClick={() => { }} className="btn-primary" leftIcon={plus} />);
     expect(wrapper).toMatchSnapshot();
   });
 
