@@ -75,7 +75,7 @@ class ChoosePassword extends React.Component {
           <h3>{isGettingStartedScreen ? strings.GETTING_STARTED : strings.FORGOT_PASSWORD}</h3>
           <div className="password-input">
             <BasicInput id={identifiers.PASSWORD} label={isGettingStartedScreen ? strings.PASSWORD : strings.NEW_PASSWORD} value={state.password.value} handleChange={this.handleChange} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
-            <BasicInput id={identifiers.REPEAT_PASSWORD} label={isGettingStartedScreen ? strings.REPEAT_PASSWORD : strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} />
+            <BasicInput id={identifiers.REPEAT_PASSWORD} label={isGettingStartedScreen ? strings.REPEAT_PASSWORD : strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} handleEnter={this.handleClick} />
           </div>
           <Button className="btn-primary" text={strings.FORGOT_PASSWORD_BUTTON} handleClick={this.handleClick} />
         </main>

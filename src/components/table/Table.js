@@ -60,7 +60,7 @@ class Table extends React.Component {
               {props.keys.map(key => (
                 <th scope="col" key={key.id}>
                   <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${state.sortField === key.id ? 'active-key' : ''}`} onClick={() => this.sort(key.id, key.isSortable)}>
-                    {key.value}
+                    {key.id}
                     {key.isSortable && <span className={`sort ${state.sortField === key.id ? state.sortOrder : ''}`} />}
                   </span>
                 </th>))}
