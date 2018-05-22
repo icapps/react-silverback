@@ -29,11 +29,11 @@ class UserOverview extends Component {
         title={strings.USERS}
         keyword={strings.USER}
         keys={[
-          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true },
-          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true },
-          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true },
-          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: false },
-          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: false },
+          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true, sorter: identifiers.EMAIL },
+          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true, sorter: identifiers.FIRST_NAME },
+          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true, sorter: identifiers.LAST_NAME },
+          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: true, sorter: identifiers.HAS_ACCESS },
+          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE },
         ]}
         listItems={this.props.users}
         history={this.props.history}
