@@ -46,26 +46,26 @@ class Table extends React.Component {
           <thead>
             <tr>
               {props.keys.map(key => (
-                <th scope="col" key={key.id}>
+                <th scope="col" key={key.id} className={`col-${key.width}`}>
                   <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.sorter ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
                     {key.value}
                     {key.isSortable && <span className={`sort ${props.sortField === key.sorter ? props.sortOrder : ''}`} />}
                   </span>
                 </th>))}
-              {props.handleRemoveItem && <th></th>}
-              {props.actions && props.actions.length > 0 && <th></th>}
+              {props.handleRemoveItem && <th className='col-1'></th>}
+              {props.actions && props.actions.length > 0 && <th className='col-2'></th>}
             </tr>
           </thead>
           <tbody>
             {props.listItems.map(listItem => (
               <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
-                {props.keys.map(key => <td className={"table-data"} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.selectData(listItem, key.id)}</td>)}
+                {props.keys.map(key => <td className={`table-data col-${key.width}`} key={`td-${key.id}`} onClick={() => props.handleRowClick(listItem.id)}>{this.selectData(listItem, key.id)}</td>)}
                 {props.actions && props.actions.length > 0 &&
                   props.actions.map(action => {
                     const shouldDeprecate = action.id === identifiers.DEPRECATED && !listItem.deprecated;
                     const shouldUndeprecate = action.id === identifiers.UNDEPRECATED && listItem.deprecated;
                     if (shouldDeprecate || shouldUndeprecate || (action.id !== identifiers.DEPRECATED && action.id !== identifiers.UNDEPRECATED)) {
-                      return <td className="remove-list-item table-data" key={action.id} >
+                      return <td className="remove-list-item table-data col-2" key={action.id} >
                         <Modal
                           id={action.id}
                           modalButtonClassName={action.buttonClass}
@@ -83,7 +83,7 @@ class Table extends React.Component {
                     return null;
                   })
                 }
-                {props.handleRemoveItem && <td className="remove-list-item table-data">
+                {props.handleRemoveItem && <td className="remove-list-item table-data col-1">
                   <Modal
                     id="delete"
                     icon={deleteIcon}
