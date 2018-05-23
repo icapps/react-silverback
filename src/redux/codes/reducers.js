@@ -8,6 +8,8 @@ const initialState = {
   languageCodeCount: 0,
   isCreatePending: false,
   isCreateError: false,
+  sortField: 'code',
+  sortOrder: 'asc',
   ...defaultInitialState,
 };
 
