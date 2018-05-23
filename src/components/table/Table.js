@@ -15,21 +15,9 @@ const SORT_ASC = 'asc';
 const SORT_DESC = 'desc';
 
 class Table extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      sortField: '',
-      sortOrder: SORT_ASC,
-    };
-  }
-
   sort = (sortField, isSortable) => {
     if (isSortable) {
-      const sortOrder = (this.state.sortField === sortField) ? (this.state.sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
-      this.setState({
-        sortField,
-        sortOrder,
-      });
+      const sortOrder = (this.props.sortField === sortField) ? (this.props.sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
       this.props.handleSort(sortField, sortOrder);
     }
   }
@@ -51,7 +39,7 @@ class Table extends React.Component {
   }
 
   render() {
-    const { props, state } = this;
+    const { props } = this;
     return (
       <div className="table-responsive">
         <table className="table table-hover">
@@ -59,9 +47,9 @@ class Table extends React.Component {
             <tr>
               {props.keys.map(key => (
                 <th scope="col" key={key.id}>
-                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${state.sortField === key.id ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
+                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.id ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
                     {key.value}
-                    {key.isSortable && <span className={`sort ${state.sortField === key.id ? state.sortOrder : ''}`} />}
+                    {key.isSortable && <span className={`sort ${props.sortField === key.id ? props.sortOrder : ''}`} />}
                   </span>
                 </th>))}
               {props.handleRemoveItem && <th></th>}
@@ -130,6 +118,8 @@ Table.propTypes = {
   handleRemoveItem: PropTypes.func,
   maxTextLength: PropTypes.number,
   deleteIdentifier: PropTypes.string,
+  sortOrder: PropTypes.string,
+  sortField: PropTypes.string,
 };
 
 Table.defaultProps = {
@@ -137,6 +127,8 @@ Table.defaultProps = {
   handleRemoveItem: null,
   maxTextLength: 50,
   deleteIdentifier: '',
+  sortOrder: '',
+  sortField: '',
 };
 
 export default Table;
