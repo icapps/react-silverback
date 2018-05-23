@@ -19,10 +19,6 @@ class LanguageCodesOverview extends Component {
     });
   }
 
-  componentDidUpdate() {
-    console.log(this.props.languageCodes);
-  }
-
   render() {
     return (
       <Overview
