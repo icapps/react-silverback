@@ -171,6 +171,16 @@ const users = (state = initialState, action = {}) => {
         ...state,
         deletedUser: '',
       };
+
+    //SET_SORT
+    case constants.SET_USERS_SORT:
+      const { sortField, sortOrder } = payload;
+      return {
+        ...state,
+        sortField,
+        sortOrder,
+      };
+
     default:
       return state;
   }

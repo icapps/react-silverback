@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers, createUser, removeUser, getUserRoles, resetDeletedUser } from '../../redux/users/actions';
+import { getUsers, createUser, removeUser, getUserRoles, resetDeletedUser, setSort } from '../../redux/users/actions';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
@@ -21,6 +21,13 @@ class UserOverview extends Component {
 
   componentDidMount() {
     this.props.getUserRoles();
+  }
+
+  getUsersSorted = (page, limit, sortField, sortOrder) => {
+    if (sortField && sortOrder) {
+      this.props.setSort(sortField, sortOrder);
+    }
+    this.props.getUsers(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder);
   }
 
   render() {
@@ -49,13 +56,15 @@ class UserOverview extends Component {
         create={this.createUser}
         removeItem={this.props.removeUser}
         isError={this.props.isError}
-        get={this.props.getUsers}
+        get={this.getUsersSorted}
         errorMessage={this.props.errorMessage}
         deleteIdentifier={identifiers.EMAIL}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
         deletedItem={this.props.deletedUser}
         resetDeletedItem={this.props.resetDeletedUser}
+        sortField={this.props.sortField}
+        sortOrder={this.props.sortOrder}
       />
     );
   }
@@ -84,6 +93,8 @@ const mapStateToProps = state => ({
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
   deletedUser: state.users.deletedUser,
+  sortField: state.users.sortField,
+  sortOrder: state.users.sortOrder,
 });
 
 const mapDispatchToProps = {
@@ -92,6 +103,7 @@ const mapDispatchToProps = {
   removeUser,
   getUserRoles,
   resetDeletedUser,
+  setSort,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);
