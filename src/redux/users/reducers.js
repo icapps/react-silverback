@@ -166,6 +166,7 @@ const users = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
 
+    //RESET_DELETED_USER
     case constants.RESET_DELETED_USER:
       return {
         ...state,
