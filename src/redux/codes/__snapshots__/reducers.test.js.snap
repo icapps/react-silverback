@@ -170,5 +170,7 @@ Object {
   "languageCode": null,
   "languageCodeCount": 0,
   "languageCodeList": Array [],
+  "sortField": "code",
+  "sortOrder": "asc",
 }
 `;
