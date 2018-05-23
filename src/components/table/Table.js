@@ -47,9 +47,9 @@ class Table extends React.Component {
             <tr>
               {props.keys.map(key => (
                 <th scope="col" key={key.id}>
-                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.id ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
+                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.sorter ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
                     {key.value}
-                    {key.isSortable && <span className={`sort ${props.sortField === key.id ? props.sortOrder : ''}`} />}
+                    {key.isSortable && <span className={`sort ${props.sortField === key.sorter ? props.sortOrder : ''}`} />}
                   </span>
                 </th>))}
               {props.handleRemoveItem && <th></th>}
