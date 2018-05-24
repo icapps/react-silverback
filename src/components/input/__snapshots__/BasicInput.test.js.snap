@@ -157,6 +157,193 @@ ShallowWrapper {
 }
 `;
 
+exports[`BasicInput Component should render a BasicInput component that can handle an enter 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextInput
+    errorMessage="This is an error message"
+    handleChange={[Function]}
+    handleEnter={[Function]}
+    id="test"
+    isDisabled={false}
+    isValid={false}
+    label="Text with errorhandling"
+    placeholder=""
+    type="text"
+    value="test"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          htmlFor="test"
+>
+          Text with errorhandling
+</label>,
+        <input
+          className="form-control is-invalid"
+          disabled={false}
+          id="test"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder=""
+          type="text"
+          value="test"
+/>,
+        <div
+          className="invalid-feedback"
+>
+          This is an error message
+</div>,
+      ],
+      "className": "form-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Text with errorhandling",
+          "htmlFor": "test",
+        },
+        "ref": null,
+        "rendered": "Text with errorhandling",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "form-control is-invalid",
+          "disabled": false,
+          "id": "test",
+          "onChange": [Function],
+          "onKeyPress": [Function],
+          "placeholder": "",
+          "type": "text",
+          "value": "test",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "This is an error message",
+          "className": "invalid-feedback",
+        },
+        "ref": null,
+        "rendered": "This is an error message",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            htmlFor="test"
+>
+            Text with errorhandling
+</label>,
+          <input
+            className="form-control is-invalid"
+            disabled={false}
+            id="test"
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder=""
+            type="text"
+            value="test"
+/>,
+          <div
+            className="invalid-feedback"
+>
+            This is an error message
+</div>,
+        ],
+        "className": "form-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Text with errorhandling",
+            "htmlFor": "test",
+          },
+          "ref": null,
+          "rendered": "Text with errorhandling",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "form-control is-invalid",
+            "disabled": false,
+            "id": "test",
+            "onChange": [Function],
+            "onKeyPress": [Function],
+            "placeholder": "",
+            "type": "text",
+            "value": "test",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is an error message",
+            "className": "invalid-feedback",
+          },
+          "ref": null,
+          "rendered": "This is an error message",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`BasicInput Component should render a BasicInput component with a placeholder 1`] = `
 ShallowWrapper {
   "length": 1,

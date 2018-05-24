@@ -102,6 +102,111 @@ ShallowWrapper {
 }
 `;
 
+exports[`Button Component should render a Button component that is pending 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className="btn-primary"
+    handleClick={[Function]}
+    icon={undefined}
+    isDisabled={false}
+    isPending={true}
+    text="Button"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <Spinner
+          className=""
+          hasContainer={false}
+          spinnerClassName="button-spinner"
+/>,
+      ],
+      "className": "btn btn-primary",
+      "disabled": true,
+      "onClick": [Function],
+      "type": "button",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "className": "",
+          "hasContainer": false,
+          "spinnerClassName": "button-spinner",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <Spinner
+            className=""
+            hasContainer={false}
+            spinnerClassName="button-spinner"
+/>,
+        ],
+        "className": "btn btn-primary",
+        "disabled": true,
+        "onClick": [Function],
+        "type": "button",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "className": "",
+            "hasContainer": false,
+            "spinnerClassName": "button-spinner",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "button",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`Button Component should render a Button component with an extra className 1`] = `
 ShallowWrapper {
   "length": 1,

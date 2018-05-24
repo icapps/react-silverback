@@ -22,4 +22,9 @@ describe('Button Component', () => {
     const wrapper = shallow(<Button text="Button" handleClick={() => { }} className="btn-primary" leftIcon={plus} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a Button component that is pending', () => {
+    const wrapper = shallow(<Button text="Button" handleClick={() => { }} className="btn-primary" isPending={true} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

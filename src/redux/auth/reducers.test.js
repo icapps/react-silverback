@@ -27,30 +27,38 @@ describe('auth reducer', () => {
       })
     ).toMatchSnapshot();
   });
-    //FORGOT_PASSWORD
-    it('should FORGOT_PASSWORD_FULFILLED', () => {
-      expect(
-        auth(initialState, {
-          type: constants.FORGOT_PASSWORD_FULFILLED,
-          payload: { data: {}, meta: {} },
-        })
-      ).toMatchSnapshot();
-    });
-    it('should FORGOT_PASSWORD_PENDING', () => {
-      expect(
-        auth(initialState, {
-          type: constants.FORGOT_PASSWORD_PENDING,
-        })
-      ).toMatchSnapshot();
-    });
-    it('should FORGOT_PASSWORD_REJECTED', () => {
-      expect(
-        auth(initialState, {
-          type: constants.FORGOT_PASSWORD_REJECTED,
-          payload: { errors: [{ title: "error" }] },
-        })
-      ).toMatchSnapshot();
-    });
+  it('should LOGIN_USER_REJECTED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.LOGIN_USER_REJECTED,
+        payload: { errors: [{ title: 'test' }] },
+      })
+    ).toMatchSnapshot();
+  });
+  //FORGOT_PASSWORD
+  it('should FORGOT_PASSWORD_FULFILLED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.FORGOT_PASSWORD_FULFILLED,
+        payload: { data: {}, meta: {} },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should FORGOT_PASSWORD_PENDING', () => {
+    expect(
+      auth(initialState, {
+        type: constants.FORGOT_PASSWORD_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should FORGOT_PASSWORD_REJECTED', () => {
+    expect(
+      auth(initialState, {
+        type: constants.FORGOT_PASSWORD_REJECTED,
+        payload: { errors: [{ title: "error" }] },
+      })
+    ).toMatchSnapshot();
+  });
   //VERIFY_FORGOT_PASSWORD
   it('should VERIFY_FORGOT_PASSWORD_FULFILLED', () => {
     expect(
@@ -100,10 +108,10 @@ describe('auth reducer', () => {
     ).toMatchSnapshot();
   });
   //LOGOUT_USER
-  it('should LOGOUT_USER', () => {
+  it('should LOGOUT_USER_PENDING', () => {
     expect(
       auth(initialState, {
-        type: constants.LOGOUT_USER,
+        type: constants.LOGOUT_USER_PENDING,
       })
     ).toMatchSnapshot();
   });

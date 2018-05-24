@@ -5,3 +5,9 @@ Object {
   "isNavigationShown": true,
 }
 `;
+
+exports[`navigation reducer should return the initial state 1`] = `
+Object {
+  "isNavigationShown": false,
+}
+`;

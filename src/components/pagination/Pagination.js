@@ -98,6 +98,8 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   totalCount: PropTypes.number.isRequired,
   handleClick: PropTypes.func.isRequired,
+  activePage: PropTypes.number.isRequired,
+  pageLimit: PropTypes.number.isRequired,
 };
 
 export default Pagination;

@@ -5096,6 +5096,2617 @@ ShallowWrapper {
 }
 `;
 
+exports[`Table Component should render a Table component with (un)deprecate 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Table
+    dateFormat="DD/MM/YYYY"
+    deleteIdentifier=""
+    deprecate={[Function]}
+    handleRemoveItem={[Function]}
+    handleRowClick={[Function]}
+    handleSort={[Function]}
+    isdeprecated={true}
+    keys={
+        Array [
+            Object {
+              "id": "key",
+              "isSortable": true,
+              "value": "key",
+            },
+            Object {
+              "id": "key1",
+              "isSortable": false,
+              "value": "key1",
+            },
+            Object {
+              "id": "key2",
+              "isSortable": true,
+              "value": "key2",
+            },
+            Object {
+              "id": "key3",
+              "isSortable": false,
+              "value": "key3",
+            },
+          ]
+    }
+    listItems={
+        Array [
+            Object {
+              "id": "id1",
+              "key": "test 1",
+              "key1": 1,
+              "key2": false,
+              "key3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet nisl ac nibh aliquet, id placerat massa bibendum. Ut erat mauris, pulvinar vestibulum augue sollicitudin, rutrum eleifend leo. Proin malesuada nisl nec ornare fringilla. Nam vel rutrum mi. Etiam porta tempus blandit. Nunc et odio rhoncus, eleifend nisi ac, tempus urna. Pellentesque justo tellus, cursus id mi molestie, condimentum mattis ante. Sed suscipit nibh libero, at tincidunt enim pulvinar nec. Fusce sit amet leo vitae quam rutrum mattis eu a leo. Sed et nisl sit amet ipsum eleifend dignissim a sit amet metus. Nullam porta eros eget dolor ornare, vitae porttitor diam vehicula. Cras vel augue vestibulum, pellentesque nulla sed, blandit dui. Vivamus eu urna a tortor tempor elementum sed eu nibh. In id pellentesque eros.            ",
+            },
+            Object {
+              "id": "id2",
+              "key": "test 2",
+              "key1": 2,
+              "key2": true,
+            },
+          ]
+    }
+    maxTextLength={30}
+    undeprecate={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <table
+        className="table table-hover"
+>
+        <thead>
+                <tr>
+                        <th
+                                scope="col"
+                        >
+                                <span
+                                        className="key sortable-key "
+                                        onClick={[Function]}
+                                >
+                                        key
+                                        <span
+                                                className="sort "
+                                        />
+                                </span>
+                        </th>
+                        <th
+                                scope="col"
+                        >
+                                <span
+                                        className="key  "
+                                        onClick={[Function]}
+                                >
+                                        key1
+                                </span>
+                        </th>
+                        <th
+                                scope="col"
+                        >
+                                <span
+                                        className="key sortable-key "
+                                        onClick={[Function]}
+                                >
+                                        key2
+                                        <span
+                                                className="sort "
+                                        />
+                                </span>
+                        </th>
+                        <th
+                                scope="col"
+                        >
+                                <span
+                                        className="key  "
+                                        onClick={[Function]}
+                                >
+                                        key3
+                                </span>
+                        </th>
+                        <th />
+                </tr>
+        </thead>
+        <tbody>
+                <tr
+                        className=""
+                >
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                test 1
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                1
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                <img
+                                        alt="false"
+                                        src="cross.svg"
+                                />
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                Lorem ipsum dolor sit amet, co...
+                        </td>
+                        <td
+                                className="remove-list-item table-data"
+                        >
+                                <Modal
+                                        handleModalButton={[Function]}
+                                        handlePrimaryButton={[Function]}
+                                        handleSecondaryButton={[Function]}
+                                        hasHeader={false}
+                                        icon="delete.svg"
+                                        id="delete"
+                                        isPending={false}
+                                        modalButtonClassName="btn-light"
+                                        modalButtonText=""
+                                        primaryButtonClassName="btn-danger"
+                                        primaryButtonText="Delete"
+                                        secondaryButtonClassName="btn-light"
+                                        secondaryButtonText="Cancel"
+                                        title=""
+                                >
+                                        <p>
+                                                Are you sure you want to delete 
+                                                <span
+                                                        className="text-danger"
+                                                />
+                                                ?
+                                        </p>
+                                </Modal>
+                        </td>
+                </tr>
+                <tr
+                        className=""
+                >
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                test 2
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                2
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        >
+                                <img
+                                        alt="true"
+                                        src="check.svg"
+                                />
+                        </td>
+                        <td
+                                className="table-data"
+                                onClick={[Function]}
+                        />
+                        <td
+                                className="remove-list-item table-data"
+                        >
+                                <Modal
+                                        handleModalButton={[Function]}
+                                        handlePrimaryButton={[Function]}
+                                        handleSecondaryButton={[Function]}
+                                        hasHeader={false}
+                                        icon="delete.svg"
+                                        id="delete"
+                                        isPending={false}
+                                        modalButtonClassName="btn-light"
+                                        modalButtonText=""
+                                        primaryButtonClassName="btn-danger"
+                                        primaryButtonText="Delete"
+                                        secondaryButtonClassName="btn-light"
+                                        secondaryButtonText="Cancel"
+                                        title=""
+                                >
+                                        <p>
+                                                Are you sure you want to delete 
+                                                <span
+                                                        className="text-danger"
+                                                />
+                                                ?
+                                        </p>
+                                </Modal>
+                        </td>
+                </tr>
+        </tbody>
+</table>,
+      "className": "table-responsive",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <thead>
+            <tr>
+                        <th
+                                    scope="col"
+                        >
+                                    <span
+                                                className="key sortable-key "
+                                                onClick={[Function]}
+                                    >
+                                                key
+                                                <span
+                                                            className="sort "
+                                                />
+                                    </span>
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    <span
+                                                className="key  "
+                                                onClick={[Function]}
+                                    >
+                                                key1
+                                    </span>
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    <span
+                                                className="key sortable-key "
+                                                onClick={[Function]}
+                                    >
+                                                key2
+                                                <span
+                                                            className="sort "
+                                                />
+                                    </span>
+                        </th>
+                        <th
+                                    scope="col"
+                        >
+                                    <span
+                                                className="key  "
+                                                onClick={[Function]}
+                                    >
+                                                key3
+                                    </span>
+                        </th>
+                        <th />
+            </tr>
+</thead>,
+          <tbody>
+            <tr
+                        className=""
+            >
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    test 1
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    1
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    <img
+                                                alt="false"
+                                                src="cross.svg"
+                                    />
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    Lorem ipsum dolor sit amet, co...
+                        </td>
+                        <td
+                                    className="remove-list-item table-data"
+                        >
+                                    <Modal
+                                                handleModalButton={[Function]}
+                                                handlePrimaryButton={[Function]}
+                                                handleSecondaryButton={[Function]}
+                                                hasHeader={false}
+                                                icon="delete.svg"
+                                                id="delete"
+                                                isPending={false}
+                                                modalButtonClassName="btn-light"
+                                                modalButtonText=""
+                                                primaryButtonClassName="btn-danger"
+                                                primaryButtonText="Delete"
+                                                secondaryButtonClassName="btn-light"
+                                                secondaryButtonText="Cancel"
+                                                title=""
+                                    >
+                                                <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                        className="text-danger"
+                                                            />
+                                                            ?
+                                                </p>
+                                    </Modal>
+                        </td>
+            </tr>
+            <tr
+                        className=""
+            >
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    test 2
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    2
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        >
+                                    <img
+                                                alt="true"
+                                                src="check.svg"
+                                    />
+                        </td>
+                        <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                        />
+                        <td
+                                    className="remove-list-item table-data"
+                        >
+                                    <Modal
+                                                handleModalButton={[Function]}
+                                                handlePrimaryButton={[Function]}
+                                                handleSecondaryButton={[Function]}
+                                                hasHeader={false}
+                                                icon="delete.svg"
+                                                id="delete"
+                                                isPending={false}
+                                                modalButtonClassName="btn-light"
+                                                modalButtonText=""
+                                                primaryButtonClassName="btn-danger"
+                                                primaryButtonText="Delete"
+                                                secondaryButtonClassName="btn-light"
+                                                secondaryButtonText="Cancel"
+                                                title=""
+                                    >
+                                                <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                        className="text-danger"
+                                                            />
+                                                            ?
+                                                </p>
+                                    </Modal>
+                        </td>
+            </tr>
+</tbody>,
+        ],
+        "className": "table table-hover",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <tr>
+              <th
+                            scope="col"
+              >
+                            <span
+                                          className="key sortable-key "
+                                          onClick={[Function]}
+                            >
+                                          key
+                                          <span
+                                                        className="sort "
+                                          />
+                            </span>
+              </th>
+              <th
+                            scope="col"
+              >
+                            <span
+                                          className="key  "
+                                          onClick={[Function]}
+                            >
+                                          key1
+                            </span>
+              </th>
+              <th
+                            scope="col"
+              >
+                            <span
+                                          className="key sortable-key "
+                                          onClick={[Function]}
+                            >
+                                          key2
+                                          <span
+                                                        className="sort "
+                                          />
+                            </span>
+              </th>
+              <th
+                            scope="col"
+              >
+                            <span
+                                          className="key  "
+                                          onClick={[Function]}
+                            >
+                                          key3
+                            </span>
+              </th>
+              <th />
+</tr>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                Array [
+                  <th
+                    scope="col"
+>
+                    <span
+                                        className="key sortable-key "
+                                        onClick={[Function]}
+                    >
+                                        key
+                                        <span
+                                                            className="sort "
+                                        />
+                    </span>
+</th>,
+                  <th
+                    scope="col"
+>
+                    <span
+                                        className="key  "
+                                        onClick={[Function]}
+                    >
+                                        key1
+                    </span>
+</th>,
+                  <th
+                    scope="col"
+>
+                    <span
+                                        className="key sortable-key "
+                                        onClick={[Function]}
+                    >
+                                        key2
+                                        <span
+                                                            className="sort "
+                                        />
+                    </span>
+</th>,
+                  <th
+                    scope="col"
+>
+                    <span
+                                        className="key  "
+                                        onClick={[Function]}
+                    >
+                                        key3
+                    </span>
+</th>,
+                ],
+                <th />,
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "key",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="key sortable-key "
+                    onClick={[Function]}
+>
+                    key
+                    <span
+                                        className="sort "
+                    />
+</span>,
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "key",
+                      <span
+                        className="sort "
+/>,
+                    ],
+                    "className": "key sortable-key ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "key",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "sort ",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                  ],
+                  "type": "span",
+                },
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": "key1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="key  "
+                    onClick={[Function]}
+>
+                    key1
+</span>,
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "key1",
+                      false,
+                    ],
+                    "className": "key  ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "key1",
+                    false,
+                  ],
+                  "type": "span",
+                },
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": "key2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="key sortable-key "
+                    onClick={[Function]}
+>
+                    key2
+                    <span
+                                        className="sort "
+                    />
+</span>,
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "key2",
+                      <span
+                        className="sort "
+/>,
+                    ],
+                    "className": "key sortable-key ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "key2",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "sort ",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                  ],
+                  "type": "span",
+                },
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": "key3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <span
+                    className="key  "
+                    onClick={[Function]}
+>
+                    key3
+</span>,
+                  "scope": "col",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "key3",
+                      false,
+                    ],
+                    "className": "key  ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "key3",
+                    false,
+                  ],
+                  "type": "span",
+                },
+                "type": "th",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": "th",
+              },
+              undefined,
+            ],
+            "type": "tr",
+          },
+          "type": "thead",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <tr
+                className=""
+>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                test 1
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                1
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                <img
+                                                alt="false"
+                                                src="cross.svg"
+                                />
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                Lorem ipsum dolor sit amet, co...
+                </td>
+                <td
+                                className="remove-list-item table-data"
+                >
+                                <Modal
+                                                handleModalButton={[Function]}
+                                                handlePrimaryButton={[Function]}
+                                                handleSecondaryButton={[Function]}
+                                                hasHeader={false}
+                                                icon="delete.svg"
+                                                id="delete"
+                                                isPending={false}
+                                                modalButtonClassName="btn-light"
+                                                modalButtonText=""
+                                                primaryButtonClassName="btn-danger"
+                                                primaryButtonText="Delete"
+                                                secondaryButtonClassName="btn-light"
+                                                secondaryButtonText="Cancel"
+                                                title=""
+                                >
+                                                <p>
+                                                                Are you sure you want to delete 
+                                                                <span
+                                                                                className="text-danger"
+                                                                />
+                                                                ?
+                                                </p>
+                                </Modal>
+                </td>
+</tr>,
+              <tr
+                className=""
+>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                test 2
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                2
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                >
+                                <img
+                                                alt="true"
+                                                src="check.svg"
+                                />
+                </td>
+                <td
+                                className="table-data"
+                                onClick={[Function]}
+                />
+                <td
+                                className="remove-list-item table-data"
+                >
+                                <Modal
+                                                handleModalButton={[Function]}
+                                                handlePrimaryButton={[Function]}
+                                                handleSecondaryButton={[Function]}
+                                                hasHeader={false}
+                                                icon="delete.svg"
+                                                id="delete"
+                                                isPending={false}
+                                                modalButtonClassName="btn-light"
+                                                modalButtonText=""
+                                                primaryButtonClassName="btn-danger"
+                                                primaryButtonText="Delete"
+                                                secondaryButtonClassName="btn-light"
+                                                secondaryButtonText="Cancel"
+                                                title=""
+                                >
+                                                <p>
+                                                                Are you sure you want to delete 
+                                                                <span
+                                                                                className="text-danger"
+                                                                />
+                                                                ?
+                                                </p>
+                                </Modal>
+                </td>
+</tr>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "id1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      test 1
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      1
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="false"
+                                            src="cross.svg"
+                      />
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      Lorem ipsum dolor sit amet, co...
+</td>,
+                  ],
+                  undefined,
+                  <td
+                    className="remove-list-item table-data"
+>
+                    <Modal
+                                        handleModalButton={[Function]}
+                                        handlePrimaryButton={[Function]}
+                                        handleSecondaryButton={[Function]}
+                                        hasHeader={false}
+                                        icon="delete.svg"
+                                        id="delete"
+                                        isPending={false}
+                                        modalButtonClassName="btn-light"
+                                        modalButtonText=""
+                                        primaryButtonClassName="btn-danger"
+                                        primaryButtonText="Delete"
+                                        secondaryButtonClassName="btn-light"
+                                        secondaryButtonText="Cancel"
+                                        title=""
+                    >
+                                        <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                                className="text-danger"
+                                                            />
+                                                            ?
+                                        </p>
+                    </Modal>
+</td>,
+                ],
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "td-key",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "test 1",
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "test 1",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 1,
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": 1,
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="false"
+                      src="cross.svg"
+/>,
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "false",
+                      "src": "cross.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lorem ipsum dolor sit amet, co...",
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Lorem ipsum dolor sit amet, co...",
+                  "type": "td",
+                },
+                undefined,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Modal
+                      handleModalButton={[Function]}
+                      handlePrimaryButton={[Function]}
+                      handleSecondaryButton={[Function]}
+                      hasHeader={false}
+                      icon="delete.svg"
+                      id="delete"
+                      isPending={false}
+                      modalButtonClassName="btn-light"
+                      modalButtonText=""
+                      primaryButtonClassName="btn-danger"
+                      primaryButtonText="Delete"
+                      secondaryButtonClassName="btn-light"
+                      secondaryButtonText="Cancel"
+                      title=""
+>
+                      <p>
+                                            Are you sure you want to delete 
+                                            <span
+                                                                  className="text-danger"
+                                            />
+                                            ?
+                      </p>
+</Modal>,
+                    "className": "remove-list-item table-data",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <p>
+                        Are you sure you want to delete 
+                        <span
+                                                className="text-danger"
+                        />
+                        ?
+</p>,
+                      "handleModalButton": [Function],
+                      "handlePrimaryButton": [Function],
+                      "handleSecondaryButton": [Function],
+                      "hasHeader": false,
+                      "icon": "delete.svg",
+                      "id": "delete",
+                      "isPending": false,
+                      "modalButtonClassName": "btn-light",
+                      "modalButtonText": "",
+                      "primaryButtonClassName": "btn-danger",
+                      "primaryButtonText": "Delete",
+                      "secondaryButtonClassName": "btn-light",
+                      "secondaryButtonText": "Cancel",
+                      "title": "",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Are you sure you want to delete ",
+                          Array [
+                            <span
+                              className="text-danger"
+/>,
+                          ],
+                          "?",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Are you sure you want to delete ",
+                        Object {
+                          "instance": null,
+                          "key": "1",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": undefined,
+                            "className": "text-danger",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "span",
+                        },
+                        "?",
+                      ],
+                      "type": "p",
+                    },
+                    "type": [Function],
+                  },
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+            Object {
+              "instance": null,
+              "key": "id2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      test 2
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      2
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+>
+                      <img
+                                            alt="true"
+                                            src="check.svg"
+                      />
+</td>,
+                    <td
+                      className="table-data"
+                      onClick={[Function]}
+/>,
+                  ],
+                  undefined,
+                  <td
+                    className="remove-list-item table-data"
+>
+                    <Modal
+                                        handleModalButton={[Function]}
+                                        handlePrimaryButton={[Function]}
+                                        handleSecondaryButton={[Function]}
+                                        hasHeader={false}
+                                        icon="delete.svg"
+                                        id="delete"
+                                        isPending={false}
+                                        modalButtonClassName="btn-light"
+                                        modalButtonText=""
+                                        primaryButtonClassName="btn-danger"
+                                        primaryButtonText="Delete"
+                                        secondaryButtonClassName="btn-light"
+                                        secondaryButtonText="Cancel"
+                                        title=""
+                    >
+                                        <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                                className="text-danger"
+                                                            />
+                                                            ?
+                                        </p>
+                    </Modal>
+</td>,
+                ],
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "td-key",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "test 2",
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "test 2",
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 2,
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": 2,
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="true"
+                      src="check.svg"
+/>,
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "true",
+                      "src": "check.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "td",
+                },
+                Object {
+                  "instance": null,
+                  "key": "td-key3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                    "className": "table-data",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "td",
+                },
+                undefined,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Modal
+                      handleModalButton={[Function]}
+                      handlePrimaryButton={[Function]}
+                      handleSecondaryButton={[Function]}
+                      hasHeader={false}
+                      icon="delete.svg"
+                      id="delete"
+                      isPending={false}
+                      modalButtonClassName="btn-light"
+                      modalButtonText=""
+                      primaryButtonClassName="btn-danger"
+                      primaryButtonText="Delete"
+                      secondaryButtonClassName="btn-light"
+                      secondaryButtonText="Cancel"
+                      title=""
+>
+                      <p>
+                                            Are you sure you want to delete 
+                                            <span
+                                                                  className="text-danger"
+                                            />
+                                            ?
+                      </p>
+</Modal>,
+                    "className": "remove-list-item table-data",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <p>
+                        Are you sure you want to delete 
+                        <span
+                                                className="text-danger"
+                        />
+                        ?
+</p>,
+                      "handleModalButton": [Function],
+                      "handlePrimaryButton": [Function],
+                      "handleSecondaryButton": [Function],
+                      "hasHeader": false,
+                      "icon": "delete.svg",
+                      "id": "delete",
+                      "isPending": false,
+                      "modalButtonClassName": "btn-light",
+                      "modalButtonText": "",
+                      "primaryButtonClassName": "btn-danger",
+                      "primaryButtonText": "Delete",
+                      "secondaryButtonClassName": "btn-light",
+                      "secondaryButtonText": "Cancel",
+                      "title": "",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Are you sure you want to delete ",
+                          Array [
+                            <span
+                              className="text-danger"
+/>,
+                          ],
+                          "?",
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Are you sure you want to delete ",
+                        Object {
+                          "instance": null,
+                          "key": "1",
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": undefined,
+                            "className": "text-danger",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "span",
+                        },
+                        "?",
+                      ],
+                      "type": "p",
+                    },
+                    "type": [Function],
+                  },
+                  "type": "td",
+                },
+              ],
+              "type": "tr",
+            },
+          ],
+          "type": "tbody",
+        },
+      ],
+      "type": "table",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <table
+          className="table table-hover"
+>
+          <thead>
+                    <tr>
+                              <th
+                                        scope="col"
+                              >
+                                        <span
+                                                  className="key sortable-key "
+                                                  onClick={[Function]}
+                                        >
+                                                  key
+                                                  <span
+                                                            className="sort "
+                                                  />
+                                        </span>
+                              </th>
+                              <th
+                                        scope="col"
+                              >
+                                        <span
+                                                  className="key  "
+                                                  onClick={[Function]}
+                                        >
+                                                  key1
+                                        </span>
+                              </th>
+                              <th
+                                        scope="col"
+                              >
+                                        <span
+                                                  className="key sortable-key "
+                                                  onClick={[Function]}
+                                        >
+                                                  key2
+                                                  <span
+                                                            className="sort "
+                                                  />
+                                        </span>
+                              </th>
+                              <th
+                                        scope="col"
+                              >
+                                        <span
+                                                  className="key  "
+                                                  onClick={[Function]}
+                                        >
+                                                  key3
+                                        </span>
+                              </th>
+                              <th />
+                    </tr>
+          </thead>
+          <tbody>
+                    <tr
+                              className=""
+                    >
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        test 1
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        1
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        <img
+                                                  alt="false"
+                                                  src="cross.svg"
+                                        />
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        Lorem ipsum dolor sit amet, co...
+                              </td>
+                              <td
+                                        className="remove-list-item table-data"
+                              >
+                                        <Modal
+                                                  handleModalButton={[Function]}
+                                                  handlePrimaryButton={[Function]}
+                                                  handleSecondaryButton={[Function]}
+                                                  hasHeader={false}
+                                                  icon="delete.svg"
+                                                  id="delete"
+                                                  isPending={false}
+                                                  modalButtonClassName="btn-light"
+                                                  modalButtonText=""
+                                                  primaryButtonClassName="btn-danger"
+                                                  primaryButtonText="Delete"
+                                                  secondaryButtonClassName="btn-light"
+                                                  secondaryButtonText="Cancel"
+                                                  title=""
+                                        >
+                                                  <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                      className="text-danger"
+                                                            />
+                                                            ?
+                                                  </p>
+                                        </Modal>
+                              </td>
+                    </tr>
+                    <tr
+                              className=""
+                    >
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        test 2
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        2
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              >
+                                        <img
+                                                  alt="true"
+                                                  src="check.svg"
+                                        />
+                              </td>
+                              <td
+                                        className="table-data"
+                                        onClick={[Function]}
+                              />
+                              <td
+                                        className="remove-list-item table-data"
+                              >
+                                        <Modal
+                                                  handleModalButton={[Function]}
+                                                  handlePrimaryButton={[Function]}
+                                                  handleSecondaryButton={[Function]}
+                                                  hasHeader={false}
+                                                  icon="delete.svg"
+                                                  id="delete"
+                                                  isPending={false}
+                                                  modalButtonClassName="btn-light"
+                                                  modalButtonText=""
+                                                  primaryButtonClassName="btn-danger"
+                                                  primaryButtonText="Delete"
+                                                  secondaryButtonClassName="btn-light"
+                                                  secondaryButtonText="Cancel"
+                                                  title=""
+                                        >
+                                                  <p>
+                                                            Are you sure you want to delete 
+                                                            <span
+                                                                      className="text-danger"
+                                                            />
+                                                            ?
+                                                  </p>
+                                        </Modal>
+                              </td>
+                    </tr>
+          </tbody>
+</table>,
+        "className": "table-responsive",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <thead>
+              <tr>
+                            <th
+                                          scope="col"
+                            >
+                                          <span
+                                                        className="key sortable-key "
+                                                        onClick={[Function]}
+                                          >
+                                                        key
+                                                        <span
+                                                                      className="sort "
+                                                        />
+                                          </span>
+                            </th>
+                            <th
+                                          scope="col"
+                            >
+                                          <span
+                                                        className="key  "
+                                                        onClick={[Function]}
+                                          >
+                                                        key1
+                                          </span>
+                            </th>
+                            <th
+                                          scope="col"
+                            >
+                                          <span
+                                                        className="key sortable-key "
+                                                        onClick={[Function]}
+                                          >
+                                                        key2
+                                                        <span
+                                                                      className="sort "
+                                                        />
+                                          </span>
+                            </th>
+                            <th
+                                          scope="col"
+                            >
+                                          <span
+                                                        className="key  "
+                                                        onClick={[Function]}
+                                          >
+                                                        key3
+                                          </span>
+                            </th>
+                            <th />
+              </tr>
+</thead>,
+            <tbody>
+              <tr
+                            className=""
+              >
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          test 1
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          1
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          <img
+                                                        alt="false"
+                                                        src="cross.svg"
+                                          />
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          Lorem ipsum dolor sit amet, co...
+                            </td>
+                            <td
+                                          className="remove-list-item table-data"
+                            >
+                                          <Modal
+                                                        handleModalButton={[Function]}
+                                                        handlePrimaryButton={[Function]}
+                                                        handleSecondaryButton={[Function]}
+                                                        hasHeader={false}
+                                                        icon="delete.svg"
+                                                        id="delete"
+                                                        isPending={false}
+                                                        modalButtonClassName="btn-light"
+                                                        modalButtonText=""
+                                                        primaryButtonClassName="btn-danger"
+                                                        primaryButtonText="Delete"
+                                                        secondaryButtonClassName="btn-light"
+                                                        secondaryButtonText="Cancel"
+                                                        title=""
+                                          >
+                                                        <p>
+                                                                      Are you sure you want to delete 
+                                                                      <span
+                                                                                    className="text-danger"
+                                                                      />
+                                                                      ?
+                                                        </p>
+                                          </Modal>
+                            </td>
+              </tr>
+              <tr
+                            className=""
+              >
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          test 2
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          2
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            >
+                                          <img
+                                                        alt="true"
+                                                        src="check.svg"
+                                          />
+                            </td>
+                            <td
+                                          className="table-data"
+                                          onClick={[Function]}
+                            />
+                            <td
+                                          className="remove-list-item table-data"
+                            >
+                                          <Modal
+                                                        handleModalButton={[Function]}
+                                                        handlePrimaryButton={[Function]}
+                                                        handleSecondaryButton={[Function]}
+                                                        hasHeader={false}
+                                                        icon="delete.svg"
+                                                        id="delete"
+                                                        isPending={false}
+                                                        modalButtonClassName="btn-light"
+                                                        modalButtonText=""
+                                                        primaryButtonClassName="btn-danger"
+                                                        primaryButtonText="Delete"
+                                                        secondaryButtonClassName="btn-light"
+                                                        secondaryButtonText="Cancel"
+                                                        title=""
+                                          >
+                                                        <p>
+                                                                      Are you sure you want to delete 
+                                                                      <span
+                                                                                    className="text-danger"
+                                                                      />
+                                                                      ?
+                                                        </p>
+                                          </Modal>
+                            </td>
+              </tr>
+</tbody>,
+          ],
+          "className": "table table-hover",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <tr>
+                <th
+                                scope="col"
+                >
+                                <span
+                                                className="key sortable-key "
+                                                onClick={[Function]}
+                                >
+                                                key
+                                                <span
+                                                                className="sort "
+                                                />
+                                </span>
+                </th>
+                <th
+                                scope="col"
+                >
+                                <span
+                                                className="key  "
+                                                onClick={[Function]}
+                                >
+                                                key1
+                                </span>
+                </th>
+                <th
+                                scope="col"
+                >
+                                <span
+                                                className="key sortable-key "
+                                                onClick={[Function]}
+                                >
+                                                key2
+                                                <span
+                                                                className="sort "
+                                                />
+                                </span>
+                </th>
+                <th
+                                scope="col"
+                >
+                                <span
+                                                className="key  "
+                                                onClick={[Function]}
+                                >
+                                                key3
+                                </span>
+                </th>
+                <th />
+</tr>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <th
+                      scope="col"
+>
+                      <span
+                                            className="key sortable-key "
+                                            onClick={[Function]}
+                      >
+                                            key
+                                            <span
+                                                                  className="sort "
+                                            />
+                      </span>
+</th>,
+                    <th
+                      scope="col"
+>
+                      <span
+                                            className="key  "
+                                            onClick={[Function]}
+                      >
+                                            key1
+                      </span>
+</th>,
+                    <th
+                      scope="col"
+>
+                      <span
+                                            className="key sortable-key "
+                                            onClick={[Function]}
+                      >
+                                            key2
+                                            <span
+                                                                  className="sort "
+                                            />
+                      </span>
+</th>,
+                    <th
+                      scope="col"
+>
+                      <span
+                                            className="key  "
+                                            onClick={[Function]}
+                      >
+                                            key3
+                      </span>
+</th>,
+                  ],
+                  <th />,
+                  undefined,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "key",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <span
+                      className="key sortable-key "
+                      onClick={[Function]}
+>
+                      key
+                      <span
+                                            className="sort "
+                      />
+</span>,
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "key",
+                        <span
+                          className="sort "
+/>,
+                      ],
+                      "className": "key sortable-key ",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "key",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "sort ",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "span",
+                      },
+                    ],
+                    "type": "span",
+                  },
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": "key1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <span
+                      className="key  "
+                      onClick={[Function]}
+>
+                      key1
+</span>,
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "key1",
+                        false,
+                      ],
+                      "className": "key  ",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "key1",
+                      false,
+                    ],
+                    "type": "span",
+                  },
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": "key2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <span
+                      className="key sortable-key "
+                      onClick={[Function]}
+>
+                      key2
+                      <span
+                                            className="sort "
+                      />
+</span>,
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "key2",
+                        <span
+                          className="sort "
+/>,
+                      ],
+                      "className": "key sortable-key ",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "key2",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "sort ",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "span",
+                      },
+                    ],
+                    "type": "span",
+                  },
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": "key3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <span
+                      className="key  "
+                      onClick={[Function]}
+>
+                      key3
+</span>,
+                    "scope": "col",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "key3",
+                        false,
+                      ],
+                      "className": "key  ",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "key3",
+                      false,
+                    ],
+                    "type": "span",
+                  },
+                  "type": "th",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "th",
+                },
+                undefined,
+              ],
+              "type": "tr",
+            },
+            "type": "thead",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <tr
+                  className=""
+>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    test 1
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    1
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    <img
+                                                      alt="false"
+                                                      src="cross.svg"
+                                    />
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    Lorem ipsum dolor sit amet, co...
+                  </td>
+                  <td
+                                    className="remove-list-item table-data"
+                  >
+                                    <Modal
+                                                      handleModalButton={[Function]}
+                                                      handlePrimaryButton={[Function]}
+                                                      handleSecondaryButton={[Function]}
+                                                      hasHeader={false}
+                                                      icon="delete.svg"
+                                                      id="delete"
+                                                      isPending={false}
+                                                      modalButtonClassName="btn-light"
+                                                      modalButtonText=""
+                                                      primaryButtonClassName="btn-danger"
+                                                      primaryButtonText="Delete"
+                                                      secondaryButtonClassName="btn-light"
+                                                      secondaryButtonText="Cancel"
+                                                      title=""
+                                    >
+                                                      <p>
+                                                                        Are you sure you want to delete 
+                                                                        <span
+                                                                                          className="text-danger"
+                                                                        />
+                                                                        ?
+                                                      </p>
+                                    </Modal>
+                  </td>
+</tr>,
+                <tr
+                  className=""
+>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    test 2
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    2
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  >
+                                    <img
+                                                      alt="true"
+                                                      src="check.svg"
+                                    />
+                  </td>
+                  <td
+                                    className="table-data"
+                                    onClick={[Function]}
+                  />
+                  <td
+                                    className="remove-list-item table-data"
+                  >
+                                    <Modal
+                                                      handleModalButton={[Function]}
+                                                      handlePrimaryButton={[Function]}
+                                                      handleSecondaryButton={[Function]}
+                                                      hasHeader={false}
+                                                      icon="delete.svg"
+                                                      id="delete"
+                                                      isPending={false}
+                                                      modalButtonClassName="btn-light"
+                                                      modalButtonText=""
+                                                      primaryButtonClassName="btn-danger"
+                                                      primaryButtonText="Delete"
+                                                      secondaryButtonClassName="btn-light"
+                                                      secondaryButtonText="Cancel"
+                                                      title=""
+                                    >
+                                                      <p>
+                                                                        Are you sure you want to delete 
+                                                                        <span
+                                                                                          className="text-danger"
+                                                                        />
+                                                                        ?
+                                                      </p>
+                                    </Modal>
+                  </td>
+</tr>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "id1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        test 1
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        1
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="false"
+                                                src="cross.svg"
+                        />
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        Lorem ipsum dolor sit amet, co...
+</td>,
+                    ],
+                    undefined,
+                    <td
+                      className="remove-list-item table-data"
+>
+                      <Modal
+                                            handleModalButton={[Function]}
+                                            handlePrimaryButton={[Function]}
+                                            handleSecondaryButton={[Function]}
+                                            hasHeader={false}
+                                            icon="delete.svg"
+                                            id="delete"
+                                            isPending={false}
+                                            modalButtonClassName="btn-light"
+                                            modalButtonText=""
+                                            primaryButtonClassName="btn-danger"
+                                            primaryButtonText="Delete"
+                                            secondaryButtonClassName="btn-light"
+                                            secondaryButtonText="Cancel"
+                                            title=""
+                      >
+                                            <p>
+                                                                  Are you sure you want to delete 
+                                                                  <span
+                                                                                        className="text-danger"
+                                                                  />
+                                                                  ?
+                                            </p>
+                      </Modal>
+</td>,
+                  ],
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "td-key",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "test 1",
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "test 1",
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key1",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 1,
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": 1,
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key2",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="false"
+                        src="cross.svg"
+/>,
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "false",
+                        "src": "cross.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key3",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Lorem ipsum dolor sit amet, co...",
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Lorem ipsum dolor sit amet, co...",
+                    "type": "td",
+                  },
+                  undefined,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Modal
+                        handleModalButton={[Function]}
+                        handlePrimaryButton={[Function]}
+                        handleSecondaryButton={[Function]}
+                        hasHeader={false}
+                        icon="delete.svg"
+                        id="delete"
+                        isPending={false}
+                        modalButtonClassName="btn-light"
+                        modalButtonText=""
+                        primaryButtonClassName="btn-danger"
+                        primaryButtonText="Delete"
+                        secondaryButtonClassName="btn-light"
+                        secondaryButtonText="Cancel"
+                        title=""
+>
+                        <p>
+                                                Are you sure you want to delete 
+                                                <span
+                                                                        className="text-danger"
+                                                />
+                                                ?
+                        </p>
+</Modal>,
+                      "className": "remove-list-item table-data",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <p>
+                          Are you sure you want to delete 
+                          <span
+                                                    className="text-danger"
+                          />
+                          ?
+</p>,
+                        "handleModalButton": [Function],
+                        "handlePrimaryButton": [Function],
+                        "handleSecondaryButton": [Function],
+                        "hasHeader": false,
+                        "icon": "delete.svg",
+                        "id": "delete",
+                        "isPending": false,
+                        "modalButtonClassName": "btn-light",
+                        "modalButtonText": "",
+                        "primaryButtonClassName": "btn-danger",
+                        "primaryButtonText": "Delete",
+                        "secondaryButtonClassName": "btn-light",
+                        "secondaryButtonText": "Cancel",
+                        "title": "",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Are you sure you want to delete ",
+                            Array [
+                              <span
+                                className="text-danger"
+/>,
+                            ],
+                            "?",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Are you sure you want to delete ",
+                          Object {
+                            "instance": null,
+                            "key": "1",
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": undefined,
+                              "className": "text-danger",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "span",
+                          },
+                          "?",
+                        ],
+                        "type": "p",
+                      },
+                      "type": [Function],
+                    },
+                    "type": "td",
+                  },
+                ],
+                "type": "tr",
+              },
+              Object {
+                "instance": null,
+                "key": "id2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        test 2
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        2
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+>
+                        <img
+                                                alt="true"
+                                                src="check.svg"
+                        />
+</td>,
+                      <td
+                        className="table-data"
+                        onClick={[Function]}
+/>,
+                    ],
+                    undefined,
+                    <td
+                      className="remove-list-item table-data"
+>
+                      <Modal
+                                            handleModalButton={[Function]}
+                                            handlePrimaryButton={[Function]}
+                                            handleSecondaryButton={[Function]}
+                                            hasHeader={false}
+                                            icon="delete.svg"
+                                            id="delete"
+                                            isPending={false}
+                                            modalButtonClassName="btn-light"
+                                            modalButtonText=""
+                                            primaryButtonClassName="btn-danger"
+                                            primaryButtonText="Delete"
+                                            secondaryButtonClassName="btn-light"
+                                            secondaryButtonText="Cancel"
+                                            title=""
+                      >
+                                            <p>
+                                                                  Are you sure you want to delete 
+                                                                  <span
+                                                                                        className="text-danger"
+                                                                  />
+                                                                  ?
+                                            </p>
+                      </Modal>
+</td>,
+                  ],
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "td-key",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "test 2",
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "test 2",
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key1",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 2,
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": 2,
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key2",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <img
+                        alt="true"
+                        src="check.svg"
+/>,
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "alt": "true",
+                        "src": "check.svg",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "img",
+                    },
+                    "type": "td",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "td-key3",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "table-data",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "td",
+                  },
+                  undefined,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <Modal
+                        handleModalButton={[Function]}
+                        handlePrimaryButton={[Function]}
+                        handleSecondaryButton={[Function]}
+                        hasHeader={false}
+                        icon="delete.svg"
+                        id="delete"
+                        isPending={false}
+                        modalButtonClassName="btn-light"
+                        modalButtonText=""
+                        primaryButtonClassName="btn-danger"
+                        primaryButtonText="Delete"
+                        secondaryButtonClassName="btn-light"
+                        secondaryButtonText="Cancel"
+                        title=""
+>
+                        <p>
+                                                Are you sure you want to delete 
+                                                <span
+                                                                        className="text-danger"
+                                                />
+                                                ?
+                        </p>
+</Modal>,
+                      "className": "remove-list-item table-data",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <p>
+                          Are you sure you want to delete 
+                          <span
+                                                    className="text-danger"
+                          />
+                          ?
+</p>,
+                        "handleModalButton": [Function],
+                        "handlePrimaryButton": [Function],
+                        "handleSecondaryButton": [Function],
+                        "hasHeader": false,
+                        "icon": "delete.svg",
+                        "id": "delete",
+                        "isPending": false,
+                        "modalButtonClassName": "btn-light",
+                        "modalButtonText": "",
+                        "primaryButtonClassName": "btn-danger",
+                        "primaryButtonText": "Delete",
+                        "secondaryButtonClassName": "btn-light",
+                        "secondaryButtonText": "Cancel",
+                        "title": "",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Are you sure you want to delete ",
+                            Array [
+                              <span
+                                className="text-danger"
+/>,
+                            ],
+                            "?",
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Are you sure you want to delete ",
+                          Object {
+                            "instance": null,
+                            "key": "1",
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": undefined,
+                              "className": "text-danger",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "span",
+                          },
+                          "?",
+                        ],
+                        "type": "p",
+                      },
+                      "type": [Function],
+                    },
+                    "type": "td",
+                  },
+                ],
+                "type": "tr",
+              },
+            ],
+            "type": "tbody",
+          },
+        ],
+        "type": "table",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`Table Component should render a Table component with custom Date format 1`] = `
 ShallowWrapper {
   "length": 1,

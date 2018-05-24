@@ -6,6 +6,9 @@ const initialState = {
 };
 
 describe('navigation reducer', () => {
+  it('should return the initial state', () => {
+    expect(navigation(undefined, {})).toMatchSnapshot();
+  });
   it('should TOGGLE_NAVIGATION', () => {
     expect(
       navigation(initialState, {

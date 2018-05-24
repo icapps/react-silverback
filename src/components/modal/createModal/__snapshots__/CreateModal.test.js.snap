@@ -1,0 +1,509 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateModal Component should render a CreateModal component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateModal
+    create={[Function]}
+    createParameters={
+        Array [
+            Object {
+              "id": "email",
+              "label": "email",
+              "type": "text",
+            },
+            Object {
+              "id": "bool",
+              "label": "bool",
+              "type": "boolean",
+            },
+            Object {
+              "id": "password",
+              "label": "password",
+              "type": "password",
+            },
+          ]
+    }
+    errorMessage=""
+    isError={false}
+    isPending={false}
+    primaryButtonText="test"
+    title="test"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        false,
+        <div
+          className="create-modal-input"
+>
+          <TextInput
+                    errorMessage=""
+                    handleChange={[Function]}
+                    handleEnter={[Function]}
+                    id="modal-email"
+                    isDisabled={false}
+                    isValid={true}
+                    label="email"
+                    placeholder=""
+                    type="text"
+                    value=""
+          />
+          <Checkbox
+                    handleChange={[Function]}
+                    id="modal-bool"
+                    isDisabled={false}
+                    text="bool"
+                    value={false}
+          />
+          <Unknown>
+                    <Checkbox
+                              handleChange={[Function]}
+                              id="userHasToSetPassword"
+                              isDisabled={false}
+                              text="User has to set the password"
+                              value={true}
+                    />
+                    <TextInput
+                              errorMessage=""
+                              handleChange={[Function]}
+                              handleEnter={[Function]}
+                              id="modal-password"
+                              isDisabled={true}
+                              isValid={true}
+                              label="password"
+                              placeholder=""
+                              type="password"
+                              value=""
+                    />
+          </Unknown>
+</div>,
+      ],
+      "handleModalButton": [Function],
+      "handlePrimaryButton": [Function],
+      "handleSecondaryButton": [Function],
+      "hasHeader": true,
+      "icon": "plus.svg",
+      "id": "Create",
+      "isPending": false,
+      "modalButtonClassName": "btn-success btn-create",
+      "modalButtonText": "test",
+      "primaryButtonClassName": "btn-success",
+      "primaryButtonText": "Submit",
+      "secondaryButtonClassName": "btn-light",
+      "secondaryButtonText": "Cancel",
+      "title": "test",
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TextInput
+              errorMessage=""
+              handleChange={[Function]}
+              handleEnter={[Function]}
+              id="modal-email"
+              isDisabled={false}
+              isValid={true}
+              label="email"
+              placeholder=""
+              type="text"
+              value=""
+/>,
+            <Checkbox
+              handleChange={[Function]}
+              id="modal-bool"
+              isDisabled={false}
+              text="bool"
+              value={false}
+/>,
+            <Unknown>
+              <Checkbox
+                            handleChange={[Function]}
+                            id="userHasToSetPassword"
+                            isDisabled={false}
+                            text="User has to set the password"
+                            value={true}
+              />
+              <TextInput
+                            errorMessage=""
+                            handleChange={[Function]}
+                            handleEnter={[Function]}
+                            id="modal-password"
+                            isDisabled={true}
+                            isValid={true}
+                            label="password"
+                            placeholder=""
+                            type="password"
+                            value=""
+              />
+</Unknown>,
+          ],
+          "className": "create-modal-input",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "email",
+            "nodeType": "class",
+            "props": Object {
+              "errorMessage": "",
+              "handleChange": [Function],
+              "handleEnter": [Function],
+              "id": "modal-email",
+              "isDisabled": false,
+              "isValid": true,
+              "label": "email",
+              "placeholder": "",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "bool",
+            "nodeType": "function",
+            "props": Object {
+              "handleChange": [Function],
+              "id": "modal-bool",
+              "isDisabled": false,
+              "text": "bool",
+              "value": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "password",
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Checkbox
+                  handleChange={[Function]}
+                  id="userHasToSetPassword"
+                  isDisabled={false}
+                  text="User has to set the password"
+                  value={true}
+/>,
+                <TextInput
+                  errorMessage=""
+                  handleChange={[Function]}
+                  handleEnter={[Function]}
+                  id="modal-password"
+                  isDisabled={true}
+                  isValid={true}
+                  label="password"
+                  placeholder=""
+                  type="password"
+                  value=""
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "handleChange": [Function],
+                  "id": "userHasToSetPassword",
+                  "isDisabled": false,
+                  "text": "User has to set the password",
+                  "value": true,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "errorMessage": "",
+                  "handleChange": [Function],
+                  "handleEnter": [Function],
+                  "id": "modal-password",
+                  "isDisabled": true,
+                  "isValid": true,
+                  "label": "password",
+                  "placeholder": "",
+                  "type": "password",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": Symbol(react.fragment),
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          false,
+          <div
+            className="create-modal-input"
+>
+            <TextInput
+                        errorMessage=""
+                        handleChange={[Function]}
+                        handleEnter={[Function]}
+                        id="modal-email"
+                        isDisabled={false}
+                        isValid={true}
+                        label="email"
+                        placeholder=""
+                        type="text"
+                        value=""
+            />
+            <Checkbox
+                        handleChange={[Function]}
+                        id="modal-bool"
+                        isDisabled={false}
+                        text="bool"
+                        value={false}
+            />
+            <Unknown>
+                        <Checkbox
+                                    handleChange={[Function]}
+                                    id="userHasToSetPassword"
+                                    isDisabled={false}
+                                    text="User has to set the password"
+                                    value={true}
+                        />
+                        <TextInput
+                                    errorMessage=""
+                                    handleChange={[Function]}
+                                    handleEnter={[Function]}
+                                    id="modal-password"
+                                    isDisabled={true}
+                                    isValid={true}
+                                    label="password"
+                                    placeholder=""
+                                    type="password"
+                                    value=""
+                        />
+            </Unknown>
+</div>,
+        ],
+        "handleModalButton": [Function],
+        "handlePrimaryButton": [Function],
+        "handleSecondaryButton": [Function],
+        "hasHeader": true,
+        "icon": "plus.svg",
+        "id": "Create",
+        "isPending": false,
+        "modalButtonClassName": "btn-success btn-create",
+        "modalButtonText": "test",
+        "primaryButtonClassName": "btn-success",
+        "primaryButtonText": "Submit",
+        "secondaryButtonClassName": "btn-light",
+        "secondaryButtonText": "Cancel",
+        "title": "test",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TextInput
+                errorMessage=""
+                handleChange={[Function]}
+                handleEnter={[Function]}
+                id="modal-email"
+                isDisabled={false}
+                isValid={true}
+                label="email"
+                placeholder=""
+                type="text"
+                value=""
+/>,
+              <Checkbox
+                handleChange={[Function]}
+                id="modal-bool"
+                isDisabled={false}
+                text="bool"
+                value={false}
+/>,
+              <Unknown>
+                <Checkbox
+                                handleChange={[Function]}
+                                id="userHasToSetPassword"
+                                isDisabled={false}
+                                text="User has to set the password"
+                                value={true}
+                />
+                <TextInput
+                                errorMessage=""
+                                handleChange={[Function]}
+                                handleEnter={[Function]}
+                                id="modal-password"
+                                isDisabled={true}
+                                isValid={true}
+                                label="password"
+                                placeholder=""
+                                type="password"
+                                value=""
+                />
+</Unknown>,
+            ],
+            "className": "create-modal-input",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "email",
+              "nodeType": "class",
+              "props": Object {
+                "errorMessage": "",
+                "handleChange": [Function],
+                "handleEnter": [Function],
+                "id": "modal-email",
+                "isDisabled": false,
+                "isValid": true,
+                "label": "email",
+                "placeholder": "",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "bool",
+              "nodeType": "function",
+              "props": Object {
+                "handleChange": [Function],
+                "id": "modal-bool",
+                "isDisabled": false,
+                "text": "bool",
+                "value": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "password",
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Checkbox
+                    handleChange={[Function]}
+                    id="userHasToSetPassword"
+                    isDisabled={false}
+                    text="User has to set the password"
+                    value={true}
+/>,
+                  <TextInput
+                    errorMessage=""
+                    handleChange={[Function]}
+                    handleEnter={[Function]}
+                    id="modal-password"
+                    isDisabled={true}
+                    isValid={true}
+                    label="password"
+                    placeholder=""
+                    type="password"
+                    value=""
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "handleChange": [Function],
+                    "id": "userHasToSetPassword",
+                    "isDisabled": false,
+                    "text": "User has to set the password",
+                    "value": true,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "errorMessage": "",
+                    "handleChange": [Function],
+                    "handleEnter": [Function],
+                    "id": "modal-password",
+                    "isDisabled": true,
+                    "isValid": true,
+                    "label": "password",
+                    "placeholder": "",
+                    "type": "password",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": Symbol(react.fragment),
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -59,4 +59,58 @@ describe('Modal Component', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a Modal component that can handle a click on the modalButton', () => {
+    const wrapper = shallow(
+      <Modal
+        id="testModal"
+        modalButtonText="Modal"
+        handleSecondaryButton={() => { }}
+        secondaryButtonText="Secondary"
+        modalButtonClassName="test"
+        handlePrimaryButton={() => { }}
+        primaryButtonText="Primary"
+      >
+        <p>test</p>
+      </Modal>
+    );
+    wrapper.find('button.test').simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a Modal component that can handle a click on the primaryButton', () => {
+    const wrapper = shallow(
+      <Modal
+        id="testModal"
+        modalButtonText="Modal"
+        handleSecondaryButton={() => { }}
+        secondaryButtonText="Secondary"
+        primaryButtonClassName="test"
+        handlePrimaryButton={() => { }}
+        primaryButtonText="Primary"
+      >
+        <p>test</p>
+      </Modal>
+    );
+    wrapper.find('button.test').simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a Modal component that can handle a click on the secondaryButton', () => {
+    const wrapper = shallow(
+      <Modal
+        id="testModal"
+        modalButtonText="Modal"
+        handleSecondaryButton={() => { }}
+        secondaryButtonText="Secondary"
+        secondaryButtonClassName="test"
+        handlePrimaryButton={() => { }}
+        primaryButtonText="Primary"
+      >
+        <p>test</p>
+      </Modal>
+    );
+    wrapper.find('button.test').simulate('click');
+    expect(wrapper).toMatchSnapshot();
+  });
 });
