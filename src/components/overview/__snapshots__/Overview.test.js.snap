@@ -82,6 +82,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -101,6 +103,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -194,6 +197,8 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
                 />
                 <Pagination
                         activePage={0}
@@ -217,6 +222,7 @@ ShallowWrapper {
           false,
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -310,6 +316,8 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
             />
             <Pagination
                         activePage={0}
@@ -333,13 +341,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -499,6 +507,8 @@ ShallowWrapper {
                                               ]
                 }
                 maxTextLength={50}
+                sortField=""
+                sortOrder=""
 />,
               <Pagination
                 activePage={0}
@@ -570,6 +580,8 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+                "sortField": "",
+                "sortOrder": "",
               },
               "ref": null,
               "rendered": null,
@@ -608,6 +620,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -701,6 +714,8 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                              sortField=""
+                              sortOrder=""
                     />
                     <Pagination
                               activePage={0}
@@ -724,6 +739,7 @@ ShallowWrapper {
             false,
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -817,6 +833,8 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+                            sortField=""
+                            sortOrder=""
               />
               <Pagination
                             activePage={0}
@@ -840,13 +858,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },
@@ -1006,6 +1024,8 @@ ShallowWrapper {
                                                     ]
                   }
                   maxTextLength={50}
+                  sortField=""
+                  sortOrder=""
 />,
                 <Pagination
                   activePage={0}
@@ -1077,6 +1097,8 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                  "sortField": "",
+                  "sortOrder": "",
                 },
                 "ref": null,
                 "rendered": null,
@@ -1197,6 +1219,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1216,6 +1240,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -1309,6 +1334,8 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
                 />
                 <Pagination
                         activePage={0}
@@ -1332,6 +1359,7 @@ ShallowWrapper {
           false,
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -1425,6 +1453,8 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
             />
             <Pagination
                         activePage={0}
@@ -1448,13 +1478,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -1614,6 +1644,8 @@ ShallowWrapper {
                                               ]
                 }
                 maxTextLength={50}
+                sortField=""
+                sortOrder=""
 />,
               <Pagination
                 activePage={0}
@@ -1685,6 +1717,8 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+                "sortField": "",
+                "sortOrder": "",
               },
               "ref": null,
               "rendered": null,
@@ -1723,6 +1757,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -1816,6 +1851,8 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                              sortField=""
+                              sortOrder=""
                     />
                     <Pagination
                               activePage={0}
@@ -1839,6 +1876,7 @@ ShallowWrapper {
             false,
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -1932,6 +1970,8 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+                            sortField=""
+                            sortOrder=""
               />
               <Pagination
                             activePage={0}
@@ -1955,13 +1995,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },
@@ -2121,6 +2161,8 @@ ShallowWrapper {
                                                     ]
                   }
                   maxTextLength={50}
+                  sortField=""
+                  sortOrder=""
 />,
                 <Pagination
                   activePage={0}
@@ -2192,6 +2234,8 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                  "sortField": "",
+                  "sortOrder": "",
                 },
                 "ref": null,
                 "rendered": null,
@@ -2294,6 +2338,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -2313,6 +2359,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -2380,6 +2427,7 @@ ShallowWrapper {
           false,
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -2447,13 +2495,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -2609,6 +2657,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -2676,6 +2725,7 @@ ShallowWrapper {
             false,
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -2743,13 +2793,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },

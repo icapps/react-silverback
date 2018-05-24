@@ -13,8 +13,6 @@ class Overview extends React.Component {
     this.state = {
       page: 0,
       limit: 25,
-      sortField: null,
-      sortOrder: null,
       deletedItem: props.deletedItem ? props.deletedItem : '',
       actionText: '',
       actionClass: '',
@@ -36,7 +34,7 @@ class Overview extends React.Component {
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
         this.scrollTop();
         this.setState({ deletedItem });
-        this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder);
+        this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder);
       }
     }
   }
@@ -50,7 +48,7 @@ class Overview extends React.Component {
             this.scrollTop();
             this.setState({ actionClass: action.actionClassName, actionText: strings.formatString(action.successMessage, { item: <strong>{item[this.props.deleteIdentifier]}</strong> }) });
           }
-          await this.sortItems(this.state.sortField, this.state.sortOrder);
+          await this.sortItems(this.props.sortField, this.props.sortOrder);
         },
       };
     });
@@ -62,17 +60,16 @@ class Overview extends React.Component {
 
   sortItems = (sortField, sortOrder) => {
     this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder);
-    this.setState({ sortField, sortOrder });
   }
 
   handlePagination = (page, limit) => {
-    this.props.get(page * limit, limit, this.state.sortField, this.state.sortOrder);
+    this.props.get(page * limit, limit, this.props.sortField, this.props.sortOrder);
     this.setState({ page, limit });
   };
 
   handleFilter = filterValue => {
     clearTimeout(this.timer);
-    this.timer = setTimeout(() => this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder, filterValue), 700);
+    this.timer = setTimeout(() => this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder, filterValue), 700);
   }
 
   scrollTop = () => {
@@ -89,7 +86,7 @@ class Overview extends React.Component {
           {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
           <h2>
             {props.title}
-            {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
+            {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
             <Filter handleFilter={this.handleFilter} />
@@ -115,6 +112,8 @@ class Overview extends React.Component {
                 handleSort={this.sortItems}
                 deleteIdentifier={props.deleteIdentifier}
                 actions={this.setActions(this.props.actions)}
+                sortOrder={props.sortOrder}
+                sortField={props.sortField}
               />
               <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} activePage={state.page} pageLimit={state.limit} />
             </React.Fragment>
@@ -155,6 +154,8 @@ Overview.propTypes = {
   })),
   deletedItem: PropTypes.string,
   resetDeletedItem: PropTypes.func,
+  sortOrder: PropTypes.string,
+  sortField: PropTypes.string,
 };
 
 Overview.defaultProps = {
@@ -169,6 +170,8 @@ Overview.defaultProps = {
   isCreatePending: false,
   isCreateError: false,
   actions: [],
+  sortOrder: '',
+  sortField: '',
 };
 
 export default Overview;

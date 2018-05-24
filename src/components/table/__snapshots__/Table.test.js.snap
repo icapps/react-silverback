@@ -72,6 +72,8 @@ ShallowWrapper {
           ]
     }
     maxTextLength={50}
+    sortField=""
+    sortOrder=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -5168,6 +5170,8 @@ ShallowWrapper {
           ]
     }
     maxTextLength={50}
+    sortField=""
+    sortOrder=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -10244,6 +10248,8 @@ ShallowWrapper {
           ]
     }
     maxTextLength={30}
+    sortField=""
+    sortOrder=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
