@@ -34,6 +34,7 @@ class Overview extends React.Component {
     if (this.props.removeItem) {
       const result = await this.props.removeItem(item);
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
+        this.scrollTop();
         this.setState({ deletedItem });
         this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder);
       }
@@ -46,6 +47,7 @@ class Overview extends React.Component {
         ...action, handleAction: async item => {
           const actionResult = await action.handleAction(item.id);
           if (actionResult.action && actionResult.action.type.includes('FULFILLED')) {
+            this.scrollTop();
             this.setState({ actionClass: action.actionClassName, actionText: strings.formatString(action.successMessage, { item: <strong>{item[this.props.deleteIdentifier]}</strong> }) });
           }
           await this.sortItems(this.state.sortField, this.state.sortOrder);
@@ -71,6 +73,10 @@ class Overview extends React.Component {
   handleFilter = filterValue => {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => this.props.get(this.state.page * this.state.limit, this.state.limit, this.state.sortField, this.state.sortOrder, filterValue), 700);
+  }
+
+  scrollTop = () => {
+    window.scrollTo(0, 0);
   }
 
   render() {
