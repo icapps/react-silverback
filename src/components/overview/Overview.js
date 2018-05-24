@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Pagination, Table, CreateModal, Filter } from '../index';
+import { Pagination, Table, CreateModal, Filter, Alert } from '../index';
 import { strings } from '../../utils';
 import constants from '../../redux/users/constants';
 import './overview.css';
@@ -79,14 +79,30 @@ class Overview extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  getAlerts = () => {
+    const alerts = [];
+    if (this.props.isError) {
+      alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} />);
+    }
+    if (this.state.actionText !== '') {
+      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText} key={new Date()} />);
+    }
+    if (this.state.deletedItem !== '') {
+      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} />);
+    }
+    return alerts;
+  }
+
   render() {
     const { props, state } = this;
     return (
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
-          {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
+          {this.getAlerts()}
+
+          {/* {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
           {state.actionText !== '' && <div className={`alert ${state.actionClass}`} role="alert">{state.actionText}</div>}
-          {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>}
+          {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>} */}
           <h2>
             {props.title}
             {state.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${state.sortField} (${state.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}

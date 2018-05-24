@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
+import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown, Alert } from '../index';
 import { strings } from '../../utils';
 import './detail.css';
 
@@ -64,12 +64,12 @@ class Detail extends React.Component {
   }
 
   renderAlert = (text, showAlert, isSuccess = true) => {
+    window.scrollTo(0, 0);
     if (showAlert) {
-      return <div className={`alert alert-${isSuccess ? 'success' : 'danger'}`} role="alert">{text}</div>;
+      return <Alert className={`${isSuccess ? 'success' : 'danger'}`} text={text} />;
     }
     return null;
   };
-
 
   render() {
     const { state, props } = this;
