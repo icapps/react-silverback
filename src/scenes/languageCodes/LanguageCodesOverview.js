@@ -12,7 +12,7 @@ class LanguageCodesOverview extends Component {
     return new Promise(async resolve => {
       const result = await this.props.createLanguageCode(languageCode);
       if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
-        this.props.history.push(`${window.location.pathname}/${this.props.languageCode}`, this.props.languageCode);
+        this.props.history.push(`${window.location.pathname}/${this.props.languageCode.id}`, this.props.languageCode.id);
         resolve(true);
       }
       resolve(false);
