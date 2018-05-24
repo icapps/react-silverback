@@ -1,10 +1,10 @@
 import constants from './constants';
 import { authService } from '../../services';
 
-export const loginUser = (username, password) => {
+export const loginUser = (email, password) => {
   return {
     type: constants.LOGIN_USER,
-    payload: authService.login(username, password),
+    payload: authService.login(email, password),
   };
 };
 
