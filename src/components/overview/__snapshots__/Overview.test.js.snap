@@ -2407,9 +2407,7 @@ ShallowWrapper {
                 <span
                         className="empty-overview"
                 >
-                        No 
-                        DataTypes
-                         found ...
+                        No DataTypes found ...
                 </span>
         </div>
 </div>,
@@ -2475,9 +2473,7 @@ ShallowWrapper {
             <span
                         className="empty-overview"
             >
-                        No 
-                        DataTypes
-                         found ...
+                        No DataTypes found ...
             </span>
 </div>,
         ],
@@ -2611,9 +2607,7 @@ ShallowWrapper {
             "children": <span
               className="empty-overview"
 >
-              No 
-              DataTypes
-               found ...
+              No DataTypes found ...
 </span>,
             "className": "jumbotron",
             "role": "alert",
@@ -2624,19 +2618,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "No ",
-                "DataTypes",
-                " found ...",
-              ],
+              "children": "No DataTypes found ...",
               "className": "empty-overview",
             },
             "ref": null,
-            "rendered": Array [
-              "No ",
-              "DataTypes",
-              " found ...",
-            ],
+            "rendered": "No DataTypes found ...",
             "type": "span",
           },
           "type": "div",
@@ -2705,9 +2691,7 @@ ShallowWrapper {
                     <span
                               className="empty-overview"
                     >
-                              No 
-                              DataTypes
-                               found ...
+                              No DataTypes found ...
                     </span>
           </div>
 </div>,
@@ -2773,9 +2757,7 @@ ShallowWrapper {
               <span
                             className="empty-overview"
               >
-                            No 
-                            DataTypes
-                             found ...
+                            No DataTypes found ...
               </span>
 </div>,
           ],
@@ -2909,9 +2891,7 @@ ShallowWrapper {
               "children": <span
                 className="empty-overview"
 >
-                No 
-                DataTypes
-                 found ...
+                No DataTypes found ...
 </span>,
               "className": "jumbotron",
               "role": "alert",
@@ -2922,19 +2902,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "No ",
-                  "DataTypes",
-                  " found ...",
-                ],
+                "children": "No DataTypes found ...",
                 "className": "empty-overview",
               },
               "ref": null,
-              "rendered": Array [
-                "No ",
-                "DataTypes",
-                " found ...",
-              ],
+              "rendered": "No DataTypes found ...",
               "type": "span",
             },
             "type": "div",
