@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode } from '../../redux/codes/actions';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode, setSort } from '../../redux/codes/actions';
 import constants from '../../redux/codes/constants';
 
 class LanguageCodesOverview extends Component {
@@ -12,11 +12,18 @@ class LanguageCodesOverview extends Component {
     return new Promise(async resolve => {
       const result = await this.props.createLanguageCode(languageCode);
       if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
-        this.props.history.push(`${window.location.pathname}/${this.props.languageCode}`, this.props.languageCode);
+        this.props.history.push(`${window.location.pathname}/${this.props.languageCode.id}`, this.props.languageCode.id);
         resolve(true);
       }
       resolve(false);
     });
+  }
+
+  getCodesSorted = (page, limit, sortField, sortOrder) => {
+    if (sortField && sortOrder) {
+      this.props.setSort(sortField, sortOrder);
+    }
+    this.props.getLanguageCodes(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder);
   }
 
   render() {
@@ -25,14 +32,14 @@ class LanguageCodesOverview extends Component {
         title={strings.LANGUAGE_CODES}
         keyword={strings.LANGUAGE_CODE}
         keys={[
-          { id: identifiers.CODE, value: strings.CODE, isSortable: true },
-          { id: identifiers.NAME, value: strings.NAME, isSortable: true },
-          { id: identifiers.ACTIVE, value: strings.ACTIVE },
+          { id: identifiers.CODE, value: strings.CODE, isSortable: true, sorter: identifiers.CODE },
+          { id: identifiers.NAME, value: strings.NAME, isSortable: true, sorter: identifiers.NAME },
+          { id: identifiers.DEPRECATED, value: strings.DEPRECATED, isSortable: true, sorter: identifiers.DEPRECATED },
         ]}
         listItems={this.props.languageCodes.map(languageCode => { return { ...languageCode, deprecated: !!languageCode.deprecated, active: !languageCode.deprecated }; })}
         history={this.props.history}
         paginationTotalCount={this.props.languageCodeCount}
-        get={this.props.getLanguageCodes}
+        get={this.getCodesSorted}
         createParameters={[
           { id: identifiers.CODE, label: strings.CODE, type: "text" },
           { id: identifiers.NAME, label: strings.NAME, type: "text" },
@@ -66,6 +73,8 @@ class LanguageCodesOverview extends Component {
           actionClassName: 'success',
         }]}
         deleteIdentifier={identifiers.NAME}
+        sortField={this.props.sortField}
+        sortOrder={this.props.sortOrder}
       />
     );
   }
@@ -92,6 +101,8 @@ const mapStateToProps = state => ({
   errorMessage: state.codes.errorMessage,
   isCreatePending: state.codes.isCreatePending,
   isCreateError: state.codes.isCreateError,
+  sortField: state.codes.sortField,
+  sortOrder: state.codes.sortOrder,
 });
 
 const mapDispatchToProps = {
@@ -99,6 +110,7 @@ const mapDispatchToProps = {
   createLanguageCode,
   deprecateLanguageCode,
   undeprecateLanguageCode,
+  setSort,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodesOverview);

@@ -82,6 +82,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -101,6 +103,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -194,6 +197,8 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
                 />
                 <Pagination
                         activePage={0}
@@ -215,6 +220,7 @@ ShallowWrapper {
           Array [],
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -308,6 +314,8 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
             />
             <Pagination
                         activePage={0}
@@ -328,13 +336,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -494,6 +502,8 @@ ShallowWrapper {
                                               ]
                 }
                 maxTextLength={50}
+                sortField=""
+                sortOrder=""
 />,
               <Pagination
                 activePage={0}
@@ -565,6 +575,8 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+                "sortField": "",
+                "sortOrder": "",
               },
               "ref": null,
               "rendered": null,
@@ -603,6 +615,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -696,6 +709,8 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                              sortField=""
+                              sortOrder=""
                     />
                     <Pagination
                               activePage={0}
@@ -717,6 +732,7 @@ ShallowWrapper {
             Array [],
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -810,6 +826,8 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+                            sortField=""
+                            sortOrder=""
               />
               <Pagination
                             activePage={0}
@@ -830,13 +848,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },
@@ -996,6 +1014,8 @@ ShallowWrapper {
                                                     ]
                   }
                   maxTextLength={50}
+                  sortField=""
+                  sortOrder=""
 />,
                 <Pagination
                   activePage={0}
@@ -1067,6 +1087,8 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                  "sortField": "",
+                  "sortOrder": "",
                 },
                 "ref": null,
                 "rendered": null,
@@ -1187,6 +1209,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1206,6 +1230,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -1299,6 +1324,8 @@ ShallowWrapper {
                                       ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
                 />
                 <Pagination
                         activePage={0}
@@ -1320,6 +1347,7 @@ ShallowWrapper {
           Array [],
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -1413,6 +1441,8 @@ ShallowWrapper {
                                               ]
                         }
                         maxTextLength={50}
+                        sortField=""
+                        sortOrder=""
             />
             <Pagination
                         activePage={0}
@@ -1433,13 +1463,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -1599,6 +1629,8 @@ ShallowWrapper {
                                               ]
                 }
                 maxTextLength={50}
+                sortField=""
+                sortOrder=""
 />,
               <Pagination
                 activePage={0}
@@ -1670,6 +1702,8 @@ ShallowWrapper {
                   },
                 ],
                 "maxTextLength": 50,
+                "sortField": "",
+                "sortOrder": "",
               },
               "ref": null,
               "rendered": null,
@@ -1708,6 +1742,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -1801,6 +1836,8 @@ ShallowWrapper {
                                                 ]
                               }
                               maxTextLength={50}
+                              sortField=""
+                              sortOrder=""
                     />
                     <Pagination
                               activePage={0}
@@ -1822,6 +1859,7 @@ ShallowWrapper {
             Array [],
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -1915,6 +1953,8 @@ ShallowWrapper {
                                                       ]
                             }
                             maxTextLength={50}
+                            sortField=""
+                            sortOrder=""
               />
               <Pagination
                             activePage={0}
@@ -1935,13 +1975,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },
@@ -2101,6 +2141,8 @@ ShallowWrapper {
                                                     ]
                   }
                   maxTextLength={50}
+                  sortField=""
+                  sortOrder=""
 />,
                 <Pagination
                   activePage={0}
@@ -2172,6 +2214,8 @@ ShallowWrapper {
                     },
                   ],
                   "maxTextLength": 50,
+                  "sortField": "",
+                  "sortOrder": "",
                 },
                 "ref": null,
                 "rendered": null,
@@ -2274,6 +2318,8 @@ ShallowWrapper {
     paginationTotalCount={100}
     removeItem={[Function]}
     resetDeletedItem={[Function]}
+    sortField=""
+    sortOrder=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -2293,6 +2339,7 @@ ShallowWrapper {
 >
         <h2>
                 DataTypes
+                
         </h2>
         <div
                 className="overview-settings"
@@ -2340,9 +2387,7 @@ ShallowWrapper {
                 <span
                         className="empty-overview"
                 >
-                        No 
-                        DataTypes
-                         found ...
+                        No DataTypes found ...
                 </span>
         </div>
 </div>,
@@ -2358,6 +2403,7 @@ ShallowWrapper {
           Array [],
           <h2>
             DataTypes
+            
 </h2>,
           <div
             className="overview-settings"
@@ -2405,9 +2451,7 @@ ShallowWrapper {
             <span
                         className="empty-overview"
             >
-                        No 
-                        DataTypes
-                         found ...
+                        No DataTypes found ...
             </span>
 </div>,
         ],
@@ -2422,13 +2466,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "DataTypes",
-              null,
+              "",
             ],
           },
           "ref": null,
           "rendered": Array [
             "DataTypes",
-            null,
+            "",
           ],
           "type": "h2",
         },
@@ -2538,9 +2582,7 @@ ShallowWrapper {
             "children": <span
               className="empty-overview"
 >
-              No 
-              DataTypes
-               found ...
+              No DataTypes found ...
 </span>,
             "className": "jumbotron",
             "role": "alert",
@@ -2551,19 +2593,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "No ",
-                "DataTypes",
-                " found ...",
-              ],
+              "children": "No DataTypes found ...",
               "className": "empty-overview",
             },
             "ref": null,
-            "rendered": Array [
-              "No ",
-              "DataTypes",
-              " found ...",
-            ],
+            "rendered": "No DataTypes found ...",
             "type": "span",
           },
           "type": "div",
@@ -2584,6 +2618,7 @@ ShallowWrapper {
 >
           <h2>
                     DataTypes
+                    
           </h2>
           <div
                     className="overview-settings"
@@ -2631,9 +2666,7 @@ ShallowWrapper {
                     <span
                               className="empty-overview"
                     >
-                              No 
-                              DataTypes
-                               found ...
+                              No DataTypes found ...
                     </span>
           </div>
 </div>,
@@ -2649,6 +2682,7 @@ ShallowWrapper {
             Array [],
             <h2>
               DataTypes
+              
 </h2>,
             <div
               className="overview-settings"
@@ -2696,9 +2730,7 @@ ShallowWrapper {
               <span
                             className="empty-overview"
               >
-                            No 
-                            DataTypes
-                             found ...
+                            No DataTypes found ...
               </span>
 </div>,
           ],
@@ -2713,13 +2745,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataTypes",
-                null,
+                "",
               ],
             },
             "ref": null,
             "rendered": Array [
               "DataTypes",
-              null,
+              "",
             ],
             "type": "h2",
           },
@@ -2829,9 +2861,7 @@ ShallowWrapper {
               "children": <span
                 className="empty-overview"
 >
-                No 
-                DataTypes
-                 found ...
+                No DataTypes found ...
 </span>,
               "className": "jumbotron",
               "role": "alert",
@@ -2842,19 +2872,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "No ",
-                  "DataTypes",
-                  " found ...",
-                ],
+                "children": "No DataTypes found ...",
                 "className": "empty-overview",
               },
               "ref": null,
-              "rendered": Array [
-                "No ",
-                "DataTypes",
-                " found ...",
-              ],
+              "rendered": "No DataTypes found ...",
               "type": "span",
             },
             "type": "div",

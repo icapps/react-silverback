@@ -121,6 +121,16 @@ const codes = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
+    
+    //SET_SORT
+    case constants.SET_CODES_SORT:
+      const { sortField, sortOrder } = payload;
+      return {
+        ...state,
+        sortField,
+        sortOrder,
+      };
+
     default:
       return state;
   }

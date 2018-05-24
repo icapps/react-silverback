@@ -51,11 +51,15 @@ class UserDetail extends Component {
     }
     return true;
   }
+  
   render() {
     const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
-    if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
-    if (this.props.user) return (
-      <Detail
+    if (this.props.isPending) {
+      return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
+    }
+    if (this.props.user) {
+      return (
+        <Detail
         keyword={strings.USER}
         title={this.props.user.email}
         id={this.props.user.id}
@@ -103,8 +107,10 @@ class UserDetail extends Component {
           <p>{strings.RESET_PASSWORD_FOR_THIS_USER_TEXT}</p>
         </Modal>
       </Detail>
-    );
-    return <EmptyDetail history={this.props.history} />;
+      );
+    } else {
+      return <EmptyDetail history={this.props.history} />;
+    }
   }
 }
 
