@@ -36,11 +36,11 @@ class UserOverview extends Component {
         title={strings.USERS}
         keyword={strings.USER}
         keys={[
-          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true, sorter: identifiers.EMAIL },
-          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true, sorter: identifiers.FIRST_NAME },
-          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true, sorter: identifiers.LAST_NAME },
-          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: true, sorter: identifiers.HAS_ACCESS },
-          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE },
+          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true, sorter: identifiers.EMAIL, width: 4},
+          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true, sorter: identifiers.FIRST_NAME, width: 2},
+          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true, sorter: identifiers.LAST_NAME, width: 3},
+          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE, width: 1},
+          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: true, sorter: identifiers.HAS_ACCESS, width: 1},   
         ]}
         listItems={this.props.users}
         history={this.props.history}

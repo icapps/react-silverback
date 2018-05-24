@@ -32,9 +32,9 @@ class LanguageCodesOverview extends Component {
         title={strings.LANGUAGE_CODES}
         keyword={strings.LANGUAGE_CODE}
         keys={[
-          { id: identifiers.CODE, value: strings.CODE, isSortable: true, sorter: identifiers.CODE },
-          { id: identifiers.NAME, value: strings.NAME, isSortable: true, sorter: identifiers.NAME },
-          { id: identifiers.DEPRECATED, value: strings.DEPRECATED, isSortable: true, sorter: identifiers.DEPRECATED },
+          { id: identifiers.CODE, value: strings.CODE, isSortable: true, sorter: identifiers.CODE, width: 4},
+          { id: identifiers.NAME, value: strings.NAME, isSortable: true, sorter: identifiers.NAME, width: 4},
+          { id: identifiers.DEPRECATED, value: strings.DEPRECATED, isSortable: true, sorter: identifiers.DEPRECATED, width: 2},
         ]}
         listItems={this.props.languageCodes.map(languageCode => { return { ...languageCode, deprecated: !!languageCode.deprecated, active: !languageCode.deprecated }; })}
         history={this.props.history}

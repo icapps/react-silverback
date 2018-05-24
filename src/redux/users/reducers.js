@@ -12,6 +12,8 @@ const initialState = {
   isUserUpdated: false,
   isCreateError: false,
   deletedUser: '',
+  sortField: 'email',
+  sortOrder: 'asc',
   ...defaultInitialState,
 };
 

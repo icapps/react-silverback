@@ -270,6 +270,8 @@ Object {
   "isPending": false,
   "isUpdatePending": false,
   "isUserUpdated": false,
+  "sortField": "email",
+  "sortOrder": "asc",
   "user": null,
   "userList": Array [],
   "userRoles": Array [],
