@@ -54,6 +54,7 @@ class UserDetail extends Component {
   render() {
     const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
     if (this.props.isPending) return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
+    
     if (this.props.user) return (
       <Detail
         keyword={strings.USER}
