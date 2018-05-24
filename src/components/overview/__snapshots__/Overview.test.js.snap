@@ -217,9 +217,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          false,
-          false,
-          false,
+          Array [],
           <h2>
             DataTypes
             
@@ -331,9 +329,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        false,
-        false,
-        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -734,9 +729,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            false,
-            false,
-            false,
+            Array [],
             <h2>
               DataTypes
               
@@ -848,9 +841,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          false,
-          false,
-          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -1354,9 +1344,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          false,
-          false,
-          false,
+          Array [],
           <h2>
             DataTypes
             
@@ -1468,9 +1456,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        false,
-        false,
-        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -1871,9 +1856,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            false,
-            false,
-            false,
+            Array [],
             <h2>
               DataTypes
               
@@ -1985,9 +1968,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          false,
-          false,
-          false,
           Object {
             "instance": null,
             "key": undefined,
@@ -2420,9 +2400,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          false,
-          false,
-          false,
+          Array [],
           <h2>
             DataTypes
             
@@ -2481,9 +2459,6 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        false,
-        false,
-        false,
         Object {
           "instance": null,
           "key": undefined,
@@ -2704,9 +2679,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            false,
-            false,
-            false,
+            Array [],
             <h2>
               DataTypes
               
@@ -2765,9 +2738,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          false,
-          false,
-          false,
           Object {
             "instance": null,
             "key": undefined,
