@@ -117,7 +117,7 @@ class Detail extends React.Component {
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
               </div>}
-              {props.remove && <Modal
+              {props.remove && !props.isMe && <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={this.delete}

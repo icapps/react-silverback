@@ -2,6 +2,12 @@ import { Network } from '../utils';
 
 export const login = async (email, password) => {
   const result = await Network.post('/auth/login/admin', { email, password, deviceId: getDeviceId(email) });
+  localStorage.setItem('LOGGED_IN', true);
+  return result;
+};
+
+export const getMe = async () => {
+  const result = await Network.get('/me');
   return result;
 };
 
@@ -30,5 +36,6 @@ export const confirmForgotPassword = async (token, password) => {
 
 export const logout = async () => {
   const result = await Network.post('/auth/logout');
+  localStorage.removeItem('LOGGED_IN');
   return result;
 };
