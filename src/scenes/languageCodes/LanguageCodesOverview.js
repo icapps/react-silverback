@@ -19,11 +19,11 @@ class LanguageCodesOverview extends Component {
     });
   }
 
-  getCodesSorted = (page, limit, sortField, sortOrder) => {
+  getCodesSorted = (page, limit, sortField, sortOrder, search = '') => {
     if (sortField && sortOrder) {
       this.props.setSort(sortField, sortOrder);
     }
-    this.props.getLanguageCodes(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder);
+    this.props.getLanguageCodes(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder, search);
   }
 
   render() {

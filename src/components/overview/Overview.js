@@ -16,6 +16,7 @@ class Overview extends React.Component {
       deletedItem: props.deletedItem ? props.deletedItem : '',
       actionText: '',
       actionClass: '',
+      filterValue: '',
     };
     this.timer = null;
   }
@@ -59,7 +60,7 @@ class Overview extends React.Component {
   };
 
   sortItems = (sortField, sortOrder) => {
-    this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder);
+    this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder, this.state.filterValue);
   }
 
   handlePagination = (page, limit) => {
@@ -69,7 +70,10 @@ class Overview extends React.Component {
 
   handleFilter = filterValue => {
     clearTimeout(this.timer);
-    this.timer = setTimeout(() => this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder, filterValue), 700);
+    this.timer = setTimeout(() => {
+      this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder, filterValue);
+      this.setState({ filterValue });
+    }, 700);
   }
 
   scrollTop = () => {
