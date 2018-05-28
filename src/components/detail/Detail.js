@@ -102,21 +102,6 @@ class Detail extends React.Component {
               {props.children}
             </div>
             <div className="detail-actions">
-              {props.update && <div className="update-actions">
-                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
-                <Modal
-                  id="reset-changes"
-                  modalButtonText={strings.RESET_CHANGES}
-                  handlePrimaryButton={this.resetChanges}
-                  primaryButtonText={strings.RESET}
-                  secondaryButtonText={strings.CANCEL}
-                  modalButtonClassName="btn-light"
-                  secondaryButtonClassName="btn-light"
-                  primaryButtonClassName="btn-danger"
-                >
-                  <p>{strings.RESET_CONFIRMATION}</p>
-                </Modal>
-              </div>}
               {props.remove && <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
@@ -129,6 +114,21 @@ class Detail extends React.Component {
               >
                 <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
+              {props.update && <div className="update-actions">
+                <Modal
+                  id="reset-changes"
+                  modalButtonText={strings.RESET_CHANGES}
+                  handlePrimaryButton={this.resetChanges}
+                  primaryButtonText={strings.RESET}
+                  secondaryButtonText={strings.CANCEL}
+                  modalButtonClassName="btn-light"
+                  secondaryButtonClassName="btn-light"
+                  primaryButtonClassName="btn-danger"
+                >
+                  <p>{strings.RESET_CONFIRMATION}</p>
+                </Modal>
+                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
+              </div>}
               {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
