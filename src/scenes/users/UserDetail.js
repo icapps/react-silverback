@@ -64,15 +64,15 @@ class UserDetail extends Component {
         title={this.props.user.email}
         id={this.props.user.id}
         inputItems={[
-          { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY'), label: strings.CREATED_AT, type: "text", isEditable: false },
-          { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "text", isEditable: false },
+          { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY'), label: strings.CREATED_AT, type: "plain", isEditable: false },
+          { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "plain", isEditable: false },
           { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
-          { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
           { id: identifiers.ROLE, value: this.props.user.role.code, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
           { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true },
-          { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_COMPLETED, type: "boolean", isEditable: false },
+          { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_COMPLETED, type: "plain", isEditable: false },
+          { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
         ]}
         history={this.props.history}
         createParameters={[
@@ -100,7 +100,7 @@ class UserDetail extends Component {
           handlePrimaryButton={this.forgotPassword}
           primaryButtonText={strings.RESET}
           secondaryButtonText={strings.CANCEL}
-          modalButtonClassName="btn-primary forgot-password-btn"
+          modalButtonClassName="btn-light forgot-password-btn"
           secondaryButtonClassName="btn-light"
           primaryButtonClassName="btn-primary"
         >
