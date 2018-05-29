@@ -87,7 +87,7 @@ class Overview extends React.Component {
       alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} clearAlerts={this.clearAlerts} />);
     }
     if (this.state.actionText !== '') {
-      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText} key={new Date()} clearAlerts={this.clearAlerts} />);
+      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText[0][0].props.children + this.state.actionText[1]} key={'t'} />);
     }
     if (this.state.deletedItem !== '') {
       alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} clearAlerts={this.clearAlerts} />);
