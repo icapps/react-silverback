@@ -21,36 +21,82 @@ class Login extends Component {
   }
 
   changeInput = event => {
-    this.setState({showErrorMessage: false});
+    this.setState({ showErrorMessage: false });
     const value = event.target.value;
-    if(event.target.id === 'email') {
+    const errorState = this.checkIfValid(event.target.id, value);
+    if (event.target.id === 'email') {
       this.setState({
         email: {
           value: value,
-          isValid: value !== '' && regexes.EMAIL.test(value),
-          errorMessage: value !== '' ? strings.LOGIN_EMAIL_VALIDATION : strings.LOGIN_EMAIL_REQUIRED,
-        }});
-    } else {
+          isValid: errorState.isValid,
+          errorMessage: errorState.message,
+        },
+      });
+    } else if (event.target.id === 'password'){
       this.setState({
         password: {
-          ...this.state.password,
           value: value,
-          isValid: value !== '',
-        }});
+          isValid: errorState.isValid,
+          errorMessage: errorState.message,
+        },
+      });
+    }
+  }
+
+  checkIfValid = (field, value) => {
+    if (field === 'email') {
+      if (value === '') {
+        return {
+          isValid: false,
+          message: strings.LOGIN_EMAIL_REQUIRED,
+        };
+      } else if (!regexes.EMAIL.test(value)) {
+        return {
+          isValid: false,
+          message: strings.LOGIN_EMAIL_VALIDATION,
+        };
+      } else {
+        return {
+          isValid: true,
+          errorMessage: '',
+        };
+      }
+    } else if (field === 'password') {
+      if (value === '') {
+        return {
+          isValid: false,
+          message: strings.LOGIN_PASSWORD_REQUIRED,
+        };
+      } else if (value.length < 6) {
+        return {
+          isValid: false,
+          message: strings.LOGIN_PASSWORD_LENGTH,
+        };
+      } else {
+        return {
+          isValid: true,
+          errorMessage: '',
+        };
+      }
     }
   }
 
   login = async () => {
+    const errorEmail = this.checkIfValid('email', this.state.email.value);
     this.setState({
       email: {
-        ...this.state.email,
-        isValid: this.state.email.value !== '' && regexes.EMAIL.test(this.state.email.value),
-        errorMessage: this.state.email.value !== '' ? strings.LOGIN_EMAIL_VALIDATION : strings.LOGIN_EMAIL_REQUIRED,
+        value: this.state.email.value,
+        isValid: errorEmail.isValid,
+        errorMessage: errorEmail.message,
       },
+    });
+    const errorPassword = this.checkIfValid('password', this.state.password.value);
+    this.setState({
       password: {
-        ...this.state.password,
-        isValid: this.state.password.value !== '',
-      },  
+        value: this.state.password.value,
+        isValid: errorPassword.isValid,
+        errorMessage: errorPassword.message,
+      },
     });
     if (this.state.email.isValid && this.state.password.isValid) {
       await this.props.loginUser(this.state.email.value, this.state.password.value);
