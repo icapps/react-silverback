@@ -58,6 +58,7 @@ class UserDetail extends Component {
       return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     }
     if (this.props.user) {
+      const isMe = this.props.user.email === this.props.email;
       return (
         <Detail
         keyword={strings.USER}
@@ -93,6 +94,7 @@ class UserDetail extends Component {
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
         isForgotPasswordSuccessful={this.state.showForgotPasswordMessage}
+        isMe={isMe}
       >
         <Modal
           id="reset-password"
@@ -142,6 +144,7 @@ const mapStateToProps = state => ({
   isCreatePending: state.users.isCreatePending,
   isUpdatePending: state.users.isUpdatePending,
   isForgotPasswordPending: state.auth.isForgotPasswordPending,
+  email: state.auth.email,
 });
 
 const mapDispatchToProps = {

@@ -104,8 +104,19 @@ class Detail extends React.Component {
               {props.children}
             </div>
             <div className="detail-actions">
+              {props.remove && <Modal
+                id="delete"
+                modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
+                handlePrimaryButton={this.delete}
+                primaryButtonText={strings.DELETE}
+                secondaryButtonText={strings.CANCEL}
+                modalButtonClassName="btn-danger"
+                secondaryButtonClassName="btn-light"
+                primaryButtonClassName="btn-danger"
+              >
+                <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
+              </Modal>}
               {props.update && <div className="update-actions">
-                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
                 <Modal
                   id="reset-changes"
                   modalButtonText={strings.RESET_CHANGES}
@@ -118,8 +129,9 @@ class Detail extends React.Component {
                 >
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
+                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
               </div>}
-              {props.remove && <Modal
+              {props.remove && !props.isMe && <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={this.delete}
@@ -153,7 +165,7 @@ class Detail extends React.Component {
                 secondaryButtonClassName="btn-light"
                 primaryButtonClassName="btn-info"
               >
-                <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
+                <p>{strings.formatString(strings.UNDEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
             </div>
           </div>
@@ -181,6 +193,7 @@ Detail.propTypes = {
   isDeprecated: PropTypes.bool,
   showDeprecationStatus: PropTypes.bool,
   isForgotPasswordSuccessful: PropTypes.bool,
+  isMe: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -195,6 +208,7 @@ Detail.defaultProps = {
   isDeprecated: false,
   showDeprecationStatus: false,
   isForgotPasswordSuccessful: false,
+  isMe: false,
 };
 
 export default Detail;

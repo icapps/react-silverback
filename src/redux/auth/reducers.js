@@ -7,6 +7,7 @@ const initialState = {
   isPasswordVerified: false,
   isPasswordConfirmed: false,
   isForgotPasswordPending: false,
+  email: '',
   ...defaultInitialState,
 };
 
@@ -38,6 +39,29 @@ const auth = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
+
+    // GET_ME
+    case constants.GET_ME_FULFILLED:
+      return {
+        ...state,
+        email: action.payload.data.email,
+        isPending: false,
+      };
+    case constants.GET_ME_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.GET_ME_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
     // FORGOT_PASSWORD
     case constants.FORGOT_PASSWORD_FULFILLED:
       return {

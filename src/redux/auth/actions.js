@@ -8,6 +8,13 @@ export const loginUser = (email, password) => {
   };
 };
 
+export const getMe = () => {
+  return {
+    type: constants.GET_ME,
+    payload: authService.getMe(),
+  };
+};
+
 export const logoutUser = () => {
   return {
     type: constants.LOGOUT_USER,
