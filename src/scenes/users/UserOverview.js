@@ -23,11 +23,11 @@ class UserOverview extends Component {
     this.props.getUserRoles();
   }
 
-  getUsersSorted = (page, limit, sortField, sortOrder) => {
+  getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
     if (sortField && sortOrder) {
       this.props.setSort(sortField, sortOrder);
     }
-    this.props.getUsers(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder);
+    this.props.getUsers(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder, search);
   }
 
   render() {
