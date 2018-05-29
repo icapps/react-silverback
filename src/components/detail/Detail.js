@@ -153,7 +153,7 @@ class Detail extends React.Component {
                 secondaryButtonClassName="btn-light"
                 primaryButtonClassName="btn-info"
               >
-                <p>{strings.formatString(strings.DEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
+                <p>{strings.formatString(strings.UNDEPRECATE_TEXT, { item: <span className="text-danger">{props.title}</span> })}</p>
               </Modal>}
             </div>
           </div>
