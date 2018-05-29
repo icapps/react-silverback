@@ -60,7 +60,7 @@ class Detail extends React.Component {
       return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
-      return <div className='form-group' key={item.id}><label>{item.label}</label><p>{item.value}</p></div>;
+      return <div className='form-group' key={item.id}><p>{item.label} {item.value}</p></div>;
     }
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
