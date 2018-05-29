@@ -6,9 +6,14 @@ class Alert extends React.Component {
     super(props);
     this.state = {
       show: true,
+      text: props.text,
     };
+    this.setTimer();
+  }
+
+  setTimer = () => {
     setTimeout(() => {
-      this.setState({ show: false });
+      this.setState({ show: false, text: '' }, () => this.props.clearAlerts());
     }, 3000);
   }
 
@@ -25,6 +30,7 @@ class Alert extends React.Component {
 Alert.propTypes = {
   className: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  clearAlerts: PropTypes.func.isRequired,
 };
 
 export default Alert;
