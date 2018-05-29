@@ -16,15 +16,32 @@ class Login extends Component {
     this.state = {
       email: { value: '', isValid: true, errorMessage: strings.LOGIN_EMAIL_REQUIRED },
       password: { value: '', isValid: true, errorMessage: strings.LOGIN_PASSWORD_REQUIRED },
+      showErrorMessage: false,
     };
   }
 
   changeInput = event => {
-    this.setState({ [event.target.id]: { ...this.state[event.target.id], value: event.target.value } });
+    this.setState({showErrorMessage: false});
+    const value = event.target.value;
+    if(event.target.id === 'email') {
+      this.setState({
+        email: {
+          value: value,
+          isValid: value !== '' && regexes.EMAIL.test(value),
+          errorMessage: value !== '' ? strings.LOGIN_EMAIL_VALIDATION : strings.LOGIN_EMAIL_REQUIRED,
+        }});
+    } else {
+      this.setState({
+        password: {
+          ...this.state.password,
+          value: value,
+          isValid: value !== '',
+        }});
+    }
   }
 
   login = async () => {
-    await this.setState({
+    this.setState({
       email: {
         ...this.state.email,
         isValid: this.state.email.value !== '' && regexes.EMAIL.test(this.state.email.value),
@@ -33,24 +50,23 @@ class Login extends Component {
       password: {
         ...this.state.password,
         isValid: this.state.password.value !== '',
-      },
+      },  
     });
     if (this.state.email.isValid && this.state.password.isValid) {
       await this.props.loginUser(this.state.email.value, this.state.password.value);
       if (this.props.isLoggedIn) {
         this.props.history.push('/');
       } else {
-        this.setState({ password: { ...this.state.password, value: '' } });
+        this.setState({ password: { ...this.state.password, value: '' }, showErrorMessage: true });
       }
     }
   }
 
   render() {
     const { props, state } = this;
-    const showErrorMessage = state.email.isValid && state.password.isValid;
     return (
       <div className="login-container container">
-        {(props.isError && showErrorMessage) && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
+        {(props.isError && state.showErrorMessage) && <div className="alert alert-danger text-center" role="alert">{props.errorMessage}</div>}
         <main className='login'>
           <div className="row">
             <div className="col-12 col-md-5 branding">
