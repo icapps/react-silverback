@@ -61,7 +61,7 @@ class LanguageCodeDetail extends Component {
         keyword={strings.LANGUAGE_CODE}
         id={props.code.id}
         inputItems={[
-          { id: identifiers.CREATED_AT, label: strings.CREATED_AT, value: format(new Date(props.code.createdAt), 'DD-MM-YYYY'), type: "plain", isEditable: false },
+          { id: identifiers.CREATED_AT, label: strings.CREATED_AT, value: format(new Date(props.code.createdAt), 'DD-MM-YYYY'), type: "text", isEditable: false },
           { id: identifiers.CODE, label: strings.CODE, value: props.code.code, isEditable: false },
           { id: identifiers.NAME, label: strings.NAME, value: props.code.name, isEditable: false },
           { id: identifiers.DESCRIPTION, label: strings.DESCRIPTION, value: props.code.description, isEditable: false },
