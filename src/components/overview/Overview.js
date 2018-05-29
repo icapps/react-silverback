@@ -77,21 +77,16 @@ class Overview extends React.Component {
   }
 
   getAlerts = () => {
-    //console.log(this.state.actionText);
-    
     const alerts = [];
     if (this.props.isError) {
       alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} />);
     }
     if (this.state.actionText !== '') {
-      //console.log(this.state.actionText[0][0].props.children);
       alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText[0][0].props.children + this.state.actionText[1]} key={'t'} />);
-      //this.state.actionText = '';
     }
     if (this.state.deletedItem !== '') {
       alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} />);
     }
-    //console.log(alerts);
     return alerts;
   }
 
@@ -101,12 +96,6 @@ class Overview extends React.Component {
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
           {this.getAlerts()}
-          {/* {this.props.isError && <Alert className={'danger'} text={this.state.actionText} key={new Date()} />}
-          {this.state.actionText !== '' && <Alert className={this.state.actionClass} text={this.state.actionText} />} */}
-       
-          {/* {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-          {state.actionText !== '' && <div className={`alert ${state.actionClass}`} role="alert">{state.actionText}</div>}
-          {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>} */}
           <h2>
             {props.title}
             {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
