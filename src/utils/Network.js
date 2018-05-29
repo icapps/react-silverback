@@ -25,17 +25,17 @@ class Network {
   static errorHandler(error) {
     if (error.response) {
       throw {
-        errors : (error.response.data && error.response.data.errors) || [ { code: '0', status: 500, title: 'Unknown error', meta: error.response } ],
+        errors: (error.response.data && error.response.data.errors) || [{ code: '0', status: 500, title: 'Unknown error', meta: error.response }],
       };
     } else if (error.request) {
       // The request was made but no response was received
       throw {
-        errors : [ { code: '0', status: 500, title: 'Unknown error', meta: error.request } ],
+        errors: [{ code: '0', status: 500, title: 'Unknown error', meta: error.request }],
       };
     } else {
       // Something happened in setting up the request that triggered an Error
       throw {
-        errors : [ { code: '0', status: 500, title: 'Unknown error', meta: error.message } ],
+        errors: [{ code: '0', status: 500, title: 'Unknown error', meta: error.message }],
       };
     }
   }

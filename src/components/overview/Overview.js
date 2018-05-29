@@ -82,16 +82,24 @@ class Overview extends React.Component {
 
   getAlerts = () => {
     const alerts = [];
+
     if (this.props.isError) {
-      alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} />);
+      alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} clearAlerts={this.clearAlerts} />);
     }
     if (this.state.actionText !== '') {
-      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText} key={new Date()} />);
+      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText} key={new Date()} clearAlerts={this.clearAlerts} />);
     }
     if (this.state.deletedItem !== '') {
-      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} />);
+      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} clearAlerts={this.clearAlerts} />);
     }
     return alerts;
+  }
+
+  clearAlerts = () => {
+    this.setState({
+      actionText: '',
+      deletedItem: '',
+    });
   }
 
   render() {
