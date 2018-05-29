@@ -60,7 +60,7 @@ class Detail extends React.Component {
       return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
-      return <div class='form-group'><label>{item.label}</label><p>{item.value}</p></div>;
+      return <div className='form-group' key={item.id}><label>{item.label}</label><p>{item.value}</p></div>;
     }
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
@@ -104,18 +104,6 @@ class Detail extends React.Component {
               {props.children}
             </div>
             <div className="detail-actions">
-              {props.remove && <Modal
-                id="delete"
-                modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
-                handlePrimaryButton={this.delete}
-                primaryButtonText={strings.DELETE}
-                secondaryButtonText={strings.CANCEL}
-                modalButtonClassName="btn-danger"
-                secondaryButtonClassName="btn-light"
-                primaryButtonClassName="btn-danger"
-              >
-                <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
-              </Modal>}
               {props.update && <div className="update-actions">
                 <Modal
                   id="reset-changes"
