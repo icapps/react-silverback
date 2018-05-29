@@ -116,7 +116,7 @@ class Detail extends React.Component {
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
               </div>}
-              {props.remove && <Modal
+              {props.remove && !props.isMe && <Modal
                 id="delete"
                 modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                 handlePrimaryButton={this.delete}
@@ -178,6 +178,7 @@ Detail.propTypes = {
   isDeprecated: PropTypes.bool,
   showDeprecationStatus: PropTypes.bool,
   isForgotPasswordSuccessful: PropTypes.bool,
+  isMe: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -192,6 +193,7 @@ Detail.defaultProps = {
   isDeprecated: false,
   showDeprecationStatus: false,
   isForgotPasswordSuccessful: false,
+  isMe: false,
 };
 
 export default Detail;
