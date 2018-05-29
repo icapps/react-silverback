@@ -128,6 +128,18 @@ class Detail extends React.Component {
                 </Modal>
                 <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
               </div>}
+              {props.remove && !props.isMe && <Modal
+                id="delete"
+                modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
+                handlePrimaryButton={this.delete}
+                primaryButtonText={strings.DELETE}
+                secondaryButtonText={strings.CANCEL}
+                modalButtonClassName="btn-danger"
+                secondaryButtonClassName="btn-light"
+                primaryButtonClassName="btn-danger"
+              >
+                <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
+              </Modal>}
               {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"
                 modalButtonText={`${strings.DEPRECATE} ${props.keyword.toLowerCase()}`}
@@ -178,6 +190,7 @@ Detail.propTypes = {
   isDeprecated: PropTypes.bool,
   showDeprecationStatus: PropTypes.bool,
   isForgotPasswordSuccessful: PropTypes.bool,
+  isMe: PropTypes.bool,
 };
 
 Detail.defaultProps = {
@@ -192,6 +205,7 @@ Detail.defaultProps = {
   isDeprecated: false,
   showDeprecationStatus: false,
   isForgotPasswordSuccessful: false,
+  isMe: false,
 };
 
 export default Detail;

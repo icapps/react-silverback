@@ -117,6 +117,7 @@ Object {
 
 exports[`auth reducer should return the initial state 1`] = `
 Object {
+  "email": "",
   "errorMessage": "",
   "isError": false,
   "isForgotPasswordPending": false,
