@@ -96,10 +96,6 @@ class Overview extends React.Component {
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
           {this.getAlerts()}
-
-          {/* {props.isError && <div className="alert alert-danger" role="alert">{props.errorMessage}</div>}
-          {state.actionText !== '' && <div className={`alert ${state.actionClass}`} role="alert">{state.actionText}</div>}
-          {state.deletedItem !== '' && <div className="alert alert-success" role="alert">{strings.formatString(strings.DELETED_ITEM, { item: <strong>{state.deletedItem}</strong> })}</div>} */}
           <h2>
             {props.title}
             {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
