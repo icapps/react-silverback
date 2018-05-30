@@ -44,6 +44,10 @@ class ChoosePassword extends React.Component {
       });
   }
 
+  goBackToLogin = () => {
+    this.props.history.push('/auth/login');
+  }
+
   render() {
     const { props, state } = this;
     const isGettingStartedScreen = window.location.pathname === '/choose-password';
@@ -55,6 +59,7 @@ class ChoosePassword extends React.Component {
           <main className="choose-password choose-password-succes">
             <h3>{isGettingStartedScreen ? strings.GETTING_STARTED_SUCCES : strings.FORGOT_PASSWORD_SUCCES}</h3>
             <p>{isGettingStartedScreen ? strings.GETTING_STARTED_SUCCES_TEXT : strings.FORGOT_PASSWORD_SUCCES_TEXT}</p>
+            <Button className="btn-primary" text={strings.GO_BACK_TO_LOGIN} handleClick={this.goBackToLogin} />
           </main>
         </div>
       );
