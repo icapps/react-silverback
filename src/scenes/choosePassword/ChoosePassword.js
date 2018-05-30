@@ -6,6 +6,7 @@ import { Spinner, BasicInput, Button } from '../../components';
 import './choosePassword.css';
 import { identifiers } from '../../constants/index';
 import { strings } from '../../utils/index';
+import ForgotPassword from '../forgotPassword/ForgotPassword';
 
 class ChoosePassword extends React.Component {
   constructor() {
@@ -51,7 +52,7 @@ class ChoosePassword extends React.Component {
   render() {
     const { props, state } = this;
     const isGettingStartedScreen = window.location.pathname === '/choose-password';
-
+    
     if (props.isPending) { return <Spinner hasContainer={false} />; };
     if (props.isPasswordConfirmed) {
       return (
@@ -66,12 +67,7 @@ class ChoosePassword extends React.Component {
     };
     if (props.isError) {
       return (
-        <div className="choose-password-container container">
-          <main className="choose-password choose-password-failed">
-            <h3 className="text-danger">{isGettingStartedScreen ? strings.GETTING_STARTED : strings.FORGOT_PASSWORD}</h3>
-            <p>{isGettingStartedScreen ? strings.GETTING_STARTED_ERROR : strings.FORGOT_PASSWORD_ERROR}</p>
-          </main>
-        </div>
+        <ForgotPassword {...this.props} />
       );
     };
     return (

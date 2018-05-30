@@ -35,7 +35,7 @@ class ForgotPassword extends React.Component {
   }
 
   goBackToLogin = () => {
-    this.props.history.goBack();
+    this.props.history.push('/auth/login');
   }
 
   render() {
