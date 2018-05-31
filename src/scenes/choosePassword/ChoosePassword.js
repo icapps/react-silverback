@@ -66,9 +66,7 @@ class ChoosePassword extends React.Component {
       );
     };
     if (props.isError) {
-      return (
-        <ForgotPassword {...this.props} />
-      );
+      this.props.history.push('/auth/forgot-password');
     };
     return (
       <div className="choose-password-container container">
