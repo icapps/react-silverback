@@ -32,11 +32,11 @@ class Overview extends React.Component {
   remove = async (item, deletedItem) => {
     if (this.props.removeItem) {
       const result = await this.props.removeItem(item);
+      this.scrollTop();
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-        this.scrollTop();
         this.setState({ deletedItem });
         this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder);
-      }
+      } 
     }
   }
 
@@ -82,15 +82,15 @@ class Overview extends React.Component {
 
   getAlerts = () => {
     const alerts = [];
-
+    
     if (this.props.isError) {
-      alerts.push(<Alert className={'danger'} text={this.state.actionText} key={new Date()} clearAlerts={this.clearAlerts} />);
+      alerts.push(<Alert className={'danger'} text={this.state.actionText || this.props.errorMessage} key={'a'} clearAlerts={this.clearAlerts} />);
     }
     if (this.state.actionText !== '') {
-      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText[0][0].props.children + this.state.actionText[1]} key={'t'} clearAlerts={this.clearAlerts} />);
+      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText[0][0].props.children + this.state.actionText[1]} key={'b'} clearAlerts={this.clearAlerts} />);
     }
     if (this.state.deletedItem !== '') {
-      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={new Date()} clearAlerts={this.clearAlerts} />);
+      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={'c'} clearAlerts={this.clearAlerts} />);
     }
     return alerts;
   }
