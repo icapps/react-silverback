@@ -24,6 +24,10 @@ class Network {
 
   static errorHandler(error) {
     if (error.response) {
+      if(error.response.data && (error.response.data && error.response.data.errors)
+        && error.response.data.errors.length === 1 && error.response.data.errors[0].code === 'INVALID_TOKEN'){
+          localStorage.removeItem('ACCESS_TOKEN');
+      }
       throw {
         errors: (error.response.data && error.response.data.errors) || [{ code: '0', status: 500, title: 'Unknown error', meta: error.response }],
       };
