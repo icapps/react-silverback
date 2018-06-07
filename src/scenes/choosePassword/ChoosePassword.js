@@ -11,7 +11,7 @@ class ChoosePassword extends React.Component {
   constructor() {
     super();
     this.state = {
-      password: { value: '', isValid: true, errorMessage: strings.FIELD_REQUIRED },
+      password: { value: '', isValid: true, errorMessage: strings.PASSWORD_LENGTH },
       repeatPassword: { value: '', isValid: true, errorMessage: strings.REPEAT_NEW_PASSWORD_ERROR },
       isSubmitted: false,
     };
@@ -25,16 +25,16 @@ class ChoosePassword extends React.Component {
 
   handleChange = event => {
     if (event.target.id === identifiers.PASSWORD) {
-      this.setState({ [event.target.id]: { value: event.target.value, isValid: event.target.value !== '' || !this.state.isSubmitted, errorMessage: strings.FIELD_REQUIRED } });
+      this.setState({ [event.target.id]: { ...this.state.password, value: event.target.value, isValid: true } });
     } else {
-      this.setState({ [event.target.id]: { value: event.target.value, isValid: !this.state.isSubmitted || this.state.password.value === event.target.value, errorMessage: strings.REPEAT_NEW_PASSWORD_ERROR } });
+      this.setState({ [event.target.id]: { ...this.state.repeatPassword, value: event.target.value, isValid: true } });
     }
   }
 
   handleClick = () => {
     this.setState({
       isSubmitted: true,
-      password: { ...this.state.password, isValid: this.state.password.value !== '' },
+      password: { ...this.state.password, isValid: this.state.password.value.length > 5 },
       repeatPassword: { ...this.state.repeatPassword, isValid: this.state.password.value === this.state.repeatPassword.value && this.state.repeatPassword.value !== '' },
     },
       () => {
