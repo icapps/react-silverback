@@ -23,21 +23,18 @@ class Login extends Component {
   changeInput = event => {
     this.setState({ showErrorMessage: false });
     const value = event.target.value;
-    const errorState = this.checkIfValid(event.target.id, value);
     if (event.target.id === 'email') {
       this.setState({
         email: {
+          isValid: true,
           value: value,
-          isValid: errorState.isValid,
-          errorMessage: errorState.message,
         },
       });
     } else if (event.target.id === 'password'){
       this.setState({
         password: {
+          isValid: true,
           value: value,
-          isValid: errorState.isValid,
-          errorMessage: errorState.message,
         },
       });
     }
@@ -67,11 +64,6 @@ class Login extends Component {
           isValid: false,
           message: strings.LOGIN_PASSWORD_REQUIRED,
         };
-      } else if (value.length < 6) {
-        return {
-          isValid: false,
-          message: strings.LOGIN_PASSWORD_LENGTH,
-        };
       } else {
         return {
           isValid: true,
@@ -81,31 +73,30 @@ class Login extends Component {
     }
   }
 
-  login = async () => {
+  login = () => {
     const errorEmail = this.checkIfValid('email', this.state.email.value);
+    const errorPassword = this.checkIfValid('password', this.state.password.value);
     this.setState({
       email: {
         value: this.state.email.value,
         isValid: errorEmail.isValid,
         errorMessage: errorEmail.message,
       },
-    });
-    const errorPassword = this.checkIfValid('password', this.state.password.value);
-    this.setState({
       password: {
         value: this.state.password.value,
         isValid: errorPassword.isValid,
         errorMessage: errorPassword.message,
       },
-    });
-    if (this.state.email.isValid && this.state.password.isValid) {
-      await this.props.loginUser(this.state.email.value, this.state.password.value);
-      if (this.props.isLoggedIn) {
-        this.props.history.push('/');
-      } else {
-        this.setState({ password: { ...this.state.password, value: '' }, showErrorMessage: true });
+    }, async () => {
+      if (this.state.email.isValid && this.state.password.isValid) {
+        await this.props.loginUser(this.state.email.value, this.state.password.value);
+        if (this.props.isLoggedIn) {
+          this.props.history.push('/');
+        } else {
+          this.setState({ password: { ...this.state.password, value: '' }, showErrorMessage: true });
+        }
       }
-    }
+    });
   }
 
   render() {

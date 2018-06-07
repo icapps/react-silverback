@@ -22,7 +22,7 @@ class UserOverview extends Component {
   componentDidMount() {
     this.props.getUserRoles();
   }
-
+  
   getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
     if (sortField && sortOrder) {
       this.props.setSort(sortField, sortOrder);
@@ -46,11 +46,11 @@ class UserOverview extends Component {
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
         createParameters={[
-          { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
+          { id: identifiers.EMAIL, label: strings.EMAIL, type: "email" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
-          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
+          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", value: true },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}

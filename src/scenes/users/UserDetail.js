@@ -77,11 +77,11 @@ class UserDetail extends Component {
         ]}
         history={this.props.history}
         createParameters={[
-          { id: identifiers.EMAIL, label: strings.EMAIL, type: "text" },
+          { id: identifiers.EMAIL, label: strings.EMAIL, type: "email" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
-          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", defaultValue: true },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped},
+          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", value: true },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
