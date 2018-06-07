@@ -54,13 +54,13 @@ class Detail extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+      return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
     if (item.type === 'select') {
       return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
-      return <div className='form-group' key={item.id}><p>{item.label} {item.value}</p></div>;
+      return <div className={`form-group ${item.css}`} key={item.id}><p>{item.label} {item.value}</p></div>;
     }
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
@@ -68,7 +68,7 @@ class Detail extends React.Component {
   renderAlert = (text, showAlert, isSuccess = true) => {
     window.scrollTo(0, 0);
     if (showAlert) {
-      return <Alert className={`${isSuccess ? 'success' : 'danger'}`} text={text} />;
+      return <Alert className={`${isSuccess ? 'success' : 'danger'}`} text={text} clearAlerts={() => {}} />;
     }
     return null;
   };

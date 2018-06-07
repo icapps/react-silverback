@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Checkbox
+    css=""
     handleChange={[Function]}
     id="test"
     isDisabled={false}
@@ -41,7 +42,7 @@ ShallowWrapper {
                 This is a checkbox
         </label>
 </div>,
-      "className": "form-group",
+      "className": "form-group ",
     },
     "ref": null,
     "rendered": Object {
@@ -127,7 +128,7 @@ ShallowWrapper {
                     This is a checkbox
           </label>
 </div>,
-        "className": "form-group",
+        "className": "form-group ",
       },
       "ref": null,
       "rendered": Object {
