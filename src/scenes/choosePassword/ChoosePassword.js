@@ -6,7 +6,6 @@ import { Spinner, BasicInput, Button } from '../../components';
 import './choosePassword.css';
 import { identifiers } from '../../constants/index';
 import { strings } from '../../utils/index';
-import ForgotPassword from '../forgotPassword/ForgotPassword';
 
 class ChoosePassword extends React.Component {
   constructor() {
