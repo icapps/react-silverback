@@ -68,6 +68,7 @@ class CreateModal extends React.Component {
       return this.props.create(this.state.inputs, this.state.createPassword);
     } else {
       this.setState({ inputs });
+      return 'error';
     }
   }
 
@@ -187,11 +188,7 @@ class CreateModal extends React.Component {
       >
         {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div className="create-modal-input">
-          {this.state.inputs && this.props.createParameters.map(item => {
-            //console.log(this.props.createParameters);
-            return this.renderInput(item);
-            //debugger;
-          })}
+          {this.state.inputs && this.props.createParameters.map(item => this.renderInput(item))}
         </div>
       </Modal>
     );
