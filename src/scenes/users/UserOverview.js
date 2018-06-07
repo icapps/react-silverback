@@ -22,7 +22,7 @@ class UserOverview extends Component {
   componentDidMount() {
     this.props.getUserRoles();
   }
-
+  
   getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
     if (sortField && sortOrder) {
       this.props.setSort(sortField, sortOrder);
