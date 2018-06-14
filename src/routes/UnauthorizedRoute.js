@@ -20,10 +20,8 @@ class AuthorizedRoute extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapDispatchToProps = {
+  toggleNavigation,
+};
 
-const mapDispatchToProps = dispatch => ({
-  toggleNavigation: () => dispatch(toggleNavigation()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(AuthorizedRoute);
+export default connect(null, mapDispatchToProps)(AuthorizedRoute);

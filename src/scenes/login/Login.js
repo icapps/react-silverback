@@ -16,12 +16,10 @@ class Login extends Component {
     this.state = {
       email: { value: '', isValid: true, errorMessage: strings.LOGIN_EMAIL_REQUIRED },
       password: { value: '', isValid: true, errorMessage: strings.LOGIN_PASSWORD_REQUIRED },
-      showErrorMessage: false,
     };
   }
 
   changeInput = event => {
-    this.setState({ showErrorMessage: false });
     const value = event.target.value;
     if (event.target.id === 'email') {
       this.setState({
@@ -93,17 +91,16 @@ class Login extends Component {
         if (this.props.isLoggedIn) {
           this.props.history.push('/');
         } else {
-          this.setState({ password: { ...this.state.password, value: '' }, showErrorMessage: true });
+          this.setState({ password: { ...this.state.password, value: '' }});
         }
       }
     });
   }
 
   render() {
-    const { props, state } = this;
+    const { state } = this;
     return (
       <div className="login-container container">
-        {(props.isError && state.showErrorMessage) && <div className="alert alert-danger text-center" role="alert">{props.errorMessage}</div>}
         <main className='login'>
           <div className="row">
             <div className="col-12 col-md-5 branding">
@@ -125,16 +122,13 @@ class Login extends Component {
 
 Login.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
-  isError: PropTypes.bool.isRequired,
-  errorMessage: PropTypes.string.isRequired,
   loginUser: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
   isLoggedIn: state.auth.isLoggedIn,
-  isError: state.auth.isError,
-  errorMessage: state.auth.errorMessage,
+  messages: state.messages.messages,
 });
 
 const mapDispatchToProps = {

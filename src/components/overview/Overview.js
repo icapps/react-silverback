@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Pagination, Table, CreateModal, Filter, Alert } from '../index';
+import { Pagination, Table, CreateModal, Filter } from '../index';
 import { strings } from '../../utils';
 import constants from '../../redux/users/constants';
 import './overview.css';
+import { identifiers } from '../../constants';
 
 const SORT_DESC = 'desc';
 
@@ -13,9 +14,6 @@ class Overview extends React.Component {
     this.state = {
       page: 0,
       limit: 25,
-      deletedItem: props.deletedItem ? props.deletedItem : '',
-      actionText: '',
-      actionClass: '',
       filterValue: '',
     };
     this.timer = null;
@@ -25,17 +23,12 @@ class Overview extends React.Component {
     this.props.get(this.state.page, this.state.limit);
   }
 
-  componentWillUnmount() {
-    this.props.resetDeletedItem();
-  }
-
   remove = async (item, deletedItem) => {
     if (this.props.removeItem) {
       const result = await this.props.removeItem(item);
-      this.scrollTop();
       if (result.action && result.action.type === constants.REMOVE_USER_FULFILLED) {
-        this.setState({ deletedItem });
         this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder);
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.formatString(strings.ITEM_HAS_BEEN_DELETED, { item: <b>{deletedItem}</b> }) });
       } 
     }
   }
@@ -46,8 +39,7 @@ class Overview extends React.Component {
         ...action, handleAction: async item => {
           const actionResult = await action.handleAction(item.id);
           if (actionResult.action && actionResult.action.type.includes('FULFILLED')) {
-            this.scrollTop();
-            this.setState({ actionClass: action.actionClassName, actionText: strings.formatString(action.successMessage, { item: <strong>{item[this.props.deleteIdentifier]}</strong> }) });
+            this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.formatString(action.successMessage, { item: <b>{item.name}</b> }) });
           }
           await this.sortItems(this.props.sortField, this.props.sortOrder);
         },
@@ -76,45 +68,18 @@ class Overview extends React.Component {
     }, 700);
   }
 
-  scrollTop = () => {
-    window.scrollTo(0, 0);
-  }
-
-  getAlerts = () => {
-    const alerts = [];
-    
-    if (this.props.isError) {
-      alerts.push(<Alert className={'danger'} text={this.state.actionText || this.props.errorMessage} key={'a'} clearAlerts={this.clearAlerts} />);
-    }
-    if (this.state.actionText !== '') {
-      alerts.push(<Alert className={this.state.actionClass} text={this.state.actionText[0][0].props.children + this.state.actionText[1]} key={'b'} clearAlerts={this.clearAlerts} />);
-    }
-    if (this.state.deletedItem !== '') {
-      alerts.push(<Alert className={'success'} text={strings.formatString(strings.DELETED_ITEM, { item: <strong>{this.state.deletedItem}</strong> })} key={'c'} clearAlerts={this.clearAlerts} />);
-    }
-    return alerts;
-  }
-
-  clearAlerts = () => {
-    this.setState({
-      actionText: '',
-      deletedItem: '',
-    });
-  }
-
   render() {
     const { props, state } = this;
     return (
       <main className="overview col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <div className="container">
-          {this.getAlerts()}
           <h2>
             {props.title}
             {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
             <Filter handleFilter={this.handleFilter} />
-            {props.create && <CreateModal
+            {props.create && this.props.createParameters.length && <CreateModal
               primaryButtonText={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               title={`${strings.CREATE} ${props.keyword.toLowerCase()}`}
               createParameters={this.props.createParameters}
@@ -166,20 +131,17 @@ Overview.propTypes = {
   dateFormat: PropTypes.string,
   removeItem: PropTypes.func,
   deleteIdentifier: PropTypes.string,
-  isError: PropTypes.bool.isRequired,
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
-  errorMessage: PropTypes.string.isRequired,
   actions: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     label: PropTypes.string,
     handleAction: PropTypes.func,
     primaryButtonText: PropTypes.string,
   })),
-  deletedItem: PropTypes.string,
-  resetDeletedItem: PropTypes.func,
   sortOrder: PropTypes.string,
   sortField: PropTypes.string,
+  setMessage: PropTypes.func.isRequired,
 };
 
 Overview.defaultProps = {
@@ -188,8 +150,6 @@ Overview.defaultProps = {
   dateFormat: null,
   removeItem: null,
   deleteIdentifier: '',
-  deletedItem: '',
-  resetDeletedItem: () => { },
   keyword: '',
   isCreatePending: false,
   isCreateError: false,

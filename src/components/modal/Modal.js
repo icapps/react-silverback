@@ -11,6 +11,14 @@ class Modal extends React.Component {
     };
   }
 
+  componentDidMount() { 
+    this._ismounted = true;
+  }
+  
+  componentWillUnmount() {
+     this._ismounted = false;
+  }
+
   toggleModal = () => {
     this.setState({ showModal: !this.state.showModal });
   }
@@ -26,7 +34,7 @@ class Modal extends React.Component {
 
   handlePrimaryButton = async () => {
     const result = await this.props.handlePrimaryButton();
-    if(result) {
+    if(result && this._ismounted) {
       this.toggleModal();
     }
   }
@@ -38,11 +46,10 @@ class Modal extends React.Component {
 
   render() {
     const { props } = this;
-
     return (
       <React.Fragment>
         <button type="button" className={`btn ${props.modalButtonClassName}`} data-toggle="modal" data-target={`#${props.id}`} onClick={this.handleModalButton}>
-          {props.icon && <img src={props.icon} alt="" />}
+          {props.icon && <img src={props.icon} alt="icon" />}
           {props.modalButtonText}
         </button>
 

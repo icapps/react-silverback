@@ -6,6 +6,7 @@ import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, undeprecateLanguageCode, setSort } from '../../redux/codes/actions';
 import constants from '../../redux/codes/constants';
+import { setMessage } from '../../redux/messages/actions';
 
 class LanguageCodesOverview extends Component {
   createLanguageCode = async languageCode => {
@@ -13,6 +14,7 @@ class LanguageCodesOverview extends Component {
       const result = await this.props.createLanguageCode(languageCode);
       if (result.action && result.action.type === constants.CREATE_LANGUAGE_CODE_FULFILLED) {
         this.props.history.push(`${window.location.pathname}/${this.props.languageCode.id}`, this.props.languageCode.id);
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.NEW_CODE_CREATED });
         resolve(true);
       }
       resolve(false);
@@ -75,6 +77,7 @@ class LanguageCodesOverview extends Component {
         deleteIdentifier={identifiers.NAME}
         sortField={this.props.sortField}
         sortOrder={this.props.sortOrder}
+        setMessage={this.props.setMessage}
       />
     );
   }
@@ -111,6 +114,7 @@ const mapDispatchToProps = {
   deprecateLanguageCode,
   undeprecateLanguageCode,
   setSort,
+  setMessage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageCodesOverview);

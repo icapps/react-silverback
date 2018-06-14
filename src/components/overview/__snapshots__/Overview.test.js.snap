@@ -33,7 +33,6 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
-    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -81,7 +80,7 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
-    resetDeletedItem={[Function]}
+    setMessage={[Function]}
     sortField=""
     sortOrder=""
     title="DataTypes"
@@ -217,7 +216,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Array [],
           <h2>
             DataTypes
             
@@ -729,7 +727,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [],
             <h2>
               DataTypes
               
@@ -1160,7 +1157,6 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
-    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -1208,7 +1204,7 @@ ShallowWrapper {
     }
     paginationTotalCount={100}
     removeItem={[Function]}
-    resetDeletedItem={[Function]}
+    setMessage={[Function]}
     sortField=""
     sortOrder=""
     title="DataTypes"
@@ -1344,7 +1340,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Array [],
           <h2>
             DataTypes
             
@@ -1856,7 +1851,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [],
             <h2>
               DataTypes
               
@@ -2287,7 +2281,6 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
-    deletedItem=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -2317,7 +2310,7 @@ ShallowWrapper {
     listItems={Array []}
     paginationTotalCount={100}
     removeItem={[Function]}
-    resetDeletedItem={[Function]}
+    setMessage={[Function]}
     sortField=""
     sortOrder=""
     title="DataTypes"
@@ -2400,7 +2393,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Array [],
           <h2>
             DataTypes
             
@@ -2679,7 +2671,6 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [],
             <h2>
               DataTypes
               

@@ -168,13 +168,6 @@ const users = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
 
-    //RESET_DELETED_USER
-    case constants.RESET_DELETED_USER:
-      return {
-        ...state,
-        deletedUser: '',
-      };
-
     //SET_SORT
     case constants.SET_USERS_SORT:
       const { sortField, sortOrder } = payload;

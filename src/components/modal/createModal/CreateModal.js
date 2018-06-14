@@ -13,7 +13,6 @@ class CreateModal extends React.Component {
     super(props);
     this.state = {
       inputs: this.initializeCreateParameters(),
-      showErrorMessage: false,
       createPassword: true,
     };
   }
@@ -37,35 +36,36 @@ class CreateModal extends React.Component {
   }
 
   setCreateParameters = () => {
-    this.setState({ inputs: this.initializeCreateParameters(), showErrorMessage: false });
+    this.setState({ inputs: this.initializeCreateParameters() });
   }
 
-  create = async () => {
+  create = () => {
     let toValidate = 0;
     let validated = 0;
-    let inputs = this.state.inputs;
+    let inputs = { ...this.state.inputs };
+
     for (let key in inputs) {
       if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
-          toValidate++;
-          let validation = this.validate(inputs[key].validation, inputs[key].value);
-          inputs[key].isValid = validation.isValid;
-          inputs[key].errorMessage = validation.errorMessage;
-          if(validation.isValid) {
-            validated++;
-          }
-      } 
+        toValidate++;
+        let validation = this.validate(inputs[key].validation, inputs[key].value);
+        inputs[key].isValid = validation.isValid;
+        inputs[key].errorMessage = validation.errorMessage;
+        if (validation.isValid) {
+          validated++;
+        }
+      }
     }
 
     if (toValidate === validated) {
       for (let key in inputs) {
         if (inputs.hasOwnProperty(key)) {
           inputs[key] = inputs[key].value;
-        } 
+        }
       }
       if (this.state.createPassword) {
-        return this.props.create({ ...this.state.inputs, password: undefined }, this.state.createPassword);
+        return this.props.create({ ...inputs, password: undefined }, this.state.createPassword);
       }
-      return this.props.create(this.state.inputs, this.state.createPassword);
+      return this.props.create(inputs, this.state.createPassword);
     } else {
       this.setState({ inputs });
     }
@@ -153,7 +153,7 @@ class CreateModal extends React.Component {
           isValid: true,
           errorMessage: '',
         };
-      } 
+      }
     } else if (type === 'text') {
       if (value === '') {
         return {
@@ -165,7 +165,7 @@ class CreateModal extends React.Component {
           isValid: true,
           errorMessage: '',
         };
-      } 
+      }
     }
   }
 
@@ -187,11 +187,7 @@ class CreateModal extends React.Component {
       >
         {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div className="create-modal-input">
-          {this.state.inputs && this.props.createParameters.map(item => {
-            //console.log(this.props.createParameters);
-            return this.renderInput(item);
-            //debugger;
-          })}
+          {this.state.inputs && this.props.createParameters.map(item => this.renderInput(item))}
         </div>
       </Modal>
     );

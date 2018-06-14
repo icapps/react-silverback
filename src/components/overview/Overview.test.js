@@ -25,6 +25,7 @@ describe('Overview Component', () => {
       create={() => { }}
       isError={false}
       errorMessage="test"
+      setMessage={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -46,6 +47,7 @@ describe('Overview Component', () => {
       create={() => { }}
       isError={false}
       errorMessage="test"
+      setMessage={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -67,6 +69,7 @@ describe('Overview Component', () => {
       create={() => { }}
       isError={false}
       errorMessage="test"
+      setMessage={() => { }}
     />);
     expect(wrapper).toMatchSnapshot();
   });

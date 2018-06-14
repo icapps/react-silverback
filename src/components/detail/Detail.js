@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown, Alert } from '../index';
+import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
 import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
@@ -11,7 +12,6 @@ class Detail extends React.Component {
     super(props);
     this.state = {
       inputItemState: this.setInputItems(),
-      isSaved: false,
     };
   }
 
@@ -28,19 +28,21 @@ class Detail extends React.Component {
   save = async () => {
     const result = await this.props.update(this.props.id, this.state.inputItemState);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.setState({ isSaved: true });
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
     }
   }
 
   resetChanges = () => {
-    this.setState({ inputItemState: this.setInputItems() }, this.forceUpdate());
+    this.setState({ inputItemState: this.setInputItems() });
+    this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.CHANGES_RESET });
     return true;
   }
 
   delete = async () => {
     const result = await this.props.remove(this.props.id);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.props.history.goBack();
+      this.props.history.push('/');
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.formatString(strings.ITEM_HAS_BEEN_DELETED, { item: <b>{this.props.title}</b> }) });
     }
   }
 
@@ -65,14 +67,6 @@ class Detail extends React.Component {
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
   }
 
-  renderAlert = (text, showAlert, isSuccess = true) => {
-    window.scrollTo(0, 0);
-    if (showAlert) {
-      return <Alert className={`${isSuccess ? 'success' : 'danger'}`} text={text} clearAlerts={() => {}} />;
-    }
-    return null;
-  };
-
   render() {
     const { state, props } = this;
     const overview = window.location.pathname.split('/')[1];
@@ -92,11 +86,6 @@ class Detail extends React.Component {
                 errorMessage={props.errorMessage}
               />}
             </div>
-            {this.renderAlert(strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS, props.isForgotPasswordSuccessful)}
-            {this.renderAlert(strings.UPDATE_SUCCESS, props.isUpdated && state.isSaved)}
-            {this.renderAlert(props.errorMessage, props.isError, false)}
-            {this.renderAlert(strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && props.isDeprecated)}
-            {this.renderAlert(strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && !props.isDeprecated)}
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
@@ -175,13 +164,11 @@ Detail.propTypes = {
   createParameters: PropTypes.array,
   remove: PropTypes.func,
   update: PropTypes.func,
-  isUpdated: PropTypes.bool,
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   isDeprecated: PropTypes.bool,
-  showDeprecationStatus: PropTypes.bool,
-  isForgotPasswordSuccessful: PropTypes.bool,
   isMe: PropTypes.bool,
+  setMessage: PropTypes.func.isRequired,
 };
 
 Detail.defaultProps = {
@@ -189,13 +176,10 @@ Detail.defaultProps = {
   createParameters: [],
   remove: null,
   update: null,
-  isUpdated: false,
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
   isDeprecated: false,
-  showDeprecationStatus: false,
-  isForgotPasswordSuccessful: false,
   isMe: false,
 };
 

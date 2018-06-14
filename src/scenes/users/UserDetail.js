@@ -9,14 +9,9 @@ import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 import './userDetail.css';
+import { setMessage } from '../../redux/messages/actions';
 
 class UserDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showForgotPasswordMessage: false,
-    };
-  }
   componentDidMount() {
     this.props.getUsersById(this.props.location.state);
     this.props.getUserRoles();
@@ -34,6 +29,7 @@ class UserDetail extends Component {
       const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
         this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.NEW_USER_CREATED });
         resolve(true);
       }
       resolve(false);
@@ -47,7 +43,7 @@ class UserDetail extends Component {
   forgotPassword = async () => {
     const result = await this.props.forgotPassword(this.props.user.email);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.setState({ showForgotPasswordMessage: true });
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS });
     }
     return true;
   }
@@ -88,13 +84,12 @@ class UserDetail extends Component {
         remove={this.props.removeUser}
         update={this.updateUser}
         isUpdatePending={this.props.isUpdatePending}
-        isUpdated={this.props.isUserUpdated}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
-        isForgotPasswordSuccessful={this.state.showForgotPasswordMessage}
         isMe={isMe}
+        setMessage={this.props.setMessage}
       >
         <Modal
           id="reset-password"
@@ -118,7 +113,6 @@ class UserDetail extends Component {
 
 UserDetail.propTypes = {
   user: PropTypes.object,
-  isUserUpdated: PropTypes.bool.isRequired,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
@@ -136,7 +130,6 @@ UserDetail.propTypes = {
 const mapStateToProps = state => ({
   user: state.users.user,
   userRoles: state.users.userRoles,
-  isUserUpdated: state.users.isUserUpdated,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
@@ -154,6 +147,7 @@ const mapDispatchToProps = {
   removeUser,
   getUserRoles,
   forgotPassword,
+  setMessage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);
