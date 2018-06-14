@@ -66,6 +66,7 @@ class UserOverview extends Component {
         sortField={this.props.sortField}
         sortOrder={this.props.sortOrder}
         setMessage={this.props.setMessage}
+        email={this.props.email}
       />
     );
   }
@@ -80,7 +81,6 @@ UserOverview.propTypes = {
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
   isCreatePending: PropTypes.bool.isRequired, 
-
 };
 
 const mapStateToProps = state => ({
@@ -92,6 +92,7 @@ const mapStateToProps = state => ({
   isCreateError: state.users.isCreateError,
   sortField: state.users.sortField,
   sortOrder: state.users.sortOrder,
+  email: state.auth.email,
 });
 
 const mapDispatchToProps = {

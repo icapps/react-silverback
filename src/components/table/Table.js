@@ -83,20 +83,22 @@ class Table extends React.Component {
                     return null;
                   })
                 }
-                {props.handleRemoveItem && <td className="remove-list-item table-data col-1">
-                  <Modal
-                    id="delete"
-                    icon={deleteIcon}
-                    modalButtonText=""
-                    handlePrimaryButton={() => props.handleRemoveItem(listItem.id, listItem[props.deleteIdentifier])}
-                    primaryButtonText={strings.DELETE}
-                    secondaryButtonText={strings.CANCEL}
-                    secondaryButtonClassName="btn-light"
-                    primaryButtonClassName="btn-danger"
-                  >
-                    <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
-                  </Modal>
-                </td>}
+                {props.handleRemoveItem && listItem[props.deleteIdentifier] !== props.email ? (
+                  <td className="remove-list-item table-data col-1">
+                    <Modal
+                      id="delete"
+                      icon={deleteIcon}
+                      modalButtonText=""
+                      handlePrimaryButton={() => props.handleRemoveItem(listItem.id, listItem[props.deleteIdentifier])}
+                      primaryButtonText={strings.DELETE}
+                      secondaryButtonText={strings.CANCEL}
+                      secondaryButtonClassName="btn-light"
+                      primaryButtonClassName="btn-danger"
+                    >
+                      <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span> })}</p>
+                    </Modal>
+                  </td>
+                ) : (<td className="remove-list-item table-data col-1" onClick={() => props.handleRowClick(listItem.id)}></td>)}
               </tr>
             ))}
           </tbody>
@@ -120,6 +122,7 @@ Table.propTypes = {
   deleteIdentifier: PropTypes.string,
   sortOrder: PropTypes.string,
   sortField: PropTypes.string,
+  email: PropTypes.string,
 };
 
 Table.defaultProps = {
@@ -129,6 +132,7 @@ Table.defaultProps = {
   deleteIdentifier: '',
   sortOrder: '',
   sortField: '',
+  email: '',
 };
 
 export default Table;

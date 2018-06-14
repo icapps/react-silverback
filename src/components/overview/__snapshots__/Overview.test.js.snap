@@ -33,6 +33,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    email=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -154,6 +155,7 @@ ShallowWrapper {
                         actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
+                        email=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -270,6 +272,7 @@ ShallowWrapper {
                         actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
+                        email=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -458,6 +461,7 @@ ShallowWrapper {
                 actions={Array []}
                 dateFormat={null}
                 deleteIdentifier=""
+                email=""
                 handleRemoveItem={[Function]}
                 handleRowClick={[Function]}
                 handleSort={[Function]}
@@ -535,6 +539,7 @@ ShallowWrapper {
                 "actions": Array [],
                 "dateFormat": null,
                 "deleteIdentifier": "",
+                "email": "",
                 "handleRemoveItem": [Function],
                 "handleRowClick": [Function],
                 "handleSort": [Function],
@@ -665,6 +670,7 @@ ShallowWrapper {
                               actions={Array []}
                               dateFormat={null}
                               deleteIdentifier=""
+                              email=""
                               handleRemoveItem={[Function]}
                               handleRowClick={[Function]}
                               handleSort={[Function]}
@@ -781,6 +787,7 @@ ShallowWrapper {
                             actions={Array []}
                             dateFormat={null}
                             deleteIdentifier=""
+                            email=""
                             handleRemoveItem={[Function]}
                             handleRowClick={[Function]}
                             handleSort={[Function]}
@@ -969,6 +976,7 @@ ShallowWrapper {
                   actions={Array []}
                   dateFormat={null}
                   deleteIdentifier=""
+                  email=""
                   handleRemoveItem={[Function]}
                   handleRowClick={[Function]}
                   handleSort={[Function]}
@@ -1046,6 +1054,7 @@ ShallowWrapper {
                   "actions": Array [],
                   "dateFormat": null,
                   "deleteIdentifier": "",
+                  "email": "",
                   "handleRemoveItem": [Function],
                   "handleRowClick": [Function],
                   "handleSort": [Function],
@@ -1157,6 +1166,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    email=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}
@@ -1278,6 +1288,7 @@ ShallowWrapper {
                         actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
+                        email=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -1394,6 +1405,7 @@ ShallowWrapper {
                         actions={Array []}
                         dateFormat={null}
                         deleteIdentifier=""
+                        email=""
                         handleRemoveItem={[Function]}
                         handleRowClick={[Function]}
                         handleSort={[Function]}
@@ -1582,6 +1594,7 @@ ShallowWrapper {
                 actions={Array []}
                 dateFormat={null}
                 deleteIdentifier=""
+                email=""
                 handleRemoveItem={[Function]}
                 handleRowClick={[Function]}
                 handleSort={[Function]}
@@ -1659,6 +1672,7 @@ ShallowWrapper {
                 "actions": Array [],
                 "dateFormat": null,
                 "deleteIdentifier": "",
+                "email": "",
                 "handleRemoveItem": [Function],
                 "handleRowClick": [Function],
                 "handleSort": [Function],
@@ -1789,6 +1803,7 @@ ShallowWrapper {
                               actions={Array []}
                               dateFormat={null}
                               deleteIdentifier=""
+                              email=""
                               handleRemoveItem={[Function]}
                               handleRowClick={[Function]}
                               handleSort={[Function]}
@@ -1905,6 +1920,7 @@ ShallowWrapper {
                             actions={Array []}
                             dateFormat={null}
                             deleteIdentifier=""
+                            email=""
                             handleRemoveItem={[Function]}
                             handleRowClick={[Function]}
                             handleSort={[Function]}
@@ -2093,6 +2109,7 @@ ShallowWrapper {
                   actions={Array []}
                   dateFormat={null}
                   deleteIdentifier=""
+                  email=""
                   handleRemoveItem={[Function]}
                   handleRowClick={[Function]}
                   handleSort={[Function]}
@@ -2170,6 +2187,7 @@ ShallowWrapper {
                   "actions": Array [],
                   "dateFormat": null,
                   "deleteIdentifier": "",
+                  "email": "",
                   "handleRemoveItem": [Function],
                   "handleRowClick": [Function],
                   "handleSort": [Function],
@@ -2281,6 +2299,7 @@ ShallowWrapper {
     }
     dateFormat={null}
     deleteIdentifier=""
+    email=""
     errorMessage="test"
     get={[Function]}
     history={Object {}}

@@ -49,10 +49,9 @@ class Modal extends React.Component {
     return (
       <React.Fragment>
         <button type="button" className={`btn ${props.modalButtonClassName}`} data-toggle="modal" data-target={`#${props.id}`} onClick={this.handleModalButton}>
-          {props.icon && <img src={props.icon} alt="icon" />}
+          {props.icon && <img src={props.icon} alt="" />}
           {props.modalButtonText}
         </button>
-
         <div className={`modal fade ${this.state.showModal ? 'show' : ''}`} id={props.id} tabIndex="-1" role="dialog" aria-labelledby={props.id} aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">

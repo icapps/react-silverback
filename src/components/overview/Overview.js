@@ -103,6 +103,7 @@ class Overview extends React.Component {
                 actions={this.setActions(this.props.actions)}
                 sortOrder={props.sortOrder}
                 sortField={props.sortField}
+                email={this.props.email}
               />
               <Pagination totalCount={props.paginationTotalCount} handleClick={this.handlePagination} activePage={state.page} pageLimit={state.limit} />
             </React.Fragment>
@@ -142,6 +143,7 @@ Overview.propTypes = {
   sortOrder: PropTypes.string,
   sortField: PropTypes.string,
   setMessage: PropTypes.func.isRequired,
+  email: PropTypes.string,
 };
 
 Overview.defaultProps = {
@@ -156,6 +158,7 @@ Overview.defaultProps = {
   actions: [],
   sortOrder: '',
   sortField: '',
+  email: '',
 };
 
 export default Overview;

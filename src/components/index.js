@@ -13,7 +13,8 @@ import EmptyDetail from './detail/EmptyDetail';
 import CreateModal from './modal/createModal/CreateModal';
 import Spinner from './spinner/Spinner';
 import Filter from './filter/Filter';
-import Alert from './alert/Alert';
+import Alert from './alerts/Alert';
+import Alerts from './alerts/Alerts';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal, Spinner, Filter, Alert };
+export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal, Spinner, Filter, Alert, Alerts };
 

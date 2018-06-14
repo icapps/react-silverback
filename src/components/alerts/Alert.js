@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './alert.css';
 import { identifiers } from '../../constants';
 
-class SimpleAlert extends React.Component {
+class Alert extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,13 +34,13 @@ class SimpleAlert extends React.Component {
   }
 }
 
-SimpleAlert.propTypes = {
+Alert.propTypes = {
   type: PropTypes.string,
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 };
 
-SimpleAlert.defaultProps = {
+Alert.defaultProps = {
   type: identifiers.MESSAGE_SUCCESS,
 };
 
-export default SimpleAlert;
+export default Alert;
