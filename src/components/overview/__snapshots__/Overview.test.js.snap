@@ -84,6 +84,7 @@ ShallowWrapper {
     resetDeletedItem={[Function]}
     sortField=""
     sortOrder=""
+    sortValue=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1211,6 +1212,7 @@ ShallowWrapper {
     resetDeletedItem={[Function]}
     sortField=""
     sortOrder=""
+    sortValue=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -2320,6 +2322,7 @@ ShallowWrapper {
     resetDeletedItem={[Function]}
     sortField=""
     sortOrder=""
+    sortValue=""
     title="DataTypes"
 />,
   Symbol(enzyme.__renderer__): Object {

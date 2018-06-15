@@ -272,6 +272,7 @@ Object {
   "isUserUpdated": false,
   "sortField": "email",
   "sortOrder": "asc",
+  "sortValue": "email",
   "user": null,
   "userList": Array [],
   "userRoles": Array [],
