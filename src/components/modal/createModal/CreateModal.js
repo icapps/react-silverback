@@ -185,7 +185,6 @@ class CreateModal extends React.Component {
         isPending={this.props.isPending}
         handleModalButton={this.setCreateParameters}
       >
-        {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div className="create-modal-input">
           {this.state.inputs && this.props.createParameters.map(item => this.renderInput(item))}
         </div>
