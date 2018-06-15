@@ -2,9 +2,10 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import promiseMiddleware from './middleware/promiseMiddleware';
+import errorHandlingMiddleware from './middleware/errorHandlingMiddleware';
 import rootReducer from './rootReducer';
 
-const middleware = [ thunkMiddleware, promiseMiddleware() ];
+const middleware = [ thunkMiddleware, promiseMiddleware(), errorHandlingMiddleware() ];
 
 if (process.env.NODE_ENV !== 'production') {
   const logger = createLogger({
