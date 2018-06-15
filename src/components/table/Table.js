@@ -15,10 +15,10 @@ const SORT_ASC = 'asc';
 const SORT_DESC = 'desc';
 
 class Table extends React.Component {
-  sort = (sortField, isSortable) => {
+  sort = (sortField, isSortable, sortValue) => {
     if (isSortable) {
       const sortOrder = (this.props.sortField === sortField) ? (this.props.sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
-      this.props.handleSort(sortField, sortOrder);
+      this.props.handleSort(sortField, sortOrder, sortValue);
     }
   }
 
@@ -47,7 +47,7 @@ class Table extends React.Component {
             <tr>
               {props.keys.map(key => (
                 <th scope="col" key={key.id} className={`col-${key.width}`}>
-                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.sorter ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable)}>
+                  <span className={`key ${key.isSortable ? 'sortable-key' : ''} ${props.sortField === key.sorter ? 'active-key' : ''}`} onClick={() => this.sort(key.sorter, key.isSortable, key.value)}>
                     {key.value}
                     {key.isSortable && <span className={`sort ${props.sortField === key.sorter ? props.sortOrder : ''}`} />}
                   </span>

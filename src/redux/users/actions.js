@@ -49,10 +49,10 @@ export const resetDeletedUser = () => {
   };
 };
 
-export const setSort = (sortField, sortOrder) => {
+export const setSort = (sortField, sortOrder, sortValue) => {
   return {
     type: constants.SET_USERS_SORT,
-    payload: {sortField, sortOrder},
+    payload: {sortField, sortOrder, sortValue},
   };
 };
 

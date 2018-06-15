@@ -23,9 +23,9 @@ class UserOverview extends Component {
     this.props.getUserRoles();
   }
   
-  getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
-    if (sortField && sortOrder) {
-      this.props.setSort(sortField, sortOrder);
+  getUsersSorted = (page, limit, sortField, sortOrder, sortValue, search = '') => {
+    if (sortField && sortOrder && sortValue) {
+      this.props.setSort(sortField, sortOrder, sortValue);
     }
     this.props.getUsers(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder, search);
   }
@@ -65,6 +65,7 @@ class UserOverview extends Component {
         resetDeletedItem={this.props.resetDeletedUser}
         sortField={this.props.sortField}
         sortOrder={this.props.sortOrder}
+        sortValue={this.props.sortValue}
       />
     );
   }
@@ -95,6 +96,7 @@ const mapStateToProps = state => ({
   deletedUser: state.users.deletedUser,
   sortField: state.users.sortField,
   sortOrder: state.users.sortOrder,
+  sortValue: state.users.sortValue,
 });
 
 const mapDispatchToProps = {

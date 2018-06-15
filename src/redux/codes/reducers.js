@@ -10,6 +10,7 @@ const initialState = {
   isCreateError: false,
   sortField: 'code',
   sortOrder: 'asc',
+  sortValue: 'code',
   ...defaultInitialState,
 };
 
@@ -126,11 +127,12 @@ const codes = (state = initialState, action = {}) => {
     
     //SET_SORT
     case constants.SET_CODES_SORT:
-      const { sortField, sortOrder } = payload;
+      const { sortField, sortOrder, sortValue } = payload;
       return {
         ...state,
         sortField,
         sortOrder,
+        sortValue,
       };
 
     default:

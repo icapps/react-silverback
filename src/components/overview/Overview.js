@@ -59,8 +59,8 @@ class Overview extends React.Component {
     this.props.history.push(`${window.location.pathname}/${id}`, id);
   };
 
-  sortItems = (sortField, sortOrder) => {
-    this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder, this.state.filterValue);
+  sortItems = (sortField, sortOrder, sortValue) => {
+    this.props.get(this.state.page * this.state.limit, this.state.limit, sortField, sortOrder, sortValue, this.state.filterValue);
   }
 
   handlePagination = (page, limit) => {
@@ -71,7 +71,7 @@ class Overview extends React.Component {
   handleFilter = filterValue => {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
-      this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder, filterValue);
+      this.props.get(this.state.page * this.state.limit, this.state.limit, this.props.sortField, this.props.sortOrder, this.props.sortValue, filterValue);
       this.setState({ filterValue });
     }, 700);
   }
@@ -110,7 +110,7 @@ class Overview extends React.Component {
           {this.getAlerts()}
           <h2>
             {props.title}
-            {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
+            {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortValue.toLowerCase()} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
             <Filter handleFilter={this.handleFilter} />
@@ -180,6 +180,7 @@ Overview.propTypes = {
   resetDeletedItem: PropTypes.func,
   sortOrder: PropTypes.string,
   sortField: PropTypes.string,
+  sortValue: PropTypes.string,
 };
 
 Overview.defaultProps = {
@@ -196,6 +197,7 @@ Overview.defaultProps = {
   actions: [],
   sortOrder: '',
   sortField: '',
+  sortValue: '',
 };
 
 export default Overview;
