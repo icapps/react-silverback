@@ -85,7 +85,7 @@ class CreateModal extends React.Component {
     });
   };
 
-  handleCreatePassword = event => {
+  handleCreatePassword = () => {
     this.setState({
       createPassword: !this.state.createPassword,
     }, () => {

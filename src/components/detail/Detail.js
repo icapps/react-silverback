@@ -4,6 +4,7 @@ import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../i
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import './detail.css';
+import { regexes } from '../../constants';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
@@ -11,29 +12,74 @@ class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputItemState: this.setInputItems(),
+      inputs: this.setInputItems(),
     };
   }
 
   setInputItems = () => {
-    let inputItemState = {};
-    this.props.inputItems.forEach(item => { if (item.isEditable) { inputItemState[item.id] = item.value; } });
-    return inputItemState;
+    let inputs = {};
+    this.props.inputItems.forEach(item => {
+      if (item.type === 'email') {
+        inputs[item.id] = { value: item.value, validation: 'email', isValid: true, errorMessage: '' };
+      } else if (item.type === 'text') {
+        inputs[item.id] = { value: item.value, validation: 'text', isValid: true, errorMessage: '' };
+      } else if (item.type === 'select' && item.options.length > 0) {
+        inputs[item.id] = { value: item.options[0].key, validation: 'none' };
+      } else if (item.type === 'boolean') {
+        inputs[item.id] = { value: item.value, validation: 'none' };
+      }
+    });
+    return inputs;
   }
 
   handleChange = event => {
-    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value }, isSaved: false });
+    const input = event.target.id;
+    this.setState({
+      inputs: {
+        ...this.state.inputs,
+        [input]: {
+          ...this.state.inputs[input],
+          value: event.target.type === 'checkbox' ? event.target.checked : event.target.value,
+          isValid: true,
+        },
+      },
+    });
   };
 
   save = async () => {
-    const result = await this.props.update(this.props.id, this.state.inputItemState);
-    if (result.action && result.action.type.includes('FULFILLED')) {
-      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
+    let toValidate = 0;
+    let validated = 0;
+    let inputs = { ...this.state.inputs };
+
+    for (let key in inputs) {
+      if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
+        toValidate++;
+        let validation = this.validate(inputs[key].validation, inputs[key].value);
+        inputs[key].isValid = validation.isValid;
+        inputs[key].errorMessage = validation.errorMessage;
+        if (validation.isValid) {
+          validated++;
+        }
+      }
+    }
+
+    if (toValidate === validated) {
+      for (let key in inputs) {
+        if (inputs.hasOwnProperty(key)) {
+          inputs[key] = inputs[key].value;
+        }
+      }
+      const result = await this.props.update(this.props.id, inputs);
+      if (result.action && result.action.type.includes('FULFILLED')) {
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
+      }
+    } else {
+      this.setState({ inputs });
     }
   }
 
   resetChanges = () => {
-    this.setState({ inputItemState: this.setInputItems() });
+    this.setState({ inputs: this.setInputItems() });
     this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.CHANGES_RESET });
     return true;
   }
@@ -56,15 +102,68 @@ class Detail extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+      return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
     if (item.type === 'select') {
-      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
+      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputs[item.id].value} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
       return <div className={`form-group ${item.css}`} key={item.id}><p>{item.label} {item.value}</p></div>;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+    if (item.type === 'password') {
+      return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+    }
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} isValid={(item.isEditable ? this.state.inputs[item.id].isValid : true)} errorMessage={(item.isEditable ? this.state.inputs[item.id].errorMessage : '')} />;
+  }
+
+  validate = (type, value) => {
+    if (type === 'email') {
+      if (value === '') {
+        return {
+          isValid: false,
+          errorMessage: strings.LOGIN_EMAIL_REQUIRED,
+        };
+      } else if (!regexes.EMAIL.test(value)) {
+        return {
+          isValid: false,
+          errorMessage: strings.LOGIN_EMAIL_VALIDATION,
+        };
+      } else {
+        return {
+          isValid: true,
+          errorMessage: '',
+        };
+      }
+    } else if (type === 'password') {
+      if (value === '') {
+        return {
+          isValid: false,
+          errorMessage: strings.LOGIN_PASSWORD_REQUIRED,
+        };
+      } else if (value.length < 6) {
+        return {
+          isValid: false,
+          errorMessage: strings.PASSWORD_LENGTH,
+        };
+      } else {
+        return {
+          isValid: true,
+          errorMessage: '',
+        };
+      }
+    } else if (type === 'text') {
+      if (value === '') {
+        return {
+          isValid: false,
+          errorMessage: strings.FIELD_REQUIRED,
+        };
+      } else {
+        return {
+          isValid: true,
+          errorMessage: '',
+        };
+      }
+    }
   }
 
   render() {
@@ -89,7 +188,7 @@ class Detail extends React.Component {
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
-              {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
+              {state.inputs && props.inputItems.map(item => this.renderInput(item))}
               {props.children}
             </div>
             <div className="detail-actions">
