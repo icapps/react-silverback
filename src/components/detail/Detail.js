@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
-import { strings } from '../../utils';
+import { strings, validate } from '../../utils';
 import { identifiers } from '../../constants';
 import './detail.css';
-import { regexes } from '../../constants';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
 
@@ -54,7 +53,7 @@ class Detail extends React.Component {
     for (let key in inputs) {
       if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
         toValidate++;
-        let validation = this.validate(inputs[key].validation, inputs[key].value);
+        let validation = validate(inputs[key].validation, inputs[key].value);
         inputs[key].isValid = validation.isValid;
         inputs[key].errorMessage = validation.errorMessage;
         if (validation.isValid) {
@@ -114,56 +113,6 @@ class Detail extends React.Component {
       return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
     return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} isValid={(item.isEditable ? this.state.inputs[item.id].isValid : true)} errorMessage={(item.isEditable ? this.state.inputs[item.id].errorMessage : '')} />;
-  }
-
-  validate = (type, value) => {
-    if (type === 'email') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_EMAIL_REQUIRED,
-        };
-      } else if (!regexes.EMAIL.test(value)) {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_EMAIL_VALIDATION,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      }
-    } else if (type === 'password') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_PASSWORD_REQUIRED,
-        };
-      } else if (value.length < 6) {
-        return {
-          isValid: false,
-          errorMessage: strings.PASSWORD_LENGTH,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      }
-    } else if (type === 'text') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.FIELD_REQUIRED,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      }
-    }
   }
 
   render() {
