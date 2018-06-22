@@ -14,6 +14,7 @@ const initialState = {
   deletedUser: '',
   sortField: 'email',
   sortOrder: 'asc',
+  sortValue: 'email',
   ...defaultInitialState,
 };
 
@@ -177,11 +178,12 @@ const users = (state = initialState, action = {}) => {
 
     //SET_SORT
     case constants.SET_USERS_SORT:
-      const { sortField, sortOrder } = payload;
+      const { sortField, sortOrder, sortValue } = payload;
       return {
         ...state,
         sortField,
         sortOrder,
+        sortValue,
       };
 
     default:

@@ -19,9 +19,9 @@ class LanguageCodesOverview extends Component {
     });
   }
 
-  getCodesSorted = (page, limit, sortField, sortOrder, search = '') => {
-    if (sortField && sortOrder) {
-      this.props.setSort(sortField, sortOrder);
+  getCodesSorted = (page, limit, sortField, sortOrder, sortValue, search = '') => {
+    if (sortField && sortOrder && sortValue) {
+      this.props.setSort(sortField, sortOrder, sortValue);
     }
     this.props.getLanguageCodes(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder, search);
   }
@@ -75,6 +75,7 @@ class LanguageCodesOverview extends Component {
         deleteIdentifier={identifiers.NAME}
         sortField={this.props.sortField}
         sortOrder={this.props.sortOrder}
+        sortValue={this.props.sortValue}
       />
     );
   }
@@ -103,6 +104,7 @@ const mapStateToProps = state => ({
   isCreateError: state.codes.isCreateError,
   sortField: state.codes.sortField,
   sortOrder: state.codes.sortOrder,
+  sortValue: state.codes.sortValue,
 });
 
 const mapDispatchToProps = {

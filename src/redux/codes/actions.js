@@ -36,10 +36,9 @@ export const undeprecateLanguageCode = languageCodeId => {
   };
 };
 
-export const setSort = (sortField, sortOrder) => {
+export const setSort = (sortField, sortOrder, sortValue) => {
   return {
     type: constants.SET_CODES_SORT,
-    payload: {sortField, sortOrder},
+    payload: {sortField, sortOrder, sortValue},
   };
 };
-
