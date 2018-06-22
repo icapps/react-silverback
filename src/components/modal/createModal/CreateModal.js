@@ -24,11 +24,11 @@ class CreateModal extends React.Component {
       } else if (item.type === 'text') {
         inputs[item.id] = { value: '', validation: 'text', isValid: true, errorMessage: '' };
       } else if (item.type === 'password') {
-        inputs[item.id] = { value: '', validation: this.createPassword ? 'password' : 'none', isValid: true, errorMessage: '' };
+        inputs[item.id] = { value: '', validation: this.createPassword ? 'password' : null, isValid: true, errorMessage: '' };
       } else if (item.type === 'select' && item.options.length > 0) {
-        inputs[item.id] = { value: item.options[0].key, validation: 'none' };
+        inputs[item.id] = { value: item.options[0].key, validation: null };
       } else if (item.type === 'boolean') {
-        inputs[item.id] = { value: item.value, validation: 'none' };
+        inputs[item.id] = { value: item.value, validation: null };
       }
     });
     return inputs;
@@ -38,36 +38,40 @@ class CreateModal extends React.Component {
     this.setState({ inputs: this.initializeCreateParameters() });
   }
 
-  create = () => {
-    let toValidate = 0;
-    let validated = 0;
+  validate = () => {
     let inputs = { ...this.state.inputs };
-
-    for (let key in inputs) {
-      if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
-        toValidate++;
-        let validation = validate(inputs[key].validation, inputs[key].value);
-        inputs[key].isValid = validation.isValid;
-        inputs[key].errorMessage = validation.errorMessage;
-        if (validation.isValid) {
-          validated++;
+    let hasError = false;
+    Object.keys(inputs)
+      .filter((key) => inputs.hasOwnProperty(key) && inputs[key].validation)
+      .forEach((key) => {
+        const validationResult = validate(inputs[key].validation, inputs[key].value);
+        if (!validationResult.isValid) {
+          hasError = true;
         }
-      }
-    }
-
-    if (toValidate === validated) {
-      for (let key in inputs) {
-        if (inputs.hasOwnProperty(key)) {
-          inputs[key] = inputs[key].value;
-        }
-      }
-      if (this.state.createPassword) {
-        return this.props.create({ ...inputs, password: undefined }, this.state.createPassword);
-      }
-      return this.props.create(inputs, this.state.createPassword);
-    } else {
+        inputs[key] = {
+          ...inputs[key],
+          ...validationResult,
+        };
+      });
+    if (hasError) {
       this.setState({ inputs });
+      return;
     }
+    this.create(this.getInputValues(inputs));
+  }
+
+  getInputValues(inputs) {
+    for (let key in inputs) {
+      inputs[key] = inputs[key].value;
+    }
+    return inputs;
+  }
+
+  create = (inputs) => {
+    if (this.state.createPassword) {
+      return this.props.create({ ...inputs, password: undefined }, this.state.createPassword);
+    }
+    return this.props.create(inputs, this.state.createPassword);
   }
 
   handleChange = event => {
@@ -124,7 +128,7 @@ class CreateModal extends React.Component {
         id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
         secondaryButtonText={strings.CANCEL}
-        handlePrimaryButton={this.create}
+        handlePrimaryButton={this.validate}
         primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success btn-create"

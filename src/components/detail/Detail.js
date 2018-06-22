@@ -23,9 +23,9 @@ class Detail extends React.Component {
       } else if (item.type === 'text') {
         inputs[item.id] = { value: item.value, validation: 'text', isValid: true, errorMessage: '' };
       } else if (item.type === 'select' && item.options.length > 0) {
-        inputs[item.id] = { value: item.options[0].key, validation: 'none' };
+        inputs[item.id] = { value: item.options[0].key, validation: null };
       } else if (item.type === 'boolean') {
-        inputs[item.id] = { value: item.value, validation: 'none' };
+        inputs[item.id] = { value: item.value, validation: null };
       }
     });
     return inputs;
@@ -45,35 +45,39 @@ class Detail extends React.Component {
     });
   };
 
-  save = async () => {
-    let toValidate = 0;
-    let validated = 0;
+  validate = () => {
     let inputs = { ...this.state.inputs };
-
-    for (let key in inputs) {
-      if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
-        toValidate++;
-        let validation = validate(inputs[key].validation, inputs[key].value);
-        inputs[key].isValid = validation.isValid;
-        inputs[key].errorMessage = validation.errorMessage;
-        if (validation.isValid) {
-          validated++;
+    let hasError = false;
+    Object.keys(inputs)
+      .filter((key) => inputs.hasOwnProperty(key) && inputs[key].validation)
+      .forEach((key) => {
+        const validationResult = validate(inputs[key].validation, inputs[key].value);
+        if (!validationResult.isValid) {
+          hasError = true;
         }
-      }
-    }
-
-    if (toValidate === validated) {
-      for (let key in inputs) {
-        if (inputs.hasOwnProperty(key)) {
-          inputs[key] = inputs[key].value;
-        }
-      }
-      const result = await this.props.update(this.props.id, inputs);
-      if (result.action && result.action.type.includes('FULFILLED')) {
-        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
-      }
-    } else {
+        inputs[key] = {
+          ...inputs[key],
+          ...validationResult,
+        };
+      });
+    if (hasError) {
       this.setState({ inputs });
+      return;
+    }
+    this.update(this.getInputValues(inputs));
+  }
+
+  getInputValues(inputs) {
+    for (let key in inputs) {
+      inputs[key] = inputs[key].value;
+    }
+    return inputs;
+  }
+
+  update = async (inputs) => {
+    const result = await this.props.update(this.props.id, inputs);
+    if (result.action && result.action.type.includes('FULFILLED')) {
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
     }
   }
 
@@ -166,7 +170,7 @@ class Detail extends React.Component {
                 >
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
-                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
+                <Button text={strings.SAVE} handleClick={this.validate} className="btn-primary" isPending={this.props.isUpdatePending} />
               </div>}
               {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"

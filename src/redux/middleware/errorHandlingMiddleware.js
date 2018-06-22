@@ -5,7 +5,7 @@ import { strings } from '../../utils';
 
 const errorHandlingMiddleware = () => {
   return store => next => action => {
-    if(action.type.includes('REJECTED')) {
+    if(action.type.includes('REJECTED') || action.type.includes('SUCCESS')) {
       store.dispatch({
         type: messageConstants.SET_MESSAGE,
         payload: {
