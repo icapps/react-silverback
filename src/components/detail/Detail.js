@@ -144,8 +144,9 @@ class Detail extends React.Component {
               {state.inputs && props.inputItems.map(item => this.renderInput(item))}
               {props.children}
             </div>
-            <div className="detail-actions">
-              {props.remove && !props.isMe && <Modal
+            <div className={`detail-actions ${props.isMe ? 'flex-end' : ''}`}>
+              {props.remove && !props.isMe &&
+                <Modal
                   id="delete"
                   modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                   handlePrimaryButton={this.delete}
@@ -156,7 +157,8 @@ class Detail extends React.Component {
                   primaryButtonClassName="btn-danger"
                 >
                   <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
-                </Modal>}
+                </Modal>
+              }
               {props.update && <div className="update-actions">
                 <Modal
                   id="reset-changes"
