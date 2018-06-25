@@ -5,6 +5,7 @@ import { strings } from '../../utils';
 import constants from '../../redux/users/constants';
 import './overview.css';
 import { identifiers } from '../../constants';
+import { getSortLabel } from '../../constants/sortLabels';
 
 const SORT_DESC = 'desc';
 
@@ -75,7 +76,7 @@ class Overview extends React.Component {
         <div className="container">
           <h2>
             {props.title}
-            {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${props.sortField} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
+            {props.sortField && <span className="sort-label">{`${strings.SORTED_BY} ${getSortLabel(props.sortField)} (${props.sortOrder === SORT_DESC ? strings.DESCENDING : strings.ASCENDING})`}</span>}
           </h2>
           <div className="overview-settings">
             <Filter handleFilter={this.handleFilter} />
