@@ -209,7 +209,6 @@ Object {
 
 exports[`users reducer should RESET_DELETED_USER 1`] = `
 Object {
-  "deletedUser": "",
   "errorMessage": "",
   "isError": false,
   "isPending": false,

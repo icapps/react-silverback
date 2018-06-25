@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown, Alert } from '../index';
-import { strings } from '../../utils';
+import { BasicInput, Button, Checkbox, Modal, CreateModal, Dropdown } from '../index';
+import { strings, validate } from '../../utils';
+import { identifiers } from '../../constants';
 import './detail.css';
 
 const arrowLeft = require('../../assets/images/arrow-left.svg');
@@ -10,37 +11,87 @@ class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputItemState: this.setInputItems(),
-      isSaved: false,
+      inputs: this.setInputItems(),
     };
   }
 
   setInputItems = () => {
-    let inputItemState = {};
-    this.props.inputItems.forEach(item => { if (item.isEditable) { inputItemState[item.id] = item.value; } });
-    return inputItemState;
+    let inputs = {};
+    this.props.inputItems.forEach(item => {
+      if (item.type === 'email') {
+        inputs[item.id] = { value: item.value, validation: 'email', isValid: true, errorMessage: '' };
+      } else if (item.type === 'text') {
+        inputs[item.id] = { value: item.value, validation: 'text', isValid: true, errorMessage: '' };
+      } else if (item.type === 'select' && item.options.length > 0) {
+        inputs[item.id] = { value: item.options[0].key, validation: null };
+      } else if (item.type === 'boolean') {
+        inputs[item.id] = { value: item.value, validation: null };
+      }
+    });
+    return inputs;
   }
 
   handleChange = event => {
-    this.setState({ inputItemState: { ...this.state.inputItemState, [event.target.id]: event.target.type === 'checkbox' ? event.target.checked : event.target.value }, isSaved: false });
+    const input = event.target.id;
+    this.setState({
+      inputs: {
+        ...this.state.inputs,
+        [input]: {
+          ...this.state.inputs[input],
+          value: event.target.type === 'checkbox' ? event.target.checked : event.target.value,
+          isValid: true,
+        },
+      },
+    });
   };
 
-  save = async () => {
-    const result = await this.props.update(this.props.id, this.state.inputItemState);
+  validate = () => {
+    let inputs = { ...this.state.inputs };
+    let hasError = false;
+    Object.keys(inputs)
+      .filter((key) => inputs.hasOwnProperty(key) && inputs[key].validation)
+      .forEach((key) => {
+        const validationResult = validate(inputs[key].validation, inputs[key].value);
+        if (!validationResult.isValid) {
+          hasError = true;
+        }
+        inputs[key] = {
+          ...inputs[key],
+          ...validationResult,
+        };
+      });
+    if (hasError) {
+      this.setState({ inputs });
+      return;
+    }
+    this.update(this.getInputValues(inputs));
+  }
+
+  getInputValues(inputs) {
+    for (let key in inputs) {
+      inputs[key] = inputs[key].value;
+    }
+    return inputs;
+  }
+
+  update = async (inputs) => {
+    const result = await this.props.update(this.props.id, inputs);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.setState({ isSaved: true });
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.UPDATE_SUCCESS });
     }
   }
 
   resetChanges = () => {
-    this.setState({ inputItemState: this.setInputItems() }, this.forceUpdate());
+    this.setState({ inputs: this.setInputItems() });
+    this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.CHANGES_RESET });
     return true;
   }
 
   delete = async () => {
     const result = await this.props.remove(this.props.id);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.props.history.goBack();
+      this.props.history.push('/');
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.formatString(strings.ITEM_HAS_BEEN_DELETED, { item: <b>{this.props.title}</b> }) });
     }
   }
 
@@ -54,24 +105,19 @@ class Detail extends React.Component {
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
+      return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
     if (item.type === 'select') {
-      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputItemState[item.id]} handleChange={this.handleChange} options={item.options} />;
+      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputs[item.id].value} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
       return <div className={`form-group ${item.css}`} key={item.id}><p>{item.label} {item.value}</p></div>;
     }
-    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputItemState[item.id] : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
-  }
-
-  renderAlert = (text, showAlert, isSuccess = true) => {
-    window.scrollTo(0, 0);
-    if (showAlert) {
-      return <Alert className={`${isSuccess ? 'success' : 'danger'}`} text={text} clearAlerts={() => {}} />;
+    if (item.type === 'password') {
+      return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
-    return null;
-  };
+    return <BasicInput key={item.id} id={item.id} label={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || ''} handleChange={this.handleChange} type={item.type} isDisabled={!item.isEditable || this.props.isUpdatePending} isValid={(item.isEditable ? this.state.inputs[item.id].isValid : true)} errorMessage={(item.isEditable ? this.state.inputs[item.id].errorMessage : '')} />;
+  }
 
   render() {
     const { state, props } = this;
@@ -92,15 +138,10 @@ class Detail extends React.Component {
                 errorMessage={props.errorMessage}
               />}
             </div>
-            {this.renderAlert(strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS, props.isForgotPasswordSuccessful)}
-            {this.renderAlert(strings.UPDATE_SUCCESS, props.isUpdated && state.isSaved)}
-            {this.renderAlert(props.errorMessage, props.isError, false)}
-            {this.renderAlert(strings.formatString(strings.DEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && props.isDeprecated)}
-            {this.renderAlert(strings.formatString(strings.UNDEPRECATED_SUCCESS, { item: <strong>{props.title}</strong> }), props.showDeprecationStatus && !props.isDeprecated)}
             <h3>{props.title}{props.isDeprecated && <span className="title-deprecated">{strings.DEPRECATED_ANNOTATION}</span>}</h3>
             <span className="text-primary">{`${strings.ID}: ${props.id}`}</span>
             <div className="input-fields">
-              {state.inputItemState && props.inputItems.map(item => this.renderInput(item))}
+              {state.inputs && props.inputItems.map(item => this.renderInput(item))}
               {props.children}
             </div>
             <div className="detail-actions">
@@ -129,7 +170,7 @@ class Detail extends React.Component {
                 >
                   <p>{strings.RESET_CONFIRMATION}</p>
                 </Modal>
-                <Button text={strings.SAVE} handleClick={this.save} className="btn-primary" isPending={this.props.isUpdatePending} />
+                <Button text={strings.SAVE} handleClick={this.validate} className="btn-primary" isPending={this.props.isUpdatePending} />
               </div>}
               {props.deprecate && !props.isDeprecated && <Modal
                 id="deprecate"
@@ -175,13 +216,11 @@ Detail.propTypes = {
   createParameters: PropTypes.array,
   remove: PropTypes.func,
   update: PropTypes.func,
-  isUpdated: PropTypes.bool,
   isCreatePending: PropTypes.bool,
   isCreateError: PropTypes.bool,
   isDeprecated: PropTypes.bool,
-  showDeprecationStatus: PropTypes.bool,
-  isForgotPasswordSuccessful: PropTypes.bool,
   isMe: PropTypes.bool,
+  setMessage: PropTypes.func.isRequired,
 };
 
 Detail.defaultProps = {
@@ -189,13 +228,10 @@ Detail.defaultProps = {
   createParameters: [],
   remove: null,
   update: null,
-  isUpdated: false,
   keyword: '',
   isCreatePending: false,
   isCreateError: false,
   isDeprecated: false,
-  showDeprecationStatus: false,
-  isForgotPasswordSuccessful: false,
   isMe: false,
 };
 

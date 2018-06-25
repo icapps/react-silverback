@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
-import { getUsers, createUser, removeUser, getUserRoles, resetDeletedUser, setSort } from '../../redux/users/actions';
+import { getUsers, createUser, removeUser, getUserRoles, setSort } from '../../redux/users/actions';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
+import { setMessage } from '../../redux/messages/actions';
 
 class UserOverview extends Component {
   createUser = async (user, changePassword) => {
@@ -13,6 +14,7 @@ class UserOverview extends Component {
       const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
         this.props.history.push(`${window.location.pathname}/${this.props.user.id}`, this.props.user.id);
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.NEW_USER_CREATED });
         resolve(true);
       }
       resolve(false);
@@ -61,10 +63,10 @@ class UserOverview extends Component {
         deleteIdentifier={identifiers.EMAIL}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
-        deletedItem={this.props.deletedUser}
-        resetDeletedItem={this.props.resetDeletedUser}
         sortField={this.props.sortField}
         sortOrder={this.props.sortOrder}
+        setMessage={this.props.setMessage}
+        email={this.props.email}
       />
     );
   }
@@ -74,13 +76,11 @@ UserOverview.propTypes = {
   user: PropTypes.object,
   usersCount: PropTypes.number.isRequired,
   users: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isError: PropTypes.bool.isRequired,
-  errorMessage: PropTypes.string.isRequired,
   getUsers: PropTypes.func.isRequired,
   createUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
-  isCreatePending: PropTypes.bool.isRequired,
+  isCreatePending: PropTypes.bool.isRequired, 
 };
 
 const mapStateToProps = state => ({
@@ -90,11 +90,9 @@ const mapStateToProps = state => ({
   userRoles: state.users.userRoles,
   isCreatePending: state.users.isCreatePending,
   isCreateError: state.users.isCreateError,
-  isError: state.users.isError,
-  errorMessage: state.users.errorMessage,
-  deletedUser: state.users.deletedUser,
   sortField: state.users.sortField,
   sortOrder: state.users.sortOrder,
+  email: state.auth.email,
 });
 
 const mapDispatchToProps = {
@@ -102,8 +100,8 @@ const mapDispatchToProps = {
   createUser,
   removeUser,
   getUserRoles,
-  resetDeletedUser,
   setSort,
+  setMessage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);

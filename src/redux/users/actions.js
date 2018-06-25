@@ -43,12 +43,6 @@ export const getUserRoles = () => {
   };
 };
 
-export const resetDeletedUser = () => {
-  return {
-    type: constants.RESET_DELETED_USER,
-  };
-};
-
 export const setSort = (sortField, sortOrder) => {
   return {
     type: constants.SET_USERS_SORT,

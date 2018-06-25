@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal, Checkbox, BasicInput, Dropdown } from '../../index';
-import { strings } from '../../../utils';
+import { strings, validate } from '../../../utils';
 import { identifiers } from '../../../constants';
 import './createModal.css';
-import { regexes } from '../../../constants';
 
 const plus = require('../../../assets/images/plus.svg');
 
@@ -13,7 +12,6 @@ class CreateModal extends React.Component {
     super(props);
     this.state = {
       inputs: this.initializeCreateParameters(),
-      showErrorMessage: false,
       createPassword: true,
     };
   }
@@ -26,49 +24,54 @@ class CreateModal extends React.Component {
       } else if (item.type === 'text') {
         inputs[item.id] = { value: '', validation: 'text', isValid: true, errorMessage: '' };
       } else if (item.type === 'password') {
-        inputs[item.id] = { value: '', validation: this.createPassword ? 'password' : 'none', isValid: true, errorMessage: '' };
+        inputs[item.id] = { value: '', validation: this.createPassword ? 'password' : null, isValid: true, errorMessage: '' };
       } else if (item.type === 'select' && item.options.length > 0) {
-        inputs[item.id] = { value: item.options[0].key, validation: 'none' };
+        inputs[item.id] = { value: item.options[0].key, validation: null };
       } else if (item.type === 'boolean') {
-        inputs[item.id] = { value: item.value, validation: 'none' };
+        inputs[item.id] = { value: item.value, validation: null };
       }
     });
     return inputs;
   }
 
   setCreateParameters = () => {
-    this.setState({ inputs: this.initializeCreateParameters(), showErrorMessage: false });
+    this.setState({ inputs: this.initializeCreateParameters() });
   }
 
-  create = async () => {
-    let toValidate = 0;
-    let validated = 0;
-    let inputs = this.state.inputs;
-    for (let key in inputs) {
-      if (inputs.hasOwnProperty(key) && inputs[key].validation !== 'none') {
-          toValidate++;
-          let validation = this.validate(inputs[key].validation, inputs[key].value);
-          inputs[key].isValid = validation.isValid;
-          inputs[key].errorMessage = validation.errorMessage;
-          if(validation.isValid) {
-            validated++;
-          }
-      } 
-    }
-
-    if (toValidate === validated) {
-      for (let key in inputs) {
-        if (inputs.hasOwnProperty(key)) {
-          inputs[key] = inputs[key].value;
-        } 
-      }
-      if (this.state.createPassword) {
-        return this.props.create({ ...this.state.inputs, password: undefined }, this.state.createPassword);
-      }
-      return this.props.create(this.state.inputs, this.state.createPassword);
-    } else {
+  validate = () => {
+    let inputs = { ...this.state.inputs };
+    let hasError = false;
+    Object.keys(inputs)
+      .filter((key) => inputs.hasOwnProperty(key) && inputs[key].validation)
+      .forEach((key) => {
+        const validationResult = validate(inputs[key].validation, inputs[key].value);
+        if (!validationResult.isValid) {
+          hasError = true;
+        }
+        inputs[key] = {
+          ...inputs[key],
+          ...validationResult,
+        };
+      });
+    if (hasError) {
       this.setState({ inputs });
+      return;
     }
+    this.create(this.getInputValues(inputs));
+  }
+
+  getInputValues(inputs) {
+    for (let key in inputs) {
+      inputs[key] = inputs[key].value;
+    }
+    return inputs;
+  }
+
+  create = (inputs) => {
+    if (this.state.createPassword) {
+      return this.props.create({ ...inputs, password: undefined }, this.state.createPassword);
+    }
+    return this.props.create(inputs, this.state.createPassword);
   }
 
   handleChange = event => {
@@ -85,7 +88,7 @@ class CreateModal extends React.Component {
     });
   };
 
-  handleCreatePassword = event => {
+  handleCreatePassword = () => {
     this.setState({
       createPassword: !this.state.createPassword,
     }, () => {
@@ -119,63 +122,13 @@ class CreateModal extends React.Component {
     }
   }
 
-  validate = (type, value) => {
-    if (type === 'email') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_EMAIL_REQUIRED,
-        };
-      } else if (!regexes.EMAIL.test(value)) {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_EMAIL_VALIDATION,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      }
-    } else if (type === 'password') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.LOGIN_PASSWORD_REQUIRED,
-        };
-      } else if (value.length < 6) {
-        return {
-          isValid: false,
-          errorMessage: strings.PASSWORD_LENGTH,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      } 
-    } else if (type === 'text') {
-      if (value === '') {
-        return {
-          isValid: false,
-          errorMessage: strings.FIELD_REQUIRED,
-        };
-      } else {
-        return {
-          isValid: true,
-          errorMessage: '',
-        };
-      } 
-    }
-  }
-
   render() {
     return (
       <Modal
         id={strings.CREATE}
         modalButtonText={this.props.primaryButtonText}
         secondaryButtonText={strings.CANCEL}
-        handlePrimaryButton={this.create}
+        handlePrimaryButton={this.validate}
         primaryButtonText={strings.SUBMIT}
         primaryButtonClassName="btn-success"
         modalButtonClassName="btn-success btn-create"
@@ -185,13 +138,8 @@ class CreateModal extends React.Component {
         isPending={this.props.isPending}
         handleModalButton={this.setCreateParameters}
       >
-        {this.props.isError && <div className="alert alert-danger" role="alert">{this.props.errorMessage}</div>}
         <div className="create-modal-input">
-          {this.state.inputs && this.props.createParameters.map(item => {
-            //console.log(this.props.createParameters);
-            return this.renderInput(item);
-            //debugger;
-          })}
+          {this.state.inputs && this.props.createParameters.map(item => this.renderInput(item))}
         </div>
       </Modal>
     );

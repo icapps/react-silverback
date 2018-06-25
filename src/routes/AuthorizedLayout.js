@@ -10,7 +10,7 @@ import LanguageCodesDetail from '../scenes/languageCodes/LanguageCodesDetail';
 const AuthorizedLayout = props => {
   return (
     <React.Fragment>
-      <Header toggleNavigation={props.toggleNavigation} logout={props.logout}/>
+      <Header toggleNavigation={props.toggleNavigation} logout={props.logoutUser}/>
       <div className="container-fluid">
         <div className="row">
           <Navbar

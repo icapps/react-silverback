@@ -45,14 +45,6 @@ Array [
 ]
 `;
 
-exports[`user actions resetDeletedUser 1`] = `
-Array [
-  Object {
-    "type": "RESET_DELETED_USER",
-  },
-]
-`;
-
 exports[`user actions updateUser 1`] = `
 Array [
   Object {

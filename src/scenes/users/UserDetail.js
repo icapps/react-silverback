@@ -9,14 +9,9 @@ import { strings } from '../../utils';
 import { identifiers } from '../../constants';
 import constants from '../../redux/users/constants';
 import './userDetail.css';
+import { setMessage } from '../../redux/messages/actions';
 
 class UserDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showForgotPasswordMessage: false,
-    };
-  }
   componentDidMount() {
     this.props.getUsersById(this.props.location.state);
     this.props.getUserRoles();
@@ -34,6 +29,7 @@ class UserDetail extends Component {
       const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
         this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
+        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.NEW_USER_CREATED });
         resolve(true);
       }
       resolve(false);
@@ -47,7 +43,7 @@ class UserDetail extends Component {
   forgotPassword = async () => {
     const result = await this.props.forgotPassword(this.props.user.email);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.setState({ showForgotPasswordMessage: true });
+      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS });
     }
     return true;
   }
@@ -67,7 +63,7 @@ class UserDetail extends Component {
         inputItems={[
           { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY') + ',', label: strings.CREATED_AT, type: "plain", isEditable: false, css: "inline-block italic" },
           { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "plain", isEditable: false, css: "inline-block italic" },
-          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "text", isEditable: true },
+          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "email", isEditable: true },
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
           { id: identifiers.ROLE, value: this.props.user.role.code, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
@@ -88,13 +84,12 @@ class UserDetail extends Component {
         remove={this.props.removeUser}
         update={this.updateUser}
         isUpdatePending={this.props.isUpdatePending}
-        isUpdated={this.props.isUserUpdated}
         isError={this.props.isError}
         errorMessage={this.props.errorMessage}
         isCreatePending={this.props.isCreatePending}
         isCreateError={this.props.isCreateError}
-        isForgotPasswordSuccessful={this.state.showForgotPasswordMessage}
         isMe={isMe}
+        setMessage={this.props.setMessage}
       >
         <Modal
           id="reset-password"
@@ -118,7 +113,6 @@ class UserDetail extends Component {
 
 UserDetail.propTypes = {
   user: PropTypes.object,
-  isUserUpdated: PropTypes.bool.isRequired,
   isPending: PropTypes.bool.isRequired,
   isError: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
@@ -136,7 +130,6 @@ UserDetail.propTypes = {
 const mapStateToProps = state => ({
   user: state.users.user,
   userRoles: state.users.userRoles,
-  isUserUpdated: state.users.isUserUpdated,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
@@ -154,6 +147,7 @@ const mapDispatchToProps = {
   removeUser,
   getUserRoles,
   forgotPassword,
+  setMessage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

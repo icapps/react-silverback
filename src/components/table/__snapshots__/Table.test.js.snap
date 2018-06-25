@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="DD/MM/YYYY"
     deleteIdentifier=""
+    email=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}
@@ -5165,6 +5166,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="dddd D MMM"
     deleteIdentifier=""
+    email=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}
@@ -10323,6 +10325,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Table
     dateFormat="dddd D MMM"
     deleteIdentifier=""
+    email=""
     handleRemoveItem={[Function]}
     handleRowClick={[Function]}
     handleSort={[Function]}
