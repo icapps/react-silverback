@@ -23,7 +23,7 @@ class Detail extends React.Component {
       } else if (item.type === 'text') {
         inputs[item.id] = { value: item.value, validation: 'text', isValid: true, errorMessage: '' };
       } else if (item.type === 'select' && item.options.length > 0) {
-        inputs[item.id] = { value: item.options[0].key, validation: null };
+        inputs[item.id] = { value: item.value, validation: null };
       } else if (item.type === 'boolean') {
         inputs[item.id] = { value: item.value, validation: null };
       }
@@ -108,7 +108,7 @@ class Detail extends React.Component {
       return <Checkbox css={item.css} key={item.id} id={item.id} text={item.label} value={(item.isEditable ? this.state.inputs[item.id].value : item.value) || false} handleChange={this.handleChange} isDisabled={!item.isEditable || this.props.isUpdatePending} />;
     }
     if (item.type === 'select') {
-      return <Dropdown key={item.id} id={item.id} label={item.label} value={this.state.inputs[item.id].value} handleChange={this.handleChange} options={item.options} />;
+      return <Dropdown key={item.id} id={item.id} label={item.label} value={(this.state.inputs[item.id] ? this.state.inputs[item.id].value : '')} handleChange={this.handleChange} options={item.options} />;
     } 
     if (item.type === 'plain') {
       return <div className={`form-group ${item.css}`} key={item.id}><p>{item.label} {item.value}</p></div>;
