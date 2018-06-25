@@ -145,7 +145,8 @@ class Detail extends React.Component {
               {props.children}
             </div>
             <div className="detail-actions">
-              {props.remove && !props.isMe && <Modal
+              {props.remove && !props.isMe ? 
+                <Modal
                   id="delete"
                   modalButtonText={`${strings.DELETE} ${props.keyword.toLowerCase()}`}
                   handlePrimaryButton={this.delete}
@@ -156,7 +157,9 @@ class Detail extends React.Component {
                   primaryButtonClassName="btn-danger"
                 >
                   <p>{strings.formatString(strings.DELETE_CONFIRMATION, { item: <span className="text-danger">{props.title}</span> })}</p>
-                </Modal>}
+                </Modal>
+                : <div></div>
+              }
               {props.update && <div className="update-actions">
                 <Modal
                   id="reset-changes"
