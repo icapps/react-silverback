@@ -1,6 +1,6 @@
 
 import strings from './localization';
-import { regexes, values } from '../constants';
+import { regexes, validation } from '../constants';
 
 export function validate(type, value) {
   switch(type) {
@@ -27,7 +27,7 @@ export function validate(type, value) {
           isValid: false,
           errorMessage: strings.LOGIN_PASSWORD_REQUIRED,
         };
-      } else if (value.length < values.PASSWORD_LENGTH) {
+      } else if (value.length < validation.PASSWORD_LENGTH) {
         return {
           isValid: false,
           errorMessage: strings.PASSWORD_LENGTH,

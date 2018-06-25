@@ -1,9 +1,9 @@
 import { identifiers } from './identifiers';
 import { regexes } from './regexes';
-import { values } from './values';
+import { validation } from './validation';
 
 export {
   identifiers,
   regexes,
-  values,
+  validation,
 };
