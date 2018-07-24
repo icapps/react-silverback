@@ -126,7 +126,11 @@ const auth = (state = initialState, action = {}) => {
       };
     // LOGOUT_USER
     case constants.LOGOUT_USER_PENDING:
-      return initialState;
+      return initialState;    
+    case constants.LOGOUT_USER_FORCE:
+      localStorage.removeItem('LOGGED_IN');
+      window.location.href = '/';
+      return initialState;    
     default:
       return state;
   }
