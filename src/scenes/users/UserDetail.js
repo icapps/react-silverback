@@ -5,22 +5,25 @@ import format from 'date-fns/format';
 import { Detail, EmptyDetail, Spinner, Modal } from '../../components';
 import { getUsersById, createUser, removeUser, updateUser, getUserRoles } from '../../redux/users/actions';
 import { forgotPassword } from '../../redux/auth/actions';
+import { setMessage } from '../../redux/messages/actions';
+import { getStatusCodes } from '../../redux/codes/actions';
+import constants from '../../redux/users/constants';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import constants from '../../redux/users/constants';
 import './userDetail.css';
-import { setMessage } from '../../redux/messages/actions';
 
 class UserDetail extends Component {
   componentDidMount() {
     this.props.getUsersById(this.props.location.state);
     this.props.getUserRoles();
+    this.props.getStatusCodes();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.location.state !== this.props.location.state) {
       this.props.getUsersById(this.props.location.state);
       this.props.getUserRoles();
+      this.props.getStatusCodes();
     }
   }
 
@@ -50,6 +53,7 @@ class UserDetail extends Component {
   
   render() {
     const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
+    const userStatusesMapped = this.props.userStatuses.map(status => ({ key: status.code, text: status.name }));
     if (this.props.isPending) {
       return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     }
@@ -67,7 +71,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
           { id: identifiers.ROLE, value: this.props.user.role.code, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
-          { id: identifiers.HAS_ACCESS, value: this.props.user.hasAccess, label: strings.IS_ACTIVE, type: "boolean", isEditable: true, css: "inline-block" },
+          { id: identifiers.STATUS, value: this.props.user.status.code, label: strings.STATUS, type: "select", options: userStatusesMapped, isEditable: true, css: "inline-block" },
           { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_NOT_COMPLETED, type: "plain", isEditable: false, css: `inline-block italic ${(this.props.user.registrationCompleted) ? 'none' : ''}` },
           { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
         ]}
@@ -76,8 +80,8 @@ class UserDetail extends Component {
           { id: identifiers.EMAIL, label: strings.EMAIL, type: "email" },
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped},
-          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", value: true },
+          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
+          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: userStatusesMapped },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
@@ -130,6 +134,7 @@ UserDetail.propTypes = {
 const mapStateToProps = state => ({
   user: state.users.user,
   userRoles: state.users.userRoles,
+  userStatuses: state.users.userStatuses,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
@@ -148,6 +153,7 @@ const mapDispatchToProps = {
   getUserRoles,
   forgotPassword,
   setMessage,
+  getStatusCodes,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserDetail);

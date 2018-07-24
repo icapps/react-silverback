@@ -31,3 +31,8 @@ export const undeprecateLanguageCode = async (languageCodeId) => {
   const result = await Network.post(`/meta/codes/${languageCodeId}/undeprecate`);
   return result;
 };
+
+export const getStatusCodes = async () => {
+  const result = await Network.get(`/meta/codesByType/user_statuses/all`);
+  return result;
+};

@@ -3,6 +3,7 @@ import defaultInitialState from '../defaultInitialState';
 import { strings } from '../../utils/index';
 
 const initialState = {
+  userStatuses: [],
   languageCode: null,
   languageCodeList: [],
   languageCodeCount: 0,
@@ -123,7 +124,29 @@ const codes = (state = initialState, action = {}) => {
         isError: true,
         errorMessage: errorMessageHandling(payload),
       };
-    
+
+    //GET_STATUS_CODES
+    case constants.GET_STATUS_CODES_FULFILLED:
+      return {
+        ...state,
+        userStatuses: payload.data,
+        isPending: false,
+      };
+    case constants.GET_STATUS_CODES_PENDING:
+      return {
+        ...state,
+        isPending: true,
+        isError: false,
+        errorMessage: '',
+      };
+    case constants.GET_STATUS_CODES_REJECTED:
+      return {
+        ...state,
+        isPending: false,
+        isError: true,
+        errorMessage: errorMessageHandling(payload),
+      };
+
     //SET_SORT
     case constants.SET_CODES_SORT:
       const { sortField, sortOrder } = payload;
