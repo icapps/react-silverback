@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, getLanguageCodeById, undeprecateLanguageCode } from './actions';
+import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, getLanguageCodeById, undeprecateLanguageCode, getStatusCodes } from './actions';
 import { Network } from '../../utils/index';
 
 const middlewares = [thunk];
@@ -40,6 +40,12 @@ describe('user actions', () => {
 
   it('undeprecateLanguageCode', () => {
     store.dispatch(undeprecateLanguageCode('id'));
+    const expectedActions = store.getActions();
+    expect(expectedActions).toMatchSnapshot();
+  });
+
+  it('getStatusCodes', () => {
+    store.dispatch(getStatusCodes());
     const expectedActions = store.getActions();
     expect(expectedActions).toMatchSnapshot();
   });

@@ -20,7 +20,7 @@ export const create = async (user, changePassword) => {
 };
 
 export const update = async (id, user) => {
-  const result = await Network.patch(`/users/${id}`, user);
+  const result = await Network.put(`/users/${id}`, user);
   return result;
 };
 

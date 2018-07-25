@@ -130,6 +130,37 @@ Object {
 }
 `;
 
+exports[`codes reducer should GET_STATUS_CODES_FULFILLED 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isPending": false,
+  "languageCodeCount": 0,
+  "languageCodeList": Array [],
+  "statusCodes": Object {},
+}
+`;
+
+exports[`codes reducer should GET_STATUS_CODES_PENDING 1`] = `
+Object {
+  "errorMessage": "",
+  "isError": false,
+  "isPending": true,
+  "languageCodeCount": 0,
+  "languageCodeList": Array [],
+}
+`;
+
+exports[`codes reducer should GET_STATUS_CODES_REJECTED 1`] = `
+Object {
+  "errorMessage": "Something went wrong!",
+  "isError": true,
+  "isPending": false,
+  "languageCodeCount": 0,
+  "languageCodeList": Array [],
+}
+`;
+
 exports[`codes reducer should UNDEPRECATE_LANGUAGE_CODE_FULFILLED 1`] = `
 Object {
   "errorMessage": "",
@@ -172,5 +203,6 @@ Object {
   "languageCodeList": Array [],
   "sortField": "code",
   "sortOrder": "asc",
+  "statusCodes": Array [],
 }
 `;

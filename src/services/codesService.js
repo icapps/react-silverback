@@ -26,3 +26,8 @@ export const deprecateLanguageCode = async (languageCodeId, deprecated) => {
   const result = await Network.patch(`/meta/codes/${languageCodeId}`, { deprecated });
   return result;
 };
+
+export const getStatusCodes = async () => {
+  const result = await Network.get(`/meta/codesByType/user_statuses/all`);
+  return result;
+};

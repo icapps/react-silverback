@@ -3,7 +3,7 @@ const sortLabels = {
   firstName: 'First name',
   lastName: 'Last name',
   role: 'Role',
-  hasAccess: 'Is active',
+  status: 'Status',
   code: 'Code',
   name: 'Name',
   deprecated: 'Deprecated',

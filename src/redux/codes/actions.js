@@ -43,3 +43,9 @@ export const setSort = (sortField, sortOrder) => {
   };
 };
 
+export const getStatusCodes = () => {
+  return {
+    type: constants.GET_STATUS_CODES,
+    payload: codesService.getStatusCodes(),
+  };
+};
