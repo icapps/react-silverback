@@ -25,14 +25,14 @@ export const createLanguageCode = languageCode => {
 export const deprecateLanguageCode = languageCodeId => {
   return {
     type: constants.DEPRECATE_LANGUAGE_CODE,
-    payload: codesService.deprecateLanguageCode(languageCodeId),
+    payload: codesService.deprecateLanguageCode(languageCodeId, true),
   };
 };
 
 export const undeprecateLanguageCode = languageCodeId => {
   return {
     type: constants.UNDEPRECATE_LANGUAGE_CODE,
-    payload: codesService.undeprecateLanguageCode(languageCodeId),
+    payload: codesService.deprecateLanguageCode(languageCodeId, false),
   };
 };
 
