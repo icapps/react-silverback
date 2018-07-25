@@ -10,7 +10,7 @@
           "email": "development@icapps.com",
           "firstName": "development",
           "lastName": "iCapps",
-          "hasAccess": true,
+          "status": "ACTIVE",
           "role": "ADMIN"
       }
   ]

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Overview } from '../../components';
 import { getUsers, createUser, removeUser, getUserRoles, setSort } from '../../redux/users/actions';
-import { strings } from '../../utils';
-import { identifiers } from '../../constants';
+import { getStatusCodes } from '../../redux/codes/actions';
 import constants from '../../redux/users/constants';
 import { setMessage } from '../../redux/messages/actions';
+import { strings } from '../../utils';
+import { identifiers } from '../../constants';
 
 class UserOverview extends Component {
   createUser = async (user, changePassword) => {
@@ -23,6 +24,7 @@ class UserOverview extends Component {
 
   componentDidMount() {
     this.props.getUserRoles();
+    this.props.getStatusCodes();
   }
   
   getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
@@ -42,7 +44,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true, sorter: identifiers.FIRST_NAME, width: 2},
           { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true, sorter: identifiers.LAST_NAME, width: 3},
           { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE, width: 1},
-          { id: identifiers.HAS_ACCESS, value: strings.IS_ACTIVE, isSortable: true, sorter: identifiers.HAS_ACCESS, width: 1},   
+          { id: identifiers.STATUS_NAME, value: strings.STATUS, isSortable: true, sorter: identifiers.STATUS, width: 1},   
         ]}
         listItems={this.props.users}
         history={this.props.history}
@@ -52,7 +54,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
-          { id: identifiers.HAS_ACCESS, label: strings.IS_ACTIVE, type: "boolean", value: true },
+          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: this.props.statusCodes.map(status => ({ key: status.code, text: status.name })) },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
@@ -93,6 +95,7 @@ const mapStateToProps = state => ({
   sortField: state.users.sortField,
   sortOrder: state.users.sortOrder,
   email: state.auth.email,
+  statusCodes: state.codes.statusCodes,
 });
 
 const mapDispatchToProps = {
@@ -102,6 +105,7 @@ const mapDispatchToProps = {
   getUserRoles,
   setSort,
   setMessage,
+  getStatusCodes,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserOverview);
