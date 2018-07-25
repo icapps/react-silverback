@@ -130,4 +130,28 @@ describe('codes reducer', () => {
       })
     ).toMatchSnapshot();
   });
+
+  it('should GET_STATUS_CODES_FULFILLED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_STATUS_CODES_FULFILLED,
+        payload: { data: {}, meta: { totalCount: 10 } },
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_STATUS_CODES_PENDING', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_STATUS_CODES_PENDING,
+      })
+    ).toMatchSnapshot();
+  });
+  it('should GET_STATUS_CODES_REJECTED', () => {
+    expect(
+      codes(initialState, {
+        type: constants.GET_STATUS_CODES_REJECTED,
+        payload: { errors: [{ detail: 'ErrorMessage' }] },
+      })
+    ).toMatchSnapshot();
+  });
 });
