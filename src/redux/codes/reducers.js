@@ -3,7 +3,7 @@ import defaultInitialState from '../defaultInitialState';
 import { strings } from '../../utils/index';
 
 const initialState = {
-  userStatuses: [],
+  statusCodes: [],
   languageCode: null,
   languageCodeList: [],
   languageCodeCount: 0,
@@ -129,7 +129,7 @@ const codes = (state = initialState, action = {}) => {
     case constants.GET_STATUS_CODES_FULFILLED:
       return {
         ...state,
-        userStatuses: payload.data,
+        statusCodes: payload.data,
         isPending: false,
       };
     case constants.GET_STATUS_CODES_PENDING:

@@ -54,7 +54,7 @@ class UserOverview extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
-          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: this.props.userStatuses.map(status => ({ key: status.code, text: status.name })) },
+          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: this.props.statusCodes.map(status => ({ key: status.code, text: status.name })) },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
@@ -95,6 +95,7 @@ const mapStateToProps = state => ({
   sortField: state.users.sortField,
   sortOrder: state.users.sortOrder,
   email: state.auth.email,
+  statusCodes: state.codes.statusCodes,
 });
 
 const mapDispatchToProps = {

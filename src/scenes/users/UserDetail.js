@@ -53,7 +53,7 @@ class UserDetail extends Component {
   
   render() {
     const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
-    const userStatusesMapped = this.props.userStatuses.map(status => ({ key: status.code, text: status.name }));
+    const statusCodesMapped = this.props.statusCodes.map(status => ({ key: status.id, text: status.name }));
     if (this.props.isPending) {
       return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
     }
@@ -71,7 +71,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
           { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
           { id: identifiers.ROLE, value: this.props.user.role.code, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
-          { id: identifiers.STATUS, value: this.props.user.status.code, label: strings.STATUS, type: "select", options: userStatusesMapped, isEditable: true, css: "inline-block" },
+          { id: identifiers.STATUS, value: this.props.user.status.id, label: strings.STATUS, type: "select", options: statusCodesMapped, isEditable: true, css: "inline-block" },
           { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_NOT_COMPLETED, type: "plain", isEditable: false, css: `inline-block italic ${(this.props.user.registrationCompleted) ? 'none' : ''}` },
           { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
         ]}
@@ -81,7 +81,7 @@ class UserDetail extends Component {
           { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
           { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
           { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
-          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: userStatusesMapped },
+          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: statusCodesMapped },
           { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
         ]}
         create={this.createUser}
@@ -134,7 +134,6 @@ UserDetail.propTypes = {
 const mapStateToProps = state => ({
   user: state.users.user,
   userRoles: state.users.userRoles,
-  userStatuses: state.users.userStatuses,
   isCreateError: state.users.isCreateError,
   isError: state.users.isError,
   errorMessage: state.users.errorMessage,
@@ -143,6 +142,7 @@ const mapStateToProps = state => ({
   isUpdatePending: state.users.isUpdatePending,
   isForgotPasswordPending: state.auth.isForgotPasswordPending,
   email: state.auth.email,
+  statusCodes: state.codes.statusCodes,
 });
 
 const mapDispatchToProps = {
