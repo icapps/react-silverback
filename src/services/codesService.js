@@ -22,12 +22,7 @@ export const createLanguageCode = async (languageCode) => {
   return result;
 };
 
-export const deprecateLanguageCode = async (languageCodeId) => {
-  const result = await Network.post(`/meta/codes/${languageCodeId}/deprecate`);
-  return result;
-};
-
-export const undeprecateLanguageCode = async (languageCodeId) => {
-  const result = await Network.post(`/meta/codes/${languageCodeId}/undeprecate`);
+export const deprecateLanguageCode = async (languageCodeId, deprecated) => {
+  const result = await Network.patch(`/meta/codes/${languageCodeId}`, { deprecated });
   return result;
 };
