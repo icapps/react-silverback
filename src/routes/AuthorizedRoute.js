@@ -29,7 +29,7 @@ class AuthorizedRoute extends Component {
         {...otherProps}
         render={() => {
           if (isPending) return <Spinner />;
-          return localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
+          return localStorage.getItem('LOGGED_IN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
         }}
       />
     );

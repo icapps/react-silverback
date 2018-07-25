@@ -13,7 +13,7 @@ class AuthorizedRoute extends Component {
           if (props.match.path === '/forgot-password' || props.match.path === '/choose-password') {
             return <Component {...this.props} />;
           }
-          return !localStorage.getItem('ACCESS_TOKEN') ? <Component {...this.props} /> : <Redirect to='/' />;
+          return !localStorage.getItem('LOGGED_IN') ? <Component {...this.props} /> : <Redirect to='/' />;
         }}
       />
     );

@@ -12,10 +12,6 @@ class Network {
     const headers = {};
 
     // ONLY USE THIS IF YOU WORK IN A BROWSER
-    const token = localStorage.getItem('ACCESS_TOKEN');
-    if (token) {
-      headers.authorization = `Bearer ${token}`;
-    }
     headers['Content-Type'] = 'application/json';
     headers['Accept'] = 'application/json';
 
@@ -43,7 +39,7 @@ class Network {
   static async get(route) {
     try {
       const headers = this.basicHeaders();
-      const result = await axios.get(this.getUrl(route), { headers });
+      const result = await axios.get(this.getUrl(route), { headers, withCredentials: true });
       return result.data;
     } catch (err) {
       this.errorHandler(err);
@@ -53,7 +49,7 @@ class Network {
   static async put(route, body = {}) {
     try {
       const headers = this.basicHeaders();
-      const result = await axios.put(this.getUrl(route), body, { headers });
+      const result = await axios.put(this.getUrl(route), body, { headers, withCredentials: true });
       return result.data;
     } catch (err) {
       this.errorHandler(err);
@@ -63,7 +59,7 @@ class Network {
   static async patch(route, body = {}) {
     try {
       const headers = this.basicHeaders();
-      const result = await axios.patch(this.getUrl(route), body, { headers });
+      const result = await axios.patch(this.getUrl(route), body, { headers, withCredentials: true });
       return result.data;
     } catch (err) {
       this.errorHandler(err);
@@ -73,7 +69,7 @@ class Network {
   static async post(route, body = {}) {
     try {
       const headers = this.basicHeaders();
-      const result = await axios.post(this.getUrl(route), body, { headers });
+      const result = await axios.post(this.getUrl(route), body, { headers, withCredentials: true });
       return result.data;
     } catch (err) {
       this.errorHandler(err);
@@ -83,7 +79,7 @@ class Network {
   static async delete(route) {
     try {
       const headers = this.basicHeaders();
-      const result = await axios.delete(this.getUrl(route), { headers });
+      const result = await axios.delete(this.getUrl(route), { headers, withCredentials: true });
       return result.data || true;
     } catch (err) {
       this.errorHandler(err);

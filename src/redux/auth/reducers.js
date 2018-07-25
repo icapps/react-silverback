@@ -17,8 +17,6 @@ const auth = (state = initialState, action = {}) => {
 
   switch (action.type) {
     case constants.LOGIN_USER_FULFILLED:
-      localStorage.setItem('ACCESS_TOKEN', payload.data.accessToken);
-      localStorage.setItem('REFRESH_TOKEN', payload.data.refreshToken);
       return {
         ...state,
         isLoggedIn: true,
@@ -128,9 +126,11 @@ const auth = (state = initialState, action = {}) => {
       };
     // LOGOUT_USER
     case constants.LOGOUT_USER_PENDING:
-      localStorage.removeItem('ACCESS_TOKEN');
-      localStorage.removeItem('REFRESH_TOKEN');
-      return initialState;
+      return initialState;    
+    case constants.LOGOUT_USER_FORCE:
+      localStorage.removeItem('LOGGED_IN');
+      window.location.href = '/';
+      return initialState;    
     default:
       return state;
   }
