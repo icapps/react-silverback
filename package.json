@@ -53,6 +53,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/icapps/react-silverback/issues"
-  },
-  "homepage": "https://github.com/icapps/react-silverback#readme"
+  }
 }
