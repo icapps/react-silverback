@@ -15,6 +15,13 @@ describe('versionControl actions', () => {
     const store = mockStore({});
     store.dispatch(getVersion());
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "GET_VERSION",
+        },
+      ]
+    `);
   });
 });

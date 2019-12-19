@@ -10,6 +10,12 @@ describe('auth actions', () => {
     const store = mockStore({});
     store.dispatch(toggleNavigation());
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "type": "TOGGLE_NAVIGATION",
+        },
+      ]
+    `);
   });
 });

@@ -20,36 +20,78 @@ describe('user actions', () => {
   it('getUsers', () => {
     store.dispatch(getUsers(0, 10));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "GET_USERS",
+        },
+      ]
+    `);
   });
 
   it('getUsersById', () => {
     store.dispatch(getUsersById('11111'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "GET_USERS_BY_ID",
+        },
+      ]
+    `);
   });
 
   it('removeUser', () => {
     store.dispatch(removeUser('1111'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "REMOVE_USER",
+        },
+      ]
+    `);
   });
 
   it('createUser', () => {
     store.dispatch(createUser({ username: 'test' }));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "CREATE_USER",
+        },
+      ]
+    `);
   });
 
   it('updateUser', () => {
     store.dispatch(updateUser('123', {}));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "UPDATE_USER",
+        },
+      ]
+    `);
   });
 
   it('getUserRoles', () => {
     store.dispatch(getUserRoles());
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "GET_USER_ROLES",
+        },
+      ]
+    `);
   });
 });

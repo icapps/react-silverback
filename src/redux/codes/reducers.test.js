@@ -10,7 +10,21 @@ const initialState = {
 
 describe('codes reducer', () => {
   it('should return the initial state', () => {
-    expect(codes(undefined, {})).toMatchSnapshot();
+    expect(codes(undefined, {})).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isCreateError": false,
+        "isCreatePending": false,
+        "isError": false,
+        "isPending": false,
+        "languageCode": null,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+        "sortField": "code",
+        "sortOrder": "asc",
+        "statusCodes": Array [],
+      }
+    `);
   });
   it('should GET_LANGUAGE_CODES_FULFILLED', () => {
     expect(
@@ -18,14 +32,31 @@ describe('codes reducer', () => {
         type: constants.GET_LANGUAGE_CODES_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": false,
+        "languageCode": null,
+        "languageCodeCount": 10,
+        "languageCodeList": Object {},
+      }
+    `);
   });
   it('should GET_LANGUAGE_CODES_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.GET_LANGUAGE_CODES_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": true,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should GET_LANGUAGE_CODES_REJECTED', () => {
     expect(
@@ -33,7 +64,15 @@ describe('codes reducer', () => {
         type: constants.GET_LANGUAGE_CODES_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isError": true,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should CREATE_LANGUAGE_CODE_FULFILLED', () => {
@@ -42,14 +81,36 @@ describe('codes reducer', () => {
         type: constants.CREATE_LANGUAGE_CODE_FULFILLED,
         payload: { data: { id: 'id' } },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isCreatePending": false,
+        "isError": false,
+        "isPending": false,
+        "languageCode": Object {
+          "id": "id",
+        },
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should CREATE_LANGUAGE_CODE_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.CREATE_LANGUAGE_CODE_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isCreateError": false,
+        "isCreatePending": true,
+        "isError": false,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should CREATE_LANGUAGE_CODE_REJECTED', () => {
@@ -58,7 +119,17 @@ describe('codes reducer', () => {
         type: constants.CREATE_LANGUAGE_CODE_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isCreateError": true,
+        "isCreatePending": false,
+        "isError": false,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should GET_LANGUAGE_CODE_BY_ID_FULFILLED', () => {
@@ -67,14 +138,31 @@ describe('codes reducer', () => {
         type: constants.GET_LANGUAGE_CODE_BY_ID_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": false,
+        "languageCode": Object {},
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should GET_LANGUAGE_CODE_BY_ID_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.GET_LANGUAGE_CODE_BY_ID_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": true,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should GET_LANGUAGE_CODE_BY_ID_REJECTED', () => {
     expect(
@@ -82,7 +170,15 @@ describe('codes reducer', () => {
         type: constants.GET_LANGUAGE_CODE_BY_ID_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isError": true,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should DEPRECATE_LANGUAGE_CODE_FULFILLED', () => {
@@ -90,14 +186,30 @@ describe('codes reducer', () => {
       codes(initialState, {
         type: constants.DEPRECATE_LANGUAGE_CODE_FULFILLED,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should DEPRECATE_LANGUAGE_CODE_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.DEPRECATE_LANGUAGE_CODE_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": true,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should DEPRECATE_LANGUAGE_CODE_REJECTED', () => {
     expect(
@@ -105,7 +217,15 @@ describe('codes reducer', () => {
         type: constants.DEPRECATE_LANGUAGE_CODE_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isError": true,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should UNDEPRECATE_LANGUAGE_CODE_FULFILLED', () => {
@@ -113,14 +233,30 @@ describe('codes reducer', () => {
       codes(initialState, {
         type: constants.UNDEPRECATE_LANGUAGE_CODE_FULFILLED,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should UNDEPRECATE_LANGUAGE_CODE_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.UNDEPRECATE_LANGUAGE_CODE_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": true,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should UNDEPRECATE_LANGUAGE_CODE_REJECTED', () => {
     expect(
@@ -128,7 +264,15 @@ describe('codes reducer', () => {
         type: constants.UNDEPRECATE_LANGUAGE_CODE_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isError": true,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 
   it('should GET_STATUS_CODES_FULFILLED', () => {
@@ -137,14 +281,31 @@ describe('codes reducer', () => {
         type: constants.GET_STATUS_CODES_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+        "statusCodes": Object {},
+      }
+    `);
   });
   it('should GET_STATUS_CODES_PENDING', () => {
     expect(
       codes(initialState, {
         type: constants.GET_STATUS_CODES_PENDING,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "",
+        "isError": false,
+        "isPending": true,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
   it('should GET_STATUS_CODES_REJECTED', () => {
     expect(
@@ -152,6 +313,14 @@ describe('codes reducer', () => {
         type: constants.GET_STATUS_CODES_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "errorMessage": "Something went wrong!",
+        "isError": true,
+        "isPending": false,
+        "languageCodeCount": 0,
+        "languageCodeList": Array [],
+      }
+    `);
   });
 });

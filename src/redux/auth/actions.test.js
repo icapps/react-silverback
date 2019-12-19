@@ -18,26 +18,61 @@ describe('auth actions', () => {
   it('loginUser', () => {
     store.dispatch(loginUser('test', 'test123'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "LOGIN_USER",
+        },
+      ]
+    `);
   });
   it('logoutUser', () => {
     store.dispatch(logoutUser());
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "LOGOUT_USER",
+        },
+      ]
+    `);
   });
   it('forgotPassword', () => {
     store.dispatch(forgotPassword('test@test.test'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "FORGOT_PASSWORD",
+        },
+      ]
+    `);
   });
   it('verifyForgotPassword', () => {
     store.dispatch(verifyForgotPassword('123'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "VERIFY_FORGOT_PASSWORD",
+        },
+      ]
+    `);
   });
   it('confirmForgotPassword', () => {
     store.dispatch(confirmForgotPassword('123', 'test123'));
     const expectedActions = store.getActions();
-    expect(expectedActions).toMatchSnapshot();
+    expect(expectedActions).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "payload": Promise {},
+          "type": "CONFIRM_FORGOT_PASSWORD",
+        },
+      ]
+    `);
   });
 });

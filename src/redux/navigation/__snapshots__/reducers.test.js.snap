@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`navigation reducer should TOGGLE_NAVIGATION 1`] = `
-Object {
-  "isNavigationShown": true,
-}
-`;

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`auth actions loginUser 1`] = `
-Array [
-  Object {
-    "type": "TOGGLE_NAVIGATION",
-  },
-]
-`;

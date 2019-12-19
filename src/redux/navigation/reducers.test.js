@@ -11,6 +11,10 @@ describe('navigation reducer', () => {
       navigation(initialState, {
         type: constants.TOGGLE_NAVIGATION,
       }),
-    ).toMatchSnapshot();
+    ).toMatchInlineSnapshot(`
+      Object {
+        "isNavigationShown": true,
+      }
+    `);
   });
 });
