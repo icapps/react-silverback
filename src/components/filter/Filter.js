@@ -1,39 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { strings } from '../../utils';
 import './filter.scss';
 
 const search = require('../../assets/images/search.svg');
 
-class Filter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { filterValue: '' };
-  }
-
-  handleChange = event => {
-    this.setState({ filterValue: event.target.value }, this.props.handleFilter(event.target.value));
+const Filter = ({ handleFilter }) => {
+  const [filterValue, setFilterValue] = useState('');
+  const handleChange = ({ target: { value } }) => {
+    setFilterValue(value);
+    handleFilter(value);
   };
-
-  render() {
-    return (
-      <div className="input-group">
-        <div className="input-group-prepend">
-          <span className="input-group-text">
-            <img src={search} alt={strings.SEARCH} />
-          </span>
-        </div>
-        <input
-          className="form-control filter"
-          type="text"
-          value={this.state.filterValue}
-          onChange={this.handleChange}
-          placeholder={strings.SEARCH}
-        />
+  return (
+    <div className="input-group filter">
+      <div className="input-group-prepend">
+        <span className="input-group-text">
+          <img src={search} alt={strings.SEARCH} />
+        </span>
       </div>
-    );
-  }
-}
+      <input
+        className="form-control"
+        type="text"
+        value={filterValue}
+        onChange={handleChange}
+        placeholder={strings.SEARCH}
+      />
+    </div>
+  );
+};
 
 Filter.propTypes = {
   handleFilter: PropTypes.func.isRequired,

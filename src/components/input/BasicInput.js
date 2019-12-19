@@ -1,33 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class TextInput extends React.Component {
-  handleKeyPress = event => {
-    if (event.key === 'Enter') {
+const TextInput = ({
+  id,
+  label,
+  placeholder,
+  value,
+  handleChange,
+  type,
+  isValid,
+  errorMessage,
+  isDisabled,
+  handleEnter,
+}) => {
+  const handleKeyPress = ({ key }) => {
+    if (key === 'Enter') {
       this.props.handleEnter();
     }
   };
-
-  render() {
-    const { props } = this;
-    return (
-      <div className="form-group">
-        <label htmlFor={props.id}>{props.label}</label>
-        <input
-          type={props.type === 'email' ? 'text' : props.type}
-          className={`form-control ${!props.isValid ? 'is-invalid' : ''}`}
-          id={props.id}
-          placeholder={props.placeholder}
-          value={props.value}
-          onKeyPress={this.handleKeyPress}
-          onChange={props.handleChange}
-          disabled={props.isDisabled}
-        />
-        {!props.isValid && <div className="invalid-feedback">{props.errorMessage}</div>}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="form-group">
+      <label htmlFor={id}>{label}</label>
+      <input
+        type={type === 'email' ? 'text' : type}
+        className={`form-control ${!isValid ? 'is-invalid' : ''}`}
+        id={id}
+        placeholder={placeholder}
+        value={value}
+        onKeyPress={handleKeyPress}
+        onChange={handleChange}
+        disabled={isDisabled}
+      />
+      {!isValid && <div className="invalid-feedback">{errorMessage}</div>}
+    </div>
+  );
+};
 
 TextInput.propTypes = {
   id: PropTypes.string.isRequired,

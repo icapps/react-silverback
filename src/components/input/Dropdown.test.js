@@ -1,13 +1,11 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Dropdown from './Dropdown';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
-configure({ adapter: new Adapter() });
+import Dropdown from './Dropdown';
 
 describe('Dropdown Component', () => {
   it('should render a Dropdown component', () => {
-    const wrapper = shallow(
+    const { container } = render(
       <Dropdown
         id="test"
         label="This is a dropdown"
@@ -20,6 +18,38 @@ describe('Dropdown Component', () => {
         ]}
       />,
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <div
+          class="form-group"
+        >
+          <label
+            for="test"
+          >
+            This is a dropdown
+          </label>
+          <select
+            class="form-control"
+            id="test"
+          >
+            <option
+              value="test"
+            >
+              test
+            </option>
+            <option
+              value="test2"
+            >
+              test2
+            </option>
+            <option
+              value="test3"
+            >
+              test3
+            </option>
+          </select>
+        </div>
+      </div>
+    `);
   });
 });

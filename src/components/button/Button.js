@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Spinner } from '..';
+import { Spinner } from '../';
 
-const Button = props => (
-  <button
-    type="button"
-    className={`btn ${props.className}`}
-    onClick={props.handleClick}
-    disabled={props.isDisabled || props.isPending}
-  >
-    {props.leftIcon && <img src={props.leftIcon} alt="" />}
-    {props.isPending ? <Spinner hasContainer={false} spinnerClassName={'button-spinner'} /> : <span>{props.text}</span>}
-    {props.rightIcon && <img src={props.rightIcon} alt="" />}
+const Button = ({ className, handleClick, isDisabled, isPending, leftIcon, text, rightIcon }) => (
+  <button type="button" className={`btn ${className}`} onClick={handleClick} disabled={isDisabled || isPending}>
+    {leftIcon && <img src={leftIcon} alt="" />}
+    {isPending ? <Spinner hasContainer={false} spinnerClassName={'button-spinner'} /> : <span>{text}</span>}
+    {rightIcon && <img src={rightIcon} alt="" />}
   </button>
 );
 
@@ -19,8 +14,8 @@ Button.propTypes = {
   className: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
-  leftIcon: PropTypes.string,
-  rightIcon: PropTypes.string,
+  leftIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  rightIcon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   isDisabled: PropTypes.bool,
   isPending: PropTypes.bool,
 };

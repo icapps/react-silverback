@@ -1,13 +1,34 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Checkbox from './Checkbox';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
-configure({ adapter: new Adapter() });
+import Checkbox from './Checkbox';
 
 describe('BasicInput Component', () => {
   it('should render a BasicInput component', () => {
-    const wrapper = shallow(<Checkbox id="test" text="This is a checkbox" value={true} handleChange={() => {}} />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<Checkbox id="test" text="This is a checkbox" value={true} handleChange={() => {}} />);
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <div
+          class="form-group "
+        >
+          <div
+            class="form-check"
+          >
+            <input
+              checked=""
+              class="form-check-input"
+              id="test"
+              type="checkbox"
+            />
+            <label
+              class="form-check-label"
+              for="test"
+            >
+              This is a checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+    `);
   });
 });

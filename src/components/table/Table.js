@@ -14,21 +14,33 @@ const deleteIcon = require('../../assets/images/delete.svg');
 const SORT_ASC = 'asc';
 const SORT_DESC = 'desc';
 
-class Table extends React.Component {
-  sort = (sortField, isSortable) => {
+const Table = ({
+  actions,
+  dateFormat,
+  deleteIdentifier,
+  email,
+  handleRemoveItem,
+  handleRowClick,
+  handleSort,
+  keys,
+  listItems,
+  maxTextLength,
+  sortField,
+  sortOrder,
+}) => {
+  const sort = (field, isSortable) => {
     if (isSortable) {
-      const sortOrder =
-        this.props.sortField === sortField ? (this.props.sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
-      this.props.handleSort(sortField, sortOrder);
+      const newSortOrder = sortField === field ? (sortOrder === SORT_ASC ? SORT_DESC : SORT_ASC) : SORT_ASC;
+      handleSort(field, newSortOrder);
     }
   };
 
-  renderData = data => {
+  const renderData = data => {
     switch (typeof data) {
       case 'object':
-        return isDate(data) ? format(data, this.props.dateFormat) : data.toString();
+        return isDate(data) ? format(data, dateFormat) : data.toString();
       case 'string':
-        return data.length < this.props.maxTextLength ? data : `${data.substring(0, this.props.maxTextLength)}...`;
+        return data.length < maxTextLength ? data : `${data.substring(0, maxTextLength)}...`;
       case 'boolean':
         return <img src={data ? checkIcon : crossIcon} alt={`${data}`} />;
       default:
@@ -36,118 +48,110 @@ class Table extends React.Component {
     }
   };
 
-  selectData = (object, path) => {
-    return this.renderData(
+  const selectData = (object, path) => {
+    return renderData(
       path.split('.').reduce((obj, prop) => {
         return obj[prop];
       }, object),
     );
   };
 
-  render() {
-    const { props } = this;
-    return (
-      <div className="table-responsive">
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              {props.keys.map(key => (
-                <th scope="col" key={key.id} className={`col-${key.width}`}>
-                  <span
-                    className={`key ${key.isSortable ? 'sortable-key' : ''} ${
-                      props.sortField === key.sorter ? 'active-key' : ''
-                    }`}
-                    onClick={() => this.sort(key.sorter, key.isSortable)}
-                  >
-                    {key.value}
-                    {key.isSortable && (
-                      <span className={`sort ${props.sortField === key.sorter ? props.sortOrder : ''}`} />
-                    )}
-                  </span>
-                </th>
-              ))}
-              {props.handleRemoveItem && <th className="col-1"></th>}
-              {props.actions && props.actions.length > 0 && <th className="col-2"></th>}
-            </tr>
-          </thead>
-          <tbody>
-            {props.listItems.map(listItem => (
-              <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
-                {props.keys.map(key => (
-                  <td
-                    className={`table-data col-${key.width}`}
-                    key={`td-${key.id}`}
-                    onClick={() => props.handleRowClick(listItem.id)}
-                  >
-                    {this.selectData(listItem, key.id)}
-                  </td>
-                ))}
-                {props.actions &&
-                  props.actions.length > 0 &&
-                  props.actions.map(action => {
-                    const shouldDeprecate = action.id === identifiers.DEPRECATED && !listItem.deprecated;
-                    const shouldUndeprecate = action.id === identifiers.UNDEPRECATED && listItem.deprecated;
-                    if (
-                      shouldDeprecate ||
-                      shouldUndeprecate ||
-                      (action.id !== identifiers.DEPRECATED && action.id !== identifiers.UNDEPRECATED)
-                    ) {
-                      return (
-                        <td className="remove-list-item table-data col-2" key={action.id}>
-                          <Modal
-                            id={action.id}
-                            modalButtonClassName={action.buttonClass}
-                            modalButtonText={action.label}
-                            handlePrimaryButton={() => action.handleAction(listItem)}
-                            primaryButtonText={action.primaryButtonText}
-                            secondaryButtonText={strings.CANCEL}
-                            secondaryButtonClassName="btn-light"
-                            primaryButtonClassName={action.primaryButtonClassName}
-                          >
-                            <p>
-                              {strings.formatString(action.text, {
-                                item: <span className={`text-danger`}>{listItem[props.deleteIdentifier]}</span>,
-                              })}
-                            </p>
-                          </Modal>
-                        </td>
-                      );
-                    }
-                    return null;
-                  })}
-                {props.handleRemoveItem && listItem[props.deleteIdentifier] !== props.email ? (
-                  <td className="remove-list-item table-data col-1">
-                    <Modal
-                      id="delete"
-                      icon={deleteIcon}
-                      modalButtonText=""
-                      handlePrimaryButton={() => props.handleRemoveItem(listItem.id, listItem[props.deleteIdentifier])}
-                      primaryButtonText={strings.DELETE}
-                      secondaryButtonText={strings.CANCEL}
-                      secondaryButtonClassName="btn-light"
-                      primaryButtonClassName="btn-danger"
-                    >
-                      <p>
-                        {strings.formatString(strings.DELETE_CONFIRMATION, {
-                          item: <span className="text-danger">{listItem[props.deleteIdentifier]}</span>,
-                        })}
-                      </p>
-                    </Modal>
-                  </td>
-                ) : (
-                  <td
-                    className="remove-list-item table-data col-1"
-                    onClick={() => props.handleRowClick(listItem.id)}
-                  ></td>
-                )}
-              </tr>
+  return (
+    <div className="table-responsive">
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            {keys.map(key => (
+              <th scope="col" key={key.id} className={`col-${key.width}`}>
+                <span
+                  className={`key ${key.isSortable ? 'sortable-key' : ''} ${
+                    sortField === key.sorter ? 'active-key' : ''
+                  }`}
+                  onClick={() => sort(key.sorter, key.isSortable)}
+                >
+                  {key.value}
+                  {key.isSortable && <span className={`sort ${sortField === key.sorter ? sortOrder : ''}`} />}
+                </span>
+              </th>
             ))}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
+            {handleRemoveItem && <th className="col-1"></th>}
+            {actions && actions.length > 0 && <th className="col-2"></th>}
+          </tr>
+        </thead>
+        <tbody>
+          {listItems.map(listItem => (
+            <tr key={listItem.id} className={listItem.deprecated ? 'deprecated' : ''}>
+              {keys.map(key => (
+                <td
+                  className={`table-data col-${key.width}`}
+                  key={`td-${key.id}`}
+                  onClick={() => handleRowClick(listItem.id)}
+                >
+                  {selectData(listItem, key.id)}
+                </td>
+              ))}
+              {actions &&
+                actions.length > 0 &&
+                actions.map(action => {
+                  const shouldDeprecate = action.id === identifiers.DEPRECATED && !listItem.deprecated;
+                  const shouldUndeprecate = action.id === identifiers.UNDEPRECATED && listItem.deprecated;
+                  if (
+                    shouldDeprecate ||
+                    shouldUndeprecate ||
+                    (action.id !== identifiers.DEPRECATED && action.id !== identifiers.UNDEPRECATED)
+                  ) {
+                    return (
+                      <td className="remove-list-item table-data col-2" key={action.id}>
+                        <Modal
+                          id={action.id}
+                          modalButtonClassName={action.buttonClass}
+                          modalButtonText={action.label}
+                          handlePrimaryButton={() => action.handleAction(listItem)}
+                          primaryButtonText={action.primaryButtonText}
+                          secondaryButtonText={strings.CANCEL}
+                          secondaryButtonClassName="btn-light"
+                          primaryButtonClassName={action.primaryButtonClassName}
+                        >
+                          <p>
+                            {strings.formatString(action.text, {
+                              item: <span className={`text-danger`}>{listItem[deleteIdentifier]}</span>,
+                            })}
+                          </p>
+                        </Modal>
+                      </td>
+                    );
+                  }
+                  return null;
+                })}
+              {handleRemoveItem && listItem[deleteIdentifier] !== email ? (
+                <td className="remove-list-item table-data col-1">
+                  <Modal
+                    id="delete"
+                    icon={deleteIcon}
+                    modalButtonText=""
+                    handlePrimaryButton={() => handleRemoveItem(listItem.id, listItem[deleteIdentifier])}
+                    primaryButtonText={strings.DELETE}
+                    secondaryButtonText={strings.CANCEL}
+                    secondaryButtonClassName="btn-light"
+                    primaryButtonClassName="btn-danger"
+                  >
+                    <p>
+                      {strings.formatString(strings.DELETE_CONFIRMATION, {
+                        item: <span className="text-danger">{listItem[deleteIdentifier]}</span>,
+                      })}
+                    </p>
+                  </Modal>
+                </td>
+              ) : (
+                <td className="remove-list-item table-data col-1" onClick={() => handleRowClick(listItem.id)}></td>
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 Table.propTypes = {
   keys: PropTypes.arrayOf(

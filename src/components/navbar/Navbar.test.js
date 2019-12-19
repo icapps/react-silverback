@@ -1,54 +1,37 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Navbar from './NavBar';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
+import { Router } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+import '@testing-library/jest-dom/extend-expect';
 
-configure({ adapter: new Adapter() });
+import Navbar from './NavBar';
+
+const history = createMemoryHistory({ initialEntries: ['/'] });
 
 describe('Navbar Component', () => {
   it('should render a Navbar component', () => {
-    const wrapper = shallow(
-      <Navbar
-        links={[
-          { name: 'test1', path: '/test1' },
-          { name: 'test2', path: '/test2' },
-        ]}
-        toggleNavigation={() => {}}
-        isNavigationShown={true}
-        build="V1"
-        version="1.0.0"
-      />,
+    const linkPath1 = 'test1';
+    const linkPath2 = 'test2';
+    const buildNr = 'V1';
+    const versionNr = '1.2.3';
+
+    const { queryByText } = render(
+      <Router history={history}>
+        <Navbar
+          links={[
+            { name: linkPath1, path: '/test1' },
+            { name: linkPath2, path: '/test2' },
+          ]}
+          toggleNavigation={() => {}}
+          isNavigationShown={true}
+          build={buildNr}
+          version={versionNr}
+        />
+      </Router>,
     );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it('should render a Navbar component with navigation shown', () => {
-    const wrapper = shallow(
-      <Navbar
-        links={[
-          { name: 'test1', path: '/test1' },
-          { name: 'test2', path: '/test2' },
-        ]}
-        toggleNavigation={() => {}}
-        isNavigationShown
-        build="V1"
-        version="1.0.0"
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it('should render a hidden Navbar component', () => {
-    const wrapper = shallow(
-      <Navbar
-        links={[
-          { name: 'test1', path: '/test1' },
-          { name: 'test2', path: '/test2' },
-        ]}
-        toggleNavigation={() => {}}
-        isNavigationShown={false}
-        build="V1"
-        version="1.0.0"
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
+    expect(queryByText(linkPath1)).toBeInTheDocument();
+    expect(queryByText(linkPath2)).toBeInTheDocument();
+    expect(queryByText(`Version: ${versionNr}`)).toBeInTheDocument();
+    expect(queryByText(`Build: ${buildNr}`)).toBeInTheDocument();
   });
 });

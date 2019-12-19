@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Checkbox = props => (
-  <div className={`form-group ${props.css}`}>
+const Checkbox = ({ id, text, value, handleChange, isDisabled, css }) => (
+  <div className={`form-group ${css}`}>
     <div className="form-check">
       <input
         type="checkbox"
         className="form-check-input"
-        id={props.id}
-        checked={props.value}
-        onChange={props.handleChange}
-        disabled={props.isDisabled}
+        id={id}
+        checked={value}
+        onChange={handleChange}
+        disabled={isDisabled}
       />
-      <label className="form-check-label" htmlFor={props.id}>
-        {props.text}
+      <label className="form-check-label" htmlFor={id}>
+        {text}
       </label>
     </div>
   </div>

@@ -129,7 +129,7 @@ Modal.propTypes = {
   primaryButtonText: PropTypes.string.isRequired,
   handlePrimaryButton: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   isPending: PropTypes.bool,
 };
 

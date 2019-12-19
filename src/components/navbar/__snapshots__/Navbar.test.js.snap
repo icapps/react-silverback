@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Navbar Component should render a Navbar component 1`] = `ShallowWrapper {}`;
-
-exports[`Navbar Component should render a Navbar component with navigation shown 1`] = `ShallowWrapper {}`;
-
-exports[`Navbar Component should render a hidden Navbar component 1`] = `ShallowWrapper {}`;

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button Component should render a Button component 1`] = `ShallowWrapper {}`;
-
-exports[`Button Component should render a Button component with an extra className 1`] = `ShallowWrapper {}`;
-
-exports[`Button Component should render a Button component with an icon 1`] = `ShallowWrapper {}`;

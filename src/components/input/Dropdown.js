@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Dropdown = props => (
+const Dropdown = ({ id, label, value, handleChange, options, isLabelShown }) => (
   <div className="form-group">
-    {props.isLabelShown && <label htmlFor={props.id}>{props.label}</label>}
-    <select className="form-control" id={props.id} value={props.value} onChange={props.handleChange}>
-      {props.options.map(option => (
+    {isLabelShown && <label htmlFor={id}>{label}</label>}
+    <select className="form-control" id={id} value={value} onChange={handleChange}>
+      {options.map(option => (
         <option key={option.key} value={option.key}>
           {option.text}
         </option>

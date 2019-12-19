@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { strings } from '../../utils';
 import './navbar.scss';
 
-const Navbar = props => (
-  <aside className={`${!props.isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-light sidebar`}>
+const Navbar = ({ links, isNavigationShown, toggleNavigation, version, build }) => (
+  <aside className={`${!isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-light sidebar`}>
     <ul className="nav nav-pills flex-column">
-      {props.links.map(link => (
-        <li key={link.name} className="nav-item" onClick={props.toggleNavigation}>
+      {links.map(link => (
+        <li key={link.name} className="nav-item" onClick={toggleNavigation}>
           <Link to={link.path} className={`nav-link ${window.location.pathname.includes(link.path) ? 'active' : ''}`}>
             {link.name}
           </Link>
@@ -20,8 +20,8 @@ const Navbar = props => (
       <span className="nav-item">{`${strings.VERSION}: ${process.env.REACT_APP_VERSION_NR}`}</span>
       <span className="nav-item">{`${strings.BUILD}: ${process.env.REACT_APP_BUILD_NR}`}</span>
       <span className="nav-item version-platform">{strings.BACKEND}</span>
-      <span className="nav-item">{`${strings.VERSION}: ${props.version}`}</span>
-      <span className="nav-item">{`${strings.BUILD}: ${props.build}`}</span>
+      <span className="nav-item">{`${strings.VERSION}: ${version}`}</span>
+      <span className="nav-item">{`${strings.BUILD}: ${build}`}</span>
     </div>
   </aside>
 );

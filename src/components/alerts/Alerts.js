@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import './alerts.scss';
 import { Alert } from '..';
 
-const Alerts = props => (
+const Alerts = ({ messages }) => (
   <div className="alert-container">
-    {props.messages.map(message => (
+    {messages.map(message => (
       <Alert text={message.text} type={message.type} key={message.id} />
     ))}
   </div>

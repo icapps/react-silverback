@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Table Component should render a Table component 1`] = `ShallowWrapper {}`;
-
-exports[`Table Component should render a Table component with custom Date format 1`] = `ShallowWrapper {}`;
-
-exports[`Table Component should render a Table component with custom maximum text length 1`] = `ShallowWrapper {}`;

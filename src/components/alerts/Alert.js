@@ -1,42 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { identifiers } from '../../constants';
 
-class Alert extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: true,
-    };
-  }
+const Alert = ({ type, text }) => {
+  const [isShown, setIsShown] = useState(true);
 
-  componentDidMount() {
-    this.timeout = setTimeout(this.closeAlert, 5000);
-  }
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsShown(false);
+      return () => {
+        clearTimeout(timeout);
+      };
+    }, 5000);
+  }, []);
 
-  closeAlert = () => {
-    this.setState({ show: false });
-  };
-
-  componentWillUnmount() {
-    if (this.timeout) {
-      clearTimeout(this.timeout);
-    }
-  }
-
-  render() {
-    const { props, state } = this;
-    return (
-      <React.Fragment>
-        {state.show && (
-          <div className={`simple-alert alert alert-${props.type}`} role="alert">
-            {props.text}
-          </div>
-        )}
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <React.Fragment>
+      {isShown && (
+        <div className={`simple-alert alert alert-${type}`} role="alert">
+          {text}
+        </div>
+      )}
+    </React.Fragment>
+  );
+};
 
 Alert.propTypes = {
   type: PropTypes.string,

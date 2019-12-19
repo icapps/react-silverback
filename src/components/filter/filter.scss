@@ -1,4 +1,13 @@
 .filter {
-  max-width: 200px;
-  margin: 0;
+  &.input-group {
+    width: auto;
+  }
+
+  .input-group-prepend {
+    height: 2.4rem;
+  }
+  .form-control {
+    max-width: 200px;
+    margin: 0;
+  }
 }
