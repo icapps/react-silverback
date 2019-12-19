@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './alerts.css';
+import './alerts.scss';
 import { Alert } from '..';
 
 const Alerts = props => (
-  <div className='alert-container'>
-    {props.messages.map(message => <Alert text={message.text} type={message.type} key={message.id} />)}
+  <div className="alert-container">
+    {props.messages.map(message => (
+      <Alert text={message.text} type={message.type} key={message.id} />
+    ))}
   </div>
 );
 
@@ -14,4 +16,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Alerts);
-

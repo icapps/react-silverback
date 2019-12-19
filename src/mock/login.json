@@ -1,9 +1,9 @@
 {
   "meta": {
-  "type":"authentication"
+    "type": "authentication"
   },
   "data": {
-    "accessToken":"fake-accessToken",
-    "refreshToken":"fake-refreshToken"
+    "accessToken": "fake-accessToken",
+    "refreshToken": "fake-refreshToken"
   }
 }

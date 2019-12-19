@@ -7,45 +7,44 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0",
     "date-fns": "^1.29.0",
-    "node-sass-chokidar": "~0.0.3",
+    "node-sass": "^4.13.0",
     "npm-run-all": "~4.1.2",
-    "prop-types": "~15.6.0",
-    "react": "~16.2.0",
-    "react-dom": "~16.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-localization": "^1.0.4",
     "react-redux": "~5.0.6",
-    "react-router-dom": "~4.2.2",
-    "react-scripts": "~1.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
     "redux": "~3.7.2",
     "redux-logger": "~3.0.6",
     "redux-mock-store": "^1.5.1",
     "redux-thunk": "~2.2.0"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "yarn set-build-nr react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build && rm build/static/**/*.map",
-    "test": "react-scripts test --env=jsdom",
-    "lint": "./node_modules/.bin/eslint -c .eslintrc --ext .jsx --ext .js src",
-    "validate": "yarn lint && yarn test",
+    "start": "npm run set-build-nr react-scripts start",
+    "build": "react-scripts build && rm build/static/**/*.map",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "coverage": "react-scripts test --env=jsdom --coverage",
-    "set-build-nr": "REACT_APP_BUILD_NR=$(printenv HEROKU_RELEASE_VERSION)"
+    "coverage": "npm run test --coverage",
+    "set-build-nr": "REACT_APP_BUILD_NR=$(printenv HEROKU_RELEASE_VERSION)",
+    "lint": "eslint --ignore-path .gitignore --ext .js .",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm-run-all --parallel check-format lint test"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.15",
-    "babel-eslint": "^8.2.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.10.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.33.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^5.0.0",
-    "eslint-plugin-react": "^7.4.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "prettier": "^1.19.1",
     "react-test-renderer": "^16.2.0",
     "storybook": "^1.0.0"
   },
@@ -53,5 +52,17 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/icapps/react-silverback/issues"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

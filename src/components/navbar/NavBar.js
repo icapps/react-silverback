@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { strings } from '../../utils';
-import './navbar.css';
+import './navbar.scss';
 
 const Navbar = props => (
   <aside className={`${!props.isNavigationShown ? 'd-none d-sm-block' : ''} col-sm-3 col-md-2 bg-light sidebar`}>
     <ul className="nav nav-pills flex-column">
       {props.links.map(link => (
         <li key={link.name} className="nav-item" onClick={props.toggleNavigation}>
-          <Link to={link.path} className={`nav-link ${window.location.pathname.includes(link.path) ? 'active' : ''}`}>{link.name}</Link>
+          <Link to={link.path} className={`nav-link ${window.location.pathname.includes(link.path) ? 'active' : ''}`}>
+            {link.name}
+          </Link>
         </li>
       ))}
     </ul>
@@ -29,7 +31,7 @@ Navbar.propTypes = {
     PropTypes.shape({
       name: PropTypes.string,
       path: PropTypes.string,
-    })
+    }),
   ).isRequired,
   isNavigationShown: PropTypes.bool.isRequired,
   toggleNavigation: PropTypes.func.isRequired,

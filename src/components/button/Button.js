@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { Spinner } from '..';
 
 const Button = props => (
-  <button type="button" className={`btn ${props.className}`} onClick={props.handleClick} disabled={props.isDisabled || props.isPending}>
+  <button
+    type="button"
+    className={`btn ${props.className}`}
+    onClick={props.handleClick}
+    disabled={props.isDisabled || props.isPending}
+  >
     {props.leftIcon && <img src={props.leftIcon} alt="" />}
     {props.isPending ? <Spinner hasContainer={false} spinnerClassName={'button-spinner'} /> : <span>{props.text}</span>}
     {props.rightIcon && <img src={props.rightIcon} alt="" />}

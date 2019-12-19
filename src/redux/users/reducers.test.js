@@ -21,14 +21,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USERS_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USERS_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USERS_REJECTED', () => {
@@ -36,7 +36,7 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USERS_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
 
@@ -46,14 +46,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USERS_BY_ID_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USERS_BY_ID_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.GET_USERS_BY_ID_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USERS_BY_ID_REJECTED', () => {
@@ -61,7 +61,7 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USERS_BY_ID_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
 
@@ -71,14 +71,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.CREATE_USER_FULFILLED,
         payload: { data: { user: 'test' }, meta: { totalCount: 10 } },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should CREATE_USER_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.CREATE_USER_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should CREATE_USER_REJECTED', () => {
@@ -86,7 +86,7 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.CREATE_USER_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
   // UPDATE_USER
@@ -95,14 +95,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.UPDATE_USER_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should UPDATE_USER_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.UPDATE_USER_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should UPDATE_USER_REJECTED', () => {
@@ -110,7 +110,7 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.UPDATE_USER_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
 
@@ -119,14 +119,14 @@ describe('users reducer', () => {
     expect(
       users(initialState, {
         type: constants.REMOVE_USER_FULFILLED,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should REMOVE_USER_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.REMOVE_USER_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should REMOVE_USER_REJECTED', () => {
@@ -134,7 +134,7 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.REMOVE_USER_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
 
@@ -144,14 +144,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USER_ROLES_FULFILLED,
         payload: { data: {}, meta: { totalCount: 10 } },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USER_ROLES_PENDING', () => {
     expect(
       users(initialState, {
         type: constants.GET_USER_ROLES_PENDING,
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should GET_USER_ROLES_REJECTED', () => {
@@ -159,14 +159,14 @@ describe('users reducer', () => {
       users(initialState, {
         type: constants.GET_USER_ROLES_REJECTED,
         payload: { errors: [{ detail: 'ErrorMessage' }] },
-      })
+      }),
     ).toMatchSnapshot();
   });
   it('should RESET_DELETED_USER', () => {
     expect(
       users(initialState, {
         type: constants.RESET_DELETED_USER,
-      })
+      }),
     ).toMatchSnapshot();
   });
 });

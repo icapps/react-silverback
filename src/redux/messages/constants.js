@@ -1,5 +1,5 @@
 export default {
   SET_MESSAGE: 'SET_MESSAGE',
-  
+
   CLEAR_MESSAGES: 'CLEAR_MESSAGES',
 };

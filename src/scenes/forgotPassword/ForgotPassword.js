@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './forgotPassword.css';
+import './forgotPassword.scss';
 import { strings } from '../../utils';
 import { BasicInput, Button, Spinner } from '../../components';
 import { forgotPassword } from '../../redux/auth/actions';
@@ -32,32 +32,55 @@ class ForgotPassword extends React.Component {
         this.setState({ isForgotPasswordSent: true });
       }
     }
-  }
+  };
 
   goBackToLogin = () => {
     this.props.history.push('/auth/login');
-  }
+  };
 
   render() {
     const { props, state } = this;
-    if (props.isPending) return <Spinner className='forgot-password-spinner' />;
-    if (state.isForgotPasswordSent) return (
-      <div className="forgot-password-container container">
-        {props.isError && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
-        <main className='forgot-password'>
-          <h2>{strings.RESET_PASSWORD}</h2>
-          <p className="forgot-password-succes-text">{strings.formatString(strings.RESET_PASSWORD_TEXT, { email: state.email !== '' ? <strong>{state.email}</strong> : strings.YOU })}</p>
-          <Button className="btn-primary" text={strings.GO_BACK_TO_LOGIN} handleClick={this.goBackToLogin} />
-        </main>
-      </div>
-    );
+    if (props.isPending) return <Spinner className="forgot-password-spinner" />;
+    if (state.isForgotPasswordSent)
+      return (
+        <div className="forgot-password-container container">
+          {props.isError && (
+            <div className="alert alert-danger text-center" role="alert">
+              {' '}
+              {props.errorMessage}{' '}
+            </div>
+          )}
+          <main className="forgot-password">
+            <h2>{strings.RESET_PASSWORD}</h2>
+            <p className="forgot-password-succes-text">
+              {strings.formatString(strings.RESET_PASSWORD_TEXT, {
+                email: state.email !== '' ? <strong>{state.email}</strong> : strings.YOU,
+              })}
+            </p>
+            <Button className="btn-primary" text={strings.GO_BACK_TO_LOGIN} handleClick={this.goBackToLogin} />
+          </main>
+        </div>
+      );
     return (
       <div className="forgot-password-container container">
-        {props.isError && <div className="alert alert-danger text-center" role="alert"> {props.errorMessage} </div>}
-        <main className='forgot-password'>
+        {props.isError && (
+          <div className="alert alert-danger text-center" role="alert">
+            {' '}
+            {props.errorMessage}{' '}
+          </div>
+        )}
+        <main className="forgot-password">
           <h2>{strings.FORGOT_PASSWORD_QUESTION}</h2>
           <p>{strings.FORGOT_PASSWORD_TEXT}</p>
-          <BasicInput id="email" label={strings.EMAIL} value={state.email} handleChange={this.handleChange} isValid={state.isValid} errorMessage={state.errorMessage} handleEnter={this.handleForgotPassword} />
+          <BasicInput
+            id="email"
+            label={strings.EMAIL}
+            value={state.email}
+            handleChange={this.handleChange}
+            isValid={state.isValid}
+            errorMessage={state.errorMessage}
+            handleEnter={this.handleForgotPassword}
+          />
           <Button className="btn-primary" text={strings.RETRIEVE_PASSWORD} handleClick={this.handleForgotPassword} />
         </main>
       </div>

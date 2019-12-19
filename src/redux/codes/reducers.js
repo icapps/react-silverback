@@ -149,11 +149,10 @@ const codes = (state = initialState, action = {}) => {
 
     //SET_SORT
     case constants.SET_CODES_SORT:
-      const { sortField, sortOrder } = payload;
       return {
         ...state,
-        sortField,
-        sortOrder,
+        sortField: payload.sortField,
+        sortOrder: payload.sortOrder,
       };
 
     default:

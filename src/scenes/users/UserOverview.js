@@ -11,6 +11,7 @@ import { identifiers } from '../../constants';
 
 class UserOverview extends Component {
   createUser = async (user, changePassword) => {
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async resolve => {
       const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
@@ -20,19 +21,19 @@ class UserOverview extends Component {
       }
       resolve(false);
     });
-  }
+  };
 
   componentDidMount() {
     this.props.getUserRoles();
     this.props.getStatusCodes();
   }
-  
+
   getUsersSorted = (page, limit, sortField, sortOrder, search = '') => {
     if (sortField && sortOrder) {
       this.props.setSort(sortField, sortOrder);
     }
     this.props.getUsers(page, limit, sortField || this.props.sortField, sortOrder || this.props.sortOrder, search);
-  }
+  };
 
   render() {
     return (
@@ -40,22 +41,50 @@ class UserOverview extends Component {
         title={strings.USERS}
         keyword={strings.USER}
         keys={[
-          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true, sorter: identifiers.EMAIL, width: 4},
-          { id: identifiers.FIRST_NAME, value: strings.FIRST_NAME, isSortable: true, sorter: identifiers.FIRST_NAME, width: 2},
-          { id: identifiers.LAST_NAME, value: strings.LAST_NAME, isSortable: true, sorter: identifiers.LAST_NAME, width: 3},
-          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE, width: 1},
-          { id: identifiers.STATUS_NAME, value: strings.STATUS, isSortable: true, sorter: identifiers.STATUS, width: 1},   
+          { id: identifiers.EMAIL, value: strings.EMAIL, isSortable: true, sorter: identifiers.EMAIL, width: 4 },
+          {
+            id: identifiers.FIRST_NAME,
+            value: strings.FIRST_NAME,
+            isSortable: true,
+            sorter: identifiers.FIRST_NAME,
+            width: 2,
+          },
+          {
+            id: identifiers.LAST_NAME,
+            value: strings.LAST_NAME,
+            isSortable: true,
+            sorter: identifiers.LAST_NAME,
+            width: 3,
+          },
+          { id: identifiers.ROLE_NAME, value: strings.ROLE, isSortable: true, sorter: identifiers.ROLE, width: 1 },
+          {
+            id: identifiers.STATUS_NAME,
+            value: strings.STATUS,
+            isSortable: true,
+            sorter: identifiers.STATUS,
+            width: 1,
+          },
         ]}
         listItems={this.props.users}
         history={this.props.history}
         paginationTotalCount={this.props.usersCount}
         createParameters={[
-          { id: identifiers.EMAIL, label: strings.EMAIL, type: "email" },
-          { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
-          { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })) },
-          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: this.props.statusCodes.map(status => ({ key: status.code, text: status.name })) },
-          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
+          { id: identifiers.EMAIL, label: strings.EMAIL, type: 'email' },
+          { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: 'text' },
+          { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: 'text' },
+          {
+            id: identifiers.ROLE,
+            label: strings.ROLE,
+            type: 'select',
+            options: this.props.userRoles.map(role => ({ key: role.code, text: role.name })),
+          },
+          {
+            id: identifiers.STATUS,
+            label: strings.STATUS,
+            type: 'select',
+            options: this.props.statusCodes.map(status => ({ key: status.code, text: status.name })),
+          },
+          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: 'password' },
         ]}
         create={this.createUser}
         removeItem={this.props.removeUser}
@@ -82,7 +111,7 @@ UserOverview.propTypes = {
   createUser: PropTypes.func.isRequired,
   removeUser: PropTypes.func.isRequired,
   isCreateError: PropTypes.bool.isRequired,
-  isCreatePending: PropTypes.bool.isRequired, 
+  isCreatePending: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({

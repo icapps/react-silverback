@@ -16,7 +16,7 @@ class Alert extends React.Component {
 
   closeAlert = () => {
     this.setState({ show: false });
-  }
+  };
 
   componentWillUnmount() {
     if (this.timeout) {
@@ -28,7 +28,11 @@ class Alert extends React.Component {
     const { props, state } = this;
     return (
       <React.Fragment>
-        {state.show && <div className={`simple-alert alert alert-${props.type}`} role="alert">{props.text}</div>}
+        {state.show && (
+          <div className={`simple-alert alert alert-${props.type}`} role="alert">
+            {props.text}
+          </div>
+        )}
       </React.Fragment>
     );
   }

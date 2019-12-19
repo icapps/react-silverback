@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { toggleNavigation} from './actions';
+import { toggleNavigation } from './actions';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

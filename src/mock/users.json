@@ -1,17 +1,17 @@
 {
   "meta": {
-      "type": "users",
-      "totalCount": 1,
-      "count": 1
+    "type": "users",
+    "totalCount": 1,
+    "count": 1
   },
   "data": [
-      {
-          "id": "e8b056ee-2e77-11e8-919a-0fbee0f62c13",
-          "email": "development@icapps.com",
-          "firstName": "development",
-          "lastName": "iCapps",
-          "status": "ACTIVE",
-          "role": "ADMIN"
-      }
+    {
+      "id": "e8b056ee-2e77-11e8-919a-0fbee0f62c13",
+      "email": "development@icapps.com",
+      "firstName": "development",
+      "lastName": "iCapps",
+      "status": "ACTIVE",
+      "role": "ADMIN"
+    }
   ]
 }

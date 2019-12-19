@@ -10,9 +10,9 @@ let store;
 describe('auth actions', () => {
   beforeEach(() => {
     store = mockStore({});
-    Network.get = jest.fn(() => { });
-    Network.post = jest.fn(() => { });
-    Network.put = jest.fn(() => { });
+    Network.get = jest.fn(() => {});
+    Network.post = jest.fn(() => {});
+    Network.put = jest.fn(() => {});
   });
 
   it('loginUser', () => {

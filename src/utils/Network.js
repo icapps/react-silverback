@@ -21,7 +21,9 @@ class Network {
   static errorHandler(error) {
     if (error.response) {
       throw {
-        errors: (error.response.data && error.response.data.errors) || [{ code: '0', status: 500, title: 'Unknown error', meta: error.response }],
+        errors: (error.response.data && error.response.data.errors) || [
+          { code: '0', status: 500, title: 'Unknown error', meta: error.response },
+        ],
       };
     } else if (error.request) {
       // The request was made but no response was received
@@ -88,4 +90,3 @@ class Network {
 }
 
 export default Network;
-

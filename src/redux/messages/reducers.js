@@ -12,10 +12,7 @@ const messages = (state = initialState, action = {}) => {
     case constants.SET_MESSAGE:
       return {
         ...state,
-        messages: [
-          ...state.messages, 
-          { ...action.payload, id: new Date().getTime() },
-        ],
+        messages: [...state.messages, { ...action.payload, id: new Date().getTime() }],
       };
     // CLEAR MESSAGES
     case constants.CLEAR_MESSAGES:

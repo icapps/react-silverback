@@ -5,29 +5,32 @@ import promiseMiddleware from './middleware/promiseMiddleware';
 import errorHandlingMiddleware from './middleware/errorHandlingMiddleware';
 import rootReducer from './rootReducer';
 
-const middleware = [ thunkMiddleware, promiseMiddleware(), errorHandlingMiddleware() ];
+const middleware = [thunkMiddleware, promiseMiddleware(), errorHandlingMiddleware()];
 
 if (process.env.NODE_ENV !== 'production') {
   const logger = createLogger({
-    collapsed : true,
-    logger    : console,
-    colors    : {
-      title     : action => {
+    collapsed: true,
+    logger: console,
+    colors: {
+      title: action => {
         if (action.type.endsWith('FULFILLED')) return '#006400';
         if (action.type.endsWith('REJECTED')) return '#B31B1B';
         return '#222222';
       },
-      prevState : () => '#9E9E9E',
-      action    : () => '#03A9F4',
-      nextState : () => '#4CAF50',
-      error     : () => '#F20404',
+      prevState: () => '#9E9E9E',
+      action: () => '#03A9F4',
+      nextState: () => '#4CAF50',
+      error: () => '#F20404',
     },
   });
   middleware.push(logger);
 }
 
 // If you want devTools, change 'window=undefined' in 'window=object'
-const devTools = typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f;
+const devTools =
+  typeof window === 'object' && typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined'
+    ? window.__REDUX_DEVTOOLS_EXTENSION__()
+    : f => f;
 
 const createStoreWithMiddleware = compose(applyMiddleware(...middleware), devTools)(createStore);
 

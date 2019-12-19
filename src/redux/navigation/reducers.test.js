@@ -10,7 +10,7 @@ describe('navigation reducer', () => {
     expect(
       navigation(initialState, {
         type: constants.TOGGLE_NAVIGATION,
-      })
+      }),
     ).toMatchSnapshot();
   });
 });

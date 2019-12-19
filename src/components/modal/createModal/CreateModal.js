@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Modal, Checkbox, BasicInput, Dropdown } from '../../index';
 import { strings, validate } from '../../../utils';
 import { identifiers } from '../../../constants';
-import './createModal.css';
+import './createModal.scss';
 
 const plus = require('../../../assets/images/plus.svg');
 
@@ -20,11 +20,26 @@ class CreateModal extends React.Component {
     let inputs = {};
     this.props.createParameters.forEach(item => {
       if (item.type === 'email') {
-        inputs[item.id] = { value: '', validation: 'email', isValid: true, errorMessage: '' };
+        inputs[item.id] = {
+          value: '',
+          validation: 'email',
+          isValid: true,
+          errorMessage: '',
+        };
       } else if (item.type === 'text') {
-        inputs[item.id] = { value: '', validation: 'text', isValid: true, errorMessage: '' };
+        inputs[item.id] = {
+          value: '',
+          validation: 'text',
+          isValid: true,
+          errorMessage: '',
+        };
       } else if (item.type === 'password') {
-        inputs[item.id] = { value: '', validation: this.createPassword ? 'password' : null, isValid: true, errorMessage: '' };
+        inputs[item.id] = {
+          value: '',
+          validation: this.createPassword ? 'password' : null,
+          isValid: true,
+          errorMessage: '',
+        };
       } else if (item.type === 'select' && item.options.length > 0) {
         inputs[item.id] = { value: item.options[0].key, validation: null };
       } else if (item.type === 'boolean') {
@@ -32,18 +47,18 @@ class CreateModal extends React.Component {
       }
     });
     return inputs;
-  }
+  };
 
   setCreateParameters = () => {
     this.setState({ inputs: this.initializeCreateParameters() });
-  }
+  };
 
   validate = () => {
     let inputs = { ...this.state.inputs };
     let hasError = false;
     Object.keys(inputs)
-      .filter((key) => inputs.hasOwnProperty(key) && inputs[key].validation)
-      .forEach((key) => {
+      .filter(key => inputs[key].validation)
+      .forEach(key => {
         const validationResult = validate(inputs[key].validation, inputs[key].value);
         if (!validationResult.isValid) {
           hasError = true;
@@ -58,7 +73,7 @@ class CreateModal extends React.Component {
       return;
     }
     this.create(this.getInputValues(inputs));
-  }
+  };
 
   getInputValues(inputs) {
     for (let key in inputs) {
@@ -67,12 +82,12 @@ class CreateModal extends React.Component {
     return inputs;
   }
 
-  create = (inputs) => {
+  create = inputs => {
     if (this.state.createPassword) {
       return this.props.create({ ...inputs, password: undefined }, this.state.createPassword);
     }
     return this.props.create(inputs, this.state.createPassword);
-  }
+  };
 
   handleChange = event => {
     const input = event.target.id.replace('modal-', '');
@@ -89,38 +104,86 @@ class CreateModal extends React.Component {
   };
 
   handleCreatePassword = () => {
-    this.setState({
-      createPassword: !this.state.createPassword,
-    }, () => {
-      this.setState({
-        inputs: {
-          ...this.state.inputs,
-          password: {
-            ...this.state.inputs['password'],
-            validation: this.state.createPassword ? 'none' : 'password',
-            isValid: true,
+    this.setState(
+      {
+        createPassword: !this.state.createPassword,
+      },
+      () => {
+        this.setState({
+          inputs: {
+            ...this.state.inputs,
+            password: {
+              ...this.state.inputs['password'],
+              validation: this.state.createPassword ? 'none' : 'password',
+              isValid: true,
+            },
           },
-        },
-      });
-    });
-  }
+        });
+      },
+    );
+  };
 
   renderInput = item => {
     if (item.type === 'boolean') {
-      return <Checkbox key={item.id} id={`modal-${item.id}`} text={item.label} value={this.state.inputs[item.id].value} handleChange={this.handleChange} isDisabled={this.props.isPending} />;
+      return (
+        <Checkbox
+          key={item.id}
+          id={`modal-${item.id}`}
+          text={item.label}
+          value={this.state.inputs[item.id].value}
+          handleChange={this.handleChange}
+          isDisabled={this.props.isPending}
+        />
+      );
     } else if (item.type === 'select' && item.options && this.state.inputs[item.id]) {
-      return <Dropdown key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.inputs[item.id].value} handleChange={this.handleChange} options={item.options} />;
+      return (
+        <Dropdown
+          key={item.id}
+          id={`modal-${item.id}`}
+          label={item.label}
+          value={this.state.inputs[item.id].value}
+          handleChange={this.handleChange}
+          options={item.options}
+        />
+      );
     } else if (item.type === 'password') {
       return (
         <React.Fragment key={item.id}>
-          <Checkbox id={identifiers.USER_HAS_TO_SET_PASSWORD} text={strings.USER_HAS_TO_SET_PASSWORD} value={this.state.createPassword} handleChange={this.handleCreatePassword} isDisabled={this.props.isPending} />
-          <BasicInput id={`modal-${item.id}`} label={item.label} value={this.state.inputs[item.id].value} isValid={this.state.inputs[item.id].isValid} errorMessage={this.state.inputs[item.id].errorMessage} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending || this.state.createPassword} />
+          <Checkbox
+            id={identifiers.USER_HAS_TO_SET_PASSWORD}
+            text={strings.USER_HAS_TO_SET_PASSWORD}
+            value={this.state.createPassword}
+            handleChange={this.handleCreatePassword}
+            isDisabled={this.props.isPending}
+          />
+          <BasicInput
+            id={`modal-${item.id}`}
+            label={item.label}
+            value={this.state.inputs[item.id].value}
+            isValid={this.state.inputs[item.id].isValid}
+            errorMessage={this.state.inputs[item.id].errorMessage}
+            handleChange={this.handleChange}
+            type={item.type}
+            isDisabled={this.props.isPending || this.state.createPassword}
+          />
         </React.Fragment>
       );
     } else if (this.state.inputs[item.id]) {
-      return <BasicInput key={item.id} id={`modal-${item.id}`} label={item.label} value={this.state.inputs[item.id].value} isValid={this.state.inputs[item.id].isValid} errorMessage={this.state.inputs[item.id].errorMessage} handleChange={this.handleChange} type={item.type} isDisabled={this.props.isPending} />;
+      return (
+        <BasicInput
+          key={item.id}
+          id={`modal-${item.id}`}
+          label={item.label}
+          value={this.state.inputs[item.id].value}
+          isValid={this.state.inputs[item.id].isValid}
+          errorMessage={this.state.inputs[item.id].errorMessage}
+          handleChange={this.handleChange}
+          type={item.type}
+          isDisabled={this.props.isPending}
+        />
+      );
     }
-  }
+  };
 
   render() {
     return (

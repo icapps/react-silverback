@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { verifyForgotPassword, confirmForgotPassword } from '../../redux/auth/actions';
 import { Spinner, BasicInput, Button } from '../../components';
-import './choosePassword.css';
+import './choosePassword.scss';
 import { identifiers } from '../../constants/index';
 import { strings } from '../../utils/index';
 
@@ -11,8 +11,16 @@ class ChoosePassword extends React.Component {
   constructor() {
     super();
     this.state = {
-      password: { value: '', isValid: true, errorMessage: strings.PASSWORD_LENGTH },
-      repeatPassword: { value: '', isValid: true, errorMessage: strings.REPEAT_NEW_PASSWORD_ERROR },
+      password: {
+        value: '',
+        isValid: true,
+        errorMessage: strings.PASSWORD_LENGTH,
+      },
+      repeatPassword: {
+        value: '',
+        isValid: true,
+        errorMessage: strings.REPEAT_NEW_PASSWORD_ERROR,
+      },
       isSubmitted: false,
     };
   }
@@ -25,34 +33,57 @@ class ChoosePassword extends React.Component {
 
   handleChange = event => {
     if (event.target.id === identifiers.PASSWORD) {
-      this.setState({ [event.target.id]: { ...this.state.password, value: event.target.value, isValid: true } });
+      this.setState({
+        [event.target.id]: {
+          ...this.state.password,
+          value: event.target.value,
+          isValid: true,
+        },
+      });
     } else {
-      this.setState({ [event.target.id]: { ...this.state.repeatPassword, value: event.target.value, isValid: true } });
+      this.setState({
+        [event.target.id]: {
+          ...this.state.repeatPassword,
+          value: event.target.value,
+          isValid: true,
+        },
+      });
     }
-  }
+  };
 
   handleClick = () => {
-    this.setState({
-      isSubmitted: true,
-      password: { ...this.state.password, isValid: this.state.password.value.length > 5 },
-      repeatPassword: { ...this.state.repeatPassword, isValid: this.state.password.value === this.state.repeatPassword.value && this.state.repeatPassword.value !== '' },
-    },
+    this.setState(
+      {
+        isSubmitted: true,
+        password: {
+          ...this.state.password,
+          isValid: this.state.password.value.length > 5,
+        },
+        repeatPassword: {
+          ...this.state.repeatPassword,
+          isValid:
+            this.state.password.value === this.state.repeatPassword.value && this.state.repeatPassword.value !== '',
+        },
+      },
       () => {
         if (this.state.password.isValid && this.state.repeatPassword.isValid) {
           this.props.confirmForgotPassword(this.token, this.state.password.value);
         }
-      });
-  }
+      },
+    );
+  };
 
   goBackToLogin = () => {
     this.props.history.push('/auth/login');
-  }
+  };
 
   render() {
     const { props, state } = this;
     const isGettingStartedScreen = window.location.pathname === '/choose-password';
-    
-    if (props.isPending) { return <Spinner hasContainer={false} />; };
+
+    if (props.isPending) {
+      return <Spinner hasContainer={false} />;
+    }
     if (props.isPasswordConfirmed) {
       return (
         <div className="choose-password-container container">
@@ -63,17 +94,34 @@ class ChoosePassword extends React.Component {
           </main>
         </div>
       );
-    };
+    }
     if (props.isError) {
       this.props.history.push('/auth/forgot-password');
-    };
+    }
     return (
       <div className="choose-password-container container">
         <main className="choose-password">
           <h3>{isGettingStartedScreen ? strings.GETTING_STARTED : strings.FORGOT_PASSWORD}</h3>
           <div className="password-input">
-            <BasicInput id={identifiers.PASSWORD} label={isGettingStartedScreen ? strings.PASSWORD : strings.NEW_PASSWORD} value={state.password.value} handleChange={this.handleChange} type="password" isValid={state.password.isValid} errorMessage={state.password.errorMessage} />
-            <BasicInput id={identifiers.REPEAT_PASSWORD} label={isGettingStartedScreen ? strings.REPEAT_PASSWORD : strings.REPEAT_NEW_PASSWORD} value={state.repeatPassword.value} handleChange={this.handleChange} type="password" isValid={state.repeatPassword.isValid} errorMessage={state.repeatPassword.errorMessage} handleEnter={this.handleClick} />
+            <BasicInput
+              id={identifiers.PASSWORD}
+              label={isGettingStartedScreen ? strings.PASSWORD : strings.NEW_PASSWORD}
+              value={state.password.value}
+              handleChange={this.handleChange}
+              type="password"
+              isValid={state.password.isValid}
+              errorMessage={state.password.errorMessage}
+            />
+            <BasicInput
+              id={identifiers.REPEAT_PASSWORD}
+              label={isGettingStartedScreen ? strings.REPEAT_PASSWORD : strings.REPEAT_NEW_PASSWORD}
+              value={state.repeatPassword.value}
+              handleChange={this.handleChange}
+              type="password"
+              isValid={state.repeatPassword.isValid}
+              errorMessage={state.repeatPassword.errorMessage}
+              handleEnter={this.handleClick}
+            />
           </div>
           <Button className="btn-primary" text={strings.FORGOT_PASSWORD_BUTTON} handleClick={this.handleClick} />
         </main>

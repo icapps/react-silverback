@@ -1,6 +1,13 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { getLanguageCodes, createLanguageCode, deprecateLanguageCode, getLanguageCodeById, undeprecateLanguageCode, getStatusCodes } from './actions';
+import {
+  getLanguageCodes,
+  createLanguageCode,
+  deprecateLanguageCode,
+  getLanguageCodeById,
+  undeprecateLanguageCode,
+  getStatusCodes,
+} from './actions';
 import { Network } from '../../utils/index';
 
 const middlewares = [thunk];
@@ -9,8 +16,8 @@ let store;
 
 describe('user actions', () => {
   beforeEach(() => {
-    Network.get = jest.fn(() => { });
-    Network.post = jest.fn(() => { });
+    Network.get = jest.fn(() => {});
+    Network.post = jest.fn(() => {});
     store = mockStore({});
   });
 

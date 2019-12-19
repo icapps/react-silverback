@@ -8,7 +8,7 @@ const mockStore = configureMockStore(middlewares);
 
 describe('versionControl actions', () => {
   beforeEach(() => {
-    Network.get = jest.fn(() => { });
+    Network.get = jest.fn(() => {});
   });
 
   it('getVersion', () => {

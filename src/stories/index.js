@@ -1,15 +1,31 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, CreateModal, EmptyDetail } from '../components';
+import {
+  BasicInput,
+  Checkbox,
+  Dropdown,
+  Table,
+  Button,
+  Modal,
+  Pagination,
+  Overview,
+  Detail,
+  CreateModal,
+  EmptyDetail,
+} from '../components';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('BasicInput', module)
-  .add('default', () => (
-    <BasicInput id="test" label="Text" value="test" handleChange={action('handle TextInput')} />
-  ))
+  .add('default', () => <BasicInput id="test" label="Text" value="test" handleChange={action('handle TextInput')} />)
   .add('placeholder', () => (
-    <BasicInput id="test" label="Text with placeholder" placeholder="placeholder" value="" handleChange={action('handle TextInput')} />
+    <BasicInput
+      id="test"
+      label="Text with placeholder"
+      placeholder="placeholder"
+      value=""
+      handleChange={action('handle TextInput')}
+    />
   ))
   .add('type: password', () => (
     <BasicInput id="test" label="Password" value="password" handleChange={action('handle TextInput')} type="password" />
@@ -18,7 +34,14 @@ storiesOf('BasicInput', module)
     <BasicInput id="test" label="Number" value={123} handleChange={action('handle TextInput')} type="number" />
   ))
   .add('error', () => (
-    <BasicInput id="test" label="Text with error" value="test" handleChange={action('handle TextInput')} isValid={false} errorMessage="Input has an error" />
+    <BasicInput
+      id="test"
+      label="Text with error"
+      value="test"
+      handleChange={action('handle TextInput')}
+      isValid={false}
+      errorMessage="Input has an error"
+    />
   ));
 
 storiesOf('Checkbox', module)
@@ -29,16 +52,18 @@ storiesOf('Checkbox', module)
     <Checkbox id="test" text="This is a checkbox" value={false} handleChange={action('handle Checkbox')} />
   ));
 
-storiesOf('Dropdown', module)
-  .add('dropdown', () => (
-    <Dropdown id="test" label="This is a dropdown" value="test" handleChange={action('handle Dropdown')} options={['test', 'test2', 'test3']} />
-  ));
-
+storiesOf('Dropdown', module).add('dropdown', () => (
+  <Dropdown
+    id="test"
+    label="This is a dropdown"
+    value="test"
+    handleChange={action('handle Dropdown')}
+    options={['test', 'test2', 'test3']}
+  />
+));
 
 storiesOf('Button', module)
-  .add('default', () => (
-    <Button text="Button" handleClick={action('handleButton')} />
-  ))
+  .add('default', () => <Button text="Button" handleClick={action('handleButton')} />)
   .add('button with styling', () => (
     <Button text="Button" handleClick={action('handleButton')} className="btn-primary" />
   ));
@@ -96,11 +121,11 @@ storiesOf('Table', module)
         { id: 'key3', value: 'key3', isSortable: false },
       ]}
       listItems={[
-        { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-        { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-        { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-        { id: 'id4', key: "test 4", key2: false },
-        { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
+        { id: 'id1', key: 'test 1', key1: 1, key2: false, key3: new Date() },
+        { id: 'id2', key: 'test 2', key1: 2, key2: true, key3: new Date() },
+        { id: 'id3', key: 'test 3', key1: 3, key2: true, key3: new Date() },
+        { id: 'id4', key: 'test 4', key2: false },
+        { id: 'id5', key: 'test 5', key1: 4, key2: true, key3: new Date() },
       ]}
       handleRowClick={action('handle Tablerow click')}
       handleRemoveItem={action('handle remove item')}
@@ -115,14 +140,13 @@ storiesOf('Table', module)
         { id: 'key2', value: 'key2', isSortable: true },
         { id: 'key3', value: 'key3', isSortable: false },
       ]}
-      listItems={
-        [
-          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-          { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-          { id: 'id4', key: "test 4", key2: false },
-          { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
-        ]}
+      listItems={[
+        { id: 'id1', key: 'test 1', key1: 1, key2: false, key3: new Date() },
+        { id: 'id2', key: 'test 2', key1: 2, key2: true, key3: new Date() },
+        { id: 'id3', key: 'test 3', key1: 3, key2: true, key3: new Date() },
+        { id: 'id4', key: 'test 4', key2: false },
+        { id: 'id5', key: 'test 5', key1: 4, key2: true, key3: new Date() },
+      ]}
       dateFormat="dddd D MMMM"
       handleRowClick={action('handle Tablerow click')}
       handleRemoveItem={action('handle remove item')}
@@ -137,23 +161,35 @@ storiesOf('Table', module)
         { id: 'key2', value: 'key2', isSortable: true },
         { id: 'key3', value: 'key3', isSortable: false },
       ]}
-      listItems={
-        [
-          { id: 'id1', key: "test 1", key1: 1, key2: false, key3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet nisl ac nibh aliquet, id placerat massa bibendum. Ut erat mauris, pulvinar vestibulum augue sollicitudin, rutrum eleifend leo. Proin malesuada nisl nec ornare fringilla. Nam vel rutrum mi. Etiam porta tempus blandit. Nunc et odio rhoncus, eleifend nisi ac, tempus urna. Pellentesque justo tellus, cursus id mi molestie, condimentum mattis ante. Sed suscipit nibh libero, at tincidunt enim pulvinar nec. Fusce sit amet leo vitae quam rutrum mattis eu a leo. Sed et nisl sit amet ipsum eleifend dignissim a sit amet metus. Nullam porta eros eget dolor ornare, vitae porttitor diam vehicula. Cras vel augue vestibulum, pellentesque nulla sed, blandit dui. Vivamus eu urna a tortor tempor elementum sed eu nibh. In id pellentesque eros.' },
-          { id: 'id2', key: "test 2", key1: 2, key2: true },
-          { id: 'id3', key: "test 3", key1: 3, key2: true, key3: 'Vestibulum ultricies eleifend accumsan. Aliquam quam lectus, finibus in risus fringilla, suscipit congue dolor. Praesent et massa lacus. Etiam rutrum mi nunc, in placerat justo tempus eget. Nulla at consectetur purus. Ut justo orci, dictum ac mauris vitae, faucibus viverra risus. Donec lobortis, dui dignissim mattis fringilla, felis massa dapibus quam, a fringilla erat nulla non diam. Curabitur aliquet dignissim pellentesque. Nunc ut enim mattis purus mollis fermentum. Donec consequat mi et consequat posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut tempor ipsum.' },
-          { id: 'id4', key: "test 4", key2: false },
-        ]}
+      listItems={[
+        {
+          id: 'id1',
+          key: 'test 1',
+          key1: 1,
+          key2: false,
+          key3:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet nisl ac nibh aliquet, id placerat massa bibendum. Ut erat mauris, pulvinar vestibulum augue sollicitudin, rutrum eleifend leo. Proin malesuada nisl nec ornare fringilla. Nam vel rutrum mi. Etiam porta tempus blandit. Nunc et odio rhoncus, eleifend nisi ac, tempus urna. Pellentesque justo tellus, cursus id mi molestie, condimentum mattis ante. Sed suscipit nibh libero, at tincidunt enim pulvinar nec. Fusce sit amet leo vitae quam rutrum mattis eu a leo. Sed et nisl sit amet ipsum eleifend dignissim a sit amet metus. Nullam porta eros eget dolor ornare, vitae porttitor diam vehicula. Cras vel augue vestibulum, pellentesque nulla sed, blandit dui. Vivamus eu urna a tortor tempor elementum sed eu nibh. In id pellentesque eros.',
+        },
+        { id: 'id2', key: 'test 2', key1: 2, key2: true },
+        {
+          id: 'id3',
+          key: 'test 3',
+          key1: 3,
+          key2: true,
+          key3:
+            'Vestibulum ultricies eleifend accumsan. Aliquam quam lectus, finibus in risus fringilla, suscipit congue dolor. Praesent et massa lacus. Etiam rutrum mi nunc, in placerat justo tempus eget. Nulla at consectetur purus. Ut justo orci, dictum ac mauris vitae, faucibus viverra risus. Donec lobortis, dui dignissim mattis fringilla, felis massa dapibus quam, a fringilla erat nulla non diam. Curabitur aliquet dignissim pellentesque. Nunc ut enim mattis purus mollis fermentum. Donec consequat mi et consequat posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut tempor ipsum.',
+        },
+        { id: 'id4', key: 'test 4', key2: false },
+      ]}
       handleRowClick={action('handle Tablerow click')}
       handleRemoveItem={action('handle remove item')}
       handleSort={action('handle sort')}
     />
   ));
 
-storiesOf('Pagination', module)
-  .add('default', () => (
-    <Pagination totalCount={97} handleClick={action('handle Pagination')} />
-  ));
+storiesOf('Pagination', module).add('default', () => (
+  <Pagination totalCount={97} handleClick={action('handle Pagination')} />
+));
 
 storiesOf('Overview', module)
   .add('default', () => (
@@ -166,21 +202,21 @@ storiesOf('Overview', module)
         { id: 'key3', value: 'key3', isSortable: false },
       ]}
       listItems={[
-        { id: 'id1', key: "test 1", key1: 1, key2: false, key3: new Date() },
-        { id: 'id2', key: "test 2", key1: 2, key2: true, key3: new Date() },
-        { id: 'id3', key: "test 3", key1: 3, key2: true, key3: new Date() },
-        { id: 'id4', key: "test 4", key2: false },
-        { id: 'id5', key: "test 5", key1: 4, key2: true, key3: new Date() },
+        { id: 'id1', key: 'test 1', key1: 1, key2: false, key3: new Date() },
+        { id: 'id2', key: 'test 2', key1: 2, key2: true, key3: new Date() },
+        { id: 'id3', key: 'test 3', key1: 3, key2: true, key3: new Date() },
+        { id: 'id4', key: 'test 4', key2: false },
+        { id: 'id5', key: 'test 5', key1: 4, key2: true, key3: new Date() },
       ]}
       removeItem={action('remove item')}
-      get={() => { }}
+      get={() => {}}
       history={{}}
       paginationTotalCount={100}
       createParameters={[
-        { id: 'key1', label: "test", type: "text" },
-        { id: 'key2', label: "test2", type: "text" },
-        { id: 'key3', label: "test3", type: "number" },
-        { id: 'key4', label: "test4", type: "boolean" },
+        { id: 'key1', label: 'test', type: 'text' },
+        { id: 'key2', label: 'test2', type: 'text' },
+        { id: 'key3', label: 'test3', type: 'number' },
+        { id: 'key4', label: 'test4', type: 'boolean' },
       ]}
       create={action('create')}
     />
@@ -196,14 +232,14 @@ storiesOf('Overview', module)
       ]}
       listItems={[]}
       removeItem={action('remove item')}
-      get={() => { }}
+      get={() => {}}
       history={{}}
       paginationTotalCount={100}
       createParameters={[
-        { id: 'key1', label: "test", type: "text" },
-        { id: 'key2', label: "test2", type: "text" },
-        { id: 'key3', label: "test3", type: "number" },
-        { id: 'key4', label: "test4", type: "boolean" },
+        { id: 'key1', label: 'test', type: 'text' },
+        { id: 'key2', label: 'test2', type: 'text' },
+        { id: 'key3', label: 'test3', type: 'number' },
+        { id: 'key4', label: 'test4', type: 'boolean' },
       ]}
       create={action('create')}
     />
@@ -216,18 +252,18 @@ storiesOf('Detail', module)
       title="Detail page"
       id="11111"
       inputItems={[
-        { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test', label: "test2", type: "text" },
-        { id: 'key3', value: 123, label: "test3", type: "number" },
-        { id: 'key4', value: false, label: "test4", type: "boolean" },
+        { id: 'key1', value: 'test', label: 'test', type: 'text' },
+        { id: 'key2', value: 'test', label: 'test2', type: 'text' },
+        { id: 'key3', value: 123, label: 'test3', type: 'number' },
+        { id: 'key4', value: false, label: 'test4', type: 'boolean' },
       ]}
       remove={action('remove detail')}
-      history={{ goBack: () => { } }}
+      history={{ goBack: () => {} }}
       createParameters={[
-        { id: 'key1', label: "test", type: "text" },
-        { id: 'key2', label: "test2", type: "text" },
-        { id: 'key3', label: "test3", type: "number" },
-        { id: 'key4', label: "test4", type: "boolean" },
+        { id: 'key1', label: 'test', type: 'text' },
+        { id: 'key2', label: 'test2', type: 'text' },
+        { id: 'key3', label: 'test3', type: 'number' },
+        { id: 'key4', label: 'test4', type: 'boolean' },
       ]}
       create={action('create')}
       update={action('update detail')}
@@ -242,17 +278,17 @@ storiesOf('Detail', module)
       title="Detail page"
       id="11111"
       inputItems={[
-        { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test2', label: "test2", type: "text" },
-        { id: 'key3', value: 123, label: "test3", type: "number" },
-        { id: 'key4', value: false, label: "test4", type: "boolean" },
+        { id: 'key1', value: 'test', label: 'test', type: 'text' },
+        { id: 'key2', value: 'test2', label: 'test2', type: 'text' },
+        { id: 'key3', value: 123, label: 'test3', type: 'number' },
+        { id: 'key4', value: false, label: 'test4', type: 'boolean' },
       ]}
-      history={{ goBack: () => { } }}
+      history={{ goBack: () => {} }}
       createParameters={[
-        { id: 'key1', label: "test", type: "text" },
-        { id: 'key2', label: "test2", type: "text" },
-        { id: 'key3', label: "test3", type: "number" },
-        { id: 'key4', label: "test4", type: "boolean" },
+        { id: 'key1', label: 'test', type: 'text' },
+        { id: 'key2', label: 'test2', type: 'text' },
+        { id: 'key3', label: 'test3', type: 'number' },
+        { id: 'key4', label: 'test4', type: 'boolean' },
       ]}
       create={action('create')}
       update={action('update detail')}
@@ -267,43 +303,40 @@ storiesOf('Detail', module)
       title="Detail page"
       id="11111"
       inputItems={[
-        { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test2', label: "test2", type: "text" },
-        { id: 'key3', value: 123, label: "test3", type: "number" },
-        { id: 'key4', value: false, label: "test4", type: "boolean" },
+        { id: 'key1', value: 'test', label: 'test', type: 'text' },
+        { id: 'key2', value: 'test2', label: 'test2', type: 'text' },
+        { id: 'key3', value: 123, label: 'test3', type: 'number' },
+        { id: 'key4', value: false, label: 'test4', type: 'boolean' },
       ]}
-      history={{ goBack: () => { } }}
+      history={{ goBack: () => {} }}
       createParameters={[
-        { id: 'key1', label: "test", type: "text" },
-        { id: 'key2', label: "test2", type: "text" },
-        { id: 'key3', label: "test3", type: "number" },
-        { id: 'key4', label: "test4", type: "boolean" },
+        { id: 'key1', label: 'test', type: 'text' },
+        { id: 'key2', label: 'test2', type: 'text' },
+        { id: 'key3', label: 'test3', type: 'number' },
+        { id: 'key4', label: 'test4', type: 'boolean' },
       ]}
       create={action('create')}
       update={action('update detail')}
       isUpdated={false}
       isError={true}
-      errorMessage="An error has occurred" />
-  ));
-
-const plus = require('../assets/images/plus.svg');
-storiesOf('CreateModal', module)
-  .add('default', () => (
-    <CreateModal
-      primaryButtonText="Add item"
-      title="Add an item"
-      icon={plus}
-      createParameters={[
-        { id: 'key1', value: 'test', label: "test", type: "text" },
-        { id: 'key2', value: 'test2', label: "test2", type: "text" },
-        { id: 'key3', value: 123, label: "test3", type: "number" },
-        { id: 'key4', value: false, label: "test4", type: "boolean" },
-      ]}
-      create={action('create')}
+      errorMessage="An error has occurred"
     />
   ));
 
-storiesOf('EmptyDetail', module)
-  .add('default', () => (
-    <EmptyDetail history={{ goBack: () => { } }} />
-  ));
+const plus = require('../assets/images/plus.svg');
+storiesOf('CreateModal', module).add('default', () => (
+  <CreateModal
+    primaryButtonText="Add item"
+    title="Add an item"
+    icon={plus}
+    createParameters={[
+      { id: 'key1', value: 'test', label: 'test', type: 'text' },
+      { id: 'key2', value: 'test2', label: 'test2', type: 'text' },
+      { id: 'key3', value: 123, label: 'test3', type: 'number' },
+      { id: 'key4', value: false, label: 'test4', type: 'boolean' },
+    ]}
+    create={action('create')}
+  />
+));
+
+storiesOf('EmptyDetail', module).add('default', () => <EmptyDetail history={{ goBack: () => {} }} />);

@@ -1,4 +1,3 @@
-
 import messageConstants from '../messages/constants';
 import authConstants from '../auth/constants';
 import { identifiers } from '../../constants';
@@ -6,7 +5,7 @@ import { strings } from '../../utils';
 
 const errorHandlingMiddleware = () => {
   return store => next => action => {
-    if(action.type.includes('REJECTED')) {
+    if (action.type.includes('REJECTED')) {
       if (action.payload.errors[0].status === 401) {
         store.dispatch({
           type: authConstants.LOGOUT_USER_FORCE,

@@ -16,7 +16,7 @@ class AuthorizedRoute extends Component {
   }
 
   componentDidMount() {
-    if(localStorage.getItem('LOGGED_IN')){
+    if (localStorage.getItem('LOGGED_IN')) {
       this.props.getVersion();
       this.props.getMe();
     }
@@ -29,7 +29,7 @@ class AuthorizedRoute extends Component {
         {...otherProps}
         render={() => {
           if (isPending) return <Spinner />;
-          return localStorage.getItem('LOGGED_IN') ? <Component {...this.props} /> : <Redirect to='/auth/login' />;
+          return localStorage.getItem('LOGGED_IN') ? <Component {...this.props} /> : <Redirect to="/auth/login" />;
         }}
       />
     );

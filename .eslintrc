@@ -1,28 +1,21 @@
 {
   "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["react-app", "eslint:recommended", "eslint-config-prettier"],
+  "rules": {
+    "strict": ["error", "never"],
+    "no-throw-literal": 0
+  },
   "env": {
     "browser": true,
     "es6": true,
     "node": true,
     "jest": true
-  },
-  "extends": "react-app",
-  "parser": "babel-eslint",
-  "rules": {
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "ignore"
-      }
-    ],
-
-    "padded-blocks": [ "error", "never" ],
-    "no-console": "warn",
-    "no-throw-literal": 0,
-    "semi": [ "error", "always" ]
   }
 }

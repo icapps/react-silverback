@@ -72,7 +72,6 @@ const users = (state = initialState, action = {}) => {
         errorMessage: errorMessageHandling(payload),
       };
 
-
     //UPDATE_USER
     case constants.UPDATE_USER_FULFILLED:
       return {
@@ -170,11 +169,10 @@ const users = (state = initialState, action = {}) => {
 
     //SET_SORT
     case constants.SET_USERS_SORT:
-      const { sortField, sortOrder } = payload;
       return {
         ...state,
-        sortField,
-        sortOrder,
+        sortField: payload.sortField,
+        sortOrder: payload.sortOrder,
       };
 
     default:

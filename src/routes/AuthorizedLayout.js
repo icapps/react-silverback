@@ -10,7 +10,7 @@ import LanguageCodesDetail from '../scenes/languageCodes/LanguageCodesDetail';
 const AuthorizedLayout = props => {
   return (
     <React.Fragment>
-      <Header toggleNavigation={props.toggleNavigation} logout={props.logoutUser}/>
+      <Header toggleNavigation={props.toggleNavigation} logout={props.logoutUser} />
       <div className="container-fluid">
         <div className="row">
           <Navbar
@@ -24,11 +24,11 @@ const AuthorizedLayout = props => {
             version={props.version}
           />
           <Switch>
-            <Route path='/users' exact component={UserOverview} />
-            <Route path='/users/:id' exact component={UserDetail} />
-            <Route path='/language-codes' exact component={LanguageCodesOverview} />
-            <Route path='/language-codes/:id' exact component={LanguageCodesDetail} />
-            <Redirect to='/users' />
+            <Route path="/users" exact component={UserOverview} />
+            <Route path="/users/:id" exact component={UserDetail} />
+            <Route path="/language-codes" exact component={LanguageCodesOverview} />
+            <Route path="/language-codes/:id" exact component={LanguageCodesDetail} />
+            <Redirect to="/users" />
           </Switch>
         </div>
       </div>

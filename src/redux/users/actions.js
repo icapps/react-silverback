@@ -46,7 +46,6 @@ export const getUserRoles = () => {
 export const setSort = (sortField, sortOrder) => {
   return {
     type: constants.SET_USERS_SORT,
-    payload: {sortField, sortOrder},
+    payload: { sortField, sortOrder },
   };
 };
-

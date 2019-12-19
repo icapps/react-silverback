@@ -2,7 +2,7 @@ export const PENDING = 'PENDING';
 export const FULFILLED = 'FULFILLED';
 export const REJECTED = 'REJECTED';
 
-const defaultTypes = [ PENDING, FULFILLED, REJECTED ];
+const defaultTypes = [PENDING, FULFILLED, REJECTED];
 
 const isPromise = value => {
   if (value !== null && typeof value === 'object') {
@@ -32,10 +32,10 @@ const promiseMiddleware = (config = {}) => {
       const { type, payload, meta } = action;
 
       // Assign values for promise type suffixes
-      const [ _PENDING, _FULFILLED, _REJECTED ] = promiseTypeSuffixes;
+      const [_PENDING, _FULFILLED, _REJECTED] = promiseTypeSuffixes;
 
       const getAction = (newPayload, isRejected) => ({
-        type : [ type, isRejected ? _REJECTED : _FULFILLED ].join(promiseTypeSeparator),
+        type: [type, isRejected ? _REJECTED : _FULFILLED].join(promiseTypeSeparator),
         ...(newPayload === null || typeof newPayload === 'undefined' ? {} : { payload: newPayload }),
         ...(meta !== undefined ? { meta } : {}),
         ...(isRejected ? { error: true } : {}),
@@ -53,7 +53,7 @@ const promiseMiddleware = (config = {}) => {
       }
 
       next({
-        type : [ type, _PENDING ].join(promiseTypeSeparator),
+        type: [type, _PENDING].join(promiseTypeSeparator),
         ...(data !== undefined ? { payload: data } : {}),
         ...(meta !== undefined ? { meta } : {}),
       });

@@ -1,9 +1,8 @@
-
 import strings from './localization';
 import { regexes, validation } from '../constants';
 
 export function validate(type, value) {
-  switch(type) {
+  switch (type) {
     case 'email':
       if (isEmpty(value)) {
         return {

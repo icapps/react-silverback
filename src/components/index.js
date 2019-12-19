@@ -16,5 +16,22 @@ import Filter from './filter/Filter';
 import Alert from './alerts/Alert';
 import Alerts from './alerts/Alerts';
 
-export { Header, Navbar, BasicInput, Checkbox, Dropdown, Table, Button, Modal, Pagination, Overview, Detail, EmptyDetail, CreateModal, Spinner, Filter, Alert, Alerts };
-
+export {
+  Header,
+  Navbar,
+  BasicInput,
+  Checkbox,
+  Dropdown,
+  Table,
+  Button,
+  Modal,
+  Pagination,
+  Overview,
+  Detail,
+  EmptyDetail,
+  CreateModal,
+  Spinner,
+  Filter,
+  Alert,
+  Alerts,
+};

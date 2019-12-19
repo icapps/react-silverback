@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './spinner.css';
+import './spinner.scss';
 
 const Spinner = props => {
-  if (props.hasContainer) return <main className={`${props.className} spinner-container`}><div className={`spinner ${props.spinnerClassName}`} /></main>;
+  if (props.hasContainer)
+    return (
+      <main className={`${props.className} spinner-container`}>
+        <div className={`spinner ${props.spinnerClassName}`} />
+      </main>
+    );
   return <div className={`spinner ${props.spinnerClassName}`} />;
 };
 
@@ -18,6 +23,5 @@ Spinner.defaultProps = {
   spinnerClassName: '',
   hasContainer: true,
 };
-
 
 export default Spinner;

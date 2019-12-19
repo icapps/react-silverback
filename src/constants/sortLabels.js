@@ -11,4 +11,4 @@ const sortLabels = {
 
 export function getSortLabel(sortField) {
   return sortLabels[sortField];
-};
+}

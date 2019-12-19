@@ -10,7 +10,7 @@ import { getStatusCodes } from '../../redux/codes/actions';
 import constants from '../../redux/users/constants';
 import { strings } from '../../utils';
 import { identifiers } from '../../constants';
-import './userDetail.css';
+import './userDetail.scss';
 
 class UserDetail extends Component {
   componentDidMount() {
@@ -28,86 +28,184 @@ class UserDetail extends Component {
   }
 
   createUser = async (user, changePassword) => {
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise(async resolve => {
       const result = await this.props.createUser(user, changePassword);
       if (result.action && result.action.type === constants.CREATE_USER_FULFILLED) {
-        this.props.history.replace(`/${window.location.pathname.split('/')[1]}/${this.props.user.id}`, this.props.user.id);
-        this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.NEW_USER_CREATED });
+        this.props.history.replace(
+          `/${window.location.pathname.split('/')[1]}/${this.props.user.id}`,
+          this.props.user.id,
+        );
+        this.props.setMessage({
+          type: identifiers.MESSAGE_SUCCESS,
+          text: strings.NEW_USER_CREATED,
+        });
         resolve(true);
       }
       resolve(false);
     });
-  }
+  };
 
   updateUser = async (id, user) => {
     return this.props.updateUser(id, user);
-  }
+  };
 
   forgotPassword = async () => {
     const result = await this.props.forgotPassword(this.props.user.email);
     if (result.action && result.action.type.includes('FULFILLED')) {
-      this.props.setMessage({ type: identifiers.MESSAGE_SUCCESS, text: strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS });
+      this.props.setMessage({
+        type: identifiers.MESSAGE_SUCCESS,
+        text: strings.RESET_PASSWORD_FOR_THIS_USER_SUCCESS,
+      });
     }
     return true;
-  }
-  
+  };
+
   render() {
-    const userRolesMapped = this.props.userRoles.map(role => ({ key: role.code, text: role.name }));
-    const statusCodesMapped = this.props.statusCodes.map(status => ({ key: status.code, text: status.name }));
+    const userRolesMapped = this.props.userRoles.map(role => ({
+      key: role.code,
+      text: role.name,
+    }));
+    const statusCodesMapped = this.props.statusCodes.map(status => ({
+      key: status.code,
+      text: status.name,
+    }));
     if (this.props.isPending) {
-      return (<Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />);
+      return <Spinner className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" />;
     }
     if (this.props.user) {
       const isMe = this.props.user.email === this.props.email;
       return (
         <Detail
-        keyword={strings.USER}
-        title={this.props.user.email}
-        id={this.props.user.id}
-        inputItems={[
-          { id: identifiers.CREATED_AT, value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY') + ',', label: strings.CREATED_AT, type: "plain", isEditable: false, css: "inline-block italic" },
-          { id: identifiers.UPDATED_AT, value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'), label: strings.UPDATED_AT, type: "plain", isEditable: false, css: "inline-block italic" },
-          { id: identifiers.EMAIL, value: this.props.user.email, label: strings.EMAIL, type: "email", isEditable: true },
-          { id: identifiers.FIRST_NAME, value: this.props.user.firstName, label: strings.FIRST_NAME, type: "text", isEditable: true },
-          { id: identifiers.LAST_NAME, value: this.props.user.lastName, label: strings.LAST_NAME, type: "text", isEditable: true },
-          { id: identifiers.ROLE, value: this.props.user.role.code, label: strings.ROLE, type: "select", options: userRolesMapped, isEditable: true },
-          { id: identifiers.STATUS, value: this.props.user.status.code, label: strings.STATUS, type: "select", options: statusCodesMapped, isEditable: true, css: "inline-block" },
-          { id: identifiers.REGISTRATION_COMPLETED, value: this.props.user.registrationCompleted, label: strings.REGISTRATION_NOT_COMPLETED, type: "plain", isEditable: false, css: `inline-block italic ${(this.props.user.registrationCompleted) ? 'none' : ''}` },
-          { id: identifiers.PASSWORD, value: strings.PASSWORD, label: strings.PASSWORD, type: "password", isEditable: false },
-        ]}
-        history={this.props.history}
-        createParameters={[
-          { id: identifiers.EMAIL, label: strings.EMAIL, type: "email" },
-          { id: identifiers.FIRST_NAME, label: strings.FIRST_NAME, type: "text" },
-          { id: identifiers.LAST_NAME, label: strings.LAST_NAME, type: "text" },
-          { id: identifiers.ROLE, label: strings.ROLE, type: "select", options: userRolesMapped },
-          { id: identifiers.STATUS, label: strings.STATUS, type: "select", options: statusCodesMapped },
-          { id: identifiers.PASSWORD, label: strings.PASSWORD, type: "password" },
-        ]}
-        create={this.createUser}
-        remove={this.props.removeUser}
-        update={this.updateUser}
-        isUpdatePending={this.props.isUpdatePending}
-        isError={this.props.isError}
-        errorMessage={this.props.errorMessage}
-        isCreatePending={this.props.isCreatePending}
-        isCreateError={this.props.isCreateError}
-        isMe={isMe}
-        setMessage={this.props.setMessage}
-      >
-        <Modal
-          id="reset-password"
-          modalButtonText={strings.RESET_PASSWORD_FOR_THIS_USER}
-          handlePrimaryButton={this.forgotPassword}
-          primaryButtonText={strings.RESET}
-          secondaryButtonText={strings.CANCEL}
-          modalButtonClassName="btn-light forgot-password-btn"
-          secondaryButtonClassName="btn-light"
-          primaryButtonClassName="btn-primary"
+          keyword={strings.USER}
+          title={this.props.user.email}
+          id={this.props.user.id}
+          inputItems={[
+            {
+              id: identifiers.CREATED_AT,
+              value: format(new Date(this.props.user.createdAt), 'DD-MM-YYYY') + ',',
+              label: strings.CREATED_AT,
+              type: 'plain',
+              isEditable: false,
+              css: 'inline-block italic',
+            },
+            {
+              id: identifiers.UPDATED_AT,
+              value: format(new Date(this.props.user.updatedAt), 'DD-MM-YYYY'),
+              label: strings.UPDATED_AT,
+              type: 'plain',
+              isEditable: false,
+              css: 'inline-block italic',
+            },
+            {
+              id: identifiers.EMAIL,
+              value: this.props.user.email,
+              label: strings.EMAIL,
+              type: 'email',
+              isEditable: true,
+            },
+            {
+              id: identifiers.FIRST_NAME,
+              value: this.props.user.firstName,
+              label: strings.FIRST_NAME,
+              type: 'text',
+              isEditable: true,
+            },
+            {
+              id: identifiers.LAST_NAME,
+              value: this.props.user.lastName,
+              label: strings.LAST_NAME,
+              type: 'text',
+              isEditable: true,
+            },
+            {
+              id: identifiers.ROLE,
+              value: this.props.user.role.code,
+              label: strings.ROLE,
+              type: 'select',
+              options: userRolesMapped,
+              isEditable: true,
+            },
+            {
+              id: identifiers.STATUS,
+              value: this.props.user.status.code,
+              label: strings.STATUS,
+              type: 'select',
+              options: statusCodesMapped,
+              isEditable: true,
+              css: 'inline-block',
+            },
+            {
+              id: identifiers.REGISTRATION_COMPLETED,
+              value: this.props.user.registrationCompleted,
+              label: strings.REGISTRATION_NOT_COMPLETED,
+              type: 'plain',
+              isEditable: false,
+              css: `inline-block italic ${this.props.user.registrationCompleted ? 'none' : ''}`,
+            },
+            {
+              id: identifiers.PASSWORD,
+              value: strings.PASSWORD,
+              label: strings.PASSWORD,
+              type: 'password',
+              isEditable: false,
+            },
+          ]}
+          history={this.props.history}
+          createParameters={[
+            { id: identifiers.EMAIL, label: strings.EMAIL, type: 'email' },
+            {
+              id: identifiers.FIRST_NAME,
+              label: strings.FIRST_NAME,
+              type: 'text',
+            },
+            {
+              id: identifiers.LAST_NAME,
+              label: strings.LAST_NAME,
+              type: 'text',
+            },
+            {
+              id: identifiers.ROLE,
+              label: strings.ROLE,
+              type: 'select',
+              options: userRolesMapped,
+            },
+            {
+              id: identifiers.STATUS,
+              label: strings.STATUS,
+              type: 'select',
+              options: statusCodesMapped,
+            },
+            {
+              id: identifiers.PASSWORD,
+              label: strings.PASSWORD,
+              type: 'password',
+            },
+          ]}
+          create={this.createUser}
+          remove={this.props.removeUser}
+          update={this.updateUser}
+          isUpdatePending={this.props.isUpdatePending}
+          isError={this.props.isError}
+          errorMessage={this.props.errorMessage}
+          isCreatePending={this.props.isCreatePending}
+          isCreateError={this.props.isCreateError}
+          isMe={isMe}
+          setMessage={this.props.setMessage}
         >
-          <p>{strings.RESET_PASSWORD_FOR_THIS_USER_TEXT}</p>
-        </Modal>
-      </Detail>
+          <Modal
+            id="reset-password"
+            modalButtonText={strings.RESET_PASSWORD_FOR_THIS_USER}
+            handlePrimaryButton={this.forgotPassword}
+            primaryButtonText={strings.RESET}
+            secondaryButtonText={strings.CANCEL}
+            modalButtonClassName="btn-light forgot-password-btn"
+            secondaryButtonClassName="btn-light"
+            primaryButtonClassName="btn-primary"
+          >
+            <p>{strings.RESET_PASSWORD_FOR_THIS_USER_TEXT}</p>
+          </Modal>
+        </Detail>
       );
     } else {
       return <EmptyDetail history={this.props.history} />;
