@@ -5,14 +5,10 @@ sudo: false
 cache:
   yarn: true
   directories:
-    - "node_modules"
+    - 'node_modules'
 
 node_js:
-  - "6"
-  - "8"
-
-before_script:
-  - yarn build-css
+  - '10'
 
 script:
   - yarn validate
