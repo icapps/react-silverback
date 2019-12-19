@@ -5,7 +5,7 @@ import isDate from 'date-fns/is_date';
 import { strings } from '../../utils';
 import { Modal } from '../index';
 import { identifiers } from '../../constants';
-import './table.css';
+import './table.scss';
 
 const checkIcon = require('../../assets/images/check.svg');
 const crossIcon = require('../../assets/images/cross.svg');
